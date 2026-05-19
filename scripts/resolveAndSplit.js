@@ -5,7 +5,7 @@ const config = require('./resolveConfig');
 const dataDir = path.join(__dirname, '..', 'data');
 const publicDataDir = path.join(__dirname, '..', 'public', 'data');
 
-// ========== 1. 加载所有实体表 ==========
+// 加载实体表
 const tables = {};
 for (const [entityName, entityConfig] of Object.entries(config.entities)) {
   const filePath = path.join(dataDir, entityConfig.file);
@@ -17,16 +17,15 @@ for (const [entityName, entityConfig] of Object.entries(config.entities)) {
   tables[entityName] = new Map(raw.map(item => [item[entityConfig.idField], item]));
 }
 
-// ========== 2. 加载日文和中文映射表 ==========
-function loadMapFile(name) {
-  const filePath = path.join(dataDir, 'jp', `${name}.json`);
+// 加载翻译映射表（从 data/jp 和 data/cn）
+function loadMapFile(name, lang) {
+  const folder = lang === 'cn' ? 'cn' : 'jp';
+  const filePath = path.join(dataDir, folder, `${name}.json`);
   if (fs.existsSync(filePath)) {
     const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-    // 转换为 Map: id -> name
     if (Array.isArray(raw)) {
       return new Map(raw.map(item => [item.id, item.name]));
     } else if (typeof raw === 'object') {
-      // 对象格式 { "50001": { "name": "..." } }
       const map = new Map();
       for (const [id, obj] of Object.entries(raw)) {
         map.set(Number(id), obj.name || id);
@@ -37,52 +36,17 @@ function loadMapFile(name) {
   return new Map();
 }
 
-const jpMaps = {
-  tag: loadMapFile('character_tag'),
-  base_character: loadMapFile('base_character'),
-  equipment_tool_trait: loadMapFile('equipment_tool_trait'),
-  original_title: loadMapFile('original_title'),
-  attack_attribute: loadMapFile('attack_attribute'),
-  role: loadMapFile('role'),
-};
-
+const jpMaps = {};
 const cnMaps = {};
-for (const key of Object.keys(jpMaps)) {
-  const filePath = path.join(dataDir, 'cn', `${key}.json`);
-  if (fs.existsSync(filePath)) {
-    cnMaps[key] = loadMapFile(key); // 会从 cn 目录加载
-  } else {
-    cnMaps[key] = jpMaps[key]; // 回退到日文
-  }
-}
+const mapKeys = ['character_tag', 'base_character', 'equipment_tool_trait', 'original_title', 'attack_attribute', 'role'];
+mapKeys.forEach(key => {
+  jpMaps[key] = loadMapFile(key, 'ja');
+  cnMaps[key] = loadMapFile(key, 'cn');
+  // 如果中文缺失，用日文回退
+  if (cnMaps[key].size === 0) cnMaps[key] = jpMaps[key];
+});
 
-// ========== 3. 收集角色的所有技能/能力 ID（不修改角色对象） ==========
-function collectSkillIds(character) {
-  const ids = new Set();
-  const add = (arr) => { if (arr) arr.forEach(id => ids.add(id)); };
-  add(character.normal1_skill_ids);
-  add(character.normal2_skill_ids);
-  add(character.burst_skill_ids);
-  add(character.evolved_normal1_skill_ids);
-  add(character.evolved_normal2_skill_ids);
-  add(character.evolved_burst_skill_ids);
-  add(character.ability_ids);
-  add(character.board_ability1_ids);
-  add(character.board_ability2_ids);
-  add(character.board_ability3_ids);
-  add(character.all_skill_evolved_ability_ids);
-  add(character.support_ability_ids);
-  add(character.extra_skill_ids);
-  if (character.active1_skill_id) ids.add(character.active1_skill_id);
-  if (character.active2_skill_id) ids.add(character.active2_skill_id);
-  if (character.active3_skill_id) ids.add(character.active3_skill_id);
-  if (character.leader_skill?.abilities) {
-    character.leader_skill.abilities.forEach(a => ids.add(a.ability_id));
-  }
-  return ids;
-}
-
-// 递归补全效果引用（沿用配置中的 nestedReferences 定义）
+// 递归补全效果引用
 function resolveEffects(obj, entityName) {
   const entityConfig = config.entities[entityName];
   if (!entityConfig) return obj;
@@ -110,7 +74,33 @@ function resolveEffects(obj, entityName) {
   return resolved;
 }
 
-// 构建角色的 _skillDetails 字典
+// 收集技能/能力 ID
+function collectSkillIds(character) {
+  const ids = new Set();
+  const add = (arr) => { if (arr) arr.forEach(id => ids.add(id)); };
+  add(character.normal1_skill_ids);
+  add(character.normal2_skill_ids);
+  add(character.burst_skill_ids);
+  add(character.evolved_normal1_skill_ids);
+  add(character.evolved_normal2_skill_ids);
+  add(character.evolved_burst_skill_ids);
+  add(character.ability_ids);
+  add(character.board_ability1_ids);
+  add(character.board_ability2_ids);
+  add(character.board_ability3_ids);
+  add(character.all_skill_evolved_ability_ids);
+  add(character.support_ability_ids);
+  add(character.extra_skill_ids);
+  if (character.active1_skill_id) ids.add(character.active1_skill_id);
+  if (character.active2_skill_id) ids.add(character.active2_skill_id);
+  if (character.active3_skill_id) ids.add(character.active3_skill_id);
+  if (character.leader_skill?.abilities) {
+    character.leader_skill.abilities.forEach(a => ids.add(a.ability_id));
+  }
+  return ids;
+}
+
+// 构建 _skillDetails 字典
 function buildSkillDetails(character) {
   const skillIds = collectSkillIds(character);
   const details = {};
@@ -124,32 +114,25 @@ function buildSkillDetails(character) {
   return details;
 }
 
-// ========== 4. 生成特定语言的角色对象 ==========
+// 生成特定语言的角色对象
 function buildLocalizedChar(character, lang) {
   const maps = lang === 'cn' ? cnMaps : jpMaps;
-  const char = JSON.parse(JSON.stringify(character)); // 深拷贝
+  const char = JSON.parse(JSON.stringify(character));
 
-  // 替换映射字段（保留原始 id，添加 _name 字段）
-  char.tag_names = (char.tag_ids || []).map(id => maps.tag?.get(id) || `ID:${id}`);
+  char.tag_names = (char.tag_ids || []).map(id => maps.character_tag?.get(id) || `ID:${id}`);
   char.base_character_name = maps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
   char.original_title_name = maps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
-  // 属性名称数组（attack_attributes 是数组）
-char.attack_attribute_names = (char.attack_attributes || []).map(id => maps.attack_attribute?.get(id) || `ID:${id}`);
-
-// 定位名称
-char.role_name = maps.role?.get(char.role) || `ID:${char.role}`;
-  // 如果需要 equipment_tool_trait 名称，可类似添加，但角色数据中可能只有 id 数组
+  char.attack_attribute_names = (char.attack_attributes || []).map(id => maps.attack_attribute?.get(id) || `ID:${id}`);
+  char.role_name = maps.role?.get(char.role) || `ID:${char.role}`;
   if (char.equipment_tool_trait_ids) {
     char.equipment_tool_trait_names = char.equipment_tool_trait_ids.map(id => maps.equipment_tool_trait?.get(id) || `ID:${id}`);
   }
 
-  // 附加技能详情（语言无关）
   char._skillDetails = buildSkillDetails(character);
-
   return char;
 }
 
-// ========== 5. 生成索引条目 ==========
+// 生成索引条目
 function buildIndexEntry(character, lang) {
   const maps = lang === 'cn' ? cnMaps : jpMaps;
   return {
@@ -160,47 +143,44 @@ function buildIndexEntry(character, lang) {
     max_rarity: character.max_rarity,
     role: character.role,
     attack_attributes: character.attack_attributes,
-    tag_names: (character.tag_ids || []).map(id => maps.tag?.get(id) || `ID:${id}`),
-	attack_attribute_names: (character.attack_attributes || []).map(id => maps.attack_attribute?.get(id) || `ID:${id}`),
+    tag_names: (character.tag_ids || []).map(id => maps.character_tag?.get(id) || `ID:${id}`),
+    attack_attribute_names: (character.attack_attributes || []).map(id => maps.attack_attribute?.get(id) || `ID:${id}`),
     role_name: maps.role?.get(character.role) || `ID:${character.role}`,
   };
 }
 
-// ========== 6. 主流程 ==========
+// 主流程
 if (!tables.character) {
-  console.error('❌ character.json 未找到，无法生成角色数据');
+  console.error('❌ character.json 未找到');
   process.exit(1);
 }
 
 const characters = Array.from(tables.character.values());
 
-// 清空旧文件
 ['jp', 'cn'].forEach(lang => {
   const dir = path.join(publicDataDir, lang);
   if (fs.existsSync(dir)) {
     fs.rmSync(dir, { recursive: true, force: true });
   }
   fs.mkdirSync(dir, { recursive: true });
-});
 
-// 生成两种语言的文件
-['jp', 'cn'].forEach(lang => {
   const index = [];
 
   characters.forEach(char => {
     const localizedChar = buildLocalizedChar(char, lang);
-
-    // 保存角色文件
-    const charFilePath = path.join(publicDataDir, lang, `${char.id}.json`);
-    fs.writeFileSync(charFilePath, JSON.stringify(localizedChar, null, 2), 'utf-8');
-
-    // 添加到索引
+    fs.writeFileSync(
+      path.join(dir, `${char.id}.json`),
+      JSON.stringify(localizedChar, null, 2),
+      'utf-8'
+    );
     index.push(buildIndexEntry(char, lang));
   });
 
-  // 保存索引文件
-  const indexFilePath = path.join(publicDataDir, lang, 'character_index.json');
-  fs.writeFileSync(indexFilePath, JSON.stringify(index, null, 2), 'utf-8');
+  fs.writeFileSync(
+    path.join(dir, 'character_index.json'),
+    JSON.stringify(index, null, 2),
+    'utf-8'
+  );
 });
 
 console.log(`✅ 已生成 ${characters.length} 个角色的日文/中文数据文件`);
