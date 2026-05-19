@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>レスレリ 角色图鉴</title>
+  <title>雷斯雷利 角色图鉴</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Segoe UI', 'Noto Sans JP', sans-serif; background: #f4f6f9; color: #2c3e50; }
@@ -45,7 +45,7 @@
     .level-tab.active { background: #f59e0b; color: white; border-color: #f59e0b; }
     .skill-detail-card { background: #f8f9fb; border-radius: 8px; padding: 12px; margin: 6px 0; border-left: 4px solid #667eea; }
     .skill-name { font-weight: 700; font-size: 16px; }
-    .skill-desc { font-size: 13px; margin: 6px 0; color: #555; }
+    .skill-desc { font-size: 13px; margin: 6px 0; color: #555; white-space: pre-line; }
     .skill-stats { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; }
     .skill-stat { background: white; padding: 3px 8px; border-radius: 6px; }
     .effect-list { font-size: 12px; margin-top: 8px; color: #444; }
@@ -57,23 +57,23 @@
 <body>
 
 <div class="header">
-  <h1 id="pageTitle">レスレリ 角色图鉴</h1>
+  <h1 id="pageTitle">雷斯雷利 角色图鉴</h1>
   <div class="lang-switcher">
-    <button id="btn-ja" class="active">日本語</button>
-    <button id="btn-cn">中文</button>
+    <button id="btn-ja">日本語</button>
+    <button id="btn-cn" class="active">中文</button>
   </div>
 </div>
 
 <div class="container">
   <div class="list-panel">
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="名前で検索..." oninput="renderList()">
+      <input type="text" id="searchInput" placeholder="搜索角色名称..." oninput="renderList()">
     </div>
     <div class="character-list" id="characterList"></div>
   </div>
 
   <div class="detail-panel" id="detailPanel">
-    <div class="loading">← 左のキャラクターを選択してください</div>
+    <div class="loading">← 选择左侧角色查看详情</div>
   </div>
 </div>
 
@@ -152,7 +152,8 @@ const UI_TEXT = {
   }
 };
 
-let currentLang = 'ja';
+// ========== 全局状态 ==========
+let currentLang = 'cn';   // 默认中文
 function t(key) { return UI_TEXT[currentLang][key] || key; }
 
 let characterIndex = [];
@@ -176,7 +177,7 @@ async function loadCharacter(id) {
   return await resp.json();
 }
 
-// ========== UI语言更新 ==========
+// ========== UI 语言更新 ==========
 function updateUILanguage() {
   document.title = t('pageTitle');
   document.getElementById('pageTitle').textContent = t('pageTitle');
@@ -239,7 +240,6 @@ function renderSkillGroupContent(groupId, levels, activeIndex) {
 // ========== 详情渲染 ==========
 function renderDetail(char) {
   const panel = document.getElementById('detailPanel');
-  // 将角色数据暂存到面板，供进化切换使用
   panel.charData = char;
 
   const tagNames = char.tag_names || [];
@@ -248,9 +248,7 @@ function renderDetail(char) {
   const startDate = char.start_at ? new Date(char.start_at).toLocaleDateString('ja-JP') : '不明';
   const isAlchemist = char.is_alchemist ? t('yes') : t('no');
 
-  // 判断是否有任何进化技能
   const hasEvolution = (char._skills || []).some(s => s.post_evolution.length > 0);
-  // 默认显示进化后（如果有），否则显示进化前
   const initialEvo = hasEvolution ? 'post' : 'pre';
   panel.dataset.evo = initialEvo;
 
@@ -281,7 +279,6 @@ function renderDetail(char) {
     <div class="section-title">${t('skillSection')}</div>
   `;
 
-  // 技能组框架
   const typeText = t('skillType');
   (char._skills || []).forEach(skillGroup => {
     const groupId = `skill-${skillGroup.type}`;
@@ -319,7 +316,7 @@ function renderDetail(char) {
 
   panel.innerHTML = html;
 
-  // 初始化所有技能组内容
+  // 初始化所有技能组内容（根据进化状态）
   (char._skills || []).forEach(skillGroup => {
     const groupId = `skill-${skillGroup.type}`;
     const levels = initialEvo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
@@ -335,7 +332,6 @@ function renderDetail(char) {
       const newEvo = currentEvo === 'post' ? 'pre' : 'post';
       panel.dataset.evo = newEvo;
       this.classList.toggle('active', newEvo === 'post');
-      // 重新渲染所有技能组
       (panel.charData._skills || []).forEach(skillGroup => {
         const groupId = `skill-${skillGroup.type}`;
         const levels = newEvo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
@@ -350,28 +346,42 @@ function renderStat(label, value) {
   return `<div class="stat-item"><div class="stat-value">${value ?? '?'}</div><div class="stat-label">${label}</div></div>`;
 }
 
+// ========== 技能卡片渲染 ==========
 function renderSkillCard(skill) {
   const target = skill.target_name || skill.skill_target_type || '?';
   const attr = (skill.attack_attributes || []).map(a => {
     const map = {1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'};
     return map[a] || a;
   }).join('/');
+
+  // 处理描述中的占位符 {0}, {1}, {2}... 替换为 effects 中对应的 value
+  let description = skill.description || '';
+  if (skill.effects && skill.effects.length > 0) {
+    skill.effects.forEach((eff, idx) => {
+      description = description.replace(new RegExp(`\\{${idx}\\}`, 'g'), eff.value ?? 0);
+    });
+  }
+
   let effectsHtml = '';
-  if (skill.effects) {
+  if (skill.effects && skill.effects.length > 0) {
     effectsHtml = '<ul class="effect-list">' + skill.effects.map(e => {
-      const desc = e._detail?.description || e.description || `ID:${e.id}`;
-      return `<li>${desc} (値:${e.value ?? 0})</li>`;
+      const effDesc = e._detail?.description || e.description || `ID:${e.id}`;
+      return `<li>${effDesc} (値:${e.value ?? 0})</li>`;
     }).join('') + '</ul>';
   }
+
+  // WT 实际值 = 200 + wait
+  const wt = 200 + (skill.wait ?? 0);
+
   return `<div class="skill-detail-card">
     <div class="skill-name">${skill.name || '??'} <small>(ID:${skill.id})</small></div>
-    <div class="skill-desc">${skill.description || ''}</div>
+    <div class="skill-desc">${description}</div>
     <div class="skill-stats">
       <span class="skill-stat">${t('target')}: ${target}</span>
       ${attr ? `<span class="skill-stat">${t('attribute')}: ${attr}</span>` : ''}
       <span class="skill-stat">${t('power')}: ${skill.power ?? 0}%</span>
       <span class="skill-stat">${t('break')}: ${skill.break_power ?? 0}%</span>
-      <span class="skill-stat">${t('wt')}: ${skill.wait ?? 0}</span>
+      <span class="skill-stat">${t('wt')}: ${wt}</span>
       <span class="skill-stat">${t('limit')}: ${skill.limit_count ?? '—'}</span>
     </div>
     ${effectsHtml}
@@ -379,16 +389,22 @@ function renderSkillCard(skill) {
 }
 
 function renderAbilityCard(ability) {
+  let description = ability.description || '';
+  if (ability.effects && ability.effects.length > 0) {
+    ability.effects.forEach((eff, idx) => {
+      description = description.replace(new RegExp(`\\{${idx}\\}`, 'g'), eff.value ?? 0);
+    });
+  }
   let effectsHtml = '';
-  if (ability.effects) {
+  if (ability.effects && ability.effects.length > 0) {
     effectsHtml = '<ul class="effect-list">' + ability.effects.map(e => {
-      const desc = e._detail?.description || e.description || `ID:${e.id}`;
-      return `<li>${desc} (値:${e.value ?? 0})</li>`;
+      const effDesc = e._detail?.description || e.description || `ID:${e.id}`;
+      return `<li>${effDesc} (値:${e.value ?? 0})</li>`;
     }).join('') + '</ul>';
   }
   return `<div class="ability-card">
     <div class="ability-name">${ability.name || `ID:${ability.id}`}</div>
-    <div>${ability.description || ''}</div>
+    <div>${description}</div>
     ${effectsHtml}
   </div>`;
 }
