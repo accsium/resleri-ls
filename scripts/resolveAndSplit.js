@@ -38,21 +38,13 @@ function loadMapFile(name, lang) {
 
 const jpMaps = {};
 const cnMaps = {};
-// 所有需要翻译的映射表文件名（不含扩展名）
 const mapKeys = [
-  'character_tag',
-  'base_character',
-  'equipment_tool_trait',
-  'original_title',
-  'attack_attribute',
-  'role',
-  'skill_target_type'      // 新增技能目标类型映射
+  'character_tag', 'base_character', 'equipment_tool_trait',
+  'original_title', 'attack_attribute', 'role', 'skill_target_type'
 ];
-
 mapKeys.forEach(key => {
   jpMaps[key] = loadMapFile(key, 'ja');
   cnMaps[key] = loadMapFile(key, 'cn');
-  // 中文缺失时回退到日文
   if (cnMaps[key].size === 0) cnMaps[key] = jpMaps[key];
 });
 
@@ -124,12 +116,54 @@ function buildSkillDetails(character) {
   return details;
 }
 
+// 技能位类型定义
+const SKILL_TYPE_MAP = {
+  normal1: { idsField: 'normal1_skill_ids', evolvedField: 'evolved_normal1_skill_ids' },
+  normal2: { idsField: 'normal2_skill_ids', evolvedField: 'evolved_normal2_skill_ids' },
+  burst:   { idsField: 'burst_skill_ids',      evolvedField: 'evolved_burst_skill_ids' },
+  active1: { idsField: 'active1_skill_id',     evolvedField: null },
+  active2: { idsField: 'active2_skill_id',     evolvedField: null },
+  active3: { idsField: 'active3_skill_id',     evolvedField: null },
+};
+
+// 构建技能组数组
+function buildSkillsArray(character, skillDetails) {
+  const skillsArray = [];
+  for (const [type, fields] of Object.entries(SKILL_TYPE_MAP)) {
+    let preIds = [];
+    if (fields.idsField.endsWith('_id')) {
+      const val = character[fields.idsField];
+      if (val != null) preIds = [val];
+    } else {
+      preIds = character[fields.idsField] || [];
+    }
+    let postIds = [];
+    if (fields.evolvedField) {
+      postIds = character[fields.evolvedField] || [];
+    }
+    preIds = [...new Set(preIds)];
+    postIds = [...new Set(postIds)];
+    if (preIds.length === 0 && postIds.length === 0) continue;
+
+    const preSkills = preIds.map(id => skillDetails[id]).filter(Boolean);
+    const postSkills = postIds.map(id => skillDetails[id]).filter(Boolean);
+    preSkills.sort((a, b) => a.id - b.id);
+    postSkills.sort((a, b) => a.id - b.id);
+
+    skillsArray.push({
+      type: type,
+      pre_evolution: preSkills,
+      post_evolution: postSkills,
+    });
+  }
+  return skillsArray;
+}
+
 // ========== 6. 生成特定语言的角色对象 ==========
 function buildLocalizedChar(character, lang) {
   const maps = lang === 'cn' ? cnMaps : jpMaps;
   const char = JSON.parse(JSON.stringify(character));
 
-  // 内联翻译名称
   char.tag_names = (char.tag_ids || []).map(id => maps.character_tag?.get(id) || `ID:${id}`);
   char.base_character_name = maps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
   char.original_title_name = maps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
@@ -139,10 +173,9 @@ function buildLocalizedChar(character, lang) {
     char.equipment_tool_trait_names = char.equipment_tool_trait_ids.map(id => maps.equipment_tool_trait?.get(id) || `ID:${id}`);
   }
 
-  // 构建技能和能力详情（包含效果内联）
   char._skillDetails = buildSkillDetails(character);
 
-  // 为每个技能添加目标名称
+  // 为技能添加 target_name
   const targetMap = maps.skill_target_type;
   if (targetMap && char._skillDetails) {
     for (const id in char._skillDetails) {
@@ -152,6 +185,9 @@ function buildLocalizedChar(character, lang) {
       }
     }
   }
+
+  // 生成技能组数组
+  char._skills = buildSkillsArray(char, char._skillDetails);
 
   return char;
 }
@@ -175,23 +211,20 @@ function buildIndexEntry(character, lang) {
 
 // ========== 8. 主流程 ==========
 if (!tables.character) {
-  console.error('❌ character.json 未找到，无法生成角色数据');
+  console.error('❌ character.json 未找到');
   process.exit(1);
 }
 
 const characters = Array.from(tables.character.values());
 
-// 处理两种语言
 ['jp', 'cn'].forEach(lang => {
   const langDir = path.join(publicDataDir, lang);
-  // 清空旧目录
   if (fs.existsSync(langDir)) {
     fs.rmSync(langDir, { recursive: true, force: true });
   }
   fs.mkdirSync(langDir, { recursive: true });
 
   const index = [];
-
   characters.forEach(char => {
     const localizedChar = buildLocalizedChar(char, lang);
     fs.writeFileSync(
