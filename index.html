@@ -35,11 +35,18 @@
     .stat-item .stat-label { font-size: 10px; color: #999; }
     .tag { background: #e0e7ff; color: #3730a3; padding: 3px 10px; border-radius: 20px; font-size: 12px; margin: 2px; display: inline-block; }
     .section-title { font-size: 18px; font-weight: 600; margin: 20px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #667eea; }
-    .skill-group { margin-bottom: 15px; }
-    .skill-group-title { font-weight: 600; font-size: 15px; margin-bottom: 8px; color: #555; cursor: pointer; }
-    .skill-detail-card { background: #f8f9fb; border-radius: 10px; padding: 15px; margin: 6px 0; border-left: 4px solid #667eea; }
-    .skill-detail-card .skill-name { font-weight: 700; font-size: 16px; }
-    .skill-detail-card .skill-desc { font-size: 13px; margin: 6px 0; color: #555; }
+    .skill-group { margin-bottom: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; }
+    .skill-group-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .skill-group-title { font-weight: 600; font-size: 16px; }
+    .evo-buttons { display: flex; gap: 4px; }
+    .evo-btn { padding: 4px 12px; border: 1px solid #ccc; background: white; border-radius: 20px; cursor: pointer; font-size: 12px; }
+    .evo-btn.active { background: #667eea; color: white; border-color: #667eea; }
+    .level-tabs { display: flex; gap: 4px; margin-bottom: 8px; flex-wrap: wrap; }
+    .level-tab { padding: 3px 10px; border: 1px solid #ccc; background: white; border-radius: 20px; cursor: pointer; font-size: 12px; }
+    .level-tab.active { background: #f59e0b; color: white; border-color: #f59e0b; }
+    .skill-detail-card { background: #f8f9fb; border-radius: 8px; padding: 12px; margin: 6px 0; border-left: 4px solid #667eea; }
+    .skill-name { font-weight: 700; font-size: 16px; }
+    .skill-desc { font-size: 13px; margin: 6px 0; color: #555; }
     .skill-stats { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; }
     .skill-stat { background: white; padding: 3px 8px; border-radius: 6px; }
     .effect-list { font-size: 12px; margin-top: 8px; color: #444; }
@@ -61,18 +68,18 @@
 <div class="container">
   <div class="list-panel">
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="搜索角色名称..." oninput="renderList()">
+      <input type="text" id="searchInput" placeholder="名前で検索..." oninput="renderList()">
     </div>
     <div class="character-list" id="characterList"></div>
   </div>
 
   <div class="detail-panel" id="detailPanel">
-    <div class="loading">← 选择左侧角色查看详情</div>
+    <div class="loading">← 左のキャラクターを選択してください</div>
   </div>
 </div>
 
 <script>
-// ========== 多语言文本定义 ==========
+// ========== 多语言文本 ==========
 const UI_TEXT = {
   ja: {
     pageTitle: 'レスレリ 角色图鉴',
@@ -101,19 +108,13 @@ const UI_TEXT = {
     break: 'ブレイク',
     wt: 'WT',
     limit: '制限',
+    evolutionPre: '進化前',
+    evolutionPost: '進化後',
+    level: 'Lv',
     skillType: {
-      normal1: '通常攻撃1',
-      normal2: '通常攻撃2',
-      burst: 'バーストスキル',
-      evolved_normal1: '進化通常1',
-      evolved_normal2: '進化通常2',
-      evolved_burst: '進化バースト',
-      active1: 'アクティブ1',
-      active2: 'アクティブ2',
-      active3: 'アクティブ3',
+      normal1: '通常攻撃1', normal2: '通常攻撃2', burst: 'バーストスキル',
+      active1: 'アクティブ1', active2: 'アクティブ2', active3: 'アクティブ3',
     },
-    targetType: { 1:'単体', 2:'全体', 3:'敵単体', 4:'敵全体', 5:'味方単体', 6:'味方全体' },
-    attributeName: { 1:'斬', 2:'打', 3:'突', 5:'火', 6:'氷', 7:'雷', 8:'風' },
     statLabels: { hp: 'HP', attack: '物攻', magic: '魔攻', defense: '物防', mental: '魔防', speed: '速度' }
   },
   cn: {
@@ -143,35 +144,23 @@ const UI_TEXT = {
     break: '破防',
     wt: 'WT',
     limit: '限制',
+    evolutionPre: '进化前',
+    evolutionPost: '进化后',
+    level: '等级',
     skillType: {
-      normal1: '通常攻击1',
-      normal2: '通常攻击2',
-      burst: '爆发技能',
-      evolved_normal1: '进化通常1',
-      evolved_normal2: '进化通常2',
-      evolved_burst: '进化爆发',
-      active1: '主动1',
-      active2: '主动2',
-      active3: '主动3',
+      normal1: '通常攻击1', normal2: '通常攻击2', burst: '爆发技能',
+      active1: '主动1', active2: '主动2', active3: '主动3',
     },
-    targetType: { 1:'单体', 2:'全体', 3:'敌单体', 4:'敌全体', 5:'我方单体', 6:'我方全体' },
-    attributeName: { 1:'斩', 2:'打', 3:'突', 5:'火', 6:'冰', 7:'雷', 8:'风' },
     statLabels: { hp: 'HP', attack: '物攻', magic: '魔攻', defense: '物防', mental: '魔防', speed: '速度' }
   }
 };
 
-// 当前语言
 let currentLang = 'ja';
-// 获取当前语言文本
-function t(key) {
-  return UI_TEXT[currentLang][key] || key;
-}
+function t(key) { return UI_TEXT[currentLang][key] || key; }
 
-// ========== 全局状态 ==========
 let characterIndex = [];
 let currentCharId = null;
 
-// 稀有度转星星
 function rarityToStars(r) {
   const map = {1:'★',2:'★★',3:'★★★',4:'★★★☆',5:'★★★★',6:'★★★★☆',7:'★★★★★',8:'★★★★★★'};
   return map[r] || '★'.repeat(r);
@@ -190,19 +179,18 @@ async function loadCharacter(id) {
   return await resp.json();
 }
 
-// ========== UI 更新 ==========
+// ========== UI 语言更新 ==========
 function updateUILanguage() {
   document.title = t('pageTitle');
   document.getElementById('pageTitle').textContent = t('pageTitle');
   document.getElementById('searchInput').placeholder = t('searchPlaceholder');
-  // 如果详情面板显示的是提示文字
   const panel = document.getElementById('detailPanel');
   if (panel.children[0] && panel.children[0].classList.contains('loading')) {
     panel.innerHTML = `<div class="loading">${t('selectHint')}</div>`;
   }
 }
 
-// ========== 渲染 ==========
+// ========== 列表渲染 ==========
 function renderList() {
   const listDiv = document.getElementById('characterList');
   const query = document.getElementById('searchInput')?.value?.toLowerCase() || '';
@@ -212,7 +200,7 @@ function renderList() {
   );
   listDiv.innerHTML = filtered.map(c => {
     const stars = rarityToStars(c.initial_rarity);
-    const alias = c.another_name ? `【${c.another_name}】` : '';
+    const alias = c.another_name || '';
     const attrs = (c.attack_attribute_names || []).join(' / ');
     const role = c.role_name || '';
     return `<div class="char-item" onclick="selectCharacter(${c.id})" data-id="${c.id}">
@@ -224,6 +212,7 @@ function renderList() {
   }).join('');
 }
 
+// ========== 详情渲染 ==========
 function renderDetail(char) {
   const panel = document.getElementById('detailPanel');
   const tagNames = char.tag_names || [];
@@ -239,7 +228,7 @@ function renderDetail(char) {
         <div class="rarity">${t('initial')} ${rarityToStars(char.initial_rarity)} → ${t('max')} ${rarityToStars(char.max_rarity)} (${t('rarity')}: ${char.initial_rarity}→${char.max_rarity})</div>
         <div class="base-char">${t('base')}: ${char.base_character_name || '—'}</div>
         <div class="series">${t('series')}: ${char.original_title_name || '—'} | ${t('releaseDate')}: ${startDate}</div>
-        <div style="margin-top:8px;">${tagNames.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+        <div style="margin-top:8px;">${tagNames.map(tg => `<span class="tag">${tg}</span>`).join('')}</div>
       </div>
     </div>
     <p style="margin:10px 0;font-style:italic;color:#555;">${char.description || ''}</p>
@@ -256,29 +245,30 @@ function renderDetail(char) {
     <div class="section-title">${t('skillSection')}</div>
   `;
 
-  // 技能渲染
-  const skillTypes = [
-    { key: 'normal1', ids: char.normal1_skill_ids, evolved: char.evolved_normal1_skill_ids },
-    { key: 'normal2', ids: char.normal2_skill_ids, evolved: char.evolved_normal2_skill_ids },
-    { key: 'burst', ids: char.burst_skill_ids, evolved: char.evolved_burst_skill_ids },
-    { key: 'active1', ids: char.active1_skill_id ? [char.active1_skill_id] : [] },
-    { key: 'active2', ids: char.active2_skill_id ? [char.active2_skill_id] : [] },
-    { key: 'active3', ids: char.active3_skill_id ? [char.active3_skill_id] : [] },
-  ];
+  // 使用 _skills 数组
+  const skills = char._skills || [];
+  const typeText = t('skillType');
 
-  const skillMap = char._skillDetails || {};
-  const skillTypeText = t('skillType');
-  skillTypes.forEach(skType => {
-    const allIds = [...(skType.ids||[]), ...(skType.evolved||[])];
-    const skills = allIds.map(id => skillMap[id]).filter(Boolean);
-    if (skills.length === 0) return;
-    html += `<div class="skill-group">
-      <div class="skill-group-title">${skillTypeText[skType.key] || skType.key} (${skills.length} Lv)</div>
-      ${skills.map(s => renderSkillCard(s)).join('')}
+  skills.forEach(skillGroup => {
+    const type = skillGroup.type;
+    const hasEvo = skillGroup.post_evolution.length > 0;
+    const defaultVersion = hasEvo ? 'post' : 'pre';
+    // 使用唯一 ID 区分每个技能组
+    const groupId = `skill-${type}`;
+    html += `<div class="skill-group" id="${groupId}">
+      <div class="skill-group-header">
+        <span class="skill-group-title">${typeText[type] || type}</span>
+        ${hasEvo ? `
+        <div class="evo-buttons">
+          <button class="evo-btn active" data-group="${groupId}" data-evo="post">${t('evolutionPost')}</button>
+          <button class="evo-btn" data-group="${groupId}" data-evo="pre">${t('evolutionPre')}</button>
+        </div>` : ''}
+      </div>
+      <div class="skill-content" data-group="${groupId}"></div>
     </div>`;
   });
 
-  // 能力
+  // 能力部分保持不变
   html += `<div class="section-title">${t('abilitySection')}</div>`;
   const abilityIds = [
     ...(char.ability_ids || []), ...(char.board_ability1_ids || []),
@@ -286,14 +276,14 @@ function renderDetail(char) {
     ...(char.all_skill_evolved_ability_ids || []), ...(char.support_ability_ids || []),
   ];
   const uniqueAbilities = [...new Set(abilityIds)];
-  const abilities = uniqueAbilities.map(id => skillMap[id]).filter(Boolean);
+  const abilityMap = char._skillDetails || {};
+  const abilities = uniqueAbilities.map(id => abilityMap[id]).filter(Boolean);
   if (abilities.length === 0) {
     html += `<div class="no-data">${t('none')}</div>`;
   } else {
     abilities.forEach(a => { html += renderAbilityCard(a); });
   }
 
-  // 队长技能
   if (char.leader_skill) {
     html += `<div class="section-title">${t('leaderSkillSection')}</div>
     <div class="skill-detail-card" style="border-left-color:#eab308;">
@@ -303,6 +293,67 @@ function renderDetail(char) {
   }
 
   panel.innerHTML = html;
+
+  // 初始化每个技能组的显示状态（默认进化后，最高等级）
+  skills.forEach(skillGroup => {
+    const groupId = `skill-${skillGroup.type}`;
+    const version = (skillGroup.post_evolution.length > 0) ? 'post' : 'pre';
+    const levels = version === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
+    renderSkillGroupContent(groupId, levels, levels.length - 1); // 最高等级索引
+  });
+
+  // 绑定进化按钮事件（事件委托）
+  panel.querySelectorAll('.evo-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const groupId = this.dataset.group;
+      const evo = this.dataset.evo;
+      // 更新按钮激活样式
+      const buttons = this.parentElement.querySelectorAll('.evo-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      // 查找对应技能组数据
+      const skillGroup = skills.find(s => `skill-${s.type}` === groupId);
+      if (!skillGroup) return;
+      const levels = evo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
+      // 默认显示最高等级
+      renderSkillGroupContent(groupId, levels, levels.length - 1);
+    });
+  });
+}
+
+function renderSkillGroupContent(groupId, levels, activeIndex) {
+  const container = document.querySelector(`.skill-content[data-group="${groupId}"]`);
+  if (!container) return;
+  let html = '';
+  if (levels.length > 1) {
+    html += `<div class="level-tabs">`;
+    levels.forEach((skill, idx) => {
+      html += `<button class="level-tab ${idx === activeIndex ? 'active' : ''}" data-group="${groupId}" data-index="${idx}">${t('level')}${idx+1}</button>`;
+    });
+    html += `</div>`;
+  }
+  // 显示当前等级技能卡片
+  if (levels[activeIndex]) {
+    html += renderSkillCard(levels[activeIndex]);
+  }
+  container.innerHTML = html;
+
+  // 绑定等级切换事件
+  container.querySelectorAll('.level-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      const idx = parseInt(this.dataset.index);
+      const grp = this.dataset.group;
+      const allTabs = container.querySelectorAll('.level-tab');
+      allTabs.forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      // 重新渲染该组（仅更新卡片区域）
+      const skill = levels[idx];
+      const cardContainer = container.querySelector('.skill-detail-card') || container;
+      // 简单替换整个内容
+      renderSkillGroupContent(grp, levels, idx);
+    });
+  });
 }
 
 function renderStat(label, value) {
@@ -311,8 +362,11 @@ function renderStat(label, value) {
 
 function renderSkillCard(skill) {
   const target = skill.target_name || skill.skill_target_type || '?';
-  const attrText = t('attributeName');
-  const attr = (skill.attack_attributes || []).map(a => attrText[a] || a).join('/');
+  const attr = (skill.attack_attributes || []).map(a => {
+    // 技能属性没有翻译映射，用前端硬编码临时处理
+    const map = {1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'};
+    return map[a] || a;
+  }).join('/');
   let effectsHtml = '';
   if (skill.effects) {
     effectsHtml = '<ul class="effect-list">' + skill.effects.map(e => {
@@ -372,13 +426,9 @@ async function switchLanguage(lang) {
   document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
   document.getElementById('btn-cn').classList.toggle('active', lang === 'cn');
   updateUILanguage();
-  // 重新加载索引
   await loadIndex();
   renderList();
-  // 如果详情页打开，重新加载
-  if (currentCharId) {
-    selectCharacter(currentCharId);
-  }
+  if (currentCharId) selectCharacter(currentCharId);
 }
 
 document.getElementById('btn-ja').addEventListener('click', () => switchLanguage('ja'));

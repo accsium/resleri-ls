@@ -2109,5 +2109,1435 @@
       "wait": 0,
       "target_name": "敵全体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 14,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「斬属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{1}％」を付与(上限40%)し、<br>自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001591,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001591,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001600,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001600,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001433,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001433,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002289,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラストーム",
+          "not_state_change_count_decrease": false,
+          "power": 58,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の斬属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換",
+          "timeline_hash": "6444657163442669332",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 14,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「斬属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{1}％」を付与(上限40%)し、<br>自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001591,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001591,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001600,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001600,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001433,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001433,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002290,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラストーム",
+          "not_state_change_count_decrease": false,
+          "power": 61,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の斬属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換",
+          "timeline_hash": "6444657163442669332",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 15,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「斬属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{1}％」を付与(上限40%)し、<br>自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001591,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001591,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001600,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001600,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001433,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001433,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002291,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラストーム",
+          "not_state_change_count_decrease": false,
+          "power": 65,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の斬属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換",
+          "timeline_hash": "6444657163442669332",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 16,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「斬属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{1}％」を付与(上限40%)し、<br>自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001591,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001591,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001600,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001600,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001433,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001433,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002292,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラストーム",
+          "not_state_change_count_decrease": false,
+          "power": 68,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の斬属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換",
+          "timeline_hash": "6444657163442669332",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 17,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「斬属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{1}％」を付与(上限40%)し、<br>自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001591,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001591,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001600,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001600,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001433,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001433,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002293,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラストーム",
+          "not_state_change_count_decrease": false,
+          "power": 72,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の斬属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換",
+          "timeline_hash": "6444657163442669332",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 244,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「斬属性耐性-{1}%」を付与(上限50%)<br>攻撃後、自身に「ブレイクダメージ+{2}%」を1回行動終了するまで付与し、<br>対象に「受けるダメージ+{3}%」を2回攻撃を受けるまで付与し、<br>回復無効状態を2回行動終了するまで付与<br>対象がブレイク時、対象の被ダメージDOWN状態を全て解除",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001588,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001588,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000908,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000908,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001589,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001589,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001590,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001590,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002294,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラプリズム",
+          "not_state_change_count_decrease": false,
+          "power": 227,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の斬属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>対象の受けるダメージアップ<br>対象に回復無効状態を付与<br>対象がブレイク時、対象の被ダメDOWNを解除",
+          "timeline_hash": "90345517285535872",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 259,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「斬属性耐性-{1}%」を付与(上限50%)<br>攻撃後、自身に「ブレイクダメージ+{2}%」を1回行動終了するまで付与し、<br>対象に「受けるダメージ+{3}%」を2回攻撃を受けるまで付与し、<br>回復無効状態を2回行動終了するまで付与<br>対象がブレイク時、対象の被ダメージDOWN状態を全て解除",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001588,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001588,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000908,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000908,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001589,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001589,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001590,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001590,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002295,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラプリズム",
+          "not_state_change_count_decrease": false,
+          "power": 241,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の斬属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>対象の受けるダメージアップ<br>対象に回復無効状態を付与<br>対象がブレイク時、対象の被ダメDOWNを解除",
+          "timeline_hash": "90345517285535872",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 274,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「斬属性耐性-{1}%」を付与(上限50%)<br>攻撃後、自身に「ブレイクダメージ+{2}%」を1回行動終了するまで付与し、<br>対象に「受けるダメージ+{3}%」を2回攻撃を受けるまで付与し、<br>回復無効状態を2回行動終了するまで付与<br>対象がブレイク時、対象の被ダメージDOWN状態を全て解除",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001588,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001588,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000908,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000908,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001589,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001589,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001590,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001590,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002296,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラプリズム",
+          "not_state_change_count_decrease": false,
+          "power": 255,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の斬属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>対象の受けるダメージアップ<br>対象に回復無効状態を付与<br>対象がブレイク時、対象の被ダメDOWNを解除",
+          "timeline_hash": "90345517285535872",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 289,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「斬属性耐性-{1}%」を付与(上限50%)<br>攻撃後、自身に「ブレイクダメージ+{2}%」を1回行動終了するまで付与し、<br>対象に「受けるダメージ+{3}%」を2回攻撃を受けるまで付与し、<br>回復無効状態を2回行動終了するまで付与<br>対象がブレイク時、対象の被ダメージDOWN状態を全て解除",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001588,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001588,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000908,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000908,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001589,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001589,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001590,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001590,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002297,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラプリズム",
+          "not_state_change_count_decrease": false,
+          "power": 269,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の斬属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>対象の受けるダメージアップ<br>対象に回復無効状態を付与<br>対象がブレイク時、対象の被ダメDOWNを解除",
+          "timeline_hash": "90345517285535872",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 305,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「斬属性耐性-{1}%」を付与(上限50%)<br>攻撃後、自身に「ブレイクダメージ+{2}%」を1回行動終了するまで付与し、<br>対象に「受けるダメージ+{3}%」を2回攻撃を受けるまで付与し、<br>回復無効状態を2回行動終了するまで付与<br>対象がブレイク時、対象の被ダメージDOWN状態を全て解除",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001588,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001588,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000908,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000908,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001589,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001589,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001590,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001590,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002298,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラプリズム",
+          "not_state_change_count_decrease": false,
+          "power": 283,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の斬属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>対象の受けるダメージアップ<br>対象に回復無効状態を付与<br>対象がブレイク時、対象の被ダメDOWNを解除",
+          "timeline_hash": "90345517285535872",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 250,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与し、<br>得意属性が斬属性の味方全員に「スキルダメージ+{2}%」を付与(上限150%)<br>攻撃後、対象に「受ける物理攻撃ダメージ+{3}%」を3回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000955,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000955,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001592,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001592,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001404,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001404,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002299,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ビヨンドアウローラ",
+          "not_state_change_count_decrease": false,
+          "power": 270,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3043383007868769590",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の斬属性耐性ダウン<br>得意属性が斬属性の味方全員のスキルダメージアップ<br>攻撃後、対象の受ける物理攻撃ダメージアップ",
+          "timeline_hash": "1490471638876473740",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 265,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与し、<br>得意属性が斬属性の味方全員に「スキルダメージ+{2}%」を付与(上限150%)<br>攻撃後、対象に「受ける物理攻撃ダメージ+{3}%」を3回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000955,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000955,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001592,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001592,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001404,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001404,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002300,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ビヨンドアウローラ",
+          "not_state_change_count_decrease": false,
+          "power": 286,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3043383007868769590",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の斬属性耐性ダウン<br>得意属性が斬属性の味方全員のスキルダメージアップ<br>攻撃後、対象の受ける物理攻撃ダメージアップ",
+          "timeline_hash": "1490471638876473740",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 281,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与し、<br>得意属性が斬属性の味方全員に「スキルダメージ+{2}%」を付与(上限150%)<br>攻撃後、対象に「受ける物理攻撃ダメージ+{3}%」を3回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000955,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000955,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001592,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001592,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001404,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001404,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002301,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ビヨンドアウローラ",
+          "not_state_change_count_decrease": false,
+          "power": 303,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3043383007868769590",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の斬属性耐性ダウン<br>得意属性が斬属性の味方全員のスキルダメージアップ<br>攻撃後、対象の受ける物理攻撃ダメージアップ",
+          "timeline_hash": "1490471638876473740",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 296,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与し、<br>得意属性が斬属性の味方全員に「スキルダメージ+{2}%」を付与(上限150%)<br>攻撃後、対象に「受ける物理攻撃ダメージ+{3}%」を3回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000955,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000955,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001592,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001592,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001404,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001404,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002302,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ビヨンドアウローラ",
+          "not_state_change_count_decrease": false,
+          "power": 320,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3043383007868769590",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の斬属性耐性ダウン<br>得意属性が斬属性の味方全員のスキルダメージアップ<br>攻撃後、対象の受ける物理攻撃ダメージアップ",
+          "timeline_hash": "1490471638876473740",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 312,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与し、<br>得意属性が斬属性の味方全員に「スキルダメージ+{2}%」を付与(上限150%)<br>攻撃後、対象に「受ける物理攻撃ダメージ+{3}%」を3回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000955,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000955,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001592,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001592,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001404,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001404,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002303,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ビヨンドアウローラ",
+          "not_state_change_count_decrease": false,
+          "power": 337,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3043383007868769590",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の斬属性耐性ダウン<br>得意属性が斬属性の味方全員のスキルダメージアップ<br>攻撃後、対象の受ける物理攻撃ダメージアップ",
+          "timeline_hash": "1490471638876473740",
+          "wait": 0,
+          "target_name": "敵全体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

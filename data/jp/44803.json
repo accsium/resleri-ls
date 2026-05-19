@@ -2140,5 +2140,1585 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与し、<br>味方全員に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001039,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001039,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001978,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001978,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001008,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001008,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001409,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001409,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003311,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バニーショット",
+          "not_state_change_count_decrease": false,
+          "power": 42,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身にマイナス効果無効を付与<br>味方全員の魔攻とスキルダメージアップ",
+          "timeline_hash": "7243699782661234468",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与し、<br>味方全員に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001039,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001039,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001978,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001978,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001008,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001008,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001409,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001409,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003312,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バニーショット",
+          "not_state_change_count_decrease": false,
+          "power": 44,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身にマイナス効果無効を付与<br>味方全員の魔攻とスキルダメージアップ",
+          "timeline_hash": "7243699782661234468",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与し、<br>味方全員に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001039,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001039,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001978,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001978,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001008,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001008,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001409,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001409,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003313,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バニーショット",
+          "not_state_change_count_decrease": false,
+          "power": 47,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身にマイナス効果無効を付与<br>味方全員の魔攻とスキルダメージアップ",
+          "timeline_hash": "7243699782661234468",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与し、<br>味方全員に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001039,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001039,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001978,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001978,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001008,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001008,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001409,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001409,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003314,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バニーショット",
+          "not_state_change_count_decrease": false,
+          "power": 49,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身にマイナス効果無効を付与<br>味方全員の魔攻とスキルダメージアップ",
+          "timeline_hash": "7243699782661234468",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与し、<br>味方全員に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001039,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001039,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001978,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001978,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001008,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001008,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001409,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001409,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003315,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バニーショット",
+          "not_state_change_count_decrease": false,
+          "power": 52,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身にマイナス効果無効を付与<br>味方全員の魔攻とスキルダメージアップ",
+          "timeline_hash": "7243699782661234468",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "対象に「ターン開始時、HP{0}%回復」を2回行動開始するまで付与し、<br>「魔攻+{1}%」と「クリティカルダメージ+{2}%」を2回行動終了するまで付与<br>味方全員に「魔攻+{3}%」を付与(上限60%)<br>得意属性が火属性の味方全員の強化系パネルとバーストパネルを除いたパネル2つを強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001093,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001093,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001314,
+              "value": 2600,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001314,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001491,
+              "value": 4200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001491,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001979,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001979,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001980,
+              "value": 200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001980,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003316,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "しゅわしゅわシャワー",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 2,
+          "state_change_visual_type": null,
+          "still_path_hash": "1466764023324062541",
+          "summary": "対象に再生を付与<br>対象の魔攻とクリティカルダメージアップ<br>味方全員の魔攻アップ<br>得意属性が火属性の味方全員の強化系パネルとバーストパネルを除いたパネルを強化パネルに変換",
+          "timeline_hash": "4374745511906764984",
+          "wait": 0,
+          "target_name": "味方単体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "対象に「ターン開始時、HP{0}%回復」を2回行動開始するまで付与し、<br>「魔攻+{1}%」と「クリティカルダメージ+{2}%」を2回行動終了するまで付与<br>味方全員に「魔攻+{3}%」を付与(上限60%)<br>得意属性が火属性の味方全員の強化系パネルとバーストパネルを除いたパネル2つを強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001093,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001093,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001314,
+              "value": 2700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001314,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001491,
+              "value": 4400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001491,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001979,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001979,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001980,
+              "value": 200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001980,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003317,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "しゅわしゅわシャワー",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 2,
+          "state_change_visual_type": null,
+          "still_path_hash": "1466764023324062541",
+          "summary": "対象に再生を付与<br>対象の魔攻とクリティカルダメージアップ<br>味方全員の魔攻アップ<br>得意属性が火属性の味方全員の強化系パネルとバーストパネルを除いたパネルを強化パネルに変換",
+          "timeline_hash": "4374745511906764984",
+          "wait": 0,
+          "target_name": "味方単体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "対象に「ターン開始時、HP{0}%回復」を2回行動開始するまで付与し、<br>「魔攻+{1}%」と「クリティカルダメージ+{2}%」を2回行動終了するまで付与<br>味方全員に「魔攻+{3}%」を付与(上限60%)<br>得意属性が火属性の味方全員の強化系パネルとバーストパネルを除いたパネル2つを強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001093,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001093,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001314,
+              "value": 2800,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001314,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001491,
+              "value": 4600,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001491,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001979,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001979,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001980,
+              "value": 200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001980,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003318,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "しゅわしゅわシャワー",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 2,
+          "state_change_visual_type": null,
+          "still_path_hash": "1466764023324062541",
+          "summary": "対象に再生を付与<br>対象の魔攻とクリティカルダメージアップ<br>味方全員の魔攻アップ<br>得意属性が火属性の味方全員の強化系パネルとバーストパネルを除いたパネルを強化パネルに変換",
+          "timeline_hash": "4374745511906764984",
+          "wait": 0,
+          "target_name": "味方単体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "対象に「ターン開始時、HP{0}%回復」を2回行動開始するまで付与し、<br>「魔攻+{1}%」と「クリティカルダメージ+{2}%」を2回行動終了するまで付与<br>味方全員に「魔攻+{3}%」を付与(上限60%)<br>得意属性が火属性の味方全員の強化系パネルとバーストパネルを除いたパネル2つを強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001093,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001093,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001314,
+              "value": 2900,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001314,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001491,
+              "value": 4800,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001491,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001979,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001979,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001980,
+              "value": 200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001980,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003319,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "しゅわしゅわシャワー",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 2,
+          "state_change_visual_type": null,
+          "still_path_hash": "1466764023324062541",
+          "summary": "対象に再生を付与<br>対象の魔攻とクリティカルダメージアップ<br>味方全員の魔攻アップ<br>得意属性が火属性の味方全員の強化系パネルとバーストパネルを除いたパネルを強化パネルに変換",
+          "timeline_hash": "4374745511906764984",
+          "wait": 0,
+          "target_name": "味方単体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "対象に「ターン開始時、HP{0}%回復」を2回行動開始するまで付与し、<br>「魔攻+{1}%」と「クリティカルダメージ+{2}%」を2回行動終了するまで付与<br>味方全員に「魔攻+{3}%」を付与(上限60%)<br>得意属性が火属性の味方全員の強化系パネルとバーストパネルを除いたパネル2つを強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001093,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001093,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001314,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001314,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001491,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001491,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001979,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001979,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001980,
+              "value": 200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001980,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003320,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "しゅわしゅわシャワー",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 2,
+          "state_change_visual_type": null,
+          "still_path_hash": "1466764023324062541",
+          "summary": "対象に再生を付与<br>対象の魔攻とクリティカルダメージアップ<br>味方全員の魔攻アップ<br>得意属性が火属性の味方全員の強化系パネルとバーストパネルを除いたパネルを強化パネルに変換",
+          "timeline_hash": "4374745511906764984",
+          "wait": 0,
+          "target_name": "味方単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "対象に「受ける攻撃の貫通力+{0}」を付与(上限150)<br>味方全員のマイナス効果と状態異常を解除<br>得意属性が火属性の味方全員に「魔攻+{3}%」と「クリティカルダメージ+{4}%」を2回行動終了するまで付与し、強化パネル全てを1段階強化",
+          "effects": [
+            {
+              "id": 91001981,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001981,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001967,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001967,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001372,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001372,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001982,
+              "value": 6200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001982,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001983,
+              "value": 7200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001983,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001984,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001984,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003321,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アンチュTHEジャックポット",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 4,
+          "skill_power_type": 1,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "56788133331410117",
+          "summary": "対象の受ける攻撃の貫通力アップ<br>味方全員のマイナス効果と状態異常を解除<br>得意属性が火属性の味方全員の魔攻とクリティカルダメージをアップし、強化パネル全てを1段階強化",
+          "timeline_hash": "4639810026390798593",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "対象に「受ける攻撃の貫通力+{0}」を付与(上限150)<br>味方全員のマイナス効果と状態異常を解除<br>得意属性が火属性の味方全員に「魔攻+{3}%」と「クリティカルダメージ+{4}%」を2回行動終了するまで付与し、強化パネル全てを1段階強化",
+          "effects": [
+            {
+              "id": 91001981,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001981,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001967,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001967,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001372,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001372,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001982,
+              "value": 6400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001982,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001983,
+              "value": 7400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001983,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001984,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001984,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003322,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アンチュTHEジャックポット",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 4,
+          "skill_power_type": 1,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "56788133331410117",
+          "summary": "対象の受ける攻撃の貫通力アップ<br>味方全員のマイナス効果と状態異常を解除<br>得意属性が火属性の味方全員の魔攻とクリティカルダメージをアップし、強化パネル全てを1段階強化",
+          "timeline_hash": "4639810026390798593",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "対象に「受ける攻撃の貫通力+{0}」を付与(上限150)<br>味方全員のマイナス効果と状態異常を解除<br>得意属性が火属性の味方全員に「魔攻+{3}%」と「クリティカルダメージ+{4}%」を2回行動終了するまで付与し、強化パネル全てを1段階強化",
+          "effects": [
+            {
+              "id": 91001981,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001981,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001967,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001967,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001372,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001372,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001982,
+              "value": 6600,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001982,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001983,
+              "value": 7600,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001983,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001984,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001984,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003323,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アンチュTHEジャックポット",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 4,
+          "skill_power_type": 1,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "56788133331410117",
+          "summary": "対象の受ける攻撃の貫通力アップ<br>味方全員のマイナス効果と状態異常を解除<br>得意属性が火属性の味方全員の魔攻とクリティカルダメージをアップし、強化パネル全てを1段階強化",
+          "timeline_hash": "4639810026390798593",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "対象に「受ける攻撃の貫通力+{0}」を付与(上限150)<br>味方全員のマイナス効果と状態異常を解除<br>得意属性が火属性の味方全員に「魔攻+{3}%」と「クリティカルダメージ+{4}%」を2回行動終了するまで付与し、強化パネル全てを1段階強化",
+          "effects": [
+            {
+              "id": 91001981,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001981,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001967,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001967,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001372,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001372,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001982,
+              "value": 6800,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001982,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001983,
+              "value": 7800,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001983,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001984,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001984,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003324,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アンチュTHEジャックポット",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 4,
+          "skill_power_type": 1,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "56788133331410117",
+          "summary": "対象の受ける攻撃の貫通力アップ<br>味方全員のマイナス効果と状態異常を解除<br>得意属性が火属性の味方全員の魔攻とクリティカルダメージをアップし、強化パネル全てを1段階強化",
+          "timeline_hash": "4639810026390798593",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "対象に「受ける攻撃の貫通力+{0}」を付与(上限150)<br>味方全員のマイナス効果と状態異常を解除<br>得意属性が火属性の味方全員に「魔攻+{3}%」と「クリティカルダメージ+{4}%」を2回行動終了するまで付与し、強化パネル全てを1段階強化",
+          "effects": [
+            {
+              "id": 91001981,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001981,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001967,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001967,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001372,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001372,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001982,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001982,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001983,
+              "value": 8000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001983,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001984,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001984,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003325,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アンチュTHEジャックポット",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 4,
+          "skill_power_type": 1,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "56788133331410117",
+          "summary": "対象の受ける攻撃の貫通力アップ<br>味方全員のマイナス効果と状態異常を解除<br>得意属性が火属性の味方全員の魔攻とクリティカルダメージをアップし、強化パネル全てを1段階強化",
+          "timeline_hash": "4639810026390798593",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

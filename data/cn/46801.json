@@ -2259,5 +2259,1585 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」を付与(上限30%)し、<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91000965,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000965,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002243,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002243,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003741,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ゲベートシュテルン",
+          "not_state_change_count_decrease": false,
+          "power": 88,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻アップ<br>自身の強化系パネルとバーストパネルを除いたパネルを強化パネルに変換",
+          "timeline_hash": "1397399767323614390",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」を付与(上限30%)し、<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91000965,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000965,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002243,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002243,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003742,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ゲベートシュテルン",
+          "not_state_change_count_decrease": false,
+          "power": 93,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻アップ<br>自身の強化系パネルとバーストパネルを除いたパネルを強化パネルに変換",
+          "timeline_hash": "1397399767323614390",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」を付与(上限30%)し、<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91000965,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000965,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002243,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002243,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003743,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ゲベートシュテルン",
+          "not_state_change_count_decrease": false,
+          "power": 99,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻アップ<br>自身の強化系パネルとバーストパネルを除いたパネルを強化パネルに変換",
+          "timeline_hash": "1397399767323614390",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」を付与(上限30%)し、<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91000965,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000965,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002243,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002243,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003744,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ゲベートシュテルン",
+          "not_state_change_count_decrease": false,
+          "power": 104,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻アップ<br>自身の強化系パネルとバーストパネルを除いたパネルを強化パネルに変換",
+          "timeline_hash": "1397399767323614390",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」を付与(上限30%)し、<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91000965,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000965,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002243,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002243,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003745,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ゲベートシュテルン",
+          "not_state_change_count_decrease": false,
+          "power": 110,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻アップ<br>自身の強化系パネルとバーストパネルを除いたパネルを強化パネルに変換",
+          "timeline_hash": "1397399767323614390",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 13,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」と「スキルダメージ+{2}%」を3回行動終了するまで付与し、<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>「クーゲルウルタイル」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃前、自身に「物攻+{4}%」を付与(上限100%)<br>攻撃後、次のパネルをバーストパネルに変換(空パネルの時は生成)し、<br>スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91001649,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001649,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001631,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001631,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001032,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001032,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001292,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001292,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002244,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002244,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002245,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002245,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001340,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001341,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003746,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 3,
+          "name": "クーゲルウルタイル",
+          "not_state_change_count_decrease": false,
+          "power": 187,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "1549690425209939232",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻とスキルダメージアップ<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>スキルランプの点灯数が3個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、攻撃前、自身の物攻アップ<br>攻撃後、自身のパネルをバーストパネルに変換し、スキルランプを全て消灯する",
+          "timeline_hash": "5428089760683830054",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 13,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」と「スキルダメージ+{2}%」を3回行動終了するまで付与し、<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>「クーゲルウルタイル」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃前、自身に「物攻+{4}%」を付与(上限100%)<br>攻撃後、次のパネルをバーストパネルに変換(空パネルの時は生成)し、<br>スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91001649,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001649,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001631,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001631,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001032,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001032,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001292,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001292,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002244,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002244,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002245,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002245,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001340,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001341,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003747,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 3,
+          "name": "クーゲルウルタイル",
+          "not_state_change_count_decrease": false,
+          "power": 198,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "1549690425209939232",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻とスキルダメージアップ<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>スキルランプの点灯数が3個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、攻撃前、自身の物攻アップ<br>攻撃後、自身のパネルをバーストパネルに変換し、スキルランプを全て消灯する",
+          "timeline_hash": "5428089760683830054",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 14,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」と「スキルダメージ+{2}%」を3回行動終了するまで付与し、<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>「クーゲルウルタイル」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃前、自身に「物攻+{4}%」を付与(上限100%)<br>攻撃後、次のパネルをバーストパネルに変換(空パネルの時は生成)し、<br>スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91001649,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001649,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001631,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001631,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001032,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001032,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001292,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001292,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002244,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002244,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002245,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002245,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001340,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001341,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003748,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 3,
+          "name": "クーゲルウルタイル",
+          "not_state_change_count_decrease": false,
+          "power": 210,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "1549690425209939232",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻とスキルダメージアップ<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>スキルランプの点灯数が3個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、攻撃前、自身の物攻アップ<br>攻撃後、自身のパネルをバーストパネルに変換し、スキルランプを全て消灯する",
+          "timeline_hash": "5428089760683830054",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 15,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」と「スキルダメージ+{2}%」を3回行動終了するまで付与し、<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>「クーゲルウルタイル」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃前、自身に「物攻+{4}%」を付与(上限100%)<br>攻撃後、次のパネルをバーストパネルに変換(空パネルの時は生成)し、<br>スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91001649,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001649,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001631,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001631,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001032,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001032,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001292,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001292,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002244,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002244,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002245,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002245,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001340,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001341,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003749,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 3,
+          "name": "クーゲルウルタイル",
+          "not_state_change_count_decrease": false,
+          "power": 221,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "1549690425209939232",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻とスキルダメージアップ<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>スキルランプの点灯数が3個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、攻撃前、自身の物攻アップ<br>攻撃後、自身のパネルをバーストパネルに変換し、スキルランプを全て消灯する",
+          "timeline_hash": "5428089760683830054",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 16,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」と「スキルダメージ+{2}%」を3回行動終了するまで付与し、<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>「クーゲルウルタイル」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃前、自身に「物攻+{4}%」を付与(上限100%)<br>攻撃後、次のパネルをバーストパネルに変換(空パネルの時は生成)し、<br>スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91001649,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001649,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001631,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001631,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001032,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001032,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001292,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001292,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002244,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002244,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002245,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002245,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001340,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001341,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003750,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 3,
+          "name": "クーゲルウルタイル",
+          "not_state_change_count_decrease": false,
+          "power": 233,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "1549690425209939232",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻とスキルダメージアップ<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>スキルランプの点灯数が3個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、攻撃前、自身の物攻アップ<br>攻撃後、自身のパネルをバーストパネルに変換し、スキルランプを全て消灯する",
+          "timeline_hash": "5428089760683830054",
+          "wait": 0,
+          "target_name": "敵全体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「スキル威力+{1}%」と「貫通力+{2}」を2回行動終了するまで付与し、<br>自身のバーストパネルを除くパネル全てを強化+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001649,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001649,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001788,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001788,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002188,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002188,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001253,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001253,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003751,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シュヴェーアシュルト",
+          "not_state_change_count_decrease": false,
+          "power": 504,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4181174209394313696",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身のスキル威力と貫通力アップ<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換",
+          "timeline_hash": "2849324809798703575",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「スキル威力+{1}%」と「貫通力+{2}」を2回行動終了するまで付与し、<br>自身のバーストパネルを除くパネル全てを強化+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001649,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001649,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001788,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001788,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002188,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002188,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001253,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001253,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003752,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シュヴェーアシュルト",
+          "not_state_change_count_decrease": false,
+          "power": 535,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4181174209394313696",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身のスキル威力と貫通力アップ<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換",
+          "timeline_hash": "2849324809798703575",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「スキル威力+{1}%」と「貫通力+{2}」を2回行動終了するまで付与し、<br>自身のバーストパネルを除くパネル全てを強化+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001649,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001649,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001788,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001788,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002188,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002188,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001253,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001253,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003753,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シュヴェーアシュルト",
+          "not_state_change_count_decrease": false,
+          "power": 567,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4181174209394313696",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身のスキル威力と貫通力アップ<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換",
+          "timeline_hash": "2849324809798703575",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「スキル威力+{1}%」と「貫通力+{2}」を2回行動終了するまで付与し、<br>自身のバーストパネルを除くパネル全てを強化+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001649,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001649,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001788,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001788,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002188,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002188,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001253,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001253,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003754,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シュヴェーアシュルト",
+          "not_state_change_count_decrease": false,
+          "power": 598,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4181174209394313696",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身のスキル威力と貫通力アップ<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換",
+          "timeline_hash": "2849324809798703575",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「スキル威力+{1}%」と「貫通力+{2}」を2回行動終了するまで付与し、<br>自身のバーストパネルを除くパネル全てを強化+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001649,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001649,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001788,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001788,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002188,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002188,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001253,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001253,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003755,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シュヴェーアシュルト",
+          "not_state_change_count_decrease": false,
+          "power": 630,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4181174209394313696",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身のスキル威力と貫通力アップ<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換",
+          "timeline_hash": "2849324809798703575",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

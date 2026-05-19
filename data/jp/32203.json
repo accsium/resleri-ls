@@ -1862,5 +1862,1360 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 193,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を付与(上限15%)",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000937,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001430,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001430,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002079,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002079,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003526,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スプレッション",
+          "not_state_change_count_decrease": false,
+          "power": 175,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "892951312771486832",
+          "wait": -25,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 205,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を付与(上限15%)",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000937,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001430,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001430,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002079,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002079,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003527,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スプレッション",
+          "not_state_change_count_decrease": false,
+          "power": 185,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "892951312771486832",
+          "wait": -25,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 217,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を付与(上限15%)",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000937,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001430,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001430,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002079,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002079,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003528,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スプレッション",
+          "not_state_change_count_decrease": false,
+          "power": 196,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "892951312771486832",
+          "wait": -25,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 229,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を付与(上限15%)",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000937,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001430,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001430,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002079,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002079,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003529,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スプレッション",
+          "not_state_change_count_decrease": false,
+          "power": 207,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "892951312771486832",
+          "wait": -25,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 241,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を付与(上限15%)",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000937,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001430,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001430,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002079,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002079,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003530,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スプレッション",
+          "not_state_change_count_decrease": false,
+          "power": 218,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "892951312771486832",
+          "wait": -25,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 121,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000937,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001430,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001430,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001135,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001135,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003531,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "四元の法",
+          "not_state_change_count_decrease": false,
+          "power": 130,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2186025754385462788",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "6076652442345382908",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 128,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000937,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001430,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001430,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001135,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001135,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003532,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "四元の法",
+          "not_state_change_count_decrease": false,
+          "power": 138,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2186025754385462788",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "6076652442345382908",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 136,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000937,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001430,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001430,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001135,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001135,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003533,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "四元の法",
+          "not_state_change_count_decrease": false,
+          "power": 146,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2186025754385462788",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "6076652442345382908",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 143,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000937,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001430,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001430,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001135,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001135,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003534,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "四元の法",
+          "not_state_change_count_decrease": false,
+          "power": 154,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2186025754385462788",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "6076652442345382908",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 151,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000937,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001430,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001430,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000966,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001135,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001135,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003535,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "四元の法",
+          "not_state_change_count_decrease": false,
+          "power": 162,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2186025754385462788",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "6076652442345382908",
+          "wait": 0,
+          "target_name": "敵全体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 500,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、「新星」タグを持つキャラ数に応じ、対象に「受けるダメージ+4～20%(1～5人で多いほど増加)」を付与(上限20%)し、<br>自身に「ブレイクダメージ+{2}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001990,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001990,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000934,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002081,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002081,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002080,
+              "value": 400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002080,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003536,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "イニシエイトグラム",
+          "not_state_change_count_decrease": false,
+          "power": 451,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3625885871679352652",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、「新星」タグを持つキャラ数に応じ、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "8930925352344971235",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 531,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、「新星」タグを持つキャラ数に応じ、対象に「受けるダメージ+4～20%(1～5人で多いほど増加)」を付与(上限20%)し、<br>自身に「ブレイクダメージ+{2}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001990,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001990,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000934,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002081,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002081,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002080,
+              "value": 400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002080,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003537,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "イニシエイトグラム",
+          "not_state_change_count_decrease": false,
+          "power": 465,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3625885871679352652",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、「新星」タグを持つキャラ数に応じ、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "8930925352344971235",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 562,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、「新星」タグを持つキャラ数に応じ、対象に「受けるダメージ+4～20%(1～5人で多いほど増加)」を付与(上限20%)し、<br>自身に「ブレイクダメージ+{2}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001990,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001990,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000934,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002081,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002081,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002080,
+              "value": 400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002080,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003538,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "イニシエイトグラム",
+          "not_state_change_count_decrease": false,
+          "power": 479,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3625885871679352652",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、「新星」タグを持つキャラ数に応じ、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "8930925352344971235",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 593,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、「新星」タグを持つキャラ数に応じ、対象に「受けるダメージ+4～20%(1～5人で多いほど増加)」を付与(上限20%)し、<br>自身に「ブレイクダメージ+{2}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001990,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001990,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000934,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002081,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002081,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002080,
+              "value": 400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002080,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003539,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "イニシエイトグラム",
+          "not_state_change_count_decrease": false,
+          "power": 493,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3625885871679352652",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、「新星」タグを持つキャラ数に応じ、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "8930925352344971235",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 625,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」と「突属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、「新星」タグを持つキャラ数に応じ、対象に「受けるダメージ+4～20%(1～5人で多いほど増加)」を付与(上限20%)し、<br>自身に「ブレイクダメージ+{2}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001990,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001990,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000934,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002081,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002081,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002080,
+              "value": 400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002080,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003540,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "イニシエイトグラム",
+          "not_state_change_count_decrease": false,
+          "power": 507,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3625885871679352652",
+          "summary": "攻撃前、対象の風・突耐性ダウン<br>攻撃後、「新星」タグを持つキャラ数に応じ、対象の受けるダメージアップ<br>自身のブレイクダメージアップ",
+          "timeline_hash": "8930925352344971235",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

@@ -1896,5 +1896,1360 @@
       "wait": 0,
       "target_name": "敵全体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)し、<br>対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001879,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001879,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003205,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フォルティスパグナス",
+          "not_state_change_count_decrease": false,
+          "power": 103,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>対象の火属性耐性ダウン<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+          "timeline_hash": "5341235325287750157",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)し、<br>対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001879,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001879,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003206,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フォルティスパグナス",
+          "not_state_change_count_decrease": false,
+          "power": 109,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>対象の火属性耐性ダウン<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+          "timeline_hash": "5341235325287750157",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)し、<br>対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001879,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001879,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003207,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フォルティスパグナス",
+          "not_state_change_count_decrease": false,
+          "power": 115,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>対象の火属性耐性ダウン<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+          "timeline_hash": "5341235325287750157",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)し、<br>対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001879,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001879,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003208,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フォルティスパグナス",
+          "not_state_change_count_decrease": false,
+          "power": 121,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>対象の火属性耐性ダウン<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+          "timeline_hash": "5341235325287750157",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 8,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)し、<br>対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001879,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001879,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003209,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フォルティスパグナス",
+          "not_state_change_count_decrease": false,
+          "power": 128,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>対象の火属性耐性ダウン<br>自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+          "timeline_hash": "5341235325287750157",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+0～120%(HP50～100%で多いほど増加)<br>攻撃前、対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「WEAK攻撃ダメージ+{3}%」を2回行動終了するまで付与し、<br>「バーストスキルダメージ+{4}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001880,
+              "value": 12000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001880,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 2500,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001593,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001593,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001881,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001881,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003210,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "カウダエクシティウム",
+          "not_state_change_count_decrease": false,
+          "power": 330,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージとバーストスキルダメージアップ",
+          "timeline_hash": "1310297306489974175",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+0～120%(HP50～100%で多いほど増加)<br>攻撃前、対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「WEAK攻撃ダメージ+{3}%」を2回行動終了するまで付与し、<br>「バーストスキルダメージ+{4}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001880,
+              "value": 12000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001880,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 2500,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001593,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001593,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001881,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001881,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003211,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "カウダエクシティウム",
+          "not_state_change_count_decrease": false,
+          "power": 350,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージとバーストスキルダメージアップ",
+          "timeline_hash": "1310297306489974175",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+0～120%(HP50～100%で多いほど増加)<br>攻撃前、対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「WEAK攻撃ダメージ+{3}%」を2回行動終了するまで付与し、<br>「バーストスキルダメージ+{4}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001880,
+              "value": 12000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001880,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 2500,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001593,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001593,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001881,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001881,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003212,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "カウダエクシティウム",
+          "not_state_change_count_decrease": false,
+          "power": 371,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージとバーストスキルダメージアップ",
+          "timeline_hash": "1310297306489974175",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+0～120%(HP50～100%で多いほど増加)<br>攻撃前、対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「WEAK攻撃ダメージ+{3}%」を2回行動終了するまで付与し、<br>「バーストスキルダメージ+{4}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001880,
+              "value": 12000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001880,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 2500,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001593,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001593,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001881,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001881,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003213,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "カウダエクシティウム",
+          "not_state_change_count_decrease": false,
+          "power": 391,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージとバーストスキルダメージアップ",
+          "timeline_hash": "1310297306489974175",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+0～120%(HP50～100%で多いほど増加)<br>攻撃前、対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「WEAK攻撃ダメージ+{3}%」を2回行動終了するまで付与し、<br>「バーストスキルダメージ+{4}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001880,
+              "value": 12000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001880,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 2500,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001593,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001593,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001881,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001881,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003214,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "カウダエクシティウム",
+          "not_state_change_count_decrease": false,
+          "power": 412,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージとバーストスキルダメージアップ",
+          "timeline_hash": "1310297306489974175",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+0～150%(HP50～100%で多いほど増加)<br>攻撃前、対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「WEAK攻撃ダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001880,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001880,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 4000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001593,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001593,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003215,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "カデーレ・ドラコ",
+          "not_state_change_count_decrease": false,
+          "power": 302,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3053314276754852006",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ",
+          "timeline_hash": "5054313672310802964",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 39,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+0～150%(HP50～100%で多いほど増加)<br>攻撃前、対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「WEAK攻撃ダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001880,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001880,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 4000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001593,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001593,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003216,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "カデーレ・ドラコ",
+          "not_state_change_count_decrease": false,
+          "power": 311,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3053314276754852006",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ",
+          "timeline_hash": "5054313672310802964",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 41,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+0～150%(HP50～100%で多いほど増加)<br>攻撃前、対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「WEAK攻撃ダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001880,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001880,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 4000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001593,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001593,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003217,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "カデーレ・ドラコ",
+          "not_state_change_count_decrease": false,
+          "power": 320,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3053314276754852006",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ",
+          "timeline_hash": "5054313672310802964",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 43,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+0～150%(HP50～100%で多いほど増加)<br>攻撃前、対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「WEAK攻撃ダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001880,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001880,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 4000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001593,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001593,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003218,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "カデーレ・ドラコ",
+          "not_state_change_count_decrease": false,
+          "power": 329,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3053314276754852006",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ",
+          "timeline_hash": "5054313672310802964",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 46,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+0～150%(HP50～100%で多いほど増加)<br>攻撃前、対象に「火属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「WEAK攻撃ダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001880,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001880,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001298,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001298,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 4000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001593,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001593,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003219,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "カデーレ・ドラコ",
+          "not_state_change_count_decrease": false,
+          "power": 339,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3053314276754852006",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ",
+          "timeline_hash": "5054313672310802964",
+          "wait": 0,
+          "target_name": "敵全体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

@@ -2224,5 +2224,1210 @@
       "wait": 0,
       "target_name": "敵全体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「物防・魔防+{0}%」を付与(上限30%)し、<br>自身に「かばう」を2回発動するまで付与し、<br>自身に「カウンター(クリールエンボル)」を2回カウンターするまで付与(重複不可)",
+          "effects": [
+            {
+              "id": 91001396,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001396,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001397,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001397,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001086,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001086,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001889,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドゥフラッペ",
+          "not_state_change_count_decrease": false,
+          "power": 49,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身にステータスアップ<br>自身にかばうとカウンターを付与",
+          "timeline_hash": "4923725867787260752",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「物防・魔防+{0}%」を付与(上限30%)し、<br>自身に「かばう」を2回発動するまで付与し、<br>自身に「カウンター(クリールエンボル)」を2回カウンターするまで付与(重複不可)",
+          "effects": [
+            {
+              "id": 91001396,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001396,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001397,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001397,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001087,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001087,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001890,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドゥフラッペ",
+          "not_state_change_count_decrease": false,
+          "power": 52,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身にステータスアップ<br>自身にかばうとカウンターを付与",
+          "timeline_hash": "4923725867787260752",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「物防・魔防+{0}%」を付与(上限30%)し、<br>自身に「かばう」を2回発動するまで付与し、<br>自身に「カウンター(クリールエンボル)」を2回カウンターするまで付与(重複不可)",
+          "effects": [
+            {
+              "id": 91001396,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001396,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001397,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001397,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001088,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001088,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001891,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドゥフラッペ",
+          "not_state_change_count_decrease": false,
+          "power": 55,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身にステータスアップ<br>自身にかばうとカウンターを付与",
+          "timeline_hash": "4923725867787260752",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「物防・魔防+{0}%」を付与(上限30%)し、<br>自身に「かばう」を2回発動するまで付与し、<br>自身に「カウンター(クリールエンボル)」を2回カウンターするまで付与(重複不可)",
+          "effects": [
+            {
+              "id": 91001396,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001396,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001397,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001397,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001089,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001089,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001892,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドゥフラッペ",
+          "not_state_change_count_decrease": false,
+          "power": 58,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身にステータスアップ<br>自身にかばうとカウンターを付与",
+          "timeline_hash": "4923725867787260752",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「物防・魔防+{0}%」を付与(上限30%)し、<br>自身に「かばう」を2回発動するまで付与し、<br>自身に「カウンター(クリールエンボル)」を2回カウンターするまで付与(重複不可)",
+          "effects": [
+            {
+              "id": 91001396,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001396,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001397,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001397,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001090,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001090,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001893,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドゥフラッペ",
+          "not_state_change_count_decrease": false,
+          "power": 61,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身にステータスアップ<br>自身にかばうとカウンターを付与",
+          "timeline_hash": "4923725867787260752",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 9,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与(上限2個)<br>対象に「ダメージ-{2}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001399,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001399,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000914,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000914,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001894,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クリールエンボル",
+          "not_state_change_count_decrease": false,
+          "power": 118,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3612571604902129360",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員の受けるダメージダウン<br>対象のダメージダウン",
+          "timeline_hash": "2045878712467694788",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 9,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与(上限2個)<br>対象に「ダメージ-{2}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001399,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001399,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000914,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000914,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001895,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クリールエンボル",
+          "not_state_change_count_decrease": false,
+          "power": 125,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3612571604902129360",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員の受けるダメージダウン<br>対象のダメージダウン",
+          "timeline_hash": "2045878712467694788",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 10,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与(上限2個)<br>対象に「ダメージ-{2}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001399,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001399,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000914,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000914,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001896,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クリールエンボル",
+          "not_state_change_count_decrease": false,
+          "power": 132,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3612571604902129360",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員の受けるダメージダウン<br>対象のダメージダウン",
+          "timeline_hash": "2045878712467694788",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 10,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与(上限2個)<br>対象に「ダメージ-{2}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001399,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001399,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000914,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000914,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001897,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クリールエンボル",
+          "not_state_change_count_decrease": false,
+          "power": 139,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3612571604902129360",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員の受けるダメージダウン<br>対象のダメージダウン",
+          "timeline_hash": "2045878712467694788",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 11,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与(上限2個)<br>対象に「ダメージ-{2}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001399,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001399,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000914,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000914,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001898,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クリールエンボル",
+          "not_state_change_count_decrease": false,
+          "power": 147,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3612571604902129360",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員の受けるダメージダウン<br>対象のダメージダウン",
+          "timeline_hash": "2045878712467694788",
+          "wait": 0,
+          "target_name": "敵全体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「マイナス効果無効」を1回行動終了するまで付与し、<br>味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001069,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001069,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001392,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001392,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001899,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "レ・グラン・ブークリエ",
+          "not_state_change_count_decrease": false,
+          "power": 420,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4286486106659051072",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員にマイナス効果無効を付与<br>味方全員の受けるダメージダウン",
+          "timeline_hash": "6463424090564981481",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「マイナス効果無効」を1回行動終了するまで付与し、<br>味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001069,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001069,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001392,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001392,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001900,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "レ・グラン・ブークリエ",
+          "not_state_change_count_decrease": false,
+          "power": 446,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4286486106659051072",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員にマイナス効果無効を付与<br>味方全員の受けるダメージダウン",
+          "timeline_hash": "6463424090564981481",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「マイナス効果無効」を1回行動終了するまで付与し、<br>味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001069,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001069,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001392,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001392,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001901,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "レ・グラン・ブークリエ",
+          "not_state_change_count_decrease": false,
+          "power": 472,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4286486106659051072",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員にマイナス効果無効を付与<br>味方全員の受けるダメージダウン",
+          "timeline_hash": "6463424090564981481",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「マイナス効果無効」を1回行動終了するまで付与し、<br>味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001069,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001069,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001392,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001392,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001902,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "レ・グラン・ブークリエ",
+          "not_state_change_count_decrease": false,
+          "power": 498,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4286486106659051072",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員にマイナス効果無効を付与<br>味方全員の受けるダメージダウン",
+          "timeline_hash": "6463424090564981481",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「マイナス効果無効」を1回行動終了するまで付与し、<br>味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001069,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001069,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001392,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001392,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001903,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "レ・グラン・ブークリエ",
+          "not_state_change_count_decrease": false,
+          "power": 525,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4286486106659051072",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員にマイナス効果無効を付与<br>味方全員の受けるダメージダウン",
+          "timeline_hash": "6463424090564981481",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

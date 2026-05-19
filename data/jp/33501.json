@@ -1318,5 +1318,680 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 16,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 11000601,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ノックブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 40,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1090611272214778195",
+          "summary": "追加効果なし",
+          "timeline_hash": "2736923175505886070",
+          "wait": -125,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 17,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 11000602,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ノックブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 42,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1090611272214778195",
+          "summary": "追加効果なし",
+          "timeline_hash": "2736923175505886070",
+          "wait": -125,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 18,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 11000603,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ノックブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 45,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1090611272214778195",
+          "summary": "追加効果なし",
+          "timeline_hash": "2736923175505886070",
+          "wait": -125,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 19,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 11000604,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ノックブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 47,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1090611272214778195",
+          "summary": "追加効果なし",
+          "timeline_hash": "2736923175505886070",
+          "wait": -125,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 20,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 11000605,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ノックブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 50,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1090611272214778195",
+          "summary": "追加効果なし",
+          "timeline_hash": "2736923175505886070",
+          "wait": -125,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 46,
+          "break_power_type": 2,
+          "description": "WEAK攻撃後、味方全員に「ブレイクダメージ+{0}%」を1回行動するまで付与",
+          "effects": [
+            {
+              "id": 91001015,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001015,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000606,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スコールシュート",
+          "not_state_change_count_decrease": false,
+          "power": 90,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3612571604902129360",
+          "summary": "WEAK攻撃後、味方全員のブレイクダメージアップ",
+          "timeline_hash": "9064475491657370854",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 48,
+          "break_power_type": 2,
+          "description": "WEAK攻撃後、味方全員に「ブレイクダメージ+{0}%」を1回行動するまで付与",
+          "effects": [
+            {
+              "id": 91001015,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001015,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000607,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スコールシュート",
+          "not_state_change_count_decrease": false,
+          "power": 95,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3612571604902129360",
+          "summary": "WEAK攻撃後、味方全員のブレイクダメージアップ",
+          "timeline_hash": "9064475491657370854",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 51,
+          "break_power_type": 2,
+          "description": "WEAK攻撃後、味方全員に「ブレイクダメージ+{0}%」を1回行動するまで付与",
+          "effects": [
+            {
+              "id": 91001015,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001015,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000608,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スコールシュート",
+          "not_state_change_count_decrease": false,
+          "power": 101,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3612571604902129360",
+          "summary": "WEAK攻撃後、味方全員のブレイクダメージアップ",
+          "timeline_hash": "9064475491657370854",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 54,
+          "break_power_type": 2,
+          "description": "WEAK攻撃後、味方全員に「ブレイクダメージ+{0}%」を1回行動するまで付与",
+          "effects": [
+            {
+              "id": 91001015,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001015,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000609,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スコールシュート",
+          "not_state_change_count_decrease": false,
+          "power": 106,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3612571604902129360",
+          "summary": "WEAK攻撃後、味方全員のブレイクダメージアップ",
+          "timeline_hash": "9064475491657370854",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 57,
+          "break_power_type": 2,
+          "description": "WEAK攻撃後、味方全員に「ブレイクダメージ+{0}%」を1回行動するまで付与",
+          "effects": [
+            {
+              "id": 91001015,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001015,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000610,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スコールシュート",
+          "not_state_change_count_decrease": false,
+          "power": 112,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3612571604902129360",
+          "summary": "WEAK攻撃後、味方全員のブレイクダメージアップ",
+          "timeline_hash": "9064475491657370854",
+          "wait": 0,
+          "target_name": "敵全体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 300,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001016,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001016,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000611,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エーテルブラム",
+          "not_state_change_count_decrease": false,
+          "power": 320,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7034515502663111543",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+          "timeline_hash": "7813773679413407824",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 318,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001016,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001016,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000612,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エーテルブラム",
+          "not_state_change_count_decrease": false,
+          "power": 340,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7034515502663111543",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+          "timeline_hash": "7813773679413407824",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 337,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001016,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001016,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000613,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エーテルブラム",
+          "not_state_change_count_decrease": false,
+          "power": 360,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7034515502663111543",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+          "timeline_hash": "7813773679413407824",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 356,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001016,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001016,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000614,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エーテルブラム",
+          "not_state_change_count_decrease": false,
+          "power": 380,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7034515502663111543",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+          "timeline_hash": "7813773679413407824",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 375,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001016,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001016,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000615,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エーテルブラム",
+          "not_state_change_count_decrease": false,
+          "power": 400,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7034515502663111543",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+          "timeline_hash": "7813773679413407824",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

@@ -2098,5 +2098,1435 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 17,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、アイテムゲージを{2}％回復し、<br>自身に「ブレイクダメージ+{3}％」を付与(上限60％)",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001478,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002004,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001655,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001655,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003048,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "紅ノ太刀",
+          "not_state_change_count_decrease": false,
+          "power": 102,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、アイテムゲージを回復<br>自身のブレイクダメージUP",
+          "timeline_hash": "3471012470738161239",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 18,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、アイテムゲージを{2}％回復し、<br>自身に「ブレイクダメージ+{3}％」を付与(上限60％)",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001478,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002004,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001655,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001655,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003049,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "紅ノ太刀",
+          "not_state_change_count_decrease": false,
+          "power": 108,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、アイテムゲージを回復<br>自身のブレイクダメージUP",
+          "timeline_hash": "3471012470738161239",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 19,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、アイテムゲージを{2}％回復し、<br>自身に「ブレイクダメージ+{3}％」を付与(上限60％)",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001478,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002004,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001655,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001655,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003050,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "紅ノ太刀",
+          "not_state_change_count_decrease": false,
+          "power": 114,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、アイテムゲージを回復<br>自身のブレイクダメージUP",
+          "timeline_hash": "3471012470738161239",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 20,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、アイテムゲージを{2}％回復し、<br>自身に「ブレイクダメージ+{3}％」を付与(上限60％)",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001478,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002004,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001655,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001655,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003051,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "紅ノ太刀",
+          "not_state_change_count_decrease": false,
+          "power": 120,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、アイテムゲージを回復<br>自身のブレイクダメージUP",
+          "timeline_hash": "3471012470738161239",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 21,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、アイテムゲージを{2}％回復し、<br>自身に「ブレイクダメージ+{3}％」を付与(上限60％)",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001478,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002004,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001655,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001655,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003052,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "紅ノ太刀",
+          "not_state_change_count_decrease": false,
+          "power": 127,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、アイテムゲージを回復<br>自身のブレイクダメージUP",
+          "timeline_hash": "3471012470738161239",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 255,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を付与(上限50%)<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001877,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001877,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003053,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "天壌斬り",
+          "not_state_change_count_decrease": false,
+          "power": 278,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ",
+          "timeline_hash": "7501728401548097989",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 270,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を付与(上限50%)<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001877,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001877,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003054,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "天壌斬り",
+          "not_state_change_count_decrease": false,
+          "power": 295,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ",
+          "timeline_hash": "7501728401548097989",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 286,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を付与(上限50%)<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001877,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001877,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003055,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "天壌斬り",
+          "not_state_change_count_decrease": false,
+          "power": 312,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ",
+          "timeline_hash": "7501728401548097989",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 302,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を付与(上限50%)<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001877,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001877,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003056,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "天壌斬り",
+          "not_state_change_count_decrease": false,
+          "power": 329,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ",
+          "timeline_hash": "7501728401548097989",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 318,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を付与(上限50%)<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001877,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001877,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003057,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "天壌斬り",
+          "not_state_change_count_decrease": false,
+          "power": 347,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ",
+          "timeline_hash": "7501728401548097989",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 500,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を付与(上限200%)し、<br>対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)<br><br>対象がブレイク時、対象にスタンを1回行動開始するまで超高確率で付与し、<br>敵全体に「受ける魔法攻撃ダメージ+{4}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001478,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001858,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001858,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001878,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001878,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001859,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001859,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003058,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "二耀猛閃",
+          "not_state_change_count_decrease": false,
+          "power": 451,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4801168445823610282",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>対象のパネルを弱体+パネルに変換<br>対象がブレイク時、スタンを付与<br>敵全体の受ける魔法攻撃ダメージアップ",
+          "timeline_hash": "755312701692532657",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 531,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を付与(上限200%)し、<br>対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)<br><br>対象がブレイク時、対象にスタンを1回行動開始するまで超高確率で付与し、<br>敵全体に「受ける魔法攻撃ダメージ+{4}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001478,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001858,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001858,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001878,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001878,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001859,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001859,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003059,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "二耀猛閃",
+          "not_state_change_count_decrease": false,
+          "power": 479,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4801168445823610282",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>対象のパネルを弱体+パネルに変換<br>対象がブレイク時、スタンを付与<br>敵全体の受ける魔法攻撃ダメージアップ",
+          "timeline_hash": "755312701692532657",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 562,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を付与(上限200%)し、<br>対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)<br><br>対象がブレイク時、対象にスタンを1回行動開始するまで超高確率で付与し、<br>敵全体に「受ける魔法攻撃ダメージ+{4}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001478,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001858,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001858,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001878,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001878,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001859,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001859,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003060,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "二耀猛閃",
+          "not_state_change_count_decrease": false,
+          "power": 507,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4801168445823610282",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>対象のパネルを弱体+パネルに変換<br>対象がブレイク時、スタンを付与<br>敵全体の受ける魔法攻撃ダメージアップ",
+          "timeline_hash": "755312701692532657",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 593,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を付与(上限200%)し、<br>対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)<br><br>対象がブレイク時、対象にスタンを1回行動開始するまで超高確率で付与し、<br>敵全体に「受ける魔法攻撃ダメージ+{4}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001478,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001858,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001858,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001878,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001878,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001859,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001859,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003061,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "二耀猛閃",
+          "not_state_change_count_decrease": false,
+          "power": 535,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4801168445823610282",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>対象のパネルを弱体+パネルに変換<br>対象がブレイク時、スタンを付与<br>敵全体の受ける魔法攻撃ダメージアップ",
+          "timeline_hash": "755312701692532657",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 625,
+          "break_power_type": 2,
+          "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃前、対象に「雷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、対象に「受けるダメージ+{2}%」を付与(上限200%)し、<br>対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)<br><br>対象がブレイク時、対象にスタンを1回行動開始するまで超高確率で付与し、<br>敵全体に「受ける魔法攻撃ダメージ+{4}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001310,
+              "value": 15000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001310,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001478,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001858,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001858,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001878,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001878,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001859,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001859,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003062,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "二耀猛閃",
+          "not_state_change_count_decrease": false,
+          "power": 563,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4801168445823610282",
+          "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃前、対象の雷属性耐性ダウン<br>攻撃後、対象の受けるダメージアップ<br>対象のパネルを弱体+パネルに変換<br>対象がブレイク時、スタンを付与<br>敵全体の受ける魔法攻撃ダメージアップ",
+          "timeline_hash": "755312701692532657",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

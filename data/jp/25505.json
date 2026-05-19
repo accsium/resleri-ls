@@ -2294,5 +2294,1435 @@
       "wait": 0,
       "target_name": "味方全体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復し、<br>「かばう」を2回発動するまで付与<br>得意属性が氷属性または「アーランド」の味方全員に「物防・魔防+{1}%」を1回攻撃を受けるまで付与(上限1個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001775,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001775,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001776,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001776,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001777,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001777,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001778,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001778,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002893,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エンゼルライト",
+          "not_state_change_count_decrease": false,
+          "power": 46,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復<br>自身にかばうを付与<br>得意属性が氷属性または「アーランド」の味方全員のステータスアップ",
+          "timeline_hash": "4278147531579080290",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復し、<br>「かばう」を2回発動するまで付与<br>得意属性が氷属性または「アーランド」の味方全員に「物防・魔防+{1}%」を1回攻撃を受けるまで付与(上限1個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001775,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001775,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001776,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001776,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001777,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001777,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001778,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001778,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002894,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エンゼルライト",
+          "not_state_change_count_decrease": false,
+          "power": 48,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復<br>自身にかばうを付与<br>得意属性が氷属性または「アーランド」の味方全員のステータスアップ",
+          "timeline_hash": "4278147531579080290",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復し、<br>「かばう」を2回発動するまで付与<br>得意属性が氷属性または「アーランド」の味方全員に「物防・魔防+{1}%」を1回攻撃を受けるまで付与(上限1個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001775,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001775,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001776,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001776,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001777,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001777,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001778,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001778,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002895,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エンゼルライト",
+          "not_state_change_count_decrease": false,
+          "power": 51,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復<br>自身にかばうを付与<br>得意属性が氷属性または「アーランド」の味方全員のステータスアップ",
+          "timeline_hash": "4278147531579080290",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復し、<br>「かばう」を2回発動するまで付与<br>得意属性が氷属性または「アーランド」の味方全員に「物防・魔防+{1}%」を1回攻撃を受けるまで付与(上限1個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001775,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001775,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001776,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001776,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001777,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001777,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001778,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001778,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002896,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エンゼルライト",
+          "not_state_change_count_decrease": false,
+          "power": 54,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復<br>自身にかばうを付与<br>得意属性が氷属性または「アーランド」の味方全員のステータスアップ",
+          "timeline_hash": "4278147531579080290",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復し、<br>「かばう」を2回発動するまで付与<br>得意属性が氷属性または「アーランド」の味方全員に「物防・魔防+{1}%」を1回攻撃を受けるまで付与(上限1個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001775,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001775,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001776,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001776,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001777,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001777,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001778,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001778,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002897,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エンゼルライト",
+          "not_state_change_count_decrease": false,
+          "power": 57,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復<br>自身にかばうを付与<br>得意属性が氷属性または「アーランド」の味方全員のステータスアップ",
+          "timeline_hash": "4278147531579080290",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身の最大HPの{0}%の耐久値を持つバリア(割合固定)を味方全員に付与<br>得意属性が氷属性の味方全員に「物防・魔防+{1}%」を1回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91001779,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001779,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001780,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001780,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001781,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001781,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002898,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "祝福のベール",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "味方全員にバリアを付与<br>得意属性が氷属性の味方全員のステータスアップ",
+          "timeline_hash": "7165215792492644850",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身の最大HPの{0}%の耐久値を持つバリア(割合固定)を味方全員に付与<br>得意属性が氷属性の味方全員に「物防・魔防+{1}%」を1回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91001779,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001779,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001780,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001780,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001781,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001781,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002899,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "祝福のベール",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "味方全員にバリアを付与<br>得意属性が氷属性の味方全員のステータスアップ",
+          "timeline_hash": "7165215792492644850",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身の最大HPの{0}%の耐久値を持つバリア(割合固定)を味方全員に付与<br>得意属性が氷属性の味方全員に「物防・魔防+{1}%」を1回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91001779,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001779,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001780,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001780,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001781,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001781,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002900,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "祝福のベール",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "味方全員にバリアを付与<br>得意属性が氷属性の味方全員のステータスアップ",
+          "timeline_hash": "7165215792492644850",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身の最大HPの{0}%の耐久値を持つバリア(割合固定)を味方全員に付与<br>得意属性が氷属性の味方全員に「物防・魔防+{1}%」を1回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91001779,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001779,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001780,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001780,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001781,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001781,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002901,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "祝福のベール",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "味方全員にバリアを付与<br>得意属性が氷属性の味方全員のステータスアップ",
+          "timeline_hash": "7165215792492644850",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身の最大HPの{0}%の耐久値を持つバリア(割合固定)を味方全員に付与<br>得意属性が氷属性の味方全員に「物防・魔防+{1}%」を1回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91001779,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001779,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001780,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001780,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001781,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001781,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002902,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "祝福のベール",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "味方全員にバリアを付与<br>得意属性が氷属性の味方全員のステータスアップ",
+          "timeline_hash": "7165215792492644850",
+          "wait": 0,
+          "target_name": "味方全体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "味方全員のマイナス効果を解除し、HPを{0}%回復<br>自身の最大HPの{1}%の耐久値を持つバリア(割合固定)を味方全員に付与し、<br>得意属性が氷属性の味方全員に「魔法攻撃ダメージ+{2}%」を3回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001779,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001779,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001782,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001782,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001469,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002903,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ロロナふぁんたじあ",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "3066428733493323621",
+          "summary": "味方全員のマイナス効果解除<br>味方全員のHPを回復<br>味方全員にバリアを付与<br>得意属性が氷属性の味方全員の魔法攻撃ダメージアップ",
+          "timeline_hash": "439067586417926490",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "味方全員のマイナス効果を解除し、HPを{0}%回復<br>自身の最大HPの{1}%の耐久値を持つバリア(割合固定)を味方全員に付与し、<br>得意属性が氷属性の味方全員に「魔法攻撃ダメージ+{2}%」を3回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001779,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001779,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001782,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001782,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001469,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002904,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ロロナふぁんたじあ",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "3066428733493323621",
+          "summary": "味方全員のマイナス効果解除<br>味方全員のHPを回復<br>味方全員にバリアを付与<br>得意属性が氷属性の味方全員の魔法攻撃ダメージアップ",
+          "timeline_hash": "439067586417926490",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "味方全員のマイナス効果を解除し、HPを{0}%回復<br>自身の最大HPの{1}%の耐久値を持つバリア(割合固定)を味方全員に付与し、<br>得意属性が氷属性の味方全員に「魔法攻撃ダメージ+{2}%」を3回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001779,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001779,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001782,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001782,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001469,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002905,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ロロナふぁんたじあ",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "3066428733493323621",
+          "summary": "味方全員のマイナス効果解除<br>味方全員のHPを回復<br>味方全員にバリアを付与<br>得意属性が氷属性の味方全員の魔法攻撃ダメージアップ",
+          "timeline_hash": "439067586417926490",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "味方全員のマイナス効果を解除し、HPを{0}%回復<br>自身の最大HPの{1}%の耐久値を持つバリア(割合固定)を味方全員に付与し、<br>得意属性が氷属性の味方全員に「魔法攻撃ダメージ+{2}%」を3回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001779,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001779,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001782,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001782,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001469,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002906,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ロロナふぁんたじあ",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "3066428733493323621",
+          "summary": "味方全員のマイナス効果解除<br>味方全員のHPを回復<br>味方全員にバリアを付与<br>得意属性が氷属性の味方全員の魔法攻撃ダメージアップ",
+          "timeline_hash": "439067586417926490",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "味方全員のマイナス効果を解除し、HPを{0}%回復<br>自身の最大HPの{1}%の耐久値を持つバリア(割合固定)を味方全員に付与し、<br>得意属性が氷属性の味方全員に「魔法攻撃ダメージ+{2}%」を3回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001779,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001779,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001782,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001782,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001469,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002907,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ロロナふぁんたじあ",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "3066428733493323621",
+          "summary": "味方全員のマイナス効果解除<br>味方全員のHPを回復<br>味方全員にバリアを付与<br>得意属性が氷属性の味方全員の魔法攻撃ダメージアップ",
+          "timeline_hash": "439067586417926490",
+          "wait": 0,
+          "target_name": "味方全体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

@@ -3578,5 +3578,1585 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 14,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「ブレイクダメージ+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 48}",
+          "effects": [
+            {
+              "id": 91000908,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000908,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001270,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001270,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001622,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001622,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002401,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ロウブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 64,
+          "require_command_value": false,
+          "skill_destination": 11002556,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身のブレイクダメージとスキルダメージアップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "3504408280094907649",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 14,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「ブレイクダメージ+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 48}",
+          "effects": [
+            {
+              "id": 91000908,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000908,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001270,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001270,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001622,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001622,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002402,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ロウブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 68,
+          "require_command_value": false,
+          "skill_destination": 11002557,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身のブレイクダメージとスキルダメージアップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "3504408280094907649",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 15,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「ブレイクダメージ+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 48}",
+          "effects": [
+            {
+              "id": 91000908,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000908,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001270,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001270,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001622,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001622,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002403,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ロウブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 72,
+          "require_command_value": false,
+          "skill_destination": 11002558,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身のブレイクダメージとスキルダメージアップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "3504408280094907649",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 16,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「ブレイクダメージ+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 48}",
+          "effects": [
+            {
+              "id": 91000908,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000908,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001270,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001270,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001622,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001622,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002404,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ロウブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 76,
+          "require_command_value": false,
+          "skill_destination": 11002559,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身のブレイクダメージとスキルダメージアップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "3504408280094907649",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 17,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「ブレイクダメージ+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 48}",
+          "effects": [
+            {
+              "id": 91000908,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000908,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001270,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001270,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001622,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001622,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002405,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ロウブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 80,
+          "require_command_value": false,
+          "skill_destination": 11002560,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身のブレイクダメージとスキルダメージアップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "3504408280094907649",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 245,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受ける火属性ダメージ+{0}%」と「受ける打属性ダメージ+{1}%」を2回攻撃を受けるまで付与し、<br>自身に「パイル」を付与(重複不可)<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃後、対象に「受ける火属性ダメージ+5～{2}%」と「受ける打属性ダメージ+5～{3}%」と「受けるブレイクダメージ+5～{4}%」を2回攻撃を受けるまで付与(1～5人で多いほど増加)<br>※パイルは物攻+50%<br>アウトレンジ時のスキル：{hyperlink_id 53}",
+          "effects": [
+            {
+              "id": 91001658,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001658,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001645,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001645,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001687,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001687,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001688,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001688,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001689,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001689,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001623,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001623,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002406,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クルセイドラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 234,
+          "require_command_value": false,
+          "skill_destination": 12002561,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃後、対象の受ける火属性ダメージと受ける打属性ダメージアップ<br>自身に「パイル」を付与<br>「アラディス調査団」タグを持つキャラ数に応じ、対象の受ける火属性ダメージと受ける打属性ダメージと受けるブレイクダメージアップ",
+          "timeline_hash": "3138795062884269368",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 260,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受ける火属性ダメージ+{0}%」と「受ける打属性ダメージ+{1}%」を2回攻撃を受けるまで付与し、<br>自身に「パイル」を付与(重複不可)<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃後、対象に「受ける火属性ダメージ+5～{2}%」と「受ける打属性ダメージ+5～{3}%」と「受けるブレイクダメージ+5～{4}%」を2回攻撃を受けるまで付与(1～5人で多いほど増加)<br>※パイルは物攻+50%<br>アウトレンジ時のスキル：{hyperlink_id 54}",
+          "effects": [
+            {
+              "id": 91001658,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001658,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001645,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001645,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001687,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001687,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001688,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001688,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001689,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001689,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001623,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001623,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002407,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クルセイドラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 248,
+          "require_command_value": false,
+          "skill_destination": 12002562,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃後、対象の受ける火属性ダメージと受ける打属性ダメージアップ<br>自身に「パイル」を付与<br>「アラディス調査団」タグを持つキャラ数に応じ、対象の受ける火属性ダメージと受ける打属性ダメージと受けるブレイクダメージアップ",
+          "timeline_hash": "3138795062884269368",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 275,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受ける火属性ダメージ+{0}%」と「受ける打属性ダメージ+{1}%」を2回攻撃を受けるまで付与し、<br>自身に「パイル」を付与(重複不可)<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃後、対象に「受ける火属性ダメージ+5～{2}%」と「受ける打属性ダメージ+5～{3}%」と「受けるブレイクダメージ+5～{4}%」を2回攻撃を受けるまで付与(1～5人で多いほど増加)<br>※パイルは物攻+50%<br>アウトレンジ時のスキル：{hyperlink_id 55}",
+          "effects": [
+            {
+              "id": 91001658,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001658,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001645,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001645,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001687,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001687,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001688,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001688,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001689,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001689,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001623,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001623,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002408,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クルセイドラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 263,
+          "require_command_value": false,
+          "skill_destination": 12002563,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃後、対象の受ける火属性ダメージと受ける打属性ダメージアップ<br>自身に「パイル」を付与<br>「アラディス調査団」タグを持つキャラ数に応じ、対象の受ける火属性ダメージと受ける打属性ダメージと受けるブレイクダメージアップ",
+          "timeline_hash": "3138795062884269368",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 290,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受ける火属性ダメージ+{0}%」と「受ける打属性ダメージ+{1}%」を2回攻撃を受けるまで付与し、<br>自身に「パイル」を付与(重複不可)<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃後、対象に「受ける火属性ダメージ+5～{2}%」と「受ける打属性ダメージ+5～{3}%」と「受けるブレイクダメージ+5～{4}%」を2回攻撃を受けるまで付与(1～5人で多いほど増加)<br>※パイルは物攻+50%<br>アウトレンジ時のスキル：{hyperlink_id 56}",
+          "effects": [
+            {
+              "id": 91001658,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001658,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001645,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001645,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001687,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001687,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001688,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001688,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001689,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001689,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001623,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001623,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002409,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クルセイドラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 277,
+          "require_command_value": false,
+          "skill_destination": 12002564,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃後、対象の受ける火属性ダメージと受ける打属性ダメージアップ<br>自身に「パイル」を付与<br>「アラディス調査団」タグを持つキャラ数に応じ、対象の受ける火属性ダメージと受ける打属性ダメージと受けるブレイクダメージアップ",
+          "timeline_hash": "3138795062884269368",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 306,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受ける火属性ダメージ+{0}%」と「受ける打属性ダメージ+{1}%」を2回攻撃を受けるまで付与し、<br>自身に「パイル」を付与(重複不可)<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃後、対象に「受ける火属性ダメージ+5～{2}%」と「受ける打属性ダメージ+5～{3}%」と「受けるブレイクダメージ+5～{4}%」を2回攻撃を受けるまで付与(1～5人で多いほど増加)<br>※パイルは物攻+50%<br>アウトレンジ時のスキル：{hyperlink_id 57}",
+          "effects": [
+            {
+              "id": 91001658,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001658,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001645,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001645,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001687,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001687,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001688,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001688,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001689,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001689,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001623,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001623,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002410,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クルセイドラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 292,
+          "require_command_value": false,
+          "skill_destination": 12002565,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃後、対象の受ける火属性ダメージと受ける打属性ダメージアップ<br>自身に「パイル」を付与<br>「アラディス調査団」タグを持つキャラ数に応じ、対象の受ける火属性ダメージと受ける打属性ダメージと受けるブレイクダメージアップ",
+          "timeline_hash": "3138795062884269368",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 500,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受ける打属性ダメージ+{0}%」を3回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{1}%」を2回行動終了するまで付与<br>対象がブレイク時、さらに「受ける打属性ダメージ+{2}%」を3回攻撃を受けるまで付与し、<br>対象に「パネル無効」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001646,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001646,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001387,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001387,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001659,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001659,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001628,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001628,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002411,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オメガバスター",
+          "not_state_change_count_decrease": false,
+          "power": 451,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "8201333593265010077",
+          "summary": "攻撃後、対象の受ける打属性ダメージアップ<br>自身のブレイクダメージアップ<br>対象がブレイク時、対象の受ける打属性ダメージアップ<br>対象に「パネル無効」を付与",
+          "timeline_hash": "7148728226523515806",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 531,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受ける打属性ダメージ+{0}%」を3回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{1}%」を2回行動終了するまで付与<br>対象がブレイク時、さらに「受ける打属性ダメージ+{2}%」を3回攻撃を受けるまで付与し、<br>対象に「パネル無効」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001646,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001646,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001387,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001387,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001659,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001659,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001628,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001628,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002412,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オメガバスター",
+          "not_state_change_count_decrease": false,
+          "power": 479,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "8201333593265010077",
+          "summary": "攻撃後、対象の受ける打属性ダメージアップ<br>自身のブレイクダメージアップ<br>対象がブレイク時、対象の受ける打属性ダメージアップ<br>対象に「パネル無効」を付与",
+          "timeline_hash": "7148728226523515806",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 562,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受ける打属性ダメージ+{0}%」を3回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{1}%」を2回行動終了するまで付与<br>対象がブレイク時、さらに「受ける打属性ダメージ+{2}%」を3回攻撃を受けるまで付与し、<br>対象に「パネル無効」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001646,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001646,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001387,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001387,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001659,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001659,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001628,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001628,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002413,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オメガバスター",
+          "not_state_change_count_decrease": false,
+          "power": 507,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "8201333593265010077",
+          "summary": "攻撃後、対象の受ける打属性ダメージアップ<br>自身のブレイクダメージアップ<br>対象がブレイク時、対象の受ける打属性ダメージアップ<br>対象に「パネル無効」を付与",
+          "timeline_hash": "7148728226523515806",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 593,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受ける打属性ダメージ+{0}%」を3回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{1}%」を2回行動終了するまで付与<br>対象がブレイク時、さらに「受ける打属性ダメージ+{2}%」を3回攻撃を受けるまで付与し、<br>対象に「パネル無効」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001646,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001646,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001387,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001387,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001659,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001659,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001628,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001628,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002414,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オメガバスター",
+          "not_state_change_count_decrease": false,
+          "power": 535,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "8201333593265010077",
+          "summary": "攻撃後、対象の受ける打属性ダメージアップ<br>自身のブレイクダメージアップ<br>対象がブレイク時、対象の受ける打属性ダメージアップ<br>対象に「パネル無効」を付与",
+          "timeline_hash": "7148728226523515806",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 625,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受ける打属性ダメージ+{0}%」を3回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{1}%」を2回行動終了するまで付与<br>対象がブレイク時、さらに「受ける打属性ダメージ+{2}%」を3回攻撃を受けるまで付与し、<br>対象に「パネル無効」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001646,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001646,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001387,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001387,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001659,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001659,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001628,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001628,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002415,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オメガバスター",
+          "not_state_change_count_decrease": false,
+          "power": 563,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "8201333593265010077",
+          "summary": "攻撃後、対象の受ける打属性ダメージアップ<br>自身のブレイクダメージアップ<br>対象がブレイク時、対象の受ける打属性ダメージアップ<br>対象に「パネル無効」を付与",
+          "timeline_hash": "7148728226523515806",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

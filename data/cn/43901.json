@@ -1491,5 +1491,985 @@
       "wait": 0,
       "target_name": "敵全体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>味方全員に「クリティカルダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001345,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001345,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001649,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "墜星",
+          "not_state_change_count_decrease": false,
+          "power": 50,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アイテムゲージを回復<br>味方全員のクリティカルダメージアップ",
+          "timeline_hash": "247715895462785382",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>味方全員に「クリティカルダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001345,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001345,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001650,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "墜星",
+          "not_state_change_count_decrease": false,
+          "power": 53,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アイテムゲージを回復<br>味方全員のクリティカルダメージアップ",
+          "timeline_hash": "247715895462785382",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>味方全員に「クリティカルダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001345,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001345,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001651,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "墜星",
+          "not_state_change_count_decrease": false,
+          "power": 56,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アイテムゲージを回復<br>味方全員のクリティカルダメージアップ",
+          "timeline_hash": "247715895462785382",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>味方全員に「クリティカルダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001345,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001345,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001652,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "墜星",
+          "not_state_change_count_decrease": false,
+          "power": 59,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アイテムゲージを回復<br>味方全員のクリティカルダメージアップ",
+          "timeline_hash": "247715895462785382",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>味方全員に「クリティカルダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001345,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001345,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001653,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "墜星",
+          "not_state_change_count_decrease": false,
+          "power": 62,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アイテムゲージを回復<br>味方全員のクリティカルダメージアップ",
+          "timeline_hash": "247715895462785382",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "アイテムゲージを{0}%回復し、<br>味方全員に「魔攻+{1}%」を付与(上限15%)し、<br>このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001351,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001351,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001346,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001346,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001654,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪華の舞",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "アイテムゲージを回復<br>味方全員の魔攻アップ<br>次の味方のバーストパネルを除いたパネルを強化+パネルに変換",
+          "timeline_hash": "6575516061367650038",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "アイテムゲージを{0}%回復し、<br>味方全員に「魔攻+{1}%」を付与(上限18%)し、<br>このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001360,
+              "value": 600,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001360,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001346,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001346,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001655,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪華の舞",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "アイテムゲージを回復<br>味方全員の魔攻アップ<br>次の味方のバーストパネルを除いたパネルを強化+パネルに変換",
+          "timeline_hash": "6575516061367650038",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "アイテムゲージを{0}%回復し、<br>味方全員に「魔攻+{1}%」を付与(上限21%)し、<br>このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001361,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001361,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001346,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001346,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001656,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪華の舞",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "アイテムゲージを回復<br>味方全員の魔攻アップ<br>次の味方のバーストパネルを除いたパネルを強化+パネルに変換",
+          "timeline_hash": "6575516061367650038",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "アイテムゲージを{0}%回復し、<br>味方全員に「魔攻+{1}%」を付与(上限24%)し、<br>このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001362,
+              "value": 800,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001362,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001346,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001346,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001657,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪華の舞",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "アイテムゲージを回復<br>味方全員の魔攻アップ<br>次の味方のバーストパネルを除いたパネルを強化+パネルに変換",
+          "timeline_hash": "6575516061367650038",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "アイテムゲージを{0}%回復し、<br>味方全員に「魔攻+{1}%」を付与(上限27%)し、<br>このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001363,
+              "value": 900,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001363,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001346,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001346,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001658,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪華の舞",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "アイテムゲージを回復<br>味方全員の魔攻アップ<br>次の味方のバーストパネルを除いたパネルを強化+パネルに変換",
+          "timeline_hash": "6575516061367650038",
+          "wait": 0,
+          "target_name": "味方全体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>攻撃対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001659,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スペキュラム・ルーナ",
+          "not_state_change_count_decrease": false,
+          "power": 240,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "4353708429803475194",
+          "summary": "攻撃後、アイテムゲージを回復<br>対象のパネルを弱体+パネルに変換",
+          "timeline_hash": "4773628826720564498",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>攻撃対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001660,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スペキュラム・ルーナ",
+          "not_state_change_count_decrease": false,
+          "power": 255,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "4353708429803475194",
+          "summary": "攻撃後、アイテムゲージを回復<br>対象のパネルを弱体+パネルに変換",
+          "timeline_hash": "4773628826720564498",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>攻撃対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001661,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スペキュラム・ルーナ",
+          "not_state_change_count_decrease": false,
+          "power": 270,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "4353708429803475194",
+          "summary": "攻撃後、アイテムゲージを回復<br>対象のパネルを弱体+パネルに変換",
+          "timeline_hash": "4773628826720564498",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>攻撃対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001662,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スペキュラム・ルーナ",
+          "not_state_change_count_decrease": false,
+          "power": 285,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "4353708429803475194",
+          "summary": "攻撃後、アイテムゲージを回復<br>対象のパネルを弱体+パネルに変換",
+          "timeline_hash": "4773628826720564498",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>攻撃対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001663,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スペキュラム・ルーナ",
+          "not_state_change_count_decrease": false,
+          "power": 300,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "4353708429803475194",
+          "summary": "攻撃後、アイテムゲージを回復<br>対象のパネルを弱体+パネルに変換",
+          "timeline_hash": "4773628826720564498",
+          "wait": 0,
+          "target_name": "敵全体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

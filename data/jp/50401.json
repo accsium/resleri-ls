@@ -3069,5 +3069,1585 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 14,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「パネル無効」を1回行動終了するまで付与<br>自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 91}",
+          "effects": [
+            {
+              "id": 91001256,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001256,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001433,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001433,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001650,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001650,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002464,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バウンシングピアース",
+          "not_state_change_count_decrease": false,
+          "power": 63,
+          "require_command_value": false,
+          "skill_destination": 11002638,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、対象にパネル無効を付与<br>次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "7898821323637625577",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 14,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「パネル無効」を1回行動終了するまで付与<br>自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 92}",
+          "effects": [
+            {
+              "id": 91001256,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001256,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001433,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001433,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001650,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001650,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002465,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バウンシングピアース",
+          "not_state_change_count_decrease": false,
+          "power": 66,
+          "require_command_value": false,
+          "skill_destination": 11002639,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、対象にパネル無効を付与<br>次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "7898821323637625577",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 15,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「パネル無効」を1回行動終了するまで付与<br>自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 93}",
+          "effects": [
+            {
+              "id": 91001256,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001256,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001433,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001433,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001650,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001650,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002466,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バウンシングピアース",
+          "not_state_change_count_decrease": false,
+          "power": 70,
+          "require_command_value": false,
+          "skill_destination": 11002640,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、対象にパネル無効を付与<br>次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "7898821323637625577",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 16,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「パネル無効」を1回行動終了するまで付与<br>自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 94}",
+          "effects": [
+            {
+              "id": 91001256,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001256,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001433,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001433,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001650,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001650,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002467,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バウンシングピアース",
+          "not_state_change_count_decrease": false,
+          "power": 74,
+          "require_command_value": false,
+          "skill_destination": 11002641,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、対象にパネル無効を付与<br>次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "7898821323637625577",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 17,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「パネル無効」を1回行動終了するまで付与<br>自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 95}",
+          "effects": [
+            {
+              "id": 91001256,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001256,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001433,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001433,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001650,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001650,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002468,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バウンシングピアース",
+          "not_state_change_count_decrease": false,
+          "power": 78,
+          "require_command_value": false,
+          "skill_destination": 11002642,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、対象にパネル無効を付与<br>次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "7898821323637625577",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 245,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>アウトレンジ時のスキル：{hyperlink_id 96}",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001652,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001652,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001292,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001292,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002469,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "トゥインクルスラスト",
+          "not_state_change_count_decrease": false,
+          "power": 233,
+          "require_command_value": false,
+          "skill_destination": 12002643,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ<br>対象の次のパネルが空パネルの時、弱体パネルを生成",
+          "timeline_hash": "8553274251459326672",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 260,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>アウトレンジ時のスキル：{hyperlink_id 97}",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001652,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001652,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001292,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001292,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002470,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "トゥインクルスラスト",
+          "not_state_change_count_decrease": false,
+          "power": 247,
+          "require_command_value": false,
+          "skill_destination": 12002644,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ<br>対象の次のパネルが空パネルの時、弱体パネルを生成",
+          "timeline_hash": "8553274251459326672",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 275,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>アウトレンジ時のスキル：{hyperlink_id 98}",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001652,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001652,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001292,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001292,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002471,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "トゥインクルスラスト",
+          "not_state_change_count_decrease": false,
+          "power": 262,
+          "require_command_value": false,
+          "skill_destination": 12002645,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ<br>対象の次のパネルが空パネルの時、弱体パネルを生成",
+          "timeline_hash": "8553274251459326672",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 290,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>アウトレンジ時のスキル：{hyperlink_id 99}",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001652,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001652,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001292,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001292,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002472,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "トゥインクルスラスト",
+          "not_state_change_count_decrease": false,
+          "power": 276,
+          "require_command_value": false,
+          "skill_destination": 12002646,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ<br>対象の次のパネルが空パネルの時、弱体パネルを生成",
+          "timeline_hash": "8553274251459326672",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 306,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与<br>対象の次のパネルが空パネルの時、弱体パネルを生成<br>アウトレンジ時のスキル：{hyperlink_id 100}",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001652,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001652,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001292,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001292,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002473,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "トゥインクルスラスト",
+          "not_state_change_count_decrease": false,
+          "power": 291,
+          "require_command_value": false,
+          "skill_destination": 12002647,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ<br>対象の次のパネルが空パネルの時、弱体パネルを生成",
+          "timeline_hash": "8553274251459326672",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 500,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「火属性耐性-{1}%」と「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を3回行動終了するまで付与し、<br>得意属性が火属性の味方全員に「魔攻+{4}%」を2回行動終了するまで付与<br>対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001050,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001050,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001656,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001656,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001693,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001693,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002474,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ハートブレイカー",
+          "not_state_change_count_decrease": false,
+          "power": 451,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5921139148397394489",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、対象の火属性耐性ダウンと受ける魔法攻撃ダメージアップ<br>自身のブレイクダメージアップ<br>得意属性が火属性の味方全員の魔攻アップ<br>対象のパネルを弱体+パネルに変換",
+          "timeline_hash": "4457183482831192442",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 531,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「火属性耐性-{1}%」と「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を3回行動終了するまで付与し、<br>得意属性が火属性の味方全員に「魔攻+{4}%」を2回行動終了するまで付与<br>対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001050,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001050,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001656,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001656,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001693,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001693,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002475,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ハートブレイカー",
+          "not_state_change_count_decrease": false,
+          "power": 479,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5921139148397394489",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、対象の火属性耐性ダウンと受ける魔法攻撃ダメージアップ<br>自身のブレイクダメージアップ<br>得意属性が火属性の味方全員の魔攻アップ<br>対象のパネルを弱体+パネルに変換",
+          "timeline_hash": "4457183482831192442",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 562,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「火属性耐性-{1}%」と「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を3回行動終了するまで付与し、<br>得意属性が火属性の味方全員に「魔攻+{4}%」を2回行動終了するまで付与<br>対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001050,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001050,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001656,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001656,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001693,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001693,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002476,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ハートブレイカー",
+          "not_state_change_count_decrease": false,
+          "power": 507,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5921139148397394489",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、対象の火属性耐性ダウンと受ける魔法攻撃ダメージアップ<br>自身のブレイクダメージアップ<br>得意属性が火属性の味方全員の魔攻アップ<br>対象のパネルを弱体+パネルに変換",
+          "timeline_hash": "4457183482831192442",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 593,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「火属性耐性-{1}%」と「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を3回行動終了するまで付与し、<br>得意属性が火属性の味方全員に「魔攻+{4}%」を2回行動終了するまで付与<br>対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001050,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001050,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001656,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001656,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001693,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001693,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002477,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ハートブレイカー",
+          "not_state_change_count_decrease": false,
+          "power": 535,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5921139148397394489",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、対象の火属性耐性ダウンと受ける魔法攻撃ダメージアップ<br>自身のブレイクダメージアップ<br>得意属性が火属性の味方全員の魔攻アップ<br>対象のパネルを弱体+パネルに変換",
+          "timeline_hash": "4457183482831192442",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 625,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「火属性耐性-{1}%」と「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与し、<br>自身に「ブレイクダメージ+{3}%」を3回行動終了するまで付与し、<br>得意属性が火属性の味方全員に「魔攻+{4}%」を2回行動終了するまで付与<br>対象のパネル全てを弱体+パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000907,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001050,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001050,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001263,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001263,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001656,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001656,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001693,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001693,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001294,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001294,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002478,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ハートブレイカー",
+          "not_state_change_count_decrease": false,
+          "power": 563,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5921139148397394489",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、対象の火属性耐性ダウンと受ける魔法攻撃ダメージアップ<br>自身のブレイクダメージアップ<br>得意属性が火属性の味方全員の魔攻アップ<br>対象のパネルを弱体+パネルに変換",
+          "timeline_hash": "4457183482831192442",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

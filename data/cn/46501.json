@@ -2044,5 +2044,1285 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、味方全員に「スキルダメージ+{1}%」と「ブレイクダメージ+{2}%」を付与(全て上限30%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002159,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002159,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002160,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002160,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003601,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バトンアタック",
+          "not_state_change_count_decrease": false,
+          "power": 42,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、味方全員のスキルダメージとブレイクダメージアップ",
+          "timeline_hash": "8455447498499390274",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、味方全員に「スキルダメージ+{1}%」と「ブレイクダメージ+{2}%」を付与(全て上限30%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002159,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002159,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002160,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002160,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003602,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バトンアタック",
+          "not_state_change_count_decrease": false,
+          "power": 44,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、味方全員のスキルダメージとブレイクダメージアップ",
+          "timeline_hash": "8455447498499390274",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、味方全員に「スキルダメージ+{1}%」と「ブレイクダメージ+{2}%」を付与(全て上限30%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002159,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002159,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002160,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002160,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003603,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バトンアタック",
+          "not_state_change_count_decrease": false,
+          "power": 47,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、味方全員のスキルダメージとブレイクダメージアップ",
+          "timeline_hash": "8455447498499390274",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、味方全員に「スキルダメージ+{1}%」と「ブレイクダメージ+{2}%」を付与(全て上限30%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002159,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002159,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002160,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002160,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003604,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バトンアタック",
+          "not_state_change_count_decrease": false,
+          "power": 49,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、味方全員のスキルダメージとブレイクダメージアップ",
+          "timeline_hash": "8455447498499390274",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、味方全員に「スキルダメージ+{1}%」と「ブレイクダメージ+{2}%」を付与(全て上限30%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002159,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002159,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002160,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002160,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003605,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バトンアタック",
+          "not_state_change_count_decrease": false,
+          "power": 52,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、味方全員のスキルダメージとブレイクダメージアップ",
+          "timeline_hash": "8455447498499390274",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 23,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、「無数島群域」の味方全員に「スキルダメージ+{1}%」を2回行動終了するまで付与し、<br>「冒険」の味方全員に「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「スキルダメージ+{3}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002201,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002201,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002202,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002202,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002161,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002161,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003606,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "タイニー流逮捕術",
+          "not_state_change_count_decrease": false,
+          "power": 189,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、「無数島群域」の味方全員のスキルダメージアップ<br>「冒険」の味方全員のブレイクダメージアップ<br>得意属性が突属性の味方全員のスキルダメージアップ",
+          "timeline_hash": "3271643014982946002",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 24,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、「無数島群域」の味方全員に「スキルダメージ+{1}%」を2回行動終了するまで付与し、<br>「冒険」の味方全員に「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「スキルダメージ+{3}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002201,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002201,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002202,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002202,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002161,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002161,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003607,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "タイニー流逮捕術",
+          "not_state_change_count_decrease": false,
+          "power": 200,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、「無数島群域」の味方全員のスキルダメージアップ<br>「冒険」の味方全員のブレイクダメージアップ<br>得意属性が突属性の味方全員のスキルダメージアップ",
+          "timeline_hash": "3271643014982946002",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 25,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、「無数島群域」の味方全員に「スキルダメージ+{1}%」を2回行動終了するまで付与し、<br>「冒険」の味方全員に「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「スキルダメージ+{3}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002201,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002201,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002202,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002202,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002161,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002161,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003608,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "タイニー流逮捕術",
+          "not_state_change_count_decrease": false,
+          "power": 212,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、「無数島群域」の味方全員のスキルダメージアップ<br>「冒険」の味方全員のブレイクダメージアップ<br>得意属性が突属性の味方全員のスキルダメージアップ",
+          "timeline_hash": "3271643014982946002",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 26,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、「無数島群域」の味方全員に「スキルダメージ+{1}%」を2回行動終了するまで付与し、<br>「冒険」の味方全員に「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「スキルダメージ+{3}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002201,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002201,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002202,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002202,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002161,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002161,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003609,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "タイニー流逮捕術",
+          "not_state_change_count_decrease": false,
+          "power": 224,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、「無数島群域」の味方全員のスキルダメージアップ<br>「冒険」の味方全員のブレイクダメージアップ<br>得意属性が突属性の味方全員のスキルダメージアップ",
+          "timeline_hash": "3271643014982946002",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 28,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、「無数島群域」の味方全員に「スキルダメージ+{1}%」を2回行動終了するまで付与し、<br>「冒険」の味方全員に「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「スキルダメージ+{3}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002201,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002201,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002202,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002202,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002161,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002161,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003610,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "タイニー流逮捕術",
+          "not_state_change_count_decrease": false,
+          "power": 236,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、「無数島群域」の味方全員のスキルダメージアップ<br>「冒険」の味方全員のブレイクダメージアップ<br>得意属性が突属性の味方全員のスキルダメージアップ",
+          "timeline_hash": "3271643014982946002",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、「無数島群域」の味方全員に「スキル威力+{1}%」2回行動終了するまでを付与し、<br>「冒険」の味方全員に「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「スキルダメージ+{3}%」を付与(上限150%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002162,
+              "value": 8000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002162,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002202,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002202,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002164,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002164,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003611,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オーダー：オールアウト",
+          "not_state_change_count_decrease": false,
+          "power": 420,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4431236305992546316",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、「無数島群域」の味方全員のスキル威力アップ<br>「冒険」の味方全員のブレイクダメージアップ<br>得意属性が突属性の味方全員のスキルダメージアップ",
+          "timeline_hash": "2820515133318962013",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、「無数島群域」の味方全員に「スキル威力+{1}%」2回行動終了するまでを付与し、<br>「冒険」の味方全員に「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「スキルダメージ+{3}%」を付与(上限150%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002162,
+              "value": 8000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002162,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002202,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002202,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002164,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002164,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003612,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オーダー：オールアウト",
+          "not_state_change_count_decrease": false,
+          "power": 446,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4431236305992546316",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、「無数島群域」の味方全員のスキル威力アップ<br>「冒険」の味方全員のブレイクダメージアップ<br>得意属性が突属性の味方全員のスキルダメージアップ",
+          "timeline_hash": "2820515133318962013",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、「無数島群域」の味方全員に「スキル威力+{1}%」2回行動終了するまでを付与し、<br>「冒険」の味方全員に「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「スキルダメージ+{3}%」を付与(上限150%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002162,
+              "value": 8000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002162,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002202,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002202,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002164,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002164,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003613,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オーダー：オールアウト",
+          "not_state_change_count_decrease": false,
+          "power": 472,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4431236305992546316",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、「無数島群域」の味方全員のスキル威力アップ<br>「冒険」の味方全員のブレイクダメージアップ<br>得意属性が突属性の味方全員のスキルダメージアップ",
+          "timeline_hash": "2820515133318962013",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、「無数島群域」の味方全員に「スキル威力+{1}%」2回行動終了するまでを付与し、<br>「冒険」の味方全員に「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「スキルダメージ+{3}%」を付与(上限150%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002162,
+              "value": 8000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002162,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002202,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002202,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002164,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002164,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003614,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オーダー：オールアウト",
+          "not_state_change_count_decrease": false,
+          "power": 498,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4431236305992546316",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、「無数島群域」の味方全員のスキル威力アップ<br>「冒険」の味方全員のブレイクダメージアップ<br>得意属性が突属性の味方全員のスキルダメージアップ",
+          "timeline_hash": "2820515133318962013",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「突属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、「無数島群域」の味方全員に「スキル威力+{1}%」2回行動終了するまでを付与し、<br>「冒険」の味方全員に「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「スキルダメージ+{3}%」を付与(上限150%)",
+          "effects": [
+            {
+              "id": 91000934,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000934,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002162,
+              "value": 8000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002162,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002202,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002202,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002164,
+              "value": 7500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002164,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003615,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オーダー：オールアウト",
+          "not_state_change_count_decrease": false,
+          "power": 525,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4431236305992546316",
+          "summary": "攻撃前、対象の突属性耐性ダウン<br>攻撃後、「無数島群域」の味方全員のスキル威力アップ<br>「冒険」の味方全員のブレイクダメージアップ<br>得意属性が突属性の味方全員のスキルダメージアップ",
+          "timeline_hash": "2820515133318962013",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

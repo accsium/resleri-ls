@@ -2437,5 +2437,1890 @@
       "wait": -200,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを{1}%回復し、<br>「物攻+{2}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 76158007,
+              "value": 10000,
+              "_detail": {
+                "description": "自身に付与されているデバフを解除",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 76158007,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "マイナス効果解除",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001920,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001920,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003235,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オルドーサジッタ",
+          "not_state_change_count_decrease": false,
+          "power": 42,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを回復し、物攻アップ",
+          "timeline_hash": "6340644778981179995",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを{1}%回復し、<br>「物攻+{2}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 76158007,
+              "value": 10000,
+              "_detail": {
+                "description": "自身に付与されているデバフを解除",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 76158007,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "マイナス効果解除",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001920,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001920,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003236,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オルドーサジッタ",
+          "not_state_change_count_decrease": false,
+          "power": 44,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを回復し、物攻アップ",
+          "timeline_hash": "6340644778981179995",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを{1}%回復し、<br>「物攻+{2}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 76158007,
+              "value": 10000,
+              "_detail": {
+                "description": "自身に付与されているデバフを解除",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 76158007,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "マイナス効果解除",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001920,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001920,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003237,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オルドーサジッタ",
+          "not_state_change_count_decrease": false,
+          "power": 47,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを回復し、物攻アップ",
+          "timeline_hash": "6340644778981179995",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを{1}%回復し、<br>「物攻+{2}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 76158007,
+              "value": 10000,
+              "_detail": {
+                "description": "自身に付与されているデバフを解除",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 76158007,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "マイナス効果解除",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001920,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001920,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003238,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オルドーサジッタ",
+          "not_state_change_count_decrease": false,
+          "power": 49,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを回復し、物攻アップ",
+          "timeline_hash": "6340644778981179995",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを{1}%回復し、<br>「物攻+{2}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 76158007,
+              "value": 10000,
+              "_detail": {
+                "description": "自身に付与されているデバフを解除",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 76158007,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "マイナス効果解除",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001920,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001920,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003239,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オルドーサジッタ",
+          "not_state_change_count_decrease": false,
+          "power": 52,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを回復し、物攻アップ",
+          "timeline_hash": "6340644778981179995",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「スキルダメージ+{0}%」と「ブレイクダメージ+{1}%」を3回行動終了するまで付与<br>得意属性が突属性の味方全員に「物攻+{2}%」を付与(上限50%)し、<br>「受けるダメージ-{3}%」を1回攻撃を受けるまで付与<br>「クレアティオフロース」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>回復後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>回復後、得意属性が突属性の味方全員に「受けるダメージ-{4}%(固定)」を1回攻撃を受けるまで付与し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{5}%」を3回行動終了するまで付与し、<br>スキルランプをすべて消灯する",
+          "effects": [
+            {
+              "id": 91001827,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001827,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001828,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001828,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001921,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001921,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001935,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001935,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001922,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001922,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001923,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001923,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001340,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001341,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003240,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 3,
+          "name": "クレアティオフロース",
+          "not_state_change_count_decrease": false,
+          "power": 113,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "回復後、対象のスキルダメージとブレイクダメージアップ<br>得意属性が突属性の味方全員の物攻アップと受けるダメージダウン<br>スキルランプの点灯数が3個未満の時、回復後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、回復後、得意属性が突属性の味方全員の受けるダメージをダウンし、物攻が最も高い味方1人の物攻をアップし、スキルランプを全て消灯する",
+          "timeline_hash": "1138992455852291529",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「スキルダメージ+{0}%」と「ブレイクダメージ+{1}%」を3回行動終了するまで付与<br>得意属性が突属性の味方全員に「物攻+{2}%」を付与(上限50%)し、<br>「受けるダメージ-{3}%」を1回攻撃を受けるまで付与<br>「クレアティオフロース」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>回復後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>回復後、得意属性が突属性の味方全員に「受けるダメージ-{4}%(固定)」を1回攻撃を受けるまで付与し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{5}%」を3回行動終了するまで付与し、<br>スキルランプをすべて消灯する",
+          "effects": [
+            {
+              "id": 91001827,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001827,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001828,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001828,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001921,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001921,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001935,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001935,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001922,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001922,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001923,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001923,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001340,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001341,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003241,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 3,
+          "name": "クレアティオフロース",
+          "not_state_change_count_decrease": false,
+          "power": 115,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "回復後、対象のスキルダメージとブレイクダメージアップ<br>得意属性が突属性の味方全員の物攻アップと受けるダメージダウン<br>スキルランプの点灯数が3個未満の時、回復後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、回復後、得意属性が突属性の味方全員の受けるダメージをダウンし、物攻が最も高い味方1人の物攻をアップし、スキルランプを全て消灯する",
+          "timeline_hash": "1138992455852291529",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「スキルダメージ+{0}%」と「ブレイクダメージ+{1}%」を3回行動終了するまで付与<br>得意属性が突属性の味方全員に「物攻+{2}%」を付与(上限50%)し、<br>「受けるダメージ-{3}%」を1回攻撃を受けるまで付与<br>「クレアティオフロース」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>回復後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>回復後、得意属性が突属性の味方全員に「受けるダメージ-{4}%(固定)」を1回攻撃を受けるまで付与し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{5}%」を3回行動終了するまで付与し、<br>スキルランプをすべて消灯する",
+          "effects": [
+            {
+              "id": 91001827,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001827,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001828,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001828,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001921,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001921,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001935,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001935,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001922,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001922,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001923,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001923,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001340,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001341,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003242,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 3,
+          "name": "クレアティオフロース",
+          "not_state_change_count_decrease": false,
+          "power": 118,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "回復後、対象のスキルダメージとブレイクダメージアップ<br>得意属性が突属性の味方全員の物攻アップと受けるダメージダウン<br>スキルランプの点灯数が3個未満の時、回復後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、回復後、得意属性が突属性の味方全員の受けるダメージをダウンし、物攻が最も高い味方1人の物攻をアップし、スキルランプを全て消灯する",
+          "timeline_hash": "1138992455852291529",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「スキルダメージ+{0}%」と「ブレイクダメージ+{1}%」を3回行動終了するまで付与<br>得意属性が突属性の味方全員に「物攻+{2}%」を付与(上限50%)し、<br>「受けるダメージ-{3}%」を1回攻撃を受けるまで付与<br>「クレアティオフロース」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>回復後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>回復後、得意属性が突属性の味方全員に「受けるダメージ-{4}%(固定)」を1回攻撃を受けるまで付与し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{5}%」を3回行動終了するまで付与し、<br>スキルランプをすべて消灯する",
+          "effects": [
+            {
+              "id": 91001827,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001827,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001828,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001828,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001921,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001921,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001935,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001935,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001922,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001922,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001923,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001923,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001340,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001341,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003243,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 3,
+          "name": "クレアティオフロース",
+          "not_state_change_count_decrease": false,
+          "power": 121,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "回復後、対象のスキルダメージとブレイクダメージアップ<br>得意属性が突属性の味方全員の物攻アップと受けるダメージダウン<br>スキルランプの点灯数が3個未満の時、回復後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、回復後、得意属性が突属性の味方全員の受けるダメージをダウンし、物攻が最も高い味方1人の物攻をアップし、スキルランプを全て消灯する",
+          "timeline_hash": "1138992455852291529",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「スキルダメージ+{0}%」と「ブレイクダメージ+{1}%」を3回行動終了するまで付与<br>得意属性が突属性の味方全員に「物攻+{2}%」を付与(上限50%)し、<br>「受けるダメージ-{3}%」を1回攻撃を受けるまで付与<br>「クレアティオフロース」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>回復後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>回復後、得意属性が突属性の味方全員に「受けるダメージ-{4}%(固定)」を1回攻撃を受けるまで付与し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{5}%」を3回行動終了するまで付与し、<br>スキルランプをすべて消灯する",
+          "effects": [
+            {
+              "id": 91001827,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001827,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001828,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001828,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001921,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001921,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001935,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001935,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001922,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001922,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001923,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001923,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001340,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001341,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003244,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 3,
+          "name": "クレアティオフロース",
+          "not_state_change_count_decrease": false,
+          "power": 124,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "回復後、対象のスキルダメージとブレイクダメージアップ<br>得意属性が突属性の味方全員の物攻アップと受けるダメージダウン<br>スキルランプの点灯数が3個未満の時、回復後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、回復後、得意属性が突属性の味方全員の受けるダメージをダウンし、物攻が最も高い味方1人の物攻をアップし、スキルランプを全て消灯する",
+          "timeline_hash": "1138992455852291529",
+          "wait": 0,
+          "target_name": "味方全体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{1}%回復<br>得意属性が突属性の味方全員に「物攻+{2}%」と「スキルダメージ+{3}%」を3回行動終了するまで付与し、<br>「バーストスキルダメージ+{4}%」を付与(上限150%)し、<br>「回避(確率100%固定)」を1回攻撃を受けるまで付与<br>対象に「スタン」を1回行動開始するまで超高確率で付与",
+          "effects": [
+            {
+              "id": 91001967,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001967,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001737,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001737,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001738,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001738,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001924,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001924,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001925,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003245,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エクシトゥス・ファタリタス",
+          "not_state_change_count_decrease": false,
+          "power": 420,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5189326060279635351",
+          "summary": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>得意属性が突属性の味方全員の物攻とスキルダメージとバーストスキルダメージをアップし、回避を付与<br>対象にスタンを超高確率で付与",
+          "timeline_hash": "1600219639594526620",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{1}%回復<br>得意属性が突属性の味方全員に「物攻+{2}%」と「スキルダメージ+{3}%」を3回行動終了するまで付与し、<br>「バーストスキルダメージ+{4}%」を付与(上限150%)し、<br>「回避(確率100%固定)」を1回攻撃を受けるまで付与<br>対象に「スタン」を1回行動開始するまで超高確率で付与",
+          "effects": [
+            {
+              "id": 91001967,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001967,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001737,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001737,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001738,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001738,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001924,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001924,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001925,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003246,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エクシトゥス・ファタリタス",
+          "not_state_change_count_decrease": false,
+          "power": 446,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5189326060279635351",
+          "summary": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>得意属性が突属性の味方全員の物攻とスキルダメージとバーストスキルダメージをアップし、回避を付与<br>対象にスタンを超高確率で付与",
+          "timeline_hash": "1600219639594526620",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{1}%回復<br>得意属性が突属性の味方全員に「物攻+{2}%」と「スキルダメージ+{3}%」を3回行動終了するまで付与し、<br>「バーストスキルダメージ+{4}%」を付与(上限150%)し、<br>「回避(確率100%固定)」を1回攻撃を受けるまで付与<br>対象に「スタン」を1回行動開始するまで超高確率で付与",
+          "effects": [
+            {
+              "id": 91001967,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001967,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001737,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001737,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001738,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001738,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001924,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001924,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001925,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003247,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エクシトゥス・ファタリタス",
+          "not_state_change_count_decrease": false,
+          "power": 472,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5189326060279635351",
+          "summary": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>得意属性が突属性の味方全員の物攻とスキルダメージとバーストスキルダメージをアップし、回避を付与<br>対象にスタンを超高確率で付与",
+          "timeline_hash": "1600219639594526620",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{1}%回復<br>得意属性が突属性の味方全員に「物攻+{2}%」と「スキルダメージ+{3}%」を3回行動終了するまで付与し、<br>「バーストスキルダメージ+{4}%」を付与(上限150%)し、<br>「回避(確率100%固定)」を1回攻撃を受けるまで付与<br>対象に「スタン」を1回行動開始するまで超高確率で付与",
+          "effects": [
+            {
+              "id": 91001967,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001967,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001737,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001737,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001738,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001738,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001924,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001924,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001925,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003248,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エクシトゥス・ファタリタス",
+          "not_state_change_count_decrease": false,
+          "power": 498,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5189326060279635351",
+          "summary": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>得意属性が突属性の味方全員の物攻とスキルダメージとバーストスキルダメージをアップし、回避を付与<br>対象にスタンを超高確率で付与",
+          "timeline_hash": "1600219639594526620",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{1}%回復<br>得意属性が突属性の味方全員に「物攻+{2}%」と「スキルダメージ+{3}%」を3回行動終了するまで付与し、<br>「バーストスキルダメージ+{4}%」を付与(上限150%)し、<br>「回避(確率100%固定)」を1回攻撃を受けるまで付与<br>対象に「スタン」を1回行動開始するまで超高確率で付与",
+          "effects": [
+            {
+              "id": 91001967,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001967,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001737,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001737,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001738,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001738,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001924,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001924,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001925,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003249,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エクシトゥス・ファタリタス",
+          "not_state_change_count_decrease": false,
+          "power": 525,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5189326060279635351",
+          "summary": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>得意属性が突属性の味方全員の物攻とスキルダメージとバーストスキルダメージをアップし、回避を付与<br>対象にスタンを超高確率で付与",
+          "timeline_hash": "1600219639594526620",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "active1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "タイムラインの前から5番目までの敵1体と自身のターンを入れ替える(発動上限4回)<br>自身に「与える強化効果量+80%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001936,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001936,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001937,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001937,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "ターン入れ替え",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001926,
+              "value": 8000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003280,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": 4,
+          "max_lamp": 0,
+          "name": "タクティカルチェンジ・アモル",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": true,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1582534736342774089",
+          "summary": "タイムラインの前から5番目までの敵と自身のターンを入れ替える<br>自身の与える強化効果量アップ",
+          "timeline_hash": "2820840568479692968",
+          "wait": -200,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

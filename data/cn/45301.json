@@ -2286,5 +2286,1510 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、得意属性が斬属性の味方全員に「物防・魔防+{0}%」を付与(上限30%)し、<br>味方全員のHPを{1}%回復<br>自身のHPが30%未満の時、自身のHPを{2}%回復(発動上限2回)",
+          "effects": [
+            {
+              "id": 91001577,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001577,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001579,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001579,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001578,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001578,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001580,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001580,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002274,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ランドフラクチャー",
+          "not_state_change_count_decrease": false,
+          "power": 58,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、得意属性が斬属性の味方全員のステータスアップ<br>味方全員のHPを回復<br>自身のHPが30%未満の時、自身のHPを100%%回復(発動上限2回)",
+          "timeline_hash": "4713889328405803452",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、得意属性が斬属性の味方全員に「物防・魔防+{0}%」を付与(上限30%)し、<br>味方全員のHPを{1}%回復<br>自身のHPが30%未満の時、自身のHPを{2}%回復(発動上限2回)",
+          "effects": [
+            {
+              "id": 91001577,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001577,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001579,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001579,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001578,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001578,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001580,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001580,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002275,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ランドフラクチャー",
+          "not_state_change_count_decrease": false,
+          "power": 61,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、得意属性が斬属性の味方全員のステータスアップ<br>味方全員のHPを回復<br>自身のHPが30%未満の時、自身のHPを100%%回復(発動上限2回)",
+          "timeline_hash": "4713889328405803452",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、得意属性が斬属性の味方全員に「物防・魔防+{0}%」を付与(上限30%)し、<br>味方全員のHPを{1}%回復<br>自身のHPが30%未満の時、自身のHPを{2}%回復(発動上限2回)",
+          "effects": [
+            {
+              "id": 91001577,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001577,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001579,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001579,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001578,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001578,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001580,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001580,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002276,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ランドフラクチャー",
+          "not_state_change_count_decrease": false,
+          "power": 65,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、得意属性が斬属性の味方全員のステータスアップ<br>味方全員のHPを回復<br>自身のHPが30%未満の時、自身のHPを100%%回復(発動上限2回)",
+          "timeline_hash": "4713889328405803452",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、得意属性が斬属性の味方全員に「物防・魔防+{0}%」を付与(上限30%)し、<br>味方全員のHPを{1}%回復<br>自身のHPが30%未満の時、自身のHPを{2}%回復(発動上限2回)",
+          "effects": [
+            {
+              "id": 91001577,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001577,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001579,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001579,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001578,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001578,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001580,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001580,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002277,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ランドフラクチャー",
+          "not_state_change_count_decrease": false,
+          "power": 68,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、得意属性が斬属性の味方全員のステータスアップ<br>味方全員のHPを回復<br>自身のHPが30%未満の時、自身のHPを100%%回復(発動上限2回)",
+          "timeline_hash": "4713889328405803452",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、得意属性が斬属性の味方全員に「物防・魔防+{0}%」を付与(上限30%)し、<br>味方全員のHPを{1}%回復<br>自身のHPが30%未満の時、自身のHPを{2}%回復(発動上限2回)",
+          "effects": [
+            {
+              "id": 91001577,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001577,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001579,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001579,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001578,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001578,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001580,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001580,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002278,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ランドフラクチャー",
+          "not_state_change_count_decrease": false,
+          "power": 72,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、得意属性が斬属性の味方全員のステータスアップ<br>味方全員のHPを回復<br>自身のHPが30%未満の時、自身のHPを100%%回復(発動上限2回)",
+          "timeline_hash": "4713889328405803452",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身のHPを{0}%回復し、<br>自身に「物防・魔防+{1}%」を2回攻撃を受けるまで付与し、<br>「かばう」を2回発動するまで付与し、<br>得意属性が斬属性の味方全員に「受けるダメージ-{2}%」を2回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001581,
+              "value": 5200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001581,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001583,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001583,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001582,
+              "value": 5200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001582,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002279,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オースアフェクション",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "自身のHPを回復<br>自身にステータスアップ<br>自身にかばうを付与<br>得意属性が斬属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "1827304839736378920",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身のHPを{0}%回復し、<br>自身に「物防・魔防+{1}%」を2回攻撃を受けるまで付与し、<br>「かばう」を2回発動するまで付与し、<br>得意属性が斬属性の味方全員に「受けるダメージ-{2}%」を2回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001581,
+              "value": 5400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001581,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001583,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001583,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001582,
+              "value": 5400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001582,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002280,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オースアフェクション",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "自身のHPを回復<br>自身にステータスアップ<br>自身にかばうを付与<br>得意属性が斬属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "1827304839736378920",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身のHPを{0}%回復し、<br>自身に「物防・魔防+{1}%」を2回攻撃を受けるまで付与し、<br>「かばう」を2回発動するまで付与し、<br>得意属性が斬属性の味方全員に「受けるダメージ-{2}%」を2回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001581,
+              "value": 5600,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001581,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001583,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001583,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001582,
+              "value": 5600,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001582,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002281,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オースアフェクション",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "自身のHPを回復<br>自身にステータスアップ<br>自身にかばうを付与<br>得意属性が斬属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "1827304839736378920",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身のHPを{0}%回復し、<br>自身に「物防・魔防+{1}%」を2回攻撃を受けるまで付与し、<br>「かばう」を2回発動するまで付与し、<br>得意属性が斬属性の味方全員に「受けるダメージ-{2}%」を2回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001581,
+              "value": 5800,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001581,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001583,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001583,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001582,
+              "value": 5800,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001582,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002282,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オースアフェクション",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "自身のHPを回復<br>自身にステータスアップ<br>自身にかばうを付与<br>得意属性が斬属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "1827304839736378920",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身のHPを{0}%回復し、<br>自身に「物防・魔防+{1}%」を2回攻撃を受けるまで付与し、<br>「かばう」を2回発動するまで付与し、<br>得意属性が斬属性の味方全員に「受けるダメージ-{2}%」を2回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001581,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001581,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001583,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001583,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001582,
+              "value": 6000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001582,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001398,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001398,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002283,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "オースアフェクション",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "自身のHPを回復<br>自身にステータスアップ<br>自身にかばうを付与<br>得意属性が斬属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "1827304839736378920",
+          "wait": 0,
+          "target_name": "味方全体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除し、<br>攻撃後、味方全員のHPを{0}%回復し、<br>得意属性が斬属性の味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001584,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001584,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001469,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002284,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ディヴァインストレングス",
+          "not_state_change_count_decrease": false,
+          "power": 420,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7900747726567570977",
+          "summary": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>得意属性が斬属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "5683736766741789647",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除し、<br>攻撃後、味方全員のHPを{0}%回復し、<br>得意属性が斬属性の味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001584,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001584,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001469,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002285,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ディヴァインストレングス",
+          "not_state_change_count_decrease": false,
+          "power": 446,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7900747726567570977",
+          "summary": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>得意属性が斬属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "5683736766741789647",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除し、<br>攻撃後、味方全員のHPを{0}%回復し、<br>得意属性が斬属性の味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001584,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001584,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001469,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002286,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ディヴァインストレングス",
+          "not_state_change_count_decrease": false,
+          "power": 472,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7900747726567570977",
+          "summary": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>得意属性が斬属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "5683736766741789647",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除し、<br>攻撃後、味方全員のHPを{0}%回復し、<br>得意属性が斬属性の味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001584,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001584,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001469,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002287,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ディヴァインストレングス",
+          "not_state_change_count_decrease": false,
+          "power": 498,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7900747726567570977",
+          "summary": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>得意属性が斬属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "5683736766741789647",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除し、<br>攻撃後、味方全員のHPを{0}%回復し、<br>得意属性が斬属性の味方全員に「受けるダメージ-{1}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001584,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001584,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001469,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002288,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ディヴァインストレングス",
+          "not_state_change_count_decrease": false,
+          "power": 525,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7900747726567570977",
+          "summary": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>得意属性が斬属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "5683736766741789647",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

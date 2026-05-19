@@ -1540,5 +1540,985 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001041,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001041,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002044,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "マシィショット",
+          "not_state_change_count_decrease": false,
+          "power": 59,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員のスキルダメージアップ",
+          "timeline_hash": "7767308672179002176",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001041,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001041,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002045,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "マシィショット",
+          "not_state_change_count_decrease": false,
+          "power": 62,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員のスキルダメージアップ",
+          "timeline_hash": "7767308672179002176",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001041,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001041,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002046,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "マシィショット",
+          "not_state_change_count_decrease": false,
+          "power": 66,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員のスキルダメージアップ",
+          "timeline_hash": "7767308672179002176",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001041,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001041,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002047,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "マシィショット",
+          "not_state_change_count_decrease": false,
+          "power": 69,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員のスキルダメージアップ",
+          "timeline_hash": "7767308672179002176",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001041,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001041,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002048,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "マシィショット",
+          "not_state_change_count_decrease": false,
+          "power": 73,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員のスキルダメージアップ",
+          "timeline_hash": "7767308672179002176",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "敵全体に「ダメージ-{0}%」を1回行動終了するまで付与し、<br>対象に「雷属性耐性-{1}%」を2回攻撃を受けるまで付与し(上限4個)、<br>対象に「受けるクリティカルダメージ+{2}%」(上限150%)を付与",
+          "effects": [
+            {
+              "id": 91001457,
+              "value": 600,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001457,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001471,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001471,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001452,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001452,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002049,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "グラッジスパッタ",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 4,
+          "skill_power_type": 1,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "6350769914047526280",
+          "summary": "敵全体のダメージダウン<br>対象の雷属性耐性ダウン<br>対象の受けるクリティカルダメージアップ",
+          "timeline_hash": "3745863879406480596",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "敵全体に「ダメージ-{0}%」を1回行動終了するまで付与し、<br>対象に「雷属性耐性-{1}%」を2回攻撃を受けるまで付与し(上限4個)、<br>対象に「受けるクリティカルダメージ+{2}%」(上限150%)を付与",
+          "effects": [
+            {
+              "id": 91001457,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001457,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001471,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001471,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001452,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001452,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002050,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "グラッジスパッタ",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 4,
+          "skill_power_type": 1,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "6350769914047526280",
+          "summary": "敵全体のダメージダウン<br>対象の雷属性耐性ダウン<br>対象の受けるクリティカルダメージアップ",
+          "timeline_hash": "3745863879406480596",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "敵全体に「ダメージ-{0}%」を1回行動終了するまで付与し、<br>対象に「雷属性耐性-{1}%」を2回攻撃を受けるまで付与し(上限4個)、<br>対象に「受けるクリティカルダメージ+{2}%」(上限150%)を付与",
+          "effects": [
+            {
+              "id": 91001457,
+              "value": 800,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001457,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001471,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001471,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001452,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001452,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002051,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "グラッジスパッタ",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 4,
+          "skill_power_type": 1,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "6350769914047526280",
+          "summary": "敵全体のダメージダウン<br>対象の雷属性耐性ダウン<br>対象の受けるクリティカルダメージアップ",
+          "timeline_hash": "3745863879406480596",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "敵全体に「ダメージ-{0}%」を1回行動終了するまで付与し、<br>対象に「雷属性耐性-{1}%」を2回攻撃を受けるまで付与し(上限4個)、<br>対象に「受けるクリティカルダメージ+{2}%」(上限150%)を付与",
+          "effects": [
+            {
+              "id": 91001457,
+              "value": 900,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001457,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001471,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001471,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001452,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001452,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002052,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "グラッジスパッタ",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 4,
+          "skill_power_type": 1,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "6350769914047526280",
+          "summary": "敵全体のダメージダウン<br>対象の雷属性耐性ダウン<br>対象の受けるクリティカルダメージアップ",
+          "timeline_hash": "3745863879406480596",
+          "wait": 0,
+          "target_name": "敵全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "敵全体に「ダメージ-{0}%」を1回行動終了するまで付与し、<br>対象に「雷属性耐性-{1}%」を2回攻撃を受けるまで付与し(上限4個)、<br>対象に「受けるクリティカルダメージ+{2}%」(上限150%)を付与",
+          "effects": [
+            {
+              "id": 91001457,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001457,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001471,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001471,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001452,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001452,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002053,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "グラッジスパッタ",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 4,
+          "skill_power_type": 1,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "6350769914047526280",
+          "summary": "敵全体のダメージダウン<br>対象の雷属性耐性ダウン<br>対象の受けるクリティカルダメージアップ",
+          "timeline_hash": "3745863879406480596",
+          "wait": 0,
+          "target_name": "敵全体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃後、このスキル使用前に魔攻が最も高い味方1人に「魔攻+{0}%」を付与(上限50％)し、<br>味方全員に「WEAK攻撃時、スキルダメージ+{1}%」を1回行動終了するまで付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001473,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001473,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001445,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001445,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002054,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ギガンティックパペット",
+          "not_state_change_count_decrease": false,
+          "power": 420,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "2163953306510496773",
+          "summary": "攻撃後、魔攻が最も高い味方1人の魔攻アップ<br>味方全員のWEAK攻撃時のスキルダメージアップ",
+          "timeline_hash": "3287503729486605095",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃後、このスキル使用前に魔攻が最も高い味方1人に「魔攻+{0}%」を付与(上限50％)し、<br>味方全員に「WEAK攻撃時、スキルダメージ+{1}%」を1回行動終了するまで付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001473,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001473,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001445,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001445,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002055,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ギガンティックパペット",
+          "not_state_change_count_decrease": false,
+          "power": 446,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "2163953306510496773",
+          "summary": "攻撃後、魔攻が最も高い味方1人の魔攻アップ<br>味方全員のWEAK攻撃時のスキルダメージアップ",
+          "timeline_hash": "3287503729486605095",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃後、このスキル使用前に魔攻が最も高い味方1人に「魔攻+{0}%」を付与(上限50％)し、<br>味方全員に「WEAK攻撃時、スキルダメージ+{1}%」を1回行動終了するまで付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001473,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001473,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001445,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001445,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002056,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ギガンティックパペット",
+          "not_state_change_count_decrease": false,
+          "power": 472,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "2163953306510496773",
+          "summary": "攻撃後、魔攻が最も高い味方1人の魔攻アップ<br>味方全員のWEAK攻撃時のスキルダメージアップ",
+          "timeline_hash": "3287503729486605095",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃後、このスキル使用前に魔攻が最も高い味方1人に「魔攻+{0}%」を付与(上限50％)し、<br>味方全員に「WEAK攻撃時、スキルダメージ+{1}%」を1回行動終了するまで付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001473,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001473,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001445,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001445,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002057,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ギガンティックパペット",
+          "not_state_change_count_decrease": false,
+          "power": 498,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "2163953306510496773",
+          "summary": "攻撃後、魔攻が最も高い味方1人の魔攻アップ<br>味方全員のWEAK攻撃時のスキルダメージアップ",
+          "timeline_hash": "3287503729486605095",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃後、このスキル使用前に魔攻が最も高い味方1人に「魔攻+{0}%」を付与(上限50％)し、<br>味方全員に「WEAK攻撃時、スキルダメージ+{1}%」を1回行動終了するまで付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001473,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001473,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001445,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001445,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002058,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ギガンティックパペット",
+          "not_state_change_count_decrease": false,
+          "power": 525,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "2163953306510496773",
+          "summary": "攻撃後、魔攻が最も高い味方1人の魔攻アップ<br>味方全員のWEAK攻撃時のスキルダメージアップ",
+          "timeline_hash": "3287503729486605095",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

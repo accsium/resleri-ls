@@ -3802,5 +3802,1585 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "対象がブレイク状態の時、ダメージ+{0}%、自身のHPを{1}%回復<br>攻撃後、対象に「打属性耐性-{2}%」を2回攻撃を受けるまで付与し、<br>自身に「物攻+{3}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 69}",
+          "effects": [
+            {
+              "id": 91001629,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001629,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001630,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001630,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000938,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000938,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001018,
+              "value": 2500,
+              "_detail": {
+                "description": "物攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001018,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001634,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001634,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002416,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フルムーン",
+          "not_state_change_count_decrease": false,
+          "power": 90,
+          "require_command_value": false,
+          "skill_destination": 11002587,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "対象がブレイク状態の時、ダメージアップと自身のHP回復<br>攻撃後、対象の打属性耐性ダウン<br>自身の物攻アップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "1027173978463990003",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "対象がブレイク状態の時、ダメージ+{0}%、自身のHPを{1}%回復<br>攻撃後、対象に「打属性耐性-{2}%」を2回攻撃を受けるまで付与し、<br>自身に「物攻+{3}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 69}",
+          "effects": [
+            {
+              "id": 91001629,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001629,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001630,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001630,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000938,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000938,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001018,
+              "value": 2500,
+              "_detail": {
+                "description": "物攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001018,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001634,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001634,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002417,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フルムーン",
+          "not_state_change_count_decrease": false,
+          "power": 95,
+          "require_command_value": false,
+          "skill_destination": 11002588,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "対象がブレイク状態の時、ダメージアップと自身のHP回復<br>攻撃後、対象の打属性耐性ダウン<br>自身の物攻アップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "1027173978463990003",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "対象がブレイク状態の時、ダメージ+{0}%、自身のHPを{1}%回復<br>攻撃後、対象に「打属性耐性-{2}%」を2回攻撃を受けるまで付与し、<br>自身に「物攻+{3}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 69}",
+          "effects": [
+            {
+              "id": 91001629,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001629,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001630,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001630,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000938,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000938,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001018,
+              "value": 2500,
+              "_detail": {
+                "description": "物攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001018,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001634,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001634,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002418,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フルムーン",
+          "not_state_change_count_decrease": false,
+          "power": 101,
+          "require_command_value": false,
+          "skill_destination": 11002589,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "対象がブレイク状態の時、ダメージアップと自身のHP回復<br>攻撃後、対象の打属性耐性ダウン<br>自身の物攻アップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "1027173978463990003",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "対象がブレイク状態の時、ダメージ+{0}%、自身のHPを{1}%回復<br>攻撃後、対象に「打属性耐性-{2}%」を2回攻撃を受けるまで付与し、<br>自身に「物攻+{3}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 69}",
+          "effects": [
+            {
+              "id": 91001629,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001629,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001630,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001630,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000938,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000938,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001018,
+              "value": 2500,
+              "_detail": {
+                "description": "物攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001018,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001634,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001634,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002419,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フルムーン",
+          "not_state_change_count_decrease": false,
+          "power": 106,
+          "require_command_value": false,
+          "skill_destination": 11002590,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "対象がブレイク状態の時、ダメージアップと自身のHP回復<br>攻撃後、対象の打属性耐性ダウン<br>自身の物攻アップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "1027173978463990003",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "対象がブレイク状態の時、ダメージ+{0}%、自身のHPを{1}%回復<br>攻撃後、対象に「打属性耐性-{2}%」を2回攻撃を受けるまで付与し、<br>自身に「物攻+{3}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 69}",
+          "effects": [
+            {
+              "id": 91001629,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001629,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001630,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001630,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000938,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000938,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001018,
+              "value": 2500,
+              "_detail": {
+                "description": "物攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001018,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001634,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001634,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002420,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フルムーン",
+          "not_state_change_count_decrease": false,
+          "power": 112,
+          "require_command_value": false,
+          "skill_destination": 11002591,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "対象がブレイク状態の時、ダメージアップと自身のHP回復<br>攻撃後、対象の打属性耐性ダウン<br>自身の物攻アップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "1027173978463990003",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 26,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」を2回行動終了するまで付与<br>自身に「飛剣」が付与されていない時、「飛剣(Lv2)」を付与<br>既に付与されている時、「飛剣」のLv+2(上限Lv10)<br>アウトレンジ時のスキル：{hyperlink_id 74}",
+          "effects": [
+            {
+              "id": 91000938,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000938,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001384,
+              "value": 3000,
+              "_detail": {
+                "description": "物攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001384,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001632,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001632,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002421,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スピニングエッジ",
+          "not_state_change_count_decrease": false,
+          "power": 410,
+          "require_command_value": false,
+          "skill_destination": 12002592,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻アップ<br>「飛剣」を付与またはLvアップ",
+          "timeline_hash": "1543702176006082762",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 27,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」を2回行動終了するまで付与<br>自身に「飛剣」が付与されていない時、「飛剣(Lv2)」を付与<br>既に付与されている時、「飛剣」のLv+2(上限Lv10)<br>アウトレンジ時のスキル：{hyperlink_id 75}",
+          "effects": [
+            {
+              "id": 91000938,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000938,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001384,
+              "value": 3000,
+              "_detail": {
+                "description": "物攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001384,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001632,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001632,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002422,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スピニングエッジ",
+          "not_state_change_count_decrease": false,
+          "power": 435,
+          "require_command_value": false,
+          "skill_destination": 12002593,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻アップ<br>「飛剣」を付与またはLvアップ",
+          "timeline_hash": "1543702176006082762",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 29,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」を2回行動終了するまで付与<br>自身に「飛剣」が付与されていない時、「飛剣(Lv2)」を付与<br>既に付与されている時、「飛剣」のLv+2(上限Lv10)<br>アウトレンジ時のスキル：{hyperlink_id 76}",
+          "effects": [
+            {
+              "id": 91000938,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000938,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001384,
+              "value": 3000,
+              "_detail": {
+                "description": "物攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001384,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001632,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001632,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002423,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スピニングエッジ",
+          "not_state_change_count_decrease": false,
+          "power": 461,
+          "require_command_value": false,
+          "skill_destination": 12002594,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻アップ<br>「飛剣」を付与またはLvアップ",
+          "timeline_hash": "1543702176006082762",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」を2回行動終了するまで付与<br>自身に「飛剣」が付与されていない時、「飛剣(Lv2)」を付与<br>既に付与されている時、「飛剣」のLv+2(上限Lv10)<br>アウトレンジ時のスキル：{hyperlink_id 77}",
+          "effects": [
+            {
+              "id": 91000938,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000938,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001384,
+              "value": 3000,
+              "_detail": {
+                "description": "物攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001384,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001632,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001632,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002424,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スピニングエッジ",
+          "not_state_change_count_decrease": false,
+          "power": 486,
+          "require_command_value": false,
+          "skill_destination": 12002595,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻アップ<br>「飛剣」を付与またはLvアップ",
+          "timeline_hash": "1543702176006082762",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 32,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「打属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「物攻+{1}%」を2回行動終了するまで付与<br>自身に「飛剣」が付与されていない時、「飛剣(Lv2)」を付与<br>既に付与されている時、「飛剣」のLv+2(上限Lv10)<br>アウトレンジ時のスキル：{hyperlink_id 78}",
+          "effects": [
+            {
+              "id": 91000938,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000938,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001384,
+              "value": 3000,
+              "_detail": {
+                "description": "物攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001384,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001632,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001632,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002425,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スピニングエッジ",
+          "not_state_change_count_decrease": false,
+          "power": 512,
+          "require_command_value": false,
+          "skill_destination": 12002596,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "1129336796000522609",
+          "summary": "攻撃前、対象の打属性耐性ダウン<br>攻撃後、自身の物攻アップ<br>「飛剣」を付与またはLvアップ",
+          "timeline_hash": "1543702176006082762",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+50〜150%(HP50〜100%で多いほど増加)<br>攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、自身に「物攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001384,
+              "value": 5000,
+              "_detail": {
+                "description": "物攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001384,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002028,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002028,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001633,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001633,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002426,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "獣王無尽",
+          "not_state_change_count_decrease": false,
+          "power": 504,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1761528819999832400",
+          "summary": "自身のHPに応じてダメージアップ<br>攻撃後、対象にスタンを超高確率で付与<br>自身の物攻とスキルダメージアップ",
+          "timeline_hash": "4829784751267534448",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+50〜150%(HP50〜100%で多いほど増加)<br>攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、自身に「物攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001384,
+              "value": 5000,
+              "_detail": {
+                "description": "物攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001384,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002028,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002028,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001633,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001633,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002427,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "獣王無尽",
+          "not_state_change_count_decrease": false,
+          "power": 535,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1761528819999832400",
+          "summary": "自身のHPに応じてダメージアップ<br>攻撃後、対象にスタンを超高確率で付与<br>自身の物攻とスキルダメージアップ",
+          "timeline_hash": "4829784751267534448",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+50〜150%(HP50〜100%で多いほど増加)<br>攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、自身に「物攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001384,
+              "value": 5000,
+              "_detail": {
+                "description": "物攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001384,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002028,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002028,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001633,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001633,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002428,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "獣王無尽",
+          "not_state_change_count_decrease": false,
+          "power": 567,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1761528819999832400",
+          "summary": "自身のHPに応じてダメージアップ<br>攻撃後、対象にスタンを超高確率で付与<br>自身の物攻とスキルダメージアップ",
+          "timeline_hash": "4829784751267534448",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+50〜150%(HP50〜100%で多いほど増加)<br>攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、自身に「物攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001384,
+              "value": 5000,
+              "_detail": {
+                "description": "物攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001384,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002028,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002028,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001633,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001633,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002429,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "獣王無尽",
+          "not_state_change_count_decrease": false,
+          "power": 598,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1761528819999832400",
+          "summary": "自身のHPに応じてダメージアップ<br>攻撃後、対象にスタンを超高確率で付与<br>自身の物攻とスキルダメージアップ",
+          "timeline_hash": "4829784751267534448",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+50〜150%(HP50〜100%で多いほど増加)<br>攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、自身に「物攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001384,
+              "value": 5000,
+              "_detail": {
+                "description": "物攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001384,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002028,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002028,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001633,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001633,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002430,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "獣王無尽",
+          "not_state_change_count_decrease": false,
+          "power": 630,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1761528819999832400",
+          "summary": "自身のHPに応じてダメージアップ<br>攻撃後、対象にスタンを超高確率で付与<br>自身の物攻とスキルダメージアップ",
+          "timeline_hash": "4829784751267534448",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

@@ -2015,5 +2015,1360 @@
       "wait": 0,
       "target_name": "味方全体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「物防・魔防+{0}%」を1回攻撃を受けるまで付与し、<br>「かばう」を3回発動するまで付与<br>味方全員のHPを{4}%回復",
+          "effects": [
+            {
+              "id": 91001019,
+              "value": 1500,
+              "_detail": {
+                "description": "物防アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001019,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001021,
+              "value": 1500,
+              "_detail": {
+                "description": "魔防アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001021,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001071,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001071,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003008,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "式神・雷",
+          "not_state_change_count_decrease": false,
+          "power": 57,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のステータスアップ<br>自身に「かばう」を付与<br>味方全員のHPを回復",
+          "timeline_hash": "4320857654143024091",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「物防・魔防+{0}%」を1回攻撃を受けるまで付与し、<br>「かばう」を3回発動するまで付与<br>味方全員のHPを{4}%回復",
+          "effects": [
+            {
+              "id": 91001019,
+              "value": 1500,
+              "_detail": {
+                "description": "物防アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001019,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001021,
+              "value": 1500,
+              "_detail": {
+                "description": "魔防アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001021,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001071,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001071,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003009,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "式神・雷",
+          "not_state_change_count_decrease": false,
+          "power": 60,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のステータスアップ<br>自身に「かばう」を付与<br>味方全員のHPを回復",
+          "timeline_hash": "4320857654143024091",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「物防・魔防+{0}%」を1回攻撃を受けるまで付与し、<br>「かばう」を3回発動するまで付与<br>味方全員のHPを{4}%回復",
+          "effects": [
+            {
+              "id": 91001019,
+              "value": 1500,
+              "_detail": {
+                "description": "物防アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001019,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001021,
+              "value": 1500,
+              "_detail": {
+                "description": "魔防アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001021,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001071,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001071,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003010,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "式神・雷",
+          "not_state_change_count_decrease": false,
+          "power": 64,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のステータスアップ<br>自身に「かばう」を付与<br>味方全員のHPを回復",
+          "timeline_hash": "4320857654143024091",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「物防・魔防+{0}%」を1回攻撃を受けるまで付与し、<br>「かばう」を3回発動するまで付与<br>味方全員のHPを{4}%回復",
+          "effects": [
+            {
+              "id": 91001019,
+              "value": 1500,
+              "_detail": {
+                "description": "物防アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001019,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001021,
+              "value": 1500,
+              "_detail": {
+                "description": "魔防アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001021,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001071,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001071,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003011,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "式神・雷",
+          "not_state_change_count_decrease": false,
+          "power": 67,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のステータスアップ<br>自身に「かばう」を付与<br>味方全員のHPを回復",
+          "timeline_hash": "4320857654143024091",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「物防・魔防+{0}%」を1回攻撃を受けるまで付与し、<br>「かばう」を3回発動するまで付与<br>味方全員のHPを{4}%回復",
+          "effects": [
+            {
+              "id": 91001019,
+              "value": 1500,
+              "_detail": {
+                "description": "物防アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001019,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001021,
+              "value": 1500,
+              "_detail": {
+                "description": "魔防アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001021,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001071,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001071,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003012,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "式神・雷",
+          "not_state_change_count_decrease": false,
+          "power": 71,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のステータスアップ<br>自身に「かばう」を付与<br>味方全員のHPを回復",
+          "timeline_hash": "4320857654143024091",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身のHPを{0}%回復<br>得意属性が雷属性の味方全員に「物防・魔防+{1}%」を3回攻撃を受けるまで付与(上限2個)し、<br>「受けるダメージ-{2}%」を2回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001833,
+              "value": 2200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001833,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001835,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001835,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001834,
+              "value": 2200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001834,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003013,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "陽花清浄",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "自身のHPを回復<br>得意属性が雷属性の味方全員のステータスアップ<br>得意属性が雷属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "7189495888678472777",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身のHPを{0}%回復<br>得意属性が雷属性の味方全員に「物防・魔防+{1}%」を3回攻撃を受けるまで付与(上限2個)し、<br>「受けるダメージ-{2}%」を2回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001833,
+              "value": 2400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001833,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001835,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001835,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001834,
+              "value": 2400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001834,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003014,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "陽花清浄",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "自身のHPを回復<br>得意属性が雷属性の味方全員のステータスアップ<br>得意属性が雷属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "7189495888678472777",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身のHPを{0}%回復<br>得意属性が雷属性の味方全員に「物防・魔防+{1}%」を3回攻撃を受けるまで付与(上限2個)し、<br>「受けるダメージ-{2}%」を2回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001833,
+              "value": 2600,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001833,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001835,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001835,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001834,
+              "value": 2600,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001834,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003015,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "陽花清浄",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "自身のHPを回復<br>得意属性が雷属性の味方全員のステータスアップ<br>得意属性が雷属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "7189495888678472777",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身のHPを{0}%回復<br>得意属性が雷属性の味方全員に「物防・魔防+{1}%」を3回攻撃を受けるまで付与(上限2個)し、<br>「受けるダメージ-{2}%」を2回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001833,
+              "value": 2800,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001833,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001835,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001835,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001834,
+              "value": 2800,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001834,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003016,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "陽花清浄",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "自身のHPを回復<br>得意属性が雷属性の味方全員のステータスアップ<br>得意属性が雷属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "7189495888678472777",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "自身のHPを{0}%回復<br>得意属性が雷属性の味方全員に「物防・魔防+{1}%」を3回攻撃を受けるまで付与(上限2個)し、<br>「受けるダメージ-{2}%」を2回攻撃を受けるまで付与(上限2個)",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001833,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001833,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001835,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001835,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001834,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001834,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003017,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "陽花清浄",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "自身のHPを回復<br>得意属性が雷属性の味方全員のステータスアップ<br>得意属性が雷属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "7189495888678472777",
+          "wait": 0,
+          "target_name": "味方全体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "アイテムゲージを{0}%回復<br>対象のHPを{1}%回復<br>得意属性が雷属性の味方全員に「受けるダメージ-{2}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001163,
+              "value": 1100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001163,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001836,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001836,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003018,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "四行相生・玉",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "6367314084127710419",
+          "summary": "アイテムゲージを回復<br>対象のHPを回復<br>得意属性が雷属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "5168519983248177638",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "アイテムゲージを{0}%回復<br>対象のHPを{1}%回復<br>得意属性が雷属性の味方全員に「受けるダメージ-{2}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001163,
+              "value": 1200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001163,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001836,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001836,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003019,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "四行相生・玉",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "6367314084127710419",
+          "summary": "アイテムゲージを回復<br>対象のHPを回復<br>得意属性が雷属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "5168519983248177638",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "アイテムゲージを{0}%回復<br>対象のHPを{1}%回復<br>得意属性が雷属性の味方全員に「受けるダメージ-{2}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001163,
+              "value": 1300,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001163,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001836,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001836,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003020,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "四行相生・玉",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "6367314084127710419",
+          "summary": "アイテムゲージを回復<br>対象のHPを回復<br>得意属性が雷属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "5168519983248177638",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "アイテムゲージを{0}%回復<br>対象のHPを{1}%回復<br>得意属性が雷属性の味方全員に「受けるダメージ-{2}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001163,
+              "value": 1400,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001163,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001836,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001836,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003021,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "四行相生・玉",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "6367314084127710419",
+          "summary": "アイテムゲージを回復<br>対象のHPを回復<br>得意属性が雷属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "5168519983248177638",
+          "wait": 0,
+          "target_name": "味方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "アイテムゲージを{0}%回復<br>対象のHPを{1}%回復<br>得意属性が雷属性の味方全員に「受けるダメージ-{2}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001163,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001163,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001836,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001836,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003022,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "四行相生・玉",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "6367314084127710419",
+          "summary": "アイテムゲージを回復<br>対象のHPを回復<br>得意属性が雷属性の味方全員の受けるダメージダウン",
+          "timeline_hash": "5168519983248177638",
+          "wait": 0,
+          "target_name": "味方全体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }

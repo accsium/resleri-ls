@@ -1523,5 +1523,985 @@
       "wait": 0,
       "target_name": "敵単体"
     }
-  }
+  },
+  "_skills": [
+    {
+      "type": "normal1",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}％回復<br>味方全員に「魔攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001458,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001458,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002074,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドゥンケルシュタヘル",
+          "not_state_change_count_decrease": false,
+          "power": 46,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員の魔攻アップ",
+          "timeline_hash": "955382677062195639",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}％回復<br>味方全員に「魔攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001458,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001458,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002075,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドゥンケルシュタヘル",
+          "not_state_change_count_decrease": false,
+          "power": 48,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員の魔攻アップ",
+          "timeline_hash": "955382677062195639",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}％回復<br>味方全員に「魔攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001458,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001458,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002076,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドゥンケルシュタヘル",
+          "not_state_change_count_decrease": false,
+          "power": 51,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員の魔攻アップ",
+          "timeline_hash": "955382677062195639",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}％回復<br>味方全員に「魔攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001458,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001458,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002077,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドゥンケルシュタヘル",
+          "not_state_change_count_decrease": false,
+          "power": 54,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員の魔攻アップ",
+          "timeline_hash": "955382677062195639",
+          "wait": -100,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員のHPを{0}％回復<br>味方全員に「魔攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001458,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001458,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002078,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドゥンケルシュタヘル",
+          "not_state_change_count_decrease": false,
+          "power": 57,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、味方全員のHPを回復<br>味方全員の魔攻アップ",
+          "timeline_hash": "955382677062195639",
+          "wait": -100,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "normal2",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 24,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が風属性の味方全員に、「クリティカル確率＋{0}％」と「クリティカルダメージ＋{1}％」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001459,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001459,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001460,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001460,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002079,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シャッテンタンツェン",
+          "not_state_change_count_decrease": false,
+          "power": 193,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、得意属性が風属性の味方全員のクリティカル確率アップ<br>得意属性が風属性の味方全員のクリティカルダメージアップ",
+          "timeline_hash": "6157210364043701797",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 25,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が風属性の味方全員に、「クリティカル確率＋{0}％」と「クリティカルダメージ＋{1}％」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001459,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001459,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001460,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001460,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002080,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シャッテンタンツェン",
+          "not_state_change_count_decrease": false,
+          "power": 205,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、得意属性が風属性の味方全員のクリティカル確率アップ<br>得意属性が風属性の味方全員のクリティカルダメージアップ",
+          "timeline_hash": "6157210364043701797",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 27,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が風属性の味方全員に、「クリティカル確率＋{0}％」と「クリティカルダメージ＋{1}％」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001459,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001459,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001460,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001460,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002081,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シャッテンタンツェン",
+          "not_state_change_count_decrease": false,
+          "power": 217,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、得意属性が風属性の味方全員のクリティカル確率アップ<br>得意属性が風属性の味方全員のクリティカルダメージアップ",
+          "timeline_hash": "6157210364043701797",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 28,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が風属性の味方全員に、「クリティカル確率＋{0}％」と「クリティカルダメージ＋{1}％」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001459,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001459,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001460,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001460,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002082,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シャッテンタンツェン",
+          "not_state_change_count_decrease": false,
+          "power": 229,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、得意属性が風属性の味方全員のクリティカル確率アップ<br>得意属性が風属性の味方全員のクリティカルダメージアップ",
+          "timeline_hash": "6157210364043701797",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が風属性の味方全員に、「クリティカル確率＋{0}％」と「クリティカルダメージ＋{1}％」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001459,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001459,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001460,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001460,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002083,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シャッテンタンツェン",
+          "not_state_change_count_decrease": false,
+          "power": 241,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、得意属性が風属性の味方全員のクリティカル確率アップ<br>得意属性が風属性の味方全員のクリティカルダメージアップ",
+          "timeline_hash": "6157210364043701797",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    },
+    {
+      "type": "burst",
+      "pre_evolution": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「風属性スキルダメージ+{0}％」(上限100％)を付与し、<br>このスキル使用前に魔攻が最も高い味方に「クリティカル確率+{1}%」と以下の追加効果を2回行動終了するまで付与<br>追加効果:「自身のクリティカル確率が100%を超えている場合、攻撃時、100%を超えたクリティカル確率の上昇量をクリティカルダメージアップに変換(変換上限200%)」",
+          "effects": [
+            {
+              "id": 91001461,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001461,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001462,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001462,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001463,
+              "value": 20000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001463,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002084,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シュヴァルツヴィント",
+          "not_state_change_count_decrease": false,
+          "power": 420,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3387123503599186483",
+          "summary": "攻撃後、味方全員の風属性スキルダメージアップ<br>魔攻が最も高い味方1人に追加効果を付与",
+          "timeline_hash": "8680556853961799808",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「風属性スキルダメージ+{0}％」(上限100％)を付与し、<br>このスキル使用前に魔攻が最も高い味方に「クリティカル確率+{1}%」と以下の追加効果を2回行動終了するまで付与<br>追加効果:「自身のクリティカル確率が100%を超えている場合、攻撃時、100%を超えたクリティカル確率の上昇量をクリティカルダメージアップに変換(変換上限200%)」",
+          "effects": [
+            {
+              "id": 91001461,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001461,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001462,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001462,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001463,
+              "value": 20000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001463,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002085,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シュヴァルツヴィント",
+          "not_state_change_count_decrease": false,
+          "power": 446,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3387123503599186483",
+          "summary": "攻撃後、味方全員の風属性スキルダメージアップ<br>魔攻が最も高い味方1人に追加効果を付与",
+          "timeline_hash": "8680556853961799808",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「風属性スキルダメージ+{0}％」(上限100％)を付与し、<br>このスキル使用前に魔攻が最も高い味方に「クリティカル確率+{1}%」と以下の追加効果を2回行動終了するまで付与<br>追加効果:「自身のクリティカル確率が100%を超えている場合、攻撃時、100%を超えたクリティカル確率の上昇量をクリティカルダメージアップに変換(変換上限200%)」",
+          "effects": [
+            {
+              "id": 91001461,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001461,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001462,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001462,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001463,
+              "value": 20000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001463,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002086,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シュヴァルツヴィント",
+          "not_state_change_count_decrease": false,
+          "power": 472,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3387123503599186483",
+          "summary": "攻撃後、味方全員の風属性スキルダメージアップ<br>魔攻が最も高い味方1人に追加効果を付与",
+          "timeline_hash": "8680556853961799808",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「風属性スキルダメージ+{0}％」(上限100％)を付与し、<br>このスキル使用前に魔攻が最も高い味方に「クリティカル確率+{1}%」と以下の追加効果を2回行動終了するまで付与<br>追加効果:「自身のクリティカル確率が100%を超えている場合、攻撃時、100%を超えたクリティカル確率の上昇量をクリティカルダメージアップに変換(変換上限200%)」",
+          "effects": [
+            {
+              "id": 91001461,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001461,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001462,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001462,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001463,
+              "value": 20000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001463,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002087,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シュヴァルツヴィント",
+          "not_state_change_count_decrease": false,
+          "power": 498,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3387123503599186483",
+          "summary": "攻撃後、味方全員の風属性スキルダメージアップ<br>魔攻が最も高い味方1人に追加効果を付与",
+          "timeline_hash": "8680556853961799808",
+          "wait": 0,
+          "target_name": "敵単体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「風属性スキルダメージ+{0}％」(上限100％)を付与し、<br>このスキル使用前に魔攻が最も高い味方に「クリティカル確率+{1}%」と以下の追加効果を2回行動終了するまで付与<br>追加効果:「自身のクリティカル確率が100%を超えている場合、攻撃時、100%を超えたクリティカル確率の上昇量をクリティカルダメージアップに変換(変換上限200%)」",
+          "effects": [
+            {
+              "id": 91001461,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001461,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001462,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001462,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001463,
+              "value": 20000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001463,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002088,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "シュヴァルツヴィント",
+          "not_state_change_count_decrease": false,
+          "power": 525,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3387123503599186483",
+          "summary": "攻撃後、味方全員の風属性スキルダメージアップ<br>魔攻が最も高い味方1人に追加効果を付与",
+          "timeline_hash": "8680556853961799808",
+          "wait": 0,
+          "target_name": "敵単体"
+        }
+      ],
+      "post_evolution": []
+    }
+  ]
 }
