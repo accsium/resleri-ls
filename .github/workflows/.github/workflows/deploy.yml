@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ "main" ]
-  workflow_dispatch:
+  workflow_dispatch:          # 允许手动触发
 
 jobs:
   build-and-deploy:
@@ -19,6 +19,12 @@ jobs:
 
       - name: 运行拆分脚本
         run: node scripts/resolveAndSplit.js
+
+      - name: 复制翻译文件到 public
+        run: |
+          mkdir -p public/data/jp public/data/cn
+          cp -r data/jp/* public/data/jp/
+          cp -r data/cn/* public/data/cn/
 
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
