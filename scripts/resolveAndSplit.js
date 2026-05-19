@@ -42,6 +42,8 @@ const jpMaps = {
   base_character: loadMapFile('base_character'),
   equipment_tool_trait: loadMapFile('equipment_tool_trait'),
   original_title: loadMapFile('original_title'),
+  attack_attribute: loadMapFile('attack_attribute'),
+  role: loadMapFile('role'),
 };
 
 const cnMaps = {};
@@ -131,6 +133,11 @@ function buildLocalizedChar(character, lang) {
   char.tag_names = (char.tag_ids || []).map(id => maps.tag?.get(id) || `ID:${id}`);
   char.base_character_name = maps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
   char.original_title_name = maps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
+  // 属性名称数组（attack_attributes 是数组）
+char.attack_attribute_names = (char.attack_attributes || []).map(id => maps.attack_attribute?.get(id) || `ID:${id}`);
+
+// 定位名称
+char.role_name = maps.role?.get(char.role) || `ID:${char.role}`;
   // 如果需要 equipment_tool_trait 名称，可类似添加，但角色数据中可能只有 id 数组
   if (char.equipment_tool_trait_ids) {
     char.equipment_tool_trait_names = char.equipment_tool_trait_ids.map(id => maps.equipment_tool_trait?.get(id) || `ID:${id}`);
@@ -154,6 +161,8 @@ function buildIndexEntry(character, lang) {
     role: character.role,
     attack_attributes: character.attack_attributes,
     tag_names: (character.tag_ids || []).map(id => maps.tag?.get(id) || `ID:${id}`),
+	attack_attribute_names: (character.attack_attributes || []).map(id => maps.attack_attribute?.get(id) || `ID:${id}`),
+    role_name: maps.role?.get(character.role) || `ID:${character.role}`,
   };
 }
 
