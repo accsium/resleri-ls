@@ -1,60 +1,254 @@
-const config = {
-  entities: {
-    character: {
-      file: 'character.json',
-      idField: 'id',
-      references: {
-        normal1_skill_ids: 'skill',
-        normal2_skill_ids: 'skill',
-        burst_skill_ids: 'skill',
-        evolved_normal1_skill_ids: 'skill',
-        evolved_normal2_skill_ids: 'skill',
-        evolved_burst_skill_ids: 'skill',
-        ability_ids: 'ability',
-        board_ability1_ids: 'ability',
-        board_ability2_ids: 'ability',
-        board_ability3_ids: 'ability',
-        all_skill_evolved_ability_ids: 'ability',
-        support_ability_ids: 'ability',
-        extra_skill_ids: 'skill',
-      },
-      nestedReferences: {
-        'leader_skill.abilities': {
-          arrayField: 'abilities',
-          refField: 'ability_id',
-          target: 'ability'
-        }
-      }
-    },
-    skill: {
-      file: 'skill.json',
-      idField: 'id',
-      references: {},
-      nestedReferences: {
-        'effects': {
-          arrayField: 'effects',
-          refField: 'id',
-          target: 'effect'
-        }
-      }
-    },
-    ability: {
-      file: 'ability.json',
-      idField: 'id',
-      references: {},
-      nestedReferences: {
-        'effects': {
-          arrayField: 'effects',
-          refField: 'id',
-          target: 'effect'
-        }
-      }
-    },
-    effect: {
-      file: 'effect.json',
-      idField: 'id',
-      references: {}
-    }
-  }
-};
-module.exports = config;
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="ja"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &lt;title&gt;角色图鉴&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &lt;style&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; body { font-family: sans-serif; margin: 20px; background: #f5f5f5; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; #lang-switcher { margin-bottom: 15px; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; #lang-switcher button {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; padding: 6px 18px; cursor: pointer; border: 1px solid #aaa;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; background: #fff; border-radius: 4px; font-size: 14px;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; #lang-switcher button.active { font-weight: bold; background: #4CAF50; color: white; border-color: #388E3C; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; #list { display: flex; flex-wrap: wrap; gap: 12px; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; .card {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; border: 1px solid #ddd; padding: 12px; cursor: pointer; width: 200px;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; border-radius: 8px; background: white; transition: box-shadow 0.2s;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.15); }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; #detail {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; margin-top: 30px; border: 1px solid #333; padding: 20px;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; display: none; border-radius: 8px; background: #fff;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; .skill-item { margin: 8px 0; padding: 8px; border-left: 4px solid #4CAF50; background: #f9f9f9; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; .error-msg { color: #c00; background: #ffe0e0; padding: 10px; border-radius: 5px; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &lt;h1&gt;✨ 角色图鉴&lt;/h1&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &lt;!-- ⚠️ 语言切换按钮（之前缺失的，现在补上了） --&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &lt;div id="lang-switcher"&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &lt;button id="btn-ja" class="active"&gt;日本語&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &lt;button id="btn-cn"&gt;中文&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &lt;div id="list"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &lt;div id="detail"&gt;&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &lt;script&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; // ========== 多语言数据管理器 ==========</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; const localization = (() =&gt; {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; const store = { ja: {}, cn: {} };</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; let currentLang = 'ja';</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; async function loadFile(name, lang) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; const folder = lang === 'cn' ? 'cn' : 'jp';</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; const url = `data/${folder}/${name}.json`;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; try {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const resp = await fetch(url);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!resp.ok) throw new Error(`HTTP ${resp.status}`);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return await resp.json();</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; } catch (err) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.warn(`⚠️ 无法加载 ${url}: ${err.message}`);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return null;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; async function init(fileNames) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; const tasks = [];</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; for (const name of fileNames) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // 并行加载日文和中文</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const jaTask = loadFile(name, 'ja').then(data =&gt; { if (data) store.ja[name] = data; });</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const cnTask = loadFile(name, 'cn').then(data =&gt; {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (data) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; store.cn[name] = data;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // 中文缺失时用日文回退（必须等日文加载完）</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; console.warn(`中文翻译 ${name}.json 缺失，将使用日文`);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tasks.push(jaTask, cnTask);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; await Promise.all(tasks);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; // 对于未成功加载中文的，回退到日文</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; for (const name of fileNames) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!store.cn[name]) store.cn[name] = store.ja[name] || [];</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; function get(fileName) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; return store[currentLang][fileName] || store.ja[fileName] || [];</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; function setLang(lang) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; if (lang !== 'ja' &amp;&amp; lang !== 'cn') return;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; if (currentLang === lang) return;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; currentLang = lang;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; if (typeof onLanguageChange === 'function') onLanguageChange(lang);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; function getCurrentLang() { return currentLang; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; return { init, get, setLang, getCurrentLang };</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; })();</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; // ========== 需要翻译的文件列表 ==========</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; const TRANSLATABLE_FILES = [</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; 'character_tag',</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; 'base_character',</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; 'equipment_tool_trait',</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; 'original_title'</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; ];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; // ========== 全局状态 ==========</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; let characterIndex = [];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; // 辅助函数：从映射文件中根据 id 获取名称</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; function getMappedName(collection, id) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; const data = localization.get(collection);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; if (Array.isArray(data)) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; const item = data.find(x =&gt; x.id === id);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; return item ? item.name : `ID:${id}`;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; if (data &amp;&amp; typeof data === 'object') {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; const item = data[id];</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; return item ? item.name : `ID:${id}`;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; return `ID:${id}`;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; function getTagName(tagId) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; return getMappedName('character_tag', tagId);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; // ========== 语言切换回调 ==========</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; function onLanguageChange(lang) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; renderList();</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; const detailDiv = document.getElementById('detail');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; if (detailDiv.style.display !== 'none' &amp;&amp; detailDiv.dataset.charId) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; loadCharacter(detailDiv.dataset.charId);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; document.getElementById('btn-ja').addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; localization.setLang('ja');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; document.getElementById('btn-ja').classList.add('active');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; document.getElementById('btn-cn').classList.remove('active');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; });</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; document.getElementById('btn-cn').addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; localization.setLang('cn');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; document.getElementById('btn-cn').classList.add('active');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; document.getElementById('btn-ja').classList.remove('active');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; });</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; // ========== 初始化 ==========</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; async function boot() {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; const listDiv = document.getElementById('list');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; try {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; await localization.init(TRANSLATABLE_FILES);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; const resp = await fetch('data/character_index.json');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; if (!resp.ok) throw new Error('索引文件加载失败');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; characterIndex = await resp.json();</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; renderList();</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; } catch (err) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; console.error('初始化失败', err);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; listDiv.innerHTML = '&lt;div class="error-msg"&gt;❌ 加载角色数据失败，请确认已正确部署数据文件。&lt;/div&gt;';</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; // ========== 渲染角色列表 ==========</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; function renderList() {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; const listDiv = document.getElementById('list');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; listDiv.innerHTML = '';</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; if (!characterIndex.length) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; listDiv.innerHTML = '&lt;p&gt;暂无角色数据&lt;/p&gt;';</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; return;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; characterIndex.forEach(char =&gt; {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; const card = document.createElement('div');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; card.className = 'card';</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; const tagNames = (char.tag_ids || []).map(id =&gt; getTagName(id)).join(', ');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; card.innerHTML = `</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;strong&gt;${char.name}&lt;/strong&gt; ${char.another_name ? '('+char.another_name+')' : ''}&lt;br&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ⭐ ${char.initial_rarity} → ${char.max_rarity}&lt;br&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;small&gt;${tagNames}&lt;/small&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; `;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; card.onclick = () =&gt; loadCharacter(char.id);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; listDiv.appendChild(card);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; });</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; // ========== 加载角色详情 ==========</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; async function loadCharacter(id) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; const detailDiv = document.getElementById('detail');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; detailDiv.style.display = 'block';</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; detailDiv.dataset.charId = id;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; detailDiv.innerHTML = '&lt;p&gt;⏳ 加载中...&lt;/p&gt;';</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; try {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; const resp = await fetch(`data/characters/${id}.json`);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; if (!resp.ok) throw new Error('角色文件不存在');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; const char = await resp.json();</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; const tagNames = (char.tag_ids || []).map(tid =&gt; getTagName(tid)).join(', ');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; let html = `</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;${char.name} ${char.another_name || ''}&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;${char.description || ''}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;⭐ 初始 ${char.initial_rarity} / 最大 ${char.max_rarity}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;属性: ${(char.attack_attributes||[]).join(', ')} | ロール: ${char.role}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;标签: ${tagNames}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;技能／能力&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; `;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; if (char._skillDetails) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Object.entries(char._skillDetails).forEach(([id, skill]) =&gt; {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!skill) return;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; html += `&lt;div class="skill-item"&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;strong&gt;${skill.name || id}&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;${skill.description || ''}&lt;/div&gt;`;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (skill.effects &amp;&amp; Array.isArray(skill.effects)) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; html += '&lt;ul&gt;';</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; skill.effects.forEach(eff =&gt; {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const effectText = eff._detail ? eff._detail.description : (eff.id || '?');</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; html += `&lt;li&gt;${effectText} (值: ${eff.value ?? 0})&lt;/li&gt;`;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; html += '&lt;/ul&gt;';</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; html += '&lt;/div&gt;';</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; } else {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; html += '&lt;p&gt;暂无技能详情&lt;/p&gt;';</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; detailDiv.innerHTML = html;</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; } catch (err) {</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; detailDiv.innerHTML = '&lt;div class="error-msg"&gt;❌ 加载角色详情失败&lt;/div&gt;';</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; &nbsp; console.error(err);</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; &nbsp; }</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; // 启动！</span></p>
+<p class="p1"><span class="s1">&nbsp; &nbsp; boot();</span></p>
+<p class="p1"><span class="s1">&nbsp; &lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
