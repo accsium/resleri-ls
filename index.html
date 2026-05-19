@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>レスレリ 角色图鉴</title>
   <style>
-    /* 样式与之前一致，保持即可 */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Segoe UI', 'Noto Sans JP', sans-serif; background: #f4f6f9; color: #2c3e50; }
     .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
@@ -34,7 +33,7 @@
     .stat-item { background: #f8f9fb; border-radius: 8px; padding: 10px; text-align: center; }
     .stat-item .stat-value { font-size: 18px; font-weight: 700; }
     .stat-item .stat-label { font-size: 10px; color: #999; }
-    .tag { background: #e0e7ff; color: #3730a3; padding: 3px 10px; border-radius: 20px; font-size: 12px; margin: 2px; }
+    .tag { background: #e0e7ff; color: #3730a3; padding: 3px 10px; border-radius: 20px; font-size: 12px; margin: 2px; display: inline-block; }
     .section-title { font-size: 18px; font-weight: 600; margin: 20px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #667eea; }
     .skill-group { margin-bottom: 15px; }
     .skill-group-title { font-weight: 600; font-size: 15px; margin-bottom: 8px; color: #555; cursor: pointer; }
@@ -52,7 +51,7 @@
 <body>
 
 <div class="header">
-  <h1>✨ レスレリ 角色图鉴</h1>
+  <h1 id="pageTitle">レスレリ 角色图鉴</h1>
   <div class="lang-switcher">
     <button id="btn-ja" class="active">日本語</button>
     <button id="btn-cn">中文</button>
@@ -68,25 +67,111 @@
   </div>
 
   <div class="detail-panel" id="detailPanel">
-    <div class="loading">👈 选择左侧角色查看详情</div>
+    <div class="loading">← 选择左侧角色查看详情</div>
   </div>
 </div>
 
 <script>
-// ========== 全局状态 ==========
+// ========== 多语言文本定义 ==========
+const UI_TEXT = {
+  ja: {
+    pageTitle: 'レスレリ 角色图鉴',
+    searchPlaceholder: '名前で検索...',
+    selectHint: '← 左のキャラクターを選択してください',
+    basicStatus: '基本ステータス',
+    skillSection: 'スキル',
+    abilitySection: 'アビリティ',
+    leaderSkillSection: 'リーダースキル',
+    base: 'ベース',
+    series: 'シリーズ',
+    releaseDate: '実装日',
+    attribute: '属性',
+    role: 'ロール',
+    alchemist: '錬金術士',
+    yes: 'はい',
+    no: 'いいえ',
+    none: 'なし',
+    loading: '読み込み中...',
+    loadFailed: '読み込み失敗',
+    initial: '初期',
+    max: '最大',
+    rarity: 'レアリティ',
+    target: '対象',
+    power: '威力',
+    break: 'ブレイク',
+    wt: 'WT',
+    limit: '制限',
+    skillType: {
+      normal1: '通常攻撃1',
+      normal2: '通常攻撃2',
+      burst: 'バーストスキル',
+      evolved_normal1: '進化通常1',
+      evolved_normal2: '進化通常2',
+      evolved_burst: '進化バースト',
+      active1: 'アクティブ1',
+      active2: 'アクティブ2',
+      active3: 'アクティブ3',
+    },
+    targetType: { 1:'単体', 2:'全体', 3:'敵単体', 4:'敵全体', 5:'味方単体', 6:'味方全体' },
+    attributeName: { 1:'斬', 2:'打', 3:'突', 5:'火', 6:'氷', 7:'雷', 8:'風' },
+    statLabels: { hp: 'HP', attack: '物攻', magic: '魔攻', defense: '物防', mental: '魔防', speed: '速度' }
+  },
+  cn: {
+    pageTitle: '雷斯雷利 角色图鉴',
+    searchPlaceholder: '搜索角色名称...',
+    selectHint: '← 选择左侧角色查看详情',
+    basicStatus: '基础属性',
+    skillSection: '技能',
+    abilitySection: '能力',
+    leaderSkillSection: '队长技能',
+    base: '原型',
+    series: '系列',
+    releaseDate: '实装日期',
+    attribute: '属性',
+    role: '定位',
+    alchemist: '炼金术士',
+    yes: '是',
+    no: '否',
+    none: '无',
+    loading: '加载中...',
+    loadFailed: '加载失败',
+    initial: '初期',
+    max: '最大',
+    rarity: '稀有度',
+    target: '对象',
+    power: '威力',
+    break: '破防',
+    wt: 'WT',
+    limit: '限制',
+    skillType: {
+      normal1: '通常攻击1',
+      normal2: '通常攻击2',
+      burst: '爆发技能',
+      evolved_normal1: '进化通常1',
+      evolved_normal2: '进化通常2',
+      evolved_burst: '进化爆发',
+      active1: '主动1',
+      active2: '主动2',
+      active3: '主动3',
+    },
+    targetType: { 1:'单体', 2:'全体', 3:'敌单体', 4:'敌全体', 5:'我方单体', 6:'我方全体' },
+    attributeName: { 1:'斩', 2:'打', 3:'突', 5:'火', 6:'冰', 7:'雷', 8:'风' },
+    statLabels: { hp: 'HP', attack: '物攻', magic: '魔攻', defense: '物防', mental: '魔防', speed: '速度' }
+  }
+};
+
+// 当前语言
 let currentLang = 'ja';
+// 获取当前语言文本
+function t(key) {
+  return UI_TEXT[currentLang][key] || key;
+}
+
+// ========== 全局状态 ==========
 let characterIndex = [];
 let currentCharId = null;
 
-// 属性映射
-const ATTRIBUTE_NAMES = { 1:'斬',2:'打',3:'突',4:'風',5:'火',6:'氷',7:'雷' };
-const SKILL_TYPE_NAMES = {
-  normal1: '通常攻撃1', normal2: '通常攻撃2', burst: 'バーストスキル',
-  evolved_normal1: '進化通常1', evolved_normal2: '進化通常2', evolved_burst: '進化バースト',
-  active1: 'アクティブ1', active2: 'アクティブ2', active3: 'アクティブ3',
-};
-const TARGET_TYPE_NAMES = { 1:'単体', 2:'全体', 3:'敵単体', 4:'敵全体', 5:'味方単体', 6:'味方全体' };
-
+// 稀有度转星星
 function rarityToStars(r) {
   const map = {1:'★',2:'★★',3:'★★★',4:'★★★☆',5:'★★★★',6:'★★★★☆',7:'★★★★★',8:'★★★★★★'};
   return map[r] || '★'.repeat(r);
@@ -105,6 +190,18 @@ async function loadCharacter(id) {
   return await resp.json();
 }
 
+// ========== UI 更新 ==========
+function updateUILanguage() {
+  document.title = t('pageTitle');
+  document.getElementById('pageTitle').textContent = t('pageTitle');
+  document.getElementById('searchInput').placeholder = t('searchPlaceholder');
+  // 如果详情面板显示的是提示文字
+  const panel = document.getElementById('detailPanel');
+  if (panel.children[0] && panel.children[0].classList.contains('loading')) {
+    panel.innerHTML = `<div class="loading">${t('selectHint')}</div>`;
+  }
+}
+
 // ========== 渲染 ==========
 function renderList() {
   const listDiv = document.getElementById('characterList');
@@ -116,10 +213,13 @@ function renderList() {
   listDiv.innerHTML = filtered.map(c => {
     const stars = rarityToStars(c.initial_rarity);
     const alias = c.another_name ? `【${c.another_name}】` : '';
+    const attrs = (c.attack_attribute_names || []).join(' / ');
+    const role = c.role_name || '';
     return `<div class="char-item" onclick="selectCharacter(${c.id})" data-id="${c.id}">
       <span class="rarity-stars">${stars}</span>
       <span class="char-name">${c.name}</span>
       <span class="char-alias">${alias}</span>
+      <span style="margin-left:auto; font-size:12px; color:#666;">${attrs} ${role}</span>
     </div>`;
   }).join('');
 }
@@ -127,34 +227,36 @@ function renderList() {
 function renderDetail(char) {
   const panel = document.getElementById('detailPanel');
   const tagNames = char.tag_names || [];
-  const attrNames = (char.attack_attributes || []).map(a => ATTRIBUTE_NAMES[a] || a).join(' / ');
+  const attrNames = (char.attack_attribute_names || []).join(' / ');
+  const roleName = char.role_name || '?';
   const startDate = char.start_at ? new Date(char.start_at).toLocaleDateString('ja-JP') : '不明';
+  const isAlchemist = char.is_alchemist ? t('yes') : t('no');
 
   let html = `
     <div class="detail-header">
       <div class="info">
         <h2>${char.name} <span class="alias">${char.another_name || ''}</span></h2>
-        <div class="rarity">初期 ${rarityToStars(char.initial_rarity)} → 最大 ${rarityToStars(char.max_rarity)} (Rarity: ${char.initial_rarity}→${char.max_rarity})</div>
-        <div class="base-char">ベース: ${char.base_character_name || '—'}</div>
-        <div class="series">シリーズ: ${char.original_title_name || '—'} | 実装日: ${startDate}</div>
+        <div class="rarity">${t('initial')} ${rarityToStars(char.initial_rarity)} → ${t('max')} ${rarityToStars(char.max_rarity)} (${t('rarity')}: ${char.initial_rarity}→${char.max_rarity})</div>
+        <div class="base-char">${t('base')}: ${char.base_character_name || '—'}</div>
+        <div class="series">${t('series')}: ${char.original_title_name || '—'} | ${t('releaseDate')}: ${startDate}</div>
         <div style="margin-top:8px;">${tagNames.map(t => `<span class="tag">${t}</span>`).join('')}</div>
       </div>
     </div>
     <p style="margin:10px 0;font-style:italic;color:#555;">${char.description || ''}</p>
-    <div class="section-title">📊 基本ステータス</div>
+    <div class="section-title">${t('basicStatus')}</div>
     <div class="stat-grid">
-      ${renderStat('HP', char.initial_status?.hp)}
-      ${renderStat('物攻', char.initial_status?.attack)}
-      ${renderStat('魔攻', char.initial_status?.magic)}
-      ${renderStat('物防', char.initial_status?.defense)}
-      ${renderStat('魔防', char.initial_status?.mental)}
-      ${renderStat('速度', char.initial_status?.speed)}
+      ${renderStat(t('statLabels').hp, char.initial_status?.hp)}
+      ${renderStat(t('statLabels').attack, char.initial_status?.attack)}
+      ${renderStat(t('statLabels').magic, char.initial_status?.magic)}
+      ${renderStat(t('statLabels').defense, char.initial_status?.defense)}
+      ${renderStat(t('statLabels').mental, char.initial_status?.mental)}
+      ${renderStat(t('statLabels').speed, char.initial_status?.speed)}
     </div>
-    <div>属性: ${attrNames} | ロール: ${char.role || '?'} | 錬金術士: ${char.is_alchemist ? 'はい' : 'いいえ'}</div>
-    <div class="section-title">⚔️ スキル</div>
+    <div>${t('attribute')}: ${attrNames} | ${t('role')}: ${roleName} | ${t('alchemist')}: ${isAlchemist}</div>
+    <div class="section-title">${t('skillSection')}</div>
   `;
 
-  // 技能渲染 (与之前类似，但从 _skillDetails 获取)
+  // 技能渲染
   const skillTypes = [
     { key: 'normal1', ids: char.normal1_skill_ids, evolved: char.evolved_normal1_skill_ids },
     { key: 'normal2', ids: char.normal2_skill_ids, evolved: char.evolved_normal2_skill_ids },
@@ -165,18 +267,19 @@ function renderDetail(char) {
   ];
 
   const skillMap = char._skillDetails || {};
+  const skillTypeText = t('skillType');
   skillTypes.forEach(skType => {
     const allIds = [...(skType.ids||[]), ...(skType.evolved||[])];
     const skills = allIds.map(id => skillMap[id]).filter(Boolean);
     if (skills.length === 0) return;
     html += `<div class="skill-group">
-      <div class="skill-group-title">▸ ${SKILL_TYPE_NAMES[skType.key] || skType.key} (${skills.length} Lv)</div>
+      <div class="skill-group-title">${skillTypeText[skType.key] || skType.key} (${skills.length} Lv)</div>
       ${skills.map(s => renderSkillCard(s)).join('')}
     </div>`;
   });
 
   // 能力
-  html += `<div class="section-title">🛡️ アビリティ</div>`;
+  html += `<div class="section-title">${t('abilitySection')}</div>`;
   const abilityIds = [
     ...(char.ability_ids || []), ...(char.board_ability1_ids || []),
     ...(char.board_ability2_ids || []), ...(char.board_ability3_ids || []),
@@ -185,16 +288,16 @@ function renderDetail(char) {
   const uniqueAbilities = [...new Set(abilityIds)];
   const abilities = uniqueAbilities.map(id => skillMap[id]).filter(Boolean);
   if (abilities.length === 0) {
-    html += '<div class="no-data">なし</div>';
+    html += `<div class="no-data">${t('none')}</div>`;
   } else {
     abilities.forEach(a => { html += renderAbilityCard(a); });
   }
 
   // 队长技能
   if (char.leader_skill) {
-    html += `<div class="section-title">👑 リーダースキル</div>
+    html += `<div class="section-title">${t('leaderSkillSection')}</div>
     <div class="skill-detail-card" style="border-left-color:#eab308;">
-      <div class="skill-name">${char.leader_skill.name || 'リーダースキル'}</div>
+      <div class="skill-name">${char.leader_skill.name || t('leaderSkillSection')}</div>
       <div class="skill-desc">${char.leader_skill.description || ''}</div>
     </div>`;
   }
@@ -207,8 +310,10 @@ function renderStat(label, value) {
 }
 
 function renderSkillCard(skill) {
-  const target = TARGET_TYPE_NAMES[skill.skill_target_type] || skill.skill_target_type || '?';
-  const attr = (skill.attack_attributes || []).map(a => ATTRIBUTE_NAMES[a] || a).join('/');
+  const targetText = t('targetType');
+  const target = targetText[skill.skill_target_type] || skill.skill_target_type || '?';
+  const attrText = t('attributeName');
+  const attr = (skill.attack_attributes || []).map(a => attrText[a] || a).join('/');
   let effectsHtml = '';
   if (skill.effects) {
     effectsHtml = '<ul class="effect-list">' + skill.effects.map(e => {
@@ -220,12 +325,12 @@ function renderSkillCard(skill) {
     <div class="skill-name">${skill.name || '??'} <small>(ID:${skill.id})</small></div>
     <div class="skill-desc">${skill.description || ''}</div>
     <div class="skill-stats">
-      <span class="skill-stat">対象: ${target}</span>
-      ${attr ? `<span class="skill-stat">属性: ${attr}</span>` : ''}
-      <span class="skill-stat">威力: ${skill.power ?? 0}%</span>
-      <span class="skill-stat">ブレイク: ${skill.break_power ?? 0}%</span>
-      <span class="skill-stat">WT: ${skill.wait ?? 0}</span>
-      <span class="skill-stat">制限: ${skill.limit_count ?? '—'}</span>
+      <span class="skill-stat">${t('target')}: ${target}</span>
+      ${attr ? `<span class="skill-stat">${t('attribute')}: ${attr}</span>` : ''}
+      <span class="skill-stat">${t('power')}: ${skill.power ?? 0}%</span>
+      <span class="skill-stat">${t('break')}: ${skill.break_power ?? 0}%</span>
+      <span class="skill-stat">${t('wt')}: ${skill.wait ?? 0}</span>
+      <span class="skill-stat">${t('limit')}: ${skill.limit_count ?? '—'}</span>
     </div>
     ${effectsHtml}
   </div>`;
@@ -253,12 +358,12 @@ async function selectCharacter(id) {
   const item = document.querySelector(`.char-item[data-id="${id}"]`);
   if (item) item.classList.add('active');
   const panel = document.getElementById('detailPanel');
-  panel.innerHTML = '<div class="loading">加载中...</div>';
+  panel.innerHTML = `<div class="loading">${t('loading')}</div>`;
   try {
     const char = await loadCharacter(id);
     renderDetail(char);
   } catch(e) {
-    panel.innerHTML = '<div class="no-data">加载详情失败</div>';
+    panel.innerHTML = `<div class="no-data">${t('loadFailed')}</div>`;
   }
 }
 
@@ -267,6 +372,7 @@ async function switchLanguage(lang) {
   currentLang = lang;
   document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
   document.getElementById('btn-cn').classList.toggle('active', lang === 'cn');
+  updateUILanguage();
   // 重新加载索引
   await loadIndex();
   renderList();
@@ -281,6 +387,7 @@ document.getElementById('btn-cn').addEventListener('click', () => switchLanguage
 
 // 初始化
 (async () => {
+  updateUILanguage();
   await loadIndex();
   renderList();
 })();
