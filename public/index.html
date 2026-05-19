@@ -1,60 +1,237 @@
-const config = {
-  entities: {
-    character: {
-      file: 'character.json',
-      idField: 'id',
-      references: {
-        normal1_skill_ids: 'skill',
-        normal2_skill_ids: 'skill',
-        burst_skill_ids: 'skill',
-        evolved_normal1_skill_ids: 'skill',
-        evolved_normal2_skill_ids: 'skill',
-        evolved_burst_skill_ids: 'skill',
-        ability_ids: 'ability',
-        board_ability1_ids: 'ability',
-        board_ability2_ids: 'ability',
-        board_ability3_ids: 'ability',
-        all_skill_evolved_ability_ids: 'ability',
-        support_ability_ids: 'ability',
-        extra_skill_ids: 'skill',
-      },
-      nestedReferences: {
-        'leader_skill.abilities': {
-          arrayField: 'abilities',
-          refField: 'ability_id',
-          target: 'ability'
-        }
-      }
-    },
-    skill: {
-      file: 'skill.json',
-      idField: 'id',
-      references: {},
-      nestedReferences: {
-        'effects': {
-          arrayField: 'effects',
-          refField: 'id',
-          target: 'effect'
-        }
-      }
-    },
-    ability: {
-      file: 'ability.json',
-      idField: 'id',
-      references: {},
-      nestedReferences: {
-        'effects': {
-          arrayField: 'effects',
-          refField: 'id',
-          target: 'effect'
-        }
-      }
-    },
-    effect: {
-      file: 'effect.json',
-      idField: 'id',
-      references: {}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>角色图鉴</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; background: #f5f5f5; }
+    #lang-switcher { margin-bottom: 15px; }
+    #lang-switcher button {
+      padding: 6px 18px; cursor: pointer; border: 1px solid #aaa;
+      background: #fff; border-radius: 4px; font-size: 14px;
     }
-  }
-};
-module.exports = config;
+    #lang-switcher button.active { font-weight: bold; background: #4CAF50; color: white; border-color: #388E3C; }
+    #list { display: flex; flex-wrap: wrap; gap: 12px; }
+    .card {
+      border: 1px solid #ddd; padding: 12px; cursor: pointer; width: 200px;
+      border-radius: 8px; background: white; transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    #detail {
+      margin-top: 30px; border: 1px solid #333; padding: 20px;
+      display: none; border-radius: 8px; background: #fff;
+    }
+    .skill-item { margin: 8px 0; padding: 8px; border-left: 4px solid #4CAF50; background: #f9f9f9; }
+    .error-msg { color: #c00; background: #ffe0e0; padding: 10px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>✨ 角色图鉴</h1>
+
+  <!-- ⚠️ 语言切换按钮（之前缺失的，现在补上了） -->
+  <div id="lang-switcher">
+    <button id="btn-ja" class="active">日本語</button>
+    <button id="btn-cn">中文</button>
+  </div>
+
+  <div id="list"></div>
+  <div id="detail"></div>
+
+  <script>
+    // ========== 多语言数据管理器 ==========
+    const localization = (() => {
+      const store = { ja: {}, cn: {} };
+      let currentLang = 'ja';
+
+      async function loadFile(name, lang) {
+        const folder = lang === 'cn' ? 'cn' : 'jp';
+        const url = `data/${folder}/${name}.json`;
+        try {
+          const resp = await fetch(url);
+          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+          return await resp.json();
+        } catch (err) {
+          console.warn(`⚠️ 无法加载 ${url}: ${err.message}`);
+          return null;
+        }
+      }
+
+      async function init(fileNames) {
+        const tasks = [];
+        for (const name of fileNames) {
+          // 并行加载日文和中文
+          const jaTask = loadFile(name, 'ja').then(data => { if (data) store.ja[name] = data; });
+          const cnTask = loadFile(name, 'cn').then(data => {
+            if (data) {
+              store.cn[name] = data;
+            } else {
+              // 中文缺失时用日文回退（必须等日文加载完）
+              console.warn(`中文翻译 ${name}.json 缺失，将使用日文`);
+            }
+          });
+          tasks.push(jaTask, cnTask);
+        }
+        await Promise.all(tasks);
+        // 对于未成功加载中文的，回退到日文
+        for (const name of fileNames) {
+          if (!store.cn[name]) store.cn[name] = store.ja[name] || [];
+        }
+      }
+
+      function get(fileName) {
+        return store[currentLang][fileName] || store.ja[fileName] || [];
+      }
+
+      function setLang(lang) {
+        if (lang !== 'ja' && lang !== 'cn') return;
+        if (currentLang === lang) return;
+        currentLang = lang;
+        if (typeof onLanguageChange === 'function') onLanguageChange(lang);
+      }
+
+      function getCurrentLang() { return currentLang; }
+
+      return { init, get, setLang, getCurrentLang };
+    })();
+
+    // ========== 需要翻译的文件列表 ==========
+    const TRANSLATABLE_FILES = [
+      'character_tag',
+      'base_character',
+      'equipment_tool_trait',
+      'original_title'
+    ];
+
+    // ========== 全局状态 ==========
+    let characterIndex = [];
+
+    // 辅助函数：从映射文件中根据 id 获取名称
+    function getMappedName(collection, id) {
+      const data = localization.get(collection);
+      if (Array.isArray(data)) {
+        const item = data.find(x => x.id === id);
+        return item ? item.name : `ID:${id}`;
+      }
+      if (data && typeof data === 'object') {
+        const item = data[id];
+        return item ? item.name : `ID:${id}`;
+      }
+      return `ID:${id}`;
+    }
+
+    function getTagName(tagId) {
+      return getMappedName('character_tag', tagId);
+    }
+
+    // ========== 语言切换回调 ==========
+    function onLanguageChange(lang) {
+      renderList();
+      const detailDiv = document.getElementById('detail');
+      if (detailDiv.style.display !== 'none' && detailDiv.dataset.charId) {
+        loadCharacter(detailDiv.dataset.charId);
+      }
+    }
+
+    document.getElementById('btn-ja').addEventListener('click', () => {
+      localization.setLang('ja');
+      document.getElementById('btn-ja').classList.add('active');
+      document.getElementById('btn-cn').classList.remove('active');
+    });
+    document.getElementById('btn-cn').addEventListener('click', () => {
+      localization.setLang('cn');
+      document.getElementById('btn-cn').classList.add('active');
+      document.getElementById('btn-ja').classList.remove('active');
+    });
+
+    // ========== 初始化 ==========
+    async function boot() {
+      const listDiv = document.getElementById('list');
+      try {
+        await localization.init(TRANSLATABLE_FILES);
+        const resp = await fetch('data/character_index.json');
+        if (!resp.ok) throw new Error('索引文件加载失败');
+        characterIndex = await resp.json();
+        renderList();
+      } catch (err) {
+        console.error('初始化失败', err);
+        listDiv.innerHTML = '<div class="error-msg">❌ 加载角色数据失败，请确认已正确部署数据文件。</div>';
+      }
+    }
+
+    // ========== 渲染角色列表 ==========
+    function renderList() {
+      const listDiv = document.getElementById('list');
+      listDiv.innerHTML = '';
+      if (!characterIndex.length) {
+        listDiv.innerHTML = '<p>暂无角色数据</p>';
+        return;
+      }
+      characterIndex.forEach(char => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        const tagNames = (char.tag_ids || []).map(id => getTagName(id)).join(', ');
+        card.innerHTML = `
+          <strong>${char.name}</strong> ${char.another_name ? '('+char.another_name+')' : ''}<br>
+          ⭐ ${char.initial_rarity} → ${char.max_rarity}<br>
+          <small>${tagNames}</small>
+        `;
+        card.onclick = () => loadCharacter(char.id);
+        listDiv.appendChild(card);
+      });
+    }
+
+    // ========== 加载角色详情 ==========
+    async function loadCharacter(id) {
+      const detailDiv = document.getElementById('detail');
+      detailDiv.style.display = 'block';
+      detailDiv.dataset.charId = id;
+      detailDiv.innerHTML = '<p>⏳ 加载中...</p>';
+
+      try {
+        const resp = await fetch(`data/characters/${id}.json`);
+        if (!resp.ok) throw new Error('角色文件不存在');
+        const char = await resp.json();
+
+        const tagNames = (char.tag_ids || []).map(tid => getTagName(tid)).join(', ');
+        let html = `
+          <h2>${char.name} ${char.another_name || ''}</h2>
+          <p>${char.description || ''}</p>
+          <p>⭐ 初始 ${char.initial_rarity} / 最大 ${char.max_rarity}</p>
+          <p>属性: ${(char.attack_attributes||[]).join(', ')} | ロール: ${char.role}</p>
+          <p>标签: ${tagNames}</p>
+          <h3>技能／能力</h3>
+        `;
+
+        if (char._skillDetails) {
+          Object.entries(char._skillDetails).forEach(([id, skill]) => {
+            if (!skill) return;
+            html += `<div class="skill-item">
+              <strong>${skill.name || id}</strong>
+              <div>${skill.description || ''}</div>`;
+            if (skill.effects && Array.isArray(skill.effects)) {
+              html += '<ul>';
+              skill.effects.forEach(eff => {
+                const effectText = eff._detail ? eff._detail.description : (eff.id || '?');
+                html += `<li>${effectText} (值: ${eff.value ?? 0})</li>`;
+              });
+              html += '</ul>';
+            }
+            html += '</div>';
+          });
+        } else {
+          html += '<p>暂无技能详情</p>';
+        }
+
+        detailDiv.innerHTML = html;
+      } catch (err) {
+        detailDiv.innerHTML = '<div class="error-msg">❌ 加载角色详情失败</div>';
+        console.error(err);
+      }
+    }
+
+    // 启动！
+    boot();
+  </script>
+</body>
+</html>
