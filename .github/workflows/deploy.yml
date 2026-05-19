@@ -24,11 +24,8 @@ jobs:
       - name: 运行拆分脚本
         run: node scripts/resolveAndSplit.js
 
-      - name: 复制翻译文件到 public
-        run: |
-          mkdir -p public/data/jp public/data/cn
-          cp -r data/jp/* public/data/jp/
-          cp -r data/cn/* public/data/cn/
+      # 不再需要复制翻译文件，因为脚本已将所有翻译内联到角色文件中
+      # public/data/jp 和 public/data/cn 现在仅包含角色文件和索引
 
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
