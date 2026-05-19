@@ -3,7 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ "main" ]
-  workflow_dispatch:          # 允许手动触发
+  workflow_dispatch:
+
+# 添加必要的权限
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
