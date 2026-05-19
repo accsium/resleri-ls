@@ -1,0 +1,2023 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "スキル発動後、アイテムゲージを{0}%回復<br>クリティカル攻撃後、さらにアイテムゲージを{1}%回復<br>パーティの誰かが戦闘アイテム使用後、自身に「クリティカル確率+{2}%」を1回行動終了するまで付与<br>※アイテムを複数同時に使用しても発動は1回<br><br>自身のターンでアイテムゲージが100％の時、{{hyperlink_id 151}}を発動可能<br>アイテムミックススキル発動後、自身に「クリティカル確率+100%」を3回行動終了するまで付与し、「クリティカルダメージ+100%」を付与(上限300%)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001085,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[アイテムゲージ回復]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001085,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001569,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001569,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001568,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001568,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001577,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001577,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001578,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001578,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001579,
+          "limit_count": null,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001579,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990499,
+      "name": "アルケミチャンス"
+    },
+    {
+      "ability_category_type": null,
+      "description": "「ハルフェン復興隊」タグを持つキャラ数に応じ、基礎魔攻+100～500(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001570,
+          "limit_count": null,
+          "value": 50000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001570,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990500,
+      "name": "みんなと一緒なら！"
+    }
+  ],
+  "acquisition_movie_path_hash": "3808882750758774439",
+  "acquisition_text": "この町であたしがしたい事、するべき事。\nみんなと一緒に、一歩一歩進んでいこう！",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【Mistletoe of Hope】",
+  "attack_attributes": [
+    8
+  ],
+  "base_character_id": 601,
+  "battle_tool_trait_ids": [
+    51,
+    20
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 1,
+      "description": "スキルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001430,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/スキルダメージUP][ボードアビリティA2]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001430,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990463,
+      "name": "ダメージアップⅠ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "スキルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001430,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/スキルダメージUP][ボードアビリティA2]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001430,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990438,
+      "name": "ダメージアップⅡ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "スキルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001430,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/スキルダメージUP][ボードアビリティA2]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001430,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990413,
+      "name": "ダメージアップⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカル確率+{3}%」(上限100%)と「自身の手番で発動する戦闘アイテムダメージ+{4}%」(上限200%)を付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002046,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002046,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002045,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002045,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003379,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 504,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1308513710795546375",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージとクリティカル確率と戦闘アイテムダメージアップ",
+      "timeline_hash": "2959577835831548574",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカル確率+{3}%」(上限100%)と「自身の手番で発動する戦闘アイテムダメージ+{4}%」(上限200%)を付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002046,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002046,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002045,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002045,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003379,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 504,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1308513710795546375",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージとクリティカル確率と戦闘アイテムダメージアップ",
+      "timeline_hash": "2959577835831548574",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカル確率+{3}%」(上限100%)と「自身の手番で発動する戦闘アイテムダメージ+{4}%」(上限200%)を付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002046,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002046,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002045,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002045,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003379,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 504,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1308513710795546375",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージとクリティカル確率と戦闘アイテムダメージアップ",
+      "timeline_hash": "2959577835831548574",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 79,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカル確率+{3}%」(上限100%)と「自身の手番で発動する戦闘アイテムダメージ+{4}%」(上限200%)を付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002046,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002046,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002045,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002045,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003380,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 535,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1308513710795546375",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージとクリティカル確率と戦闘アイテムダメージアップ",
+      "timeline_hash": "2959577835831548574",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 84,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカル確率+{3}%」(上限100%)と「自身の手番で発動する戦闘アイテムダメージ+{4}%」(上限200%)を付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002046,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002046,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002045,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002045,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003381,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 567,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1308513710795546375",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージとクリティカル確率と戦闘アイテムダメージアップ",
+      "timeline_hash": "2959577835831548574",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 88,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカル確率+{3}%」(上限100%)と「自身の手番で発動する戦闘アイテムダメージ+{4}%」(上限200%)を付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002046,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002046,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002045,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002045,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003382,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 598,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1308513710795546375",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージとクリティカル確率と戦闘アイテムダメージアップ",
+      "timeline_hash": "2959577835831548574",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 93,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカル確率+{3}%」(上限100%)と「自身の手番で発動する戦闘アイテムダメージ+{4}%」(上限200%)を付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002046,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002046,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002045,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002045,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003383,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 630,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1308513710795546375",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージとクリティカル確率と戦闘アイテムダメージアップ",
+      "timeline_hash": "2959577835831548574",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": true,
+  "change": null,
+  "character_growth_id": 960101,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "人懐っこい性格の元気な冒険者。\n謎の災害に見舞われ禁足地となった町「ハルフェン」出身。祖父の残した店「ヤドリギ堂」の再開と、災害が起こった理由を調べるため、復興計画が立ちあがった故郷へと戻った。\n目標に向かって突き進む行動力と、諦めない芯の強さを持っており、その猪突猛進さを義姉のカミラに心配されている。",
+  "equipment_tool_trait_ids": [
+    105
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 601012,
+  "extra_skill_ids": [],
+  "fullname": "リアス・アイトライゼ",
+  "growboard_id": 601011,
+  "id": 60101,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 65,
+    "defense": 53,
+    "hp": 191,
+    "magic": 79,
+    "mental": 50,
+    "speed": 248
+  },
+  "is_alchemist": true,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980223,
+        "combat_power_coefficient": 2000,
+        "condition_ids": [
+          12
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "味方全員は「約束と協力」1人につき「物攻・魔攻+10%」",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500185,
+              "limit_count": null,
+              "value": 1000,
+              "_detail": {
+                "description": "[自身/約束と協力が多いほど/物攻アップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500185,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500186,
+              "limit_count": null,
+              "value": 1000,
+              "_detail": {
+                "description": "[自身/約束と協力が多いほど/魔攻アップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500186,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980223,
+          "name": "大好きな町をもう一度"
+        }
+      }
+    ],
+    "description": "味方全員は「約束と協力」1人につき「物攻・魔攻+10%」",
+    "name": "大好きな町をもう一度"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "8538886338969864227",
+  "motion_type": 2,
+  "name": "リアス",
+  "neo_growboard_id": 601013,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「魔攻+{0}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91002043,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002043,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001039,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001039,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003369,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴィントウィップ",
+      "not_state_change_count_decrease": false,
+      "power": 94,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "7675863236113220932",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「魔攻+{0}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91002043,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002043,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001039,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001039,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003370,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴィントウィップ",
+      "not_state_change_count_decrease": false,
+      "power": 99,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "7675863236113220932",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「魔攻+{0}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91002043,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002043,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001039,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001039,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003371,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴィントウィップ",
+      "not_state_change_count_decrease": false,
+      "power": 105,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "7675863236113220932",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「魔攻+{0}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91002043,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002043,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001039,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001039,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003372,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴィントウィップ",
+      "not_state_change_count_decrease": false,
+      "power": 111,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "7675863236113220932",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 7,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「魔攻+{0}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91002043,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002043,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001039,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001039,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003373,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴィントウィップ",
+      "not_state_change_count_decrease": false,
+      "power": 117,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "7675863236113220932",
+      "wait": -100
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 27,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を3回行動終了するまで付与し、<br>「自身の手番で発動する戦闘アイテムダメージ+{3}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002036,
+          "value": 4000,
+          "_detail": {
+            "description": "魔攻アップ(3回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002036,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001032,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002044,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002044,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003374,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ランブルツイスター",
+      "not_state_change_count_decrease": false,
+      "power": 319,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージと戦闘アイテムダメージアップ",
+      "timeline_hash": "3654347559133344464",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 28,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を3回行動終了するまで付与し、<br>「自身の手番で発動する戦闘アイテムダメージ+{3}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002036,
+          "value": 4000,
+          "_detail": {
+            "description": "魔攻アップ(3回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002036,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001032,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002044,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002044,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003375,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ランブルツイスター",
+      "not_state_change_count_decrease": false,
+      "power": 338,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージと戦闘アイテムダメージアップ",
+      "timeline_hash": "3654347559133344464",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 30,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を3回行動終了するまで付与し、<br>「自身の手番で発動する戦闘アイテムダメージ+{3}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002036,
+          "value": 4000,
+          "_detail": {
+            "description": "魔攻アップ(3回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002036,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001032,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002044,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002044,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003376,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ランブルツイスター",
+      "not_state_change_count_decrease": false,
+      "power": 358,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージと戦闘アイテムダメージアップ",
+      "timeline_hash": "3654347559133344464",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 31,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を3回行動終了するまで付与し、<br>「自身の手番で発動する戦闘アイテムダメージ+{3}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002036,
+          "value": 4000,
+          "_detail": {
+            "description": "魔攻アップ(3回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002036,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001032,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002044,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002044,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003377,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ランブルツイスター",
+      "not_state_change_count_decrease": false,
+      "power": 378,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージと戦闘アイテムダメージアップ",
+      "timeline_hash": "3654347559133344464",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 33,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃後、自身に「魔攻+{1}%」と「スキルダメージ+{2}%」を3回行動終了するまで付与し、<br>「自身の手番で発動する戦闘アイテムダメージ+{3}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002036,
+          "value": 4000,
+          "_detail": {
+            "description": "魔攻アップ(3回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002036,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001032,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002044,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002044,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003378,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ランブルツイスター",
+      "not_state_change_count_decrease": false,
+      "power": 398,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカルダメージアップ<br>攻撃後、自身の魔攻とスキルダメージと戦闘アイテムダメージアップ",
+      "timeline_hash": "3654347559133344464",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 30,
+  "overlay_name": "Rias Eidreise",
+  "personality": 3,
+  "profile_voice_text": "ヤドリギ堂のリアス・アイトライゼ！\nあたし実は錬金術の才能があったんだって！",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 0,
+    "wind": 5
+  },
+  "result_timeline_hash": "7663867256246453812",
+  "role": 1,
+  "series_id": 10,
+  "sort_name": "リアス",
+  "start_at": "2026-01-16T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "1605822170611043744",
+      "large_still_path_hash": "4090766923169467035",
+      "narrow_still_path_hash": "2442204692339224054",
+      "rarity": null,
+      "still_path_hash": "1321279492992502345"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "「ハルフェン復興隊」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500079,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500079,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500647,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「ハルフェン復興隊」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500079,
+          "limit_count": null,
+          "value": 1100,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500079,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500641,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「ハルフェン復興隊」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500079,
+          "limit_count": null,
+          "value": 1200,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500079,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500635,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「ハルフェン復興隊」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500079,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500079,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500629,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「ハルフェン復興隊」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500079,
+          "limit_count": null,
+          "value": 1400,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500079,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500623,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「ハルフェン復興隊」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500079,
+          "limit_count": null,
+          "value": 1700,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500079,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500617,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「ハルフェン復興隊」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500079,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500079,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500611,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「ハルフェン復興隊」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500079,
+          "limit_count": null,
+          "value": 2300,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500079,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500605,
+      "name": ""
+    }
+  ],
+  "support_color_id": 5,
+  "tag_ids": [
+    7,
+    9,
+    39,
+    13,
+    24
+  ],
+  "trait_color_id": 4,
+  "voice_actor_id": 87
+}

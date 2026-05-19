@@ -1,0 +1,2562 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "自身のバーストスキルをゲージ化<br>※バーストゲージは2周分ストック可能<br><br>WEAK攻撃時、自身のバーストゲージを{0}%増加<br>自身を除くパーティの誰かがバーストスキル発動後、自身のバーストゲージを{1}%増加<br><br>プラスパネルから受ける効果量+{2}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001548,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001548,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001460,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001460,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001045,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "state_change用",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001045,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001452,
+          "limit_count": null,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001452,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990495,
+      "name": "お祭りへご招待"
+    },
+    {
+      "ability_category_type": null,
+      "description": "WEAK攻撃時、自身に「万福招来！」が付与されていない時、「万福招来！(Lv1)」を付与<br>既に付与されている時、「万福招来！」のLv+1(上限Lv5)<br>※スキル発動前に「万福招来！」のLvが5の場合、以上の効果は発動しない<br>強化系パネルまたはバーストパネル獲得時、自身に「万福招来！」が付与されていない時、「万福招来！(Lv2)」を付与<br>既に付与されている時、「万福招来！」のLv+2(上限Lv5)<br>「万福招来！」のLvに応じて以下のボーナスをそれぞれ獲得する<br>1LvにつきWEAK攻撃ダメージ+{0}%<br>Lv3以上：スキルダメージ+{1}%<br>Lv5：スキルダメージ+{2}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001540,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001540,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001542,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001542,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001544,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001544,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001546,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001546,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001547,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001547,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001558,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001558,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001567,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001567,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001566,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001566,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990496,
+      "name": "福よ、来たれ！"
+    }
+  ],
+  "acquisition_movie_path_hash": "3390776115152373873",
+  "acquisition_text": "新たな年をみなさんと祝えて幸甚の極み！\nこの幸せを明日に繋げていきたいな",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【幸爛漫・福ノ華】",
+  "attack_attributes": [
+    8
+  ],
+  "base_character_id": 431,
+  "battle_tool_trait_ids": [
+    8,
+    51
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990464,
+      "name": "クリティカルダメージアップⅠ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990439,
+      "name": "クリティカルダメージアップⅡ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990414,
+      "name": "クリティカルダメージアップⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001992,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001993,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001994,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001995,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001996,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002042,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003363,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "賀正・はねつきフェスティバル",
+      "not_state_change_count_decrease": false,
+      "power": 504,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5952608830648103292",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+      "timeline_hash": "4133887983679817706",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001992,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001993,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001994,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001995,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001996,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002042,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003363,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "賀正・はねつきフェスティバル",
+      "not_state_change_count_decrease": false,
+      "power": 504,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5952608830648103292",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+      "timeline_hash": "4133887983679817706",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001992,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001993,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001994,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001995,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001996,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002042,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003363,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "賀正・はねつきフェスティバル",
+      "not_state_change_count_decrease": false,
+      "power": 504,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5952608830648103292",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+      "timeline_hash": "4133887983679817706",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 79,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001992,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001993,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001994,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001995,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001996,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002042,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003364,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "賀正・はねつきフェスティバル",
+      "not_state_change_count_decrease": false,
+      "power": 535,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5952608830648103292",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+      "timeline_hash": "4133887983679817706",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 84,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001992,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001993,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001994,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001995,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001996,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002042,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003365,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "賀正・はねつきフェスティバル",
+      "not_state_change_count_decrease": false,
+      "power": 567,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5952608830648103292",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+      "timeline_hash": "4133887983679817706",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 88,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001992,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001993,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001994,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001995,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001996,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002042,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003366,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "賀正・はねつきフェスティバル",
+      "not_state_change_count_decrease": false,
+      "power": 598,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5952608830648103292",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+      "timeline_hash": "4133887983679817706",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 93,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001992,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001993,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001994,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001995,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001996,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002042,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003367,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "賀正・はねつきフェスティバル",
+      "not_state_change_count_decrease": false,
+      "power": 630,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5952608830648103292",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+      "timeline_hash": "4133887983679817706",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 943110,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "「果ての大陸」を目指す錬金術士。\n母から贈られた、新年の衣装を身に纏っている。\n鏑矢に招待され、アルビーナと共に年中行事で賑わうケイウンへ。\n知識に対する好奇心が旺盛な彼女は、ランターナとは異なる文化が根付いたケイウンで過ごす年末年始に、胸を弾ませている。",
+  "equipment_tool_trait_ids": [
+    80
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 431102,
+  "extra_skill_ids": [],
+  "fullname": "レスナ・シュテルネンリヒト",
+  "growboard_id": 431101,
+  "id": 43110,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 62,
+    "defense": 53,
+    "hp": 190,
+    "magic": 79,
+    "mental": 55,
+    "speed": 242
+  },
+  "is_alchemist": false,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980222,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          11
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "得意属性が風属性のキャラは「物攻・魔攻・物防・魔防+25%」",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500002,
+              "limit_count": null,
+              "value": 2500,
+              "_detail": {
+                "description": "[自身/常時/物攻上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500002,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500003,
+              "limit_count": null,
+              "value": 2500,
+              "_detail": {
+                "description": "[自身/常時/魔攻上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500003,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500004,
+              "limit_count": null,
+              "value": 2500,
+              "_detail": {
+                "description": "[自身/常時/物防上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500005,
+              "limit_count": null,
+              "value": 2500,
+              "_detail": {
+                "description": "[自身/常時/魔防上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500005,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980222,
+          "name": "追風に帆を上げましょう！"
+        }
+      }
+    ],
+    "description": "得意属性が風属性のキャラは「物攻・魔攻・物防・魔防+25%」",
+    "name": "追風に帆を上げましょう！"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "2186923780439923715",
+  "motion_type": 2,
+  "name": "レスナ",
+  "neo_growboard_id": 431103,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91000937,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001991,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001991,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003353,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "はごいたパンチ",
+      "not_state_change_count_decrease": false,
+      "power": 101,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "8808769667774043633",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91000937,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001991,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001991,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003354,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "はごいたパンチ",
+      "not_state_change_count_decrease": false,
+      "power": 107,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "8808769667774043633",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91000937,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001991,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001991,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003355,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "はごいたパンチ",
+      "not_state_change_count_decrease": false,
+      "power": 113,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "8808769667774043633",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91000937,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001991,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001991,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003356,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "はごいたパンチ",
+      "not_state_change_count_decrease": false,
+      "power": 119,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "8808769667774043633",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 7,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91000937,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000937,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001991,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001991,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003357,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "はごいたパンチ",
+      "not_state_change_count_decrease": false,
+      "power": 126,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "8808769667774043633",
+      "wait": -100
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 14,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001990,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001990,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003358,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "巨大ゴマ大旋風",
+      "not_state_change_count_decrease": false,
+      "power": 196,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+      "timeline_hash": "2454448705942544995",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 14,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001990,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001990,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003359,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "巨大ゴマ大旋風",
+      "not_state_change_count_decrease": false,
+      "power": 208,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+      "timeline_hash": "2454448705942544995",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 15,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001990,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001990,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003360,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "巨大ゴマ大旋風",
+      "not_state_change_count_decrease": false,
+      "power": 220,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+      "timeline_hash": "2454448705942544995",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 16,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001990,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001990,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003361,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "巨大ゴマ大旋風",
+      "not_state_change_count_decrease": false,
+      "power": 232,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+      "timeline_hash": "2454448705942544995",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 17,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001990,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001990,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003362,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "巨大ゴマ大旋風",
+      "not_state_change_count_decrease": false,
+      "power": 245,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+      "timeline_hash": "2454448705942544995",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 27,
+  "overlay_name": "Resna Sternenlicht",
+  "personality": 2,
+  "profile_voice_text": "晴れ着を着ると、素敵な一年になりそうな、\nそんな予感で嬉しくなるんです",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 0,
+    "wind": 5
+  },
+  "result_timeline_hash": "3557249426417084736",
+  "role": 1,
+  "series_id": 10,
+  "sort_name": "レスナ",
+  "start_at": "2025-12-31T15:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "5726263596011828211",
+      "large_still_path_hash": "6103822353756303373",
+      "narrow_still_path_hash": "7334441102455966362",
+      "rarity": null,
+      "still_path_hash": "5039919987742315894"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500424,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500368,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500312,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500256,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500200,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500144,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500088,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500032,
+      "name": ""
+    }
+  ],
+  "support_color_id": 2,
+  "tag_ids": [
+    7,
+    9,
+    15,
+    21,
+    28
+  ],
+  "trait_color_id": 1,
+  "voice_actor_id": 1
+}

@@ -1,0 +1,1651 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "スキルで撃破時、自身に「魔攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001121,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001121,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990248,
+      "name": "突撃隊長マリー"
+    },
+    {
+      "ability_category_type": null,
+      "description": "攻撃対象がブレイク状態の時、自身に「スキルダメージ+{0}%」を付与(上限60%)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001122,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001122,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990249,
+      "name": "徹底的にやるわよ！"
+    }
+  ],
+  "acquisition_movie_path_hash": "1379557065749038552",
+  "acquisition_text": "ここはあたしに任せて！\nみんなのために、道を切り開いてあげるわ！",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【Bomber Cat】",
+  "attack_attributes": [
+    6
+  ],
+  "base_character_id": 101,
+  "battle_tool_trait_ids": [
+    19,
+    49
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990464,
+      "name": "クリティカルダメージアップⅠ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990439,
+      "name": "クリティカルダメージアップⅡ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990414,
+      "name": "クリティカルダメージアップⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 48,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)<br>攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001390,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001390,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001809,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "氷爆ヘイルブラスト",
+      "not_state_change_count_decrease": false,
+      "power": 288,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2836121175649875316",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃前、自身のスキルダメージアップ<br>攻撃後、自身の一部パネルを除いた次のパネルを強化+パネルに変換",
+      "timeline_hash": "4546928321147119057",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 48,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)<br>攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001390,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001390,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001809,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "氷爆ヘイルブラスト",
+      "not_state_change_count_decrease": false,
+      "power": 288,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2836121175649875316",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃前、自身のスキルダメージアップ<br>攻撃後、自身の一部パネルを除いた次のパネルを強化+パネルに変換",
+      "timeline_hash": "4546928321147119057",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 48,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)<br>攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001390,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001390,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001809,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "氷爆ヘイルブラスト",
+      "not_state_change_count_decrease": false,
+      "power": 288,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2836121175649875316",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃前、自身のスキルダメージアップ<br>攻撃後、自身の一部パネルを除いた次のパネルを強化+パネルに変換",
+      "timeline_hash": "4546928321147119057",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 51,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)<br>攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001390,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001390,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001810,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "氷爆ヘイルブラスト",
+      "not_state_change_count_decrease": false,
+      "power": 306,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2836121175649875316",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃前、自身のスキルダメージアップ<br>攻撃後、自身の一部パネルを除いた次のパネルを強化+パネルに変換",
+      "timeline_hash": "4546928321147119057",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 54,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)<br>攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001390,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001390,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001811,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "氷爆ヘイルブラスト",
+      "not_state_change_count_decrease": false,
+      "power": 324,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2836121175649875316",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃前、自身のスキルダメージアップ<br>攻撃後、自身の一部パネルを除いた次のパネルを強化+パネルに変換",
+      "timeline_hash": "4546928321147119057",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 57,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)<br>攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001390,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001390,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001812,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "氷爆ヘイルブラスト",
+      "not_state_change_count_decrease": false,
+      "power": 342,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2836121175649875316",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃前、自身のスキルダメージアップ<br>攻撃後、自身の一部パネルを除いた次のパネルを強化+パネルに変換",
+      "timeline_hash": "4546928321147119057",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 60,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)<br>攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001390,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001390,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001813,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "氷爆ヘイルブラスト",
+      "not_state_change_count_decrease": false,
+      "power": 360,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2836121175649875316",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃前、自身のスキルダメージアップ<br>攻撃後、自身の一部パネルを除いた次のパネルを強化+パネルに変換",
+      "timeline_hash": "4546928321147119057",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 910104,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "おおらかで陽気な錬金術士。\n学生時代は落ちこぼれで、「爆弾娘」の名で知られていたが、今では立派な錬金術士となった。\nこの衣装は錬金党との戦いに向け、爆弾の扱いやすさを考慮して作られたもの。\n今までの経験ゆえ、爆弾の調合やレシピ調整には光るものがある。",
+  "equipment_tool_trait_ids": [
+    7
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 101042,
+  "extra_skill_ids": [],
+  "fullname": "マルローネ",
+  "growboard_id": 101041,
+  "id": 10104,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 53,
+    "defense": 49,
+    "hp": 150,
+    "magic": 67,
+    "mental": 45,
+    "speed": 230
+  },
+  "is_alchemist": true,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980153,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          41
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "スキルダメージ・ブレイクダメージ+{0}%",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500051,
+              "limit_count": null,
+              "value": 5000,
+              "_detail": {
+                "description": "[自身/スキルダメージアップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500051,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500052,
+              "limit_count": null,
+              "value": 5000,
+              "_detail": {
+                "description": "[自身/ブレイクダメージアップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500052,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980153,
+          "name": "爆弾娘の切り札"
+        }
+      }
+    ],
+    "description": "「ずぼら」は「スキルダメージ・ブレイクダメージ+50%」",
+    "name": "爆弾娘の切り札"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "1406377840252949151",
+  "motion_type": 2,
+  "name": "マリー",
+  "neo_growboard_id": 101043,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 11,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「魔攻+{0}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001376,
+          "value": 1500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001799,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アイスロッド",
+      "not_state_change_count_decrease": false,
+      "power": 82,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "4552463261212252013",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 11,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「魔攻+{0}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001376,
+          "value": 1500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001800,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アイスロッド",
+      "not_state_change_count_decrease": false,
+      "power": 87,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "4552463261212252013",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 12,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「魔攻+{0}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001376,
+          "value": 1500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001801,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アイスロッド",
+      "not_state_change_count_decrease": false,
+      "power": 92,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "4552463261212252013",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 12,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「魔攻+{0}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001376,
+          "value": 1500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001802,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アイスロッド",
+      "not_state_change_count_decrease": false,
+      "power": 97,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "4552463261212252013",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 13,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「魔攻+{0}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001376,
+          "value": 1500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001803,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アイスロッド",
+      "not_state_change_count_decrease": false,
+      "power": 102,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "4552463261212252013",
+      "wait": -100
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 18,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃後、自身に「スキルダメージ+{1}%」を2回行動終了するまで付与し、<br>対象に「受けるブレイクダメージ+{2}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001006,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001006,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000973,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000973,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001804,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "クライスタルレヘルン・改",
+      "not_state_change_count_decrease": false,
+      "power": 160,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃後、自身のスキルダメージアップ<br>対象の受けるブレイクダメージアップ",
+      "timeline_hash": "7430205430538019071",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 19,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃後、自身に「スキルダメージ+{1}%」を2回行動終了するまで付与し、<br>対象に「受けるブレイクダメージ+{2}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001006,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001006,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000973,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000973,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001805,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "クライスタルレヘルン・改",
+      "not_state_change_count_decrease": false,
+      "power": 170,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃後、自身のスキルダメージアップ<br>対象の受けるブレイクダメージアップ",
+      "timeline_hash": "7430205430538019071",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 20,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃後、自身に「スキルダメージ+{1}%」を2回行動終了するまで付与し、<br>対象に「受けるブレイクダメージ+{2}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001006,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001006,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000973,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000973,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001806,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "クライスタルレヘルン・改",
+      "not_state_change_count_decrease": false,
+      "power": 180,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃後、自身のスキルダメージアップ<br>対象の受けるブレイクダメージアップ",
+      "timeline_hash": "7430205430538019071",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 21,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃後、自身に「スキルダメージ+{1}%」を2回行動終了するまで付与し、<br>対象に「受けるブレイクダメージ+{2}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001006,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001006,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000973,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000973,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001807,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "クライスタルレヘルン・改",
+      "not_state_change_count_decrease": false,
+      "power": 190,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃後、自身のスキルダメージアップ<br>対象の受けるブレイクダメージアップ",
+      "timeline_hash": "7430205430538019071",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 22,
+      "break_power_type": 2,
+      "description": "対象がブレイク状態の時、ダメージ+{0}%<br>攻撃後、自身に「スキルダメージ+{1}%」を2回行動終了するまで付与し、<br>対象に「受けるブレイクダメージ+{2}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000906,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000906,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001006,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001006,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000973,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000973,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001808,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "クライスタルレヘルン・改",
+      "not_state_change_count_decrease": false,
+      "power": 200,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "対象がブレイク状態の時、ダメージアップ<br>攻撃後、自身のスキルダメージアップ<br>対象の受けるブレイクダメージアップ",
+      "timeline_hash": "7430205430538019071",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 1,
+  "overlay_name": "Marlone",
+  "personality": 3,
+  "profile_voice_text": "爆弾の取り扱いならあたしに任せて。\n研究の成果を見せてあげる！",
+  "resistance": {
+    "fire": 0,
+    "ice": 5,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 0,
+    "wind": 0
+  },
+  "result_timeline_hash": "693065272305817820",
+  "role": 1,
+  "series_id": 2,
+  "sort_name": "マリー",
+  "start_at": "2024-08-05T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "7529266035592331597",
+      "large_still_path_hash": "5006069429937951539",
+      "narrow_still_path_hash": "2520964751554848973",
+      "rarity": null,
+      "still_path_hash": "7237522139456820526"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500023,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500023,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500415,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500023,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500023,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500359,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500023,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500023,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500303,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500023,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500023,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500247,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500023,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500023,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500191,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500023,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500023,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500135,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500023,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500023,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500079,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500023,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500023,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500023,
+      "name": ""
+    }
+  ],
+  "support_color_id": 5,
+  "tag_ids": [
+    1,
+    8,
+    25
+  ],
+  "trait_color_id": 1,
+  "voice_actor_id": 6
+}

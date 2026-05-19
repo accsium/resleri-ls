@@ -1,0 +1,2315 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "バトル開始時またはパーティの誰かが戦闘アイテム使用後、自身に「ブレイクダメージ+{0}%」を1回行動終了するまで付与(発動上限4回)<br>※アイテムを複数同時に使用しても発動は1回",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001326,
+          "limit_count": null,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001326,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001325,
+          "limit_count": null,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001325,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990362,
+      "name": "この槍で、穿つ！"
+    },
+    {
+      "ability_category_type": null,
+      "description": "攻撃対象がブレイク時、得意属性が氷属性の味方全員に「魔攻+{0}％」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001327,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001327,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990363,
+      "name": "熟練冒険者の号令"
+    }
+  ],
+  "acquisition_movie_path_hash": "7292053859809511395",
+  "acquisition_text": "安心しなさい\nあなたの背中は私が守ってあげるから",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【プラウドボイジャー】",
+  "attack_attributes": [
+    6
+  ],
+  "base_character_id": 270,
+  "battle_tool_trait_ids": [
+    49,
+    19
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 4,
+      "description": "与える「氷属性耐性ダウン」の効果量+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001421,
+          "limit_count": null,
+          "value": 600,
+          "_detail": {
+            "description": "与える「氷属性耐性ダウン」の効果量+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001421,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990454,
+      "name": "レジスト氷マイナスアップⅠ"
+    },
+    {
+      "ability_category_type": 4,
+      "description": "与える「氷属性耐性ダウン」の効果量+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001421,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "与える「氷属性耐性ダウン」の効果量+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001421,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990429,
+      "name": "レジスト氷マイナスアップⅡ"
+    },
+    {
+      "ability_category_type": 4,
+      "description": "与える「氷属性耐性ダウン」の効果量+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001421,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "与える「氷属性耐性ダウン」の効果量+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001421,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990404,
+      "name": "レジスト氷マイナスアップⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 500,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>対象がブレイク時、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与し、<br>得意属性が氷属性の味方全員に「魔攻+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001028,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001763,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001763,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001764,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001764,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001433,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001433,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002868,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルホルンヴィルベルン",
+      "not_state_change_count_decrease": false,
+      "power": 451,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6341589326328864590",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>対象がブレイク時、敵全体の受けるダメージアップ<br>得意属性が氷属性の味方全員の魔攻アップ",
+      "timeline_hash": "2046861612424004911",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 500,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>対象がブレイク時、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与し、<br>得意属性が氷属性の味方全員に「魔攻+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001028,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001763,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001763,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001764,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001764,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001433,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001433,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002868,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルホルンヴィルベルン",
+      "not_state_change_count_decrease": false,
+      "power": 451,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6341589326328864590",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>対象がブレイク時、敵全体の受けるダメージアップ<br>得意属性が氷属性の味方全員の魔攻アップ",
+      "timeline_hash": "2046861612424004911",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 500,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>対象がブレイク時、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与し、<br>得意属性が氷属性の味方全員に「魔攻+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001028,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001763,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001763,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001764,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001764,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001433,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001433,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002868,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルホルンヴィルベルン",
+      "not_state_change_count_decrease": false,
+      "power": 451,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6341589326328864590",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>対象がブレイク時、敵全体の受けるダメージアップ<br>得意属性が氷属性の味方全員の魔攻アップ",
+      "timeline_hash": "2046861612424004911",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 531,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>対象がブレイク時、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与し、<br>得意属性が氷属性の味方全員に「魔攻+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001028,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001763,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001763,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001764,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001764,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001433,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001433,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002869,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルホルンヴィルベルン",
+      "not_state_change_count_decrease": false,
+      "power": 479,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6341589326328864590",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>対象がブレイク時、敵全体の受けるダメージアップ<br>得意属性が氷属性の味方全員の魔攻アップ",
+      "timeline_hash": "2046861612424004911",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 562,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>対象がブレイク時、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与し、<br>得意属性が氷属性の味方全員に「魔攻+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001028,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001763,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001763,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001764,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001764,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001433,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001433,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002870,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルホルンヴィルベルン",
+      "not_state_change_count_decrease": false,
+      "power": 507,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6341589326328864590",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>対象がブレイク時、敵全体の受けるダメージアップ<br>得意属性が氷属性の味方全員の魔攻アップ",
+      "timeline_hash": "2046861612424004911",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 593,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>対象がブレイク時、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与し、<br>得意属性が氷属性の味方全員に「魔攻+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001028,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001763,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001763,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001764,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001764,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001433,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001433,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002871,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルホルンヴィルベルン",
+      "not_state_change_count_decrease": false,
+      "power": 535,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6341589326328864590",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>対象がブレイク時、敵全体の受けるダメージアップ<br>得意属性が氷属性の味方全員の魔攻アップ",
+      "timeline_hash": "2046861612424004911",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 625,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身の次のパネルがバーストパネルでない時、ブレイク強化パネルに変換(空パネルの時は生成)<br>対象がブレイク時、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与し、<br>得意属性が氷属性の味方全員に「魔攻+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001028,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001763,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001763,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001764,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001764,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001433,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001433,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002872,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルホルンヴィルベルン",
+      "not_state_change_count_decrease": false,
+      "power": 563,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6341589326328864590",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、次の自身のバーストパネルを除いたパネルをブレイク強化パネルに変換<br>対象がブレイク時、敵全体の受けるダメージアップ<br>得意属性が氷属性の味方全員の魔攻アップ",
+      "timeline_hash": "2046861612424004911",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 927002,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "トトリの親友で冒険者。\n親友のトトリに頼まれ、旅に同行している。\nプライドが高く、自分の家柄に誇りを持っている。\n淑女のような振る舞いをするが、トトリの話になると取り繕えなくなる。",
+  "equipment_tool_trait_ids": [
+    66
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 270022,
+  "extra_skill_ids": [],
+  "fullname": "ミミ・ウリエ・フォン・シュヴァルツラング",
+  "growboard_id": 270021,
+  "id": 27002,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 64,
+    "defense": 55,
+    "hp": 180,
+    "magic": 74,
+    "mental": 51,
+    "speed": 248
+  },
+  "is_alchemist": false,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980197,
+        "combat_power_coefficient": 2000,
+        "condition_ids": [
+          12
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "「アーランド」1人につき「スキルダメージ・ブレイクダメージ+{0}%」",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500167,
+              "limit_count": null,
+              "value": 2000,
+              "_detail": {
+                "description": "[自身/アーランドが多いほど/スキルダメージアップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500167,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500168,
+              "limit_count": null,
+              "value": 2000,
+              "_detail": {
+                "description": "[自身/アーランドが多いほど/ブレイクダメージアップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500168,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980197,
+          "name": "とあるアーランド名家のお嬢様"
+        }
+      }
+    ],
+    "description": "味方全員は「アーランド」1人につき「スキルダメージ・ブレイクダメージ+20%」",
+    "name": "とあるアーランド名家のお嬢様"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "591984778042334210",
+  "motion_type": 2,
+  "name": "ミミ",
+  "neo_growboard_id": 270023,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 15,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「氷属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{1}％」を付与(上限30％)し、<br>対象に「パネル無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001482,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001482,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001761,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001761,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001256,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001256,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002858,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ブリッツシュトース",
+      "not_state_change_count_decrease": false,
+      "power": 71,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の氷属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>対象にパネル無効を付与",
+      "timeline_hash": "6069588779206425540",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 15,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「氷属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{1}％」を付与(上限30％)し、<br>対象に「パネル無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001482,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001482,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001761,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001761,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001256,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001256,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002859,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ブリッツシュトース",
+      "not_state_change_count_decrease": false,
+      "power": 75,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の氷属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>対象にパネル無効を付与",
+      "timeline_hash": "6069588779206425540",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 16,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「氷属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{1}％」を付与(上限30％)し、<br>対象に「パネル無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001482,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001482,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001761,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001761,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001256,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001256,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002860,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ブリッツシュトース",
+      "not_state_change_count_decrease": false,
+      "power": 79,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の氷属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>対象にパネル無効を付与",
+      "timeline_hash": "6069588779206425540",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 17,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「氷属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{1}％」を付与(上限30％)し、<br>対象に「パネル無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001482,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001482,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001761,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001761,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001256,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001256,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002861,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ブリッツシュトース",
+      "not_state_change_count_decrease": false,
+      "power": 83,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の氷属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>対象にパネル無効を付与",
+      "timeline_hash": "6069588779206425540",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 18,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「氷属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{1}％」を付与(上限30％)し、<br>対象に「パネル無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001482,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001482,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001761,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001761,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001256,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001256,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002862,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ブリッツシュトース",
+      "not_state_change_count_decrease": false,
+      "power": 88,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の氷属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>対象にパネル無効を付与",
+      "timeline_hash": "6069588779206425540",
+      "wait": -100
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 247,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与<br>対象がブレイク時、対象の被ダメージDOWN状態を全て解除し、さらに「受けるダメージ+{3}%」を3回攻撃を受けるまで付与し、ターンを2ターン遅らせる",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000935,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000935,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001263,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001263,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000967,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000967,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001590,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001590,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001431,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002863,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュワルウォルツスライサー",
+      "not_state_change_count_decrease": false,
+      "power": 242,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ<br>対象がブレイク時、対象の被ダメDOWNを解除<br>対象の受けるダメージアップ<br>対象のターンを遅らせる",
+      "timeline_hash": "867927651052719184",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 262,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与<br>対象がブレイク時、対象の被ダメージDOWN状態を全て解除し、さらに「受けるダメージ+{3}%」を3回攻撃を受けるまで付与し、ターンを2ターン遅らせる",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000935,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000935,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001263,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001263,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000967,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000967,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001590,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001590,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001431,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002864,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュワルウォルツスライサー",
+      "not_state_change_count_decrease": false,
+      "power": 257,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ<br>対象がブレイク時、対象の被ダメDOWNを解除<br>対象の受けるダメージアップ<br>対象のターンを遅らせる",
+      "timeline_hash": "867927651052719184",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 277,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与<br>対象がブレイク時、対象の被ダメージDOWN状態を全て解除し、さらに「受けるダメージ+{3}%」を3回攻撃を受けるまで付与し、ターンを2ターン遅らせる",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000935,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000935,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001263,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001263,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000967,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000967,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001590,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001590,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001431,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002865,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュワルウォルツスライサー",
+      "not_state_change_count_decrease": false,
+      "power": 272,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ<br>対象がブレイク時、対象の被ダメDOWNを解除<br>対象の受けるダメージアップ<br>対象のターンを遅らせる",
+      "timeline_hash": "867927651052719184",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 292,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与<br>対象がブレイク時、対象の被ダメージDOWN状態を全て解除し、さらに「受けるダメージ+{3}%」を3回攻撃を受けるまで付与し、ターンを2ターン遅らせる",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000935,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000935,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001263,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001263,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000967,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000967,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001590,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001590,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001431,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002866,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュワルウォルツスライサー",
+      "not_state_change_count_decrease": false,
+      "power": 287,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ<br>対象がブレイク時、対象の被ダメDOWNを解除<br>対象の受けるダメージアップ<br>対象のターンを遅らせる",
+      "timeline_hash": "867927651052719184",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 308,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃前、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、対象に「受ける魔法攻撃ダメージ+{2}%」を2回攻撃を受けるまで付与<br>対象がブレイク時、対象の被ダメージDOWN状態を全て解除し、さらに「受けるダメージ+{3}%」を3回攻撃を受けるまで付与し、ターンを2ターン遅らせる",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000935,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000935,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001263,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001263,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000967,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000967,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001590,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001590,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001431,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002867,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュワルウォルツスライサー",
+      "not_state_change_count_decrease": false,
+      "power": 302,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃前、対象の氷属性耐性ダウン<br>攻撃後、対象の受ける魔法攻撃ダメージアップ<br>対象がブレイク時、対象の被ダメDOWNを解除<br>対象の受けるダメージアップ<br>対象のターンを遅らせる",
+      "timeline_hash": "867927651052719184",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 13,
+  "overlay_name": "Mimi Houllier von Schwarzlang",
+  "personality": 2,
+  "profile_voice_text": "私はミミ。元の世界では冒険者として\nそこそこ名が通ってたのよ？",
+  "resistance": {
+    "fire": 0,
+    "ice": 5,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 0,
+    "wind": 0
+  },
+  "result_timeline_hash": "6698703562758291320",
+  "role": 2,
+  "series_id": 6,
+  "sort_name": "ミミ",
+  "start_at": "2025-06-19T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "3499576275828443604",
+      "large_still_path_hash": "3425514808919337260",
+      "narrow_still_path_hash": "3773528175622510357",
+      "rarity": null,
+      "still_path_hash": "445196802303601858"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50009,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50009,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500092,
+          "limit_count": null,
+          "value": 6750,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500092,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500401,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50009,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50009,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500092,
+          "limit_count": null,
+          "value": 7425,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500092,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500345,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50009,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50009,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500092,
+          "limit_count": null,
+          "value": 8100,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500092,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500289,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50009,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50009,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500092,
+          "limit_count": null,
+          "value": 8775,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500092,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500233,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50009,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50009,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500092,
+          "limit_count": null,
+          "value": 9450,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500092,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500177,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50009,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50009,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500092,
+          "limit_count": null,
+          "value": 11475,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500092,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500121,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50009,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50009,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500092,
+          "limit_count": null,
+          "value": 13500,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500092,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500065,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が氷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50009,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50009,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500092,
+          "limit_count": null,
+          "value": 15525,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が氷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500092,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500009,
+      "name": ""
+    }
+  ],
+  "support_color_id": 1,
+  "tag_ids": [
+    2,
+    18,
+    19,
+    28
+  ],
+  "trait_color_id": 2,
+  "voice_actor_id": 28
+}

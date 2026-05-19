@@ -1,0 +1,3193 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "強化系パネル獲得時、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与(重複不可)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001039,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "強化パネル獲得時、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与(重複不可)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001039,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990175,
+      "name": "一球入魂"
+    },
+    {
+      "ability_category_type": null,
+      "description": "マイナスパネル無効<br>プラスパネルから受ける効果量+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001045,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "state_change用",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001045,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001041,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "[自身/マイナスパネル無効]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001041,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990176,
+      "name": "ねこさんチーム"
+    },
+    {
+      "ability_category_type": null,
+      "description": "「レスレリ学園」タグを持つキャラ数に応じ、スキルダメージ+20～100％(1～5人で多いほど増加)<br>クリティカル攻撃後、「レスレリ学園」タグを持つキャラ数に応じ、自身に「スキル威力+10～50%」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001696,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001696,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001697,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001697,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990542,
+      "name": "みんなと一緒に駆け抜けます！"
+    }
+  ],
+  "acquisition_movie_path_hash": "6531001498504582980",
+  "acquisition_text": "憧れの学園生活――！\n私、絶対に一人前の錬金術士になります！",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "「レスレリ学園」タグを持つキャラ数に応じ、スキルダメージ+20～100％(1～5人で多いほど増加)<br>クリティカル攻撃後、「レスレリ学園」タグを持つキャラ数に応じ、自身に「スキル威力+10～50%」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001696,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001696,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001697,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001697,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990542,
+      "name": "みんなと一緒に駆け抜けます！"
+    }
+  ],
+  "another_name": "【Loved Rookie】",
+  "attack_attributes": [
+    8
+  ],
+  "base_character_id": 431,
+  "battle_tool_trait_ids": [
+    20,
+    3
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 2,
+      "description": "魔攻+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001433,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/魔攻UP][ボードアビリティA4]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001433,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990466,
+      "name": "魔攻アップⅠ"
+    },
+    {
+      "ability_category_type": 2,
+      "description": "魔攻+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001433,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/魔攻UP][ボードアビリティA4]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001433,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990441,
+      "name": "魔攻アップⅡ"
+    },
+    {
+      "ability_category_type": 2,
+      "description": "魔攻+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001433,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/魔攻UP][ボードアビリティA4]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001433,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990416,
+      "name": "魔攻アップⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 30,
+      "break_power_type": 2,
+      "description": "自身のHPが70%以上の時、ダメージ+{0}%<br>攻撃後、自身に「クリティカルダメージ+{1}%」を付与(上限100%)し、<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001255,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001250,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001250,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001109,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 240,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージアップ<br>次の自身のパネルがバーストパネルでない時、強化+パネルに変換",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 30,
+      "break_power_type": 2,
+      "description": "自身のHPが70%以上の時、ダメージ+{0}%<br>攻撃後、自身に「クリティカルダメージ+{1}%」を付与(上限100%)し、<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001255,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001250,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001250,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001109,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 240,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージアップ<br>次の自身のパネルがバーストパネルでない時、強化+パネルに変換",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 30,
+      "break_power_type": 2,
+      "description": "自身のHPが70%以上の時、ダメージ+{0}%<br>攻撃後、自身に「クリティカルダメージ+{1}%」を付与(上限100%)し、<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001255,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001250,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001250,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001109,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 240,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージアップ<br>次の自身のパネルがバーストパネルでない時、強化+パネルに変換",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 31,
+      "break_power_type": 2,
+      "description": "自身のHPが70%以上の時、ダメージ+{0}%<br>攻撃後、自身に「クリティカルダメージ+{1}%」を付与(上限100%)し、<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001255,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001250,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001250,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001110,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 255,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージアップ<br>次の自身のパネルがバーストパネルでない時、強化+パネルに変換",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 33,
+      "break_power_type": 2,
+      "description": "自身のHPが70%以上の時、ダメージ+{0}%<br>攻撃後、自身に「クリティカルダメージ+{1}%」を付与(上限100%)し、<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001255,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001250,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001250,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001111,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 270,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージアップ<br>次の自身のパネルがバーストパネルでない時、強化+パネルに変換",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 35,
+      "break_power_type": 2,
+      "description": "自身のHPが70%以上の時、ダメージ+{0}%<br>攻撃後、自身に「クリティカルダメージ+{1}%」を付与(上限100%)し、<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001255,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001250,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001250,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001112,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 285,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージアップ<br>次の自身のパネルがバーストパネルでない時、強化+パネルに変換",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 37,
+      "break_power_type": 2,
+      "description": "自身のHPが70%以上の時、ダメージ+{0}%<br>攻撃後、自身に「クリティカルダメージ+{1}%」を付与(上限100%)し、<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001255,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001250,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001250,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001113,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 300,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージアップ<br>次の自身のパネルがバーストパネルでない時、強化+パネルに変換",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 39,
+      "break_power_type": 2,
+      "description": "自身のHPが70%以上の時、ダメージ+{0}%<br>攻撃後、自身に「クリティカルダメージ+{1}%」を付与(上限100%)し、<br>自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001255,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001250,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001250,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001253,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001253,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003782,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 312,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージアップ<br>次の自身のパネルがバーストパネルでない時、強化+パネルに変換",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 943104,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "ランターナ学園、錬金術科の新入生。\n独学で何度も調合に挑戦してきたが、一度も成功したことがなかった。\nしかし、錬金術への熱意は本物で、他の生徒たちを凌駕する知識量を誇る。\nいつか父親のような立派な錬金術士になるのが夢。",
+  "equipment_tool_trait_ids": [
+    8
+  ],
+  "evolved_burst_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "パーティに自身以外の「レスレリ学園」がいる時、この攻撃のクリティカル確率+{0}％<br>自身のHPが70%以上の時、ダメージ+{1}%<br>攻撃後、自身に「クリティカルダメージ+{2}%」を付与(上限150％)し、<br>自身のバーストパネルを除くパネル2つを強化+パネルに変換(空パネルの時は生成)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「魔攻+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91002238,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002238,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001255,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002239,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002239,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002240,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002240,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003781,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 350,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "パーティに自身以外の「レスレリ学園」がいるとき、この攻撃のクリティカル確率アップ<br>HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージをアップし、バーストパネルを除くパネル2つを強化+パネルに変換<br>「レスレリ学園」タグを持つキャラ数に応じ、自身の魔攻アップ",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "パーティに自身以外の「レスレリ学園」がいる時、この攻撃のクリティカル確率+{0}％<br>自身のHPが70%以上の時、ダメージ+{1}%<br>攻撃後、自身に「クリティカルダメージ+{2}%」を付与(上限150％)し、<br>自身のバーストパネルを除くパネル2つを強化+パネルに変換(空パネルの時は生成)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「魔攻+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91002238,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002238,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001255,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002239,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002239,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002240,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002240,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003781,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 350,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "パーティに自身以外の「レスレリ学園」がいるとき、この攻撃のクリティカル確率アップ<br>HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージをアップし、バーストパネルを除くパネル2つを強化+パネルに変換<br>「レスレリ学園」タグを持つキャラ数に応じ、自身の魔攻アップ",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "パーティに自身以外の「レスレリ学園」がいる時、この攻撃のクリティカル確率+{0}％<br>自身のHPが70%以上の時、ダメージ+{1}%<br>攻撃後、自身に「クリティカルダメージ+{2}%」を付与(上限150％)し、<br>自身のバーストパネルを除くパネル2つを強化+パネルに変換(空パネルの時は生成)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「魔攻+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91002238,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002238,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001255,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002239,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002239,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002240,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002240,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003781,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 350,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "パーティに自身以外の「レスレリ学園」がいるとき、この攻撃のクリティカル確率アップ<br>HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージをアップし、バーストパネルを除くパネル2つを強化+パネルに変換<br>「レスレリ学園」タグを持つキャラ数に応じ、自身の魔攻アップ",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "パーティに自身以外の「レスレリ学園」がいる時、この攻撃のクリティカル確率+{0}％<br>自身のHPが70%以上の時、ダメージ+{1}%<br>攻撃後、自身に「クリティカルダメージ+{2}%」を付与(上限150％)し、<br>自身のバーストパネルを除くパネル2つを強化+パネルに変換(空パネルの時は生成)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「魔攻+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91002238,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002238,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001255,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002239,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002239,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002240,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002240,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003781,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 350,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "パーティに自身以外の「レスレリ学園」がいるとき、この攻撃のクリティカル確率アップ<br>HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージをアップし、バーストパネルを除くパネル2つを強化+パネルに変換<br>「レスレリ学園」タグを持つキャラ数に応じ、自身の魔攻アップ",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "パーティに自身以外の「レスレリ学園」がいる時、この攻撃のクリティカル確率+{0}％<br>自身のHPが70%以上の時、ダメージ+{1}%<br>攻撃後、自身に「クリティカルダメージ+{2}%」を付与(上限150％)し、<br>自身のバーストパネルを除くパネル2つを強化+パネルに変換(空パネルの時は生成)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「魔攻+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91002238,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002238,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001255,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002239,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002239,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002240,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002240,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003781,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 350,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "パーティに自身以外の「レスレリ学園」がいるとき、この攻撃のクリティカル確率アップ<br>HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージをアップし、バーストパネルを除くパネル2つを強化+パネルに変換<br>「レスレリ学園」タグを持つキャラ数に応じ、自身の魔攻アップ",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "パーティに自身以外の「レスレリ学園」がいる時、この攻撃のクリティカル確率+{0}％<br>自身のHPが70%以上の時、ダメージ+{1}%<br>攻撃後、自身に「クリティカルダメージ+{2}%」を付与(上限150％)し、<br>自身のバーストパネルを除くパネル2つを強化+パネルに変換(空パネルの時は生成)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「魔攻+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91002238,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002238,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001255,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002239,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002239,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002240,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002240,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003781,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 350,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "パーティに自身以外の「レスレリ学園」がいるとき、この攻撃のクリティカル確率アップ<br>HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージをアップし、バーストパネルを除くパネル2つを強化+パネルに変換<br>「レスレリ学園」タグを持つキャラ数に応じ、自身の魔攻アップ",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "パーティに自身以外の「レスレリ学園」がいる時、この攻撃のクリティカル確率+{0}％<br>自身のHPが70%以上の時、ダメージ+{1}%<br>攻撃後、自身に「クリティカルダメージ+{2}%」を付与(上限150％)し、<br>自身のバーストパネルを除くパネル2つを強化+パネルに変換(空パネルの時は生成)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「魔攻+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91002238,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002238,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001255,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002239,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002239,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002240,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002240,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003781,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 350,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "パーティに自身以外の「レスレリ学園」がいるとき、この攻撃のクリティカル確率アップ<br>HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージをアップし、バーストパネルを除くパネル2つを強化+パネルに変換<br>「レスレリ学園」タグを持つキャラ数に応じ、自身の魔攻アップ",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "パーティに自身以外の「レスレリ学園」がいる時、この攻撃のクリティカル確率+{0}％<br>自身のHPが70%以上の時、ダメージ+{1}%<br>攻撃後、自身に「クリティカルダメージ+{2}%」を付与(上限150％)し、<br>自身のバーストパネルを除くパネル2つを強化+パネルに変換(空パネルの時は生成)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「魔攻+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91002238,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002238,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001255,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001255,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002239,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002239,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002240,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002240,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003781,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "トライミックスピア",
+      "not_state_change_count_decrease": false,
+      "power": 350,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "376175679493097149",
+      "summary": "パーティに自身以外の「レスレリ学園」がいるとき、この攻撃のクリティカル確率アップ<br>HPが70%以上の時、ダメージアップ<br>攻撃後、自身のクリティカルダメージをアップし、バーストパネルを除くパネル2つを強化+パネルに変換<br>「レスレリ学園」タグを持つキャラ数に応じ、自身の魔攻アップ",
+      "timeline_hash": "5779491134053492210",
+      "wait": 0
+    }
+  ],
+  "evolved_normal1_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 9,
+      "break_power_type": 2,
+      "description": "攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)<br>自身に「クリティカルダメージ+{0}％」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91002235,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002235,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003771,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "お手製ブーメラン",
+      "not_state_change_count_decrease": false,
+      "power": 76,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換<br>自身のクリティカルダメージアップ",
+      "timeline_hash": "2895990098887719167",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 9,
+      "break_power_type": 2,
+      "description": "攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)<br>自身に「クリティカルダメージ+{0}％」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91002235,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002235,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003772,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "お手製ブーメラン",
+      "not_state_change_count_decrease": false,
+      "power": 80,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換<br>自身のクリティカルダメージアップ",
+      "timeline_hash": "2895990098887719167",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 10,
+      "break_power_type": 2,
+      "description": "攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)<br>自身に「クリティカルダメージ+{0}％」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91002235,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002235,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003773,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "お手製ブーメラン",
+      "not_state_change_count_decrease": false,
+      "power": 85,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換<br>自身のクリティカルダメージアップ",
+      "timeline_hash": "2895990098887719167",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 11,
+      "break_power_type": 2,
+      "description": "攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)<br>自身に「クリティカルダメージ+{0}％」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91002235,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002235,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003774,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "お手製ブーメラン",
+      "not_state_change_count_decrease": false,
+      "power": 90,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換<br>自身のクリティカルダメージアップ",
+      "timeline_hash": "2895990098887719167",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 12,
+      "break_power_type": 2,
+      "description": "攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換(空パネルの時は生成)<br>自身に「クリティカルダメージ+{0}％」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91002235,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002235,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002242,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003775,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "お手製ブーメラン",
+      "not_state_change_count_decrease": false,
+      "power": 95,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身の次のパネルがバーストパネルでない時、強化+パネルに変換<br>自身のクリティカルダメージアップ",
+      "timeline_hash": "2895990098887719167",
+      "wait": -100
+    }
+  ],
+  "evolved_normal2_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 14,
+      "break_power_type": 2,
+      "description": "強化系パネル獲得時、この攻撃のクリティカル確率+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を付与(上限100%)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「スキルダメージ+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91001247,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001247,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002236,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002236,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002237,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002237,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003776,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スピニングウィール",
+      "not_state_change_count_decrease": false,
+      "power": 196,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "強化系パネル獲得時、この攻撃のクリティカル確率アップ<br>攻撃後、対象の受けるクリティカルダメージアップ<br>「レスレリ学園」タグを持つキャラ数に応じ、自身のスキルダメージアップ",
+      "timeline_hash": "8070559285982465901",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 15,
+      "break_power_type": 2,
+      "description": "強化系パネル獲得時、この攻撃のクリティカル確率+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を付与(上限100%)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「スキルダメージ+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91001247,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001247,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002236,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002236,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002237,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002237,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003777,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スピニングウィール",
+      "not_state_change_count_decrease": false,
+      "power": 208,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "強化系パネル獲得時、この攻撃のクリティカル確率アップ<br>攻撃後、対象の受けるクリティカルダメージアップ<br>「レスレリ学園」タグを持つキャラ数に応じ、自身のスキルダメージアップ",
+      "timeline_hash": "8070559285982465901",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 16,
+      "break_power_type": 2,
+      "description": "強化系パネル獲得時、この攻撃のクリティカル確率+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を付与(上限100%)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「スキルダメージ+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91001247,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001247,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002236,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002236,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002237,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002237,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003778,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スピニングウィール",
+      "not_state_change_count_decrease": false,
+      "power": 220,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "強化系パネル獲得時、この攻撃のクリティカル確率アップ<br>攻撃後、対象の受けるクリティカルダメージアップ<br>「レスレリ学園」タグを持つキャラ数に応じ、自身のスキルダメージアップ",
+      "timeline_hash": "8070559285982465901",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 17,
+      "break_power_type": 2,
+      "description": "強化系パネル獲得時、この攻撃のクリティカル確率+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を付与(上限100%)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「スキルダメージ+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91001247,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001247,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002236,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002236,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002237,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002237,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003779,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スピニングウィール",
+      "not_state_change_count_decrease": false,
+      "power": 232,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "強化系パネル獲得時、この攻撃のクリティカル確率アップ<br>攻撃後、対象の受けるクリティカルダメージアップ<br>「レスレリ学園」タグを持つキャラ数に応じ、自身のスキルダメージアップ",
+      "timeline_hash": "8070559285982465901",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 18,
+      "break_power_type": 2,
+      "description": "強化系パネル獲得時、この攻撃のクリティカル確率+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を付与(上限100%)<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「スキルダメージ+15～75％」を2回行動終了するまで付与(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "id": 91001247,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001247,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002236,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002236,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002237,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002237,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003780,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スピニングウィール",
+      "not_state_change_count_decrease": false,
+      "power": 245,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "強化系パネル獲得時、この攻撃のクリティカル確率アップ<br>攻撃後、対象の受けるクリティカルダメージアップ<br>「レスレリ学園」タグを持つキャラ数に応じ、自身のスキルダメージアップ",
+      "timeline_hash": "8070559285982465901",
+      "wait": 0
+    }
+  ],
+  "ex_growboard_id": 431042,
+  "extra_skill_ids": [],
+  "fullname": "レスナ・シュテルネンリヒト",
+  "growboard_id": 431041,
+  "id": 43104,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 55,
+    "defense": 44,
+    "hp": 166,
+    "magic": 67,
+    "mental": 40,
+    "speed": 245
+  },
+  "is_alchemist": true,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980123,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          57
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "物攻・魔攻・物防・魔防+{0}%",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500002,
+              "limit_count": null,
+              "value": 3000,
+              "_detail": {
+                "description": "[自身/常時/物攻上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500002,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500003,
+              "limit_count": null,
+              "value": 3000,
+              "_detail": {
+                "description": "[自身/常時/魔攻上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500003,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500004,
+              "limit_count": null,
+              "value": 3000,
+              "_detail": {
+                "description": "[自身/常時/物防上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500005,
+              "limit_count": null,
+              "value": 3000,
+              "_detail": {
+                "description": "[自身/常時/魔防上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500005,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980123,
+          "name": "ここで、私は変わるんだ！"
+        }
+      }
+    ],
+    "description": "「レスレリ学園」は「物攻・魔攻・物防・魔防+30%」",
+    "name": "ここで、私は変わるんだ！"
+  },
+  "max_rarity": 8,
+  "model_path_hash": "609796561237155831",
+  "motion_type": 2,
+  "name": "レスナ",
+  "neo_growboard_id": 431043,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001273,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001273,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001099,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "お手製ブーメラン",
+      "not_state_change_count_decrease": false,
+      "power": 67,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+      "timeline_hash": "2895990098887719167",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001273,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001273,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001100,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "お手製ブーメラン",
+      "not_state_change_count_decrease": false,
+      "power": 71,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+      "timeline_hash": "2895990098887719167",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001273,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001273,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001101,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "お手製ブーメラン",
+      "not_state_change_count_decrease": false,
+      "power": 75,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+      "timeline_hash": "2895990098887719167",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001273,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001273,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001102,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "お手製ブーメラン",
+      "not_state_change_count_decrease": false,
+      "power": 79,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+      "timeline_hash": "2895990098887719167",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 7,
+      "break_power_type": 2,
+      "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001273,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001273,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001103,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "お手製ブーメラン",
+      "not_state_change_count_decrease": false,
+      "power": 83,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+      "timeline_hash": "2895990098887719167",
+      "wait": -100
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 11,
+      "break_power_type": 2,
+      "description": "強化系パネル獲得時、この攻撃のクリティカル確率+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001247,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001247,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001248,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001248,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001104,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スピニングウィール",
+      "not_state_change_count_decrease": false,
+      "power": 140,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "強化系パネル獲得時、この攻撃のクリティカル確率アップ<br>攻撃後、対象の受けるクリティカルダメージアップ",
+      "timeline_hash": "8070559285982465901",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 11,
+      "break_power_type": 2,
+      "description": "強化系パネル獲得時、この攻撃のクリティカル確率+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001247,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001247,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001248,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001248,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001105,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スピニングウィール",
+      "not_state_change_count_decrease": false,
+      "power": 148,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "強化系パネル獲得時、この攻撃のクリティカル確率アップ<br>攻撃後、対象の受けるクリティカルダメージアップ",
+      "timeline_hash": "8070559285982465901",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 12,
+      "break_power_type": 2,
+      "description": "強化系パネル獲得時、この攻撃のクリティカル確率+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001247,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001247,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001248,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001248,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001106,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スピニングウィール",
+      "not_state_change_count_decrease": false,
+      "power": 157,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "強化系パネル獲得時、この攻撃のクリティカル確率アップ<br>攻撃後、対象の受けるクリティカルダメージアップ",
+      "timeline_hash": "8070559285982465901",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 12,
+      "break_power_type": 2,
+      "description": "強化系パネル獲得時、この攻撃のクリティカル確率+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001247,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001247,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001248,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001248,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001107,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スピニングウィール",
+      "not_state_change_count_decrease": false,
+      "power": 166,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "強化系パネル獲得時、この攻撃のクリティカル確率アップ<br>攻撃後、対象の受けるクリティカルダメージアップ",
+      "timeline_hash": "8070559285982465901",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 13,
+      "break_power_type": 2,
+      "description": "強化系パネル獲得時、この攻撃のクリティカル確率+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001247,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001247,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001248,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001248,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001108,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スピニングウィール",
+      "not_state_change_count_decrease": false,
+      "power": 175,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "強化系パネル獲得時、この攻撃のクリティカル確率アップ<br>攻撃後、対象の受けるクリティカルダメージアップ",
+      "timeline_hash": "8070559285982465901",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 26,
+  "overlay_name": "Resna Sternenlicht",
+  "personality": 1,
+  "profile_voice_text": "ランターナ学園錬金術科レスナです。\nはあ、この学園に入学できたなんて夢みたい",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 0,
+    "wind": 5
+  },
+  "result_timeline_hash": "5330747715723363107",
+  "role": 1,
+  "series_id": 10,
+  "sort_name": "レスナ",
+  "start_at": "2024-04-01T12:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "5896431391109420424",
+      "large_still_path_hash": "5338649492566087286",
+      "narrow_still_path_hash": "5065332388044462851",
+      "rarity": null,
+      "still_path_hash": "6580594669171159823"
+    },
+    {
+      "large_narrow_still_path_hash": "14724343159514369",
+      "large_still_path_hash": "3401663390697292874",
+      "narrow_still_path_hash": "9220594317819243050",
+      "rarity": 8,
+      "still_path_hash": "8844801657058029389"
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500424,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500368,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500312,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500256,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500200,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500144,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500088,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500032,
+      "name": ""
+    }
+  ],
+  "support_color_id": 2,
+  "tag_ids": [
+    7,
+    9,
+    31,
+    15
+  ],
+  "trait_color_id": 5,
+  "voice_actor_id": 1
+}

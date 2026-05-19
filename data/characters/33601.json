@@ -1,0 +1,1188 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "敵にとても狙われやすくなる<br>味方全員の物防+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000909,
+          "limit_count": null,
+          "value": 300,
+          "_detail": {
+            "description": "[味方全体/常時/物防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000909,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72000913,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "狙われやすさ+100％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000913,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990026,
+      "name": "ヘイト&アドバンスオール物防"
+    },
+    {
+      "ability_category_type": null,
+      "description": "暗闇耐性+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001064,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/暗闇耐性上昇付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990027,
+      "name": "レジストアップ暗闇"
+    }
+  ],
+  "acquisition_movie_path_hash": "2704623780053815343",
+  "acquisition_text": "もし困ったことがあったら言ってね。\n私が力になるから",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【モニカオンステージ】",
+  "attack_attributes": [
+    3
+  ],
+  "base_character_id": 336,
+  "battle_tool_trait_ids": [
+    4,
+    12
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 2,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001415,
+          "limit_count": null,
+          "value": 300,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001415,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990448,
+      "name": "ガードアップⅠ"
+    },
+    {
+      "ability_category_type": 2,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001415,
+          "limit_count": null,
+          "value": 600,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001415,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990423,
+      "name": "ガードアップⅡ"
+    },
+    {
+      "ability_category_type": 2,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001415,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001415,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990398,
+      "name": "ガードアップⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000976,
+          "value": 10000,
+          "_detail": {
+            "description": "回避発動確率100%(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000976,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000071,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴァルキリエ・ロンド",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5676785772926720994",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "6984399417045932936",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000976,
+          "value": 10000,
+          "_detail": {
+            "description": "回避発動確率100%(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000976,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000071,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴァルキリエ・ロンド",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5676785772926720994",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "6984399417045932936",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000976,
+          "value": 10000,
+          "_detail": {
+            "description": "回避発動確率100%(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000976,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000071,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴァルキリエ・ロンド",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5676785772926720994",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "6984399417045932936",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 79,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000976,
+          "value": 10000,
+          "_detail": {
+            "description": "回避発動確率100%(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000976,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000072,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴァルキリエ・ロンド",
+      "not_state_change_count_decrease": false,
+      "power": 425,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5676785772926720994",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "6984399417045932936",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 84,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000976,
+          "value": 10000,
+          "_detail": {
+            "description": "回避発動確率100%(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000976,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000073,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴァルキリエ・ロンド",
+      "not_state_change_count_decrease": false,
+      "power": 450,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5676785772926720994",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "6984399417045932936",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 88,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000976,
+          "value": 10000,
+          "_detail": {
+            "description": "回避発動確率100%(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000976,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000074,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴァルキリエ・ロンド",
+      "not_state_change_count_decrease": false,
+      "power": 475,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5676785772926720994",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "6984399417045932936",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 93,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000976,
+          "value": 10000,
+          "_detail": {
+            "description": "回避発動確率100%(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000976,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000075,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヴァルキリエ・ロンド",
+      "not_state_change_count_decrease": false,
+      "power": 500,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5676785772926720994",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "6984399417045932936",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 933601,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "文武両道の才女。\n生真面目な性格で自分を律していたが、友達のソフィーに後押しされ、今はやりたいことを全部やろうと世界を旅している。\nとても几帳面で、散らかっている部屋などを見るとつい掃除をしたくなる。",
+  "equipment_tool_trait_ids": [
+    42
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 336012,
+  "extra_skill_ids": [],
+  "fullname": "モニカ・エルメンライヒ",
+  "growboard_id": 336011,
+  "id": 33601,
+  "initial_rarity": 2,
+  "initial_status": {
+    "attack": 45,
+    "defense": 57,
+    "hp": 186,
+    "magic": 38,
+    "mental": 49,
+    "speed": 238
+  },
+  "is_alchemist": false,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980046,
+        "combat_power_coefficient": 1000,
+        "condition_ids": [
+          7
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "物攻・魔攻・物防・魔防+{0}%",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500002,
+              "limit_count": null,
+              "value": 1000,
+              "_detail": {
+                "description": "[自身/常時/物攻上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500002,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500003,
+              "limit_count": null,
+              "value": 1000,
+              "_detail": {
+                "description": "[自身/常時/魔攻上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500003,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500004,
+              "limit_count": null,
+              "value": 1000,
+              "_detail": {
+                "description": "[自身/常時/物防上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500005,
+              "limit_count": null,
+              "value": 1000,
+              "_detail": {
+                "description": "[自身/常時/魔防上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500005,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980046,
+          "name": "女神の盾"
+        }
+      }
+    ],
+    "description": "得意属性が突属性のキャラは「物攻・魔攻・物防・魔防+10%」",
+    "name": "女神の盾"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "7286441238304164791",
+  "motion_type": 2,
+  "name": "モニカ",
+  "neo_growboard_id": 336013,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 8,
+      "break_power_type": 2,
+      "description": "追加効果なし",
+      "effects": [],
+      "id": 11000061,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ホーリーエッジ",
+      "not_state_change_count_decrease": false,
+      "power": 66,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "追加効果なし",
+      "timeline_hash": "3602389849337322739",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 8,
+      "break_power_type": 2,
+      "description": "追加効果なし",
+      "effects": [],
+      "id": 11000062,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ホーリーエッジ",
+      "not_state_change_count_decrease": false,
+      "power": 70,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "追加効果なし",
+      "timeline_hash": "3602389849337322739",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 9,
+      "break_power_type": 2,
+      "description": "追加効果なし",
+      "effects": [],
+      "id": 11000063,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ホーリーエッジ",
+      "not_state_change_count_decrease": false,
+      "power": 74,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "追加効果なし",
+      "timeline_hash": "3602389849337322739",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 9,
+      "break_power_type": 2,
+      "description": "追加効果なし",
+      "effects": [],
+      "id": 11000064,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ホーリーエッジ",
+      "not_state_change_count_decrease": false,
+      "power": 78,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "追加効果なし",
+      "timeline_hash": "3602389849337322739",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 10,
+      "break_power_type": 2,
+      "description": "追加効果なし",
+      "effects": [],
+      "id": 11000065,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ホーリーエッジ",
+      "not_state_change_count_decrease": false,
+      "power": 82,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "追加効果なし",
+      "timeline_hash": "3602389849337322739",
+      "wait": -100
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 30,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を2回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000959,
+          "value": 2500,
+          "_detail": {
+            "description": "回避発動確率25%(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000959,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000066,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "カレイドスター",
+      "not_state_change_count_decrease": false,
+      "power": 202,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "7624241452982102881",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 31,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を2回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000959,
+          "value": 2500,
+          "_detail": {
+            "description": "回避発動確率25%(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000959,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000067,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "カレイドスター",
+      "not_state_change_count_decrease": false,
+      "power": 214,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "7624241452982102881",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 33,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を2回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000959,
+          "value": 2500,
+          "_detail": {
+            "description": "回避発動確率25%(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000959,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000068,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "カレイドスター",
+      "not_state_change_count_decrease": false,
+      "power": 227,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "7624241452982102881",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 35,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を2回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000959,
+          "value": 2500,
+          "_detail": {
+            "description": "回避発動確率25%(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000959,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000069,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "カレイドスター",
+      "not_state_change_count_decrease": false,
+      "power": 239,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "7624241452982102881",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 37,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「回避(確率{0}%)」を2回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000959,
+          "value": 2500,
+          "_detail": {
+            "description": "回避発動確率25%(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000959,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000070,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "カレイドスター",
+      "not_state_change_count_decrease": false,
+      "power": 252,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身に回避を付与",
+      "timeline_hash": "7624241452982102881",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 17,
+  "overlay_name": "Monika Ellmenreich",
+  "personality": 2,
+  "profile_voice_text": "私はモニカ。普段は教会のお手伝いや\n子どもたちのお世話をしているわ",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 5,
+    "slashing": 0,
+    "wind": 0
+  },
+  "result_timeline_hash": "4210280036766967790",
+  "role": 3,
+  "series_id": 8,
+  "sort_name": "モニカ",
+  "start_at": "2023-09-23T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "5389863282434191798",
+      "large_still_path_hash": "1054626424185918817",
+      "narrow_still_path_hash": "497107463952358256",
+      "rarity": null,
+      "still_path_hash": "7072607281345518806"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500021,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500413,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500021,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500357,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500021,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500301,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500021,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500245,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500021,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500189,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500021,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500133,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500021,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500077,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500021,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500021,
+      "name": ""
+    }
+  ],
+  "support_color_id": 1,
+  "tag_ids": [
+    4,
+    20,
+    23,
+    28
+  ],
+  "trait_color_id": 4,
+  "voice_actor_id": 29
+}

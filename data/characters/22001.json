@@ -1,0 +1,1453 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "味方全員の魔防+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000910,
+          "limit_count": null,
+          "value": 500,
+          "_detail": {
+            "description": "[味方全体/常時/魔防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000910,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990032,
+      "name": "アドバンスオール魔防Ⅰ"
+    },
+    {
+      "ability_category_type": null,
+      "description": "毒耐性+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001062,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/毒耐性上昇付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001062,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990033,
+      "name": "レジストアップ毒"
+    }
+  ],
+  "acquisition_movie_path_hash": "3812203502522060508",
+  "acquisition_text": "僕で役に立つなら……\nううん、役に立ってみせるよ",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【願いを叶える力】",
+  "attack_attributes": [
+    7
+  ],
+  "base_character_id": 220,
+  "battle_tool_trait_ids": [
+    9,
+    28
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 1,
+      "description": "スキル威力+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001429,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/スキル威力UP][ボードアビリティA1]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001429,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990462,
+      "name": "スキルパワーアップⅠ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "スキル威力+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001429,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/スキル威力UP][ボードアビリティA1]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001429,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990437,
+      "name": "スキルパワーアップⅡ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "スキル威力+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001429,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/スキル威力UP][ボードアビリティA1]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001429,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990412,
+      "name": "スキルパワーアップⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+20〜70%(HP20〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91000943,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000116,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "8030845503571858612",
+      "summary": "自身のHPが少ないほどダメージアップ",
+      "timeline_hash": "257754738970221180",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+20〜70%(HP20〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91000943,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000116,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "8030845503571858612",
+      "summary": "自身のHPが少ないほどダメージアップ",
+      "timeline_hash": "257754738970221180",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+20〜70%(HP20〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91000943,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000116,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "8030845503571858612",
+      "summary": "自身のHPが少ないほどダメージアップ",
+      "timeline_hash": "257754738970221180",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 79,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+20〜70%(HP20〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91000943,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000117,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 425,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "8030845503571858612",
+      "summary": "自身のHPが少ないほどダメージアップ",
+      "timeline_hash": "257754738970221180",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 84,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+20〜70%(HP20〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91000943,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000118,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 450,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "8030845503571858612",
+      "summary": "自身のHPが少ないほどダメージアップ",
+      "timeline_hash": "257754738970221180",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 88,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+20〜70%(HP20〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91000943,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000119,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 475,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "8030845503571858612",
+      "summary": "自身のHPが少ないほどダメージアップ",
+      "timeline_hash": "257754738970221180",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 93,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+20〜70%(HP20〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91000943,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000120,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインツェルカンプ",
+      "not_state_change_count_decrease": false,
+      "power": 500,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "8030845503571858612",
+      "summary": "自身のHPが少ないほどダメージアップ",
+      "timeline_hash": "257754738970221180",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 922001,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "錬金術を学ぶ学園の生徒。\n学園生活を経て自分を見つめ直し、今は自分がやりたいことを探して旅をしている。\n物静かで人が好い性格のためか、厄介ごとに巻き込まれやすい。昔は人付き合いが苦手だったが、学友たちと過ごすうちに改善されてきた。",
+  "equipment_tool_trait_ids": [
+    22
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 220012,
+  "extra_skill_ids": [],
+  "fullname": "ヴェイン・アウレオルス",
+  "growboard_id": 220011,
+  "id": 22001,
+  "initial_rarity": 2,
+  "initial_status": {
+    "attack": 57,
+    "defense": 50,
+    "hp": 138,
+    "magic": 63,
+    "mental": 51,
+    "speed": 257
+  },
+  "is_alchemist": true,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980107,
+        "combat_power_coefficient": 500,
+        "condition_ids": [
+          12
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "魔攻+{0}%",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500003,
+              "limit_count": null,
+              "value": 1000,
+              "_detail": {
+                "description": "[自身/常時/魔攻上昇]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500003,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980107,
+          "name": "人工のマナ"
+        }
+      }
+    ],
+    "description": "味方全員は「魔攻+10%」",
+    "name": "人工のマナ"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "751989313865261764",
+  "motion_type": 1,
+  "name": "ヴェイン",
+  "neo_growboard_id": 220013,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000106,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "クロー",
+      "not_state_change_count_decrease": false,
+      "power": 56,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5187188467304351512",
+      "summary": "WEAK攻撃時、ダメージアップ",
+      "timeline_hash": "512010085331545524",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000107,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "クロー",
+      "not_state_change_count_decrease": false,
+      "power": 59,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5187188467304351512",
+      "summary": "WEAK攻撃時、ダメージアップ",
+      "timeline_hash": "512010085331545524",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000108,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "クロー",
+      "not_state_change_count_decrease": false,
+      "power": 63,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5187188467304351512",
+      "summary": "WEAK攻撃時、ダメージアップ",
+      "timeline_hash": "512010085331545524",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000109,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "クロー",
+      "not_state_change_count_decrease": false,
+      "power": 66,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5187188467304351512",
+      "summary": "WEAK攻撃時、ダメージアップ",
+      "timeline_hash": "512010085331545524",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000110,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "クロー",
+      "not_state_change_count_decrease": false,
+      "power": 70,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5187188467304351512",
+      "summary": "WEAK攻撃時、ダメージアップ",
+      "timeline_hash": "512010085331545524",
+      "wait": -100
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 25,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+5〜25%(HP20〜100%で少ないほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001000,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001000,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000943,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000111,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "バイオレントピラー",
+      "not_state_change_count_decrease": false,
+      "power": 220,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "自身のHPが少ないほどダメージアップ<br>攻撃前、自身にスキルダメージアップ",
+      "timeline_hash": "6857851085058316840",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 26,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+5〜25%(HP20〜100%で少ないほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001000,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001000,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000943,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000112,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "バイオレントピラー",
+      "not_state_change_count_decrease": false,
+      "power": 233,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "自身のHPが少ないほどダメージアップ<br>攻撃前、自身にスキルダメージアップ",
+      "timeline_hash": "6857851085058316840",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 28,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+5〜25%(HP20〜100%で少ないほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001000,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001000,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000943,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000113,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "バイオレントピラー",
+      "not_state_change_count_decrease": false,
+      "power": 247,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "自身のHPが少ないほどダメージアップ<br>攻撃前、自身にスキルダメージアップ",
+      "timeline_hash": "6857851085058316840",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 29,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+5〜25%(HP20〜100%で少ないほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001000,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001000,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000943,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000114,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "バイオレントピラー",
+      "not_state_change_count_decrease": false,
+      "power": 261,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "自身のHPが少ないほどダメージアップ<br>攻撃前、自身にスキルダメージアップ",
+      "timeline_hash": "6857851085058316840",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 31,
+      "break_power_type": 2,
+      "description": "自身のHPに応じ、ダメージ+5〜25%(HP20〜100%で少ないほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001000,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001000,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000943,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000943,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000115,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "バイオレントピラー",
+      "not_state_change_count_decrease": false,
+      "power": 275,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "自身のHPが少ないほどダメージアップ<br>攻撃前、自身にスキルダメージアップ",
+      "timeline_hash": "6857851085058316840",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 9,
+  "overlay_name": "Vain Aureolus",
+  "personality": 2,
+  "profile_voice_text": "錬金術士として何をするべきか……まだ\n分からないけど、誰かの役に立てるといいな",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 5,
+    "piercing": 0,
+    "slashing": 0,
+    "wind": 0
+  },
+  "result_timeline_hash": "7104319016628085435",
+  "role": 1,
+  "series_id": 5,
+  "sort_name": "ヴェイン",
+  "start_at": "2023-09-23T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "8147929753061815207",
+      "large_still_path_hash": "772766494014917804",
+      "narrow_still_path_hash": "2525085164732374458",
+      "rarity": null,
+      "still_path_hash": "3009403439430088015"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "得意属性が雷属性かつブレイカーの時、攻撃前、対象に「雷属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500031,
+          "limit_count": 1,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が雷属性かつブレイカーの時、攻撃前、対象に雷属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500031,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500423,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が雷属性かつブレイカーの時、攻撃前、対象に「雷属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500031,
+          "limit_count": 1,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が雷属性かつブレイカーの時、攻撃前、対象に雷属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500031,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500367,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が雷属性かつブレイカーの時、攻撃前、対象に「雷属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500031,
+          "limit_count": 1,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が雷属性かつブレイカーの時、攻撃前、対象に雷属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500031,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500311,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が雷属性かつブレイカーの時、攻撃前、対象に「雷属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500031,
+          "limit_count": 1,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が雷属性かつブレイカーの時、攻撃前、対象に雷属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500031,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500255,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が雷属性かつブレイカーの時、攻撃前、対象に「雷属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500031,
+          "limit_count": 1,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が雷属性かつブレイカーの時、攻撃前、対象に雷属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500031,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500199,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が雷属性かつブレイカーの時、攻撃前、対象に「雷属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500031,
+          "limit_count": 1,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が雷属性かつブレイカーの時、攻撃前、対象に雷属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500031,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500143,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が雷属性かつブレイカーの時、攻撃前、対象に「雷属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500031,
+          "limit_count": 1,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が雷属性かつブレイカーの時、攻撃前、対象に雷属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500031,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500087,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が雷属性かつブレイカーの時、攻撃前、対象に「雷属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500031,
+          "limit_count": 1,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が雷属性かつブレイカーの時、攻撃前、対象に雷属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500031,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500031,
+      "name": ""
+    }
+  ],
+  "support_color_id": 5,
+  "tag_ids": [
+    12,
+    28
+  ],
+  "trait_color_id": 1,
+  "voice_actor_id": 13
+}

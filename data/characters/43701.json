@@ -1,0 +1,1716 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "攻撃を受けた時、自身に「クリティカル確率+{0}%」を付与(上限100%)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001060,
+          "limit_count": null,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/クリティカル率アップ(上限100%)]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001060,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990199,
+      "name": "呼び覚まされる本能"
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の味方全員のスキルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001059,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[斬属性キャラ全員ダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001059,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990198,
+      "name": "溢れ出る闘争の力斬Ⅱ"
+    }
+  ],
+  "acquisition_movie_path_hash": "5570899644104013263",
+  "acquisition_text": "船出の時だ！\n鍛え直した俺の拳、役立ててくれ！",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【The Captain Awakens】",
+  "attack_attributes": [
+    1
+  ],
+  "base_character_id": 437,
+  "battle_tool_trait_ids": [
+    14,
+    22
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990464,
+      "name": "クリティカルダメージアップⅠ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990439,
+      "name": "クリティカルダメージアップⅡ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990414,
+      "name": "クリティカルダメージアップⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 30,
+      "break_power_type": 2,
+      "description": "敵が3体以上の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91001291,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001291,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001309,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エッジオブボヤージュ",
+      "not_state_change_count_decrease": false,
+      "power": 240,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1400425759346443121",
+      "summary": "敵が3体以上の時、ダメージアップ",
+      "timeline_hash": "478664415541959024",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 30,
+      "break_power_type": 2,
+      "description": "敵が3体以上の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91001291,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001291,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001309,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エッジオブボヤージュ",
+      "not_state_change_count_decrease": false,
+      "power": 240,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1400425759346443121",
+      "summary": "敵が3体以上の時、ダメージアップ",
+      "timeline_hash": "478664415541959024",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 30,
+      "break_power_type": 2,
+      "description": "敵が3体以上の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91001291,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001291,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001309,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エッジオブボヤージュ",
+      "not_state_change_count_decrease": false,
+      "power": 240,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1400425759346443121",
+      "summary": "敵が3体以上の時、ダメージアップ",
+      "timeline_hash": "478664415541959024",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 31,
+      "break_power_type": 2,
+      "description": "敵が3体以上の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91001291,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001291,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001310,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エッジオブボヤージュ",
+      "not_state_change_count_decrease": false,
+      "power": 255,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1400425759346443121",
+      "summary": "敵が3体以上の時、ダメージアップ",
+      "timeline_hash": "478664415541959024",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 33,
+      "break_power_type": 2,
+      "description": "敵が3体以上の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91001291,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001291,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001311,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エッジオブボヤージュ",
+      "not_state_change_count_decrease": false,
+      "power": 270,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1400425759346443121",
+      "summary": "敵が3体以上の時、ダメージアップ",
+      "timeline_hash": "478664415541959024",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 35,
+      "break_power_type": 2,
+      "description": "敵が3体以上の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91001291,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001291,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001312,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エッジオブボヤージュ",
+      "not_state_change_count_decrease": false,
+      "power": 285,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1400425759346443121",
+      "summary": "敵が3体以上の時、ダメージアップ",
+      "timeline_hash": "478664415541959024",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 37,
+      "break_power_type": 2,
+      "description": "敵が3体以上の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91001291,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001291,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001313,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エッジオブボヤージュ",
+      "not_state_change_count_decrease": false,
+      "power": 300,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1400425759346443121",
+      "summary": "敵が3体以上の時、ダメージアップ",
+      "timeline_hash": "478664415541959024",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 943701,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "かつて王国北部の海で名を馳せた船乗り。\nしかし彼の船は頂獣に襲われてしまい、妻と仲間たちを失う。\n以来、塞ぎ込んで酒に溺れていたが、王都で出会った仲間たちのおかげで一念発起し、果ての大陸を目指すという夢を再び追いかけることに。",
+  "equipment_tool_trait_ids": [
+    3
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 437012,
+  "extra_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 35,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「物攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91001290,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001290,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001129,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒーヴィングフィン",
+      "not_state_change_count_decrease": false,
+      "power": 260,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の物攻アップ",
+      "timeline_hash": "3026549968373332251",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 37,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「物攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91001290,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001290,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001130,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒーヴィングフィン",
+      "not_state_change_count_decrease": false,
+      "power": 276,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の物攻アップ",
+      "timeline_hash": "3026549968373332251",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 39,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「物攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91001290,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001290,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001131,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒーヴィングフィン",
+      "not_state_change_count_decrease": false,
+      "power": 292,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の物攻アップ",
+      "timeline_hash": "3026549968373332251",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 41,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「物攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91001290,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001290,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001132,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒーヴィングフィン",
+      "not_state_change_count_decrease": false,
+      "power": 308,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の物攻アップ",
+      "timeline_hash": "3026549968373332251",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「物攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91001290,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001290,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001133,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒーヴィングフィン",
+      "not_state_change_count_decrease": false,
+      "power": 325,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "2186025754385462788",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の物攻アップ",
+      "timeline_hash": "3026549968373332251",
+      "wait": 0
+    }
+  ],
+  "fullname": "ランツェ・ダッハ",
+  "growboard_id": 437011,
+  "id": 43701,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 63,
+    "defense": 47,
+    "hp": 170,
+    "magic": 51,
+    "mental": 47,
+    "speed": 224
+  },
+  "is_alchemist": false,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980129,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          34
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "バトル開始時「受けるダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500141,
+              "limit_count": null,
+              "value": 3000,
+              "_detail": {
+                "description": "[自身/2回/被ダメージダウン]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500141,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980129,
+          "name": "もう二度と見送らない"
+        }
+      }
+    ],
+    "description": "バトル開始時「冒険」に「受けるダメージ-30%」を2回攻撃を受けるまで付与",
+    "name": "もう二度と見送らない"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "845404123422268284",
+  "motion_type": 1,
+  "name": "ランツェ",
+  "neo_growboard_id": 437013,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 8,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身に「かばう」を1回発動するまで付与し、<br>自身に「カウンター(ヒーヴィングフィン)」を1回カウンターするまで付与(重複不可)",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001284,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001284,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001285,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001285,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001299,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ザンバーフィスト",
+      "not_state_change_count_decrease": false,
+      "power": 89,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の受けるダメージダウン<br>攻撃後、自身にかばうとカウンターを付与",
+      "timeline_hash": "8228228692601179785",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 8,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身に「かばう」を1回発動するまで付与し、<br>自身に「カウンター(ヒーヴィングフィン)」を1回カウンターするまで付与(重複不可)",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001284,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001284,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001286,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001286,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001300,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ザンバーフィスト",
+      "not_state_change_count_decrease": false,
+      "power": 94,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の受けるダメージダウン<br>攻撃後、自身にかばうとカウンターを付与",
+      "timeline_hash": "8228228692601179785",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 9,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身に「かばう」を1回発動するまで付与し、<br>自身に「カウンター(ヒーヴィングフィン)」を1回カウンターするまで付与(重複不可)",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001284,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001284,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001287,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001287,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001301,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ザンバーフィスト",
+      "not_state_change_count_decrease": false,
+      "power": 100,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の受けるダメージダウン<br>攻撃後、自身にかばうとカウンターを付与",
+      "timeline_hash": "8228228692601179785",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 9,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身に「かばう」を1回発動するまで付与し、<br>自身に「カウンター(ヒーヴィングフィン)」を1回カウンターするまで付与(重複不可)",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001284,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001284,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001288,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001288,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001302,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ザンバーフィスト",
+      "not_state_change_count_decrease": false,
+      "power": 105,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の受けるダメージダウン<br>攻撃後、自身にかばうとカウンターを付与",
+      "timeline_hash": "8228228692601179785",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 10,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身に「かばう」を1回発動するまで付与し、<br>自身に「カウンター(ヒーヴィングフィン)」を1回カウンターするまで付与(重複不可)",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001284,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001284,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001289,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001289,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001303,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ザンバーフィスト",
+      "not_state_change_count_decrease": false,
+      "power": 111,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の受けるダメージダウン<br>攻撃後、自身にかばうとカウンターを付与",
+      "timeline_hash": "8228228692601179785",
+      "wait": -100
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 35,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「物攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91001290,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001290,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001304,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒーヴィングフィン",
+      "not_state_change_count_decrease": false,
+      "power": 260,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の物攻アップ",
+      "timeline_hash": "3026549968373332251",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 37,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「物攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91001290,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001290,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001305,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒーヴィングフィン",
+      "not_state_change_count_decrease": false,
+      "power": 276,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の物攻アップ",
+      "timeline_hash": "3026549968373332251",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 39,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「物攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91001290,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001290,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001306,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒーヴィングフィン",
+      "not_state_change_count_decrease": false,
+      "power": 292,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の物攻アップ",
+      "timeline_hash": "3026549968373332251",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 41,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「物攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91001290,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001290,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001307,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒーヴィングフィン",
+      "not_state_change_count_decrease": false,
+      "power": 308,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の物攻アップ",
+      "timeline_hash": "3026549968373332251",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「物攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91001290,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001290,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001308,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒーヴィングフィン",
+      "not_state_change_count_decrease": false,
+      "power": 325,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身の物攻アップ",
+      "timeline_hash": "3026549968373332251",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 26,
+  "overlay_name": "Lanze Dach",
+  "personality": 3,
+  "profile_voice_text": "すべてを無くした船乗りだ。大事な\n奴らのために、もうへこたれねぇよ",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 5,
+    "wind": 0
+  },
+  "result_timeline_hash": "2661244239730391943",
+  "role": 1,
+  "series_id": 10,
+  "sort_name": "ランツェ",
+  "start_at": "2024-05-10T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "9055698363195008310",
+      "large_still_path_hash": "7112710121595766218",
+      "narrow_still_path_hash": "7383644186651371584",
+      "rarity": null,
+      "still_path_hash": "5409134969144639524"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500026,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500418,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500026,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500362,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500026,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500306,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500026,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500250,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500026,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500194,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500026,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500138,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500026,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500082,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500026,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500026,
+      "name": ""
+    }
+  ],
+  "support_color_id": 4,
+  "tag_ids": [
+    7,
+    10,
+    18,
+    29
+  ],
+  "trait_color_id": 2,
+  "voice_actor_id": 45
+}

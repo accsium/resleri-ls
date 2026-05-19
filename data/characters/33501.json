@@ -1,0 +1,1377 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "味方全員の物攻+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000907,
+          "limit_count": null,
+          "value": 500,
+          "_detail": {
+            "description": "[味方全体/常時/物攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990108,
+      "name": "アドバンスオール物攻Ⅰ"
+    },
+    {
+      "ability_category_type": null,
+      "description": "暗闇耐性+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001064,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/暗闇耐性上昇付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990109,
+      "name": "レジストアップ暗闇"
+    }
+  ],
+  "acquisition_movie_path_hash": "8531451473280686535",
+  "acquisition_text": "錬金術士への道は、一日にして成らずです。\nさあ、私と共に参りましょう",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【ミステリアスドール】",
+  "attack_attributes": [
+    2
+  ],
+  "base_character_id": 335,
+  "battle_tool_trait_ids": [
+    15,
+    23
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 1,
+      "description": "ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001419,
+          "limit_count": null,
+          "value": 800,
+          "_detail": {
+            "description": "ブレイクダメージ+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001419,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990452,
+      "name": "ブレイクアップⅠ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001419,
+          "limit_count": null,
+          "value": 1600,
+          "_detail": {
+            "description": "ブレイクダメージ+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001419,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990427,
+      "name": "ブレイクアップⅡ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001419,
+          "limit_count": null,
+          "value": 2500,
+          "_detail": {
+            "description": "ブレイクダメージ+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001419,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990402,
+      "name": "ブレイクアップⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 300,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001016,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001016,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000611,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エーテルブラム",
+      "not_state_change_count_decrease": false,
+      "power": 320,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7034515502663111543",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+      "timeline_hash": "7813773679413407824",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 300,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001016,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001016,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000611,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エーテルブラム",
+      "not_state_change_count_decrease": false,
+      "power": 320,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7034515502663111543",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+      "timeline_hash": "7813773679413407824",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 300,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001016,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001016,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000611,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エーテルブラム",
+      "not_state_change_count_decrease": false,
+      "power": 320,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7034515502663111543",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+      "timeline_hash": "7813773679413407824",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 318,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001016,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001016,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000612,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エーテルブラム",
+      "not_state_change_count_decrease": false,
+      "power": 340,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7034515502663111543",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+      "timeline_hash": "7813773679413407824",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 337,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001016,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001016,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000613,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エーテルブラム",
+      "not_state_change_count_decrease": false,
+      "power": 360,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7034515502663111543",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+      "timeline_hash": "7813773679413407824",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 356,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001016,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001016,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000614,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エーテルブラム",
+      "not_state_change_count_decrease": false,
+      "power": 380,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7034515502663111543",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+      "timeline_hash": "7813773679413407824",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 375,
+      "break_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>対象がブレイク時、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001016,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001016,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000615,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エーテルブラム",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7034515502663111543",
+      "summary": "WEAK攻撃時、ブレイクダメージアップ<br>対象がブレイク時、自身のHPを回復",
+      "timeline_hash": "7813773679413407824",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 933501,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "人形の身体を持つ錬金術士。\n元は普通の人間だったが、とある事情で人形の身体に魂を移した。同じく錬金術士のソフィーは弟子であり、一番の友人でもある。\n性格は真面目で冷静沈着だが、意外と抜けている一面も。",
+  "equipment_tool_trait_ids": [
+    4
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 335012,
+  "extra_skill_ids": [],
+  "fullname": "プラフタ",
+  "growboard_id": 335011,
+  "id": 33501,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 63,
+    "defense": 48,
+    "hp": 159,
+    "magic": 52,
+    "mental": 37,
+    "speed": 248
+  },
+  "is_alchemist": false,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980055,
+        "combat_power_coefficient": 2500,
+        "condition_ids": [
+          30
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "スキルダメージ・ブレイクダメージ+{0}%",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500051,
+              "limit_count": null,
+              "value": 3000,
+              "_detail": {
+                "description": "[自身/スキルダメージアップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500051,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500052,
+              "limit_count": null,
+              "value": 3000,
+              "_detail": {
+                "description": "[自身/ブレイクダメージアップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500052,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980055,
+          "name": "万物の知識"
+        }
+      }
+    ],
+    "description": "「師匠」は「スキルダメージ・ブレイクダメージ+30%」",
+    "name": "万物の知識"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "894414068988709786",
+  "motion_type": 2,
+  "name": "プラフタ",
+  "neo_growboard_id": 335013,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 16,
+      "break_power_type": 2,
+      "description": "追加効果なし",
+      "effects": [],
+      "id": 11000601,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ノックブロウ",
+      "not_state_change_count_decrease": false,
+      "power": 40,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "追加効果なし",
+      "timeline_hash": "2736923175505886070",
+      "wait": -125
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 17,
+      "break_power_type": 2,
+      "description": "追加効果なし",
+      "effects": [],
+      "id": 11000602,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ノックブロウ",
+      "not_state_change_count_decrease": false,
+      "power": 42,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "追加効果なし",
+      "timeline_hash": "2736923175505886070",
+      "wait": -125
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 18,
+      "break_power_type": 2,
+      "description": "追加効果なし",
+      "effects": [],
+      "id": 11000603,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ノックブロウ",
+      "not_state_change_count_decrease": false,
+      "power": 45,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "追加効果なし",
+      "timeline_hash": "2736923175505886070",
+      "wait": -125
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 19,
+      "break_power_type": 2,
+      "description": "追加効果なし",
+      "effects": [],
+      "id": 11000604,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ノックブロウ",
+      "not_state_change_count_decrease": false,
+      "power": 47,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "追加効果なし",
+      "timeline_hash": "2736923175505886070",
+      "wait": -125
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 20,
+      "break_power_type": 2,
+      "description": "追加効果なし",
+      "effects": [],
+      "id": 11000605,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ノックブロウ",
+      "not_state_change_count_decrease": false,
+      "power": 50,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "追加効果なし",
+      "timeline_hash": "2736923175505886070",
+      "wait": -125
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 46,
+      "break_power_type": 2,
+      "description": "WEAK攻撃後、味方全員に「ブレイクダメージ+{0}%」を1回行動するまで付与",
+      "effects": [
+        {
+          "id": 91001015,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001015,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000606,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スコールシュート",
+      "not_state_change_count_decrease": false,
+      "power": 90,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "3612571604902129360",
+      "summary": "WEAK攻撃後、味方全員のブレイクダメージアップ",
+      "timeline_hash": "9064475491657370854",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 48,
+      "break_power_type": 2,
+      "description": "WEAK攻撃後、味方全員に「ブレイクダメージ+{0}%」を1回行動するまで付与",
+      "effects": [
+        {
+          "id": 91001015,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001015,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000607,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スコールシュート",
+      "not_state_change_count_decrease": false,
+      "power": 95,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "3612571604902129360",
+      "summary": "WEAK攻撃後、味方全員のブレイクダメージアップ",
+      "timeline_hash": "9064475491657370854",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 51,
+      "break_power_type": 2,
+      "description": "WEAK攻撃後、味方全員に「ブレイクダメージ+{0}%」を1回行動するまで付与",
+      "effects": [
+        {
+          "id": 91001015,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001015,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000608,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スコールシュート",
+      "not_state_change_count_decrease": false,
+      "power": 101,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "3612571604902129360",
+      "summary": "WEAK攻撃後、味方全員のブレイクダメージアップ",
+      "timeline_hash": "9064475491657370854",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 54,
+      "break_power_type": 2,
+      "description": "WEAK攻撃後、味方全員に「ブレイクダメージ+{0}%」を1回行動するまで付与",
+      "effects": [
+        {
+          "id": 91001015,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001015,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000609,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スコールシュート",
+      "not_state_change_count_decrease": false,
+      "power": 106,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "3612571604902129360",
+      "summary": "WEAK攻撃後、味方全員のブレイクダメージアップ",
+      "timeline_hash": "9064475491657370854",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 57,
+      "break_power_type": 2,
+      "description": "WEAK攻撃後、味方全員に「ブレイクダメージ+{0}%」を1回行動するまで付与",
+      "effects": [
+        {
+          "id": 91001015,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001015,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000610,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スコールシュート",
+      "not_state_change_count_decrease": false,
+      "power": 112,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "3612571604902129360",
+      "summary": "WEAK攻撃後、味方全員のブレイクダメージアップ",
+      "timeline_hash": "9064475491657370854",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 17,
+  "overlay_name": "Plachta",
+  "personality": 2,
+  "profile_voice_text": "私はたくさんのものを失っていました。今\nここにいられるのは、ソフィーのおかげです",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 5,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 0,
+    "wind": 0
+  },
+  "result_timeline_hash": "4317604104139661141",
+  "role": 2,
+  "series_id": 8,
+  "sort_name": "プラフタ",
+  "start_at": "2023-10-02T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "3634476040677319391",
+      "large_still_path_hash": "6537672007706015098",
+      "narrow_still_path_hash": "6154663567683446633",
+      "rarity": null,
+      "still_path_hash": "8944192761651257696"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 6750,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500405,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 7425,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500349,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 8100,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500293,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 8775,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500237,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 9450,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500181,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 11475,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500125,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 13500,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500069,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 15525,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500013,
+      "name": ""
+    }
+  ],
+  "support_color_id": 2,
+  "tag_ids": [
+    4,
+    14,
+    28
+  ],
+  "trait_color_id": 3,
+  "voice_actor_id": 28
+}

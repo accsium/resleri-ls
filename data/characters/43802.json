@@ -1,0 +1,1532 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "パネル獲得時、自身に「クリティカル確率+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001086,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "[自身/1回/クリティカル率アップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001086,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990210,
+      "name": "心を射抜く愛のハンマー"
+    },
+    {
+      "ability_category_type": null,
+      "description": "味方全員のクリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000946,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[味方全員/常時/クリティカルダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000946,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990211,
+      "name": "溢れ出る会心の力Ⅱ"
+    }
+  ],
+  "acquisition_movie_path_hash": "3207738905175345503",
+  "acquisition_text": "見てよ、この綺麗な衣装！\nこれからも末永ーく、よろしくね！",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【Dragon's Bride】",
+  "attack_attributes": [
+    1
+  ],
+  "base_character_id": 438,
+  "battle_tool_trait_ids": [
+    2,
+    22
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 1,
+      "description": "ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001419,
+          "limit_count": null,
+          "value": 800,
+          "_detail": {
+            "description": "ブレイクダメージ+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001419,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990452,
+      "name": "ブレイクアップⅠ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001419,
+          "limit_count": null,
+          "value": 1600,
+          "_detail": {
+            "description": "ブレイクダメージ+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001419,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990427,
+      "name": "ブレイクアップⅡ"
+    },
+    {
+      "ability_category_type": 1,
+      "description": "ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001419,
+          "limit_count": null,
+          "value": 2500,
+          "_detail": {
+            "description": "ブレイクダメージ+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001419,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990402,
+      "name": "ブレイクアップⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 300,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>味方の強化系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001312,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001312,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001404,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "竜嫁の守り刀",
+      "not_state_change_count_decrease": false,
+      "power": 320,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "4029146221618668014",
+      "summary": "攻撃後、対象にスタンを超高確率で付与。味方の一部パネルを除いたパネル1つをクリティカルパネルに変換",
+      "timeline_hash": "3082761118992189183",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 300,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>味方の強化系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001312,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001312,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001404,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "竜嫁の守り刀",
+      "not_state_change_count_decrease": false,
+      "power": 320,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "4029146221618668014",
+      "summary": "攻撃後、対象にスタンを超高確率で付与。味方の一部パネルを除いたパネル1つをクリティカルパネルに変換",
+      "timeline_hash": "3082761118992189183",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 300,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>味方の強化系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001312,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001312,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001404,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "竜嫁の守り刀",
+      "not_state_change_count_decrease": false,
+      "power": 320,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "4029146221618668014",
+      "summary": "攻撃後、対象にスタンを超高確率で付与。味方の一部パネルを除いたパネル1つをクリティカルパネルに変換",
+      "timeline_hash": "3082761118992189183",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 318,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>味方の強化系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001312,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001312,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001405,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "竜嫁の守り刀",
+      "not_state_change_count_decrease": false,
+      "power": 340,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "4029146221618668014",
+      "summary": "攻撃後、対象にスタンを超高確率で付与。味方の一部パネルを除いたパネル1つをクリティカルパネルに変換",
+      "timeline_hash": "3082761118992189183",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 337,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>味方の強化系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001312,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001312,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001406,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "竜嫁の守り刀",
+      "not_state_change_count_decrease": false,
+      "power": 360,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "4029146221618668014",
+      "summary": "攻撃後、対象にスタンを超高確率で付与。味方の一部パネルを除いたパネル1つをクリティカルパネルに変換",
+      "timeline_hash": "3082761118992189183",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 356,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>味方の強化系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001312,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001312,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001407,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "竜嫁の守り刀",
+      "not_state_change_count_decrease": false,
+      "power": 380,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "4029146221618668014",
+      "summary": "攻撃後、対象にスタンを超高確率で付与。味方の一部パネルを除いたパネル1つをクリティカルパネルに変換",
+      "timeline_hash": "3082761118992189183",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 375,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>味方の強化系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001312,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001312,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001408,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "竜嫁の守り刀",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "4029146221618668014",
+      "summary": "攻撃後、対象にスタンを超高確率で付与。味方の一部パネルを除いたパネル1つをクリティカルパネルに変換",
+      "timeline_hash": "3082761118992189183",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 943802,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "明るく人懐こい獣人の少女。 \n最強の騎士を目指しているため、竜退治を快く引き受けた。 \n豪快だが乙女心も持ち合わせており、着替えてすぐは鏡の前からなかなか離れなかった。 \nまだ当分結婚の予定はないが、この格好を見たイザナの父親に涙ぐまれてしまい、なだめるのに苦労した。",
+  "equipment_tool_trait_ids": [
+    14
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 438022,
+  "extra_skill_ids": [],
+  "fullname": "イザナ・ココシュカ",
+  "growboard_id": 438021,
+  "id": 43802,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 60,
+    "defense": 49,
+    "hp": 135,
+    "magic": 50,
+    "mental": 49,
+    "speed": 247
+  },
+  "is_alchemist": false,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980137,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          55
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "「先駆け」と「クリティカルダメージ+{0}%」",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500008,
+              "limit_count": null,
+              "value": 5000,
+              "_detail": {
+                "description": "[自身/常時/クリティカルダメージアップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500008,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500099,
+              "limit_count": null,
+              "value": 0,
+              "_detail": {
+                "description": "[自身/先駆け]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500099,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980137,
+          "name": "花嫁の導き"
+        }
+      }
+    ],
+    "description": "「約束と協力」は「先駆け」と「クリティカルダメージ+50%」",
+    "name": "花嫁の導き"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "2434054527780714176",
+  "motion_type": 2,
+  "name": "イザナ",
+  "neo_growboard_id": 438023,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 16,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「クリティカル確率+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001115,
+          "value": 10000,
+          "_detail": {
+            "description": "[自身/1回/クリティカル確率アップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001115,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001394,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒヒイロノツチ",
+      "not_state_change_count_decrease": false,
+      "power": 41,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身のクリティカル確率アップ",
+      "timeline_hash": "3616581709423165862",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 17,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「クリティカル確率+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001115,
+          "value": 10000,
+          "_detail": {
+            "description": "[自身/1回/クリティカル確率アップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001115,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001395,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒヒイロノツチ",
+      "not_state_change_count_decrease": false,
+      "power": 43,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身のクリティカル確率アップ",
+      "timeline_hash": "3616581709423165862",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 18,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「クリティカル確率+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001115,
+          "value": 10000,
+          "_detail": {
+            "description": "[自身/1回/クリティカル確率アップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001115,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001396,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒヒイロノツチ",
+      "not_state_change_count_decrease": false,
+      "power": 46,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身のクリティカル確率アップ",
+      "timeline_hash": "3616581709423165862",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 19,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「クリティカル確率+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001115,
+          "value": 10000,
+          "_detail": {
+            "description": "[自身/1回/クリティカル確率アップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001115,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001397,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒヒイロノツチ",
+      "not_state_change_count_decrease": false,
+      "power": 48,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身のクリティカル確率アップ",
+      "timeline_hash": "3616581709423165862",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 20,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「クリティカル確率+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001115,
+          "value": 10000,
+          "_detail": {
+            "description": "[自身/1回/クリティカル確率アップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001115,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001398,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒヒイロノツチ",
+      "not_state_change_count_decrease": false,
+      "power": 51,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身のクリティカル確率アップ",
+      "timeline_hash": "3616581709423165862",
+      "wait": -100
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 46,
+      "break_power_type": 2,
+      "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001310,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001310,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001311,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001311,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001399,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "緋連爪刃",
+      "not_state_change_count_decrease": false,
+      "power": 90,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1549690425209939232",
+      "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃後、対象の受けるクリティカルダメージアップ",
+      "timeline_hash": "7638193653552313910",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 48,
+      "break_power_type": 2,
+      "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001310,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001310,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001311,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001311,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001400,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "緋連爪刃",
+      "not_state_change_count_decrease": false,
+      "power": 95,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1549690425209939232",
+      "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃後、対象の受けるクリティカルダメージアップ",
+      "timeline_hash": "7638193653552313910",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 51,
+      "break_power_type": 2,
+      "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001310,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001310,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001311,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001311,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001401,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "緋連爪刃",
+      "not_state_change_count_decrease": false,
+      "power": 101,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1549690425209939232",
+      "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃後、対象の受けるクリティカルダメージアップ",
+      "timeline_hash": "7638193653552313910",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 54,
+      "break_power_type": 2,
+      "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001310,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001310,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001311,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001311,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001402,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "緋連爪刃",
+      "not_state_change_count_decrease": false,
+      "power": 106,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1549690425209939232",
+      "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃後、対象の受けるクリティカルダメージアップ",
+      "timeline_hash": "7638193653552313910",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 57,
+      "break_power_type": 2,
+      "description": "クリティカル攻撃時、この攻撃のブレイクダメージ+{0}%<br>攻撃後、対象に「受けるクリティカルダメージ+{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001310,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001310,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001311,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001311,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001403,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "緋連爪刃",
+      "not_state_change_count_decrease": false,
+      "power": 112,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 5,
+      "state_change_visual_type": null,
+      "still_path_hash": "1549690425209939232",
+      "summary": "クリティカル攻撃時、ブレイクダメージアップ<br>攻撃後、対象の受けるクリティカルダメージアップ",
+      "timeline_hash": "7638193653552313910",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 26,
+  "overlay_name": "Izana Kokoschka",
+  "personality": 3,
+  "profile_voice_text": "いつもハンマー持って駆け回ってるから\nこういう綺麗な服って……緊張するよ",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 5,
+    "wind": 0
+  },
+  "result_timeline_hash": "1459975222553056827",
+  "role": 2,
+  "series_id": 10,
+  "sort_name": "イザナ",
+  "start_at": "2024-06-10T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "7324590450632774141",
+      "large_still_path_hash": "967172808235206232",
+      "narrow_still_path_hash": "497475588095690702",
+      "rarity": null,
+      "still_path_hash": "3167802312224002686"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500019,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500096,
+          "limit_count": null,
+          "value": 6750,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500096,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500411,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500019,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500096,
+          "limit_count": null,
+          "value": 7425,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500096,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500355,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500019,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500096,
+          "limit_count": null,
+          "value": 8100,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500096,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500299,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500019,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500096,
+          "limit_count": null,
+          "value": 8775,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500096,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500243,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500019,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500096,
+          "limit_count": null,
+          "value": 9450,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500096,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500187,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500019,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500096,
+          "limit_count": null,
+          "value": 11475,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500096,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500131,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500019,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500096,
+          "limit_count": null,
+          "value": 13500,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500096,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500075,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性の時、物攻+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500019,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500096,
+          "limit_count": null,
+          "value": 15525,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、物攻UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500096,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500019,
+      "name": ""
+    }
+  ],
+  "support_color_id": 2,
+  "tag_ids": [
+    7,
+    9,
+    26
+  ],
+  "trait_color_id": 5,
+  "voice_actor_id": 40
+}

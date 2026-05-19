@@ -1,0 +1,1702 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "敵にとても狙われやすくなる<br>自身のHPが最大でない状態で攻撃を受けた時、自身のバーストパネルを除いたパネル全てをHP回復パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000914,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "狙われやすさ+100％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000914,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001055,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/被弾時/自身のHPが100%未満/バーストパネル以外を回復パネルに変換or生成]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001055,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990185,
+      "name": "勝つのは私よ！"
+    },
+    {
+      "ability_category_type": null,
+      "description": "マイナスパネル無効<br>プラスパネルから受ける効果量+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001045,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "state_change用",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001045,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001041,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "[自身/マイナスパネル無効]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001041,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990186,
+      "name": "ねこさんチーム"
+    }
+  ],
+  "acquisition_movie_path_hash": "6757635722215192917",
+  "acquisition_text": "このランターナ学園で\n私は私自身の価値を証明してみせる――！",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【Lonely Glory】",
+  "attack_attributes": [
+    3
+  ],
+  "base_character_id": 270,
+  "battle_tool_trait_ids": [
+    50,
+    44
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 2,
+      "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001418,
+          "limit_count": null,
+          "value": 100,
+          "_detail": {
+            "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001418,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990451,
+      "name": "アクションHPアップⅠ"
+    },
+    {
+      "ability_category_type": 2,
+      "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001418,
+          "limit_count": null,
+          "value": 300,
+          "_detail": {
+            "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001418,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990426,
+      "name": "アクションHPアップⅡ"
+    },
+    {
+      "ability_category_type": 2,
+      "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001418,
+          "limit_count": null,
+          "value": 500,
+          "_detail": {
+            "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001418,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990401,
+      "name": "アクションHPアップⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果と状態異常を解除し、<br>攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001107,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001107,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001169,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュペアシャルティア",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7997930282038662610",
+      "summary": "攻撃前、自身のマイナス効果と状態異常を解除。攻撃後、対象の全属性耐性ダウンし、自身のHPを回復",
+      "timeline_hash": "7366690117084833920",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果と状態異常を解除し、<br>攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001107,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001107,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001169,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュペアシャルティア",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7997930282038662610",
+      "summary": "攻撃前、自身のマイナス効果と状態異常を解除。攻撃後、対象の全属性耐性ダウンし、自身のHPを回復",
+      "timeline_hash": "7366690117084833920",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果と状態異常を解除し、<br>攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001107,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001107,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001169,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュペアシャルティア",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7997930282038662610",
+      "summary": "攻撃前、自身のマイナス効果と状態異常を解除。攻撃後、対象の全属性耐性ダウンし、自身のHPを回復",
+      "timeline_hash": "7366690117084833920",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 79,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果と状態異常を解除し、<br>攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001107,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001107,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001170,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュペアシャルティア",
+      "not_state_change_count_decrease": false,
+      "power": 425,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7997930282038662610",
+      "summary": "攻撃前、自身のマイナス効果と状態異常を解除。攻撃後、対象の全属性耐性ダウンし、自身のHPを回復",
+      "timeline_hash": "7366690117084833920",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 84,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果と状態異常を解除し、<br>攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001107,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001107,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001171,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュペアシャルティア",
+      "not_state_change_count_decrease": false,
+      "power": 450,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7997930282038662610",
+      "summary": "攻撃前、自身のマイナス効果と状態異常を解除。攻撃後、対象の全属性耐性ダウンし、自身のHPを回復",
+      "timeline_hash": "7366690117084833920",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 88,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果と状態異常を解除し、<br>攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001107,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001107,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001172,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュペアシャルティア",
+      "not_state_change_count_decrease": false,
+      "power": 475,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7997930282038662610",
+      "summary": "攻撃前、自身のマイナス効果と状態異常を解除。攻撃後、対象の全属性耐性ダウンし、自身のHPを回復",
+      "timeline_hash": "7366690117084833920",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 93,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果と状態異常を解除し、<br>攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001107,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001107,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001173,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シュペアシャルティア",
+      "not_state_change_count_decrease": false,
+      "power": 500,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "7997930282038662610",
+      "summary": "攻撃前、自身のマイナス効果と状態異常を解除。攻撃後、対象の全属性耐性ダウンし、自身のHPを回復",
+      "timeline_hash": "7366690117084833920",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 927001,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "ランターナ学園、錬金術科の新入生。\n名家の令嬢だが家の力は借りず、独力で入試を突破し、錬金術科に入学した。\n努力家で、錬金術だけでなく他の科目も成績優秀。\n先輩にも同期のレスナにも丁寧に接する、非の打ち所がない優等生。",
+  "equipment_tool_trait_ids": [
+    36
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 270012,
+  "extra_skill_ids": [],
+  "fullname": "ミミ・ウリエ・フォン・シュヴァルツラング",
+  "growboard_id": 270011,
+  "id": 27001,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 57,
+    "defense": 69,
+    "hp": 172,
+    "magic": 49,
+    "mental": 65,
+    "speed": 240
+  },
+  "is_alchemist": true,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980125,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          49
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "スキルダメージ・ブレイクダメージ+{0}%",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500051,
+              "limit_count": null,
+              "value": 5000,
+              "_detail": {
+                "description": "[自身/スキルダメージアップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500051,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "ability_timing_value": null,
+              "id": 72500052,
+              "limit_count": null,
+              "value": 5000,
+              "_detail": {
+                "description": "[自身/ブレイクダメージアップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500052,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980125,
+          "name": "日々、研鑽を積んでいますので"
+        }
+      }
+    ],
+    "description": "「アーランド」は「スキルダメージ・ブレイクダメージ+50%」",
+    "name": "日々、研鑽を積んでいますので"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "3583184833832830806",
+  "motion_type": 2,
+  "name": "ミミ",
+  "neo_growboard_id": 270013,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 7,
+      "break_power_type": 2,
+      "description": "攻撃後、自身のHPに応じ、自身のHPを0〜{0}%回復(HP25〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91001258,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001258,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001159,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エレガノシュトース",
+      "not_state_change_count_decrease": false,
+      "power": 60,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6009802487725881068",
+      "summary": "攻撃後、自身のHPが少ないほど自身のHPを回復",
+      "timeline_hash": "6968130219538626674",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 7,
+      "break_power_type": 2,
+      "description": "攻撃後、自身のHPに応じ、自身のHPを0〜{0}%回復(HP25〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91001258,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001258,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001160,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エレガノシュトース",
+      "not_state_change_count_decrease": false,
+      "power": 63,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6009802487725881068",
+      "summary": "攻撃後、自身のHPが少ないほど自身のHPを回復",
+      "timeline_hash": "6968130219538626674",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 7,
+      "break_power_type": 2,
+      "description": "攻撃後、自身のHPに応じ、自身のHPを0〜{0}%回復(HP25〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91001258,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001258,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001161,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エレガノシュトース",
+      "not_state_change_count_decrease": false,
+      "power": 67,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6009802487725881068",
+      "summary": "攻撃後、自身のHPが少ないほど自身のHPを回復",
+      "timeline_hash": "6968130219538626674",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 7,
+      "break_power_type": 2,
+      "description": "攻撃後、自身のHPに応じ、自身のHPを0〜{0}%回復(HP25〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91001258,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001258,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001162,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エレガノシュトース",
+      "not_state_change_count_decrease": false,
+      "power": 71,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6009802487725881068",
+      "summary": "攻撃後、自身のHPが少ないほど自身のHPを回復",
+      "timeline_hash": "6968130219538626674",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 8,
+      "break_power_type": 2,
+      "description": "攻撃後、自身のHPに応じ、自身のHPを0〜{0}%回復(HP25〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91001258,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001258,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001163,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エレガノシュトース",
+      "not_state_change_count_decrease": false,
+      "power": 75,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6009802487725881068",
+      "summary": "攻撃後、自身のHPが少ないほど自身のHPを回復",
+      "timeline_hash": "6968130219538626674",
+      "wait": -100
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 37,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001069,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001069,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001164,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ツルクシュラッヘン",
+      "not_state_change_count_decrease": false,
+      "power": 250,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、味方全員の受けるダメージダウン",
+      "timeline_hash": "4072160935198101474",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 39,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001069,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001069,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001165,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ツルクシュラッヘン",
+      "not_state_change_count_decrease": false,
+      "power": 265,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、味方全員の受けるダメージダウン",
+      "timeline_hash": "4072160935198101474",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 41,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001069,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001069,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001166,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ツルクシュラッヘン",
+      "not_state_change_count_decrease": false,
+      "power": 281,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、味方全員の受けるダメージダウン",
+      "timeline_hash": "4072160935198101474",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001069,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001069,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001167,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ツルクシュラッヘン",
+      "not_state_change_count_decrease": false,
+      "power": 296,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、味方全員の受けるダメージダウン",
+      "timeline_hash": "4072160935198101474",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 46,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001069,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001069,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001168,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ツルクシュラッヘン",
+      "not_state_change_count_decrease": false,
+      "power": 312,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、味方全員の受けるダメージダウン",
+      "timeline_hash": "4072160935198101474",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 13,
+  "overlay_name": "Mimi Houllier von Schwarzlang",
+  "personality": 2,
+  "profile_voice_text": "私はミミ。学園の生徒として恥じない\n成果を挙げてみせるわ",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 5,
+    "slashing": 0,
+    "wind": 0
+  },
+  "result_timeline_hash": "1763553240199007561",
+  "role": 3,
+  "series_id": 6,
+  "sort_name": "ミミ",
+  "start_at": "2024-04-12T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "3973657383191390251",
+      "large_still_path_hash": "6912883489416331152",
+      "narrow_still_path_hash": "8658093464939590837",
+      "rarity": null,
+      "still_path_hash": "8751939970242030506"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500014,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500089,
+          "limit_count": null,
+          "value": 6750,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500406,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500014,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500089,
+          "limit_count": null,
+          "value": 7425,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500350,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500014,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500089,
+          "limit_count": null,
+          "value": 8100,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500294,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500014,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500089,
+          "limit_count": null,
+          "value": 8775,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500238,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500014,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500089,
+          "limit_count": null,
+          "value": 9450,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500182,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500014,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500089,
+          "limit_count": null,
+          "value": 11475,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500126,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500014,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500089,
+          "limit_count": null,
+          "value": 13500,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500070,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "得意属性が突属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500014,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500089,
+          "limit_count": null,
+          "value": 15525,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が突属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500014,
+      "name": ""
+    }
+  ],
+  "support_color_id": 1,
+  "tag_ids": [
+    2,
+    31,
+    19,
+    28
+  ],
+  "trait_color_id": 4,
+  "voice_actor_id": 28
+}

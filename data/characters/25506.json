@@ -1,0 +1,1560 @@
+{
+  "ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "味方全員は「新星」タグを持つキャラ数に応じ「クリティカル確率+20～100%」(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001589,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "パーティ内の「新星」のキャラ数に応じ、味方全員にクリティカル確率UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001589,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990510,
+      "name": "＜新星団結＞溢れ出る会心確率の力"
+    },
+    {
+      "ability_category_type": null,
+      "description": "味方全員は「新星」タグを持つキャラ数に応じ「クリティカルダメージ+4～20%」(1～5人で多いほど増加)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001590,
+          "limit_count": null,
+          "value": 400,
+          "_detail": {
+            "description": "パーティ内の「新星」のキャラ数に応じ、味方全員にクリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001590,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990511,
+      "name": "＜新星団結＞溢れ出る会心の力"
+    }
+  ],
+  "acquisition_movie_path_hash": "1898171395913968640",
+  "acquisition_text": "新しいパイが作れるかも！\nぜひ、わたしも連れていってください――！",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【Startup Supporter】",
+  "attack_attributes": [
+    6
+  ],
+  "base_character_id": 255,
+  "battle_tool_trait_ids": [
+    51,
+    7
+  ],
+  "board_ability1_ids": [
+    {
+      "ability_category_type": 2,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 600,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990443,
+      "name": "クリティカルダメージアップオールⅠ"
+    },
+    {
+      "ability_category_type": 2,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990418,
+      "name": "クリティカルダメージアップオールⅡ"
+    },
+    {
+      "ability_category_type": 2,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990393,
+      "name": "クリティカルダメージアップオールⅢ"
+    }
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002091,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002091,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002090,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003566,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "不思議なレシピ",
+      "not_state_change_count_decrease": false,
+      "power": 420,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6739772475171278555",
+      "summary": "攻撃後、味方全員のクリティカル確率アップ<br>得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6251406056065215110",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002091,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002091,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002090,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003566,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "不思議なレシピ",
+      "not_state_change_count_decrease": false,
+      "power": 420,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6739772475171278555",
+      "summary": "攻撃後、味方全員のクリティカル確率アップ<br>得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6251406056065215110",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002091,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002091,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002090,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003566,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "不思議なレシピ",
+      "not_state_change_count_decrease": false,
+      "power": 420,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6739772475171278555",
+      "summary": "攻撃後、味方全員のクリティカル確率アップ<br>得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6251406056065215110",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 79,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002091,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002091,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002090,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003567,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "不思議なレシピ",
+      "not_state_change_count_decrease": false,
+      "power": 433,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6739772475171278555",
+      "summary": "攻撃後、味方全員のクリティカル確率アップ<br>得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6251406056065215110",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 84,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002091,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002091,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002090,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003568,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "不思議なレシピ",
+      "not_state_change_count_decrease": false,
+      "power": 446,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6739772475171278555",
+      "summary": "攻撃後、味方全員のクリティカル確率アップ<br>得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6251406056065215110",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 88,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002091,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002091,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002090,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003569,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "不思議なレシピ",
+      "not_state_change_count_decrease": false,
+      "power": 459,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6739772475171278555",
+      "summary": "攻撃後、味方全員のクリティカル確率アップ<br>得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6251406056065215110",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 93,
+      "break_power_type": 2,
+      "description": "攻撃後、味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002091,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002091,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002090,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003570,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "不思議なレシピ",
+      "not_state_change_count_decrease": false,
+      "power": 472,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6739772475171278555",
+      "summary": "攻撃後、味方全員のクリティカル確率アップ<br>得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6251406056065215110",
+      "wait": 0
+    }
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 925506,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "明るく元気な錬金術士。\nパイ作りに並々ならぬこだわりがあり、パイで人々を魅了するために日々研鑽を重ねている。\nちょっとドジで天然なところもあるが、前向きで一生懸命。",
+  "equipment_tool_trait_ids": [
+    45
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 255062,
+  "extra_skill_ids": [],
+  "fullname": "ロロライナ・フリクセル",
+  "growboard_id": 255061,
+  "id": 25506,
+  "initial_rarity": 1,
+  "initial_status": {
+    "attack": 57,
+    "defense": 60,
+    "hp": 174,
+    "magic": 63,
+    "mental": 52,
+    "speed": 256
+  },
+  "is_alchemist": true,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980228,
+        "combat_power_coefficient": 1500,
+        "condition_ids": [
+          65
+        ],
+        "_detail": {
+          "ability_category_type": null,
+          "description": "「新星」は「クリティカルダメージ+{0}%」",
+          "effects": [
+            {
+              "ability_timing_value": null,
+              "id": 72500008,
+              "limit_count": null,
+              "value": 4000,
+              "_detail": {
+                "description": "[自身/常時/クリティカルダメージアップ]",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 72500008,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 1980228,
+          "name": "＜新星＞クリティカルダメージアップ"
+        }
+      }
+    ],
+    "description": "「新星」は「クリティカルダメージ+40%」",
+    "name": "＜新星＞クリティカルダメージアップ"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "3043350106603272028",
+  "motion_type": 2,
+  "name": "ロロナ",
+  "neo_growboard_id": 255063,
+  "normal1_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「カチコチ」を2回攻撃を受けるまで超高確率で付与し、<br>味方全員に「クリティカルダメージ+{0}%」を付与(上限15%)",
+      "effects": [
+        {
+          "id": 91002088,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002088,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001099,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001099,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003556,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ロロナスペシャル",
+      "not_state_change_count_decrease": false,
+      "power": 51,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "343155729685910485",
+      "summary": "攻撃後、対象にカチコチを超高確率で付与<br>味方全員のクリティカルダメージアップ",
+      "timeline_hash": "956675659177921918",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「カチコチ」を2回攻撃を受けるまで超高確率で付与し、<br>味方全員に「クリティカルダメージ+{0}%」を付与(上限15%)",
+      "effects": [
+        {
+          "id": 91002088,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002088,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001099,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001099,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003557,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ロロナスペシャル",
+      "not_state_change_count_decrease": false,
+      "power": 54,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "343155729685910485",
+      "summary": "攻撃後、対象にカチコチを超高確率で付与<br>味方全員のクリティカルダメージアップ",
+      "timeline_hash": "956675659177921918",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「カチコチ」を2回攻撃を受けるまで超高確率で付与し、<br>味方全員に「クリティカルダメージ+{0}%」を付与(上限15%)",
+      "effects": [
+        {
+          "id": 91002088,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002088,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001099,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001099,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003558,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ロロナスペシャル",
+      "not_state_change_count_decrease": false,
+      "power": 57,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "343155729685910485",
+      "summary": "攻撃後、対象にカチコチを超高確率で付与<br>味方全員のクリティカルダメージアップ",
+      "timeline_hash": "956675659177921918",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「カチコチ」を2回攻撃を受けるまで超高確率で付与し、<br>味方全員に「クリティカルダメージ+{0}%」を付与(上限15%)",
+      "effects": [
+        {
+          "id": 91002088,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002088,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001099,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001099,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003559,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ロロナスペシャル",
+      "not_state_change_count_decrease": false,
+      "power": 60,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "343155729685910485",
+      "summary": "攻撃後、対象にカチコチを超高確率で付与<br>味方全員のクリティカルダメージアップ",
+      "timeline_hash": "956675659177921918",
+      "wait": -100
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「カチコチ」を2回攻撃を受けるまで超高確率で付与し、<br>味方全員に「クリティカルダメージ+{0}%」を付与(上限15%)",
+      "effects": [
+        {
+          "id": 91002088,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002088,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001099,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001099,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11003560,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ロロナスペシャル",
+      "not_state_change_count_decrease": false,
+      "power": 63,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "343155729685910485",
+      "summary": "攻撃後、対象にカチコチを超高確率で付与<br>味方全員のクリティカルダメージアップ",
+      "timeline_hash": "956675659177921918",
+      "wait": -100
+    }
+  ],
+  "normal2_skill_ids": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 25,
+      "break_power_type": 2,
+      "description": "攻撃後、得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002090,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003561,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルスピリット",
+      "not_state_change_count_decrease": false,
+      "power": 200,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6158169184424901358",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 26,
+      "break_power_type": 2,
+      "description": "攻撃後、得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002090,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003562,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルスピリット",
+      "not_state_change_count_decrease": false,
+      "power": 212,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6158169184424901358",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 28,
+      "break_power_type": 2,
+      "description": "攻撃後、得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002090,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003563,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルスピリット",
+      "not_state_change_count_decrease": false,
+      "power": 225,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6158169184424901358",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 29,
+      "break_power_type": 2,
+      "description": "攻撃後、得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002090,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003564,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルスピリット",
+      "not_state_change_count_decrease": false,
+      "power": 237,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6158169184424901358",
+      "wait": 0
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        6
+      ],
+      "break_power": 31,
+      "break_power_type": 2,
+      "description": "攻撃後、得意属性が氷属性または「新星」の味方全員に「クリティカルダメージ+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002090,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002089,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12003565,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "エンゼルスピリット",
+      "not_state_change_count_decrease": false,
+      "power": 250,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、得意属性が氷属性または「新星」の味方全員のクリティカルダメージアップ",
+      "timeline_hash": "6158169184424901358",
+      "wait": 0
+    }
+  ],
+  "original_title_id": 11,
+  "overlay_name": "Rororina Fryxell",
+  "personality": 1,
+  "profile_voice_text": "えへへ。毎日パイが焼けて幸せだなあ。\nカフェで働けてよかった！",
+  "resistance": {
+    "fire": 0,
+    "ice": 5,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 0,
+    "wind": 0
+  },
+  "result_timeline_hash": "3719396816547545915",
+  "role": 4,
+  "series_id": 6,
+  "sort_name": "ロロナ",
+  "start_at": "2026-02-21T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "1226227476469243019",
+      "large_still_path_hash": "3238159210551015342",
+      "narrow_still_path_hash": "5526003905059338197",
+      "rarity": null,
+      "still_path_hash": "6077311815598148443"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    {
+      "ability_category_type": null,
+      "description": "「新星」の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500061,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "自身が「新星」の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500061,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500488,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「新星」の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500061,
+          "limit_count": null,
+          "value": 1100,
+          "_detail": {
+            "description": "自身が「新星」の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500061,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500483,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「新星」の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500061,
+          "limit_count": null,
+          "value": 1200,
+          "_detail": {
+            "description": "自身が「新星」の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500061,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500478,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「新星」の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500061,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "自身が「新星」の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500061,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500473,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「新星」の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500061,
+          "limit_count": null,
+          "value": 1400,
+          "_detail": {
+            "description": "自身が「新星」の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500061,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500468,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「新星」の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500061,
+          "limit_count": null,
+          "value": 1700,
+          "_detail": {
+            "description": "自身が「新星」の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500061,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500463,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「新星」の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500061,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "自身が「新星」の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500061,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500458,
+      "name": ""
+    },
+    {
+      "ability_category_type": null,
+      "description": "「新星」の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500061,
+          "limit_count": null,
+          "value": 2300,
+          "_detail": {
+            "description": "自身が「新星」の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500061,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500453,
+      "name": ""
+    }
+  ],
+  "support_color_id": 1,
+  "tag_ids": [
+    2,
+    9,
+    26,
+    40
+  ],
+  "trait_color_id": 5,
+  "voice_actor_id": 15
+}
