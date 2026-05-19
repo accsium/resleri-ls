@@ -310,8 +310,7 @@ function renderStat(label, value) {
 }
 
 function renderSkillCard(skill) {
-  const targetText = t('targetType');
-  const target = targetText[skill.skill_target_type] || skill.skill_target_type || '?';
+  const target = skill.target_name || skill.skill_target_type || '?';
   const attrText = t('attributeName');
   const attr = (skill.attack_attributes || []).map(a => attrText[a] || a).join('/');
   let effectsHtml = '';
