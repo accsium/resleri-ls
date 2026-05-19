@@ -333,6 +333,7 @@ document.getElementById('btn-cn').addEventListener('click', () => {
   document.getElementById('btn-ja').classList.remove('active');
 });
 
+// [已修正] renderAll 现在正确地定义为调用 renderList 和重新加载角色详情
 function renderAll() {
   renderList();
   if (currentCharId) loadCharacter(currentCharId);
