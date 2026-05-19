@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>レスレリ 角色图鉴</title>
   <style>
+    /* 样式与之前一致，保持即可 */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Segoe UI', 'Noto Sans JP', sans-serif; background: #f4f6f9; color: #2c3e50; }
     .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
@@ -28,29 +29,22 @@
     .detail-header .info h2 { font-size: 24px; }
     .detail-header .info .alias { font-size: 16px; color: #764ba2; }
     .detail-header .info .rarity { font-size: 14px; color: #f59e0b; }
-    .detail-header .info .base-char { font-size: 13px; color: #888; }
-    .detail-header .info .series { font-size: 13px; color: #666; }
+    .detail-header .info .base-char, .detail-header .info .series { font-size: 13px; color: #888; }
     .stat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; margin: 15px 0; }
     .stat-item { background: #f8f9fb; border-radius: 8px; padding: 10px; text-align: center; }
     .stat-item .stat-value { font-size: 18px; font-weight: 700; }
     .stat-item .stat-label { font-size: 10px; color: #999; }
-    .info-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 5px 0; }
-    .tag { background: #e0e7ff; color: #3730a3; padding: 3px 10px; border-radius: 20px; font-size: 12px; }
-    .section-title { font-size: 18px; font-weight: 600; margin: 20px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #667eea; display: flex; align-items: center; gap: 8px; }
+    .tag { background: #e0e7ff; color: #3730a3; padding: 3px 10px; border-radius: 20px; font-size: 12px; margin: 2px; }
+    .section-title { font-size: 18px; font-weight: 600; margin: 20px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #667eea; }
     .skill-group { margin-bottom: 15px; }
-    .skill-group-title { font-weight: 600; font-size: 15px; margin-bottom: 8px; color: #555; cursor: pointer; display: flex; align-items: center; gap: 6px; user-select: none; }
-    .skill-level-tabs { display: flex; gap: 6px; margin: 8px 0; flex-wrap: wrap; }
-    .skill-level-tab { padding: 4px 12px; border: 1px solid #ccc; border-radius: 20px; cursor: pointer; font-size: 12px; background: white; transition: 0.15s; }
-    .skill-level-tab.active { background: #667eea; color: white; border-color: #667eea; }
+    .skill-group-title { font-weight: 600; font-size: 15px; margin-bottom: 8px; color: #555; cursor: pointer; }
     .skill-detail-card { background: #f8f9fb; border-radius: 10px; padding: 15px; margin: 6px 0; border-left: 4px solid #667eea; }
     .skill-detail-card .skill-name { font-weight: 700; font-size: 16px; }
     .skill-detail-card .skill-desc { font-size: 13px; margin: 6px 0; color: #555; }
-    .skill-detail-card .skill-stats { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; }
-    .skill-detail-card .skill-stat { background: white; padding: 3px 8px; border-radius: 6px; }
+    .skill-stats { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; }
+    .skill-stat { background: white; padding: 3px 8px; border-radius: 6px; }
     .effect-list { font-size: 12px; margin-top: 8px; color: #444; }
-    .effect-list li { margin: 2px 0; }
     .ability-card { background: #fff7ed; border-radius: 8px; padding: 10px 15px; margin: 5px 0; border-left: 4px solid #f97316; font-size: 13px; }
-    .ability-card .ability-name { font-weight: 600; }
     .no-data { color: #aaa; font-style: italic; }
     .loading { text-align: center; padding: 40px; color: #888; }
   </style>
@@ -66,7 +60,6 @@
 </div>
 
 <div class="container">
-  <!-- 左侧角色列表 -->
   <div class="list-panel">
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="搜索角色名称..." oninput="renderList()">
@@ -74,57 +67,24 @@
     <div class="character-list" id="characterList"></div>
   </div>
 
-  <!-- 右侧详情面板 -->
   <div class="detail-panel" id="detailPanel">
     <div class="loading">👈 选择左侧角色查看详情</div>
   </div>
 </div>
 
 <script>
-// ========== 多语言管理器 ==========
-const i18n = (() => {
-  const store = { ja: {}, cn: {} };
-  let lang = 'ja';
-  async function load(name, l) {
-    const folder = l === 'cn' ? 'cn' : 'jp';
-    const url = `data/${folder}/${name}.json`;
-    try { const r = await fetch(url); return r.ok ? await r.json() : null; }
-    catch (e) { return null; }
-  }
-  async function init(files) {
-    for (const f of files) {
-      const ja = await load(f, 'ja'); if (ja) store.ja[f] = ja;
-      const cn = await load(f, 'cn'); store.cn[f] = cn || store.ja[f] || [];
-    }
-  }
-  function get(name) { return store[lang][name] || store.ja[name] || []; }
-  function setLang(l) { if (l === lang) return; lang = l; refreshUI(); }
-  function getLang() { return lang; }
-  function refreshUI() { if (typeof renderAll === 'function') renderAll(); }
-  return { init, get, setLang, getLang };
-})();
+// ========== 全局状态 ==========
+let currentLang = 'ja';
+let characterIndex = [];
+let currentCharId = null;
 
-// ========== 辅助函数 ==========
-function getMappedName(collection, id) {
-  if (id === null || id === undefined) return '—';
-  const data = i18n.get(collection);
-  if (Array.isArray(data)) { const item = data.find(x => x.id === id); return item ? item.name : `ID:${id}`; }
-  if (data && typeof data === 'object' && data[id]) return data[id].name || `ID:${id}`;
-  return `ID:${id}`;
-}
-function getTagName(tagId) { return getMappedName('character_tag', tagId); }
-function getBaseCharName(id) { return getMappedName('base_character', id); }
-function getSeriesName(id) { return getMappedName('original_title', id); }
-
-// 属性ID → 名称
+// 属性映射
 const ATTRIBUTE_NAMES = { 1:'斬',2:'打',3:'突',4:'風',5:'火',6:'氷',7:'雷' };
-// 技能类型名称
 const SKILL_TYPE_NAMES = {
   normal1: '通常攻撃1', normal2: '通常攻撃2', burst: 'バーストスキル',
   evolved_normal1: '進化通常1', evolved_normal2: '進化通常2', evolved_burst: '進化バースト',
   active1: 'アクティブ1', active2: 'アクティブ2', active3: 'アクティブ3',
 };
-// 技能目标类型
 const TARGET_TYPE_NAMES = { 1:'単体', 2:'全体', 3:'敵単体', 4:'敵全体', 5:'味方単体', 6:'味方全体' };
 
 function rarityToStars(r) {
@@ -132,29 +92,31 @@ function rarityToStars(r) {
   return map[r] || '★'.repeat(r);
 }
 
-// ========== 全局状态 ==========
-let characterIndex = [];
-let currentCharId = null;
+// ========== 数据加载 ==========
+async function loadIndex() {
+  const folder = currentLang === 'cn' ? 'cn' : 'jp';
+  const resp = await fetch(`data/${folder}/character_index.json`);
+  characterIndex = await resp.json();
+}
 
-// ========== 初始化 ==========
-(async function boot() {
-  await i18n.init(['character_tag','base_character','equipment_tool_trait','original_title']);
-  try {
-    const resp = await fetch('data/character_index.json');
-    characterIndex = await resp.json();
-    renderList();
-  } catch(e) { console.error(e); document.getElementById('characterList').innerHTML = '<div class="no-data">加载失败</div>'; }
-})();
+async function loadCharacter(id) {
+  const folder = currentLang === 'cn' ? 'cn' : 'jp';
+  const resp = await fetch(`data/${folder}/${id}.json`);
+  return await resp.json();
+}
 
-// ========== 渲染角色列表 ==========
+// ========== 渲染 ==========
 function renderList() {
   const listDiv = document.getElementById('characterList');
   const query = document.getElementById('searchInput')?.value?.toLowerCase() || '';
-  const filtered = characterIndex.filter(c => c.name?.toLowerCase().includes(query) || (c.another_name||'').toLowerCase().includes(query));
+  const filtered = characterIndex.filter(c =>
+    c.name?.toLowerCase().includes(query) ||
+    (c.another_name||'').toLowerCase().includes(query)
+  );
   listDiv.innerHTML = filtered.map(c => {
     const stars = rarityToStars(c.initial_rarity);
     const alias = c.another_name ? `【${c.another_name}】` : '';
-    return `<div class="char-item" onclick="loadCharacter(${c.id})" data-id="${c.id}">
+    return `<div class="char-item" onclick="selectCharacter(${c.id})" data-id="${c.id}">
       <span class="rarity-stars">${stars}</span>
       <span class="char-name">${c.name}</span>
       <span class="char-alias">${alias}</span>
@@ -162,30 +124,10 @@ function renderList() {
   }).join('');
 }
 
-// ========== 加载角色详情 ==========
-async function loadCharacter(id) {
-  currentCharId = id;
-  const panel = document.getElementById('detailPanel');
-  panel.innerHTML = '<div class="loading">加载中...</div>';
-  // 高亮当前项
-  document.querySelectorAll('.char-item').forEach(el => el.classList.remove('active'));
-  const item = document.querySelector(`.char-item[data-id="${id}"]`);
-  if (item) item.classList.add('active');
-
-  try {
-    const resp = await fetch(`data/characters/${id}.json`);
-    const char = await resp.json();
-    renderDetail(char);
-  } catch(e) { panel.innerHTML = '<div class="no-data">加载详情失败</div>'; }
-}
-
-// ========== 渲染角色详情 ==========
 function renderDetail(char) {
   const panel = document.getElementById('detailPanel');
-  const tagNames = (char.tag_ids || []).map(t => getTagName(t)).filter(Boolean);
+  const tagNames = char.tag_names || [];
   const attrNames = (char.attack_attributes || []).map(a => ATTRIBUTE_NAMES[a] || a).join(' / ');
-  const baseCharName = getBaseCharName(char.base_character_id);
-  const seriesName = getSeriesName(char.original_title_id);
   const startDate = char.start_at ? new Date(char.start_at).toLocaleDateString('ja-JP') : '不明';
 
   let html = `
@@ -193,9 +135,9 @@ function renderDetail(char) {
       <div class="info">
         <h2>${char.name} <span class="alias">${char.another_name || ''}</span></h2>
         <div class="rarity">初期 ${rarityToStars(char.initial_rarity)} → 最大 ${rarityToStars(char.max_rarity)} (Rarity: ${char.initial_rarity}→${char.max_rarity})</div>
-        <div class="base-char">ベース: ${baseCharName} (ID:${char.base_character_id})</div>
-        <div class="series">シリーズ: ${seriesName} | 実装日: ${startDate}</div>
-        <div class="info-row" style="margin-top:8px;">${tagNames.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        <div class="base-char">ベース: ${char.base_character_name || '—'}</div>
+        <div class="series">シリーズ: ${char.original_title_name || '—'} | 実装日: ${startDate}</div>
+        <div style="margin-top:8px;">${tagNames.map(t => `<span class="tag">${t}</span>`).join('')}</div>
       </div>
     </div>
     <p style="margin:10px 0;font-style:italic;color:#555;">${char.description || ''}</p>
@@ -208,11 +150,11 @@ function renderDetail(char) {
       ${renderStat('魔防', char.initial_status?.mental)}
       ${renderStat('速度', char.initial_status?.speed)}
     </div>
-    <div>属性: ${attrNames} | ロール: ${char.role || '?'} | タイプ: ${char.motion_type || '?'} | 錬金術士: ${char.is_alchemist ? 'はい' : 'いいえ'}</div>
+    <div>属性: ${attrNames} | ロール: ${char.role || '?'} | 錬金術士: ${char.is_alchemist ? 'はい' : 'いいえ'}</div>
     <div class="section-title">⚔️ スキル</div>
   `;
 
-  // 技能渲染
+  // 技能渲染 (与之前类似，但从 _skillDetails 获取)
   const skillTypes = [
     { key: 'normal1', ids: char.normal1_skill_ids, evolved: char.evolved_normal1_skill_ids },
     { key: 'normal2', ids: char.normal2_skill_ids, evolved: char.evolved_normal2_skill_ids },
@@ -222,21 +164,14 @@ function renderDetail(char) {
     { key: 'active3', ids: char.active3_skill_id ? [char.active3_skill_id] : [] },
   ];
 
+  const skillMap = char._skillDetails || {};
   skillTypes.forEach(skType => {
     const allIds = [...(skType.ids||[]), ...(skType.evolved||[])];
-    if (allIds.length === 0) return;
-    const skillMap = char._skillDetails || {};
-    const skillsForType = [];
-    allIds.forEach(id => { if (skillMap[id]) skillsForType.push(skillMap[id]); });
-    if (skillsForType.length === 0) return;
-
+    const skills = allIds.map(id => skillMap[id]).filter(Boolean);
+    if (skills.length === 0) return;
     html += `<div class="skill-group">
-      <div class="skill-group-title" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'">
-        ▸ ${SKILL_TYPE_NAMES[skType.key] || skType.key} (${skillsForType.length} Lv)
-      </div>
-      <div class="skill-levels" style="display:block;">
-        ${skillsForType.map((skill, idx) => renderSkillCard(skill, idx)).join('')}
-      </div>
+      <div class="skill-group-title">▸ ${SKILL_TYPE_NAMES[skType.key] || skType.key} (${skills.length} Lv)</div>
+      ${skills.map(s => renderSkillCard(s)).join('')}
     </div>`;
   });
 
@@ -248,15 +183,11 @@ function renderDetail(char) {
     ...(char.all_skill_evolved_ability_ids || []), ...(char.support_ability_ids || []),
   ];
   const uniqueAbilities = [...new Set(abilityIds)];
-  const abilityMap = char._skillDetails || {};
-  if (uniqueAbilities.length === 0) {
+  const abilities = uniqueAbilities.map(id => skillMap[id]).filter(Boolean);
+  if (abilities.length === 0) {
     html += '<div class="no-data">なし</div>';
   } else {
-    uniqueAbilities.forEach(aid => {
-      const ability = abilityMap[aid];
-      if (!ability) return;
-      html += renderAbilityCard(ability);
-    });
+    abilities.forEach(a => { html += renderAbilityCard(a); });
   }
 
   // 队长技能
@@ -275,32 +206,26 @@ function renderStat(label, value) {
   return `<div class="stat-item"><div class="stat-value">${value ?? '?'}</div><div class="stat-label">${label}</div></div>`;
 }
 
-function renderSkillCard(skill, idx) {
-  const targetName = TARGET_TYPE_NAMES[skill.skill_target_type] || skill.skill_target_type || '?';
-  const attrName = (skill.attack_attributes || []).map(a => ATTRIBUTE_NAMES[a] || a).join('/');
-  const power = skill.power ?? 0;
-  const breakPower = skill.break_power ?? 0;
-  const limit = skill.limit_count ?? '—';
-  const wait = skill.wait ?? 0;
-
+function renderSkillCard(skill) {
+  const target = TARGET_TYPE_NAMES[skill.skill_target_type] || skill.skill_target_type || '?';
+  const attr = (skill.attack_attributes || []).map(a => ATTRIBUTE_NAMES[a] || a).join('/');
   let effectsHtml = '';
-  if (skill.effects && Array.isArray(skill.effects)) {
+  if (skill.effects) {
     effectsHtml = '<ul class="effect-list">' + skill.effects.map(e => {
-      const effDesc = e._detail?.description || e.description || `ID:${e.id}`;
-      return `<li>${effDesc} (値:${e.value ?? 0})</li>`;
+      const desc = e._detail?.description || e.description || `ID:${e.id}`;
+      return `<li>${desc} (値:${e.value ?? 0})</li>`;
     }).join('') + '</ul>';
   }
-
   return `<div class="skill-detail-card">
-    <div class="skill-name">${skill.name || '??'} <small style="color:#888;">(ID:${skill.id})</small></div>
+    <div class="skill-name">${skill.name || '??'} <small>(ID:${skill.id})</small></div>
     <div class="skill-desc">${skill.description || ''}</div>
     <div class="skill-stats">
-      <span class="skill-stat">対象: ${targetName}</span>
-      ${attrName ? `<span class="skill-stat">属性: ${attrName}</span>` : ''}
-      <span class="skill-stat">威力: ${power}%</span>
-      <span class="skill-stat">ブレイク: ${breakPower}%</span>
-      <span class="skill-stat">WT: ${wait}</span>
-      <span class="skill-stat">制限: ${limit}</span>
+      <span class="skill-stat">対象: ${target}</span>
+      ${attr ? `<span class="skill-stat">属性: ${attr}</span>` : ''}
+      <span class="skill-stat">威力: ${skill.power ?? 0}%</span>
+      <span class="skill-stat">ブレイク: ${skill.break_power ?? 0}%</span>
+      <span class="skill-stat">WT: ${skill.wait ?? 0}</span>
+      <span class="skill-stat">制限: ${skill.limit_count ?? '—'}</span>
     </div>
     ${effectsHtml}
   </div>`;
@@ -308,10 +233,10 @@ function renderSkillCard(skill, idx) {
 
 function renderAbilityCard(ability) {
   let effectsHtml = '';
-  if (ability.effects && Array.isArray(ability.effects)) {
+  if (ability.effects) {
     effectsHtml = '<ul class="effect-list">' + ability.effects.map(e => {
-      const effDesc = e._detail?.description || e.description || `ID:${e.id}`;
-      return `<li>${effDesc} (値:${e.value ?? 0})</li>`;
+      const desc = e._detail?.description || e.description || `ID:${e.id}`;
+      return `<li>${desc} (値:${e.value ?? 0})</li>`;
     }).join('') + '</ul>';
   }
   return `<div class="ability-card">
@@ -321,23 +246,44 @@ function renderAbilityCard(ability) {
   </div>`;
 }
 
-// 语言切换
-document.getElementById('btn-ja').addEventListener('click', () => {
-  i18n.setLang('ja');
-  document.getElementById('btn-ja').classList.add('active');
-  document.getElementById('btn-cn').classList.remove('active');
-});
-document.getElementById('btn-cn').addEventListener('click', () => {
-  i18n.setLang('cn');
-  document.getElementById('btn-cn').classList.add('active');
-  document.getElementById('btn-ja').classList.remove('active');
-});
-
-// [已修正] renderAll 现在正确地定义为调用 renderList 和重新加载角色详情
-function renderAll() {
-  renderList();
-  if (currentCharId) loadCharacter(currentCharId);
+// ========== 交互 ==========
+async function selectCharacter(id) {
+  currentCharId = id;
+  document.querySelectorAll('.char-item').forEach(el => el.classList.remove('active'));
+  const item = document.querySelector(`.char-item[data-id="${id}"]`);
+  if (item) item.classList.add('active');
+  const panel = document.getElementById('detailPanel');
+  panel.innerHTML = '<div class="loading">加载中...</div>';
+  try {
+    const char = await loadCharacter(id);
+    renderDetail(char);
+  } catch(e) {
+    panel.innerHTML = '<div class="no-data">加载详情失败</div>';
+  }
 }
+
+async function switchLanguage(lang) {
+  if (currentLang === lang) return;
+  currentLang = lang;
+  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+  document.getElementById('btn-cn').classList.toggle('active', lang === 'cn');
+  // 重新加载索引
+  await loadIndex();
+  renderList();
+  // 如果详情页打开，重新加载
+  if (currentCharId) {
+    selectCharacter(currentCharId);
+  }
+}
+
+document.getElementById('btn-ja').addEventListener('click', () => switchLanguage('ja'));
+document.getElementById('btn-cn').addEventListener('click', () => switchLanguage('cn'));
+
+// 初始化
+(async () => {
+  await loadIndex();
+  renderList();
+})();
 </script>
 </body>
 </html>
