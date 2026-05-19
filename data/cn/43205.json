@@ -1,0 +1,1571 @@
+{
+  "ability_ids": [
+    1990238,
+    1990244
+  ],
+  "acquisition_movie_path_hash": "3527477402256098282",
+  "acquisition_text": "身体の奥から溢れるこの力で――\n邪魔するヤツはぶっ飛ばす！",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【Awakened Past】",
+  "attack_attributes": [
+    5
+  ],
+  "base_character_id": 432,
+  "battle_tool_trait_ids": [
+    5,
+    25
+  ],
+  "board_ability1_ids": [
+    1990453,
+    1990428,
+    1990403
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    14001749,
+    14001749,
+    14001749,
+    14001750,
+    14001751,
+    14001752,
+    14001753
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": {
+    "before_skill": true,
+    "character_id": 43206,
+    "extra_skill_index": 0,
+    "skill_type": 2
+  },
+  "character_growth_id": 943205,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "新たな力を手に入れた美しき戦士。 \nハイディたちと出会う以前の記憶はないものの、戦闘の腕前は達人の域に達している。 \nマナを模した意匠や金をあしらったこの装いは、彼女の美しさを際立たせ、秘められた力をも目覚めさせる。",
+  "equipment_tool_trait_ids": [
+    2
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 432052,
+  "extra_skill_ids": [],
+  "fullname": "ヴァレリア",
+  "growboard_id": 432051,
+  "id": 43205,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 51,
+    "defense": 42,
+    "hp": 150,
+    "magic": 64,
+    "mental": 50,
+    "speed": 254
+  },
+  "is_alchemist": true,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980150,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          41
+        ]
+      }
+    ],
+    "description": "「ずぼら」は「先駆け」と「ブレイクダメージ+50%」",
+    "name": "誰も追いつけないわよ！"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "2563228664358002905",
+  "motion_type": 2,
+  "name": "ヴァレリア",
+  "neo_growboard_id": 432053,
+  "normal1_skill_ids": [
+    11001739,
+    11001740,
+    11001741,
+    11001742,
+    11001743
+  ],
+  "normal2_skill_ids": [
+    12001744,
+    12001745,
+    12001746,
+    12001747,
+    12001748
+  ],
+  "original_title_id": 26,
+  "overlay_name": "Valeria",
+  "personality": 2,
+  "profile_voice_text": "これを着てると、不思議と力が湧いてくる。\nちゃんと、制御できるようにならなきゃね",
+  "resistance": {
+    "fire": 5,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 0,
+    "wind": 0
+  },
+  "result_timeline_hash": "305034907075226998",
+  "role": 2,
+  "series_id": 10,
+  "sort_name": "ヴァレリア",
+  "start_at": "2024-09-11T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "3201259142915633908",
+      "large_still_path_hash": "4012650416214356238",
+      "narrow_still_path_hash": "5590914026040176271",
+      "rarity": null,
+      "still_path_hash": "2804487865100768373"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    500400,
+    500344,
+    500288,
+    500232,
+    500176,
+    500120,
+    500064,
+    500008
+  ],
+  "support_color_id": 2,
+  "tag_ids": [
+    7,
+    10,
+    25,
+    27
+  ],
+  "trait_color_id": 3,
+  "voice_actor_id": 2,
+  "tag_names": [
+    "ランターナ",
+    "家族と友情",
+    "ずぼら",
+    "マイペース"
+  ],
+  "base_character_name": "ヴァレリア",
+  "original_title_name": "レスレリアーナのアトリエ ～忘れられた錬金術と極夜の解放者～",
+  "equipment_tool_trait_names": [
+    "スキル威力上昇"
+  ],
+  "_skillDetails": {
+    "500008": {
+      "ability_category_type": null,
+      "description": "得意属性が火属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50008,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50008,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500008,
+      "name": ""
+    },
+    "500064": {
+      "ability_category_type": null,
+      "description": "得意属性が火属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50008,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50008,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500064,
+      "name": ""
+    },
+    "500120": {
+      "ability_category_type": null,
+      "description": "得意属性が火属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50008,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50008,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500120,
+      "name": ""
+    },
+    "500176": {
+      "ability_category_type": null,
+      "description": "得意属性が火属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50008,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50008,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500176,
+      "name": ""
+    },
+    "500232": {
+      "ability_category_type": null,
+      "description": "得意属性が火属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50008,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50008,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500232,
+      "name": ""
+    },
+    "500288": {
+      "ability_category_type": null,
+      "description": "得意属性が火属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50008,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50008,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500288,
+      "name": ""
+    },
+    "500344": {
+      "ability_category_type": null,
+      "description": "得意属性が火属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50008,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50008,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500344,
+      "name": ""
+    },
+    "500400": {
+      "ability_category_type": null,
+      "description": "得意属性が火属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50008,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50008,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500400,
+      "name": ""
+    },
+    "1980150": {
+      "ability_category_type": null,
+      "description": "「先駆け」と「ブレイクダメージ+{0}%」",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500052,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "[自身/ブレイクダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500052,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500099,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "[自身/先駆け]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500099,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1980150,
+      "name": "誰も追いつけないわよ！"
+    },
+    "1990238": {
+      "ability_category_type": null,
+      "description": "カウンター攻撃から受けるダメージを無効",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001124,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001124,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990238,
+      "name": "目覚める闘魂"
+    },
+    "1990244": {
+      "ability_category_type": null,
+      "description": "スキル発動後、自身に「魔攻+{0}%」を付与(上限50%)<br>WEAK攻撃時、スキルダメージ+{1}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001119,
+          "limit_count": null,
+          "value": 500,
+          "_detail": {
+            "description": "[自身/魔攻上昇(上限50%)]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001119,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001120,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001120,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990244,
+      "name": "覚悟はできてる？"
+    },
+    "1990403": {
+      "ability_category_type": 4,
+      "description": "与える「火属性耐性ダウン」の効果量+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001420,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "与える「火属性耐性ダウン」の効果量+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001420,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990403,
+      "name": "レジスト火マイナスアップⅢ"
+    },
+    "1990428": {
+      "ability_category_type": 4,
+      "description": "与える「火属性耐性ダウン」の効果量+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001420,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "与える「火属性耐性ダウン」の効果量+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001420,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990428,
+      "name": "レジスト火マイナスアップⅡ"
+    },
+    "1990453": {
+      "ability_category_type": 4,
+      "description": "与える「火属性耐性ダウン」の効果量+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001420,
+          "limit_count": null,
+          "value": 600,
+          "_detail": {
+            "description": "与える「火属性耐性ダウン」の効果量+{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001420,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990453,
+      "name": "レジスト火マイナスアップⅠ"
+    },
+    "11001739": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 15,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「ブレイクダメージ+{0}%」を2回行動終了するまで付与し、<br>自身に「スキルダメージ+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001387,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001387,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001739,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒッツェドンスト",
+      "not_state_change_count_decrease": false,
+      "power": 34,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身のブレイクダメージアップ<br>自身のスキルダメージアップ",
+      "timeline_hash": "6163706604681109381",
+      "wait": -100
+    },
+    "11001740": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 15,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「ブレイクダメージ+{0}%」を2回行動終了するまで付与し、<br>自身に「スキルダメージ+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001387,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001387,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001740,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒッツェドンスト",
+      "not_state_change_count_decrease": false,
+      "power": 36,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身のブレイクダメージアップ<br>自身のスキルダメージアップ",
+      "timeline_hash": "6163706604681109381",
+      "wait": -100
+    },
+    "11001741": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 16,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「ブレイクダメージ+{0}%」を2回行動終了するまで付与し、<br>自身に「スキルダメージ+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001387,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001387,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001741,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒッツェドンスト",
+      "not_state_change_count_decrease": false,
+      "power": 38,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身のブレイクダメージアップ<br>自身のスキルダメージアップ",
+      "timeline_hash": "6163706604681109381",
+      "wait": -100
+    },
+    "11001742": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 17,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「ブレイクダメージ+{0}%」を2回行動終了するまで付与し、<br>自身に「スキルダメージ+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001387,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001387,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001742,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒッツェドンスト",
+      "not_state_change_count_decrease": false,
+      "power": 40,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身のブレイクダメージアップ<br>自身のスキルダメージアップ",
+      "timeline_hash": "6163706604681109381",
+      "wait": -100
+    },
+    "11001743": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 18,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「ブレイクダメージ+{0}%」を2回行動終了するまで付与し、<br>自身に「スキルダメージ+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001387,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001387,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11001743,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ヒッツェドンスト",
+      "not_state_change_count_decrease": false,
+      "power": 42,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身のブレイクダメージアップ<br>自身のスキルダメージアップ",
+      "timeline_hash": "6163706604681109381",
+      "wait": -100
+    },
+    "12001744": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 115,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>WEAK攻撃時、ブレイクダメージ+{1}%<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001298,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001298,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000907,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001022,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001744,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "フランメテオア",
+      "not_state_change_count_decrease": false,
+      "power": 143,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の火属性耐性ダウン<br>WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、マイナス効果無効を付与",
+      "timeline_hash": "988856569272215575",
+      "wait": 0
+    },
+    "12001745": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 122,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>WEAK攻撃時、ブレイクダメージ+{1}%<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001298,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001298,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000907,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001022,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001745,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "フランメテオア",
+      "not_state_change_count_decrease": false,
+      "power": 151,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の火属性耐性ダウン<br>WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、マイナス効果無効を付与",
+      "timeline_hash": "988856569272215575",
+      "wait": 0
+    },
+    "12001746": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 129,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>WEAK攻撃時、ブレイクダメージ+{1}%<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001298,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001298,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000907,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001022,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001746,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "フランメテオア",
+      "not_state_change_count_decrease": false,
+      "power": 160,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の火属性耐性ダウン<br>WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、マイナス効果無効を付与",
+      "timeline_hash": "988856569272215575",
+      "wait": 0
+    },
+    "12001747": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 136,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>WEAK攻撃時、ブレイクダメージ+{1}%<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001298,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001298,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000907,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001022,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001747,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "フランメテオア",
+      "not_state_change_count_decrease": false,
+      "power": 169,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の火属性耐性ダウン<br>WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、マイナス効果無効を付与",
+      "timeline_hash": "988856569272215575",
+      "wait": 0
+    },
+    "12001748": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 143,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>WEAK攻撃時、ブレイクダメージ+{1}%<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001298,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001298,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000907,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001022,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12001748,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "フランメテオア",
+      "not_state_change_count_decrease": false,
+      "power": 178,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の火属性耐性ダウン<br>WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、マイナス効果無効を付与",
+      "timeline_hash": "988856569272215575",
+      "wait": 0
+    },
+    "14001749": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 300,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、対象の1つのブレイクゲージを0にする<br>攻撃後、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001187,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001187,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001060,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001060,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001749,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "グランツアーンスト",
+      "not_state_change_count_decrease": false,
+      "power": 360,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1392366161358471190",
+      "summary": "この攻撃の貫通力アップ<br>WEAK攻撃時、対象の1つのブレイクゲージを0にする<br>攻撃後、敵全体の受けるダメージアップ",
+      "timeline_hash": "7966681837777207219",
+      "wait": 0
+    },
+    "14001750": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 318,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、対象の1つのブレイクゲージを0にする<br>攻撃後、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001187,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001187,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001060,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001060,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001750,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "グランツアーンスト",
+      "not_state_change_count_decrease": false,
+      "power": 382,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1392366161358471190",
+      "summary": "この攻撃の貫通力アップ<br>WEAK攻撃時、対象の1つのブレイクゲージを0にする<br>攻撃後、敵全体の受けるダメージアップ",
+      "timeline_hash": "7966681837777207219",
+      "wait": 0
+    },
+    "14001751": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 337,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、対象の1つのブレイクゲージを0にする<br>攻撃後、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001187,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001187,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001060,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001060,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001751,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "グランツアーンスト",
+      "not_state_change_count_decrease": false,
+      "power": 405,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1392366161358471190",
+      "summary": "この攻撃の貫通力アップ<br>WEAK攻撃時、対象の1つのブレイクゲージを0にする<br>攻撃後、敵全体の受けるダメージアップ",
+      "timeline_hash": "7966681837777207219",
+      "wait": 0
+    },
+    "14001752": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 356,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、対象の1つのブレイクゲージを0にする<br>攻撃後、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001187,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001187,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001060,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001060,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001752,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "グランツアーンスト",
+      "not_state_change_count_decrease": false,
+      "power": 427,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1392366161358471190",
+      "summary": "この攻撃の貫通力アップ<br>WEAK攻撃時、対象の1つのブレイクゲージを0にする<br>攻撃後、敵全体の受けるダメージアップ",
+      "timeline_hash": "7966681837777207219",
+      "wait": 0
+    },
+    "14001753": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 375,
+      "break_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、対象の1つのブレイクゲージを0にする<br>攻撃後、敵全体に「受けるダメージ+{2}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001187,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001187,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001060,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001060,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14001753,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "グランツアーンスト",
+      "not_state_change_count_decrease": false,
+      "power": 450,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1392366161358471190",
+      "summary": "この攻撃の貫通力アップ<br>WEAK攻撃時、対象の1つのブレイクゲージを0にする<br>攻撃後、敵全体の受けるダメージアップ",
+      "timeline_hash": "7966681837777207219",
+      "wait": 0
+    }
+  }
+}

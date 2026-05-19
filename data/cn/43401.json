@@ -1,0 +1,1433 @@
+{
+  "ability_ids": [
+    1990148,
+    1990149
+  ],
+  "acquisition_movie_path_hash": "6958747288291006135",
+  "acquisition_text": "ランターナ王国騎士ユナ・ヴァイツ。 \nこの純白の鎧が、お前を護ろう",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【White Royal Guard】",
+  "attack_attributes": [
+    3
+  ],
+  "base_character_id": 434,
+  "battle_tool_trait_ids": [
+    16,
+    51
+  ],
+  "board_ability1_ids": [
+    1990464,
+    1990439,
+    1990414
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    14000921,
+    14000921,
+    14000921,
+    14000922,
+    14000923,
+    14000924,
+    14000925
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 943401,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "王国騎士の中でも王族の護衛や危険な魔物の排除等、重要な役割を担う「白夜の騎士」の一人。\n「竜狩り」をした者としてランターナでは有名で、彼女を題材にした冒険譚が出ているほど。\n凛々しく口数は少なめだが、心根は優しく民想い。",
+  "equipment_tool_trait_ids": [
+    5
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 434012,
+  "extra_skill_ids": [],
+  "fullname": "ユナ・ヴァイツ",
+  "growboard_id": 434011,
+  "id": 43401,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 63,
+    "defense": 47,
+    "hp": 150,
+    "magic": 55,
+    "mental": 47,
+    "speed": 223
+  },
+  "is_alchemist": false,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980121,
+        "combat_power_coefficient": 1500,
+        "condition_ids": [
+          27
+        ]
+      }
+    ],
+    "description": "「騎士」は「物攻・魔攻・物防・魔防+15%」",
+    "name": "白夜の騎士"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "7176586596496405136",
+  "motion_type": 2,
+  "name": "ユナ",
+  "neo_growboard_id": 434013,
+  "normal1_skill_ids": [
+    11000911,
+    11000912,
+    11000913,
+    11000914,
+    11000915
+  ],
+  "normal2_skill_ids": [
+    12000916,
+    12000917,
+    12000918,
+    12000919,
+    12000920
+  ],
+  "original_title_id": 26,
+  "overlay_name": "Juna Waitz",
+  "personality": 2,
+  "profile_voice_text": "私はユナ。王宮に仕える白夜の騎士だ。 \n私の力が必要なら、いつでも力を貸そう",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 5,
+    "slashing": 0,
+    "wind": 0
+  },
+  "result_timeline_hash": "2969868512305661470",
+  "role": 1,
+  "series_id": 10,
+  "sort_name": "ユナ",
+  "start_at": "2024-01-31T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "7953776588146816951",
+      "large_still_path_hash": "8176386482036447049",
+      "narrow_still_path_hash": "3859716943481129994",
+      "rarity": null,
+      "still_path_hash": "6403040722015916711"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    500427,
+    500371,
+    500315,
+    500259,
+    500203,
+    500147,
+    500091,
+    500035
+  ],
+  "support_color_id": 1,
+  "tag_ids": [
+    7,
+    8,
+    11,
+    22
+  ],
+  "trait_color_id": 3,
+  "voice_actor_id": 55,
+  "tag_names": [
+    "ランターナ",
+    "正義と探求",
+    "騎士",
+    "竜狩り"
+  ],
+  "base_character_name": "ユナ",
+  "original_title_name": "レスレリアーナのアトリエ ～忘れられた錬金術と極夜の解放者～",
+  "equipment_tool_trait_names": [
+    "突ダメージ上昇"
+  ],
+  "_skillDetails": {
+    "500035": {
+      "ability_category_type": null,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500035,
+      "name": ""
+    },
+    "500091": {
+      "ability_category_type": null,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500091,
+      "name": ""
+    },
+    "500147": {
+      "ability_category_type": null,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500147,
+      "name": ""
+    },
+    "500203": {
+      "ability_category_type": null,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500203,
+      "name": ""
+    },
+    "500259": {
+      "ability_category_type": null,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500259,
+      "name": ""
+    },
+    "500315": {
+      "ability_category_type": null,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500315,
+      "name": ""
+    },
+    "500371": {
+      "ability_category_type": null,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500371,
+      "name": ""
+    },
+    "500427": {
+      "ability_category_type": null,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500427,
+      "name": ""
+    },
+    "1980121": {
+      "ability_category_type": null,
+      "description": "物攻・魔攻・物防・魔防+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500002,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/物攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500002,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500003,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/魔攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500003,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500004,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500005,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1980121,
+      "name": "白夜の騎士"
+    },
+    "1990148": {
+      "ability_category_type": null,
+      "description": "攻撃対象がブレイク状態の時、スキルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000954,
+          "limit_count": null,
+          "value": 4000,
+          "_detail": {
+            "description": "[自身/攻撃対象がブレイク中/与ダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000954,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990148,
+      "name": "追撃と闘争の力Ⅲ"
+    },
+    "1990149": {
+      "ability_category_type": null,
+      "description": "スキルで撃破時、自身に「物攻+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000955,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/撃破時/物攻アップ(上限30%)]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000955,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990149,
+      "name": "我が刃、一日にして成らず"
+    },
+    "1990414": {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990414,
+      "name": "クリティカルダメージアップⅢ"
+    },
+    "1990439": {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990439,
+      "name": "クリティカルダメージアップⅡ"
+    },
+    "1990464": {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990464,
+      "name": "クリティカルダメージアップⅠ"
+    },
+    "11000911": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 8,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「素早さ+{0}%」を付与(上限10%)",
+      "effects": [
+        {
+          "id": 91001147,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001147,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000911,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインシュペーア",
+      "not_state_change_count_decrease": false,
+      "power": 81,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の素早さアップ",
+      "timeline_hash": "5793467400059290332",
+      "wait": -125
+    },
+    "11000912": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 8,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「素早さ+{0}%」を付与(上限10%)",
+      "effects": [
+        {
+          "id": 91001147,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001147,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000912,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインシュペーア",
+      "not_state_change_count_decrease": false,
+      "power": 86,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の素早さアップ",
+      "timeline_hash": "5793467400059290332",
+      "wait": -125
+    },
+    "11000913": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 9,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「素早さ+{0}%」を付与(上限10%)",
+      "effects": [
+        {
+          "id": 91001147,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001147,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000913,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインシュペーア",
+      "not_state_change_count_decrease": false,
+      "power": 91,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の素早さアップ",
+      "timeline_hash": "5793467400059290332",
+      "wait": -125
+    },
+    "11000914": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 9,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「素早さ+{0}%」を付与(上限10%)",
+      "effects": [
+        {
+          "id": 91001147,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001147,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000914,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインシュペーア",
+      "not_state_change_count_decrease": false,
+      "power": 96,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の素早さアップ",
+      "timeline_hash": "5793467400059290332",
+      "wait": -125
+    },
+    "11000915": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 10,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「素早さ+{0}%」を付与(上限10%)",
+      "effects": [
+        {
+          "id": 91001147,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001147,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000915,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アインシュペーア",
+      "not_state_change_count_decrease": false,
+      "power": 101,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の素早さアップ",
+      "timeline_hash": "5793467400059290332",
+      "wait": -125
+    },
+    "12000916": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 35,
+      "break_power_type": 2,
+      "description": "攻撃前、自身に「スキルダメージ+{0}%」を付与(上限60%)<br>対象のHPが50%未満の時、ダメージ+{1}%",
+      "effects": [
+        {
+          "id": 91001140,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001140,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001141,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001141,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000916,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ツヴァイファング",
+      "not_state_change_count_decrease": false,
+      "power": 261,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のスキルダメージアップ<br>対象のHPが50%未満の時、ダメージアップ",
+      "timeline_hash": "600802463089440072",
+      "wait": 0
+    },
+    "12000917": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 37,
+      "break_power_type": 2,
+      "description": "攻撃前、自身に「スキルダメージ+{0}%」を付与(上限60%)<br>対象のHPが50%未満の時、ダメージ+{1}%",
+      "effects": [
+        {
+          "id": 91001140,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001140,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001141,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001141,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000917,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ツヴァイファング",
+      "not_state_change_count_decrease": false,
+      "power": 277,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のスキルダメージアップ<br>対象のHPが50%未満の時、ダメージアップ",
+      "timeline_hash": "600802463089440072",
+      "wait": 0
+    },
+    "12000918": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 39,
+      "break_power_type": 2,
+      "description": "攻撃前、自身に「スキルダメージ+{0}%」を付与(上限60%)<br>対象のHPが50%未満の時、ダメージ+{1}%",
+      "effects": [
+        {
+          "id": 91001140,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001140,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001141,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001141,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000918,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ツヴァイファング",
+      "not_state_change_count_decrease": false,
+      "power": 293,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のスキルダメージアップ<br>対象のHPが50%未満の時、ダメージアップ",
+      "timeline_hash": "600802463089440072",
+      "wait": 0
+    },
+    "12000919": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 41,
+      "break_power_type": 2,
+      "description": "攻撃前、自身に「スキルダメージ+{0}%」を付与(上限60%)<br>対象のHPが50%未満の時、ダメージ+{1}%",
+      "effects": [
+        {
+          "id": 91001140,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001140,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001141,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001141,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000919,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ツヴァイファング",
+      "not_state_change_count_decrease": false,
+      "power": 309,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のスキルダメージアップ<br>対象のHPが50%未満の時、ダメージアップ",
+      "timeline_hash": "600802463089440072",
+      "wait": 0
+    },
+    "12000920": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 43,
+      "break_power_type": 2,
+      "description": "攻撃前、自身に「スキルダメージ+{0}%」を付与(上限60%)<br>対象のHPが50%未満の時、ダメージ+{1}%",
+      "effects": [
+        {
+          "id": 91001140,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001140,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001141,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001141,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000920,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ツヴァイファング",
+      "not_state_change_count_decrease": false,
+      "power": 326,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のスキルダメージアップ<br>対象のHPが50%未満の時、ダメージアップ",
+      "timeline_hash": "600802463089440072",
+      "wait": 0
+    },
+    "14000921": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "攻撃前、対象の被ダメージDOWN状態を全て解除し、<br>自身に「スキルダメージ+{0}%」を付与(重複不可)<br>対象のHPが50%未満の時、ダメージ+{1}%",
+      "effects": [
+        {
+          "id": 91001143,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001143,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001141,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001141,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001142,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001142,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000921,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ローテ・スピラーレン",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1928876358373741478",
+      "summary": "攻撃前、対象の被ダメDOWNを解除し、自身のスキルダメアップ。対象のHPが50%未満の時、ダメアップ",
+      "timeline_hash": "1803311046920330356",
+      "wait": 0
+    },
+    "14000922": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 79,
+      "break_power_type": 2,
+      "description": "攻撃前、対象の被ダメージDOWN状態を全て解除し、<br>自身に「スキルダメージ+{0}%」を付与(重複不可)<br>対象のHPが50%未満の時、ダメージ+{1}%",
+      "effects": [
+        {
+          "id": 91001143,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001143,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001141,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001141,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001142,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001142,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000922,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ローテ・スピラーレン",
+      "not_state_change_count_decrease": false,
+      "power": 425,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1928876358373741478",
+      "summary": "攻撃前、対象の被ダメDOWNを解除し、自身のスキルダメアップ。対象のHPが50%未満の時、ダメアップ",
+      "timeline_hash": "1803311046920330356",
+      "wait": 0
+    },
+    "14000923": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 84,
+      "break_power_type": 2,
+      "description": "攻撃前、対象の被ダメージDOWN状態を全て解除し、<br>自身に「スキルダメージ+{0}%」を付与(重複不可)<br>対象のHPが50%未満の時、ダメージ+{1}%",
+      "effects": [
+        {
+          "id": 91001143,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001143,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001141,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001141,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001142,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001142,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000923,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ローテ・スピラーレン",
+      "not_state_change_count_decrease": false,
+      "power": 450,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1928876358373741478",
+      "summary": "攻撃前、対象の被ダメDOWNを解除し、自身のスキルダメアップ。対象のHPが50%未満の時、ダメアップ",
+      "timeline_hash": "1803311046920330356",
+      "wait": 0
+    },
+    "14000924": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 88,
+      "break_power_type": 2,
+      "description": "攻撃前、対象の被ダメージDOWN状態を全て解除し、<br>自身に「スキルダメージ+{0}%」を付与(重複不可)<br>対象のHPが50%未満の時、ダメージ+{1}%",
+      "effects": [
+        {
+          "id": 91001143,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001143,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001141,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001141,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001142,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001142,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000924,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ローテ・スピラーレン",
+      "not_state_change_count_decrease": false,
+      "power": 475,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1928876358373741478",
+      "summary": "攻撃前、対象の被ダメDOWNを解除し、自身のスキルダメアップ。対象のHPが50%未満の時、ダメアップ",
+      "timeline_hash": "1803311046920330356",
+      "wait": 0
+    },
+    "14000925": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        3
+      ],
+      "break_power": 93,
+      "break_power_type": 2,
+      "description": "攻撃前、対象の被ダメージDOWN状態を全て解除し、<br>自身に「スキルダメージ+{0}%」を付与(重複不可)<br>対象のHPが50%未満の時、ダメージ+{1}%",
+      "effects": [
+        {
+          "id": 91001143,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001143,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001141,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001141,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001142,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001142,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000925,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ローテ・スピラーレン",
+      "not_state_change_count_decrease": false,
+      "power": 500,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1928876358373741478",
+      "summary": "攻撃前、対象の被ダメDOWNを解除し、自身のスキルダメアップ。対象のHPが50%未満の時、ダメアップ",
+      "timeline_hash": "1803311046920330356",
+      "wait": 0
+    }
+  }
+}

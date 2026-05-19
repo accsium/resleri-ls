@@ -1,0 +1,1624 @@
+{
+  "ability_ids": [
+    1990048,
+    1990049
+  ],
+  "acquisition_movie_path_hash": "6170143136270324366",
+  "acquisition_text": "私が何者なのかはまだ分からない\nでも、私がすべきことは見えてきた――！",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【Secret Amnesia】",
+  "attack_attributes": [
+    1
+  ],
+  "base_character_id": 432,
+  "battle_tool_trait_ids": [
+    2,
+    14
+  ],
+  "board_ability1_ids": [
+    1990464,
+    1990439,
+    1990414
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    14000236,
+    14000236,
+    14000236,
+    14000237,
+    14000238,
+    14000239,
+    14000240
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 943202,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "強く美しき戦士。\n戦うことが大好きで、戦闘になると一段と熱が入る。激しい戦いで服が破けてしまうこともあるが、同居人のフロッケに直してもらっている。\n本気を出す時は上着を脱ぎ捨て、身軽になって敵へ立ち向かう。その分守りも薄くなるが、やられる前にやるのが彼女の信条だ。",
+  "equipment_tool_trait_ids": [
+    3
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 432022,
+  "extra_skill_ids": [],
+  "fullname": "ヴァレリア",
+  "growboard_id": 432021,
+  "id": 43202,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 65,
+    "defense": 49,
+    "hp": 148,
+    "magic": 55,
+    "mental": 43,
+    "speed": 260
+  },
+  "is_alchemist": true,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980013,
+        "combat_power_coefficient": 2500,
+        "condition_ids": [
+          56
+        ]
+      }
+    ],
+    "description": "「家族と友情」は「スキルダメージ・ブレイクダメージ+30%」",
+    "name": "裏社会で生きる者"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "2039589832101761418",
+  "motion_type": 2,
+  "name": "ヴァレリア",
+  "neo_growboard_id": 432023,
+  "normal1_skill_ids": [
+    11000226,
+    11000227,
+    11000228,
+    11000229,
+    11000230
+  ],
+  "normal2_skill_ids": [
+    12000231,
+    12000232,
+    12000233,
+    12000234,
+    12000235
+  ],
+  "original_title_id": 26,
+  "overlay_name": "Valeria",
+  "personality": 2,
+  "profile_voice_text": "ヴァレリアよ。小難しいことは苦手だけど、\n魔物との戦いは任せておいて",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 5,
+    "wind": 0
+  },
+  "result_timeline_hash": "5853745683135038918",
+  "role": 1,
+  "series_id": 10,
+  "sort_name": "ヴァレリア",
+  "start_at": "2023-10-10T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "7408448768912979597",
+      "large_still_path_hash": "9012543528761193843",
+      "narrow_still_path_hash": "1559960575078340893",
+      "rarity": null,
+      "still_path_hash": "7806631544007708682"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    500425,
+    500369,
+    500313,
+    500257,
+    500201,
+    500145,
+    500089,
+    500033
+  ],
+  "support_color_id": 5,
+  "tag_ids": [
+    7,
+    10,
+    25,
+    27
+  ],
+  "trait_color_id": 1,
+  "voice_actor_id": 2,
+  "tag_names": [
+    "ランターナ",
+    "家族と友情",
+    "ずぼら",
+    "マイペース"
+  ],
+  "base_character_name": "ヴァレリア",
+  "original_title_name": "レスレリアーナのアトリエ ～忘れられた錬金術と極夜の解放者～",
+  "equipment_tool_trait_names": [
+    "斬ダメージ上昇"
+  ],
+  "_skillDetails": {
+    "500033": {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性かつブレイカーの時、攻撃前、対象に「斬属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500033,
+          "limit_count": 1,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が斬属性かつブレイカーの時、攻撃前、対象に斬属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500033,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500033,
+      "name": ""
+    },
+    "500089": {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性かつブレイカーの時、攻撃前、対象に「斬属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500033,
+          "limit_count": 1,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が斬属性かつブレイカーの時、攻撃前、対象に斬属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500033,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500089,
+      "name": ""
+    },
+    "500145": {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性かつブレイカーの時、攻撃前、対象に「斬属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500033,
+          "limit_count": 1,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が斬属性かつブレイカーの時、攻撃前、対象に斬属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500033,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500145,
+      "name": ""
+    },
+    "500201": {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性かつブレイカーの時、攻撃前、対象に「斬属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500033,
+          "limit_count": 1,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が斬属性かつブレイカーの時、攻撃前、対象に斬属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500033,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500201,
+      "name": ""
+    },
+    "500257": {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性かつブレイカーの時、攻撃前、対象に「斬属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500033,
+          "limit_count": 1,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が斬属性かつブレイカーの時、攻撃前、対象に斬属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500033,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500257,
+      "name": ""
+    },
+    "500313": {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性かつブレイカーの時、攻撃前、対象に「斬属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500033,
+          "limit_count": 1,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が斬属性かつブレイカーの時、攻撃前、対象に斬属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500033,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500313,
+      "name": ""
+    },
+    "500369": {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性かつブレイカーの時、攻撃前、対象に「斬属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500033,
+          "limit_count": 1,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が斬属性かつブレイカーの時、攻撃前、対象に斬属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500033,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500369,
+      "name": ""
+    },
+    "500425": {
+      "ability_category_type": null,
+      "description": "得意属性が斬属性かつブレイカーの時、攻撃前、対象に「斬属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500033,
+          "limit_count": 1,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が斬属性かつブレイカーの時、攻撃前、対象に斬属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500033,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500425,
+      "name": ""
+    },
+    "1980013": {
+      "ability_category_type": null,
+      "description": "スキルダメージ・ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500051,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/スキルダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500051,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500052,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/ブレイクダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500052,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1980013,
+      "name": "裏社会で生きる者"
+    },
+    "1990048": {
+      "ability_category_type": null,
+      "description": "スキルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000901,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/ダメージバフ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000901,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990048,
+      "name": "闘争の力"
+    },
+    "1990049": {
+      "ability_category_type": null,
+      "description": "挑発耐性+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001067,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/挑発耐性上昇付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001067,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990049,
+      "name": "レジストアップ挑発"
+    },
+    "1990414": {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990414,
+      "name": "クリティカルダメージアップⅢ"
+    },
+    "1990439": {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990439,
+      "name": "クリティカルダメージアップⅡ"
+    },
+    "1990464": {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990464,
+      "name": "クリティカルダメージアップⅠ"
+    },
+    "11000226": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001022,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000226,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "黒の風",
+      "not_state_change_count_decrease": false,
+      "power": 53,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、マイナス効果無効を付与",
+      "timeline_hash": "8935890799128208988",
+      "wait": -100
+    },
+    "11000227": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001022,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000227,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "黒の風",
+      "not_state_change_count_decrease": false,
+      "power": 56,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、マイナス効果無効を付与",
+      "timeline_hash": "8935890799128208988",
+      "wait": -100
+    },
+    "11000228": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001022,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000228,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "黒の風",
+      "not_state_change_count_decrease": false,
+      "power": 59,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、マイナス効果無効を付与",
+      "timeline_hash": "8935890799128208988",
+      "wait": -100
+    },
+    "11000229": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 5,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001022,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000229,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "黒の風",
+      "not_state_change_count_decrease": false,
+      "power": 62,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、マイナス効果無効を付与",
+      "timeline_hash": "8935890799128208988",
+      "wait": -100
+    },
+    "11000230": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身に「マイナス効果無効」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001022,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11000230,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "黒の風",
+      "not_state_change_count_decrease": false,
+      "power": 66,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、マイナス効果無効を付与",
+      "timeline_hash": "8935890799128208988",
+      "wait": -100
+    },
+    "12000231": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 22,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「物攻・魔攻・素早さ+{0}%」を1回行動終了するまで付与し、<br>自身に「物防・魔防+{1}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001018,
+          "value": 1000,
+          "_detail": {
+            "description": "物攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001018,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001019,
+          "value": 1000,
+          "_detail": {
+            "description": "物防アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 1000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001021,
+          "value": 1000,
+          "_detail": {
+            "description": "魔防アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001017,
+          "value": 1000,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000231,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "つららの舞",
+      "not_state_change_count_decrease": false,
+      "power": 192,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身にステータスアップ",
+      "timeline_hash": "2608239604565856712",
+      "wait": -25
+    },
+    "12000232": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 23,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「物攻・魔攻・素早さ+{0}%」を1回行動終了するまで付与し、<br>自身に「物防・魔防+{1}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001018,
+          "value": 1000,
+          "_detail": {
+            "description": "物攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001018,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001019,
+          "value": 1000,
+          "_detail": {
+            "description": "物防アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 1000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001021,
+          "value": 1000,
+          "_detail": {
+            "description": "魔防アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001017,
+          "value": 1000,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000232,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "つららの舞",
+      "not_state_change_count_decrease": false,
+      "power": 204,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身にステータスアップ",
+      "timeline_hash": "2608239604565856712",
+      "wait": -25
+    },
+    "12000233": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 24,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「物攻・魔攻・素早さ+{0}%」を1回行動終了するまで付与し、<br>自身に「物防・魔防+{1}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001018,
+          "value": 1000,
+          "_detail": {
+            "description": "物攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001018,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001019,
+          "value": 1000,
+          "_detail": {
+            "description": "物防アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 1000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001021,
+          "value": 1000,
+          "_detail": {
+            "description": "魔防アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001017,
+          "value": 1000,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000233,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "つららの舞",
+      "not_state_change_count_decrease": false,
+      "power": 216,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身にステータスアップ",
+      "timeline_hash": "2608239604565856712",
+      "wait": -25
+    },
+    "12000234": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 25,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「物攻・魔攻・素早さ+{0}%」を1回行動終了するまで付与し、<br>自身に「物防・魔防+{1}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001018,
+          "value": 1000,
+          "_detail": {
+            "description": "物攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001018,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001019,
+          "value": 1000,
+          "_detail": {
+            "description": "物防アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 1000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001021,
+          "value": 1000,
+          "_detail": {
+            "description": "魔防アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001017,
+          "value": 1000,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000234,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "つららの舞",
+      "not_state_change_count_decrease": false,
+      "power": 228,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身にステータスアップ",
+      "timeline_hash": "2608239604565856712",
+      "wait": -25
+    },
+    "12000235": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 27,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「物攻・魔攻・素早さ+{0}%」を1回行動終了するまで付与し、<br>自身に「物防・魔防+{1}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001018,
+          "value": 1000,
+          "_detail": {
+            "description": "物攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001018,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001019,
+          "value": 1000,
+          "_detail": {
+            "description": "物防アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001019,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 1000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001021,
+          "value": 1000,
+          "_detail": {
+            "description": "魔防アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001021,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001017,
+          "value": 1000,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12000235,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "つららの舞",
+      "not_state_change_count_decrease": false,
+      "power": 240,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身にステータスアップ",
+      "timeline_hash": "2608239604565856712",
+      "wait": -25
+    },
+    "14000236": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "自身に付与されている強化効果の数に応じ、ダメージ+10〜120%(1〜20個で多いほど増加)<br>※バトル開始時に発動した回数制限のない強化効果は含まない",
+      "effects": [
+        {
+          "id": 91001026,
+          "value": 11000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001055,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001055,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000236,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "夜のとばり",
+      "not_state_change_count_decrease": false,
+      "power": 400,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1494856728732088",
+      "summary": "自身に付与されている強化効果の数が多いほどダメージアップ",
+      "timeline_hash": "4389972694816806142",
+      "wait": 0
+    },
+    "14000237": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 79,
+      "break_power_type": 2,
+      "description": "自身に付与されている強化効果の数に応じ、ダメージ+10〜120%(1〜20個で多いほど増加)<br>※バトル開始時に発動した回数制限のない強化効果は含まない",
+      "effects": [
+        {
+          "id": 91001026,
+          "value": 11000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001055,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001055,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000237,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "夜のとばり",
+      "not_state_change_count_decrease": false,
+      "power": 425,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1494856728732088",
+      "summary": "自身に付与されている強化効果の数が多いほどダメージアップ",
+      "timeline_hash": "4389972694816806142",
+      "wait": 0
+    },
+    "14000238": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 84,
+      "break_power_type": 2,
+      "description": "自身に付与されている強化効果の数に応じ、ダメージ+10〜120%(1〜20個で多いほど増加)<br>※バトル開始時に発動した回数制限のない強化効果は含まない",
+      "effects": [
+        {
+          "id": 91001026,
+          "value": 11000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001055,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001055,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000238,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "夜のとばり",
+      "not_state_change_count_decrease": false,
+      "power": 450,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1494856728732088",
+      "summary": "自身に付与されている強化効果の数が多いほどダメージアップ",
+      "timeline_hash": "4389972694816806142",
+      "wait": 0
+    },
+    "14000239": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 88,
+      "break_power_type": 2,
+      "description": "自身に付与されている強化効果の数に応じ、ダメージ+10〜120%(1〜20個で多いほど増加)<br>※バトル開始時に発動した回数制限のない強化効果は含まない",
+      "effects": [
+        {
+          "id": 91001026,
+          "value": 11000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001055,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001055,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000239,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "夜のとばり",
+      "not_state_change_count_decrease": false,
+      "power": 475,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1494856728732088",
+      "summary": "自身に付与されている強化効果の数が多いほどダメージアップ",
+      "timeline_hash": "4389972694816806142",
+      "wait": 0
+    },
+    "14000240": {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 93,
+      "break_power_type": 2,
+      "description": "自身に付与されている強化効果の数に応じ、ダメージ+10〜120%(1〜20個で多いほど増加)<br>※バトル開始時に発動した回数制限のない強化効果は含まない",
+      "effects": [
+        {
+          "id": 91001026,
+          "value": 11000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001026,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001055,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001055,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000240,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "夜のとばり",
+      "not_state_change_count_decrease": false,
+      "power": 500,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1494856728732088",
+      "summary": "自身に付与されている強化効果の数が多いほどダメージアップ",
+      "timeline_hash": "4389972694816806142",
+      "wait": 0
+    }
+  }
+}

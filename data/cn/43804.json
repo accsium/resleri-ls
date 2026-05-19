@@ -1,0 +1,1658 @@
+{
+  "ability_ids": [
+    1990356,
+    1990357
+  ],
+  "acquisition_movie_path_hash": "8592706968087629743",
+  "acquisition_text": "流れ星への誓い、果たしたよ！\n騎士の姿、しっかり目に焼きつけてね！",
+  "active1_skill_id": null,
+  "active2_skill_id": null,
+  "active3_skill_id": null,
+  "all_skill_evolved_ability_ids": [],
+  "another_name": "【Knight's Beginning】",
+  "attack_attributes": [
+    8
+  ],
+  "base_character_id": 438,
+  "battle_tool_trait_ids": [
+    5,
+    20
+  ],
+  "board_ability1_ids": [
+    1990464,
+    1990439,
+    1990414
+  ],
+  "board_ability2_ids": [],
+  "board_ability3_ids": [],
+  "burst_skill_ids": [
+    14002812,
+    14002812,
+    14002812,
+    14002813,
+    14002814,
+    14002815,
+    14002816
+  ],
+  "can_use_battle_tool_mix": false,
+  "change": null,
+  "character_growth_id": 943804,
+  "character_size_id": 2,
+  "default_skin_id": null,
+  "description": "レスナの幼馴染で、王国騎士団に所属する獣人の少女。\n幼い頃からの憧れである騎士になる夢を叶え、錬金術士レスナの護衛として旅に同行している。\n騎士となり成長したが、天真爛漫なところは変わらない。\n鍛冶屋の娘で、両手に持ったハンマーを武器に戦う。",
+  "equipment_tool_trait_ids": [
+    60
+  ],
+  "evolved_burst_skill_ids": [],
+  "evolved_normal1_skill_ids": [],
+  "evolved_normal2_skill_ids": [],
+  "ex_growboard_id": 438042,
+  "extra_skill_ids": [],
+  "fullname": "イザナ・ココシュカ",
+  "growboard_id": 438041,
+  "id": 43804,
+  "initial_rarity": 3,
+  "initial_status": {
+    "attack": 65,
+    "defense": 51,
+    "hp": 187,
+    "magic": 78,
+    "mental": 56,
+    "speed": 227
+  },
+  "is_alchemist": false,
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980194,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          11
+        ]
+      }
+    ],
+    "description": "得意属性が風属性のキャラは「スキルダメージ・クリティカルダメージ+50%」",
+    "name": "ハンマーの風を受けよっ！"
+  },
+  "max_rarity": 7,
+  "model_path_hash": "7061794453237574237",
+  "motion_type": 2,
+  "name": "イザナ",
+  "neo_growboard_id": 438043,
+  "normal1_skill_ids": [
+    11002802,
+    11002803,
+    11002804,
+    11002805,
+    11002806
+  ],
+  "normal2_skill_ids": [
+    12002807,
+    12002808,
+    12002809,
+    12002810,
+    12002811
+  ],
+  "original_title_id": 27,
+  "overlay_name": "Izana Kokoschka",
+  "personality": 3,
+  "profile_voice_text": "ランターナ王国騎士団のイザナであります！\n……えへへ、よろしくね！",
+  "resistance": {
+    "fire": 0,
+    "ice": 0,
+    "impact": 0,
+    "lightning": 0,
+    "piercing": 0,
+    "slashing": 0,
+    "wind": 5
+  },
+  "result_timeline_hash": "1148901633611689225",
+  "role": 1,
+  "series_id": 10,
+  "sort_name": "イザナ",
+  "start_at": "2025-05-30T03:00:00.000Z",
+  "still_sets": [
+    {
+      "large_narrow_still_path_hash": "3394338531070875012",
+      "large_still_path_hash": "5174959600311403047",
+      "narrow_still_path_hash": "6834104849599590494",
+      "rarity": null,
+      "still_path_hash": "7010833269667927555"
+    },
+    {
+      "large_narrow_still_path_hash": 0,
+      "large_still_path_hash": 0,
+      "narrow_still_path_hash": 0,
+      "rarity": null,
+      "still_path_hash": 0
+    }
+  ],
+  "support_ability_ids": [
+    500417,
+    500361,
+    500305,
+    500249,
+    500193,
+    500137,
+    500081,
+    500025
+  ],
+  "support_color_id": 5,
+  "tag_ids": [
+    7,
+    9,
+    11,
+    26
+  ],
+  "trait_color_id": 3,
+  "voice_actor_id": 40,
+  "tag_names": [
+    "ランターナ",
+    "約束と協力",
+    "騎士",
+    "天然"
+  ],
+  "base_character_name": "イザナ",
+  "original_title_name": "レスレリアーナのアトリエ ～千の国々と万物の管理者～",
+  "equipment_tool_trait_names": [
+    "クリティカルダメージ上昇"
+  ],
+  "_skillDetails": {
+    "500025": {
+      "ability_category_type": null,
+      "description": "得意属性が風属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500025,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500025,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500025,
+      "name": ""
+    },
+    "500081": {
+      "ability_category_type": null,
+      "description": "得意属性が風属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500025,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500025,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500081,
+      "name": ""
+    },
+    "500137": {
+      "ability_category_type": null,
+      "description": "得意属性が風属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500025,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500025,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500137,
+      "name": ""
+    },
+    "500193": {
+      "ability_category_type": null,
+      "description": "得意属性が風属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500025,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500025,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500193,
+      "name": ""
+    },
+    "500249": {
+      "ability_category_type": null,
+      "description": "得意属性が風属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500025,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500025,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500249,
+      "name": ""
+    },
+    "500305": {
+      "ability_category_type": null,
+      "description": "得意属性が風属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500025,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500025,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500305,
+      "name": ""
+    },
+    "500361": {
+      "ability_category_type": null,
+      "description": "得意属性が風属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500025,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500025,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500361,
+      "name": ""
+    },
+    "500417": {
+      "ability_category_type": null,
+      "description": "得意属性が風属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500025,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500025,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 500417,
+      "name": ""
+    },
+    "1980194": {
+      "ability_category_type": null,
+      "description": "得意属性が風属性のキャラは「スキルダメージ・クリティカルダメージ+{0}%」",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500051,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "[自身/スキルダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500051,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500008,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "[自身/常時/クリティカルダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500008,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1980194,
+      "name": "ハンマーの風を受けよっ！"
+    },
+    "1990356": {
+      "ability_category_type": null,
+      "description": "1回目のターン開始時、自身のパネルをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001318,
+          "limit_count": null,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001318,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001319,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001319,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990356,
+      "name": "輝く騎士のハンマー"
+    },
+    "1990357": {
+      "ability_category_type": null,
+      "description": "自身のクリティカル確率が100%を超えている場合、攻撃時、100%を超えたクリティカル確率の上昇量をスキル威力に変換(変換上限200%)<br>WEAK攻撃時、自身に「クリティカル確率+{0}%」を付与(上限200%)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001311,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001311,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001310,
+          "limit_count": null,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001310,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990357,
+      "name": "アタシの進化は止まらない！"
+    },
+    "1990414": {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990414,
+      "name": "クリティカルダメージアップⅢ"
+    },
+    "1990439": {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990439,
+      "name": "クリティカルダメージアップⅡ"
+    },
+    "1990464": {
+      "ability_category_type": 1,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 1990464,
+      "name": "クリティカルダメージアップⅠ"
+    },
+    "11002802": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 8,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001708,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001708,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001746,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001746,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002802,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アコレードスタンプ",
+      "not_state_change_count_decrease": false,
+      "power": 118,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "1998443959229036665",
+      "wait": -100
+    },
+    "11002803": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 8,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001708,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001708,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001746,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001746,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002803,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アコレードスタンプ",
+      "not_state_change_count_decrease": false,
+      "power": 125,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "1998443959229036665",
+      "wait": -100
+    },
+    "11002804": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 9,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001708,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001708,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001746,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001746,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002804,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アコレードスタンプ",
+      "not_state_change_count_decrease": false,
+      "power": 132,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "1998443959229036665",
+      "wait": -100
+    },
+    "11002805": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 9,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001708,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001708,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001746,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001746,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002805,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アコレードスタンプ",
+      "not_state_change_count_decrease": false,
+      "power": 139,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "1998443959229036665",
+      "wait": -100
+    },
+    "11002806": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 10,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を1回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001708,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001708,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001746,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001746,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002806,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アコレードスタンプ",
+      "not_state_change_count_decrease": false,
+      "power": 147,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+      "timeline_hash": "1998443959229036665",
+      "wait": -100
+    },
+    "12002807": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 33,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+{0}%<br>クリティカル攻撃時、自身に「魔攻+{1}%」を2回行動終了するまで付与<br>攻撃後、自身に「スキルダメージ+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001480,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001480,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002807,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シバルリーノック",
+      "not_state_change_count_decrease": false,
+      "power": 347,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>クリティカル攻撃時、自身の魔攻アップ<br>攻撃後、自身のスキルダメージアップ",
+      "timeline_hash": "4867014053969006571",
+      "wait": 0
+    },
+    "12002808": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 35,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+{0}%<br>クリティカル攻撃時、自身に「魔攻+{1}%」を2回行動終了するまで付与<br>攻撃後、自身に「スキルダメージ+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001480,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001480,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002808,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シバルリーノック",
+      "not_state_change_count_decrease": false,
+      "power": 368,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>クリティカル攻撃時、自身の魔攻アップ<br>攻撃後、自身のスキルダメージアップ",
+      "timeline_hash": "4867014053969006571",
+      "wait": 0
+    },
+    "12002809": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 37,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+{0}%<br>クリティカル攻撃時、自身に「魔攻+{1}%」を2回行動終了するまで付与<br>攻撃後、自身に「スキルダメージ+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001480,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001480,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002809,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シバルリーノック",
+      "not_state_change_count_decrease": false,
+      "power": 390,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>クリティカル攻撃時、自身の魔攻アップ<br>攻撃後、自身のスキルダメージアップ",
+      "timeline_hash": "4867014053969006571",
+      "wait": 0
+    },
+    "12002810": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 39,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+{0}%<br>クリティカル攻撃時、自身に「魔攻+{1}%」を2回行動終了するまで付与<br>攻撃後、自身に「スキルダメージ+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001480,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001480,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002810,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シバルリーノック",
+      "not_state_change_count_decrease": false,
+      "power": 411,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>クリティカル攻撃時、自身の魔攻アップ<br>攻撃後、自身のスキルダメージアップ",
+      "timeline_hash": "4867014053969006571",
+      "wait": 0
+    },
+    "12002811": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 41,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+{0}%<br>クリティカル攻撃時、自身に「魔攻+{1}%」を2回行動終了するまで付与<br>攻撃後、自身に「スキルダメージ+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 7500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001480,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001480,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002811,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シバルリーノック",
+      "not_state_change_count_decrease": false,
+      "power": 433,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>クリティカル攻撃時、自身の魔攻アップ<br>攻撃後、自身のスキルダメージアップ",
+      "timeline_hash": "4867014053969006571",
+      "wait": 0
+    },
+    "14002812": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 75,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+{0}%<br>クリティカル攻撃時、自身に「魔攻+{1}%」を1回行動終了するまで付与<br>攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>自身に「スキルダメージ+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001747,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001747,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002812,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "パルヴァライズインパクト",
+      "not_state_change_count_decrease": false,
+      "power": 504,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "2647418467765289028",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>クリティカル攻撃時、自身の魔攻アップ<br>攻撃後、対象にスタンを超高確率で付与<br>自身のスキルダメージアップ",
+      "timeline_hash": "8695092861916818868",
+      "wait": 0
+    },
+    "14002813": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 79,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+{0}%<br>クリティカル攻撃時、自身に「魔攻+{1}%」を1回行動終了するまで付与<br>攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>自身に「スキルダメージ+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001747,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001747,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002813,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "パルヴァライズインパクト",
+      "not_state_change_count_decrease": false,
+      "power": 535,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "2647418467765289028",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>クリティカル攻撃時、自身の魔攻アップ<br>攻撃後、対象にスタンを超高確率で付与<br>自身のスキルダメージアップ",
+      "timeline_hash": "8695092861916818868",
+      "wait": 0
+    },
+    "14002814": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 84,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+{0}%<br>クリティカル攻撃時、自身に「魔攻+{1}%」を1回行動終了するまで付与<br>攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>自身に「スキルダメージ+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001747,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001747,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002814,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "パルヴァライズインパクト",
+      "not_state_change_count_decrease": false,
+      "power": 567,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "2647418467765289028",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>クリティカル攻撃時、自身の魔攻アップ<br>攻撃後、対象にスタンを超高確率で付与<br>自身のスキルダメージアップ",
+      "timeline_hash": "8695092861916818868",
+      "wait": 0
+    },
+    "14002815": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 88,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+{0}%<br>クリティカル攻撃時、自身に「魔攻+{1}%」を1回行動終了するまで付与<br>攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>自身に「スキルダメージ+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001747,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001747,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002815,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "パルヴァライズインパクト",
+      "not_state_change_count_decrease": false,
+      "power": 598,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "2647418467765289028",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>クリティカル攻撃時、自身の魔攻アップ<br>攻撃後、対象にスタンを超高確率で付与<br>自身のスキルダメージアップ",
+      "timeline_hash": "8695092861916818868",
+      "wait": 0
+    },
+    "14002816": {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        8
+      ],
+      "break_power": 93,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+{0}%<br>クリティカル攻撃時、自身に「魔攻+{1}%」を1回行動終了するまで付与<br>攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>自身に「スキルダメージ+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001747,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001747,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002816,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "パルヴァライズインパクト",
+      "not_state_change_count_decrease": false,
+      "power": 630,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "2647418467765289028",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>クリティカル攻撃時、自身の魔攻アップ<br>攻撃後、対象にスタンを超高確率で付与<br>自身のスキルダメージアップ",
+      "timeline_hash": "8695092861916818868",
+      "wait": 0
+    }
+  }
+}
