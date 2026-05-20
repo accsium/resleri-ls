@@ -128,7 +128,6 @@ function buildSkillDetails(character) {
   return details;
 }
 
-// 技能位类型定义
 const SKILL_TYPE_MAP = {
   normal1: { idsField: 'normal1_skill_ids', evolvedField: 'evolved_normal1_skill_ids' },
   normal2: { idsField: 'normal2_skill_ids', evolvedField: 'evolved_normal2_skill_ids' },
@@ -138,7 +137,6 @@ const SKILL_TYPE_MAP = {
   active3: { idsField: 'active3_skill_id',     evolvedField: null },
 };
 
-// 构建技能组数组
 function buildSkillsArray(character, skillDetails) {
   const skillsArray = [];
   for (const [type, fields] of Object.entries(SKILL_TYPE_MAP)) {
@@ -187,7 +185,6 @@ function buildLocalizedChar(character, lang) {
 
   char._skillDetails = buildSkillDetails(character);
 
-  // 为技能添加 target_name
   const targetMap = maps.skill_target_type;
   if (targetMap && char._skillDetails) {
     for (const id in char._skillDetails) {
@@ -198,13 +195,11 @@ function buildLocalizedChar(character, lang) {
     }
   }
 
-  // 生成技能组数组（不含 EX 技能）
   char._skills = buildSkillsArray(char, char._skillDetails);
 
-  // ---------- 处理 EX 技能 ----------
   const extraIds = char.extra_skill_ids || [];
   const normalEx = [];
-  const rangeGroups = {}; // { groupName: { skill1: [...ids], skill2: [...ids] } }
+  const rangeGroups = {};
 
   const charRules = exRules.filter(r => {
     if (!r.character_ids) return false;
@@ -224,7 +219,7 @@ function buildLocalizedChar(character, lang) {
     const group = matchedRule ? matchedRule.group : null;
 
     if (action === 'hide') {
-      // 不加入任何列表
+      // skip
     } else if (action === 'skill1_inrange') {
       if (!rangeGroups[group]) rangeGroups[group] = { skill1: [], skill2: [] };
       rangeGroups[group].skill1.push(skillId);
@@ -242,10 +237,7 @@ function buildLocalizedChar(character, lang) {
     const skill1Levels = data.skill1.map(id => char._skillDetails[id]).filter(Boolean);
     const skill2Levels = data.skill2.map(id => char._skillDetails[id]).filter(Boolean);
     if (skill1Levels.length > 0 || skill2Levels.length > 0) {
-      char._rangeSkills[group] = {
-        skill1: skill1Levels,
-        skill2: skill2Levels
-      };
+      char._rangeSkills[group] = { skill1: skill1Levels, skill2: skill2Levels };
     }
   }
 
@@ -266,7 +258,7 @@ function buildIndexEntry(character, lang) {
     tag_names: (character.tag_ids || []).map(id => maps.character_tag?.get(id) || `ID:${id}`),
     attack_attribute_names: (character.attack_attributes || []).map(id => maps.attack_attribute?.get(id) || `ID:${id}`),
     role_name: maps.role?.get(character.role) || `ID:${character.role}`,
-    transform_to: transformMap[character.id] || null,  // 新增
+    transform_to: transformMap[character.id] || null,   // 指向变身前角色（切换目标）
   };
 }
 
@@ -276,7 +268,7 @@ if (!tables.character) {
   process.exit(1);
 }
 
-// 读取排除角色列表
+// 读取排除列表
 const excludeFile = path.join(__dirname, '..', 'config', 'exclude.txt');
 let excludeIds = new Set();
 if (fs.existsSync(excludeFile)) {
@@ -288,26 +280,26 @@ if (fs.existsSync(excludeFile)) {
   console.log(`📋 已加载排除角色 ID：${excludeIds.size} 个`);
 }
 
-// 读取变身映射
+// 读取变身映射（ from: 变身后（列表显示）, to: 变身前（切换目标） ）
 const transformFile = path.join(__dirname, '..', 'config', 'transform.json');
-let transformMap = {};
-let hiddenIds = new Set();
+let transformMap = {};   // 变身后ID -> 变身前ID
 if (fs.existsSync(transformFile)) {
   const transforms = JSON.parse(fs.readFileSync(transformFile, 'utf-8'));
   transforms.forEach(t => {
     transformMap[t.from] = t.to;
-    if (excludeIds.has(t.to)) {
-      excludeIds.delete(t.to);
-      hiddenIds.add(t.to);
+    // 确认变身前ID已在排除列表中（如果不在，自动添加？最好手动确保）
+    if (!excludeIds.has(t.to)) {
+      console.warn(`⚠️ 变身目标 ${t.to} 不在排除列表中，将不会被隐藏`);
     }
   });
   console.log(`🔄 已加载变身映射：${Object.keys(transformMap).length} 组`);
 }
 
-// 过滤角色（排除列表和隐藏 ID 都会生成文件，但只有排除列表不生成索引）
+// 过滤角色：排除列表中的角色都不加入索引，但生成文件（用于切换查看）
 let characters = Array.from(tables.character.values()).filter(c => !excludeIds.has(c.id));
-console.log(`👥 有效角色数量：${characters.length}（共 ${tables.character.size} 个，排除 ${tables.character.size - characters.length} 个）`);
+console.log(`👥 有效角色数量：${characters.length}（共 ${tables.character.size} 个）`);
 
+// 生成两种语言
 ['jp', 'cn'].forEach(lang => {
   const langDir = path.join(publicDataDir, lang);
   if (fs.existsSync(langDir)) {
@@ -316,8 +308,8 @@ console.log(`👥 有效角色数量：${characters.length}（共 ${tables.chara
   fs.mkdirSync(langDir, { recursive: true });
 
   const index = [];
-  // 所有角色（包括 hiddenIds）都生成文件，但只有非 hidden 的加入索引
-  const allChars = Array.from(tables.character.values()).filter(c => !excludeIds.has(c.id));
+  // 所有角色（包括排除的角色）都要生成文件，供切换查看
+  const allChars = Array.from(tables.character.values());
   allChars.forEach(char => {
     const localizedChar = buildLocalizedChar(char, lang);
     fs.writeFileSync(
@@ -325,7 +317,8 @@ console.log(`👥 有效角色数量：${characters.length}（共 ${tables.chara
       JSON.stringify(localizedChar, null, 2),
       'utf-8'
     );
-    if (!hiddenIds.has(char.id)) {
+    // 只有非排除角色加入索引
+    if (!excludeIds.has(char.id)) {
       index.push(buildIndexEntry(char, lang));
     }
   });
@@ -336,5 +329,5 @@ console.log(`👥 有效角色数量：${characters.length}（共 ${tables.chara
     'utf-8'
   );
 
-  console.log(`✅ [${lang}] 已生成 ${allChars.length} 个角色文件，索引包含 ${index.length} 个角色`);
+  console.log(`✅ [${lang}] 已生成 ${allChars.length} 个文件，索引包含 ${index.length} 个角色`);
 });
