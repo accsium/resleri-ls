@@ -8,6 +8,7 @@ const UI_TEXT = {
     base: 'ベース',
     series: 'シリーズ',
     releaseDate: '実装日',
+    joinDate: '加入日',
     attribute: '属性',
     role: 'ロール',
     alchemist: '錬金術士',
@@ -32,7 +33,7 @@ const UI_TEXT = {
       active1: 'アクティブ1', active2: 'アクティブ2', active3: 'アクティブ3',
       extra: 'EXスキル'
     },
-    statLabels: { hp: 'HP', attack: '物攻', magic: '魔攻', defense: '物防', mental: '魔防', speed: '速度' },
+    statLabels: { hp: 'HP', speed: '速度', attack: '物攻', defense: '物防', magic: '魔攻', mental: '魔防' },
     abilityTitle: '能力',
     supportAbilityTitle: '亜空支援能力',
     rarityLabel: ['1星','2星','3星','3.5星','4星','4.5星','5星','6星'],
@@ -50,6 +51,7 @@ const UI_TEXT = {
     base: '原型',
     series: '系列',
     releaseDate: '实装日期',
+    joinDate: '加入日期',
     attribute: '属性',
     role: '职业',
     alchemist: '炼金术士',
@@ -74,7 +76,7 @@ const UI_TEXT = {
       active1: '主动1', active2: '主动2', active3: '主动3',
       extra: 'EX技能'
     },
-    statLabels: { hp: 'HP', attack: '物攻', magic: '魔攻', defense: '物防', mental: '魔防', speed: '速度' },
+    statLabels: { hp: 'HP', speed: '速度', attack: '物攻', defense: '物防', magic: '魔攻', mental: '魔防' },
     abilityTitle: '能力',
     supportAbilityTitle: '亚空支援能力',
     rarityLabel: ['1星','2星','3星','3.5星','4星','4.5星','5星','6星'],
@@ -257,7 +259,7 @@ function createCard(indexEntry) {
       <span style="color:${getColorHex(supportColorName)}">${supportColorName || '?'}</span>
     </div>` : '';
 
-  // 基础属性小卡片（顺序：hp, speed, attack, defense, magic, mental）
+  // 基础属性小卡片：hp 速度 物攻 物防 魔攻 魔防
   const statCards = `
     <div class="stats-row">
       <div class="stat-card"><div class="stat-label">${t('statLabels').hp}</div><div class="stat-value">${status.hp ?? '?'}</div></div>
@@ -273,12 +275,12 @@ function createCard(indexEntry) {
       <div class="card-left">
         <div class="card-title">
           ${name}${alias ? `<span class="alias">${alias}</span>` : ''}
-          <span class="initial-wt-badge">${t('initialWTLabel')}: ${initialWT}</span>
+          <span class="initial-wt">${t('initialWTLabel')}: ${initialWT}</span>
         </div>
         <div class="rarity">${stars} (${indexEntry.initial_rarity}→${indexEntry.max_rarity})</div>
         <div class="attrs">${attrs} | ${role}</div>
         <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-        <div class="release-date">${t('releaseDate')}: ${releaseDate}</div>
+        <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
         ${statCards}
       </div>
       <div class="card-right">
@@ -302,7 +304,9 @@ function getCardState(id) {
   return cardStates[id];
 }
 
-function setCardState(id, newState) { cardStates[id] = { ...cardStates[id], ...newState }; }
+function setCardState(id, newState) {
+  cardStates[id] = { ...cardStates[id], ...newState };
+}
 
 async function toggleCardDetail(id) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
@@ -332,26 +336,24 @@ function renderDetailContent(id, char, state) {
 }
 
 function generateDetailHTML(activeChar, state) {
-  // 队长技能（如果有）
-  let leaderHTML = '';
+  let html = '';
+
+  // 队长技能（简单标题 + 卡片）
   if (activeChar.leader_skill) {
-    leaderHTML = `
-    <div class="section-block">
-      <div class="banner-title">${t('leaderSkillSection')}</div>
-      <div class="content-block">
-        ${renderSkillCardNew(activeChar.leader_skill, true)}
-      </div>
-    </div>`;
+    html += `<div class="section-title">${t('leaderSkillSection')}</div>`;
+    html += `<div class="banner-title">${activeChar.leader_skill.name || t('leaderSkillSection')}</div>`;
+    html += `<div class="content-block"><div class="skill-desc">${activeChar.leader_skill.description || ''}</div></div>`;
   }
 
-  // 技能列表
-  let skillsHTML = '';
-  const typeText = t('skillType');
-  const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
+  // 技能区块
   const skills = activeChar._skills || [];
+  const exSkills = activeChar._exSkills || [];
+  if (skills.length > 0 || exSkills.length > 0) {
+    html += `<div class="section-title">${t('skillSection')}</div>`;
 
-  if (skills.length > 0) {
-    let innerHTML = '';
+    const typeText = t('skillType');
+    const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
+
     skills.forEach(group => {
       let levels = [];
       if (state.range === 'inrange' && rangeGroup) {
@@ -364,129 +366,92 @@ function generateDetailHTML(activeChar, state) {
       if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
 
       const levelTabs = levels.length > 1 ? `<div class="level-tabs">${levels.map((s, i) => `<button class="level-tab ${i === levels.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')} ${i+1}</button>`).join('')}</div>` : '';
-      const skillCard = levels[levels.length - 1] ? renderSkillCardNew(levels[levels.length - 1]) : '';
+      const skillCard = levels[levels.length - 1] ? renderSkillCard(levels[levels.length - 1]) : '';
 
-      innerHTML += `<div class="skill-group" data-group="${group.type}">
-        <div class="skill-group-header">
-          <span class="skill-group-title">${typeText[group.type] || group.type}</span>
-          ${levelTabs}
-        </div>
-        ${skillCard ? `<div class="skill-card-container">${skillCard}</div>` : `<div class="no-data">${t('none')}</div>`}
-      </div>`;
+      html += `<div class="skill-group" data-group="${group.type}">`;
+      html += `<div class="banner-title"><span>${typeText[group.type] || group.type}</span>${levelTabs}</div>`;
+      html += `<div class="content-block">${skillCard || `<div class="no-data">${t('none')}</div>`}</div>`;
+      html += `</div>`;
     });
 
     // EX技能
-    const exSkills = activeChar._exSkills || [];
     if (exSkills.length > 0) {
       const levelTabs = exSkills.length > 1 ? `<div class="level-tabs">${exSkills.map((s, i) => `<button class="level-tab ${i === exSkills.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')} ${i+1}</button>`).join('')}</div>` : '';
-      const skillCard = exSkills[exSkills.length - 1] ? renderSkillCardNew(exSkills[exSkills.length - 1]) : '';
-      innerHTML += `<div class="skill-group" data-group="extra">
-        <div class="skill-group-header">
-          <span class="skill-group-title">${t('skillType').extra}</span>
-          ${levelTabs}
-        </div>
-        ${skillCard ? `<div class="skill-card-container">${skillCard}</div>` : `<div class="no-data">${t('none')}</div>`}
-      </div>`;
+      const skillCard = exSkills[exSkills.length - 1] ? renderSkillCard(exSkills[exSkills.length - 1]) : '';
+      html += `<div class="skill-group" data-group="extra">`;
+      html += `<div class="banner-title"><span>${t('skillType').extra}</span>${levelTabs}</div>`;
+      html += `<div class="content-block">${skillCard || `<div class="no-data">${t('none')}</div>`}</div>`;
+      html += `</div>`;
     }
-
-    skillsHTML = `
-    <div class="section-block">
-      <div class="banner-title">${t('skillSection')}</div>
-      <div class="content-block">${innerHTML}</div>
-    </div>`;
   }
 
-  // 能力区块
-  const abilitiesHTML = renderAbilitiesHTML(activeChar, state.evo);
+  // 能力区块（包含普通能力和支援能力）
+  const abilityMap = activeChar._skillDetails || {};
+  const evolvedIds = new Set(activeChar.all_skill_evolved_ability_ids || []);
+  const normalIds = (activeChar.ability_ids || []).filter(id => !evolvedIds.has(id));
+  const evoIds = state.evo === 'post' ? (activeChar.all_skill_evolved_ability_ids || []) : [];
+  const allAbilityIds = [...new Set([...normalIds, ...evoIds])];
+  const abilities = allAbilityIds.map(id => abilityMap[id]).filter(Boolean);
+  const supportIds = activeChar.support_ability_ids || [];
 
-  return `${leaderHTML}${skillsHTML}${abilitiesHTML}`;
-}
+  html += `<div class="section-title">${t('abilityTitle')}</div>`;
 
-function renderSkillCardNew(skill, isLeader = false) {
-  const title = skill.name || `ID:${skill.id}`;
-  let desc = skill.description || '';
-  if (skill.effects) {
-    skill.effects.forEach((eff, i) => {
-      const val = (eff.value ?? 0) / 100;
-      desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), Number.isInteger(val) ? val : val.toFixed(1));
-    });
+  // 普通能力卡片
+  abilities.forEach(a => {
+    html += `<div class="banner-title">${a.name || `ID:${a.id}`}</div>`;
+    html += `<div class="content-block">${renderAbilityCard(a)}</div>`;
+  });
+  if (abilities.length === 0 && supportIds.length === 0) {
+    html += `<div class="no-data">${t('none')}</div>`;
   }
-  const target = getField(skill, 'target_name') || skill.skill_target_type || '?';
-  const attr = (skill.attack_attributes || []).map(a => ({1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'}[a] || a)).join('/');
-  const wt = 200 + (skill.wait ?? 0);
 
-  return `<div class="skill-card-new">
-    <div class="banner-title">${title} <small>(ID:${skill.id})</small></div>
-    <div class="content-block">
-      <div class="skill-desc">${desc}</div>
-      <div class="skill-stats">
-        <span class="skill-stat">${t('target')}: ${target}</span>
-        ${attr ? `<span class="skill-stat">${t('attribute')}: ${attr}</span>` : ''}
-        <span class="skill-stat">${t('power')}: ${skill.power ?? 0}%</span>
-        <span class="skill-stat">${t('break')}: ${skill.break_power ?? 0}%</span>
-        <span class="skill-stat">${t('wt')}: ${wt}</span>
-        <span class="skill-stat">${t('limit')}: ${skill.limit_count ?? '—'}</span>
-      </div>
-    </div>
-  </div>`;
-}
+  // 支援能力卡片（整合到能力中）
+  if (supportIds.length > 0) {
+    const maxRarity = activeChar.max_rarity || 8;
+    const defaultIdx = Math.min(maxRarity - 1, supportIds.length - 1);
+    const supportAbility = abilityMap[supportIds[defaultIdx]];
 
-function renderAbilitiesHTML(char, evoState) {
-  const map = char._skillDetails || {};
-  const evolvedIds = new Set(char.all_skill_evolved_ability_ids || []);
-  const normalIds = (char.ability_ids || []).filter(id => !evolvedIds.has(id));
-  const evoIds = evoState === 'post' ? (char.all_skill_evolved_ability_ids || []) : [];
-  const allIds = [...new Set([...normalIds, ...evoIds])];
-  const abilities = allIds.map(id => map[id]).filter(Boolean);
-  const supportIds = char.support_ability_ids || [];
+    const rarityTabs = `<div class="support-rarity-tabs">${supportIds.map((sid, idx) => {
+      if (sid == null) return '';
+      return `<button class="level-tab support-rarity-btn ${idx === defaultIdx ? 'active' : ''}" data-support-idx="${idx}">${t('rarityLabel')[idx]}</button>`;
+    }).join('')}</div>`;
 
-  let html = `
-    <div class="section-block">
-      <div class="banner-title">${t('abilityTitle')}</div>
-      <div class="content-block">
-        ${abilities.length ? abilities.map(a => renderAbilityCardNew(a)).join('') : `<div class="no-data">${t('none')}</div>`}
-      </div>
-    </div>`;
-
-  html += `
-    <div class="section-block">
-      <div class="banner-title support-ability-header">
-        <span>${t('supportAbilityTitle')}</span>
-        ${supportIds.length ? `
-          <div class="support-rarity-tabs">
-            ${supportIds.map((sid, idx) => {
-              if (sid == null) return '';
-              const maxRarity = char.max_rarity || 8;
-              const defaultIdx = Math.min(maxRarity - 1, supportIds.length - 1);
-              return `<button class="level-tab support-rarity-btn ${idx === defaultIdx ? 'active' : ''}" data-support-idx="${idx}">${t('rarityLabel')[idx]}</button>`;
-            }).join('')}
-          </div>` : ''}
-      </div>
-      <div class="content-block">
-        ${supportIds.length ? `<div class="support-ability-content">${map[supportIds[Math.min((char.max_rarity || 8) - 1, supportIds.length - 1)]] ? renderAbilityCardNew(map[supportIds[Math.min((char.max_rarity || 8) - 1, supportIds.length - 1)]]) : `<div class="no-data">${t('none')}</div>`}</div>` : `<div class="no-data">${t('none')}</div>`}
-      </div>
-    </div>`;
+    html += `<div class="banner-title"><span>${t('supportAbilityTitle')}</span>${rarityTabs}</div>`;
+    html += `<div class="content-block">${supportAbility ? renderAbilityCard(supportAbility) : `<div class="no-data">${t('none')}</div>`}</div>`;
+  }
 
   return html;
 }
 
-function renderAbilityCardNew(ability) {
-  let desc = ability.description || '';
-  if (ability.effects) {
-    ability.effects.forEach((eff, i) => {
-      const val = (eff.value ?? 0) / 100;
-      desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), Number.isInteger(val) ? val : val.toFixed(1));
-    });
-  }
-  return `<div class="ability-card-new">
-    <div class="banner-title">${ability.name || `ID:${ability.id}`}</div>
-    <div class="content-block">
-      <div class="ability-desc">${desc}</div>
+function renderSkillCard(skill) {
+  const target = getField(skill, 'target_name') || skill.skill_target_type || '?';
+  const attr = (skill.attack_attributes || []).map(a => ({1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'}[a] || a)).join('/');
+  let desc = skill.description || '';
+  if (skill.effects) skill.effects.forEach((eff, i) => desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), (eff.value ?? 0) / 100));
+  const wt = 200 + (skill.wait ?? 0);
+  return `<div class="skill-detail-card">
+    <div class="skill-name">${skill.name || '??'} <small>(ID:${skill.id})</small></div>
+    <div class="skill-desc">${desc}</div>
+    <div class="skill-stats">
+      <span class="skill-stat">${t('target')}: ${target}</span>
+      ${attr ? `<span class="skill-stat">${t('attribute')}: ${attr}</span>` : ''}
+      <span class="skill-stat">${t('power')}: ${skill.power ?? 0}%</span>
+      <span class="skill-stat">${t('break')}: ${skill.break_power ?? 0}%</span>
+      <span class="skill-stat">${t('wt')}: ${wt}</span>
+      <span class="skill-stat">${t('limit')}: ${skill.limit_count ?? '—'}</span>
     </div>
   </div>`;
 }
 
-function getColorHex(name) { return name ? (COLOR_MAP[name] || '#CCCCCC') : '#CCCCCC'; }
+function renderAbilityCard(a) {
+  let desc = a.description || '';
+  if (a.effects) a.effects.forEach((eff, i) => desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), (eff.value ?? 0) / 100));
+  return `<div>${desc}</div>`;
+}
+
+function getColorHex(name) {
+  return name ? (COLOR_MAP[name] || '#CCCCCC') : '#CCCCCC';
+}
 
 function bindCardButtons(id, activeChar, originalChar, state) {
   const card = document.querySelector(`.card[data-id="${id}"]`);
@@ -521,7 +486,7 @@ function bindCardButtons(id, activeChar, originalChar, state) {
 
   card.querySelectorAll('.skill-group').forEach(group => {
     const tabs = group.querySelectorAll('.level-tab');
-    const skillCardContainer = group.querySelector('.skill-card-container');
+    const contentBlock = group.querySelector('.content-block');
     const groupType = group.dataset.group;
     tabs.forEach(tab => {
       tab.onclick = () => {
@@ -540,8 +505,8 @@ function bindCardButtons(id, activeChar, originalChar, state) {
             if (!levelsArr || levelsArr.length === 0) levelsArr = skillObj.post_evolution.length > 0 ? skillObj.post_evolution : skillObj.pre_evolution;
           }
         }
-        if (levelsArr && levelsArr[idx] && skillCardContainer) {
-          skillCardContainer.innerHTML = renderSkillCardNew(levelsArr[idx]);
+        if (levelsArr && levelsArr[idx] && contentBlock) {
+          contentBlock.innerHTML = renderSkillCard(levelsArr[idx]) || `<div class="no-data">${t('none')}</div>`;
           tabs.forEach(t => t.classList.remove('active'));
           tab.classList.add('active');
         }
@@ -549,13 +514,14 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     });
   });
 
+  // 支援能力星级切换
   card.querySelectorAll('.support-rarity-btn').forEach(btn => {
     btn.onclick = () => {
       const idx = parseInt(btn.dataset.supportIdx);
       const supportIds = activeChar.support_ability_ids || [];
       const ability = (activeChar._skillDetails || {})[supportIds[idx]];
-      const content = card.querySelector('.support-ability-content');
-      if (content) content.innerHTML = ability ? renderAbilityCardNew(ability) : `<div class="no-data">${t('none')}</div>`;
+      const content = card.querySelector('.support-ability-content') || card.querySelector('.content-block:last-of-type');
+      if (content) content.innerHTML = ability ? renderAbilityCard(ability) : `<div class="no-data">${t('none')}</div>`;
       card.querySelectorAll('.support-rarity-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     };
