@@ -266,6 +266,7 @@ function buildIndexEntry(character, lang) {
     tag_names: (character.tag_ids || []).map(id => maps.character_tag?.get(id) || `ID:${id}`),
     attack_attribute_names: (character.attack_attributes || []).map(id => maps.attack_attribute?.get(id) || `ID:${id}`),
     role_name: maps.role?.get(character.role) || `ID:${character.role}`,
+	transform_to: transformMap[character.id] || null,
   };
 }
 
@@ -275,17 +276,26 @@ if (!tables.character) {
   process.exit(1);
 }
 
-// 读取排除角色列表
-const excludeFile = path.join(__dirname, '..', 'config', 'exclude.txt');
-let excludeIds = new Set();
-if (fs.existsSync(excludeFile)) {
-  const content = fs.readFileSync(excludeFile, 'utf-8');
-  content.split(/\r?\n/).forEach(line => {
-    const id = parseInt(line.trim());
-    if (!isNaN(id)) excludeIds.add(id);
+// 读取变身映射
+const transformFile = path.join(__dirname, '..', 'config', 'transform.json');
+let transformMap = {}; // { fromId: toId }
+let hiddenIds = new Set(); // 变身后角色 ID，不加入索引但生成文件
+if (fs.existsSync(transformFile)) {
+  const transforms = JSON.parse(fs.readFileSync(transformFile, 'utf-8'));
+  transforms.forEach(t => {
+    transformMap[t.from] = t.to;
+    // 如果变身后 ID 在排除列表中，移除它，但标记为隐藏
+    if (excludeIds.has(t.to)) {
+      excludeIds.delete(t.to);
+      hiddenIds.add(t.to);
+    }
   });
-  console.log(`📋 已加载排除角色 ID：${excludeIds.size} 个`);
+  console.log(`🔄 已加载变身映射：${Object.keys(transformMap).length} 组`);
 }
+
+// 过滤角色（隐藏 ID 仍会生成文件，但不加入索引）
+let characters = Array.from(tables.character.values()).filter(c => !excludeIds.has(c.id));
+console.log(`👥 有效角色数量：${characters.length}`);
 
 let characters = Array.from(tables.character.values()).filter(c => !excludeIds.has(c.id));
 console.log(`👥 有效角色数量：${characters.length}（共 ${tables.character.size} 个，排除 ${tables.character.size - characters.length} 个）`);
