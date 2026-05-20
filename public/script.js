@@ -1,3 +1,4 @@
+// ========== 多语言界面文本 ==========
 const UI_TEXT = {
   ja: {
     pageTitle: 'レスレリ 角色图鉴',
@@ -81,26 +82,23 @@ const UI_TEXT = {
   }
 };
 
-// 颜色名称到 hex 的映射（请根据游戏实际颜色完善）
+// 颜色名称 → hex 值（根据你的 trait_color.json 和 support_color.json 完善）
 const COLOR_MAP = {
-  '赤': '#FF4B4B',
-  '青': '#4B9BFF',
-  '緑': '#4BFF4B',
-  '黄': '#FFFF4B',
-  '紫': '#9B4BFF',
-  '白': '#FFFFFF',
-  '黒': '#333333',
-  '红': '#FF4B4B',
-  '蓝': '#4B9BFF',
-  '绿': '#4BFF4B',
-  '黄': '#FFFF4B',
-  '紫': '#9B4BFF',
-  '白': '#FFFFFF',
-  '黑': '#333333',
+  '赤': '#E74C3C', '青': '#3498DB', '緑': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
+  '红': '#E74C3C', '蓝': '#3498DB', '绿': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
+  '白': '#FFFFFF', '黒': '#333333', '黑': '#333333',
 };
 
 let currentLang = 'cn';
 function t(key) { return UI_TEXT[currentLang][key] || key; }
+
+// 获取当前语言对应的字段
+function getField(char, field) {
+  if (currentLang === 'cn' && char[field + '_cn'] !== undefined) {
+    return char[field + '_cn'];
+  }
+  return char[field + '_ja'] || char[field] || '';
+}
 
 let characterIndex = [];
 let currentCharId = null;
@@ -111,14 +109,12 @@ function rarityToStars(r) {
 }
 
 async function loadIndex() {
-  const folder = currentLang === 'cn' ? 'cn' : 'jp';
-  const resp = await fetch(`data/${folder}/character_index.json`);
+  const resp = await fetch('data/character_index.json');
   characterIndex = await resp.json();
 }
 
 async function loadCharacter(id) {
-  const folder = currentLang === 'cn' ? 'cn' : 'jp';
-  const resp = await fetch(`data/${folder}/${id}.json`);
+  const resp = await fetch(`data/${id}.json`);
   return await resp.json();
 }
 
@@ -135,19 +131,18 @@ function updateUILanguage() {
 function renderList() {
   const listDiv = document.getElementById('characterList');
   const query = document.getElementById('searchInput')?.value?.toLowerCase() || '';
-  const filtered = characterIndex.filter(c =>
-    c.name?.toLowerCase().includes(query) ||
-    (c.another_name||'').toLowerCase().includes(query)
-  );
+  const filtered = characterIndex.filter(c => {
+    const name = currentLang === 'cn' ? (c.name_cn || c.name_ja) : c.name_ja;
+    return name?.toLowerCase().includes(query);
+  });
   listDiv.innerHTML = filtered.map(c => {
     const stars = rarityToStars(c.initial_rarity);
-    const alias = c.another_name || '';
-    const attrs = (c.attack_attribute_names || []).join(' / ');
-    const role = c.role_name || '';
+    const name = currentLang === 'cn' ? (c.name_cn || c.name_ja) : c.name_ja;
+    const attrs = getField(c, 'attack_attribute_names').join(' / ');
+    const role = getField(c, 'role_name');
     return `<div class="char-item" onclick="selectCharacter(${c.id})" data-id="${c.id}">
       <span class="rarity-stars">${stars}</span>
-      <span class="char-name">${c.name}</span>
-      <span class="char-alias">${alias}</span>
+      <span class="char-name">${name}</span>
       <span style="margin-left:auto; font-size:12px; color:#666;">${attrs} ${role}</span>
     </div>`;
   }).join('');
@@ -216,9 +211,13 @@ function renderDetail(char) {
   panel.transformChar = char._transform || null;
   panel.showingTransform = false;
 
-  const tagNames = char.tag_names || [];
-  const attrNames = (char.attack_attribute_names || []).join(' / ');
-  const roleName = char.role_name || '?';
+  const tagNames = getField(char, 'tag_names');
+  const attrNames = getField(char, 'attack_attribute_names').join(' / ');
+  const roleName = getField(char, 'role_name');
+  const baseCharName = getField(char, 'base_character_name');
+  const seriesName = getField(char, 'original_title_name');
+  const traitColorName = getField(char, 'trait_color_name');
+  const supportColorName = getField(char, 'support_color_name');
   const startDate = char.start_at ? new Date(char.start_at).toLocaleDateString('ja-JP') : '不明';
   const isAlchemist = char.is_alchemist ? t('yes') : t('no');
 
@@ -241,9 +240,9 @@ function renderDetail(char) {
           ${hasTransform ? `<button id="transformSwitchBtn" class="evo-switch-btn">${t('switchText')}</button>` : ''}
         </h2>
         <div class="rarity">${t('initial')} ${rarityToStars(char.initial_rarity)} → ${t('max')} ${rarityToStars(char.max_rarity)} (${t('rarity')}: ${char.initial_rarity}→${char.max_rarity})</div>
-        <div class="base-char">${t('base')}: ${char.base_character_name || '—'}</div>
-        <div class="series">${t('series')}: ${char.original_title_name || '—'} | ${t('releaseDate')}: ${startDate}</div>
-        <div style="margin-top:8px;">${tagNames.map(tg => `<span class="tag">${tg}</span>`).join('')}</div>
+        <div class="base-char">${t('base')}: ${baseCharName || '—'}</div>
+        <div class="series">${t('series')}: ${seriesName || '—'} | ${t('releaseDate')}: ${startDate}</div>
+        <div style="margin-top:8px;">${(tagNames || []).map(tg => `<span class="tag">${tg}</span>`).join('')}</div>
       </div>
     </div>
     <p style="margin:10px 0;font-style:italic;color:#555;">${char.description || ''}</p>
@@ -260,9 +259,11 @@ function renderDetail(char) {
     <div>${t('attribute')}: ${attrNames} | ${t('role')}: ${roleName} | ${t('alchemist')}: ${isAlchemist}</div>
     <div style="margin-top:8px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
       <span>调和颜色：</span>
-      <svg width="30" height="30" viewBox="0 0 30 30" style="border:1px solid #ccc; flex-shrink:0;">
-        <polygon points="0,0 30,0 15,15" fill="${getColorHex(char.trait_color_name)}" />
-        <polygon points="30,0 30,30 15,15" fill="${getColorHex(char.support_color_name)}" />
+      <svg width="40" height="40" viewBox="0 0 40 40" style="flex-shrink:0;">
+        <g transform="rotate(45, 20, 20)">
+          <polygon points="0,0 30,0 0,30" fill="${getColorHex(traitColorName)}" />
+          <polygon points="30,0 30,30 0,30" fill="${getColorHex(supportColorName)}" />
+        </g>
       </svg>
     </div>
     <div class="section-title">${t('skillSection')}</div>
@@ -320,6 +321,7 @@ function renderDetail(char) {
 
   panel.innerHTML = html;
 
+  // 填充技能组内容
   (char._skills || []).forEach(skillGroup => {
     const type = skillGroup.type;
     const groupId = `skill-${type}`;
@@ -342,6 +344,7 @@ function renderDetail(char) {
   updateInitialWT(char, initialEvo);
   renderAbilities(char, initialEvo);
 
+  // 进化切换
   const evoBtn = document.getElementById('evoSwitchBtn');
   if (evoBtn) {
     evoBtn.addEventListener('click', () => {
@@ -353,6 +356,7 @@ function renderDetail(char) {
     });
   }
 
+  // range 切换
   const rangeBtn = document.getElementById('rangeSwitchBtn');
   if (rangeBtn) {
     rangeBtn.addEventListener('click', () => {
@@ -364,6 +368,7 @@ function renderDetail(char) {
     });
   }
 
+  // 变身切换
   const transformBtn = document.getElementById('transformSwitchBtn');
   if (transformBtn) {
     transformBtn.addEventListener('click', () => {
@@ -472,7 +477,7 @@ function renderAbilities(char, evoState) {
 }
 
 function renderSkillCard(skill) {
-  const target = skill.target_name || skill.skill_target_type || '?';
+  const target = getField(skill, 'target_name') || skill.skill_target_type || '?';
   const attr = (skill.attack_attributes || []).map(a => {
     const map = {1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'};
     return map[a] || a;
@@ -541,22 +546,25 @@ async function switchLanguage(lang) {
   document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
   document.getElementById('btn-cn').classList.toggle('active', lang === 'cn');
   updateUILanguage();
-  await loadIndex();
+  // 重新渲染列表和详情（无需重新加载数据）
   renderList();
-  if (currentCharId) selectCharacter(currentCharId);
+  if (currentCharId) {
+    // 详情数据已在 panel.charData 中，直接重绘
+    const panel = document.getElementById('detailPanel');
+    if (panel.charData) {
+      renderDetail(panel.charData);
+    }
+  }
 }
 
 document.getElementById('btn-ja').addEventListener('click', () => switchLanguage('ja'));
 document.getElementById('btn-cn').addEventListener('click', () => switchLanguage('cn'));
 
-const refreshBtn = document.getElementById('btn-refresh');
-if (refreshBtn) {
-  refreshBtn.addEventListener('click', () => {
-    if (confirm('确定要清除缓存并刷新数据？')) {
-      window.location.reload(true);
-    }
-  });
-}
+document.getElementById('btn-refresh').addEventListener('click', () => {
+  if (confirm('确定要清除缓存并刷新数据？')) {
+    window.location.reload(true);
+  }
+});
 
 (async () => {
   updateUILanguage();
