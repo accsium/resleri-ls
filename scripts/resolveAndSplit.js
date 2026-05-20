@@ -326,8 +326,12 @@ function buildIndexEntry(character) {
     support_color_id: character.support_color_id || null,
     start_at: character.start_at || null,
     sort_id: calcSortId(character),
-    initial_status: character.initial_status,       // 新增
-    initial_wt: initialWT                           // 新增
+    initial_status: character.initial_status,
+    initial_wt: initialWT,
+    trait_color_name_ja: jpMaps.trait_color?.get(character.trait_color_id) || null,
+    trait_color_name_cn: cnMaps.trait_color?.get(character.trait_color_id) || null,
+    support_color_name_ja: jpMaps.trait_color?.get(character.support_color_id) || null,
+    support_color_name_cn: cnMaps.trait_color?.get(character.support_color_id) || null,
   };
 }
 
