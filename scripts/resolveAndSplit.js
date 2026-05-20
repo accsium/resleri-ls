@@ -41,6 +41,7 @@ function loadMapFile(name, lang) {
 
 const jpMaps = {};
 const cnMaps = {};
+// support_color 与 trait_color 共用同一张表
 const mapKeys = [
   'character_tag', 'base_character', 'equipment_tool_trait',
   'original_title', 'attack_attribute', 'role', 'skill_target_type',
@@ -55,8 +56,12 @@ mapKeys.forEach(key => {
 const rulesFile = path.join(__dirname, '..', 'config', 'ex_skill_rules.json');
 let exRules = [];
 if (fs.existsSync(rulesFile)) {
-  try { exRules = JSON.parse(fs.readFileSync(rulesFile, 'utf-8')); console.log(`📋 已加载 EX 技能规则：${exRules.length} 条`); }
-  catch (e) { console.warn('⚠️ EX 技能规则文件格式错误，将使用默认显示'); }
+  try {
+    exRules = JSON.parse(fs.readFileSync(rulesFile, 'utf-8'));
+    console.log(`📋 已加载 EX 技能规则：${exRules.length} 条`);
+  } catch (e) {
+    console.warn('⚠️ EX 技能规则文件格式错误，将使用默认显示');
+  }
 }
 
 // ========== 4. 递归补全效果引用 ==========
@@ -68,13 +73,18 @@ function resolveEffects(obj, entityName) {
     for (const [pathStr, refConfig] of Object.entries(entityConfig.nestedReferences)) {
       const parts = pathStr.split('.');
       let targetArray = resolved;
-      for (const part of parts) { if (targetArray == null) break; targetArray = targetArray[part]; }
+      for (const part of parts) {
+        if (targetArray == null) break;
+        targetArray = targetArray[part];
+      }
       if (targetArray && Array.isArray(targetArray)) {
         targetArray.forEach((item, index) => {
           if (!item) return;
           const refId = item[refConfig.refField];
           const detail = tables[refConfig.target]?.get(refId);
-          if (detail) { targetArray[index] = { ...item, _detail: resolveEffects(detail, refConfig.target) }; }
+          if (detail) {
+            targetArray[index] = { ...item, _detail: resolveEffects(detail, refConfig.target) };
+          }
         });
       }
     }
@@ -82,7 +92,7 @@ function resolveEffects(obj, entityName) {
   return resolved;
 }
 
-// ========== 5. 收集角色技能/能力 ID ==========
+// ========== 5. 收集角色的技能/能力 ID ==========
 function collectSkillIds(character) {
   const ids = new Set();
   const add = (arr) => { if (arr) arr.forEach(id => ids.add(id)); };
@@ -102,11 +112,13 @@ function collectSkillIds(character) {
   if (character.active1_skill_id) ids.add(character.active1_skill_id);
   if (character.active2_skill_id) ids.add(character.active2_skill_id);
   if (character.active3_skill_id) ids.add(character.active3_skill_id);
-  if (character.leader_skill?.abilities) character.leader_skill.abilities.forEach(a => ids.add(a.ability_id));
+  if (character.leader_skill?.abilities) {
+    character.leader_skill.abilities.forEach(a => ids.add(a.ability_id));
+  }
   return ids;
 }
 
-// ========== 6. 构建 _skillDetails 字典 ==========
+// ========== 6. 构建技能/能力详情对象 ==========
 function buildSkillDetails(character) {
   const skillIds = collectSkillIds(character);
   const details = {};
@@ -136,60 +148,101 @@ function buildSkillsArray(character, skillDetails) {
     if (fields.idsField.endsWith('_id')) {
       const val = character[fields.idsField];
       if (val != null) preIds = [val];
-    } else { preIds = character[fields.idsField] || []; }
+    } else {
+      preIds = character[fields.idsField] || [];
+    }
     let postIds = [];
-    if (fields.evolvedField) { postIds = character[fields.evolvedField] || []; }
+    if (fields.evolvedField) {
+      postIds = character[fields.evolvedField] || [];
+    }
     preIds = [...new Set(preIds)];
     postIds = [...new Set(postIds)];
     if (preIds.length === 0 && postIds.length === 0) continue;
+
     const preSkills = preIds.map(id => skillDetails[id]).filter(Boolean);
     const postSkills = postIds.map(id => skillDetails[id]).filter(Boolean);
     preSkills.sort((a, b) => a.id - b.id);
     postSkills.sort((a, b) => a.id - b.id);
-    skillsArray.push({ type, pre_evolution: preSkills, post_evolution: postSkills });
+
+    skillsArray.push({
+      type: type,
+      pre_evolution: preSkills,
+      post_evolution: postSkills,
+    });
   }
   return skillsArray;
 }
 
-// ========== 7. 生成双语角色对象 ==========
+// 计算 sort_id
+function calcSortId(character) {
+  if (character.start_at) {
+    const dateStr = character.start_at.substring(0, 10).replace(/-/g, ''); // YYYYMMDD
+    const yymmdd = dateStr.substring(2); // YYMMDD
+    return parseInt(yymmdd + String(character.id).padStart(5, '0'));
+  }
+  // 如果没有 start_at，则放到最后（用一个非常大的数字）
+  return 9999999999999;
+}
+
+// ========== 7. 生成带有双语字段的角色对象 ==========
 function buildLocalizedChar(character) {
   const char = JSON.parse(JSON.stringify(character));
-  // 日文
+
+  // 日文名称
   char.tag_names_ja = (char.tag_ids || []).map(id => jpMaps.character_tag?.get(id) || `ID:${id}`);
   char.base_character_name_ja = jpMaps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
   char.original_title_name_ja = jpMaps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
   char.attack_attribute_names_ja = (char.attack_attributes || []).map(id => jpMaps.attack_attribute?.get(id) || `ID:${id}`);
   char.role_name_ja = jpMaps.role?.get(char.role) || `ID:${char.role}`;
-  if (char.equipment_tool_trait_ids) char.equipment_tool_trait_names_ja = char.equipment_tool_trait_ids.map(id => jpMaps.equipment_tool_trait?.get(id) || `ID:${id}`);
-  if (char.trait_color_id != null) char.trait_color_name_ja = jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
-  if (char.support_color_id != null) char.support_color_name_ja = jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;  // 共用 trait_color 表
-  if (char.battle_tool_trait_ids) char.battle_tool_trait_names_ja = char.battle_tool_trait_ids.map(id => jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
+  if (char.equipment_tool_trait_ids) {
+    char.equipment_tool_trait_names_ja = char.equipment_tool_trait_ids.map(id => jpMaps.equipment_tool_trait?.get(id) || `ID:${id}`);
+  }
+  if (char.trait_color_id != null) {
+    char.trait_color_name_ja = jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
+  }
+  if (char.support_color_id != null) {
+    char.support_color_name_ja = jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
+  }
+  if (char.battle_tool_trait_ids) {
+    char.battle_tool_trait_names_ja = char.battle_tool_trait_ids.map(id => jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
+  }
 
-  // 中文
+  // 中文名称（若映射不存在则回退到日文）
   char.tag_names_cn = (char.tag_ids || []).map(id => cnMaps.character_tag?.get(id) || jpMaps.character_tag?.get(id) || `ID:${id}`);
   char.base_character_name_cn = cnMaps.base_character?.get(char.base_character_id) || jpMaps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
   char.original_title_name_cn = cnMaps.original_title?.get(char.original_title_id) || jpMaps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
   char.attack_attribute_names_cn = (char.attack_attributes || []).map(id => cnMaps.attack_attribute?.get(id) || jpMaps.attack_attribute?.get(id) || `ID:${id}`);
   char.role_name_cn = cnMaps.role?.get(char.role) || jpMaps.role?.get(char.role) || `ID:${char.role}`;
-  if (char.equipment_tool_trait_ids) char.equipment_tool_trait_names_cn = char.equipment_tool_trait_ids.map(id => cnMaps.equipment_tool_trait?.get(id) || jpMaps.equipment_tool_trait?.get(id) || `ID:${id}`);
-  if (char.trait_color_id != null) char.trait_color_name_cn = cnMaps.trait_color?.get(char.trait_color_id) || jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
-  if (char.support_color_id != null) char.support_color_name_cn = cnMaps.trait_color?.get(char.support_color_id) || jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
-  if (char.battle_tool_trait_ids) char.battle_tool_trait_names_cn = char.battle_tool_trait_ids.map(id => cnMaps.battle_tool_trait?.get(id) || jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
+  if (char.equipment_tool_trait_ids) {
+    char.equipment_tool_trait_names_cn = char.equipment_tool_trait_ids.map(id => cnMaps.equipment_tool_trait?.get(id) || jpMaps.equipment_tool_trait?.get(id) || `ID:${id}`);
+  }
+  if (char.trait_color_id != null) {
+    char.trait_color_name_cn = cnMaps.trait_color?.get(char.trait_color_id) || jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
+  }
+  if (char.support_color_id != null) {
+    char.support_color_name_cn = cnMaps.trait_color?.get(char.support_color_id) || jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
+  }
+  if (char.battle_tool_trait_ids) {
+    char.battle_tool_trait_names_cn = char.battle_tool_trait_ids.map(id => cnMaps.battle_tool_trait?.get(id) || jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
+  }
 
-  // 技能详情
+  // 技能/能力详情
   char._skillDetails = buildSkillDetails(character);
   const targetMapJa = jpMaps.skill_target_type;
   const targetMapCn = cnMaps.skill_target_type;
-  for (const id in char._skillDetails) {
-    const skill = char._skillDetails[id];
-    if (skill && skill.skill_target_type !== undefined) {
-      skill.target_name_ja = targetMapJa?.get(skill.skill_target_type) || `ID:${skill.skill_target_type}`;
-      skill.target_name_cn = targetMapCn?.get(skill.skill_target_type) || targetMapJa?.get(skill.skill_target_type) || `ID:${skill.skill_target_type}`;
+  if (char._skillDetails) {
+    for (const id in char._skillDetails) {
+      const skill = char._skillDetails[id];
+      if (skill && skill.skill_target_type !== undefined) {
+        skill.target_name_ja = targetMapJa?.get(skill.skill_target_type) || `ID:${skill.skill_target_type}`;
+        skill.target_name_cn = targetMapCn?.get(skill.skill_target_type) || targetMapJa?.get(skill.skill_target_type) || `ID:${skill.skill_target_type}`;
+      }
     }
   }
+
   char._skills = buildSkillsArray(char, char._skillDetails);
 
-  // EX 技能
+  // EX 技能处理
   const extraIds = char.extra_skill_ids || [];
   const normalEx = [];
   const rangeGroups = {};
@@ -208,34 +261,36 @@ function buildLocalizedChar(character) {
     });
     const action = matchedRule ? matchedRule.action : 'normal';
     const group = matchedRule ? matchedRule.group : null;
-    if (action === 'hide') return;
-    if (action === 'skill1_inrange') {
+    if (action === 'hide') {
+      // skip
+    } else if (action === 'skill1_inrange') {
       if (!rangeGroups[group]) rangeGroups[group] = { skill1: [], skill2: [] };
       rangeGroups[group].skill1.push(skillId);
     } else if (action === 'skill2_inrange') {
       if (!rangeGroups[group]) rangeGroups[group] = { skill1: [], skill2: [] };
       rangeGroups[group].skill2.push(skillId);
-    } else { normalEx.push(skillId); }
+    } else {
+      normalEx.push(skillId);
+    }
   });
   char._exSkills = normalEx.map(id => char._skillDetails[id]).filter(Boolean);
   char._rangeSkills = {};
   for (const [group, data] of Object.entries(rangeGroups)) {
-    const s1 = data.skill1.map(id => char._skillDetails[id]).filter(Boolean);
-    const s2 = data.skill2.map(id => char._skillDetails[id]).filter(Boolean);
-    if (s1.length > 0 || s2.length > 0) char._rangeSkills[group] = { skill1: s1, skill2: s2 };
+    const skill1Levels = data.skill1.map(id => char._skillDetails[id]).filter(Boolean);
+    const skill2Levels = data.skill2.map(id => char._skillDetails[id]).filter(Boolean);
+    if (skill1Levels.length > 0 || skill2Levels.length > 0) {
+      char._rangeSkills[group] = { skill1: skill1Levels, skill2: skill2Levels };
+    }
   }
+
+  // 计算 sort_id
+  char.sort_id = calcSortId(character);
+
   return char;
 }
 
-// ========== 8. 索引条目（添加 sort_id） ==========
+// ========== 8. 生成索引条目（双语） ==========
 function buildIndexEntry(character) {
-  // 计算 sort_id: YYMMDD + id (5位补零)
-  let sortId = 99999999999; // 默认最大值，排最后
-  if (character.start_at) {
-    const dateStr = character.start_at.substring(0, 10).replace(/-/g, ''); // YYYYMMDD
-    const yymmdd = dateStr.substring(2); // YYMMDD
-    sortId = parseInt(yymmdd + String(character.id).padStart(5, '0'));
-  }
   return {
     id: character.id,
     name_ja: character.name,
@@ -251,15 +306,22 @@ function buildIndexEntry(character) {
     attack_attribute_names_cn: (character.attack_attributes || []).map(id => cnMaps.attack_attribute?.get(id) || jpMaps.attack_attribute?.get(id) || `ID:${id}`),
     role_name_ja: jpMaps.role?.get(character.role) || `ID:${character.role}`,
     role_name_cn: cnMaps.role?.get(character.role) || jpMaps.role?.get(character.role) || `ID:${character.role}`,
+    base_character_id: character.base_character_id || null,
+    original_title_id: character.original_title_id || null,
+    trait_color_id: character.trait_color_id || null,
+    support_color_id: character.support_color_id || null,
     start_at: character.start_at || null,
-    sort_id: sortId,
-    transform_to: transformMap[character.id] || null,  // 需要 transformMap 在外部作用域
+    sort_id: calcSortId(character),   // 关键字段
   };
 }
 
 // ========== 9. 主流程 ==========
-if (!tables.character) { console.error('❌ character.json 未找到'); process.exit(1); }
+if (!tables.character) {
+  console.error('❌ character.json 未找到');
+  process.exit(1);
+}
 
+// 读取排除列表
 const excludeFile = path.join(__dirname, '..', 'config', 'exclude.txt');
 let excludeIds = new Set();
 if (fs.existsSync(excludeFile)) {
@@ -271,62 +333,67 @@ if (fs.existsSync(excludeFile)) {
   console.log(`📋 已加载排除角色 ID：${excludeIds.size} 个`);
 }
 
+// 读取变身配置（数组对）
 const transformFile = path.join(__dirname, '..', 'config', 'transform.json');
-let transformMap = {};     // 双向：from -> to, to -> from? 实际上只需要 from -> to 用于切换，但索引需要标注 transform_to 以便前端显示切换按钮
+let transformPairs = [];
 let hiddenTransformIds = new Set();
 if (fs.existsSync(transformFile)) {
   const pairs = JSON.parse(fs.readFileSync(transformFile, 'utf-8'));
+  transformPairs = pairs;
   pairs.forEach(pair => {
-    const [mainId, subId] = pair;
-    transformMap[mainId] = subId;
-    hiddenTransformIds.add(subId);
-    // 变身前角色（subId）不应该出现在索引中，但为了切换，需要在主角色文件中包含 _transform 数据。
-    // 生成文件时，为 mainId 创建合并文件，并为 subId 也生成文件（用于切换时加载？实际上前端切换直接使用 _transform 对象，无需加载 subId 文件，因此 subId 文件可以不生成）
-    // 我们仍然生成 subId 文件，以便调试，但索引中一定不包含。
+    hiddenTransformIds.add(pair[1]);   // 第二个 ID 隐藏
   });
   console.log(`🔄 已加载变身配对：${pairs.length} 组`);
 }
 
+// 过滤角色（排除列表中的角色、变身隐藏角色均不加入索引）
+let visibleCharacters = Array.from(tables.character.values()).filter(c =>
+  !excludeIds.has(c.id) && !hiddenTransformIds.has(c.id)
+);
+console.log(`👥 列表显示角色数量：${visibleCharacters.length}`);
+
 // 输出目录
 const outDir = publicDataDir;
-if (fs.existsSync(outDir)) { fs.rmSync(outDir, { recursive: true, force: true }); }
+if (fs.existsSync(outDir)) {
+  fs.rmSync(outDir, { recursive: true, force: true });
+}
 fs.mkdirSync(outDir, { recursive: true });
 
+const pairedIds = new Set();
 const index = [];
-const allChars = Array.from(tables.character.values());
 
-// 处理变身配对：为主角色生成合并文件
-const processedIds = new Set();
-transformMap.forEach((subId, mainId) => {
-  processedIds.add(mainId);
-  processedIds.add(subId);
-  const mainChar = tables.character.get(mainId);
-  const subChar = tables.character.get(subId);
-  if (!mainChar || !subChar) return;
-  const mainData = buildLocalizedChar(mainChar);
-  const subData = buildLocalizedChar(subChar);
-  mainData._transform = subData;
-  fs.writeFileSync(path.join(outDir, `${mainId}.json`), JSON.stringify(mainData, null, 2), 'utf-8');
-  // 主角色加入索引
-  if (!excludeIds.has(mainId) && !hiddenTransformIds.has(mainId)) {
-    index.push(buildIndexEntry(mainChar));
+// 处理变身配对：生成合并文件
+transformPairs.forEach(pair => {
+  const [firstId, secondId] = pair;
+  pairedIds.add(firstId);
+  pairedIds.add(secondId);
+
+  const firstChar = tables.character.get(firstId);
+  const secondChar = tables.character.get(secondId);
+  if (!firstChar || !secondChar) {
+    console.warn(`⚠️ 变身配对 ${firstId}-${secondId} 中有角色不存在`);
+    return;
   }
-  // 子角色也生成单独文件（不加入索引），但前端实际上不会直接请求它，因为切换使用 _transform。还是生成以防万一。
-  const subDataAlone = buildLocalizedChar(subChar); // 注意：这个 subDataAlone 没有 _transform，单独加载时无法切换回主角色
-  // 但我们仍然写文件，可被直接链接访问
-  fs.writeFileSync(path.join(outDir, `${subId}.json`), JSON.stringify(subDataAlone, null, 2), 'utf-8');
+
+  const firstData = buildLocalizedChar(firstChar);
+  const secondData = buildLocalizedChar(secondChar);
+  const merged = { ...firstData, _transform: secondData };
+  fs.writeFileSync(path.join(outDir, `${firstId}.json`), JSON.stringify(merged, null, 2), 'utf-8');
+
+  if (!excludeIds.has(firstId)) {
+    index.push(buildIndexEntry(firstChar));
+  }
 });
 
-// 处理非变身角色
-allChars.forEach(char => {
-  if (processedIds.has(char.id)) return;
-  processedIds.add(char.id);
+// 处理其他角色
+visibleCharacters.forEach(char => {
+  if (pairedIds.has(char.id)) return;
   const localizedChar = buildLocalizedChar(char);
   fs.writeFileSync(path.join(outDir, `${char.id}.json`), JSON.stringify(localizedChar, null, 2), 'utf-8');
-  if (!excludeIds.has(char.id)) {
-    index.push(buildIndexEntry(char));
-  }
+  index.push(buildIndexEntry(char));
 });
 
+// 保存索引
 fs.writeFileSync(path.join(outDir, 'character_index.json'), JSON.stringify(index, null, 2), 'utf-8');
+
 console.log(`✅ 已生成角色文件，索引包含 ${index.length} 个角色`);
