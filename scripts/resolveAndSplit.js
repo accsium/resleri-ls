@@ -41,10 +41,11 @@ function loadMapFile(name, lang) {
 
 const jpMaps = {};
 const cnMaps = {};
+// support_color 与 trait_color 共用同一张表，因此不再单独加载 support_color
 const mapKeys = [
   'character_tag', 'base_character', 'equipment_tool_trait',
   'original_title', 'attack_attribute', 'role', 'skill_target_type',
-  'trait_color', 'support_color', 'battle_tool_trait'
+  'trait_color', 'battle_tool_trait'
 ];
 mapKeys.forEach(key => {
   jpMaps[key] = loadMapFile(key, 'ja');
@@ -174,7 +175,6 @@ function buildSkillsArray(character, skillDetails) {
 
 // ========== 7. 生成带有双语字段的角色对象 ==========
 function buildLocalizedChar(character) {
-  // 创建基础对象，先加入原始数据
   const char = JSON.parse(JSON.stringify(character));
 
   // 日文名称
@@ -188,12 +188,11 @@ function buildLocalizedChar(character) {
   }
   if (char.trait_color_id != null) {
     char.trait_color_name_ja = jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
-    char.trait_color_name_cn = cnMaps.trait_color?.get(char.trait_color_id) || jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
-}
+  }
   if (char.support_color_id != null) {
-    char.support_color_name_ja = jpMaps.support_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
-    char.support_color_name_cn = cnMaps.support_color?.get(char.support_color_id) || jpMaps.support_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
-}
+    // support_color 与 trait_color 共用同一张颜色表
+    char.support_color_name_ja = jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
+  }
   if (char.battle_tool_trait_ids) {
     char.battle_tool_trait_names_ja = char.battle_tool_trait_ids.map(id => jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
   }
@@ -211,7 +210,7 @@ function buildLocalizedChar(character) {
     char.trait_color_name_cn = cnMaps.trait_color?.get(char.trait_color_id) || jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
   }
   if (char.support_color_id != null) {
-    char.support_color_name_cn = cnMaps.support_color?.get(char.support_color_id) || jpMaps.support_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
+    char.support_color_name_cn = cnMaps.trait_color?.get(char.support_color_id) || jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
   }
   if (char.battle_tool_trait_ids) {
     char.battle_tool_trait_names_cn = char.battle_tool_trait_ids.map(id => cnMaps.battle_tool_trait?.get(id) || jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
@@ -281,8 +280,8 @@ function buildLocalizedChar(character) {
 function buildIndexEntry(character) {
   return {
     id: character.id,
-    name_ja: character.name,                               // 原始日文名
-    name_cn: jpMaps.character_tag?.get(character.id) || character.name,  // 简单示例，实际可能需要更合理的映射，但角色名通常无翻译，保留日文
+    name_ja: character.name,
+    name_cn: character.name, // 角色名一般无翻译，可保留日文
     another_name: character.another_name,
     initial_rarity: character.initial_rarity,
     max_rarity: character.max_rarity,
