@@ -37,6 +37,10 @@ const UI_TEXT = {
     abilityTitle: '能力',
     supportAbilityTitle: '亜空支援能力',
     rarityLabel: ['1星','2星','3星','3.5星','4星','4.5星','5星','6星'],
+    sortLabel: '並べ替え',
+    filterLabel: 'フィルター',
+    applyFilter: '適用',
+    clearFilter: 'クリア',
   },
   cn: {
     pageTitle: '雷斯雷利 角色图鉴',
@@ -76,6 +80,10 @@ const UI_TEXT = {
     abilityTitle: '能力',
     supportAbilityTitle: '亚空支援能力',
     rarityLabel: ['1星','2星','3星','3.5星','4星','4.5星','5星','6星'],
+    sortLabel: '排序',
+    filterLabel: '筛选',
+    applyFilter: '应用筛选',
+    clearFilter: '清除',
   }
 };
 
@@ -97,7 +105,29 @@ function getField(obj, field) {
 
 let characterIndex = [];
 let loadedCharacters = {};
-const cardStates = {}; // 每个卡片的状态
+const cardStates = {};
+
+// 可用的排序字段（内置，不再依赖配置文件）
+const AVAILABLE_SORT_FIELDS = [
+  { field: 'start_at', label_ja: '実装日', label_cn: '实装日期' },
+  { field: 'initial_rarity', label_ja: '初期レアリティ', label_cn: '初始稀有度' },
+  { field: 'max_rarity', label_ja: '最大レアリティ', label_cn: '最大稀有度' },
+  { field: 'role', label_ja: 'ロール', label_cn: '职业' },
+  { field: 'id', label_ja: 'ID', label_cn: 'ID' },
+  { field: 'base_character_id', label_ja: 'ベースキャラ', label_cn: '原型' },
+  { field: 'original_title_id', label_ja: 'シリーズ', label_cn: '系列' },
+  { field: 'trait_color_id', label_ja: '特性色', label_cn: '特性色' },
+  { field: 'support_color_id', label_ja: '支援色', label_cn: '支援色' },
+];
+
+// 当前排序规则（默认按 start_at 降序，相同时按 id 升序）
+let currentSort = [
+  { field: 'start_at', order: 'desc' },
+  { field: 'id', order: 'asc' }
+];
+
+// 筛选条件示例
+let activeFilters = { attack_attributes: [], role: [] };
 
 async function loadIndex() {
   const resp = await fetch('data/character_index.json');
@@ -117,18 +147,122 @@ function rarityToStars(r) {
   return map[r] || '★'.repeat(r);
 }
 
+// 排序比较函数
+function compareCharacters(a, b) {
+  for (const sort of currentSort) {
+    const field = sort.field;
+    const order = sort.order === 'desc' ? -1 : 1;
+    let valA = a[field];
+    let valB = b[field];
+    if (Array.isArray(valA)) valA = valA[0];
+    if (Array.isArray(valB)) valB = valB[0];
+    if (valA == null && valB == null) continue;
+    if (valA == null) return 1 * order;
+    if (valB == null) return -1 * order;
+    if (typeof valA === 'string' && typeof valB === 'string') {
+      const cmp = valA.localeCompare(valB);
+      if (cmp !== 0) return cmp * order;
+    } else {
+      if (valA < valB) return -1 * order;
+      if (valA > valB) return 1 * order;
+    }
+  }
+  return 0;
+}
+
+function applyFilters(char) {
+  if (activeFilters.attack_attributes.length > 0) {
+    const attrs = char.attack_attributes || [];
+    if (!activeFilters.attack_attributes.some(a => attrs.includes(a))) {
+      return false;
+    }
+  }
+  if (activeFilters.role.length > 0) {
+    if (!activeFilters.role.includes(char.role)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function getFilteredAndSortedCharacters() {
+  let filtered = characterIndex.filter(applyFilters);
+  filtered.sort(compareCharacters);
+  return filtered;
+}
+
 function updateUILanguage() {
   document.title = t('pageTitle');
   document.getElementById('pageTitle').textContent = t('pageTitle');
   document.getElementById('searchInput').placeholder = t('searchPlaceholder');
+  buildSortSelect();
+  buildFilterPanel();
   renderAllCards();
+}
+
+function buildSortSelect() {
+  const select = document.getElementById('sortSelect');
+  if (!select) return;
+  select.innerHTML = '';
+  // 默认选项（当前排序）
+  const defaultOption = document.createElement('option');
+  defaultOption.value = '__default__';
+  defaultOption.textContent = currentLang === 'cn' ? '默认' : 'デフォルト';
+  defaultOption.selected = (currentSort.length > 1 && currentSort[0].field === 'start_at');
+  select.appendChild(defaultOption);
+
+  AVAILABLE_SORT_FIELDS.forEach(sf => {
+    const option = document.createElement('option');
+    option.value = sf.field;
+    option.textContent = currentLang === 'cn' ? sf.label_cn : sf.label_ja;
+    // 如果用户选择了单个排序字段，则高亮对应项
+    if (currentSort.length === 1 && currentSort[0].field === sf.field) {
+      option.selected = true;
+    }
+    select.appendChild(option);
+  });
+
+  select.onchange = () => {
+    const val = select.value;
+    if (val === '__default__') {
+      currentSort = [
+        { field: 'start_at', order: 'desc' },
+        { field: 'id', order: 'asc' }
+      ];
+    } else {
+      // 选择单独字段，降序
+      currentSort = [{ field: val, order: 'desc' }];
+    }
+    renderAllCards();
+  };
+}
+
+function buildFilterPanel() {
+  const attrDiv = document.getElementById('attrFilters');
+  const roleDiv = document.getElementById('roleFilters');
+  if (!attrDiv || !roleDiv) return;
+
+  const attrMap = {1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'};
+  const attrMapCn = {1:'斩',2:'打',3:'突',5:'火',6:'冰',7:'雷',8:'风'};
+  attrDiv.innerHTML = Object.entries(attrMap).map(([id, name]) => {
+    const label = currentLang === 'cn' ? attrMapCn[id] : name;
+    return `<label><input type="checkbox" value="${id}" class="attr-check">${label}</label>`;
+  }).join('');
+
+  const roleMap = {1:'攻',2:'破',3:'防',4:'輔'};
+  const roleMapCn = {1:'攻',2:'破',3:'防',4:'辅'};
+  roleDiv.innerHTML = Object.entries(roleMap).map(([id, name]) => {
+    const label = currentLang === 'cn' ? roleMapCn[id] : name;
+    return `<label><input type="checkbox" value="${id}" class="role-check">${label}</label>`;
+  }).join('');
 }
 
 function renderAllCards() {
   const container = document.getElementById('cardContainer');
   container.innerHTML = '';
-  characterIndex.forEach(c => container.appendChild(createCard(c)));
-  filterCards();
+  const filteredSorted = getFilteredAndSortedCharacters();
+  filteredSorted.forEach(c => container.appendChild(createCard(c)));
+  filterCards(); // 搜索过滤
 }
 
 function createCard(indexEntry) {
@@ -159,7 +293,6 @@ function createCard(indexEntry) {
     <div class="card-detail"></div>
   `;
 
-  // 点击头部展开/折叠
   const header = card.querySelector('.card-header');
   header.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
@@ -225,7 +358,6 @@ function generateDetailHTML(id, activeChar, originalChar, state) {
   const startDate = activeChar.start_at ? new Date(activeChar.start_at).toLocaleDateString('ja-JP') : '不明';
   const isAlchemist = activeChar.is_alchemist ? t('yes') : t('no');
 
-  // 技能
   let skillsHTML = '';
   const typeText = t('skillType');
   const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
@@ -250,7 +382,6 @@ function generateDetailHTML(id, activeChar, originalChar, state) {
       </div>`;
   });
 
-  // EX技能
   if (activeChar._exSkills && activeChar._exSkills.length > 0) {
     skillsHTML += `
       <div class="skill-group" data-group="extra">
@@ -261,10 +392,8 @@ function generateDetailHTML(id, activeChar, originalChar, state) {
       </div>`;
   }
 
-  // 能力
   let abilitiesHTML = renderAbilitiesHTML(activeChar, state.evo);
 
-  // 调和颜色
   const colorSwatch = `
     <div style="display:flex; align-items:center; gap:8px; margin:8px 0;">
       <span>调和颜色：</span>
@@ -309,7 +438,6 @@ function renderSkillLevels(levels) {
     });
     html += '</div>';
   }
-  // 默认显示最后一个（最高等级）
   const defaultIndex = levels.length - 1;
   if (levels[defaultIndex]) {
     html += `<div class="skill-card-container">${renderSkillCard(levels[defaultIndex])}</div>`;
@@ -412,7 +540,6 @@ function bindCardButtons(id, char, state) {
   const card = document.querySelector(`.card[data-id="${id}"]`);
   if (!card) return;
 
-  // 头部切换按钮
   const buttonsDiv = card.querySelector('.switch-buttons');
   if (buttonsDiv) {
     buttonsDiv.innerHTML = '';
@@ -463,12 +590,9 @@ function bindCardButtons(id, char, state) {
   const skillGroups = card.querySelectorAll('.skill-levels');
   skillGroups.forEach(group => {
     const tabs = group.querySelectorAll('.level-tab');
-    const levels = group.closest('.skill-group') ? 
-      (state.evo === 'post' ? getLevelsFromGroup(group.closest('.skill-group').dataset.group, char, state) : []) : [];
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const idx = parseInt(tab.dataset.index);
-        // 获取对应等级的技能数据
         const groupType = group.closest('.skill-group')?.dataset.group;
         let levelsArr = [];
         if (groupType === 'extra') {
@@ -488,7 +612,6 @@ function bindCardButtons(id, char, state) {
         }
         if (levelsArr[idx]) {
           group.querySelector('.skill-card-container').innerHTML = renderSkillCard(levelsArr[idx]);
-          // 更新激活状态
           group.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));
           tab.classList.add('active');
         }
@@ -508,7 +631,6 @@ function bindCardButtons(id, char, state) {
       if (content) {
         content.innerHTML = ability ? renderAbilityCard(ability) : `<div class="no-data">${t('none')}</div>`;
       }
-      // 更新按钮状态
       card.querySelectorAll('.support-rarity-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     });
@@ -523,6 +645,29 @@ function filterCards() {
   });
 }
 
+// 筛选面板事件
+document.getElementById('applyFilterBtn').addEventListener('click', () => {
+  const attrChecks = document.querySelectorAll('.attr-check:checked');
+  activeFilters.attack_attributes = Array.from(attrChecks).map(cb => parseInt(cb.value));
+  const roleChecks = document.querySelectorAll('.role-check:checked');
+  activeFilters.role = Array.from(roleChecks).map(cb => parseInt(cb.value));
+  renderAllCards();
+  document.getElementById('filterPanel').style.display = 'none';
+});
+
+document.getElementById('clearFilterBtn').addEventListener('click', () => {
+  document.querySelectorAll('.attr-check, .role-check').forEach(cb => cb.checked = false);
+  activeFilters = { attack_attributes: [], role: [] };
+  renderAllCards();
+  document.getElementById('filterPanel').style.display = 'none';
+});
+
+document.getElementById('filterToggle').addEventListener('click', () => {
+  const panel = document.getElementById('filterPanel');
+  panel.style.display = panel.style.display === 'none' ? 'flex' : 'none';
+});
+
+// 语言切换
 document.getElementById('btn-ja').addEventListener('click', () => switchLang('ja'));
 document.getElementById('btn-cn').addEventListener('click', () => switchLang('cn'));
 
