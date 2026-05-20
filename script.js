@@ -1,4 +1,3 @@
-// ========== 多语言文本定义 ==========
 const UI_TEXT = {
   ja: {
     pageTitle: 'レスレリ 角色图鉴',
@@ -82,7 +81,6 @@ const UI_TEXT = {
   }
 };
 
-// ========== 全局状态 ==========
 let currentLang = 'cn';
 function t(key) { return UI_TEXT[currentLang][key] || key; }
 
@@ -94,7 +92,6 @@ function rarityToStars(r) {
   return map[r] || '★'.repeat(r);
 }
 
-// ========== 数据加载 ==========
 async function loadIndex() {
   const folder = currentLang === 'cn' ? 'cn' : 'jp';
   const resp = await fetch(`data/${folder}/character_index.json`);
@@ -107,7 +104,6 @@ async function loadCharacter(id) {
   return await resp.json();
 }
 
-// ========== UI 语言更新 ==========
 function updateUILanguage() {
   document.title = t('pageTitle');
   document.getElementById('pageTitle').textContent = t('pageTitle');
@@ -118,7 +114,6 @@ function updateUILanguage() {
   }
 }
 
-// ========== 列表渲染 ==========
 function renderList() {
   const listDiv = document.getElementById('characterList');
   const query = document.getElementById('searchInput')?.value?.toLowerCase() || '';
@@ -140,7 +135,6 @@ function renderList() {
   }).join('');
 }
 
-// ========== 技能组内容渲染（等级切换） ==========
 function renderSkillGroupContent(groupId, levels, activeIndex) {
   const container = document.querySelector(`.skill-content[data-group="${groupId}"]`);
   if (!container || levels.length === 0) return;
@@ -166,7 +160,6 @@ function renderSkillGroupContent(groupId, levels, activeIndex) {
   });
 }
 
-// ========== 辅助：获取技能2最高等级 wait 值 ==========
 function getSkill2Wait(char, evoState) {
   const skills = char._skills || [];
   const normal2Group = skills.find(s => s.type === 'normal2');
@@ -177,7 +170,6 @@ function getSkill2Wait(char, evoState) {
   return highestSkill.wait ?? 0;
 }
 
-// ========== 更新初始WT显示 ==========
 function updateInitialWT(char, evoState) {
   const container = document.getElementById('initialWTContainer');
   if (!container) return;
@@ -194,7 +186,6 @@ function updateInitialWT(char, evoState) {
   </div>`;
 }
 
-// ========== 详情渲染 ==========
 function renderDetail(char) {
   const panel = document.getElementById('detailPanel');
   panel.charData = char;
@@ -207,17 +198,18 @@ function renderDetail(char) {
 
   const hasEvolution = (char._skills || []).some(s => s.post_evolution.length > 0);
   const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
-  const hasTransform = char._is_transform === true;
+  const hasTransform = char.transform_to != null;   // 变身后角色拥有此字段，指向变身前
 
   const initialEvo = hasEvolution ? 'post' : 'pre';
   panel.dataset.evo = initialEvo;
-  panel.dataset.range = 'inrange';  // 默认显示切换后技能
+  panel.dataset.range = 'inrange';
 
   let html = `
     <div class="detail-header">
       <div class="info">
         <h2>
           ${char.name} <span class="alias">${char.another_name || ''}</span>
+          <span style="font-size:14px; color:#888;">ID:${char.id}</span>
           ${hasEvolution ? `<button id="evoSwitchBtn" class="evo-switch-btn active">${t('switchText')}</button>` : ''}
           ${hasRange ? `<button id="rangeSwitchBtn" class="evo-switch-btn active">${t('switchText')}</button>` : ''}
           ${hasTransform ? `<button id="transformSwitchBtn" class="evo-switch-btn">${t('switchText')}</button>` : ''}
@@ -273,7 +265,6 @@ function renderDetail(char) {
     </div>`;
   });
 
-  // 普通 EX 技能
   if (char._exSkills && char._exSkills.length > 0) {
     const groupId = 'skill-extra';
     html += `<div class="skill-group" id="${groupId}">
@@ -296,7 +287,6 @@ function renderDetail(char) {
 
   panel.innerHTML = html;
 
-  // 初始化技能组渲染
   (char._skills || []).forEach(skillGroup => {
     const type = skillGroup.type;
     const groupId = `skill-${type}`;
@@ -312,18 +302,13 @@ function renderDetail(char) {
     renderSkillGroupContent(groupId, levels, activeIndex);
   });
 
-  // 初始化 EX 技能组
   if (char._exSkills && char._exSkills.length > 0) {
-    const exLevels = char._exSkills;
-    renderSkillGroupContent('skill-extra', exLevels, exLevels.length - 1);
+    renderSkillGroupContent('skill-extra', char._exSkills, char._exSkills.length - 1);
   }
 
-  // 初始WT
   updateInitialWT(char, initialEvo);
-  // 能力
   renderAbilities(char, initialEvo);
 
-  // 进化切换按钮事件
   const evoBtn = document.getElementById('evoSwitchBtn');
   if (evoBtn) {
     evoBtn.addEventListener('click', () => {
@@ -335,7 +320,6 @@ function renderDetail(char) {
     });
   }
 
-  // range 切换按钮事件
   const rangeBtn = document.getElementById('rangeSwitchBtn');
   if (rangeBtn) {
     rangeBtn.addEventListener('click', () => {
@@ -347,13 +331,12 @@ function renderDetail(char) {
     });
   }
 
-  // 变身切换按钮事件
   const transformBtn = document.getElementById('transformSwitchBtn');
   if (transformBtn) {
     transformBtn.addEventListener('click', () => {
-      const originalId = char._original_id;
-      if (originalId) {
-        selectCharacter(originalId);
+      const targetId = char.transform_to;   // 变身前角色ID
+      if (targetId) {
+        selectCharacter(targetId);
       }
     });
   }
@@ -386,7 +369,6 @@ function renderStat(label, value) {
   return `<div class="stat-item"><div class="stat-value">${value ?? '?'}</div><div class="stat-label">${label}</div></div>`;
 }
 
-// ========== 能力区域渲染 ==========
 function renderAbilities(char, evoState) {
   const container = document.getElementById('abilityContainer');
   if (!container) return;
@@ -454,7 +436,6 @@ function renderAbilities(char, evoState) {
   }
 }
 
-// ========== 技能卡片渲染 ==========
 function renderSkillCard(skill) {
   const target = skill.target_name || skill.skill_target_type || '?';
   const attr = (skill.attack_attributes || []).map(a => {
@@ -488,7 +469,6 @@ function renderSkillCard(skill) {
   </div>`;
 }
 
-// ========== 能力卡片渲染 ==========
 function renderAbilityCard(ability) {
   let description = ability.description || '';
   if (ability.effects && ability.effects.length > 0) {
@@ -505,7 +485,6 @@ function renderAbilityCard(ability) {
   </div>`;
 }
 
-// ========== 交互 ==========
 async function selectCharacter(id) {
   currentCharId = id;
   document.querySelectorAll('.char-item').forEach(el => el.classList.remove('active'));
@@ -514,16 +493,7 @@ async function selectCharacter(id) {
   const panel = document.getElementById('detailPanel');
   panel.innerHTML = `<div class="loading">${t('loading')}</div>`;
   try {
-    let char = await loadCharacter(id);
-
-    // 变身处理：如果有 transform_to，默认显示变身后角色
-    if (char.transform_to) {
-      const transformTarget = await loadCharacter(char.transform_to);
-      transformTarget._is_transform = true;
-      transformTarget._original_id = id;
-      char = transformTarget;
-    }
-
+    const char = await loadCharacter(id);
     renderDetail(char);
   } catch(e) {
     panel.innerHTML = `<div class="no-data">${t('loadFailed')}</div>`;
@@ -544,7 +514,6 @@ async function switchLanguage(lang) {
 document.getElementById('btn-ja').addEventListener('click', () => switchLanguage('ja'));
 document.getElementById('btn-cn').addEventListener('click', () => switchLanguage('cn'));
 
-// 初始化
 (async () => {
   updateUILanguage();
   await loadIndex();
