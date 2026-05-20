@@ -303,7 +303,7 @@ button {
   display: block;
 }
 
-/* 第一层级标题：简单的文字标题，无背景 */
+/* 第一层级标题：技能、能力等 */
 .section-title {
   font-size: 17px;
   font-weight: 400;
@@ -313,7 +313,17 @@ button {
   border-bottom: 2px solid #b0a898;
 }
 
-/* 第二层级卡片：横幅标题 + 白色内容区 */
+/* 第二层级标题：技能类型（通常攻击1、爆发技能等） */
+.subsection-title {
+  font-size: 15px;
+  font-weight: 400;
+  color: #3e4759;
+  margin: 14px 0 8px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #c4b8a0;
+}
+
+/* 第三层级卡片：横幅标题 + 白色内容区 */
 .banner-title {
   background: #3e4759;
   color: #fffeef;
@@ -349,9 +359,7 @@ button {
   padding: 12px 16px;
 }
 
-/* 技能组内部标题行（已被 banner-title 替代，不再需要） */
-
-/* 技能卡片（第二层级内部的卡片） */
+/* 技能卡片（第三层级内部的卡片） */
 .skill-detail-card {
   background: #f9f9f9;
   padding: 10px;
@@ -397,7 +405,7 @@ button {
   color: #3e2e1e;
 }
 
-/* 支援能力标题行（用于横幅标题内部） */
+/* 支援能力标题行（在横幅内） */
 .support-ability-header {
   display: flex;
   align-items: center;
