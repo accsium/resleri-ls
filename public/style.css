@@ -295,3 +295,90 @@ body {
   padding: 20px;
   color: #888;
 }
+
+/* 控件栏 */
+.controls-bar {
+  max-width: 800px;
+  margin: 0 auto 15px;
+  padding: 0 15px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sort-control label {
+  font-size: 14px;
+  color: #555;
+}
+
+.sort-control select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-panel {
+  max-width: 800px;
+  margin: 0 auto 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.filter-group span {
+  font-size: 14px;
+  color: #555;
+}
+
+.filter-group label {
+  font-size: 13px;
+  margin-right: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+#applyFilterBtn,
+#clearFilterBtn {
+  padding: 5px 14px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+#applyFilterBtn {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
