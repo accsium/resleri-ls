@@ -4,51 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>雷斯雷利 角色图鉴</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  
-<div class="header">
-  <h1 id="pageTitle">雷斯雷利 角色图鉴</h1>
-  <div class="lang-switcher">
-    <button id="btn-ja">日本語</button>
-    <button id="btn-cn" class="active">中文</button>
-    <button id="btn-refresh" class="btn-refresh">强制刷新</button>
+  <!-- 顶栏 -->
+  <div class="header">
+    <h1 id="pageTitle">雷斯雷利 角色图鉴</h1>
+    <div class="lang-switcher">
+      <button id="btn-ja">日本語</button>
+      <button id="btn-cn" class="active">中文</button>
+      <button id="btn-refresh" class="btn-refresh">强制刷新</button>
+    </div>
   </div>
-</div>
 
-<div class="search-box">
-  <input type="text" id="searchInput" placeholder="搜索角色名称..." oninput="filterCards()">
-</div>
-
-<div class="controls-bar">
-  <div class="sort-control">
-    <label for="sortSelect">排序：</label>
-    <select id="sortSelect"></select>
-    <button id="orderToggle" class="order-btn">↓</button>
+  <!-- 搜索框 -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="搜索角色名称..." oninput="filterCards()">
   </div>
-  <button id="filterToggle" class="filter-btn">筛选</button>
-</div>
 
-<div class="filter-panel" id="filterPanel" style="display:none;">
-  <div class="filter-group">
-    <span>属性：</span>
-    <div id="attrFilters"></div>
+  <!-- 控制栏 -->
+  <div class="controls-bar">
+    <div class="sort-control">
+      <label for="sortSelect">排序：</label>
+      <select id="sortSelect"></select>
+      <button id="orderToggle" class="order-btn">↓</button>
+    </div>
+    <button id="filterToggle" class="filter-btn">筛选</button>
   </div>
-  <div class="filter-group">
-    <span>职业：</span>
-    <div id="roleFilters"></div>
+
+  <!-- 筛选面板 -->
+  <div class="filter-panel" id="filterPanel" style="display:none;">
+    <div class="filter-group">
+      <span>属性：</span>
+      <div id="attrFilters"></div>
+    </div>
+    <div class="filter-group">
+      <span>职业：</span>
+      <div id="roleFilters"></div>
+    </div>
+    <button id="applyFilterBtn">应用筛选</button>
+    <button id="clearFilterBtn">清除</button>
   </div>
-  <button id="applyFilterBtn">应用筛选</button>
-  <button id="clearFilterBtn">清除</button>
-</div>
 
-<div class="card-container" id="cardContainer"></div>
+  <!-- 卡片容器 -->
+  <div class="card-container" id="cardContainer"></div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
