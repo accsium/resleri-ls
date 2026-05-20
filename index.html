@@ -227,7 +227,6 @@ function renderSkillGroupContent(groupId, levels, activeIndex) {
   }
   container.innerHTML = html;
 
-  // 绑定等级切换事件
   container.querySelectorAll('.level-tab').forEach(tab => {
     tab.addEventListener('click', function() {
       const idx = parseInt(this.dataset.index);
@@ -316,7 +315,7 @@ function renderDetail(char) {
 
   panel.innerHTML = html;
 
-  // 初始化所有技能组内容（根据进化状态）
+  // 初始化所有技能组内容
   (char._skills || []).forEach(skillGroup => {
     const groupId = `skill-${skillGroup.type}`;
     const levels = initialEvo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
@@ -354,11 +353,15 @@ function renderSkillCard(skill) {
     return map[a] || a;
   }).join('/');
 
-  // 处理描述中的占位符 {0}, {1}, {2}... 替换为 effects 中对应的 value
+  // 处理描述中的占位符 {0}, {1}, {2}... 替换为 effects 中对应的 value，并除以100
   let description = skill.description || '';
   if (skill.effects && skill.effects.length > 0) {
     skill.effects.forEach((eff, idx) => {
-      description = description.replace(new RegExp(`\\{${idx}\\}`, 'g'), eff.value ?? 0);
+      const rawVal = eff.value ?? 0;
+      const num = rawVal / 100;
+      // 如果结果是整数则显示整数，否则保留一位小数
+      const displayVal = Number.isInteger(num) ? num : num.toFixed(1);
+      description = description.replace(new RegExp(`\\{${idx}\\}`, 'g'), displayVal);
     });
   }
 
@@ -392,7 +395,10 @@ function renderAbilityCard(ability) {
   let description = ability.description || '';
   if (ability.effects && ability.effects.length > 0) {
     ability.effects.forEach((eff, idx) => {
-      description = description.replace(new RegExp(`\\{${idx}\\}`, 'g'), eff.value ?? 0);
+      const rawVal = eff.value ?? 0;
+      const num = rawVal / 100;
+      const displayVal = Number.isInteger(num) ? num : num.toFixed(1);
+      description = description.replace(new RegExp(`\\{${idx}\\}`, 'g'), displayVal);
     });
   }
   let effectsHtml = '';
