@@ -190,6 +190,11 @@ function renderDetail(char) {
   const panel = document.getElementById('detailPanel');
   panel.charData = char;
 
+  // 保存原始数据和变身数据引用
+  panel.originalChar = char;
+  panel.transformChar = char._transform || null;
+  panel.showingTransform = false;
+
   const tagNames = char.tag_names || [];
   const attrNames = (char.attack_attribute_names || []).join(' / ');
   const roleName = char.role_name || '?';
@@ -198,7 +203,7 @@ function renderDetail(char) {
 
   const hasEvolution = (char._skills || []).some(s => s.post_evolution.length > 0);
   const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
-  const hasTransform = char.transform_to != null;
+  const hasTransform = panel.transformChar != null;
 
   const initialEvo = hasEvolution ? 'post' : 'pre';
   panel.dataset.evo = initialEvo;
@@ -287,6 +292,7 @@ function renderDetail(char) {
 
   panel.innerHTML = html;
 
+  // 填充技能内容
   (char._skills || []).forEach(skillGroup => {
     const type = skillGroup.type;
     const groupId = `skill-${type}`;
@@ -309,6 +315,7 @@ function renderDetail(char) {
   updateInitialWT(char, initialEvo);
   renderAbilities(char, initialEvo);
 
+  // 进化切换
   const evoBtn = document.getElementById('evoSwitchBtn');
   if (evoBtn) {
     evoBtn.addEventListener('click', () => {
@@ -320,6 +327,7 @@ function renderDetail(char) {
     });
   }
 
+  // range 切换
   const rangeBtn = document.getElementById('rangeSwitchBtn');
   if (rangeBtn) {
     rangeBtn.addEventListener('click', () => {
@@ -331,12 +339,19 @@ function renderDetail(char) {
     });
   }
 
+  // 变身切换（瞬间切换，不重新加载）
   const transformBtn = document.getElementById('transformSwitchBtn');
   if (transformBtn) {
     transformBtn.addEventListener('click', () => {
-      if (char.transform_to) {
-        selectCharacter(char.transform_to);
-      }
+      if (!panel.transformChar) return;
+      // 交换当前显示的数据
+      const temp = panel.charData;
+      panel.charData = panel.transformChar;
+      panel.transformChar = temp;
+      panel.showingTransform = !panel.showingTransform;
+
+      // 重新渲染详情（无网络请求）
+      renderDetail(panel.charData);
     });
   }
 }
@@ -513,7 +528,6 @@ async function switchLanguage(lang) {
 document.getElementById('btn-ja').addEventListener('click', () => switchLanguage('ja'));
 document.getElementById('btn-cn').addEventListener('click', () => switchLanguage('cn'));
 
-// 清除缓存按钮（如果已添加）
 const refreshBtn = document.getElementById('btn-refresh');
 if (refreshBtn) {
   refreshBtn.addEventListener('click', () => {
