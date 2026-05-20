@@ -215,7 +215,21 @@ if (!tables.character) {
   process.exit(1);
 }
 
-const characters = Array.from(tables.character.values());
+// 读取排除角色列表
+const excludeFile = path.join(__dirname, '..', 'config', 'exclude.txt');
+let excludeIds = new Set();
+if (fs.existsSync(excludeFile)) {
+  const content = fs.readFileSync(excludeFile, 'utf-8');
+  content.split(/\r?\n/).forEach(line => {
+    const id = parseInt(line.trim());
+    if (!isNaN(id)) excludeIds.add(id);
+  });
+  console.log(`📋 已加载排除角色 ID：${excludeIds.size} 个`);
+}
+
+// 过滤角色
+let characters = Array.from(tables.character.values()).filter(c => !excludeIds.has(c.id));
+console.log(`👥 有效角色数量：${characters.length}（共 ${tables.character.size} 个，排除 ${tables.character.size - characters.length} 个）`);
 
 ['jp', 'cn'].forEach(lang => {
   const langDir = path.join(publicDataDir, lang);
