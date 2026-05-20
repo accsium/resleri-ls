@@ -3,7 +3,6 @@ const UI_TEXT = {
   ja: {
     pageTitle: 'レスレリ 角色图鉴',
     searchPlaceholder: '名前で検索...',
-    basicStatus: '基本ステータス',
     skillSection: 'スキル',
     abilitySection: 'アビリティ',
     leaderSkillSection: 'リーダースキル',
@@ -46,7 +45,6 @@ const UI_TEXT = {
   cn: {
     pageTitle: '雷斯雷利 角色图鉴',
     searchPlaceholder: '搜索角色名称...',
-    basicStatus: '基础属性',
     skillSection: '技能',
     abilitySection: '能力',
     leaderSkillSection: '队长技能',
@@ -108,7 +106,7 @@ function getField(obj, field) {
 // 全局数据
 let characterIndex = [];
 let loadedCharacters = {};
-const cardStates = {}; // 每个卡片的状态 { evo, range, showTransform }
+const cardStates = {};
 
 // 可用排序字段
 const AVAILABLE_SORT_FIELDS = [
@@ -132,7 +130,6 @@ let activeFilters = { attack_attributes: [], role: [] };
 async function loadIndex() {
   const resp = await fetch('data/character_index.json');
   characterIndex = await resp.json();
-  // 确保 sort_id 存在（兼容旧索引）
   characterIndex.forEach(c => {
     if (!c.sort_id && c.start_at) {
       const dateStr = c.start_at.substring(0, 10).replace(/-/g, '');
@@ -342,8 +339,19 @@ function renderDetailContent(id, char, state) {
   bindCardButtons(id, activeChar, char, state);
 }
 
-// ========== 详情 HTML 生成（不含基础属性和调和颜色） ==========
+// ========== 详情 HTML 生成（队长技能提到技能前） ==========
 function generateDetailHTML(activeChar, state) {
+  // 队长技能在最前
+  let leaderHTML = '';
+  if (activeChar.leader_skill) {
+    leaderHTML = `<div class="section-title">${t('leaderSkillSection')}</div>
+      <div class="skill-detail-card" style="border-left-color:#eab308;">
+        <div class="skill-name">${activeChar.leader_skill.name || t('leaderSkillSection')}</div>
+        <div class="skill-desc">${activeChar.leader_skill.description || ''}</div>
+      </div>`;
+  }
+
+  // 技能列表
   let skillsHTML = '';
   const typeText = t('skillType');
   const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
@@ -360,48 +368,44 @@ function generateDetailHTML(activeChar, state) {
     }
     if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
 
+    const levelTabs = levels.length > 1 ? `<div class="level-tabs">${levels.map((s, i) => `<button class="level-tab ${i === levels.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')} ${i+1}</button>`).join('')}</div>` : '';
+    const skillCard = levels[levels.length - 1] ? renderSkillCard(levels[levels.length - 1]) : '';
+
     skillsHTML += `<div class="skill-group" data-group="${group.type}">
-      <div class="skill-group-header"><span class="skill-group-title">${typeText[group.type] || group.type}</span></div>
-      <div class="skill-levels">${levels && levels.length > 0 ? renderSkillLevels(levels) : t('none')}</div>
+      <div class="skill-group-header">
+        <span class="skill-group-title">${typeText[group.type] || group.type}</span>
+        ${levelTabs}
+      </div>
+      ${skillCard ? `<div class="skill-card-container">${skillCard}</div>` : `<div class="no-data">${t('none')}</div>`}
     </div>`;
   });
 
   // EX技能
   const exSkills = activeChar._exSkills || [];
   if (exSkills.length > 0) {
+    const levelTabs = exSkills.length > 1 ? `<div class="level-tabs">${exSkills.map((s, i) => `<button class="level-tab ${i === exSkills.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')} ${i+1}</button>`).join('')}</div>` : '';
+    const skillCard = exSkills[exSkills.length - 1] ? renderSkillCard(exSkills[exSkills.length - 1]) : '';
     skillsHTML += `<div class="skill-group" data-group="extra">
-      <div class="skill-group-header"><span class="skill-group-title">${t('skillType').extra}</span></div>
-      <div class="skill-levels">${renderSkillLevels(exSkills)}</div>
+      <div class="skill-group-header">
+        <span class="skill-group-title">${t('skillType').extra}</span>
+        ${levelTabs}
+      </div>
+      ${skillCard ? `<div class="skill-card-container">${skillCard}</div>` : `<div class="no-data">${t('none')}</div>`}
     </div>`;
   }
 
+  // 能力
   const abilitiesHTML = renderAbilitiesHTML(activeChar, state.evo);
 
   return `
+    ${leaderHTML}
     <div class="section-title">${t('skillSection')}</div>
     ${skillsHTML}
     ${abilitiesHTML}
-    ${activeChar.leader_skill ? `<div class="section-title">${t('leaderSkillSection')}</div>
-      <div class="skill-detail-card" style="border-left-color:#eab308;">
-        <div class="skill-name">${activeChar.leader_skill.name || t('leaderSkillSection')}</div>
-        <div class="skill-desc">${activeChar.leader_skill.description || ''}</div>
-      </div>` : ''}
   `;
 }
 
-// 技能等级选项卡
-function renderSkillLevels(levels) {
-  let html = '';
-  if (levels.length > 1) {
-    html += '<div class="level-tabs">';
-    const defaultIdx = levels.length - 1;
-    levels.forEach((s, i) => html += `<button class="level-tab ${i === defaultIdx ? 'active' : ''}" data-index="${i}">${t('level')} ${i+1}</button>`);
-    html += '</div>';
-  }
-  if (levels[levels.length - 1]) html += `<div class="skill-card-container">${renderSkillCard(levels[levels.length - 1])}</div>`;
-  return html;
-}
-
+// 技能卡片（不变）
 function renderSkillCard(skill) {
   const target = getField(skill, 'target_name') || skill.skill_target_type || '?';
   const attr = (skill.attack_attributes || []).map(a => ({1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'}[a] || a)).join('/');
@@ -422,6 +426,7 @@ function renderSkillCard(skill) {
   </div>`;
 }
 
+// 能力区域（支援能力标题与星级同行）
 function renderAbilitiesHTML(char, evoState) {
   const map = char._skillDetails || {};
   const evolvedIds = new Set(char.all_skill_evolved_ability_ids || []);
@@ -439,12 +444,14 @@ function renderAbilitiesHTML(char, evoState) {
   else {
     const maxRarity = char.max_rarity || 8;
     const defaultIdx = Math.min(maxRarity - 1, supportIds.length - 1);
-    html += '<div class="level-tabs support-rarity-tabs">';
+    html += `<div class="support-ability-header">
+      <span class="skill-group-title">${t('supportAbilityTitle')}</span>
+      <div class="support-rarity-tabs">`;
     supportIds.forEach((sid, idx) => {
       if (sid == null) return;
       html += `<button class="level-tab support-rarity-btn ${idx === defaultIdx ? 'active' : ''}" data-support-idx="${idx}">${t('rarityLabel')[idx]}</button>`;
     });
-    html += '</div>';
+    html += `</div></div>`;
     html += `<div class="support-ability-content">${map[supportIds[defaultIdx]] ? renderAbilityCard(map[supportIds[defaultIdx]]) : `<div class="no-data">${t('none')}</div>`}</div>`;
   }
   return html;
@@ -493,11 +500,13 @@ function bindCardButtons(id, activeChar, originalChar, state) {
   }
 
   // 技能等级切换
-  card.querySelectorAll('.skill-levels').forEach(group => {
-    group.querySelectorAll('.level-tab').forEach(tab => {
+  card.querySelectorAll('.skill-group').forEach(group => {
+    const tabs = group.querySelectorAll('.level-tab');
+    const skillCardContainer = group.querySelector('.skill-card-container');
+    const groupType = group.dataset.group;
+    tabs.forEach(tab => {
       tab.onclick = () => {
         const idx = parseInt(tab.dataset.index);
-        const groupType = group.closest('.skill-group')?.dataset.group;
         let levelsArr = [];
         if (groupType === 'extra') levelsArr = activeChar._exSkills || [];
         else {
@@ -512,9 +521,9 @@ function bindCardButtons(id, activeChar, originalChar, state) {
             if (!levelsArr || levelsArr.length === 0) levelsArr = skillObj.post_evolution.length > 0 ? skillObj.post_evolution : skillObj.pre_evolution;
           }
         }
-        if (levelsArr && levelsArr[idx]) {
-          group.querySelector('.skill-card-container').innerHTML = renderSkillCard(levelsArr[idx]);
-          group.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));
+        if (levelsArr && levelsArr[idx] && skillCardContainer) {
+          skillCardContainer.innerHTML = renderSkillCard(levelsArr[idx]);
+          tabs.forEach(t => t.classList.remove('active'));
           tab.classList.add('active');
         }
       };
