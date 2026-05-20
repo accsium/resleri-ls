@@ -28,7 +28,6 @@ const UI_TEXT = {
     switchText: '切替',
     level: 'Lv',
     initialWTLabel: '初期WT',
-    basicStatus: '基本ステータス',
     skillType: {
       normal1: '通常攻撃1', normal2: '通常攻撃2', burst: 'バーストスキル',
       active1: 'アクティブ1', active2: 'アクティブ2', active3: 'アクティブ3',
@@ -71,7 +70,6 @@ const UI_TEXT = {
     switchText: '切换',
     level: '等级',
     initialWTLabel: '初始WT',
-    basicStatus: '基础属性',
     skillType: {
       normal1: '通常攻击1', normal2: '通常攻击2', burst: '爆发技能',
       active1: '主动1', active2: '主动2', active3: '主动3',
@@ -88,29 +86,24 @@ const UI_TEXT = {
   }
 };
 
-// 颜色名称 → hex 值（调和颜色菱形用）
+// 颜色名称 → hex 值
 const COLOR_MAP = {
   '赤': '#E74C3C', '青': '#3498DB', '緑': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
   '红': '#E74C3C', '蓝': '#3498DB', '绿': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
   '白': '#FFFFFF', '黒': '#333333', '黑': '#333333',
 };
 
-// 当前语言，默认中文
 let currentLang = 'cn';
 function t(key) { return UI_TEXT[currentLang][key] || key; }
-
-// 获取当前语言对应的字段（优先 _cn，其次 _ja）
 function getField(obj, field) {
   if (currentLang === 'cn' && obj[field + '_cn'] !== undefined) return obj[field + '_cn'];
   return obj[field + '_ja'] || obj[field] || '';
 }
 
-// 全局数据
 let characterIndex = [];
 let loadedCharacters = {};
 const cardStates = {};
 
-// 可用排序字段
 const AVAILABLE_SORT_FIELDS = [
   { field: 'sort_id', label_ja: '実装日+ID', label_cn: '实装日期+ID' },
   { field: 'start_at', label_ja: '実装日', label_cn: '实装日期' },
@@ -128,7 +121,6 @@ let currentSortField = 'sort_id';
 let currentSortOrder = 'desc';
 let activeFilters = { attack_attributes: [], role: [] };
 
-// ========== 数据加载 ==========
 async function loadIndex() {
   const resp = await fetch('data/character_index.json');
   characterIndex = await resp.json();
@@ -154,7 +146,6 @@ function rarityToStars(r) {
   return map[r] || '★'.repeat(r);
 }
 
-// ========== 排序与筛选 ==========
 function compareCharacters(a, b) {
   const field = currentSortField;
   const order = currentSortOrder === 'desc' ? -1 : 1;
@@ -185,7 +176,6 @@ function getFilteredAndSortedCharacters() {
   return filtered;
 }
 
-// ========== UI 更新 ==========
 function updateUILanguage() {
   document.title = t('pageTitle');
   document.getElementById('pageTitle').textContent = t('pageTitle');
@@ -242,7 +232,7 @@ function renderAllCards() {
   filterCards();
 }
 
-// ========== 卡片创建（头部不再包含属性网格） ==========
+// 卡片创建（头部包含基础属性小卡片）
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -255,6 +245,8 @@ function createCard(indexEntry) {
   const role = getField(indexEntry, 'role_name');
   const tags = (getField(indexEntry, 'tag_names') || []).slice(0, 3);
   const releaseDate = indexEntry.start_at ? new Date(indexEntry.start_at).toLocaleDateString('ja-JP') : '—';
+  const status = indexEntry.initial_status || {};
+  const initialWT = indexEntry.initial_wt != null ? indexEntry.initial_wt : '—';
 
   const traitColorName = getField(indexEntry, 'trait_color_name');
   const supportColorName = getField(indexEntry, 'support_color_name');
@@ -268,6 +260,18 @@ function createCard(indexEntry) {
       <span style="color:${getColorHex(supportColorName)}">${supportColorName || '?'}</span>
     </div>` : '';
 
+  // 基础属性小卡片
+  const statCards = `
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-label">${t('statLabels').hp}</div><div class="stat-value">${status.hp ?? '?'}</div></div>
+      <div class="stat-card"><div class="stat-label">${t('statLabels').attack}</div><div class="stat-value">${status.attack ?? '?'}</div></div>
+      <div class="stat-card"><div class="stat-label">${t('statLabels').magic}</div><div class="stat-value">${status.magic ?? '?'}</div></div>
+      <div class="stat-card"><div class="stat-label">${t('statLabels').defense}</div><div class="stat-value">${status.defense ?? '?'}</div></div>
+      <div class="stat-card"><div class="stat-label">${t('statLabels').mental}</div><div class="stat-value">${status.mental ?? '?'}</div></div>
+      <div class="stat-card"><div class="stat-label">${t('statLabels').speed}</div><div class="stat-value">${status.speed ?? '?'}</div></div>
+      <div class="stat-card"><div class="stat-label">${t('initialWTLabel')}</div><div class="stat-value">${initialWT}</div></div>
+    </div>`;
+
   card.innerHTML = `
     <div class="card-header">
       <div class="card-left">
@@ -276,6 +280,7 @@ function createCard(indexEntry) {
         <div class="attrs">${attrs} | ${role}</div>
         <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
         <div class="release-date">${releaseDate}</div>
+        ${statCards}
       </div>
       <div class="card-right">
         ${colorSwatch}
