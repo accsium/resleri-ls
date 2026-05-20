@@ -5738,5 +5738,1076 @@
       ],
       "post_evolution": []
     }
-  ]
+  ],
+  "_exSkills": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 35,
+      "break_power_type": 2,
+      "description": "追加効果なし<br>※状態変化の回数を消費せず、追加効果を発動しない",
+      "effects": [],
+      "id": 14002710,
+      "is_restrict_after_skill_timing_effects": true,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ギルティリープ",
+      "not_state_change_count_decrease": true,
+      "power": 271,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "追加効果なし<br>状態変化回数を消費しない",
+      "timeline_hash": "6568330716529691381",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 133}",
+      "effects": [
+        {
+          "id": 91001209,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001209,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001665,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001665,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001670,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001670,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002490,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ブラッディハート",
+      "not_state_change_count_decrease": false,
+      "power": 59,
+      "require_command_value": false,
+      "skill_destination": 11002700,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 3,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に回避を付与<br>自身の位置をアウトレンジに移動",
+      "timeline_hash": "8951147173588426933",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 134}",
+      "effects": [
+        {
+          "id": 91001209,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001209,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001665,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001665,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001670,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001670,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002491,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ブラッディハート",
+      "not_state_change_count_decrease": false,
+      "power": 62,
+      "require_command_value": false,
+      "skill_destination": 11002701,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 3,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に回避を付与<br>自身の位置をアウトレンジに移動",
+      "timeline_hash": "8951147173588426933",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 135}",
+      "effects": [
+        {
+          "id": 91001209,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001209,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001665,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001665,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001670,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001670,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002492,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ブラッディハート",
+      "not_state_change_count_decrease": false,
+      "power": 66,
+      "require_command_value": false,
+      "skill_destination": 11002702,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 3,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に回避を付与<br>自身の位置をアウトレンジに移動",
+      "timeline_hash": "8951147173588426933",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 136}",
+      "effects": [
+        {
+          "id": 91001209,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001209,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001665,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001665,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001670,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001670,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002493,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ブラッディハート",
+      "not_state_change_count_decrease": false,
+      "power": 69,
+      "require_command_value": false,
+      "skill_destination": 11002703,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 3,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に回避を付与<br>自身の位置をアウトレンジに移動",
+      "timeline_hash": "8951147173588426933",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 7,
+      "break_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 137}",
+      "effects": [
+        {
+          "id": 91001209,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001209,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001665,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001665,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001670,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001670,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002494,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ブラッディハート",
+      "not_state_change_count_decrease": false,
+      "power": 73,
+      "require_command_value": false,
+      "skill_destination": 11002704,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 3,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身に回避を付与<br>自身の位置をアウトレンジに移動",
+      "timeline_hash": "8951147173588426933",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 27,
+      "break_power_type": 2,
+      "description": "攻撃後、自身のHPを{0}%回復<br>得意属性が打属性または「アラディス調査団」の味方全員に「受けるダメージ-{1}%」を2回攻撃を受けるまで付与(上限2個)し、<br>攻撃対象のパネル全てを加護弱化パネルに変換(空パネルの時は生成)(発動上限3回)<br>アウトレンジ時のスキル：{hyperlink_id 138}",
+      "effects": [
+        {
+          "id": 91000926,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001695,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001695,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001672,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001672,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001673,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001673,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001698,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001698,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002495,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "サクリファイス",
+      "not_state_change_count_decrease": false,
+      "power": 209,
+      "require_command_value": false,
+      "skill_destination": 12002705,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 3,
+      "still_path_hash": "6009802487725881068",
+      "summary": "攻撃後、自身のHPを回復<br>得意属性が打属性または「アラディス調査団」の味方全員の受けるダメージダウン<br>タイムラインに並んでいる次の敵のパネル全てを加護弱化パネルに変換",
+      "timeline_hash": "7428064524893356172",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 28,
+      "break_power_type": 2,
+      "description": "攻撃後、自身のHPを{0}%回復<br>得意属性が打属性または「アラディス調査団」の味方全員に「受けるダメージ-{1}%」を2回攻撃を受けるまで付与(上限2個)し、<br>攻撃対象のパネル全てを加護弱化パネルに変換(空パネルの時は生成)(発動上限3回)<br>アウトレンジ時のスキル：{hyperlink_id 139}",
+      "effects": [
+        {
+          "id": 91000926,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001695,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001695,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001672,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001672,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001673,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001673,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001698,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001698,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002496,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "サクリファイス",
+      "not_state_change_count_decrease": false,
+      "power": 222,
+      "require_command_value": false,
+      "skill_destination": 12002706,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 3,
+      "still_path_hash": "6009802487725881068",
+      "summary": "攻撃後、自身のHPを回復<br>得意属性が打属性または「アラディス調査団」の味方全員の受けるダメージダウン<br>タイムラインに並んでいる次の敵のパネル全てを加護弱化パネルに変換",
+      "timeline_hash": "7428064524893356172",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 30,
+      "break_power_type": 2,
+      "description": "攻撃後、自身のHPを{0}%回復<br>得意属性が打属性または「アラディス調査団」の味方全員に「受けるダメージ-{1}%」を2回攻撃を受けるまで付与(上限2個)し、<br>攻撃対象のパネル全てを加護弱化パネルに変換(空パネルの時は生成)(発動上限3回)<br>アウトレンジ時のスキル：{hyperlink_id 140}",
+      "effects": [
+        {
+          "id": 91000926,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001695,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001695,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001672,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001672,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001673,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001673,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001698,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001698,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002497,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "サクリファイス",
+      "not_state_change_count_decrease": false,
+      "power": 235,
+      "require_command_value": false,
+      "skill_destination": 12002707,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 3,
+      "still_path_hash": "6009802487725881068",
+      "summary": "攻撃後、自身のHPを回復<br>得意属性が打属性または「アラディス調査団」の味方全員の受けるダメージダウン<br>タイムラインに並んでいる次の敵のパネル全てを加護弱化パネルに変換",
+      "timeline_hash": "7428064524893356172",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 31,
+      "break_power_type": 2,
+      "description": "攻撃後、自身のHPを{0}%回復<br>得意属性が打属性または「アラディス調査団」の味方全員に「受けるダメージ-{1}%」を2回攻撃を受けるまで付与(上限2個)し、<br>攻撃対象のパネル全てを加護弱化パネルに変換(空パネルの時は生成)(発動上限3回)<br>アウトレンジ時のスキル：{hyperlink_id 141}",
+      "effects": [
+        {
+          "id": 91000926,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001695,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001695,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001672,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001672,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001673,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001673,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001698,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001698,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002498,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "サクリファイス",
+      "not_state_change_count_decrease": false,
+      "power": 248,
+      "require_command_value": false,
+      "skill_destination": 12002708,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 3,
+      "still_path_hash": "6009802487725881068",
+      "summary": "攻撃後、自身のHPを回復<br>得意属性が打属性または「アラディス調査団」の味方全員の受けるダメージダウン<br>タイムラインに並んでいる次の敵のパネル全てを加護弱化パネルに変換",
+      "timeline_hash": "7428064524893356172",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 33,
+      "break_power_type": 2,
+      "description": "攻撃後、自身のHPを{0}%回復<br>得意属性が打属性または「アラディス調査団」の味方全員に「受けるダメージ-{1}%」を2回攻撃を受けるまで付与(上限2個)し、<br>攻撃対象のパネル全てを加護弱化パネルに変換(空パネルの時は生成)(発動上限3回)<br>アウトレンジ時のスキル：{hyperlink_id 142}",
+      "effects": [
+        {
+          "id": 91000926,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001695,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001695,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001672,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001672,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001673,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001673,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001698,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001698,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002499,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "サクリファイス",
+      "not_state_change_count_decrease": false,
+      "power": 261,
+      "require_command_value": false,
+      "skill_destination": 12002709,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 3,
+      "still_path_hash": "6009802487725881068",
+      "summary": "攻撃後、自身のHPを回復<br>得意属性が打属性または「アラディス調査団」の味方全員の受けるダメージダウン<br>タイムラインに並んでいる次の敵のパネル全てを加護弱化パネルに変換",
+      "timeline_hash": "7428064524893356172",
+      "wait": 0,
+      "target_name": "敵単体"
+    }
+  ],
+  "_rangeSkills": {}
 }

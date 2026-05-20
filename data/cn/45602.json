@@ -2763,5 +2763,82 @@
       ],
       "post_evolution": []
     }
-  ]
+  ],
+  "_exSkills": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 29,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+50%<br>攻撃後、自身に「スキルダメージ+{0}%」を3回行動終了するまで付与し、<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「基礎魔攻+100～300」を付与(上限300)(1～3人で多いほど増加)<br>※状態変化の回数を消費せず、追加効果を発動しない",
+      "effects": [
+        {
+          "id": 91001032,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002207,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002207,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000904,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003726,
+      "is_restrict_after_skill_timing_effects": true,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "バチっとウィンク",
+      "not_state_change_count_decrease": true,
+      "power": 388,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>攻撃後、自身のスキルダメージアップ<br>「レスレリ学園」タグを持つキャラ数に応じ、自身の基礎魔攻アップ<br>状態変化回数を消費しない",
+      "timeline_hash": "6709911612634715349",
+      "wait": 0,
+      "target_name": "敵単体"
+    }
+  ],
+  "_rangeSkills": {}
 }

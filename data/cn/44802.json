@@ -3200,5 +3200,67 @@
       ],
       "post_evolution": []
     }
-  ]
+  ],
+  "_exSkills": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 31,
+      "break_power_type": 2,
+      "description": "「お楽しみステッカー」が付与されている時、この攻撃の貫通力+{0}<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001787,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001787,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001804,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001804,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002977,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "イレイトショット",
+      "not_state_change_count_decrease": false,
+      "power": 240,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "「お楽しみステッカー」が付与されている時、この攻撃の貫通力アップ<br>攻撃後、自身のスキルダメージアップ",
+      "timeline_hash": "2634728673067450540",
+      "wait": 0,
+      "target_name": "敵単体"
+    }
+  ],
+  "_rangeSkills": {}
 }

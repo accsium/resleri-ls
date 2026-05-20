@@ -28,11 +28,13 @@ const UI_TEXT = {
     wt: 'WT',
     limit: '制限',
     evolutionSwitch: '切替',
+    rangeSwitch: 'レンジ切替',
     level: 'Lv',
     initialWTLabel: '初期WT',
     skillType: {
       normal1: '通常攻撃1', normal2: '通常攻撃2', burst: 'バーストスキル',
       active1: 'アクティブ1', active2: 'アクティブ2', active3: 'アクティブ3',
+      extra: 'EXスキル'
     },
     statLabels: { hp: 'HP', attack: '物攻', magic: '魔攻', defense: '物防', mental: '魔防', speed: '速度' },
     abilityTitle: '能力',
@@ -67,11 +69,13 @@ const UI_TEXT = {
     wt: 'WT',
     limit: '限制',
     evolutionSwitch: '切换',
+    rangeSwitch: '范围切换',
     level: '等级',
     initialWTLabel: '初始WT',
     skillType: {
       normal1: '通常攻击1', normal2: '通常攻击2', burst: '爆发技能',
       active1: '主动1', active2: '主动2', active3: '主动3',
+      extra: 'EX技能'
     },
     statLabels: { hp: 'HP', attack: '物攻', magic: '魔攻', defense: '物防', mental: '魔防', speed: '速度' },
     abilityTitle: '能力',
@@ -204,8 +208,10 @@ function renderDetail(char) {
   const isAlchemist = char.is_alchemist ? t('yes') : t('no');
 
   const hasEvolution = (char._skills || []).some(s => s.post_evolution.length > 0);
+  const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
   const initialEvo = hasEvolution ? 'post' : 'pre';
   panel.dataset.evo = initialEvo;
+  panel.dataset.range = 'inrange';  // 默认显示切换后技能
 
   let html = `
     <div class="detail-header">
@@ -213,6 +219,7 @@ function renderDetail(char) {
         <h2>
           ${char.name} <span class="alias">${char.another_name || ''}</span>
           ${hasEvolution ? `<button id="evoSwitchBtn" class="evo-switch-btn active">${t('evolutionSwitch')}</button>` : ''}
+          ${hasRange ? `<button id="rangeSwitchBtn" class="evo-switch-btn active">${t('rangeSwitch')}</button>` : ''}
         </h2>
         <div class="rarity">${t('initial')} ${rarityToStars(char.initial_rarity)} → ${t('max')} ${rarityToStars(char.max_rarity)} (${t('rarity')}: ${char.initial_rarity}→${char.max_rarity})</div>
         <div class="base-char">${t('base')}: ${char.base_character_name || '—'}</div>
@@ -236,15 +243,48 @@ function renderDetail(char) {
   `;
 
   const typeText = t('skillType');
+
+  // 获取当前 range 状态对应的技能组（用于替换 normal1/normal2）
+  const rangeGroup = char._rangeSkills ? char._rangeSkills['inrange'] : null;
+
   (char._skills || []).forEach(skillGroup => {
-    const groupId = `skill-${skillGroup.type}`;
+    let levels = [];
+    const type = skillGroup.type;
+
+    if (panel.dataset.range === 'inrange' && rangeGroup) {
+      if (type === 'normal1') {
+        levels = rangeGroup.skill1 || [];
+      } else if (type === 'normal2') {
+        levels = rangeGroup.skill2 || [];
+      } else {
+        // 其他技能正常显示
+        levels = panel.dataset.evo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
+      }
+    } else {
+      levels = panel.dataset.evo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
+    }
+
+    if (!levels || levels.length === 0) return;
+
+    const groupId = `skill-${type}`;
     html += `<div class="skill-group" id="${groupId}">
       <div class="skill-group-header">
-        <span class="skill-group-title">${typeText[skillGroup.type] || skillGroup.type}</span>
+        <span class="skill-group-title">${typeText[type] || type}</span>
       </div>
       <div class="skill-content" data-group="${groupId}"></div>
     </div>`;
   });
+
+  // 普通 EX 技能
+  if (char._exSkills && char._exSkills.length > 0) {
+    const groupId = 'skill-extra';
+    html += `<div class="skill-group" id="${groupId}">
+      <div class="skill-group-header">
+        <span class="skill-group-title">${t('skillType').extra}</span>
+      </div>
+      <div class="skill-content" data-group="${groupId}"></div>
+    </div>`;
+  }
 
   html += `<div id="abilityContainer"></div>`;
 
@@ -258,37 +298,82 @@ function renderDetail(char) {
 
   panel.innerHTML = html;
 
-  // 初始化技能组
+  // 初始化技能组渲染
   (char._skills || []).forEach(skillGroup => {
-    const groupId = `skill-${skillGroup.type}`;
-    const levels = initialEvo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
+    const type = skillGroup.type;
+    const groupId = `skill-${type}`;
+    let levels = [];
+    if (panel.dataset.range === 'inrange' && rangeGroup) {
+      if (type === 'normal1') levels = rangeGroup.skill1;
+      else if (type === 'normal2') levels = rangeGroup.skill2;
+      else levels = panel.dataset.evo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
+    } else {
+      levels = panel.dataset.evo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
+    }
     const activeIndex = levels.length > 0 ? levels.length - 1 : 0;
     renderSkillGroupContent(groupId, levels, activeIndex);
   });
+
+  // 初始化 EX 技能组
+  if (char._exSkills && char._exSkills.length > 0) {
+    const exLevels = char._exSkills;
+    renderSkillGroupContent('skill-extra', exLevels, exLevels.length - 1);
+  }
 
   // 初始WT
   updateInitialWT(char, initialEvo);
   // 能力
   renderAbilities(char, initialEvo);
 
-  // 进化切换
+  // 进化切换按钮事件
   const evoBtn = document.getElementById('evoSwitchBtn');
   if (evoBtn) {
-    evoBtn.addEventListener('click', function() {
+    evoBtn.addEventListener('click', () => {
       const currentEvo = panel.dataset.evo;
       const newEvo = currentEvo === 'post' ? 'pre' : 'post';
       panel.dataset.evo = newEvo;
-      this.classList.toggle('active', newEvo === 'post');
-      (panel.charData._skills || []).forEach(skillGroup => {
-        const groupId = `skill-${skillGroup.type}`;
-        const levels = newEvo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
-        const activeIndex = levels.length > 0 ? levels.length - 1 : 0;
-        renderSkillGroupContent(groupId, levels, activeIndex);
-      });
-      renderAbilities(panel.charData, newEvo);
-      updateInitialWT(panel.charData, newEvo);
+      evoBtn.classList.toggle('active', newEvo === 'post');
+      refreshSkillsAndAbilities(panel);
     });
   }
+
+  // range 切换按钮事件
+  const rangeBtn = document.getElementById('rangeSwitchBtn');
+  if (rangeBtn) {
+    rangeBtn.addEventListener('click', () => {
+      const currentRange = panel.dataset.range;
+      const newRange = currentRange === 'inrange' ? 'normal' : 'inrange';
+      panel.dataset.range = newRange;
+      rangeBtn.classList.toggle('active', newRange === 'inrange');
+      refreshSkillsAndAbilities(panel);
+    });
+  }
+}
+
+function refreshSkillsAndAbilities(panel) {
+  const char = panel.charData;
+  const evo = panel.dataset.evo;
+  const range = panel.dataset.range;
+  const rangeGroup = (range === 'inrange' && char._rangeSkills) ? char._rangeSkills['inrange'] : null;
+
+  // 刷新每个技能组
+  (char._skills || []).forEach(skillGroup => {
+    const type = skillGroup.type;
+    const groupId = `skill-${type}`;
+    let levels = [];
+    if (rangeGroup && (type === 'normal1' || type === 'normal2')) {
+      levels = type === 'normal1' ? (rangeGroup.skill1 || []) : (rangeGroup.skill2 || []);
+    } else {
+      levels = evo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
+    }
+    const activeIndex = levels.length > 0 ? levels.length - 1 : 0;
+    renderSkillGroupContent(groupId, levels, activeIndex);
+  });
+
+  // 刷新初始WT（需要重新计算技能2的wait）
+  updateInitialWT(char, evo);
+  // 刷新能力
+  renderAbilities(char, evo);
 }
 
 function renderStat(label, value) {

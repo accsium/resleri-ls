@@ -4649,5 +4649,942 @@
       ],
       "post_evolution": []
     }
-  ]
+  ],
+  "_exSkills": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 147,
+      "break_power_type": 2,
+      "description": "この攻撃のブレイクダメージ+{0}%<br>※状態変化の回数を消費せず、追加効果を発動しない",
+      "effects": [
+        {
+          "id": 91001627,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001627,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002648,
+      "is_restrict_after_skill_timing_effects": true,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "シャイニーライド",
+      "not_state_change_count_decrease": true,
+      "power": 302,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5187188467304351512",
+      "summary": "ブレイクダメージアップ<br>状態変化回数を消費しない",
+      "timeline_hash": "5027662157029358522",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 14,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与し、<br>攻撃後、自身に「ブレイクダメージ+{1}％」を1回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 81}",
+      "effects": [
+        {
+          "id": 91001619,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001619,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000908,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000908,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001651,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001651,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002638,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ジャンピングピアース",
+      "not_state_change_count_decrease": false,
+      "power": 63,
+      "require_command_value": false,
+      "skill_destination": 11002464,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>自身の位置をインレンジに移動",
+      "timeline_hash": "4327507620596528815",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 14,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与し、<br>攻撃後、自身に「ブレイクダメージ+{1}％」を1回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 82}",
+      "effects": [
+        {
+          "id": 91001619,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001619,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000908,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000908,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001651,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001651,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002639,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ジャンピングピアース",
+      "not_state_change_count_decrease": false,
+      "power": 66,
+      "require_command_value": false,
+      "skill_destination": 11002465,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>自身の位置をインレンジに移動",
+      "timeline_hash": "4327507620596528815",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 15,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与し、<br>攻撃後、自身に「ブレイクダメージ+{1}％」を1回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 83}",
+      "effects": [
+        {
+          "id": 91001619,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001619,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000908,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000908,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001651,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001651,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002640,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ジャンピングピアース",
+      "not_state_change_count_decrease": false,
+      "power": 70,
+      "require_command_value": false,
+      "skill_destination": 11002466,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>自身の位置をインレンジに移動",
+      "timeline_hash": "4327507620596528815",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 16,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与し、<br>攻撃後、自身に「ブレイクダメージ+{1}％」を1回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 84}",
+      "effects": [
+        {
+          "id": 91001619,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001619,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000908,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000908,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001651,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001651,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002641,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ジャンピングピアース",
+      "not_state_change_count_decrease": false,
+      "power": 74,
+      "require_command_value": false,
+      "skill_destination": 11002467,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>自身の位置をインレンジに移動",
+      "timeline_hash": "4327507620596528815",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 17,
+      "break_power_type": 2,
+      "description": "攻撃前、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与し、<br>攻撃後、自身に「ブレイクダメージ+{1}％」を1回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 85}",
+      "effects": [
+        {
+          "id": 91001619,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001619,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000908,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000908,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001651,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001651,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002642,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ジャンピングピアース",
+      "not_state_change_count_decrease": false,
+      "power": 78,
+      "require_command_value": false,
+      "skill_destination": 11002468,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "9019439288131687315",
+      "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>自身の位置をインレンジに移動",
+      "timeline_hash": "4327507620596528815",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 245,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「ブレイクダメージ+{0}%」を付与(上限60%)し、<br>さらに自身に「ブレイクダメージ+{1}%」を3回行動終了するまで付与<br>攻撃対象がブレイク時、自身の次のパネルをバーストパネルに変換(空パネルの時は生成)<br>インレンジ時のスキル：{hyperlink_id 86}",
+      "effects": [
+        {
+          "id": 91001655,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001655,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001656,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001656,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001657,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001657,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002643,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ワイルドローズ",
+      "not_state_change_count_decrease": false,
+      "power": 233,
+      "require_command_value": false,
+      "skill_destination": 12002469,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身のブレイクダメージアップ<br>対象がブレイク時、自身の次のパネルをバーストパネルに変換",
+      "timeline_hash": "2820222006605797014",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 260,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「ブレイクダメージ+{0}%」を付与(上限60%)し、<br>さらに自身に「ブレイクダメージ+{1}%」を3回行動終了するまで付与<br>攻撃対象がブレイク時、自身の次のパネルをバーストパネルに変換(空パネルの時は生成)<br>インレンジ時のスキル：{hyperlink_id 87}",
+      "effects": [
+        {
+          "id": 91001655,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001655,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001656,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001656,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001657,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001657,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002644,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ワイルドローズ",
+      "not_state_change_count_decrease": false,
+      "power": 247,
+      "require_command_value": false,
+      "skill_destination": 12002470,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身のブレイクダメージアップ<br>対象がブレイク時、自身の次のパネルをバーストパネルに変換",
+      "timeline_hash": "2820222006605797014",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 275,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「ブレイクダメージ+{0}%」を付与(上限60%)し、<br>さらに自身に「ブレイクダメージ+{1}%」を3回行動終了するまで付与<br>攻撃対象がブレイク時、自身の次のパネルをバーストパネルに変換(空パネルの時は生成)<br>インレンジ時のスキル：{hyperlink_id 88}",
+      "effects": [
+        {
+          "id": 91001655,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001655,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001656,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001656,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001657,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001657,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002645,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ワイルドローズ",
+      "not_state_change_count_decrease": false,
+      "power": 262,
+      "require_command_value": false,
+      "skill_destination": 12002471,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身のブレイクダメージアップ<br>対象がブレイク時、自身の次のパネルをバーストパネルに変換",
+      "timeline_hash": "2820222006605797014",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 290,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「ブレイクダメージ+{0}%」を付与(上限60%)し、<br>さらに自身に「ブレイクダメージ+{1}%」を3回行動終了するまで付与<br>攻撃対象がブレイク時、自身の次のパネルをバーストパネルに変換(空パネルの時は生成)<br>インレンジ時のスキル：{hyperlink_id 89}",
+      "effects": [
+        {
+          "id": 91001655,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001655,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001656,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001656,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001657,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001657,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002646,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ワイルドローズ",
+      "not_state_change_count_decrease": false,
+      "power": 276,
+      "require_command_value": false,
+      "skill_destination": 12002472,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身のブレイクダメージアップ<br>対象がブレイク時、自身の次のパネルをバーストパネルに変換",
+      "timeline_hash": "2820222006605797014",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 306,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「ブレイクダメージ+{0}%」を付与(上限60%)し、<br>さらに自身に「ブレイクダメージ+{1}%」を3回行動終了するまで付与<br>攻撃対象がブレイク時、自身の次のパネルをバーストパネルに変換(空パネルの時は生成)<br>インレンジ時のスキル：{hyperlink_id 90}",
+      "effects": [
+        {
+          "id": 91001655,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001655,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001656,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001656,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001657,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001657,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002647,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ワイルドローズ",
+      "not_state_change_count_decrease": false,
+      "power": 291,
+      "require_command_value": false,
+      "skill_destination": 12002473,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "6523615492000077891",
+      "summary": "攻撃後、自身のブレイクダメージアップ<br>対象がブレイク時、自身の次のパネルをバーストパネルに変換",
+      "timeline_hash": "2820222006605797014",
+      "wait": 0,
+      "target_name": "敵単体"
+    }
+  ],
+  "_rangeSkills": {}
 }

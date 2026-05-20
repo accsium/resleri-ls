@@ -5158,5 +5158,1317 @@
       ],
       "post_evolution": []
     }
-  ]
+  ],
+  "_exSkills": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 147,
+      "break_power_type": 2,
+      "description": "ブレイクダメージ+{0}%<br>※状態変化の回数を消費せず、追加効果を発動しない",
+      "effects": [
+        {
+          "id": 91001627,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001627,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002586,
+      "is_restrict_after_skill_timing_effects": true,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "ストレートブロウ",
+      "not_state_change_count_decrease": true,
+      "power": 304,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "1090611272214778195",
+      "summary": "ブレイクダメージアップ<br>状態変化回数を消費しない",
+      "timeline_hash": "77255600088923247",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 14,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「打属性耐性-{0}%」と「火属性耐性-{1}%」を1回攻撃を受けるまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 38}",
+      "effects": [
+        {
+          "id": 91001648,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001648,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001649,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001649,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001625,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001625,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002556,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アッパーブロウ",
+      "not_state_change_count_decrease": false,
+      "power": 64,
+      "require_command_value": false,
+      "skill_destination": 11002401,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "1129336796000522609",
+      "summary": "攻撃後、対象の打属性耐性と火属性耐性ダウン<br>自身の位置をインレンジに移動",
+      "timeline_hash": "7003675381983000903",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 14,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「打属性耐性-{0}%」と「火属性耐性-{1}%」を1回攻撃を受けるまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 38}",
+      "effects": [
+        {
+          "id": 91001648,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001648,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001649,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001649,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001625,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001625,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002557,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アッパーブロウ",
+      "not_state_change_count_decrease": false,
+      "power": 68,
+      "require_command_value": false,
+      "skill_destination": 11002402,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "1129336796000522609",
+      "summary": "攻撃後、対象の打属性耐性と火属性耐性ダウン<br>自身の位置をインレンジに移動",
+      "timeline_hash": "7003675381983000903",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 15,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「打属性耐性-{0}%」と「火属性耐性-{1}%」を1回攻撃を受けるまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 38}",
+      "effects": [
+        {
+          "id": 91001648,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001648,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001649,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001649,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001625,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001625,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002558,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アッパーブロウ",
+      "not_state_change_count_decrease": false,
+      "power": 72,
+      "require_command_value": false,
+      "skill_destination": 11002403,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "1129336796000522609",
+      "summary": "攻撃後、対象の打属性耐性と火属性耐性ダウン<br>自身の位置をインレンジに移動",
+      "timeline_hash": "7003675381983000903",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 16,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「打属性耐性-{0}%」と「火属性耐性-{1}%」を1回攻撃を受けるまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 38}",
+      "effects": [
+        {
+          "id": 91001648,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001648,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001649,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001649,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001625,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001625,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002559,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アッパーブロウ",
+      "not_state_change_count_decrease": false,
+      "power": 76,
+      "require_command_value": false,
+      "skill_destination": 11002404,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "1129336796000522609",
+      "summary": "攻撃後、対象の打属性耐性と火属性耐性ダウン<br>自身の位置をインレンジに移動",
+      "timeline_hash": "7003675381983000903",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 17,
+      "break_power_type": 2,
+      "description": "攻撃後、対象に「打属性耐性-{0}%」と「火属性耐性-{1}%」を1回攻撃を受けるまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 38}",
+      "effects": [
+        {
+          "id": 91001648,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001648,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001649,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001649,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001625,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001625,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 11002560,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "アッパーブロウ",
+      "not_state_change_count_decrease": false,
+      "power": 80,
+      "require_command_value": false,
+      "skill_destination": 11002405,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "1129336796000522609",
+      "summary": "攻撃後、対象の打属性耐性と火属性耐性ダウン<br>自身の位置をインレンジに移動",
+      "timeline_hash": "7003675381983000903",
+      "wait": -100,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 245,
+      "break_power_type": 2,
+      "description": "「パイル」が付与されている時、スキルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」と「打属性耐性-{2}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{3}%」を2回行動終了するまで付与し、<br>自身に「パイル」が付与されている時、「パイル」を解除<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃前、対象に「火属性耐性-3～{4}%」と「打属性耐性-3～{5}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+4～{6}%」を2回行動終了するまで付与(1～5人で多いほど増加)<br>※パイルは物攻+50%<br>インレンジ時のスキル：{hyperlink_id 43}",
+      "effects": [
+        {
+          "id": 91001624,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001624,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001050,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001050,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000938,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000938,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001387,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001387,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001690,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001690,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001691,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001691,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001692,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001692,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001626,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001626,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002561,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "フォートレス",
+      "not_state_change_count_decrease": false,
+      "power": 292,
+      "require_command_value": false,
+      "skill_destination": 12002406,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "1129336796000522609",
+      "summary": "「パイル」が付与されている時、スキルダメージアップ<br>攻撃前、対象の火属性耐性と打属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>自身に「パイル」が付与されている時、「パイル」を解除<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃前、対象の火属性耐性と打属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ",
+      "timeline_hash": "8799778716486424958",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 260,
+      "break_power_type": 2,
+      "description": "「パイル」が付与されている時、スキルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」と「打属性耐性-{2}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{3}%」を2回行動終了するまで付与し、<br>自身に「パイル」が付与されている時、「パイル」を解除<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃前、対象に「火属性耐性-3～{4}%」と「打属性耐性-3～{5}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+4～{6}%」を2回行動終了するまで付与(1～5人で多いほど増加)<br>※パイルは物攻+50%<br>インレンジ時のスキル：{hyperlink_id 44}",
+      "effects": [
+        {
+          "id": 91001624,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001624,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001050,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001050,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000938,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000938,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001387,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001387,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001690,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001690,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001691,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001691,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001692,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001692,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001626,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001626,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002562,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "フォートレス",
+      "not_state_change_count_decrease": false,
+      "power": 310,
+      "require_command_value": false,
+      "skill_destination": 12002407,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "1129336796000522609",
+      "summary": "「パイル」が付与されている時、スキルダメージアップ<br>攻撃前、対象の火属性耐性と打属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>自身に「パイル」が付与されている時、「パイル」を解除<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃前、対象の火属性耐性と打属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ",
+      "timeline_hash": "8799778716486424958",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 275,
+      "break_power_type": 2,
+      "description": "「パイル」が付与されている時、スキルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」と「打属性耐性-{2}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{3}%」を2回行動終了するまで付与し、<br>自身に「パイル」が付与されている時、「パイル」を解除<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃前、対象に「火属性耐性-3～{4}%」と「打属性耐性-3～{5}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+4～{6}%」を2回行動終了するまで付与(1～5人で多いほど増加)<br>※パイルは物攻+50%<br>インレンジ時のスキル：{hyperlink_id 45}",
+      "effects": [
+        {
+          "id": 91001624,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001624,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001050,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001050,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000938,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000938,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001387,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001387,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001690,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001690,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001691,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001691,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001692,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001692,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001626,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001626,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002563,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "フォートレス",
+      "not_state_change_count_decrease": false,
+      "power": 328,
+      "require_command_value": false,
+      "skill_destination": 12002408,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "1129336796000522609",
+      "summary": "「パイル」が付与されている時、スキルダメージアップ<br>攻撃前、対象の火属性耐性と打属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>自身に「パイル」が付与されている時、「パイル」を解除<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃前、対象の火属性耐性と打属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ",
+      "timeline_hash": "8799778716486424958",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 290,
+      "break_power_type": 2,
+      "description": "「パイル」が付与されている時、スキルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」と「打属性耐性-{2}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{3}%」を2回行動終了するまで付与し、<br>自身に「パイル」が付与されている時、「パイル」を解除<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃前、対象に「火属性耐性-3～{4}%」と「打属性耐性-3～{5}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+4～{6}%」を2回行動終了するまで付与(1～5人で多いほど増加)<br>※パイルは物攻+50%<br>インレンジ時のスキル：{hyperlink_id 46}",
+      "effects": [
+        {
+          "id": 91001624,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001624,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001050,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001050,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000938,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000938,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001387,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001387,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001690,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001690,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001691,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001691,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001692,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001692,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001626,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001626,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002564,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "フォートレス",
+      "not_state_change_count_decrease": false,
+      "power": 346,
+      "require_command_value": false,
+      "skill_destination": 12002409,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "1129336796000522609",
+      "summary": "「パイル」が付与されている時、スキルダメージアップ<br>攻撃前、対象の火属性耐性と打属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>自身に「パイル」が付与されている時、「パイル」を解除<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃前、対象の火属性耐性と打属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ",
+      "timeline_hash": "8799778716486424958",
+      "wait": 0,
+      "target_name": "敵単体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        2
+      ],
+      "break_power": 306,
+      "break_power_type": 2,
+      "description": "「パイル」が付与されている時、スキルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」と「打属性耐性-{2}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+{3}%」を2回行動終了するまで付与し、<br>自身に「パイル」が付与されている時、「パイル」を解除<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃前、対象に「火属性耐性-3～{4}%」と「打属性耐性-3～{5}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「ブレイクダメージ+4～{6}%」を2回行動終了するまで付与(1～5人で多いほど増加)<br>※パイルは物攻+50%<br>インレンジ時のスキル：{hyperlink_id 47}",
+      "effects": [
+        {
+          "id": 91001624,
+          "value": 20000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001624,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001050,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001050,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000938,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000938,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001387,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001387,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001690,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001690,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001691,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001691,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001692,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001692,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001626,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001626,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 12002565,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "フォートレス",
+      "not_state_change_count_decrease": false,
+      "power": 365,
+      "require_command_value": false,
+      "skill_destination": 12002410,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": 4,
+      "still_path_hash": "1129336796000522609",
+      "summary": "「パイル」が付与されている時、スキルダメージアップ<br>攻撃前、対象の火属性耐性と打属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ<br>自身に「パイル」が付与されている時、「パイル」を解除<br>「アラディス調査団」タグを持つキャラ数に応じ、攻撃前、対象の火属性耐性と打属性耐性ダウン<br>攻撃後、自身のブレイクダメージアップ",
+      "timeline_hash": "8799778716486424958",
+      "wait": 0,
+      "target_name": "敵単体"
+    }
+  ],
+  "_rangeSkills": {}
 }
