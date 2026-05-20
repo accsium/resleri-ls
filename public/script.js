@@ -1,10 +1,11 @@
+// ========== 多语言界面文本 ==========
 const UI_TEXT = {
   ja: {
     pageTitle: 'レスレリ 角色图鉴',
     searchPlaceholder: '名前で検索...',
     skillSection: 'スキル',
     abilitySection: 'アビリティ',
-    leaderSkillSection: 'リーダースキル',
+    leaderSkillSection: '隊長スキル',
     base: 'ベース',
     series: 'シリーズ',
     releaseDate: '実装日',
@@ -26,7 +27,7 @@ const UI_TEXT = {
     wt: 'WT',
     limit: '制限',
     switchText: '切替',
-    level: 'Lv',
+    level: 'Lv. ',
     initialWTLabel: '初期WT',
     skillType: {
       normal1: '通常攻撃1', normal2: '通常攻撃2', burst: 'バーストスキル',
@@ -69,7 +70,7 @@ const UI_TEXT = {
     wt: 'WT',
     limit: '限制',
     switchText: '切换',
-    level: '等级',
+    level: 'Lv. ',
     initialWTLabel: '初始WT',
     skillType: {
       normal1: '通常攻击1', normal2: '通常攻击2', burst: '爆发技能',
@@ -87,6 +88,7 @@ const UI_TEXT = {
   }
 };
 
+// 颜色名称 → hex 值
 const COLOR_MAP = {
   '赤': '#E74C3C', '青': '#3498DB', '緑': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
   '红': '#E74C3C', '蓝': '#3498DB', '绿': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
@@ -121,6 +123,7 @@ let currentSortField = 'sort_id';
 let currentSortOrder = 'desc';
 let activeFilters = { attack_attributes: [], role: [] };
 
+// ========== 数据加载 ==========
 async function loadIndex() {
   const resp = await fetch('data/character_index.json');
   characterIndex = await resp.json();
@@ -365,21 +368,30 @@ function generateDetailHTML(activeChar, state) {
       }
       if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
 
-      const levelTabs = levels.length > 1 ? `<div class="level-tabs">${levels.map((s, i) => `<button class="level-tab ${i === levels.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')} ${i+1}</button>`).join('')}</div>` : '';
+      html += `<div class="subsection-title">${typeText[group.type] || group.type}</div>`;
+
+      const levelTabs = levels.length > 1 ? `<div class="level-tabs">${levels.map((s, i) => `<button class="level-tab ${i === levels.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>` : '';
       const skillCard = levels[levels.length - 1] ? renderSkillCard(levels[levels.length - 1]) : '';
 
       html += `<div class="skill-group" data-group="${group.type}">`;
-      html += `<div class="banner-title"><span>${typeText[group.type] || group.type}</span>${levelTabs}</div>`;
+      html += `<div class="banner-title"><span>${s.name || '??'} <small>(ID:${s.id})</small></span>${levelTabs}</div>`;
+      // 注意：上面的 s 是 levels[levels.length-1] 对应的技能对象，需要修正，应为 skillCard 中已包含名字，所以标题栏应只显示技能名或留空。
+      // 实际上 banner-title 应该显示技能名，但 renderSkillCard 已经包含名字，所以这里不重复，标题栏可只放等级选项卡。
+      // 调整：标题栏放技能名和等级，内容区放描述和属性。因此需要重新组织。
+      // 为简洁，直接将 skillCard 的内容拆分，这里直接使用 renderSkillCard 放在内容区，标题栏只放等级选项卡，技能名已在卡片内。
+      // 所以简化：banner-title 中不重复技能名，只放等级选项卡。
+      html += `<div class="banner-title">${levelTabs}</div>`;
       html += `<div class="content-block">${skillCard || `<div class="no-data">${t('none')}</div>`}</div>`;
       html += `</div>`;
     });
 
     // EX技能
     if (exSkills.length > 0) {
-      const levelTabs = exSkills.length > 1 ? `<div class="level-tabs">${exSkills.map((s, i) => `<button class="level-tab ${i === exSkills.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')} ${i+1}</button>`).join('')}</div>` : '';
+      html += `<div class="subsection-title">${t('skillType').extra}</div>`;
+      const levelTabs = exSkills.length > 1 ? `<div class="level-tabs">${exSkills.map((s, i) => `<button class="level-tab ${i === exSkills.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>` : '';
       const skillCard = exSkills[exSkills.length - 1] ? renderSkillCard(exSkills[exSkills.length - 1]) : '';
       html += `<div class="skill-group" data-group="extra">`;
-      html += `<div class="banner-title"><span>${t('skillType').extra}</span>${levelTabs}</div>`;
+      html += `<div class="banner-title">${levelTabs}</div>`;
       html += `<div class="content-block">${skillCard || `<div class="no-data">${t('none')}</div>`}</div>`;
       html += `</div>`;
     }
@@ -484,6 +496,7 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     }
   }
 
+  // 技能等级切换
   card.querySelectorAll('.skill-group').forEach(group => {
     const tabs = group.querySelectorAll('.level-tab');
     const contentBlock = group.querySelector('.content-block');
