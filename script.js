@@ -96,7 +96,8 @@ function getField(obj, field) {
 }
 
 let characterIndex = [];
-let loadedCharacters = {}; // 缓存已加载的角色数据
+let loadedCharacters = {};
+const cardStates = {}; // 每个卡片的状态
 
 async function loadIndex() {
   const resp = await fetch('data/character_index.json');
@@ -120,16 +121,13 @@ function updateUILanguage() {
   document.title = t('pageTitle');
   document.getElementById('pageTitle').textContent = t('pageTitle');
   document.getElementById('searchInput').placeholder = t('searchPlaceholder');
-  // 已渲染的卡片需要更新语言相关文字，简单起见直接重新渲染
   renderAllCards();
 }
 
 function renderAllCards() {
   const container = document.getElementById('cardContainer');
   container.innerHTML = '';
-  characterIndex.forEach(c => {
-    container.appendChild(createCard(c));
-  });
+  characterIndex.forEach(c => container.appendChild(createCard(c)));
   filterCards();
 }
 
@@ -143,11 +141,11 @@ function createCard(indexEntry) {
   const stars = rarityToStars(indexEntry.initial_rarity);
   const attrs = getField(indexEntry, 'attack_attribute_names').join(' / ');
   const role = getField(indexEntry, 'role_name');
-  const tags = (getField(indexEntry, 'tag_names') || []).slice(0, 3); // 只显示前三个标签
+  const tags = (getField(indexEntry, 'tag_names') || []).slice(0, 3);
 
   card.innerHTML = `
-    <div class="card-header" data-id="${indexEntry.id}">
-      <div>
+    <div class="card-header">
+      <div class="card-main-info">
         <div class="card-title">
           ${name}
           ${alias ? `<span class="alias">${alias}</span>` : ''}
@@ -158,84 +156,113 @@ function createCard(indexEntry) {
       </div>
       <div class="switch-buttons"></div>
     </div>
-    <div class="card-detail" data-id="${indexEntry.id}"></div>
+    <div class="card-detail"></div>
   `;
 
-  // 点击标题区域展开/折叠
+  // 点击头部展开/折叠
   const header = card.querySelector('.card-header');
-  header.addEventListener('click', () => toggleCardDetail(indexEntry.id));
+  header.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
+    toggleCardDetail(indexEntry.id);
+  });
 
   return card;
 }
 
+function getCardState(id) {
+  if (!cardStates[id]) {
+    cardStates[id] = { evo: 'post', range: 'inrange', showTransform: false };
+  }
+  return cardStates[id];
+}
+
+function setCardState(id, newState) {
+  cardStates[id] = { ...cardStates[id], ...newState };
+}
+
 async function toggleCardDetail(id) {
-  const detailDiv = document.querySelector(`.card-detail[data-id="${id}"]`);
+  const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
 
-  // 如果已展开，则折叠
   if (detailDiv.classList.contains('open')) {
     detailDiv.classList.remove('open');
     return;
   }
 
-  // 加载并渲染详情
   detailDiv.innerHTML = `<div class="loading">${t('loading')}</div>`;
   detailDiv.classList.add('open');
 
   try {
     const char = await loadCharacter(id);
-    detailDiv.innerHTML = renderDetailHTML(char);
-    // 绑定切换按钮事件
-    bindSwitchButtons(id, char);
+    const state = getCardState(id);
+    renderDetailContent(id, char, state);
   } catch (e) {
     detailDiv.innerHTML = `<div class="no-data">${t('loadFailed')}</div>`;
   }
 }
 
-function renderDetailHTML(char) {
-  const tagNames = getField(char, 'tag_names');
-  const attrNames = getField(char, 'attack_attribute_names').join(' / ');
-  const roleName = getField(char, 'role_name');
-  const baseCharName = getField(char, 'base_character_name');
-  const seriesName = getField(char, 'original_title_name');
-  const traitColorName = getField(char, 'trait_color_name');
-  const supportColorName = getField(char, 'support_color_name');
-  const startDate = char.start_at ? new Date(char.start_at).toLocaleDateString('ja-JP') : '不明';
-  const isAlchemist = char.is_alchemist ? t('yes') : t('no');
+function renderDetailContent(id, char, state) {
+  const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
+  if (!detailDiv) return;
 
-  // 技能渲染
+  let activeChar = char;
+  if (state.showTransform && char._transform) {
+    activeChar = char._transform;
+  }
+
+  detailDiv.innerHTML = generateDetailHTML(id, activeChar, char, state);
+  bindCardButtons(id, char, state);
+}
+
+function generateDetailHTML(id, activeChar, originalChar, state) {
+  const tagNames = getField(activeChar, 'tag_names');
+  const attrNames = getField(activeChar, 'attack_attribute_names').join(' / ');
+  const roleName = getField(activeChar, 'role_name');
+  const baseCharName = getField(activeChar, 'base_character_name');
+  const seriesName = getField(activeChar, 'original_title_name');
+  const traitColorName = getField(activeChar, 'trait_color_name');
+  const supportColorName = getField(activeChar, 'support_color_name');
+  const startDate = activeChar.start_at ? new Date(activeChar.start_at).toLocaleDateString('ja-JP') : '不明';
+  const isAlchemist = activeChar.is_alchemist ? t('yes') : t('no');
+
+  // 技能
   let skillsHTML = '';
   const typeText = t('skillType');
-  (char._skills || []).forEach(group => {
-    // 默认显示进化后最高等级
-    const levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
-    if (levels.length === 0) return;
+  const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
+
+  (activeChar._skills || []).forEach(group => {
+    let levels = [];
+    if (state.range === 'inrange' && rangeGroup) {
+      if (group.type === 'normal1') levels = rangeGroup.skill1 || [];
+      else if (group.type === 'normal2') levels = rangeGroup.skill2 || [];
+      else levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
+    } else {
+      levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
+    }
+    if (!levels || levels.length === 0) return;
+
     skillsHTML += `
-      <div class="skill-group">
+      <div class="skill-group" data-group="${group.type}">
         <div class="skill-group-header">
           <span class="skill-group-title">${typeText[group.type] || group.type}</span>
         </div>
-        <div class="skill-levels" data-group="${group.type}">
-          ${renderSkillLevels(levels, 0)}
-        </div>
+        <div class="skill-levels">${renderSkillLevels(levels)}</div>
       </div>`;
   });
 
-  // EX 技能
-  if (char._exSkills && char._exSkills.length > 0) {
+  // EX技能
+  if (activeChar._exSkills && activeChar._exSkills.length > 0) {
     skillsHTML += `
-      <div class="skill-group">
+      <div class="skill-group" data-group="extra">
         <div class="skill-group-header">
           <span class="skill-group-title">${t('skillType').extra}</span>
         </div>
-        <div class="skill-levels" data-group="extra">
-          ${renderSkillLevels(char._exSkills, 0)}
-        </div>
+        <div class="skill-levels">${renderSkillLevels(activeChar._exSkills)}</div>
       </div>`;
   }
 
   // 能力
-  let abilitiesHTML = renderAbilitiesHTML(char, 'post'); // 默认进化后
+  let abilitiesHTML = renderAbilitiesHTML(activeChar, state.evo);
 
   // 调和颜色
   const colorSwatch = `
@@ -252,38 +279,40 @@ function renderDetailHTML(char) {
   return `
     <div class="section-title">${t('basicStatus')}</div>
     <div class="stat-grid">
-      ${renderStat(t('statLabels').hp, char.initial_status?.hp)}
-      ${renderStat(t('statLabels').attack, char.initial_status?.attack)}
-      ${renderStat(t('statLabels').magic, char.initial_status?.magic)}
-      ${renderStat(t('statLabels').defense, char.initial_status?.defense)}
-      ${renderStat(t('statLabels').mental, char.initial_status?.mental)}
-      ${renderStat(t('statLabels').speed, char.initial_status?.speed)}
+      ${renderStat(t('statLabels').hp, activeChar.initial_status?.hp)}
+      ${renderStat(t('statLabels').attack, activeChar.initial_status?.attack)}
+      ${renderStat(t('statLabels').magic, activeChar.initial_status?.magic)}
+      ${renderStat(t('statLabels').defense, activeChar.initial_status?.defense)}
+      ${renderStat(t('statLabels').mental, activeChar.initial_status?.mental)}
+      ${renderStat(t('statLabels').speed, activeChar.initial_status?.speed)}
     </div>
     <div>${t('attribute')}: ${attrNames} | ${t('role')}: ${roleName} | ${t('alchemist')}: ${isAlchemist}</div>
     ${colorSwatch}
     <div class="section-title">${t('skillSection')}</div>
     ${skillsHTML}
-    <div id="abilities-${char.id}">${abilitiesHTML}</div>
-    ${char.leader_skill ? `
+    <div id="abilities-${id}">${abilitiesHTML}</div>
+    ${activeChar.leader_skill ? `
       <div class="section-title">${t('leaderSkillSection')}</div>
       <div class="skill-detail-card" style="border-left-color:#eab308;">
-        <div class="skill-name">${char.leader_skill.name || t('leaderSkillSection')}</div>
-        <div class="skill-desc">${char.leader_skill.description || ''}</div>
+        <div class="skill-name">${activeChar.leader_skill.name || t('leaderSkillSection')}</div>
+        <div class="skill-desc">${activeChar.leader_skill.description || ''}</div>
       </div>` : ''}
   `;
 }
 
-function renderSkillLevels(levels, activeIndex) {
+function renderSkillLevels(levels) {
   let html = '';
   if (levels.length > 1) {
-    html += `<div class="level-tabs">`;
+    html += '<div class="level-tabs">';
     levels.forEach((skill, idx) => {
-      html += `<button class="level-tab ${idx === activeIndex ? 'active' : ''}" data-index="${idx}">${t('level')} ${idx+1}</button>`;
+      html += `<button class="level-tab" data-index="${idx}">${t('level')} ${idx+1}</button>`;
     });
-    html += `</div>`;
+    html += '</div>';
   }
-  if (levels[activeIndex]) {
-    html += renderSkillCard(levels[activeIndex]);
+  // 默认显示最后一个（最高等级）
+  const defaultIndex = levels.length - 1;
+  if (levels[defaultIndex]) {
+    html += `<div class="skill-card-container">${renderSkillCard(levels[defaultIndex])}</div>`;
   }
   return html;
 }
@@ -340,14 +369,14 @@ function renderAbilitiesHTML(char, evoState) {
   } else {
     const maxRarity = char.max_rarity || 8;
     const defaultIdx = Math.min(maxRarity - 1, supportIds.length - 1);
-    const ability = abilityMap[supportIds[defaultIdx]];
-    html += `<div class="level-tabs">`;
+    html += `<div class="level-tabs support-rarity-tabs">`;
     const labels = t('rarityLabel');
     supportIds.forEach((sid, idx) => {
       if (sid == null) return;
-      html += `<button class="level-tab ${idx === defaultIdx ? 'active' : ''}" data-support-idx="${idx}">${labels[idx]}</button>`;
+      html += `<button class="level-tab support-rarity-btn" data-support-idx="${idx}">${labels[idx]}</button>`;
     });
     html += `</div>`;
+    const ability = abilityMap[supportIds[defaultIdx]];
     html += `<div class="support-ability-content">${ability ? renderAbilityCard(ability) : `<div class="no-data">${t('none')}</div>`}</div>`;
   }
   return html;
@@ -378,42 +407,112 @@ function getColorHex(name) {
   return COLOR_MAP[name] || '#CCCCCC';
 }
 
-// 切换按钮绑定与事件
-function bindSwitchButtons(id, char) {
+// 绑定卡片内所有交互
+function bindCardButtons(id, char, state) {
   const card = document.querySelector(`.card[data-id="${id}"]`);
+  if (!card) return;
+
+  // 头部切换按钮
   const buttonsDiv = card.querySelector('.switch-buttons');
-  buttonsDiv.innerHTML = '';
+  if (buttonsDiv) {
+    buttonsDiv.innerHTML = '';
+    const hasEvolution = (char._skills || []).some(s => s.post_evolution.length > 0);
+    const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
+    const hasTransform = char._transform != null;
 
-  // 进化切换
-  const hasEvolution = (char._skills || []).some(s => s.post_evolution.length > 0);
-  const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
-  const hasTransform = char._transform != null;
+    if (hasEvolution) {
+      const btn = document.createElement('button');
+      btn.textContent = t('switchText');
+      btn.className = state.evo === 'post' ? 'active' : '';
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const newEvo = state.evo === 'post' ? 'pre' : 'post';
+        setCardState(id, { evo: newEvo });
+        renderDetailContent(id, char, getCardState(id));
+      });
+      buttonsDiv.appendChild(btn);
+    }
 
-  if (hasEvolution) {
-    const btn = document.createElement('button');
-    btn.textContent = t('switchText');
-    btn.className = 'active';
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const detail = card.querySelector('.card-detail');
-      if (detail.classList.contains('open')) {
-        // 切换状态并重新渲染详情
-        toggleEvolution(id);
-      }
+    if (hasRange) {
+      const btn = document.createElement('button');
+      btn.textContent = t('switchText');
+      btn.className = state.range === 'inrange' ? 'active' : '';
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const newRange = state.range === 'inrange' ? 'normal' : 'inrange';
+        setCardState(id, { range: newRange });
+        renderDetailContent(id, char, getCardState(id));
+      });
+      buttonsDiv.appendChild(btn);
+    }
+
+    if (hasTransform) {
+      const btn = document.createElement('button');
+      btn.textContent = t('switchText');
+      btn.className = state.showTransform ? 'active' : '';
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setCardState(id, { showTransform: !state.showTransform });
+        renderDetailContent(id, char, getCardState(id));
+      });
+      buttonsDiv.appendChild(btn);
+    }
+  }
+
+  // 技能等级切换
+  const skillGroups = card.querySelectorAll('.skill-levels');
+  skillGroups.forEach(group => {
+    const tabs = group.querySelectorAll('.level-tab');
+    const levels = group.closest('.skill-group') ? 
+      (state.evo === 'post' ? getLevelsFromGroup(group.closest('.skill-group').dataset.group, char, state) : []) : [];
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const idx = parseInt(tab.dataset.index);
+        // 获取对应等级的技能数据
+        const groupType = group.closest('.skill-group')?.dataset.group;
+        let levelsArr = [];
+        if (groupType === 'extra') {
+          levelsArr = char._exSkills || [];
+        } else {
+          const skillGroupObj = (char._skills || []).find(g => g.type === groupType);
+          if (skillGroupObj) {
+            if (state.range === 'inrange' && char._rangeSkills?.['inrange']) {
+              const range = char._rangeSkills['inrange'];
+              if (groupType === 'normal1') levelsArr = range.skill1 || [];
+              else if (groupType === 'normal2') levelsArr = range.skill2 || [];
+              else levelsArr = state.evo === 'post' ? skillGroupObj.post_evolution : skillGroupObj.pre_evolution;
+            } else {
+              levelsArr = state.evo === 'post' ? skillGroupObj.post_evolution : skillGroupObj.pre_evolution;
+            }
+          }
+        }
+        if (levelsArr[idx]) {
+          group.querySelector('.skill-card-container').innerHTML = renderSkillCard(levelsArr[idx]);
+          // 更新激活状态
+          group.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+        }
+      });
     });
-    buttonsDiv.appendChild(btn);
-  }
-  // range 切换、变身切换可类似添加，此处略
-}
+  });
 
-function toggleEvolution(id) {
-  // 此函数为实现简单，可存储当前状态并重新渲染详情
-  // 完整实现可参考之前的 panel.dataset.evo 逻辑，这里简化，直接刷新详情
-  const detail = document.querySelector(`.card-detail[data-id="${id}"]`);
-  if (detail) {
-    detail.classList.remove('open');
-    toggleCardDetail(id); // 重新打开
-  }
+  // 支援能力星级切换
+  const supportTabs = card.querySelectorAll('.support-rarity-btn');
+  supportTabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.dataset.supportIdx);
+      const supportIds = char.support_ability_ids || [];
+      const abilityMap = char._skillDetails || {};
+      const ability = abilityMap[supportIds[idx]];
+      const content = card.querySelector('.support-ability-content');
+      if (content) {
+        content.innerHTML = ability ? renderAbilityCard(ability) : `<div class="no-data">${t('none')}</div>`;
+      }
+      // 更新按钮状态
+      card.querySelectorAll('.support-rarity-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
 }
 
 function filterCards() {
@@ -424,7 +523,6 @@ function filterCards() {
   });
 }
 
-// 语言切换
 document.getElementById('btn-ja').addEventListener('click', () => switchLang('ja'));
 document.getElementById('btn-cn').addEventListener('click', () => switchLang('cn'));
 
