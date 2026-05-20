@@ -1,4 +1,3 @@
-// ========== 多语言界面文本 ==========
 const UI_TEXT = {
   ja: {
     pageTitle: 'レスレリ 角色图鉴',
@@ -86,7 +85,6 @@ const UI_TEXT = {
   }
 };
 
-// 颜色名称 → hex 值
 const COLOR_MAP = {
   '赤': '#E74C3C', '青': '#3498DB', '緑': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
   '红': '#E74C3C', '蓝': '#3498DB', '绿': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
@@ -232,7 +230,6 @@ function renderAllCards() {
   filterCards();
 }
 
-// 卡片创建（头部包含基础属性小卡片）
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -260,26 +257,28 @@ function createCard(indexEntry) {
       <span style="color:${getColorHex(supportColorName)}">${supportColorName || '?'}</span>
     </div>` : '';
 
-  // 基础属性小卡片
+  // 基础属性小卡片（顺序：hp, speed, attack, defense, magic, mental）
   const statCards = `
     <div class="stats-row">
       <div class="stat-card"><div class="stat-label">${t('statLabels').hp}</div><div class="stat-value">${status.hp ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').attack}</div><div class="stat-value">${status.attack ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').magic}</div><div class="stat-value">${status.magic ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').defense}</div><div class="stat-value">${status.defense ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').mental}</div><div class="stat-value">${status.mental ?? '?'}</div></div>
       <div class="stat-card"><div class="stat-label">${t('statLabels').speed}</div><div class="stat-value">${status.speed ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('initialWTLabel')}</div><div class="stat-value">${initialWT}</div></div>
+      <div class="stat-card"><div class="stat-label">${t('statLabels').attack}</div><div class="stat-value">${status.attack ?? '?'}</div></div>
+      <div class="stat-card"><div class="stat-label">${t('statLabels').defense}</div><div class="stat-value">${status.defense ?? '?'}</div></div>
+      <div class="stat-card"><div class="stat-label">${t('statLabels').magic}</div><div class="stat-value">${status.magic ?? '?'}</div></div>
+      <div class="stat-card"><div class="stat-label">${t('statLabels').mental}</div><div class="stat-value">${status.mental ?? '?'}</div></div>
     </div>`;
 
   card.innerHTML = `
     <div class="card-header">
       <div class="card-left">
-        <div class="card-title">${name}${alias ? `<span class="alias">${alias}</span>` : ''}</div>
+        <div class="card-title">
+          ${name}${alias ? `<span class="alias">${alias}</span>` : ''}
+          <span class="initial-wt-badge">${t('initialWTLabel')}: ${initialWT}</span>
+        </div>
         <div class="rarity">${stars} (${indexEntry.initial_rarity}→${indexEntry.max_rarity})</div>
         <div class="attrs">${attrs} | ${role}</div>
         <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-        <div class="release-date">${releaseDate}</div>
+        <div class="release-date">${t('releaseDate')}: ${releaseDate}</div>
         ${statCards}
       </div>
       <div class="card-right">
@@ -298,15 +297,12 @@ function createCard(indexEntry) {
   return card;
 }
 
-// ========== 卡片状态管理 ==========
 function getCardState(id) {
   if (!cardStates[id]) cardStates[id] = { evo: 'post', range: 'inrange', showTransform: false };
   return cardStates[id];
 }
 
-function setCardState(id, newState) {
-  cardStates[id] = { ...cardStates[id], ...newState };
-}
+function setCardState(id, newState) { cardStates[id] = { ...cardStates[id], ...newState }; }
 
 async function toggleCardDetail(id) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
@@ -335,43 +331,20 @@ function renderDetailContent(id, char, state) {
   bindCardButtons(id, activeChar, char, state);
 }
 
-// ========== 详情 HTML 生成（新双层结构） ==========
 function generateDetailHTML(activeChar, state) {
-  // 基础属性区块（横幅 + 白色内容）
-  const status = activeChar.initial_status || {};
-  const initialWT = (status.speed != null && status.speed > 0) ? Math.floor(57600 / status.speed + (getSkill2Wait(activeChar, state.evo) || 0)) : '—';
-  const basicHTML = `
-    <div class="section-block">
-      <div class="banner-title">${t('basicStatus')}</div>
-      <div class="content-block">
-        <div class="stat-grid">
-          <div class="stat-item"><div class="stat-value">${status.hp ?? '?'}</div><div class="stat-label">${t('statLabels').hp}</div></div>
-          <div class="stat-item"><div class="stat-value">${status.attack ?? '?'}</div><div class="stat-label">${t('statLabels').attack}</div></div>
-          <div class="stat-item"><div class="stat-value">${status.magic ?? '?'}</div><div class="stat-label">${t('statLabels').magic}</div></div>
-          <div class="stat-item"><div class="stat-value">${status.defense ?? '?'}</div><div class="stat-label">${t('statLabels').defense}</div></div>
-          <div class="stat-item"><div class="stat-value">${status.mental ?? '?'}</div><div class="stat-label">${t('statLabels').mental}</div></div>
-          <div class="stat-item"><div class="stat-value">${status.speed ?? '?'}</div><div class="stat-label">${t('statLabels').speed}</div></div>
-          <div class="stat-item"><div class="stat-value">${initialWT}</div><div class="stat-label">${t('initialWTLabel')}</div></div>
-        </div>
-      </div>
-    </div>`;
-
-  // 队长技能（使用统一区块）
+  // 队长技能（如果有）
   let leaderHTML = '';
   if (activeChar.leader_skill) {
     leaderHTML = `
     <div class="section-block">
       <div class="banner-title">${t('leaderSkillSection')}</div>
       <div class="content-block">
-        <div class="skill-detail-card" style="border-left-color:#eab308;">
-          <div class="skill-name">${activeChar.leader_skill.name || t('leaderSkillSection')}</div>
-          <div class="skill-desc">${activeChar.leader_skill.description || ''}</div>
-        </div>
+        ${renderSkillCardNew(activeChar.leader_skill, true)}
       </div>
     </div>`;
   }
 
-  // 技能列表（横幅 + 内容区）
+  // 技能列表
   let skillsHTML = '';
   const typeText = t('skillType');
   const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
@@ -391,7 +364,7 @@ function generateDetailHTML(activeChar, state) {
       if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
 
       const levelTabs = levels.length > 1 ? `<div class="level-tabs">${levels.map((s, i) => `<button class="level-tab ${i === levels.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')} ${i+1}</button>`).join('')}</div>` : '';
-      const skillCard = levels[levels.length - 1] ? renderSkillCard(levels[levels.length - 1]) : '';
+      const skillCard = levels[levels.length - 1] ? renderSkillCardNew(levels[levels.length - 1]) : '';
 
       innerHTML += `<div class="skill-group" data-group="${group.type}">
         <div class="skill-group-header">
@@ -406,7 +379,7 @@ function generateDetailHTML(activeChar, state) {
     const exSkills = activeChar._exSkills || [];
     if (exSkills.length > 0) {
       const levelTabs = exSkills.length > 1 ? `<div class="level-tabs">${exSkills.map((s, i) => `<button class="level-tab ${i === exSkills.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')} ${i+1}</button>`).join('')}</div>` : '';
-      const skillCard = exSkills[exSkills.length - 1] ? renderSkillCard(exSkills[exSkills.length - 1]) : '';
+      const skillCard = exSkills[exSkills.length - 1] ? renderSkillCardNew(exSkills[exSkills.length - 1]) : '';
       innerHTML += `<div class="skill-group" data-group="extra">
         <div class="skill-group-header">
           <span class="skill-group-title">${t('skillType').extra}</span>
@@ -423,37 +396,37 @@ function generateDetailHTML(activeChar, state) {
     </div>`;
   }
 
-  // 能力区块（包含普通能力与支援能力，支援能力标题在横幅中，星级同行）
+  // 能力区块
   const abilitiesHTML = renderAbilitiesHTML(activeChar, state.evo);
 
-  return `${basicHTML}${leaderHTML}${skillsHTML}${abilitiesHTML}`;
+  return `${leaderHTML}${skillsHTML}${abilitiesHTML}`;
 }
 
-function getSkill2Wait(char, evoState) {
-  const skills = char._skills || [];
-  const normal2Group = skills.find(s => s.type === 'normal2');
-  if (!normal2Group) return 0;
-  const levels = evoState === 'post' ? normal2Group.post_evolution : normal2Group.pre_evolution;
-  if (!levels || levels.length === 0) return 0;
-  return levels[levels.length - 1].wait ?? 0;
-}
-
-function renderSkillCard(skill) {
+function renderSkillCardNew(skill, isLeader = false) {
+  const title = skill.name || `ID:${skill.id}`;
+  let desc = skill.description || '';
+  if (skill.effects) {
+    skill.effects.forEach((eff, i) => {
+      const val = (eff.value ?? 0) / 100;
+      desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), Number.isInteger(val) ? val : val.toFixed(1));
+    });
+  }
   const target = getField(skill, 'target_name') || skill.skill_target_type || '?';
   const attr = (skill.attack_attributes || []).map(a => ({1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'}[a] || a)).join('/');
-  let desc = skill.description || '';
-  if (skill.effects) skill.effects.forEach((eff, i) => desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), (eff.value ?? 0) / 100));
   const wt = 200 + (skill.wait ?? 0);
-  return `<div class="skill-detail-card">
-    <div class="skill-name">${skill.name || '??'} <small>(ID:${skill.id})</small></div>
-    <div class="skill-desc">${desc}</div>
-    <div class="skill-stats">
-      <span class="skill-stat">${t('target')}: ${target}</span>
-      ${attr ? `<span class="skill-stat">${t('attribute')}: ${attr}</span>` : ''}
-      <span class="skill-stat">${t('power')}: ${skill.power ?? 0}%</span>
-      <span class="skill-stat">${t('break')}: ${skill.break_power ?? 0}%</span>
-      <span class="skill-stat">${t('wt')}: ${wt}</span>
-      <span class="skill-stat">${t('limit')}: ${skill.limit_count ?? '—'}</span>
+
+  return `<div class="skill-card-new">
+    <div class="banner-title">${title} <small>(ID:${skill.id})</small></div>
+    <div class="content-block">
+      <div class="skill-desc">${desc}</div>
+      <div class="skill-stats">
+        <span class="skill-stat">${t('target')}: ${target}</span>
+        ${attr ? `<span class="skill-stat">${t('attribute')}: ${attr}</span>` : ''}
+        <span class="skill-stat">${t('power')}: ${skill.power ?? 0}%</span>
+        <span class="skill-stat">${t('break')}: ${skill.break_power ?? 0}%</span>
+        <span class="skill-stat">${t('wt')}: ${wt}</span>
+        <span class="skill-stat">${t('limit')}: ${skill.limit_count ?? '—'}</span>
+      </div>
     </div>
   </div>`;
 }
@@ -471,11 +444,10 @@ function renderAbilitiesHTML(char, evoState) {
     <div class="section-block">
       <div class="banner-title">${t('abilityTitle')}</div>
       <div class="content-block">
-        ${abilities.length ? abilities.map(renderAbilityCard).join('') : `<div class="no-data">${t('none')}</div>`}
+        ${abilities.length ? abilities.map(a => renderAbilityCardNew(a)).join('') : `<div class="no-data">${t('none')}</div>`}
       </div>
     </div>`;
 
-  // 支援能力：横幅标题与星级同行
   html += `
     <div class="section-block">
       <div class="banner-title support-ability-header">
@@ -491,24 +463,31 @@ function renderAbilitiesHTML(char, evoState) {
           </div>` : ''}
       </div>
       <div class="content-block">
-        ${supportIds.length ? `<div class="support-ability-content">${map[supportIds[Math.min((char.max_rarity || 8) - 1, supportIds.length - 1)]] ? renderAbilityCard(map[supportIds[Math.min((char.max_rarity || 8) - 1, supportIds.length - 1)]]) : `<div class="no-data">${t('none')}</div>`}</div>` : `<div class="no-data">${t('none')}</div>`}
+        ${supportIds.length ? `<div class="support-ability-content">${map[supportIds[Math.min((char.max_rarity || 8) - 1, supportIds.length - 1)]] ? renderAbilityCardNew(map[supportIds[Math.min((char.max_rarity || 8) - 1, supportIds.length - 1)]]) : `<div class="no-data">${t('none')}</div>`}</div>` : `<div class="no-data">${t('none')}</div>`}
       </div>
     </div>`;
 
   return html;
 }
 
-function renderAbilityCard(a) {
-  let desc = a.description || '';
-  if (a.effects) a.effects.forEach((eff, i) => desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), (eff.value ?? 0) / 100));
-  return `<div class="ability-card"><div class="ability-name">${a.name || `ID:${a.id}`}</div><div>${desc}</div></div>`;
+function renderAbilityCardNew(ability) {
+  let desc = ability.description || '';
+  if (ability.effects) {
+    ability.effects.forEach((eff, i) => {
+      const val = (eff.value ?? 0) / 100;
+      desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), Number.isInteger(val) ? val : val.toFixed(1));
+    });
+  }
+  return `<div class="ability-card-new">
+    <div class="banner-title">${ability.name || `ID:${ability.id}`}</div>
+    <div class="content-block">
+      <div class="ability-desc">${desc}</div>
+    </div>
+  </div>`;
 }
 
-function getColorHex(name) {
-  return name ? (COLOR_MAP[name] || '#CCCCCC') : '#CCCCCC';
-}
+function getColorHex(name) { return name ? (COLOR_MAP[name] || '#CCCCCC') : '#CCCCCC'; }
 
-// ========== 绑定卡片内所有按钮事件 ==========
 function bindCardButtons(id, activeChar, originalChar, state) {
   const card = document.querySelector(`.card[data-id="${id}"]`);
   if (!card) return;
@@ -540,7 +519,6 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     }
   }
 
-  // 技能等级切换
   card.querySelectorAll('.skill-group').forEach(group => {
     const tabs = group.querySelectorAll('.level-tab');
     const skillCardContainer = group.querySelector('.skill-card-container');
@@ -563,7 +541,7 @@ function bindCardButtons(id, activeChar, originalChar, state) {
           }
         }
         if (levelsArr && levelsArr[idx] && skillCardContainer) {
-          skillCardContainer.innerHTML = renderSkillCard(levelsArr[idx]);
+          skillCardContainer.innerHTML = renderSkillCardNew(levelsArr[idx]);
           tabs.forEach(t => t.classList.remove('active'));
           tab.classList.add('active');
         }
@@ -571,27 +549,24 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     });
   });
 
-  // 支援能力星级切换
   card.querySelectorAll('.support-rarity-btn').forEach(btn => {
     btn.onclick = () => {
       const idx = parseInt(btn.dataset.supportIdx);
       const supportIds = activeChar.support_ability_ids || [];
       const ability = (activeChar._skillDetails || {})[supportIds[idx]];
       const content = card.querySelector('.support-ability-content');
-      if (content) content.innerHTML = ability ? renderAbilityCard(ability) : `<div class="no-data">${t('none')}</div>`;
+      if (content) content.innerHTML = ability ? renderAbilityCardNew(ability) : `<div class="no-data">${t('none')}</div>`;
       card.querySelectorAll('.support-rarity-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     };
   });
 }
 
-// 搜索过滤
 function filterCards() {
   const q = document.getElementById('searchInput').value.toLowerCase();
   document.querySelectorAll('.card').forEach(c => c.style.display = c.querySelector('.card-title')?.textContent.toLowerCase().includes(q) ? '' : 'none');
 }
 
-// 筛选面板事件
 document.getElementById('applyFilterBtn').onclick = () => {
   activeFilters.attack_attributes = Array.from(document.querySelectorAll('.attr-check:checked')).map(cb => parseInt(cb.value));
   activeFilters.role = Array.from(document.querySelectorAll('.role-check:checked')).map(cb => parseInt(cb.value));
@@ -614,7 +589,6 @@ document.getElementById('orderToggle').onclick = () => {
   renderAllCards();
 };
 
-// ========== 语言切换（保持已打开的卡片） ==========
 document.getElementById('btn-ja').onclick = () => switchLang('ja');
 document.getElementById('btn-cn').onclick = () => switchLang('cn');
 async function switchLang(lang) {
@@ -639,7 +613,6 @@ async function switchLang(lang) {
 
 document.getElementById('btn-refresh').onclick = () => { if (confirm('确定要清除缓存并刷新数据？')) location.reload(true); };
 
-// 初始化
 (async () => {
   updateUILanguage();
   await loadIndex();
