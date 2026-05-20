@@ -107,7 +107,6 @@ let characterIndex = [];
 let loadedCharacters = {};
 const cardStates = {};
 
-// 可用排序字段（内置）
 const AVAILABLE_SORT_FIELDS = [
   { field: 'sort_id', label_ja: '実装日+ID', label_cn: '实装日期+ID' },
   { field: 'start_at', label_ja: '実装日', label_cn: '实装日期' },
@@ -121,24 +120,15 @@ const AVAILABLE_SORT_FIELDS = [
   { field: 'support_color_id', label_ja: '支援色', label_cn: '支援色' },
 ];
 
-// 当前排序：字段和顺序
 let currentSortField = 'sort_id';
-let currentSortOrder = 'desc'; // desc 或 asc
+let currentSortOrder = 'desc';
 
-// 筛选条件示例
 let activeFilters = { attack_attributes: [], role: [] };
 
 async function loadIndex() {
   const resp = await fetch('data/character_index.json');
   characterIndex = await resp.json();
-  // 为没有 sort_id 的角色生成 sort_id
-  characterIndex.forEach(c => {
-    if (!c.sort_id && c.start_at) {
-      const dateStr = c.start_at.substring(0, 10).replace(/-/g, ''); // YYYYMMDD
-      const yymmdd = dateStr.substring(2); // YYMMDD
-      c.sort_id = parseInt(yymmdd + String(c.id).padStart(5, '0'));
-    }
-  });
+  // 索引中已有 sort_id，无需重复计算
 }
 
 async function loadCharacter(id) {
@@ -154,7 +144,6 @@ function rarityToStars(r) {
   return map[r] || '★'.repeat(r);
 }
 
-// 排序比较函数
 function compareCharacters(a, b) {
   const field = currentSortField;
   const order = currentSortOrder === 'desc' ? -1 : 1;
@@ -178,14 +167,10 @@ function compareCharacters(a, b) {
 function applyFilters(char) {
   if (activeFilters.attack_attributes.length > 0) {
     const attrs = char.attack_attributes || [];
-    if (!activeFilters.attack_attributes.some(a => attrs.includes(a))) {
-      return false;
-    }
+    if (!activeFilters.attack_attributes.some(a => attrs.includes(a))) return false;
   }
   if (activeFilters.role.length > 0) {
-    if (!activeFilters.role.includes(char.role)) {
-      return false;
-    }
+    if (!activeFilters.role.includes(char.role)) return false;
   }
   return true;
 }
@@ -214,12 +199,9 @@ function buildSortSelect() {
     const option = document.createElement('option');
     option.value = sf.field;
     option.textContent = currentLang === 'cn' ? sf.label_cn : sf.label_ja;
-    if (sf.field === currentSortField) {
-      option.selected = true;
-    }
+    if (sf.field === currentSortField) option.selected = true;
     select.appendChild(option);
   });
-
   select.onchange = () => {
     currentSortField = select.value;
     renderAllCards();
@@ -243,14 +225,12 @@ function buildFilterPanel() {
   const attrDiv = document.getElementById('attrFilters');
   const roleDiv = document.getElementById('roleFilters');
   if (!attrDiv || !roleDiv) return;
-
   const attrMap = {1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'};
   const attrMapCn = {1:'斩',2:'打',3:'突',5:'火',6:'冰',7:'雷',8:'风'};
   attrDiv.innerHTML = Object.entries(attrMap).map(([id, name]) => {
     const label = currentLang === 'cn' ? attrMapCn[id] : name;
     return `<label><input type="checkbox" value="${id}" class="attr-check">${label}</label>`;
   }).join('');
-
   const roleMap = {1:'攻',2:'破',3:'防',4:'輔'};
   const roleMapCn = {1:'攻',2:'破',3:'防',4:'辅'};
   roleDiv.innerHTML = Object.entries(roleMap).map(([id, name]) => {
@@ -264,7 +244,7 @@ function renderAllCards() {
   container.innerHTML = '';
   const filteredSorted = getFilteredAndSortedCharacters();
   filteredSorted.forEach(c => container.appendChild(createCard(c)));
-  filterCards(); // 搜索过滤
+  filterCards();
 }
 
 function createCard(indexEntry) {
@@ -278,6 +258,8 @@ function createCard(indexEntry) {
   const attrs = getField(indexEntry, 'attack_attribute_names').join(' / ');
   const role = getField(indexEntry, 'role_name');
   const tags = (getField(indexEntry, 'tag_names') || []).slice(0, 3);
+  // 实装日期
+  const startDate = indexEntry.start_at ? new Date(indexEntry.start_at).toLocaleDateString('ja-JP') : '—';
 
   card.innerHTML = `
     <div class="card-header">
@@ -287,7 +269,7 @@ function createCard(indexEntry) {
           ${alias ? `<span class="alias">${alias}</span>` : ''}
         </div>
         <div class="rarity">${stars} (${indexEntry.initial_rarity}→${indexEntry.max_rarity})</div>
-        <div class="attrs">${attrs} | ${role}</div>
+        <div class="attrs">${attrs} | ${role} | ${startDate}</div>
         <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
       </div>
       <div class="switch-buttons"></div>
@@ -318,15 +300,12 @@ function setCardState(id, newState) {
 async function toggleCardDetail(id) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
-
   if (detailDiv.classList.contains('open')) {
     detailDiv.classList.remove('open');
     return;
   }
-
   detailDiv.innerHTML = `<div class="loading">${t('loading')}</div>`;
   detailDiv.classList.add('open');
-
   try {
     const char = await loadCharacter(id);
     const state = getCardState(id);
@@ -339,17 +318,15 @@ async function toggleCardDetail(id) {
 function renderDetailContent(id, char, state) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
-
   let activeChar = char;
   if (state.showTransform && char._transform) {
     activeChar = char._transform;
   }
-
-  detailDiv.innerHTML = generateDetailHTML(id, activeChar, char, state);
-  bindCardButtons(id, char, state);
+  detailDiv.innerHTML = generateDetailHTML(id, activeChar, state);
+  bindCardButtons(id, char, state, activeChar);
 }
 
-function generateDetailHTML(id, activeChar, originalChar, state) {
+function generateDetailHTML(id, activeChar, state) {
   const tagNames = getField(activeChar, 'tag_names');
   const attrNames = getField(activeChar, 'attack_attribute_names').join(' / ');
   const roleName = getField(activeChar, 'role_name');
@@ -374,7 +351,6 @@ function generateDetailHTML(id, activeChar, originalChar, state) {
       levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
     }
     if (!levels || levels.length === 0) return;
-
     skillsHTML += `
       <div class="skill-group" data-group="${group.type}">
         <div class="skill-group-header">
@@ -485,18 +461,12 @@ function renderAbilitiesHTML(char, evoState) {
   const allIds = [...new Set([...normalIds, ...evoIds])];
   const abilities = allIds.map(id => abilityMap[id]).filter(Boolean);
   const supportIds = char.support_ability_ids || [];
-
   let html = `<div class="section-title">${t('abilityTitle')}</div>`;
-  if (abilities.length === 0) {
-    html += `<div class="no-data">${t('none')}</div>`;
-  } else {
-    abilities.forEach(a => { html += renderAbilityCard(a); });
-  }
-
+  if (abilities.length === 0) { html += `<div class="no-data">${t('none')}</div>`; }
+  else { abilities.forEach(a => { html += renderAbilityCard(a); }); }
   html += `<div class="section-title">${t('supportAbilityTitle')}</div>`;
-  if (supportIds.length === 0) {
-    html += `<div class="no-data">${t('none')}</div>`;
-  } else {
+  if (supportIds.length === 0) { html += `<div class="no-data">${t('none')}</div>`; }
+  else {
     const maxRarity = char.max_rarity || 8;
     const defaultIdx = Math.min(maxRarity - 1, supportIds.length - 1);
     html += `<div class="level-tabs support-rarity-tabs">`;
@@ -537,17 +507,16 @@ function getColorHex(name) {
   return COLOR_MAP[name] || '#CCCCCC';
 }
 
-// 绑定卡片内所有交互
-function bindCardButtons(id, char, state) {
+function bindCardButtons(id, char, state, activeChar) {
   const card = document.querySelector(`.card[data-id="${id}"]`);
   if (!card) return;
 
   const buttonsDiv = card.querySelector('.switch-buttons');
   if (buttonsDiv) {
     buttonsDiv.innerHTML = '';
-    const hasEvolution = (char._skills || []).some(s => s.post_evolution.length > 0);
-    const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
-    const hasTransform = char._transform != null;
+    const hasEvolution = (activeChar._skills || []).some(s => s.post_evolution.length > 0);
+    const hasRange = Object.keys(activeChar._rangeSkills || {}).length > 0;
+    const hasTransform = (char._transform != null); // 基于原始角色判断，因为 activeChar 是变身目标时没有 _transform
 
     if (hasEvolution) {
       const btn = document.createElement('button');
@@ -588,7 +557,7 @@ function bindCardButtons(id, char, state) {
     }
   }
 
-  // 技能等级切换
+  // 技能等级切换 - 使用 activeChar
   const skillGroups = card.querySelectorAll('.skill-levels');
   skillGroups.forEach(group => {
     const tabs = group.querySelectorAll('.level-tab');
@@ -598,14 +567,14 @@ function bindCardButtons(id, char, state) {
         const groupType = group.closest('.skill-group')?.dataset.group;
         let levelsArr = [];
         if (groupType === 'extra') {
-          levelsArr = char._exSkills || [];
+          levelsArr = activeChar._exSkills || [];
         } else {
-          const skillGroupObj = (char._skills || []).find(g => g.type === groupType);
+          const skillGroupObj = (activeChar._skills || []).find(g => g.type === groupType);
           if (skillGroupObj) {
-            if (state.range === 'inrange' && char._rangeSkills?.['inrange']) {
-              const range = char._rangeSkills['inrange'];
-              if (groupType === 'normal1') levelsArr = range.skill1 || [];
-              else if (groupType === 'normal2') levelsArr = range.skill2 || [];
+            const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
+            if (state.range === 'inrange' && rangeGroup) {
+              if (groupType === 'normal1') levelsArr = rangeGroup.skill1 || [];
+              else if (groupType === 'normal2') levelsArr = rangeGroup.skill2 || [];
               else levelsArr = state.evo === 'post' ? skillGroupObj.post_evolution : skillGroupObj.pre_evolution;
             } else {
               levelsArr = state.evo === 'post' ? skillGroupObj.post_evolution : skillGroupObj.pre_evolution;
@@ -626,8 +595,8 @@ function bindCardButtons(id, char, state) {
   supportTabs.forEach(btn => {
     btn.addEventListener('click', () => {
       const idx = parseInt(btn.dataset.supportIdx);
-      const supportIds = char.support_ability_ids || [];
-      const abilityMap = char._skillDetails || {};
+      const supportIds = activeChar.support_ability_ids || [];
+      const abilityMap = activeChar._skillDetails || {};
       const ability = abilityMap[supportIds[idx]];
       const content = card.querySelector('.support-ability-content');
       if (content) {
@@ -647,7 +616,6 @@ function filterCards() {
   });
 }
 
-// 筛选面板事件
 document.getElementById('applyFilterBtn').addEventListener('click', () => {
   const attrChecks = document.querySelectorAll('.attr-check:checked');
   activeFilters.attack_attributes = Array.from(attrChecks).map(cb => parseInt(cb.value));
@@ -669,7 +637,6 @@ document.getElementById('filterToggle').addEventListener('click', () => {
   panel.style.display = panel.style.display === 'none' ? 'flex' : 'none';
 });
 
-// 语言切换
 document.getElementById('btn-ja').addEventListener('click', () => switchLang('ja'));
 document.getElementById('btn-cn').addEventListener('click', () => switchLang('cn'));
 
@@ -690,7 +657,5 @@ document.getElementById('btn-refresh').addEventListener('click', () => {
 (async () => {
   updateUILanguage();
   await loadIndex();
-  // 确保默认排序字段生效
-  document.getElementById('sortSelect').value = 'sort_id';
   renderAllCards();
 })();
