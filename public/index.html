@@ -17,18 +17,11 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="list-panel">
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="搜索角色名称..." oninput="renderList()">
-    </div>
-    <div class="character-list" id="characterList"></div>
-  </div>
-
-  <div class="detail-panel" id="detailPanel">
-    <div class="loading">← 选择左侧角色查看详情</div>
-  </div>
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="搜索角色名称..." oninput="filterCards()">
 </div>
+
+<div class="card-container" id="cardContainer"></div>
 
 <script src="script.js"></script>
 </body>

@@ -49,38 +49,10 @@ body {
   border-color: #e64a19 !important;
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px 30px;
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 20px;
-}
-
-@media (max-width: 900px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-}
-
-.list-panel {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  max-height: calc(100vh - 120px);
-}
-
 .search-box {
-  padding: 15px;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  background: white;
-  z-index: 1;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 15px;
 }
 
 .search-box input {
@@ -97,117 +69,131 @@ body {
   border-color: #667eea;
 }
 
-.character-list {
-  overflow-y: auto;
-  flex: 1;
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 10px 20px 30px;
 }
 
-.char-item {
-  display: flex;
-  align-items: center;
-  padding: 12px 15px;
-  cursor: pointer;
-  border-bottom: 1px solid #f0f0f0;
-  transition: 0.15s;
-}
-
-.char-item:hover,
-.char-item.active {
-  background: #eef2ff;
-}
-
-.char-item .rarity-stars {
-  color: #f59e0b;
-  font-size: 12px;
-  margin-right: 8px;
-}
-
-.char-item .char-name {
-  font-weight: 600;
-}
-
-.char-item .char-alias {
-  font-size: 12px;
-  color: #888;
-  margin-left: 6px;
-}
-
-.detail-panel {
+.card {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 25px;
-  overflow-y: auto;
-  max-height: calc(100vh - 120px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
 }
 
-.detail-header {
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.card-header {
+  padding: 16px;
+  cursor: pointer;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: start;
-  gap: 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 20px;
-  flex-wrap: wrap;
 }
 
-.detail-header .info h2 {
-  font-size: 24px;
-  display: inline-flex;
+.card-header .card-title {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
-.detail-header .info .alias {
-  font-size: 16px;
+.card-header .alias {
+  font-size: 13px;
   color: #764ba2;
 }
 
-.detail-header .info .rarity {
-  font-size: 14px;
+.card-header .rarity {
+  font-size: 13px;
   color: #f59e0b;
+  margin-top: 4px;
 }
 
-.detail-header .info .base-char,
-.detail-header .info .series {
-  font-size: 13px;
-  color: #888;
+.card-header .tags {
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
-.evo-switch-btn {
-  padding: 4px 14px;
-  border: 1px solid #aaa;
-  background: #fff;
+.card-header .tag {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 2px 8px;
   border-radius: 20px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: 0.2s;
-  white-space: nowrap;
+  font-size: 11px;
 }
 
-.evo-switch-btn.active {
+.card-header .attrs {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.card-header .switch-buttons {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.card-header .switch-buttons button {
+  font-size: 11px;
+  padding: 2px 10px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.card-header .switch-buttons button.active {
   background: #4CAF50;
   color: white;
   border-color: #388E3C;
 }
 
+.card-detail {
+  display: none;
+  padding: 0 16px 16px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.card-detail.open {
+  display: block;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 12px 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #667eea;
+}
+
 .stat-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 10px;
-  margin: 15px 0;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 6px;
+  margin: 8px 0;
 }
 
 .stat-item {
-  background: #f8f9fb;
-  border-radius: 8px;
-  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  padding: 8px;
   text-align: center;
 }
 
 .stat-item .stat-value {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -216,57 +202,39 @@ body {
   color: #999;
 }
 
-.tag {
-  background: #e0e7ff;
-  color: #3730a3;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  margin: 2px;
-  display: inline-block;
-}
-
-.section-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 20px 0 12px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #667eea;
-}
-
 .skill-group {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 12px;
+  padding: 8px;
 }
 
 .skill-group-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+  gap: 8px;
+  margin-bottom: 6px;
 }
 
 .skill-group-title {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .level-tabs {
   display: flex;
   gap: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   flex-wrap: wrap;
 }
 
 .level-tab {
-  padding: 3px 10px;
+  padding: 2px 8px;
   border: 1px solid #ccc;
   background: white;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .level-tab.active {
@@ -277,50 +245,44 @@ body {
 
 .skill-detail-card {
   background: #f8f9fb;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 6px 0;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 4px 0;
   border-left: 4px solid #667eea;
 }
 
 .skill-name {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .skill-desc {
-  font-size: 13px;
-  margin: 6px 0;
+  font-size: 12px;
+  margin: 4px 0;
   color: #555;
   white-space: pre-line;
 }
 
 .skill-stats {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .skill-stat {
   background: white;
-  padding: 3px 8px;
-  border-radius: 6px;
-}
-
-.effect-list {
-  font-size: 12px;
-  margin-top: 8px;
-  color: #444;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
 .ability-card {
   background: #fff7ed;
-  border-radius: 8px;
-  padding: 10px 15px;
-  margin: 5px 0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 4px 0;
   border-left: 4px solid #f97316;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .no-data {
@@ -330,12 +292,6 @@ body {
 
 .loading {
   text-align: center;
-  padding: 40px;
+  padding: 20px;
   color: #888;
-}
-
-.color-swatch {
-  display: flex;
-  align-items: center;
-  gap: 4px;
 }
