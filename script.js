@@ -107,8 +107,9 @@ let characterIndex = [];
 let loadedCharacters = {};
 const cardStates = {};
 
-// 可用的排序字段（内置，不再依赖配置文件）
+// 可用排序字段（内置）
 const AVAILABLE_SORT_FIELDS = [
+  { field: 'sort_id', label_ja: '実装日+ID', label_cn: '实装日期+ID' },
   { field: 'start_at', label_ja: '実装日', label_cn: '实装日期' },
   { field: 'initial_rarity', label_ja: '初期レアリティ', label_cn: '初始稀有度' },
   { field: 'max_rarity', label_ja: '最大レアリティ', label_cn: '最大稀有度' },
@@ -120,11 +121,9 @@ const AVAILABLE_SORT_FIELDS = [
   { field: 'support_color_id', label_ja: '支援色', label_cn: '支援色' },
 ];
 
-// 当前排序规则（默认按 start_at 降序，相同时按 id 升序）
-let currentSort = [
-  { field: 'start_at', order: 'desc' },
-  { field: 'id', order: 'asc' }
-];
+// 当前排序：字段和顺序
+let currentSortField = 'sort_id';
+let currentSortOrder = 'desc'; // desc 或 asc
 
 // 筛选条件示例
 let activeFilters = { attack_attributes: [], role: [] };
@@ -132,6 +131,14 @@ let activeFilters = { attack_attributes: [], role: [] };
 async function loadIndex() {
   const resp = await fetch('data/character_index.json');
   characterIndex = await resp.json();
+  // 为没有 sort_id 的角色生成 sort_id
+  characterIndex.forEach(c => {
+    if (!c.sort_id && c.start_at) {
+      const dateStr = c.start_at.substring(0, 10).replace(/-/g, ''); // YYYYMMDD
+      const yymmdd = dateStr.substring(2); // YYMMDD
+      c.sort_id = parseInt(yymmdd + String(c.id).padStart(5, '0'));
+    }
+  });
 }
 
 async function loadCharacter(id) {
@@ -149,23 +156,21 @@ function rarityToStars(r) {
 
 // 排序比较函数
 function compareCharacters(a, b) {
-  for (const sort of currentSort) {
-    const field = sort.field;
-    const order = sort.order === 'desc' ? -1 : 1;
-    let valA = a[field];
-    let valB = b[field];
-    if (Array.isArray(valA)) valA = valA[0];
-    if (Array.isArray(valB)) valB = valB[0];
-    if (valA == null && valB == null) continue;
-    if (valA == null) return 1 * order;
-    if (valB == null) return -1 * order;
-    if (typeof valA === 'string' && typeof valB === 'string') {
-      const cmp = valA.localeCompare(valB);
-      if (cmp !== 0) return cmp * order;
-    } else {
-      if (valA < valB) return -1 * order;
-      if (valA > valB) return 1 * order;
-    }
+  const field = currentSortField;
+  const order = currentSortOrder === 'desc' ? -1 : 1;
+  let valA = a[field];
+  let valB = b[field];
+  if (Array.isArray(valA)) valA = valA[0];
+  if (Array.isArray(valB)) valB = valB[0];
+  if (valA == null && valB == null) return 0;
+  if (valA == null) return 1 * order;
+  if (valB == null) return -1 * order;
+  if (typeof valA === 'string' && typeof valB === 'string') {
+    const cmp = valA.localeCompare(valB);
+    if (cmp !== 0) return cmp * order;
+  } else {
+    if (valA < valB) return -1 * order;
+    if (valA > valB) return 1 * order;
   }
   return 0;
 }
@@ -196,6 +201,7 @@ function updateUILanguage() {
   document.getElementById('pageTitle').textContent = t('pageTitle');
   document.getElementById('searchInput').placeholder = t('searchPlaceholder');
   buildSortSelect();
+  updateOrderButton();
   buildFilterPanel();
   renderAllCards();
 }
@@ -204,38 +210,34 @@ function buildSortSelect() {
   const select = document.getElementById('sortSelect');
   if (!select) return;
   select.innerHTML = '';
-  // 默认选项（当前排序）
-  const defaultOption = document.createElement('option');
-  defaultOption.value = '__default__';
-  defaultOption.textContent = currentLang === 'cn' ? '默认' : 'デフォルト';
-  defaultOption.selected = (currentSort.length > 1 && currentSort[0].field === 'start_at');
-  select.appendChild(defaultOption);
-
   AVAILABLE_SORT_FIELDS.forEach(sf => {
     const option = document.createElement('option');
     option.value = sf.field;
     option.textContent = currentLang === 'cn' ? sf.label_cn : sf.label_ja;
-    // 如果用户选择了单个排序字段，则高亮对应项
-    if (currentSort.length === 1 && currentSort[0].field === sf.field) {
+    if (sf.field === currentSortField) {
       option.selected = true;
     }
     select.appendChild(option);
   });
 
   select.onchange = () => {
-    const val = select.value;
-    if (val === '__default__') {
-      currentSort = [
-        { field: 'start_at', order: 'desc' },
-        { field: 'id', order: 'asc' }
-      ];
-    } else {
-      // 选择单独字段，降序
-      currentSort = [{ field: val, order: 'desc' }];
-    }
+    currentSortField = select.value;
     renderAllCards();
   };
 }
+
+function updateOrderButton() {
+  const btn = document.getElementById('orderToggle');
+  if (!btn) return;
+  btn.textContent = currentSortOrder === 'desc' ? '↓' : '↑';
+  btn.className = 'order-btn' + (currentSortOrder === 'desc' ? ' desc' : '');
+}
+
+document.getElementById('orderToggle').addEventListener('click', () => {
+  currentSortOrder = currentSortOrder === 'desc' ? 'asc' : 'desc';
+  updateOrderButton();
+  renderAllCards();
+});
 
 function buildFilterPanel() {
   const attrDiv = document.getElementById('attrFilters');
@@ -688,5 +690,7 @@ document.getElementById('btn-refresh').addEventListener('click', () => {
 (async () => {
   updateUILanguage();
   await loadIndex();
+  // 确保默认排序字段生效
+  document.getElementById('sortSelect').value = 'sort_id';
   renderAllCards();
 })();
