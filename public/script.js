@@ -81,6 +81,24 @@ const UI_TEXT = {
   }
 };
 
+// 颜色名称到 hex 的映射（请根据游戏实际颜色完善）
+const COLOR_MAP = {
+  '赤': '#FF4B4B',
+  '青': '#4B9BFF',
+  '緑': '#4BFF4B',
+  '黄': '#FFFF4B',
+  '紫': '#9B4BFF',
+  '白': '#FFFFFF',
+  '黒': '#333333',
+  '红': '#FF4B4B',
+  '蓝': '#4B9BFF',
+  '绿': '#4BFF4B',
+  '黄': '#FFFF4B',
+  '紫': '#9B4BFF',
+  '白': '#FFFFFF',
+  '黑': '#333333',
+};
+
 let currentLang = 'cn';
 function t(key) { return UI_TEXT[currentLang][key] || key; }
 
@@ -186,11 +204,14 @@ function updateInitialWT(char, evoState) {
   </div>`;
 }
 
+function getColorHex(name) {
+  if (!name) return '#CCCCCC';
+  return COLOR_MAP[name] || '#CCCCCC';
+}
+
 function renderDetail(char) {
   const panel = document.getElementById('detailPanel');
   panel.charData = char;
-
-  // 保存原始数据和变身数据引用
   panel.originalChar = char;
   panel.transformChar = char._transform || null;
   panel.showingTransform = false;
@@ -237,6 +258,13 @@ function renderDetail(char) {
     </div>
     <div id="initialWTContainer"></div>
     <div>${t('attribute')}: ${attrNames} | ${t('role')}: ${roleName} | ${t('alchemist')}: ${isAlchemist}</div>
+    <div style="margin-top:8px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+      <span>调和颜色：</span>
+      <svg width="30" height="30" viewBox="0 0 30 30" style="border:1px solid #ccc; flex-shrink:0;">
+        <polygon points="0,0 30,0 15,15" fill="${getColorHex(char.trait_color_name)}" />
+        <polygon points="30,0 30,30 15,15" fill="${getColorHex(char.support_color_name)}" />
+      </svg>
+    </div>
     <div class="section-title">${t('skillSection')}</div>
   `;
 
@@ -292,7 +320,6 @@ function renderDetail(char) {
 
   panel.innerHTML = html;
 
-  // 填充技能内容
   (char._skills || []).forEach(skillGroup => {
     const type = skillGroup.type;
     const groupId = `skill-${type}`;
@@ -315,7 +342,6 @@ function renderDetail(char) {
   updateInitialWT(char, initialEvo);
   renderAbilities(char, initialEvo);
 
-  // 进化切换
   const evoBtn = document.getElementById('evoSwitchBtn');
   if (evoBtn) {
     evoBtn.addEventListener('click', () => {
@@ -327,7 +353,6 @@ function renderDetail(char) {
     });
   }
 
-  // range 切换
   const rangeBtn = document.getElementById('rangeSwitchBtn');
   if (rangeBtn) {
     rangeBtn.addEventListener('click', () => {
@@ -339,18 +364,14 @@ function renderDetail(char) {
     });
   }
 
-  // 变身切换（瞬间切换，不重新加载）
   const transformBtn = document.getElementById('transformSwitchBtn');
   if (transformBtn) {
     transformBtn.addEventListener('click', () => {
       if (!panel.transformChar) return;
-      // 交换当前显示的数据
       const temp = panel.charData;
       panel.charData = panel.transformChar;
       panel.transformChar = temp;
       panel.showingTransform = !panel.showingTransform;
-
-      // 重新渲染详情（无网络请求）
       renderDetail(panel.charData);
     });
   }
