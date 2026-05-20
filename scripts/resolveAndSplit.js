@@ -352,20 +352,6 @@ console.log(`👥 列表显示角色数量：${visibleCharacters.length}`);
     index.push(buildIndexEntry(char, lang));
   });
 
-  // 确保所有被排除的角色也生成文件（可选）
-  const allIds = new Set(Array.from(tables.character.keys()));
-  allIds.forEach(id => {
-    if (pairedIds.has(id)) return;
-    const filePath = path.join(langDir, `${id}.json`);
-    if (!fs.existsSync(filePath)) {
-      const char = tables.character.get(id);
-      if (char) {
-        const localizedChar = buildLocalizedChar(char, lang);
-        fs.writeFileSync(filePath, JSON.stringify(localizedChar, null, 2), 'utf-8');
-      }
-    }
-  });
-
   // 保存索引
   fs.writeFileSync(
     path.join(langDir, 'character_index.json'),
