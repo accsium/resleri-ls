@@ -27,8 +27,7 @@ const UI_TEXT = {
     break: 'ブレイク',
     wt: 'WT',
     limit: '制限',
-    evolutionSwitch: '切替',
-    rangeSwitch: 'レンジ切替',
+    switchText: '切替',
     level: 'Lv',
     initialWTLabel: '初期WT',
     skillType: {
@@ -68,8 +67,7 @@ const UI_TEXT = {
     break: '破防',
     wt: 'WT',
     limit: '限制',
-    evolutionSwitch: '切换',
-    rangeSwitch: '范围切换',
+    switchText: '切换',
     level: '等级',
     initialWTLabel: '初始WT',
     skillType: {
@@ -209,6 +207,8 @@ function renderDetail(char) {
 
   const hasEvolution = (char._skills || []).some(s => s.post_evolution.length > 0);
   const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
+  const hasTransform = char._is_transform === true;
+
   const initialEvo = hasEvolution ? 'post' : 'pre';
   panel.dataset.evo = initialEvo;
   panel.dataset.range = 'inrange';  // 默认显示切换后技能
@@ -218,8 +218,9 @@ function renderDetail(char) {
       <div class="info">
         <h2>
           ${char.name} <span class="alias">${char.another_name || ''}</span>
-          ${hasEvolution ? `<button id="evoSwitchBtn" class="evo-switch-btn active">${t('evolutionSwitch')}</button>` : ''}
-          ${hasRange ? `<button id="rangeSwitchBtn" class="evo-switch-btn active">${t('rangeSwitch')}</button>` : ''}
+          ${hasEvolution ? `<button id="evoSwitchBtn" class="evo-switch-btn active">${t('switchText')}</button>` : ''}
+          ${hasRange ? `<button id="rangeSwitchBtn" class="evo-switch-btn active">${t('switchText')}</button>` : ''}
+          ${hasTransform ? `<button id="transformSwitchBtn" class="evo-switch-btn">${t('switchText')}</button>` : ''}
         </h2>
         <div class="rarity">${t('initial')} ${rarityToStars(char.initial_rarity)} → ${t('max')} ${rarityToStars(char.max_rarity)} (${t('rarity')}: ${char.initial_rarity}→${char.max_rarity})</div>
         <div class="base-char">${t('base')}: ${char.base_character_name || '—'}</div>
@@ -243,8 +244,6 @@ function renderDetail(char) {
   `;
 
   const typeText = t('skillType');
-
-  // 获取当前 range 状态对应的技能组（用于替换 normal1/normal2）
   const rangeGroup = char._rangeSkills ? char._rangeSkills['inrange'] : null;
 
   (char._skills || []).forEach(skillGroup => {
@@ -257,7 +256,6 @@ function renderDetail(char) {
       } else if (type === 'normal2') {
         levels = rangeGroup.skill2 || [];
       } else {
-        // 其他技能正常显示
         levels = panel.dataset.evo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
       }
     } else {
@@ -348,6 +346,17 @@ function renderDetail(char) {
       refreshSkillsAndAbilities(panel);
     });
   }
+
+  // 变身切换按钮事件
+  const transformBtn = document.getElementById('transformSwitchBtn');
+  if (transformBtn) {
+    transformBtn.addEventListener('click', () => {
+      const originalId = char._original_id;
+      if (originalId) {
+        selectCharacter(originalId);
+      }
+    });
+  }
 }
 
 function refreshSkillsAndAbilities(panel) {
@@ -356,7 +365,6 @@ function refreshSkillsAndAbilities(panel) {
   const range = panel.dataset.range;
   const rangeGroup = (range === 'inrange' && char._rangeSkills) ? char._rangeSkills['inrange'] : null;
 
-  // 刷新每个技能组
   (char._skills || []).forEach(skillGroup => {
     const type = skillGroup.type;
     const groupId = `skill-${type}`;
@@ -370,9 +378,7 @@ function refreshSkillsAndAbilities(panel) {
     renderSkillGroupContent(groupId, levels, activeIndex);
   });
 
-  // 刷新初始WT（需要重新计算技能2的wait）
   updateInitialWT(char, evo);
-  // 刷新能力
   renderAbilities(char, evo);
 }
 
@@ -508,7 +514,16 @@ async function selectCharacter(id) {
   const panel = document.getElementById('detailPanel');
   panel.innerHTML = `<div class="loading">${t('loading')}</div>`;
   try {
-    const char = await loadCharacter(id);
+    let char = await loadCharacter(id);
+
+    // 变身处理：如果有 transform_to，默认显示变身后角色
+    if (char.transform_to) {
+      const transformTarget = await loadCharacter(char.transform_to);
+      transformTarget._is_transform = true;
+      transformTarget._original_id = id;
+      char = transformTarget;
+    }
+
     renderDetail(char);
   } catch(e) {
     panel.innerHTML = `<div class="no-data">${t('loadFailed')}</div>`;
