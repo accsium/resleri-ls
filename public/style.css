@@ -6,26 +6,25 @@
 }
 
 body {
-  font-family: 'M PLUS 1p', Arial, sans-serif;
-  background: #172029;
-  color: #fff;
+  font-family: sans-serif;
+  background-color: #e6e0d4;
+  color: #404040;
   min-height: 100vh;
 }
 
 button {
   font-family: inherit;
   cursor: pointer;
-  border-radius: 4px;
   font-size: 14px;
   padding: 8px 18px;
-  border: 1px solid #4e5e7d;
-  background: #1e2a38;
-  color: #fff;
+  background: #f4f1e9;
+  color: #404040;
+  border: none;
 }
 
 /* ========== 顶栏 ========== */
 .header {
-  background: #0d141c;
+  background: #3e4759;
   padding: 24px 40px;
   display: flex;
   justify-content: space-between;
@@ -35,31 +34,29 @@ button {
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid #cac19c;
 }
 
 .header h1 {
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 2px;
-  color: #fff;
+  color: #fffeef;
 }
 
 .lang-switcher button {
-  border-color: #cac19c;
   background: transparent;
-  color: #cac19c;
+  color: #fffeef;
 }
 
 .lang-switcher button.active,
 .lang-switcher button.active:hover {
-  background: #cac19c;
-  color: #172029;
+  background: #fffeef;
+  color: #3e4759;
 }
 
 .btn-refresh {
-  background: #4e5e7d !important;
-  border-color: #4e5e7d !important;
+  background: #5b6e82;
+  color: #fffeef;
 }
 
 /* ========== 搜索框 ========== */
@@ -72,17 +69,16 @@ button {
 .search-box input {
   width: 100%;
   padding: 14px 20px;
-  border: 1px solid #4e5e7d;
-  border-radius: 4px;
-  background: #1e2a38;
-  color: #fff;
+  background: #f4f1e9;
+  color: #404040;
   font-size: 15px;
   font-family: inherit;
   outline: none;
+  border: none;
 }
 
 .search-box input:focus {
-  border-color: #cac19c;
+  background: #ede8dc;
 }
 
 /* ========== 控制栏 ========== */
@@ -103,18 +99,17 @@ button {
 }
 
 .sort-control label {
-  color: #cac19c;
+  color: #555;
 }
 
 .sort-control select {
   padding: 8px 14px;
-  border: 1px solid #4e5e7d;
-  border-radius: 4px;
-  background: #1e2a38;
-  color: #fff;
+  background: #f4f1e9;
+  color: #404040;
   font-size: 14px;
   font-family: inherit;
   outline: none;
+  border: none;
 }
 
 .order-btn {
@@ -123,16 +118,15 @@ button {
 }
 
 .order-btn.desc {
-  background: #4e5e7d;
+  background: #5b6e82;
+  color: #fffeef;
 }
 
 .filter-panel {
   max-width: 900px;
   margin: 0 auto 20px;
   padding: 20px;
-  background: #1e2a38;
-  border: 1px solid #4e5e7d;
-  border-radius: 6px;
+  background: #f4f1e9;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -147,7 +141,7 @@ button {
 }
 
 .filter-group span {
-  color: #cac19c;
+  color: #555;
 }
 
 .filter-group label {
@@ -158,7 +152,8 @@ button {
 }
 
 #applyFilterBtn {
-  background: #4e5e7d;
+  background: #5b6e82;
+  color: #fffeef;
 }
 
 /* ========== 卡片容器 ========== */
@@ -172,10 +167,7 @@ button {
 }
 
 .card {
-  background: #1e2a38;
-  border: 1px solid #4e5e7d;
-  border-radius: 6px;
-  overflow: hidden;
+  background: #f4f1e9;
 }
 
 /* ========== 卡片头部（左右布局） ========== */
@@ -205,14 +197,13 @@ button {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-weight: bold;
   font-size: 13px;
 }
 
 .card-title {
   font-size: 20px;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 400;
+  color: #3e2e1e;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -221,19 +212,19 @@ button {
 
 .card-title .alias {
   font-size: 14px;
-  color: #cac19c;
+  color: #6b5e8a;
   font-weight: 400;
 }
 
 .rarity {
   font-size: 13px;
-  color: #fff069;
+  color: #b8860b;
   margin-top: 4px;
 }
 
 .attrs {
   font-size: 13px;
-  color: #99a0ad;
+  color: #555;
   margin-top: 4px;
 }
 
@@ -245,20 +236,19 @@ button {
 }
 
 .tag {
-  background: #2b364b;
-  color: #cac19c;
+  background: #e4dcce;
+  color: #404040;
   padding: 3px 10px;
-  border-radius: 3px;
   font-size: 11px;
 }
 
 .release-date {
   font-size: 12px;
-  color: #99a0ad;
+  color: #777;
   margin-top: 4px;
 }
 
-/* 卡片头部内的属性网格 */
+/* 属性网格（无边框） */
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
@@ -267,22 +257,20 @@ button {
 }
 
 .stat-item {
-  background: #1e2a38;
-  border: 1px solid #2b364b;
-  border-radius: 4px;
+  background: #ede8dc;
   padding: 6px;
   text-align: center;
 }
 
 .stat-item .stat-value {
   font-size: 16px;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 400;
+  color: #3e2e1e;
 }
 
 .stat-item .stat-label {
   font-size: 10px;
-  color: #99a0ad;
+  color: #777;
   margin-top: 2px;
 }
 
@@ -299,16 +287,15 @@ button {
 }
 
 .switch-buttons button.active {
-  background: #4e5e7d;
+  background: #5b6e82;
+  color: #fff;
 }
 
-/* ========== 卡片展开详情 ========== */
+/* ========== 卡片展开详情（无边框、无分隔线） ========== */
 .card-detail {
   display: none;
   padding: 0 24px 20px;
-  /* 去除分隔线和背景色差异，与头部保持一致 */
   background: inherit;
-  border-top: none;
 }
 
 .card-detail.open {
@@ -317,19 +304,18 @@ button {
 
 .section-title {
   font-size: 17px;
-  font-weight: 700;
-  color: #cac19c;
+  font-weight: 400;
+  color: #3e4759;
   margin: 20px 0 12px;
   padding-bottom: 4px;
-  border-bottom: 2px solid #cac19c;
+  border-bottom: 2px solid #b0a898;
 }
 
-/* 技能组 / 能力区块 */
+/* 技能组（无边框） */
 .skill-group {
   margin-bottom: 12px;
 }
 
-/* 标题行（技能类别 + 等级选项卡） */
 .skill-group-header {
   display: flex;
   align-items: center;
@@ -338,9 +324,9 @@ button {
 }
 
 .skill-group-title {
-  font-weight: 700;
   font-size: 15px;
-  color: #cac19c;
+  font-weight: 400;
+  color: #3e2e1e;
 }
 
 .level-tabs {
@@ -354,29 +340,27 @@ button {
 }
 
 .level-tab.active {
-  background: #cac19c;
-  color: #172029;
-  border-color: #cac19c;
+  background: #b8860b;
+  color: #fff;
 }
 
 /* 技能卡片 */
 .skill-detail-card {
-  background: #172029;
-  border-left: 4px solid #cac19c;
-  border-radius: 4px;
+  background: #ede8dc;
+  border-left: 4px solid #8b7355;
   padding: 10px;
   margin-top: 4px;
 }
 
 .skill-name {
-  font-weight: 700;
   font-size: 15px;
-  color: #fff;
+  font-weight: 400;
+  color: #3e2e1e;
 }
 
 .skill-desc {
   font-size: 13px;
-  color: #99a0ad;
+  color: #404040;
   margin: 6px 0;
   line-height: 1.5;
   white-space: pre-line;
@@ -390,32 +374,29 @@ button {
 }
 
 .skill-stat {
-  background: #1e2a38;
-  border: 1px solid #2b364b;
+  background: #f4f1e9;
   padding: 2px 8px;
-  border-radius: 3px;
-  color: #cac19c;
+  color: #404040;
 }
 
 /* 能力卡片 */
 .ability-card {
-  background: #1e2a38;
-  border-left: 4px solid #4e5e7d;
-  border-radius: 4px;
+  background: #f4f1e9;
+  border-left: 4px solid #b8860b;
   padding: 8px 14px;
   margin: 5px 0;
 }
 
 .ability-card .ability-name {
-  font-weight: 700;
-  color: #cac19c;
+  font-size: 14px;
+  font-weight: 400;
+  color: #3e2e1e;
 }
 
 /* 支援能力区域 */
 .support-rarity-tabs {
   display: flex;
   gap: 4px;
-  /* 与标题同行时，靠右对齐 */
   margin-left: auto;
 }
 
@@ -431,12 +412,12 @@ button {
 }
 
 .no-data {
-  color: #99a0ad;
+  color: #999;
   font-style: italic;
 }
 
 .loading {
   text-align: center;
   padding: 30px;
-  color: #99a0ad;
+  color: #888;
 }
