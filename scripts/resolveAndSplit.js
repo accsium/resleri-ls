@@ -207,16 +207,16 @@ function buildLocalizedChar(character, lang) {
   const rangeGroups = {}; // { groupName: { skill1: [...ids], skill2: [...ids] } }
 
   const charRules = exRules.filter(r => {
-      if (!r.character_ids) return false;
-      if (r.character_ids === '*') return true;   // 通配符：匹配所有角色
-      if (Array.isArray(r.character_ids)) return r.character_ids.includes(char.id);
-      return false;
-    });
+    if (!r.character_ids) return false;
+    if (r.character_ids === '*') return true;
+    if (Array.isArray(r.character_ids)) return r.character_ids.includes(char.id);
+    return false;
+  });
 
   extraIds.forEach((skillId, index) => {
     const matchedRule = charRules.find(r => {
       if (!r.pattern) return false;
-      if (r.pattern === '*') return true;   // 通配符：匹配所有索引
+      if (r.pattern === '*') return true;
       if (Array.isArray(r.pattern)) return r.pattern.includes(index);
       return false;
     });
@@ -266,7 +266,6 @@ function buildIndexEntry(character, lang) {
     tag_names: (character.tag_ids || []).map(id => maps.character_tag?.get(id) || `ID:${id}`),
     attack_attribute_names: (character.attack_attributes || []).map(id => maps.attack_attribute?.get(id) || `ID:${id}`),
     role_name: maps.role?.get(character.role) || `ID:${character.role}`,
-	transform_to: transformMap[character.id] || null,
   };
 }
 
@@ -276,15 +275,26 @@ if (!tables.character) {
   process.exit(1);
 }
 
+// 读取排除角色列表
+const excludeFile = path.join(__dirname, '..', 'config', 'exclude.txt');
+let excludeIds = new Set();
+if (fs.existsSync(excludeFile)) {
+  const content = fs.readFileSync(excludeFile, 'utf-8');
+  content.split(/\r?\n/).forEach(line => {
+    const id = parseInt(line.trim());
+    if (!isNaN(id)) excludeIds.add(id);
+  });
+  console.log(`📋 已加载排除角色 ID：${excludeIds.size} 个`);
+}
+
 // 读取变身映射
 const transformFile = path.join(__dirname, '..', 'config', 'transform.json');
-let transformMap = {}; // { fromId: toId }
-let hiddenIds = new Set(); // 变身后角色 ID，不加入索引但生成文件
+let transformMap = {};
+let hiddenIds = new Set();
 if (fs.existsSync(transformFile)) {
   const transforms = JSON.parse(fs.readFileSync(transformFile, 'utf-8'));
   transforms.forEach(t => {
     transformMap[t.from] = t.to;
-    // 如果变身后 ID 在排除列表中，移除它，但标记为隐藏
     if (excludeIds.has(t.to)) {
       excludeIds.delete(t.to);
       hiddenIds.add(t.to);
@@ -293,10 +303,7 @@ if (fs.existsSync(transformFile)) {
   console.log(`🔄 已加载变身映射：${Object.keys(transformMap).length} 组`);
 }
 
-// 过滤角色（隐藏 ID 仍会生成文件，但不加入索引）
-let characters = Array.from(tables.character.values()).filter(c => !excludeIds.has(c.id));
-console.log(`👥 有效角色数量：${characters.length}`);
-
+// 过滤角色（排除列表和隐藏 ID 都会生成文件，但只有排除列表不生成索引）
 let characters = Array.from(tables.character.values()).filter(c => !excludeIds.has(c.id));
 console.log(`👥 有效角色数量：${characters.length}（共 ${tables.character.size} 个，排除 ${tables.character.size - characters.length} 个）`);
 
@@ -308,14 +315,18 @@ console.log(`👥 有效角色数量：${characters.length}（共 ${tables.chara
   fs.mkdirSync(langDir, { recursive: true });
 
   const index = [];
-  characters.forEach(char => {
+  // 所有角色（包括 hiddenIds）都生成文件，但只有非 hidden 的加入索引
+  const allChars = Array.from(tables.character.values()).filter(c => !excludeIds.has(c.id));
+  allChars.forEach(char => {
     const localizedChar = buildLocalizedChar(char, lang);
     fs.writeFileSync(
       path.join(langDir, `${char.id}.json`),
       JSON.stringify(localizedChar, null, 2),
       'utf-8'
     );
-    index.push(buildIndexEntry(char, lang));
+    if (!hiddenIds.has(char.id)) {
+      index.push(buildIndexEntry(char, lang));
+    }
   });
 
   fs.writeFileSync(
@@ -324,5 +335,5 @@ console.log(`👥 有效角色数量：${characters.length}（共 ${tables.chara
     'utf-8'
   );
 
-  console.log(`✅ [${lang}] 已生成 ${characters.length} 个角色文件及索引`);
+  console.log(`✅ [${lang}] 已生成 ${allChars.length} 个角色文件，索引包含 ${index.length} 个角色`);
 });
