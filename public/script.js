@@ -262,10 +262,12 @@ function renderDetail(char) {
     <div>${t('attribute')}: ${attrNames} | ${t('role')}: ${roleName} | ${t('alchemist')}: ${isAlchemist}</div>
     <div style="margin-top:8px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
       <span>调和颜色：</span>
+      <span style="color:${getColorHex(traitColorName)}; font-weight:bold;">${traitColorName || '?'}</span>
       <svg width="40" height="40" viewBox="0 0 40 40" style="flex-shrink:0;">
         <polygon points="20,0 0,20 20,40" fill="${getColorHex(traitColorName)}" />
         <polygon points="20,0 40,20 20,40" fill="${getColorHex(supportColorName)}" />
       </svg>
+      <span style="color:${getColorHex(supportColorName)}; font-weight:bold;">${supportColorName || '?'}</span>
     </div>
     <div class="section-title">${t('skillSection')}</div>
   `;
