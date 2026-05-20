@@ -84,8 +84,11 @@ const UI_TEXT = {
 
 // 颜色名称 → hex 值（根据你的 trait_color.json 和 support_color.json 完善）
 const COLOR_MAP = {
+  // 日文
   '赤': '#E74C3C', '青': '#3498DB', '緑': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
+  // 中文
   '红': '#E74C3C', '蓝': '#3498DB', '绿': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
+  // 通用
   '白': '#FFFFFF', '黒': '#333333', '黑': '#333333',
 };
 
@@ -260,10 +263,8 @@ function renderDetail(char) {
     <div style="margin-top:8px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
       <span>调和颜色：</span>
       <svg width="40" height="40" viewBox="0 0 40 40" style="flex-shrink:0;">
-        <g transform="rotate(45, 20, 20)">
-          <polygon points="0,0 30,0 0,30" fill="${getColorHex(traitColorName)}" />
-          <polygon points="30,0 30,30 0,30" fill="${getColorHex(supportColorName)}" />
-        </g>
+        <polygon points="20,0 0,20 20,40" fill="${getColorHex(traitColorName)}" />
+        <polygon points="20,0 40,20 20,40" fill="${getColorHex(supportColorName)}" />
       </svg>
     </div>
     <div class="section-title">${t('skillSection')}</div>
@@ -549,7 +550,6 @@ async function switchLanguage(lang) {
   // 重新渲染列表和详情（无需重新加载数据）
   renderList();
   if (currentCharId) {
-    // 详情数据已在 panel.charData 中，直接重绘
     const panel = document.getElementById('detailPanel');
     if (panel.charData) {
       renderDetail(panel.charData);
