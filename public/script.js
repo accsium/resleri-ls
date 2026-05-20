@@ -29,6 +29,7 @@ const UI_TEXT = {
     limit: '制限',
     evolutionSwitch: '切替',
     level: 'Lv',
+    initialWTLabel: '初期WT',
     skillType: {
       normal1: '通常攻撃1', normal2: '通常攻撃2', burst: 'バーストスキル',
       active1: 'アクティブ1', active2: 'アクティブ2', active3: 'アクティブ3',
@@ -67,6 +68,7 @@ const UI_TEXT = {
     limit: '限制',
     evolutionSwitch: '切换',
     level: '等级',
+    initialWTLabel: '初始WT',
     skillType: {
       normal1: '通常攻击1', normal2: '通常攻击2', burst: '爆发技能',
       active1: '主动1', active2: '主动2', active3: '主动3',
@@ -79,7 +81,7 @@ const UI_TEXT = {
 };
 
 // ========== 全局状态 ==========
-let currentLang = 'cn';   // 默认中文
+let currentLang = 'cn';
 function t(key) { return UI_TEXT[currentLang][key] || key; }
 
 let characterIndex = [];
@@ -162,6 +164,34 @@ function renderSkillGroupContent(groupId, levels, activeIndex) {
   });
 }
 
+// ========== 辅助：获取技能2最高等级 wait 值 ==========
+function getSkill2Wait(char, evoState) {
+  const skills = char._skills || [];
+  const normal2Group = skills.find(s => s.type === 'normal2');
+  if (!normal2Group) return 0;
+  const levels = evoState === 'post' ? normal2Group.post_evolution : normal2Group.pre_evolution;
+  if (!levels || levels.length === 0) return 0;
+  const highestSkill = levels[levels.length - 1];
+  return highestSkill.wait ?? 0;
+}
+
+// ========== 更新初始WT显示 ==========
+function updateInitialWT(char, evoState) {
+  const container = document.getElementById('initialWTContainer');
+  if (!container) return;
+  const speed = char.initial_status?.speed;
+  if (speed == null || speed === 0) {
+    container.innerHTML = '';
+    return;
+  }
+  const skill2Wait = getSkill2Wait(char, evoState);
+  const initialWT = Math.floor(57600 / speed + skill2Wait);
+  container.innerHTML = `<div class="stat-item" style="display:inline-block; margin-top:10px;">
+    <div class="stat-value">${initialWT}</div>
+    <div class="stat-label">${t('initialWTLabel')}</div>
+  </div>`;
+}
+
 // ========== 详情渲染 ==========
 function renderDetail(char) {
   const panel = document.getElementById('detailPanel');
@@ -192,7 +222,7 @@ function renderDetail(char) {
     </div>
     <p style="margin:10px 0;font-style:italic;color:#555;">${char.description || ''}</p>
     <div class="section-title">${t('basicStatus')}</div>
-    <div class="stat-grid">
+    <div class="stat-grid" id="statGrid">
       ${renderStat(t('statLabels').hp, char.initial_status?.hp)}
       ${renderStat(t('statLabels').attack, char.initial_status?.attack)}
       ${renderStat(t('statLabels').magic, char.initial_status?.magic)}
@@ -200,6 +230,7 @@ function renderDetail(char) {
       ${renderStat(t('statLabels').mental, char.initial_status?.mental)}
       ${renderStat(t('statLabels').speed, char.initial_status?.speed)}
     </div>
+    <div id="initialWTContainer"></div>
     <div>${t('attribute')}: ${attrNames} | ${t('role')}: ${roleName} | ${t('alchemist')}: ${isAlchemist}</div>
     <div class="section-title">${t('skillSection')}</div>
   `;
@@ -215,10 +246,8 @@ function renderDetail(char) {
     </div>`;
   });
 
-  // 能力区域容器（将在 renderAbilities 中填充）
   html += `<div id="abilityContainer"></div>`;
 
-  // 队长技能
   if (char.leader_skill) {
     html += `<div class="section-title">${t('leaderSkillSection')}</div>
     <div class="skill-detail-card" style="border-left-color:#eab308;">
@@ -229,7 +258,7 @@ function renderDetail(char) {
 
   panel.innerHTML = html;
 
-  // 初始化所有技能组内容
+  // 初始化技能组
   (char._skills || []).forEach(skillGroup => {
     const groupId = `skill-${skillGroup.type}`;
     const levels = initialEvo === 'post' ? skillGroup.post_evolution : skillGroup.pre_evolution;
@@ -237,10 +266,12 @@ function renderDetail(char) {
     renderSkillGroupContent(groupId, levels, activeIndex);
   });
 
-  // 渲染能力区域
+  // 初始WT
+  updateInitialWT(char, initialEvo);
+  // 能力
   renderAbilities(char, initialEvo);
 
-  // 进化切换按钮事件
+  // 进化切换
   const evoBtn = document.getElementById('evoSwitchBtn');
   if (evoBtn) {
     evoBtn.addEventListener('click', function() {
@@ -254,8 +285,8 @@ function renderDetail(char) {
         const activeIndex = levels.length > 0 ? levels.length - 1 : 0;
         renderSkillGroupContent(groupId, levels, activeIndex);
       });
-      // 重新渲染能力区域（过滤进化能力）
       renderAbilities(panel.charData, newEvo);
+      updateInitialWT(panel.charData, newEvo);
     });
   }
 }
@@ -270,33 +301,23 @@ function renderAbilities(char, evoState) {
   if (!container) return;
   const abilityMap = char._skillDetails || {};
 
-  // 进化能力ID集合
   const evolvedIds = new Set(char.all_skill_evolved_ability_ids || []);
-
-  // 普通能力：ability_ids 中排除进化能力ID
   const normalAbilityIds = (char.ability_ids || []).filter(id => !evolvedIds.has(id));
-  // 进化后额外显示的能力
   const evoAbilityIds = evoState === 'post' ? (char.all_skill_evolved_ability_ids || []) : [];
-  // 合并去重
   const allAbilityIds = [...new Set([...normalAbilityIds, ...evoAbilityIds])];
   const abilities = allAbilityIds.map(id => abilityMap[id]).filter(Boolean);
 
-  // 支援能力
   const supportIds = char.support_ability_ids || [];
 
   let html = '';
 
-  // 普通能力
   html += `<div class="section-title">${t('abilityTitle')}</div>`;
   if (abilities.length === 0) {
     html += `<div class="no-data">${t('none')}</div>`;
   } else {
-    abilities.forEach(a => {
-      html += renderAbilityCard(a);
-    });
+    abilities.forEach(a => { html += renderAbilityCard(a); });
   }
 
-  // 亚空支援能力
   html += `<div class="section-title">${t('supportAbilityTitle')}</div>`;
   if (supportIds.length === 0) {
     html += `<div class="no-data">${t('none')}</div>`;
@@ -324,14 +345,12 @@ function renderAbilities(char, evoState) {
 
   container.innerHTML = html;
 
-  // 绑定支援能力星级切换事件
   const tabs = document.getElementById('supportRarityTabs');
   if (tabs) {
     tabs.querySelectorAll('.level-tab').forEach(tab => {
       tab.addEventListener('click', function() {
         tabs.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));
         this.classList.add('active');
-
         const idx = parseInt(this.dataset.index);
         const supportId = supportIds[idx];
         const ability = supportId ? abilityMap[supportId] : null;
