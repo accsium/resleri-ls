@@ -291,6 +291,20 @@ function buildLocalizedChar(character) {
 
 // ========== 8. 生成索引条目（双语） ==========
 function buildIndexEntry(character) {
+  // 计算默认初始WT
+  let defaultWait = 0;
+  // 优先使用进化后技能2的最高等级wait
+  const evolvedNormal2 = character.evolved_normal2_skill_ids;
+  const normal2 = character.normal2_skill_ids;
+  const skillIdsToCheck = (evolvedNormal2 && evolvedNormal2.length > 0) ? evolvedNormal2 : (normal2 || []);
+  if (skillIdsToCheck.length > 0) {
+    const maxId = Math.max(...skillIdsToCheck);
+    const skillObj = tables.skill?.get(maxId);
+    if (skillObj && typeof skillObj.wait === 'number') defaultWait = skillObj.wait;
+  }
+  const speed = character.initial_status?.speed;
+  const initialWT = (speed != null && speed > 0) ? Math.floor(57600 / speed + defaultWait) : null;
+
   return {
     id: character.id,
     name_ja: character.name,
@@ -311,7 +325,9 @@ function buildIndexEntry(character) {
     trait_color_id: character.trait_color_id || null,
     support_color_id: character.support_color_id || null,
     start_at: character.start_at || null,
-    sort_id: calcSortId(character),   // 关键字段
+    sort_id: calcSortId(character),
+    initial_status: character.initial_status,       // 新增
+    initial_wt: initialWT                           // 新增
   };
 }
 
