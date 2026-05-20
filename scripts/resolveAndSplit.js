@@ -48,7 +48,19 @@ mapKeys.forEach(key => {
   if (cnMaps[key].size === 0) cnMaps[key] = jpMaps[key];
 });
 
-// ========== 3. 递归补全效果引用 ==========
+// ========== 3. 加载 EX 技能规则 ==========
+const rulesFile = path.join(__dirname, '..', 'config', 'ex_skill_rules.json');
+let exRules = [];
+if (fs.existsSync(rulesFile)) {
+  try {
+    exRules = JSON.parse(fs.readFileSync(rulesFile, 'utf-8'));
+    console.log(`📋 已加载 EX 技能规则：${exRules.length} 条`);
+  } catch (e) {
+    console.warn('⚠️ EX 技能规则文件格式错误，将使用默认显示');
+  }
+}
+
+// ========== 4. 递归补全效果引用 ==========
 function resolveEffects(obj, entityName) {
   const entityConfig = config.entities[entityName];
   if (!entityConfig) return obj;
@@ -76,7 +88,7 @@ function resolveEffects(obj, entityName) {
   return resolved;
 }
 
-// ========== 4. 收集角色的技能/能力 ID ==========
+// ========== 5. 收集角色的技能/能力 ID ==========
 function collectSkillIds(character) {
   const ids = new Set();
   const add = (arr) => { if (arr) arr.forEach(id => ids.add(id)); };
@@ -102,7 +114,7 @@ function collectSkillIds(character) {
   return ids;
 }
 
-// ========== 5. 构建 _skillDetails 字典 ==========
+// ========== 6. 构建 _skillDetails 字典 ==========
 function buildSkillDetails(character) {
   const skillIds = collectSkillIds(character);
   const details = {};
@@ -159,7 +171,7 @@ function buildSkillsArray(character, skillDetails) {
   return skillsArray;
 }
 
-// ========== 6. 生成特定语言的角色对象 ==========
+// ========== 7. 生成特定语言的角色对象 ==========
 function buildLocalizedChar(character, lang) {
   const maps = lang === 'cn' ? cnMaps : jpMaps;
   const char = JSON.parse(JSON.stringify(character));
@@ -186,13 +198,61 @@ function buildLocalizedChar(character, lang) {
     }
   }
 
-  // 生成技能组数组
+  // 生成技能组数组（不含 EX 技能）
   char._skills = buildSkillsArray(char, char._skillDetails);
+
+  // ---------- 处理 EX 技能 ----------
+  const extraIds = char.extra_skill_ids || [];
+  const normalEx = [];
+  const rangeGroups = {}; // { groupName: { skill1: [...ids], skill2: [...ids] } }
+
+  const charRules = exRules.filter(r => {
+      if (!r.character_ids) return false;
+      if (r.character_ids === '*') return true;   // 通配符：匹配所有角色
+      if (Array.isArray(r.character_ids)) return r.character_ids.includes(char.id);
+      return false;
+    });
+
+  extraIds.forEach((skillId, index) => {
+    const matchedRule = charRules.find(r => {
+      if (!r.pattern) return false;
+      if (r.pattern === '*') return true;   // 通配符：匹配所有索引
+      if (Array.isArray(r.pattern)) return r.pattern.includes(index);
+      return false;
+    });
+    const action = matchedRule ? matchedRule.action : 'normal';
+    const group = matchedRule ? matchedRule.group : null;
+
+    if (action === 'hide') {
+      // 不加入任何列表
+    } else if (action === 'skill1_inrange') {
+      if (!rangeGroups[group]) rangeGroups[group] = { skill1: [], skill2: [] };
+      rangeGroups[group].skill1.push(skillId);
+    } else if (action === 'skill2_inrange') {
+      if (!rangeGroups[group]) rangeGroups[group] = { skill1: [], skill2: [] };
+      rangeGroups[group].skill2.push(skillId);
+    } else {
+      normalEx.push(skillId);
+    }
+  });
+
+  char._exSkills = normalEx.map(id => char._skillDetails[id]).filter(Boolean);
+  char._rangeSkills = {};
+  for (const [group, data] of Object.entries(rangeGroups)) {
+    const skill1Levels = data.skill1.map(id => char._skillDetails[id]).filter(Boolean);
+    const skill2Levels = data.skill2.map(id => char._skillDetails[id]).filter(Boolean);
+    if (skill1Levels.length > 0 || skill2Levels.length > 0) {
+      char._rangeSkills[group] = {
+        skill1: skill1Levels,
+        skill2: skill2Levels
+      };
+    }
+  }
 
   return char;
 }
 
-// ========== 7. 生成索引条目 ==========
+// ========== 8. 生成索引条目 ==========
 function buildIndexEntry(character, lang) {
   const maps = lang === 'cn' ? cnMaps : jpMaps;
   return {
@@ -209,7 +269,7 @@ function buildIndexEntry(character, lang) {
   };
 }
 
-// ========== 8. 主流程 ==========
+// ========== 9. 主流程 ==========
 if (!tables.character) {
   console.error('❌ character.json 未找到');
   process.exit(1);
@@ -227,7 +287,6 @@ if (fs.existsSync(excludeFile)) {
   console.log(`📋 已加载排除角色 ID：${excludeIds.size} 个`);
 }
 
-// 过滤角色
 let characters = Array.from(tables.character.values()).filter(c => !excludeIds.has(c.id));
 console.log(`👥 有效角色数量：${characters.length}（共 ${tables.character.size} 个，排除 ${tables.character.size - characters.length} 个）`);
 
