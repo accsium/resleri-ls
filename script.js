@@ -186,6 +186,20 @@ function updateInitialWT(char, evoState) {
   </div>`;
 }
 
+// 加载变身前角色并标记
+async function loadTransformChar(originalChar, targetId) {
+  const panel = document.getElementById('detailPanel');
+  panel.innerHTML = `<div class="loading">${t('loading')}</div>`;
+  try {
+    const targetChar = await loadCharacter(targetId);
+    targetChar._is_transform = true;
+    targetChar._original_id = originalChar.id;
+    renderDetail(targetChar);
+  } catch(e) {
+    panel.innerHTML = `<div class="no-data">${t('loadFailed')}</div>`;
+  }
+}
+
 function renderDetail(char) {
   const panel = document.getElementById('detailPanel');
   panel.charData = char;
@@ -198,7 +212,7 @@ function renderDetail(char) {
 
   const hasEvolution = (char._skills || []).some(s => s.post_evolution.length > 0);
   const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
-  const hasTransform = char.transform_to != null;   // 变身后角色拥有此字段，指向变身前
+  const hasTransform = char.transform_to != null || char._is_transform === true;
 
   const initialEvo = hasEvolution ? 'post' : 'pre';
   panel.dataset.evo = initialEvo;
@@ -334,9 +348,12 @@ function renderDetail(char) {
   const transformBtn = document.getElementById('transformSwitchBtn');
   if (transformBtn) {
     transformBtn.addEventListener('click', () => {
-      const targetId = char.transform_to;   // 变身前角色ID
-      if (targetId) {
-        selectCharacter(targetId);
+      if (char._is_transform && char._original_id) {
+        // 当前显示变身前，切回变身后
+        selectCharacter(char._original_id);
+      } else if (char.transform_to) {
+        // 当前显示变身后，切换到变身前
+        loadTransformChar(char, char.transform_to);
       }
     });
   }
