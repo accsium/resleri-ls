@@ -188,10 +188,12 @@ function buildLocalizedChar(character) {
   }
   if (char.trait_color_id != null) {
     char.trait_color_name_ja = jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
-  }
+    char.trait_color_name_cn = cnMaps.trait_color?.get(char.trait_color_id) || jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
+}
   if (char.support_color_id != null) {
     char.support_color_name_ja = jpMaps.support_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
-  }
+    char.support_color_name_cn = cnMaps.support_color?.get(char.support_color_id) || jpMaps.support_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
+}
   if (char.battle_tool_trait_ids) {
     char.battle_tool_trait_names_ja = char.battle_tool_trait_ids.map(id => jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
   }
