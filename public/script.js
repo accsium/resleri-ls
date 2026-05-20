@@ -186,20 +186,6 @@ function updateInitialWT(char, evoState) {
   </div>`;
 }
 
-// 加载变身前角色并标记
-async function loadTransformChar(originalChar, targetId) {
-  const panel = document.getElementById('detailPanel');
-  panel.innerHTML = `<div class="loading">${t('loading')}</div>`;
-  try {
-    const targetChar = await loadCharacter(targetId);
-    targetChar._is_transform = true;
-    targetChar._original_id = originalChar.id;
-    renderDetail(targetChar);
-  } catch(e) {
-    panel.innerHTML = `<div class="no-data">${t('loadFailed')}</div>`;
-  }
-}
-
 function renderDetail(char) {
   const panel = document.getElementById('detailPanel');
   panel.charData = char;
@@ -212,7 +198,7 @@ function renderDetail(char) {
 
   const hasEvolution = (char._skills || []).some(s => s.post_evolution.length > 0);
   const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
-  const hasTransform = char.transform_to != null || char._is_transform === true;
+  const hasTransform = char.transform_to != null;
 
   const initialEvo = hasEvolution ? 'post' : 'pre';
   panel.dataset.evo = initialEvo;
@@ -348,12 +334,8 @@ function renderDetail(char) {
   const transformBtn = document.getElementById('transformSwitchBtn');
   if (transformBtn) {
     transformBtn.addEventListener('click', () => {
-      if (char._is_transform && char._original_id) {
-        // 当前显示变身前，切回变身后
-        selectCharacter(char._original_id);
-      } else if (char.transform_to) {
-        // 当前显示变身后，切换到变身前
-        loadTransformChar(char, char.transform_to);
+      if (char.transform_to) {
+        selectCharacter(char.transform_to);
       }
     });
   }
@@ -530,6 +512,16 @@ async function switchLanguage(lang) {
 
 document.getElementById('btn-ja').addEventListener('click', () => switchLanguage('ja'));
 document.getElementById('btn-cn').addEventListener('click', () => switchLanguage('cn'));
+
+// 清除缓存按钮（如果已添加）
+const refreshBtn = document.getElementById('btn-refresh');
+if (refreshBtn) {
+  refreshBtn.addEventListener('click', () => {
+    if (confirm('确定要清除缓存并刷新数据？')) {
+      window.location.reload(true);
+    }
+  });
+}
 
 (async () => {
   updateUILanguage();
