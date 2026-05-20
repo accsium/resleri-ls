@@ -169,7 +169,7 @@ function buildSkillsArray(character, skillDetails) {
   return skillsArray;
 }
 
-// ========== 7. 生成特定语言的角色对象 ==========
+// ========== 7. 生成特定语言的角色对象（处理 EX 技能等） ==========
 function buildLocalizedChar(character, lang) {
   const maps = lang === 'cn' ? cnMaps : jpMaps;
   const char = JSON.parse(JSON.stringify(character));
@@ -245,7 +245,7 @@ function buildLocalizedChar(character, lang) {
 }
 
 // ========== 8. 生成索引条目 ==========
-function buildIndexEntry(character, lang, transformToMap) {
+function buildIndexEntry(character, lang) {
   const maps = lang === 'cn' ? cnMaps : jpMaps;
   return {
     id: character.id,
@@ -258,7 +258,6 @@ function buildIndexEntry(character, lang, transformToMap) {
     tag_names: (character.tag_ids || []).map(id => maps.character_tag?.get(id) || `ID:${id}`),
     attack_attribute_names: (character.attack_attributes || []).map(id => maps.attack_attribute?.get(id) || `ID:${id}`),
     role_name: maps.role?.get(character.role) || `ID:${character.role}`,
-    transform_to: transformToMap[character.id] || null,
   };
 }
 
@@ -268,7 +267,7 @@ if (!tables.character) {
   process.exit(1);
 }
 
-// 读取排除列表（一般用途）
+// 读取排除列表
 const excludeFile = path.join(__dirname, '..', 'config', 'exclude.txt');
 let excludeIds = new Set();
 if (fs.existsSync(excludeFile)) {
@@ -282,25 +281,24 @@ if (fs.existsSync(excludeFile)) {
 
 // 读取变身配置（数组对）
 const transformFile = path.join(__dirname, '..', 'config', 'transform.json');
-let transformToMap = {};   // 每个ID -> 配对ID (双向)
-let hiddenTransformIds = new Set(); // 每对中的第二个ID（不在列表中显示）
+let transformPairs = [];    // [[id1, id2], ...]
+let hiddenTransformIds = new Set(); // 每对中的第二个ID不在列表中显示
 if (fs.existsSync(transformFile)) {
   const pairs = JSON.parse(fs.readFileSync(transformFile, 'utf-8'));
+  transformPairs = pairs;
   pairs.forEach(pair => {
-    const [first, second] = pair;
-    transformToMap[first] = second;
-    transformToMap[second] = first;
-    hiddenTransformIds.add(second);   // 列表中隐藏第二个
+    hiddenTransformIds.add(pair[1]);   // 第二个ID隐藏
   });
   console.log(`🔄 已加载变身配对：${pairs.length} 组`);
 }
 
-// 所有角色生成文件，但索引中排除 excludeIds 和 hiddenTransformIds
-const allChars = Array.from(tables.character.values());
-const indexIncluded = allChars.filter(c => !excludeIds.has(c.id) && !hiddenTransformIds.has(c.id));
+// 过滤角色：排除列表中的角色和变身配对中的第二个角色不加入索引
+let visibleCharacters = Array.from(tables.character.values()).filter(c =>
+  !excludeIds.has(c.id) && !hiddenTransformIds.has(c.id)
+);
+console.log(`👥 列表显示角色数量：${visibleCharacters.length}`);
 
-console.log(`👥 有效角色数量：${indexIncluded.length}（总 ${allChars.length} 个）`);
-
+// 生成两种语言文件
 ['jp', 'cn'].forEach(lang => {
   const langDir = path.join(publicDataDir, lang);
   if (fs.existsSync(langDir)) {
@@ -308,25 +306,72 @@ console.log(`👥 有效角色数量：${indexIncluded.length}（总 ${allChars.
   }
   fs.mkdirSync(langDir, { recursive: true });
 
-  // 生成所有角色文件（包括隐藏的）
-  allChars.forEach(char => {
+  const index = [];
+
+  // 先处理变身配对，生成合并文件
+  const pairedIds = new Set();
+  transformPairs.forEach(pair => {
+    const [firstId, secondId] = pair;
+    pairedIds.add(firstId);
+    pairedIds.add(secondId);
+
+    const firstChar = tables.character.get(firstId);
+    const secondChar = tables.character.get(secondId);
+    if (!firstChar || !secondChar) {
+      console.warn(`⚠️ 变身配对 ${firstId}-${secondId} 中有角色不存在`);
+      return;
+    }
+
+    // 构建两个角色的本地化数据
+    const firstData = buildLocalizedChar(firstChar, lang);
+    const secondData = buildLocalizedChar(secondChar, lang);
+
+    // 主文件保存为第一个角色，附加 _transform 字段包含第二个角色数据
+    const merged = { ...firstData, _transform: secondData };
+    fs.writeFileSync(
+      path.join(langDir, `${firstId}.json`),
+      JSON.stringify(merged, null, 2),
+      'utf-8'
+    );
+
+    // 第一个角色加入索引
+    if (!excludeIds.has(firstId)) {
+      index.push(buildIndexEntry(firstChar, lang));
+    }
+  });
+
+  // 处理非配对的角色
+  visibleCharacters.forEach(char => {
+    if (pairedIds.has(char.id)) return; // 已在配对中处理
     const localizedChar = buildLocalizedChar(char, lang);
-    // 在角色数据中也添加 transform_to 字段
-    localizedChar.transform_to = transformToMap[char.id] || null;
     fs.writeFileSync(
       path.join(langDir, `${char.id}.json`),
       JSON.stringify(localizedChar, null, 2),
       'utf-8'
     );
+    index.push(buildIndexEntry(char, lang));
   });
 
-  // 生成索引（只包含应该显示的角色）
-  const index = indexIncluded.map(char => buildIndexEntry(char, lang, transformToMap));
+  // 也处理排除列表中的角色（如果它们不在配对中且未被隐藏），确保文件存在（可选）
+  const allIds = new Set(Array.from(tables.character.keys()));
+  allIds.forEach(id => {
+    if (pairedIds.has(id)) return;
+    const filePath = path.join(langDir, `${id}.json`);
+    if (!fs.existsSync(filePath)) {
+      const char = tables.character.get(id);
+      if (char) {
+        const localizedChar = buildLocalizedChar(char, lang);
+        fs.writeFileSync(filePath, JSON.stringify(localizedChar, null, 2), 'utf-8');
+      }
+    }
+  });
+
+  // 保存索引
   fs.writeFileSync(
     path.join(langDir, 'character_index.json'),
     JSON.stringify(index, null, 2),
     'utf-8'
   );
 
-  console.log(`✅ [${lang}] 已生成 ${allChars.length} 个文件，索引包含 ${index.length} 个角色`);
+  console.log(`✅ [${lang}] 已生成角色文件，索引包含 ${index.length} 个角色`);
 });
