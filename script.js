@@ -262,7 +262,6 @@ function createCard(indexEntry) {
       <span style="color:${getColorHex(supportColorName)}">${supportColorName || '?'}</span>
     </div>` : '';
 
-  // 基础属性小卡片：hp 速度 物攻 物防 魔攻 魔防
   const statCards = `
     <div class="stats-row">
       <div class="stat-card"><div class="stat-label">${t('statLabels').hp}</div><div class="stat-value">${status.hp ?? '?'}</div></div>
@@ -345,7 +344,7 @@ function renderDetailContent(id, char, state) {
 function generateDetailHTML(activeChar, state) {
   let html = '';
 
-  // 队长技能（简单标题 + 卡片）
+  // 队长技能
   if (activeChar.leader_skill) {
     html += `<div class="section-title">${t('leaderSkillSection')}</div>`;
     html += `<div class="banner-title">${activeChar.leader_skill.name || t('leaderSkillSection')}</div>`;
@@ -372,18 +371,15 @@ function generateDetailHTML(activeChar, state) {
       }
       if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
 
+      if (!levels || levels.length === 0) return; // 无技能数据时跳过
+
       html += `<div class="subsection-title">${typeText[group.type] || group.type}</div>`;
 
-      const levelTabs = levels.length > 1 ? `<div class="level-tabs">${levels.map((s, i) => `<button class="level-tab ${i === levels.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>` : '';
-      const skillCard = levels[levels.length - 1] ? renderSkillCard(levels[levels.length - 1]) : '';
+      const levelTabs = levels.length > 1 ? `<div class="level-tabs">${levels.map((skill, i) => `<button class="level-tab ${i === levels.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>` : '';
+      const currentSkill = levels[levels.length - 1];
+      const skillCard = currentSkill ? renderSkillCard(currentSkill) : '';
 
       html += `<div class="skill-group" data-group="${group.type}">`;
-      html += `<div class="banner-title"><span>${s.name || '??'} <small>(ID:${s.id})</small></span>${levelTabs}</div>`;
-      // 注意：上面的 s 是 levels[levels.length-1] 对应的技能对象，需要修正，应为 skillCard 中已包含名字，所以标题栏应只显示技能名或留空。
-      // 实际上 banner-title 应该显示技能名，但 renderSkillCard 已经包含名字，所以这里不重复，标题栏可只放等级选项卡。
-      // 调整：标题栏放技能名和等级，内容区放描述和属性。因此需要重新组织。
-      // 为简洁，直接将 skillCard 的内容拆分，这里直接使用 renderSkillCard 放在内容区，标题栏只放等级选项卡，技能名已在卡片内。
-      // 所以简化：banner-title 中不重复技能名，只放等级选项卡。
       html += `<div class="banner-title">${levelTabs}</div>`;
       html += `<div class="content-block">${skillCard || `<div class="no-data">${t('none')}</div>`}</div>`;
       html += `</div>`;
@@ -392,8 +388,9 @@ function generateDetailHTML(activeChar, state) {
     // EX技能
     if (exSkills.length > 0) {
       html += `<div class="subsection-title">${t('skillType').extra}</div>`;
-      const levelTabs = exSkills.length > 1 ? `<div class="level-tabs">${exSkills.map((s, i) => `<button class="level-tab ${i === exSkills.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>` : '';
-      const skillCard = exSkills[exSkills.length - 1] ? renderSkillCard(exSkills[exSkills.length - 1]) : '';
+      const levelTabs = exSkills.length > 1 ? `<div class="level-tabs">${exSkills.map((skill, i) => `<button class="level-tab ${i === exSkills.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>` : '';
+      const currentSkill = exSkills[exSkills.length - 1];
+      const skillCard = currentSkill ? renderSkillCard(currentSkill) : '';
       html += `<div class="skill-group" data-group="extra">`;
       html += `<div class="banner-title">${levelTabs}</div>`;
       html += `<div class="content-block">${skillCard || `<div class="no-data">${t('none')}</div>`}</div>`;
@@ -401,7 +398,7 @@ function generateDetailHTML(activeChar, state) {
     }
   }
 
-  // 能力区块（包含普通能力和支援能力）
+  // 能力区块
   const abilityMap = activeChar._skillDetails || {};
   const evolvedIds = new Set(activeChar.all_skill_evolved_ability_ids || []);
   const normalIds = (activeChar.ability_ids || []).filter(id => !evolvedIds.has(id));
@@ -412,16 +409,11 @@ function generateDetailHTML(activeChar, state) {
 
   html += `<div class="section-title">${t('abilityTitle')}</div>`;
 
-  // 普通能力卡片
   abilities.forEach(a => {
     html += `<div class="banner-title">${a.name || `ID:${a.id}`}</div>`;
     html += `<div class="content-block">${renderAbilityCard(a)}</div>`;
   });
-  if (abilities.length === 0 && supportIds.length === 0) {
-    html += `<div class="no-data">${t('none')}</div>`;
-  }
 
-  // 支援能力卡片（整合到能力中）
   if (supportIds.length > 0) {
     const maxRarity = activeChar.max_rarity || 8;
     const defaultIdx = Math.min(maxRarity - 1, supportIds.length - 1);
@@ -434,6 +426,8 @@ function generateDetailHTML(activeChar, state) {
 
     html += `<div class="banner-title"><span>${t('supportAbilityTitle')}</span>${rarityTabs}</div>`;
     html += `<div class="content-block">${supportAbility ? renderAbilityCard(supportAbility) : `<div class="no-data">${t('none')}</div>`}</div>`;
+  } else if (abilities.length === 0) {
+    html += `<div class="no-data">${t('none')}</div>`;
   }
 
   return html;
