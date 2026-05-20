@@ -1,3 +1,4 @@
+/* ========== 基础设置 ========== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +12,6 @@ body {
   min-height: 100vh;
 }
 
-/* 通用按钮样式 */
 button {
   font-family: inherit;
   cursor: pointer;
@@ -21,9 +21,9 @@ button {
   border: 1px solid #4e5e7d;
   background: #1e2a38;
   color: #fff;
-  font-weight: 400;
 }
 
+/* ========== 顶栏 ========== */
 .header {
   background: #0d141c;
   padding: 24px 40px;
@@ -62,6 +62,7 @@ button {
   border-color: #4e5e7d !important;
 }
 
+/* ========== 搜索框 ========== */
 .search-box {
   max-width: 700px;
   margin: 28px auto;
@@ -84,6 +85,7 @@ button {
   border-color: #cac19c;
 }
 
+/* ========== 控制栏 ========== */
 .controls-bar {
   max-width: 900px;
   margin: 0 auto 20px;
@@ -102,7 +104,6 @@ button {
 
 .sort-control label {
   color: #cac19c;
-  font-weight: 400;
 }
 
 .sort-control select {
@@ -160,6 +161,7 @@ button {
   background: #4e5e7d;
 }
 
+/* ========== 卡片容器 ========== */
 .card-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -176,14 +178,35 @@ button {
   overflow: hidden;
 }
 
+/* ========== 卡片头部（左右布局） ========== */
 .card-header {
-  padding: 20px 24px;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 24px;
+  cursor: pointer;
+}
+
+.card-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 12px;
-  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.color-swatch-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  font-size: 13px;
 }
 
 .card-title {
@@ -235,6 +258,41 @@ button {
   margin-top: 4px;
 }
 
+/* 卡片头部内的属性网格 */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.stat-item {
+  background: #1e2a38;
+  border: 1px solid #2b364b;
+  border-radius: 4px;
+  padding: 6px;
+  text-align: center;
+}
+
+.stat-item .stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stat-item .stat-label {
+  font-size: 10px;
+  color: #99a0ad;
+  margin-top: 2px;
+}
+
+/* 切换按钮 */
+.switch-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
 .switch-buttons button {
   font-size: 12px;
   padding: 5px 14px;
@@ -244,6 +302,7 @@ button {
   background: #4e5e7d;
 }
 
+/* ========== 卡片展开详情 ========== */
 .card-detail {
   display: none;
   padding: 0 24px 24px;
@@ -264,33 +323,7 @@ button {
   border-bottom: 2px solid #cac19c;
 }
 
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-  gap: 8px;
-  margin: 10px 0;
-}
-
-.stat-item {
-  background: #1e2a38;
-  border: 1px solid #2b364b;
-  border-radius: 4px;
-  padding: 10px;
-  text-align: center;
-}
-
-.stat-item .stat-value {
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.stat-item .stat-label {
-  font-size: 10px;
-  color: #99a0ad;
-  margin-top: 2px;
-}
-
+/* 技能组 */
 .skill-group {
   margin-bottom: 16px;
   border: 1px solid #2b364b;
@@ -360,6 +393,7 @@ button {
   color: #cac19c;
 }
 
+/* 能力 */
 .ability-card {
   background: #1e2a38;
   border-left: 4px solid #4e5e7d;
