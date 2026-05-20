@@ -41,7 +41,6 @@ const UI_TEXT = {
     filterLabel: 'フィルター',
     applyFilter: '適用',
     clearFilter: 'クリア',
-    debugNoSkills: 'スキルデータがありません',
   },
   cn: {
     pageTitle: '雷斯雷利 角色图鉴',
@@ -85,7 +84,6 @@ const UI_TEXT = {
     filterLabel: '筛选',
     applyFilter: '应用筛选',
     clearFilter: '清除',
-    debugNoSkills: '技能数据缺失',
   }
 };
 
@@ -318,13 +316,6 @@ async function toggleCardDetail(id) {
 
   try {
     const char = await loadCharacter(id);
-    // 调试输出：打印角色对象
-    console.log(`[Debug] Loaded character ${id}:`, char);
-    console.log(`_skills:`, char._skills);
-    console.log(`_exSkills:`, char._exSkills);
-    console.log(`_rangeSkills:`, char._rangeSkills);
-    if (char._transform) console.log(`_transform._skills:`, char._transform._skills);
-
     const state = getCardState(id);
     renderDetailContent(id, char, state);
   } catch (e) {
@@ -339,7 +330,6 @@ function renderDetailContent(id, char, state) {
   let activeChar = char;
   if (state.showTransform && char._transform) {
     activeChar = char._transform;
-    console.log(`[Debug] Showing transform for ${id}:`, activeChar._skills);
   }
 
   detailDiv.innerHTML = generateDetailHTML(id, activeChar, char, state);
@@ -361,50 +351,38 @@ function generateDetailHTML(id, activeChar, originalChar, state) {
   const typeText = t('skillType');
   const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
 
-  // 遍历 _skills 数组中的每个技能组
   const skills = activeChar._skills || [];
-  if (skills.length === 0) {
-    skillsHTML += `<div class="no-data">${t('debugNoSkills')}</div>`;
-  } else {
-    skills.forEach(group => {
-      // 根据 range 和 evo 状态选择技能等级列表
-      let levels = [];
-      if (state.range === 'inrange' && rangeGroup) {
-        if (group.type === 'normal1') levels = rangeGroup.skill1 || [];
-        else if (group.type === 'normal2') levels = rangeGroup.skill2 || [];
-        else levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
-      } else {
-        levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
-      }
-      
-      // 如果以上都没拿到，强制取一个非空的列表（优先 post_evolution，否则 pre_evolution）
-      if (!levels || levels.length === 0) {
-        levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
-      }
-
-      if (!levels || levels.length === 0) {
-        // 实在没有技能数据时显示占位
-        skillsHTML += `
-          <div class="skill-group" data-group="${group.type}">
-            <div class="skill-group-header">
-              <span class="skill-group-title">${typeText[group.type] || group.type}</span>
-            </div>
-            <div class="skill-levels">${t('none')}</div>
-          </div>`;
-        return;
-      }
-
+  skills.forEach(group => {
+    let levels = [];
+    if (state.range === 'inrange' && rangeGroup) {
+      if (group.type === 'normal1') levels = rangeGroup.skill1 || [];
+      else if (group.type === 'normal2') levels = rangeGroup.skill2 || [];
+      else levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
+    } else {
+      levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
+    }
+    if (!levels || levels.length === 0) {
+      levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
+    }
+    if (!levels || levels.length === 0) {
       skillsHTML += `
         <div class="skill-group" data-group="${group.type}">
           <div class="skill-group-header">
             <span class="skill-group-title">${typeText[group.type] || group.type}</span>
           </div>
-          <div class="skill-levels">${renderSkillLevels(levels)}</div>
+          <div class="skill-levels">${t('none')}</div>
         </div>`;
-    });
-  }
+      return;
+    }
+    skillsHTML += `
+      <div class="skill-group" data-group="${group.type}">
+        <div class="skill-group-header">
+          <span class="skill-group-title">${typeText[group.type] || group.type}</span>
+        </div>
+        <div class="skill-levels">${renderSkillLevels(levels)}</div>
+      </div>`;
+  });
 
-  // EX 技能
   const exSkills = activeChar._exSkills || [];
   if (exSkills.length > 0) {
     skillsHTML += `
@@ -457,8 +435,9 @@ function renderSkillLevels(levels) {
   let html = '';
   if (levels.length > 1) {
     html += '<div class="level-tabs">';
+    const defaultIndex = levels.length - 1;
     levels.forEach((skill, idx) => {
-      html += `<button class="level-tab" data-index="${idx}">${t('level')} ${idx+1}</button>`;
+      html += `<button class="level-tab ${idx === defaultIndex ? 'active' : ''}" data-index="${idx}">${t('level')} ${idx+1}</button>`;
     });
     html += '</div>';
   }
@@ -525,7 +504,7 @@ function renderAbilitiesHTML(char, evoState) {
     const labels = t('rarityLabel');
     supportIds.forEach((sid, idx) => {
       if (sid == null) return;
-      html += `<button class="level-tab support-rarity-btn" data-support-idx="${idx}">${labels[idx]}</button>`;
+      html += `<button class="level-tab support-rarity-btn ${idx === defaultIdx ? 'active' : ''}" data-support-idx="${idx}">${labels[idx]}</button>`;
     });
     html += `</div>`;
     const ability = abilityMap[supportIds[defaultIdx]];
@@ -609,7 +588,6 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     }
   }
 
-  // 技能等级切换
   const skillGroups = card.querySelectorAll('.skill-levels');
   skillGroups.forEach(group => {
     const tabs = group.querySelectorAll('.level-tab');
@@ -631,7 +609,6 @@ function bindCardButtons(id, activeChar, originalChar, state) {
             } else {
               levelsArr = state.evo === 'post' ? skillGroupObj.post_evolution : skillGroupObj.pre_evolution;
             }
-            // 如果没取到，再强制用非空的
             if (!levelsArr || levelsArr.length === 0) {
               levelsArr = skillGroupObj.post_evolution.length > 0 ? skillGroupObj.post_evolution : skillGroupObj.pre_evolution;
             }
@@ -649,7 +626,6 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     });
   });
 
-  // 支援能力星级切换
   const supportTabs = card.querySelectorAll('.support-rarity-btn');
   supportTabs.forEach(btn => {
     btn.addEventListener('click', () => {
