@@ -266,6 +266,7 @@ function buildIndexEntry(character, lang) {
     tag_names: (character.tag_ids || []).map(id => maps.character_tag?.get(id) || `ID:${id}`),
     attack_attribute_names: (character.attack_attributes || []).map(id => maps.attack_attribute?.get(id) || `ID:${id}`),
     role_name: maps.role?.get(character.role) || `ID:${character.role}`,
+    transform_to: transformMap[character.id] || null,  // 新增
   };
 }
 
