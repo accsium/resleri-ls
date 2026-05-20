@@ -329,13 +329,15 @@ function renderDetailContent(id, char, state) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
 
+  // ✅ 核心修复：始终根据当前状态计算实际展示的角色数据
   let activeChar = char;
   if (state.showTransform && char._transform) {
     activeChar = char._transform;
   }
 
   detailDiv.innerHTML = generateDetailHTML(id, activeChar, char, state);
-  bindCardButtons(id, char, state);
+  // ✅ 传递 activeChar 而非原 char，确保技能等级切换等操作使用正确的数据源
+  bindCardButtons(id, activeChar, char, state);
 }
 
 function generateDetailHTML(id, activeChar, originalChar, state) {
@@ -526,16 +528,17 @@ function getColorHex(name) {
   return COLOR_MAP[name] || '#CCCCCC';
 }
 
-function bindCardButtons(id, char, state) {
+// ✅ 修复：增加 activeChar 参数，确保技能等级切换等操作使用当前展示的数据
+function bindCardButtons(id, activeChar, originalChar, state) {
   const card = document.querySelector(`.card[data-id="${id}"]`);
   if (!card) return;
 
   const buttonsDiv = card.querySelector('.switch-buttons');
   if (buttonsDiv) {
     buttonsDiv.innerHTML = '';
-    const hasEvolution = (char._skills || []).some(s => s.post_evolution.length > 0);
-    const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
-    const hasTransform = char._transform != null;
+    const hasEvolution = (activeChar._skills || []).some(s => s.post_evolution.length > 0);
+    const hasRange = Object.keys(activeChar._rangeSkills || {}).length > 0;
+    const hasTransform = originalChar._transform != null;
 
     if (hasEvolution) {
       const btn = document.createElement('button');
@@ -545,7 +548,7 @@ function bindCardButtons(id, char, state) {
         e.stopPropagation();
         const newEvo = state.evo === 'post' ? 'pre' : 'post';
         setCardState(id, { evo: newEvo });
-        renderDetailContent(id, char, getCardState(id));
+        renderDetailContent(id, originalChar, getCardState(id));
       });
       buttonsDiv.appendChild(btn);
     }
@@ -558,7 +561,7 @@ function bindCardButtons(id, char, state) {
         e.stopPropagation();
         const newRange = state.range === 'inrange' ? 'normal' : 'inrange';
         setCardState(id, { range: newRange });
-        renderDetailContent(id, char, getCardState(id));
+        renderDetailContent(id, originalChar, getCardState(id));
       });
       buttonsDiv.appendChild(btn);
     }
@@ -570,7 +573,7 @@ function bindCardButtons(id, char, state) {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         setCardState(id, { showTransform: !state.showTransform });
-        renderDetailContent(id, char, getCardState(id));
+        renderDetailContent(id, originalChar, getCardState(id));
       });
       buttonsDiv.appendChild(btn);
     }
@@ -586,11 +589,11 @@ function bindCardButtons(id, char, state) {
         const groupType = group.closest('.skill-group')?.dataset.group;
         let levelsArr = [];
         if (groupType === 'extra') {
-          levelsArr = char._exSkills || [];
+          levelsArr = activeChar._exSkills || [];
         } else {
-          const skillGroupObj = (char._skills || []).find(g => g.type === groupType);
+          const skillGroupObj = (activeChar._skills || []).find(g => g.type === groupType);
           if (skillGroupObj) {
-            const rangeGroup = char._rangeSkills?.['inrange'];
+            const rangeGroup = activeChar._rangeSkills?.['inrange'];
             if (state.range === 'inrange' && rangeGroup) {
               if (groupType === 'normal1') levelsArr = rangeGroup.skill1 || [];
               else if (groupType === 'normal2') levelsArr = rangeGroup.skill2 || [];
@@ -614,8 +617,8 @@ function bindCardButtons(id, char, state) {
   supportTabs.forEach(btn => {
     btn.addEventListener('click', () => {
       const idx = parseInt(btn.dataset.supportIdx);
-      const supportIds = char.support_ability_ids || [];
-      const abilityMap = char._skillDetails || {};
+      const supportIds = activeChar.support_ability_ids || [];
+      const abilityMap = activeChar._skillDetails || {};
       const ability = abilityMap[supportIds[idx]];
       const content = card.querySelector('.support-ability-content');
       if (content) {
