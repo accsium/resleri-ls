@@ -88,31 +88,24 @@ const UI_TEXT = {
   }
 };
 
-// 颜色名称 → hex 值（用于调和颜色菱形）
 const COLOR_MAP = {
   '赤': '#E74C3C', '青': '#3498DB', '緑': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
   '红': '#E74C3C', '蓝': '#3498DB', '绿': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
   '白': '#FFFFFF', '黒': '#333333', '黑': '#333333',
 };
 
-// 当前语言，默认中文
 let currentLang = 'cn';
 function t(key) { return UI_TEXT[currentLang][key] || key; }
 
-// 获取当前语言对应的字段（优先 _cn，其次 _ja）
 function getField(obj, field) {
-  if (currentLang === 'cn' && obj[field + '_cn'] !== undefined) {
-    return obj[field + '_cn'];
-  }
+  if (currentLang === 'cn' && obj[field + '_cn'] !== undefined) return obj[field + '_cn'];
   return obj[field + '_ja'] || obj[field] || '';
 }
 
-// 全局数据
 let characterIndex = [];
 let loadedCharacters = {};
-const cardStates = {}; // 每个卡片的状态 { evo, range, showTransform }
+const cardStates = {};
 
-// 可用排序字段
 const AVAILABLE_SORT_FIELDS = [
   { field: 'sort_id', label_ja: '実装日+ID', label_cn: '实装日期+ID' },
   { field: 'start_at', label_ja: '実装日', label_cn: '实装日期' },
@@ -130,11 +123,9 @@ let currentSortField = 'sort_id';
 let currentSortOrder = 'desc';
 let activeFilters = { attack_attributes: [], role: [] };
 
-// ========== 数据加载 ==========
 async function loadIndex() {
   const resp = await fetch('data/character_index.json');
   characterIndex = await resp.json();
-  // 确保 sort_id 存在（兼容旧索引）
   characterIndex.forEach(c => {
     if (!c.sort_id && c.start_at) {
       const dateStr = c.start_at.substring(0, 10).replace(/-/g, '');
@@ -157,20 +148,16 @@ function rarityToStars(r) {
   return map[r] || '★'.repeat(r);
 }
 
-// ========== 排序与筛选 ==========
 function compareCharacters(a, b) {
   const field = currentSortField;
   const order = currentSortOrder === 'desc' ? -1 : 1;
-  let valA = a[field];
-  let valB = b[field];
+  let valA = a[field], valB = b[field];
   if (Array.isArray(valA)) valA = valA[0];
   if (Array.isArray(valB)) valB = valB[0];
   if (valA == null && valB == null) return 0;
   if (valA == null) return 1 * order;
   if (valB == null) return -1 * order;
-  if (typeof valA === 'string' && typeof valB === 'string') {
-    return (valA.localeCompare(valB)) * order;
-  }
+  if (typeof valA === 'string' && typeof valB === 'string') return valA.localeCompare(valB) * order;
   return (valA - valB) * order;
 }
 
@@ -191,7 +178,6 @@ function getFilteredAndSortedCharacters() {
   return filtered;
 }
 
-// ========== UI 更新 ==========
 function updateUILanguage() {
   document.title = t('pageTitle');
   document.getElementById('pageTitle').textContent = t('pageTitle');
@@ -207,16 +193,13 @@ function buildSortSelect() {
   if (!select) return;
   select.innerHTML = '';
   AVAILABLE_SORT_FIELDS.forEach(sf => {
-    const option = document.createElement('option');
-    option.value = sf.field;
-    option.textContent = currentLang === 'cn' ? sf.label_cn : sf.label_ja;
-    if (sf.field === currentSortField) option.selected = true;
-    select.appendChild(option);
+    const opt = document.createElement('option');
+    opt.value = sf.field;
+    opt.textContent = currentLang === 'cn' ? sf.label_cn : sf.label_ja;
+    if (sf.field === currentSortField) opt.selected = true;
+    select.appendChild(opt);
   });
-  select.onchange = () => {
-    currentSortField = select.value;
-    renderAllCards();
-  };
+  select.onchange = () => { currentSortField = select.value; renderAllCards(); };
 }
 
 function updateOrderButton() {
@@ -251,7 +234,7 @@ function renderAllCards() {
   filterCards();
 }
 
-// ========== 卡片创建 ==========
+// ========== 卡片创建（新增属性网格） ==========
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -264,6 +247,8 @@ function createCard(indexEntry) {
   const role = getField(indexEntry, 'role_name');
   const tags = (getField(indexEntry, 'tag_names') || []).slice(0, 3);
   const releaseDate = indexEntry.start_at ? new Date(indexEntry.start_at).toLocaleDateString('ja-JP') : '—';
+  const status = indexEntry.initial_status || {};
+  const initialWT = indexEntry.initial_wt != null ? indexEntry.initial_wt : '—';
 
   card.innerHTML = `
     <div class="card-header">
@@ -274,6 +259,15 @@ function createCard(indexEntry) {
         </div>
         <div class="rarity">${stars} (${indexEntry.initial_rarity}→${indexEntry.max_rarity})</div>
         <div class="attrs">${attrs} | ${role}</div>
+        <div class="stat-grid">
+          <div class="stat-item"><div class="stat-value">${status.hp ?? '?'}</div><div class="stat-label">${t('statLabels').hp}</div></div>
+          <div class="stat-item"><div class="stat-value">${status.attack ?? '?'}</div><div class="stat-label">${t('statLabels').attack}</div></div>
+          <div class="stat-item"><div class="stat-value">${status.magic ?? '?'}</div><div class="stat-label">${t('statLabels').magic}</div></div>
+          <div class="stat-item"><div class="stat-value">${status.defense ?? '?'}</div><div class="stat-label">${t('statLabels').defense}</div></div>
+          <div class="stat-item"><div class="stat-value">${status.mental ?? '?'}</div><div class="stat-label">${t('statLabels').mental}</div></div>
+          <div class="stat-item"><div class="stat-value">${status.speed ?? '?'}</div><div class="stat-label">${t('statLabels').speed}</div></div>
+          <div class="stat-item"><div class="stat-value">${initialWT}</div><div class="stat-label">${t('initialWTLabel')}</div></div>
+        </div>
         <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
         <div class="release-date">${releaseDate}</div>
       </div>
@@ -282,7 +276,6 @@ function createCard(indexEntry) {
     <div class="card-detail"></div>
   `;
 
-  // 点击头部展开/折叠（避开按钮）
   card.querySelector('.card-header').addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
     toggleCardDetail(indexEntry.id);
