@@ -5,7 +5,7 @@ const UI_TEXT = {
     searchPlaceholder: '名前で検索...',
     skillSection: 'スキル',
     abilitySection: 'アビリティ',
-    leaderSkillSection: '隊長スキル',
+    leaderSkillSection: 'リーダースキル',
     base: 'ベース',
     series: 'シリーズ',
     releaseDate: '実装日',
