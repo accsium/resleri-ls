@@ -361,42 +361,51 @@ function generateDetailHTML(id, activeChar, originalChar, state) {
   const typeText = t('skillType');
   const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
 
+  // 遍历 _skills 数组中的每个技能组
   const skills = activeChar._skills || [];
-  const exSkills = activeChar._exSkills || [];
+  if (skills.length === 0) {
+    skillsHTML += `<div class="no-data">${t('debugNoSkills')}</div>`;
+  } else {
+    skills.forEach(group => {
+      // 根据 range 和 evo 状态选择技能等级列表
+      let levels = [];
+      if (state.range === 'inrange' && rangeGroup) {
+        if (group.type === 'normal1') levels = rangeGroup.skill1 || [];
+        else if (group.type === 'normal2') levels = rangeGroup.skill2 || [];
+        else levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
+      } else {
+        levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
+      }
+      
+      // 如果以上都没拿到，强制取一个非空的列表（优先 post_evolution，否则 pre_evolution）
+      if (!levels || levels.length === 0) {
+        levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
+      }
 
-  // 调试信息：显示技能数量
-  skillsHTML += `<div style="font-size:12px;color:#888;">[Debug] 技能组数: ${skills.length}, EX技能数: ${exSkills.length}</div>`;
+      if (!levels || levels.length === 0) {
+        // 实在没有技能数据时显示占位
+        skillsHTML += `
+          <div class="skill-group" data-group="${group.type}">
+            <div class="skill-group-header">
+              <span class="skill-group-title">${typeText[group.type] || group.type}</span>
+            </div>
+            <div class="skill-levels">${t('none')}</div>
+          </div>`;
+        return;
+      }
 
-  skills.forEach(group => {
-    let levels = [];
-    if (state.range === 'inrange' && rangeGroup) {
-      if (group.type === 'normal1') levels = rangeGroup.skill1 || [];
-      else if (group.type === 'normal2') levels = rangeGroup.skill2 || [];
-      else levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
-    } else {
-      levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
-    }
-    if (!levels || levels.length === 0) {
-      // 即使没有技能，也显示占位符
       skillsHTML += `
         <div class="skill-group" data-group="${group.type}">
           <div class="skill-group-header">
             <span class="skill-group-title">${typeText[group.type] || group.type}</span>
           </div>
-          <div class="skill-levels">${t('none')}</div>
+          <div class="skill-levels">${renderSkillLevels(levels)}</div>
         </div>`;
-      return;
-    }
+    });
+  }
 
-    skillsHTML += `
-      <div class="skill-group" data-group="${group.type}">
-        <div class="skill-group-header">
-          <span class="skill-group-title">${typeText[group.type] || group.type}</span>
-        </div>
-        <div class="skill-levels">${renderSkillLevels(levels)}</div>
-      </div>`;
-  });
-
+  // EX 技能
+  const exSkills = activeChar._exSkills || [];
   if (exSkills.length > 0) {
     skillsHTML += `
       <div class="skill-group" data-group="extra">
@@ -405,8 +414,6 @@ function generateDetailHTML(id, activeChar, originalChar, state) {
         </div>
         <div class="skill-levels">${renderSkillLevels(exSkills)}</div>
       </div>`;
-  } else if (skills.length === 0) {
-    skillsHTML += `<div class="no-data">${t('debugNoSkills')}</div>`;
   }
 
   let abilitiesHTML = renderAbilitiesHTML(activeChar, state.evo);
@@ -602,6 +609,7 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     }
   }
 
+  // 技能等级切换
   const skillGroups = card.querySelectorAll('.skill-levels');
   skillGroups.forEach(group => {
     const tabs = group.querySelectorAll('.level-tab');
@@ -623,10 +631,17 @@ function bindCardButtons(id, activeChar, originalChar, state) {
             } else {
               levelsArr = state.evo === 'post' ? skillGroupObj.post_evolution : skillGroupObj.pre_evolution;
             }
+            // 如果没取到，再强制用非空的
+            if (!levelsArr || levelsArr.length === 0) {
+              levelsArr = skillGroupObj.post_evolution.length > 0 ? skillGroupObj.post_evolution : skillGroupObj.pre_evolution;
+            }
           }
         }
-        if (levelsArr[idx]) {
-          group.querySelector('.skill-card-container').innerHTML = renderSkillCard(levelsArr[idx]);
+        if (levelsArr && levelsArr[idx]) {
+          const container = group.querySelector('.skill-card-container');
+          if (container) {
+            container.innerHTML = renderSkillCard(levelsArr[idx]);
+          }
           group.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));
           tab.classList.add('active');
         }
@@ -634,6 +649,7 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     });
   });
 
+  // 支援能力星级切换
   const supportTabs = card.querySelectorAll('.support-rarity-btn');
   supportTabs.forEach(btn => {
     btn.addEventListener('click', () => {
