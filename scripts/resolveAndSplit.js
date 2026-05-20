@@ -281,13 +281,13 @@ if (fs.existsSync(excludeFile)) {
 
 // 读取变身配置（数组对）
 const transformFile = path.join(__dirname, '..', 'config', 'transform.json');
-let transformPairs = [];    // [[id1, id2], ...]
-let hiddenTransformIds = new Set(); // 每对中的第二个ID不在列表中显示
+let transformPairs = [];
+let hiddenTransformIds = new Set();
 if (fs.existsSync(transformFile)) {
   const pairs = JSON.parse(fs.readFileSync(transformFile, 'utf-8'));
   transformPairs = pairs;
   pairs.forEach(pair => {
-    hiddenTransformIds.add(pair[1]);   // 第二个ID隐藏
+    hiddenTransformIds.add(pair[1]);
   });
   console.log(`🔄 已加载变身配对：${pairs.length} 组`);
 }
@@ -307,9 +307,9 @@ console.log(`👥 列表显示角色数量：${visibleCharacters.length}`);
   fs.mkdirSync(langDir, { recursive: true });
 
   const index = [];
+  const pairedIds = new Set();
 
   // 先处理变身配对，生成合并文件
-  const pairedIds = new Set();
   transformPairs.forEach(pair => {
     const [firstId, secondId] = pair;
     pairedIds.add(firstId);
@@ -340,9 +340,9 @@ console.log(`👥 列表显示角色数量：${visibleCharacters.length}`);
     }
   });
 
-  // 处理非配对的角色
+  // 处理非配对的可见角色
   visibleCharacters.forEach(char => {
-    if (pairedIds.has(char.id)) return; // 已在配对中处理
+    if (pairedIds.has(char.id)) return;
     const localizedChar = buildLocalizedChar(char, lang);
     fs.writeFileSync(
       path.join(langDir, `${char.id}.json`),
@@ -352,7 +352,7 @@ console.log(`👥 列表显示角色数量：${visibleCharacters.length}`);
     index.push(buildIndexEntry(char, lang));
   });
 
-  // 也处理排除列表中的角色（如果它们不在配对中且未被隐藏），确保文件存在（可选）
+  // 确保所有被排除的角色也生成文件（可选）
   const allIds = new Set(Array.from(tables.character.keys()));
   allIds.forEach(id => {
     if (pairedIds.has(id)) return;
