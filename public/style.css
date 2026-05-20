@@ -71,7 +71,7 @@ body {
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: 1fr;  /* 每个卡片占一整行 */
   gap: 16px;
   padding: 10px 20px 30px;
 }
