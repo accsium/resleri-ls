@@ -321,9 +321,10 @@ async function toggleCardDetail(id) {
 
   try {
     const char = await loadCharacter(id);
+    if (!char) throw new Error('角色数据为空');
     renderDetailContent(id, char, getCardState(id));
   } catch (e) {
-    detailDiv.innerHTML = `<div class="no-data">${t('loadFailed')}</div>`;
+    detailDiv.innerHTML = `<div class="no-data">${t('loadFailed')}：${e.message}</div>`;
   }
 }
 
@@ -331,11 +332,14 @@ function renderDetailContent(id, char, state) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
 
-  let activeChar = char;
-  if (state.showTransform && char._transform) activeChar = char._transform;
-
-  detailDiv.innerHTML = generateDetailHTML(activeChar, state);
-  bindCardButtons(id, activeChar, char, state);
+  try {
+    let activeChar = char;
+    if (state.showTransform && char._transform) activeChar = char._transform;
+    detailDiv.innerHTML = generateDetailHTML(activeChar, state);
+    bindCardButtons(id, activeChar, char, state);
+  } catch (e) {
+    detailDiv.innerHTML = `<div class="no-data">渲染失败：${e.message}</div>`;
+  }
 }
 
 function generateDetailHTML(activeChar, state) {
