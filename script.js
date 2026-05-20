@@ -41,6 +41,7 @@ const UI_TEXT = {
     filterLabel: 'フィルター',
     applyFilter: '適用',
     clearFilter: 'クリア',
+    debugNoSkills: 'スキルデータがありません',
   },
   cn: {
     pageTitle: '雷斯雷利 角色图鉴',
@@ -84,6 +85,7 @@ const UI_TEXT = {
     filterLabel: '筛选',
     applyFilter: '应用筛选',
     clearFilter: '清除',
+    debugNoSkills: '技能数据缺失',
   }
 };
 
@@ -107,7 +109,6 @@ let characterIndex = [];
 let loadedCharacters = {};
 const cardStates = {};
 
-// 可用排序字段
 const AVAILABLE_SORT_FIELDS = [
   { field: 'sort_id', label_ja: '実装日+ID', label_cn: '实装日期+ID' },
   { field: 'start_at', label_ja: '実装日', label_cn: '实装日期' },
@@ -128,7 +129,6 @@ let activeFilters = { attack_attributes: [], role: [] };
 async function loadIndex() {
   const resp = await fetch('data/character_index.json');
   characterIndex = await resp.json();
-  // 确保 sort_id 存在（兼容旧索引）
   characterIndex.forEach(c => {
     if (!c.sort_id && c.start_at) {
       const dateStr = c.start_at.substring(0, 10).replace(/-/g, '');
@@ -318,6 +318,13 @@ async function toggleCardDetail(id) {
 
   try {
     const char = await loadCharacter(id);
+    // 调试输出：打印角色对象
+    console.log(`[Debug] Loaded character ${id}:`, char);
+    console.log(`_skills:`, char._skills);
+    console.log(`_exSkills:`, char._exSkills);
+    console.log(`_rangeSkills:`, char._rangeSkills);
+    if (char._transform) console.log(`_transform._skills:`, char._transform._skills);
+
     const state = getCardState(id);
     renderDetailContent(id, char, state);
   } catch (e) {
@@ -329,14 +336,13 @@ function renderDetailContent(id, char, state) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
 
-  // ✅ 核心修复：始终根据当前状态计算实际展示的角色数据
   let activeChar = char;
   if (state.showTransform && char._transform) {
     activeChar = char._transform;
+    console.log(`[Debug] Showing transform for ${id}:`, activeChar._skills);
   }
 
   detailDiv.innerHTML = generateDetailHTML(id, activeChar, char, state);
-  // ✅ 传递 activeChar 而非原 char，确保技能等级切换等操作使用正确的数据源
   bindCardButtons(id, activeChar, char, state);
 }
 
@@ -355,7 +361,13 @@ function generateDetailHTML(id, activeChar, originalChar, state) {
   const typeText = t('skillType');
   const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
 
-  (activeChar._skills || []).forEach(group => {
+  const skills = activeChar._skills || [];
+  const exSkills = activeChar._exSkills || [];
+
+  // 调试信息：显示技能数量
+  skillsHTML += `<div style="font-size:12px;color:#888;">[Debug] 技能组数: ${skills.length}, EX技能数: ${exSkills.length}</div>`;
+
+  skills.forEach(group => {
     let levels = [];
     if (state.range === 'inrange' && rangeGroup) {
       if (group.type === 'normal1') levels = rangeGroup.skill1 || [];
@@ -364,7 +376,17 @@ function generateDetailHTML(id, activeChar, originalChar, state) {
     } else {
       levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
     }
-    if (!levels || levels.length === 0) return;
+    if (!levels || levels.length === 0) {
+      // 即使没有技能，也显示占位符
+      skillsHTML += `
+        <div class="skill-group" data-group="${group.type}">
+          <div class="skill-group-header">
+            <span class="skill-group-title">${typeText[group.type] || group.type}</span>
+          </div>
+          <div class="skill-levels">${t('none')}</div>
+        </div>`;
+      return;
+    }
 
     skillsHTML += `
       <div class="skill-group" data-group="${group.type}">
@@ -375,14 +397,16 @@ function generateDetailHTML(id, activeChar, originalChar, state) {
       </div>`;
   });
 
-  if (activeChar._exSkills && activeChar._exSkills.length > 0) {
+  if (exSkills.length > 0) {
     skillsHTML += `
       <div class="skill-group" data-group="extra">
         <div class="skill-group-header">
           <span class="skill-group-title">${t('skillType').extra}</span>
         </div>
-        <div class="skill-levels">${renderSkillLevels(activeChar._exSkills)}</div>
+        <div class="skill-levels">${renderSkillLevels(exSkills)}</div>
       </div>`;
+  } else if (skills.length === 0) {
+    skillsHTML += `<div class="no-data">${t('debugNoSkills')}</div>`;
   }
 
   let abilitiesHTML = renderAbilitiesHTML(activeChar, state.evo);
@@ -528,7 +552,6 @@ function getColorHex(name) {
   return COLOR_MAP[name] || '#CCCCCC';
 }
 
-// ✅ 修复：增加 activeChar 参数，确保技能等级切换等操作使用当前展示的数据
 function bindCardButtons(id, activeChar, originalChar, state) {
   const card = document.querySelector(`.card[data-id="${id}"]`);
   if (!card) return;
@@ -579,7 +602,6 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     }
   }
 
-  // 技能等级切换
   const skillGroups = card.querySelectorAll('.skill-levels');
   skillGroups.forEach(group => {
     const tabs = group.querySelectorAll('.level-tab');
@@ -612,7 +634,6 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     });
   });
 
-  // 支援能力星级切换
   const supportTabs = card.querySelectorAll('.support-rarity-btn');
   supportTabs.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -638,7 +659,6 @@ function filterCards() {
   });
 }
 
-// 筛选面板事件
 document.getElementById('applyFilterBtn').addEventListener('click', () => {
   const attrChecks = document.querySelectorAll('.attr-check:checked');
   activeFilters.attack_attributes = Array.from(attrChecks).map(cb => parseInt(cb.value));
@@ -660,7 +680,6 @@ document.getElementById('filterToggle').addEventListener('click', () => {
   panel.style.display = panel.style.display === 'none' ? 'flex' : 'none';
 });
 
-// 语言切换
 document.getElementById('btn-ja').addEventListener('click', () => switchLang('ja'));
 document.getElementById('btn-cn').addEventListener('click', () => switchLang('cn'));
 
