@@ -24,6 +24,16 @@ function renderSynthesisModule(char) {
   `;
 }
 
+// 生成单个滑块开关 HTML
+function createToggleSwitch(type, checked, label) {
+  return `
+    <label class="toggle-switch" data-type="${type}" title="${label}">
+      <input type="checkbox" ${checked ? 'checked' : ''}>
+      <span class="slider"></span>
+    </label>
+  `;
+}
+
 // 创建卡片
 function createCard(indexEntry) {
   const card = document.createElement('div');
@@ -123,7 +133,7 @@ function createCard(indexEntry) {
   return card;
 }
 
-// 更新开关状态（新）
+// 更新开关状态
 function updateSwitchButtonsState(card, state, char) {
   const buttonsDiv = card.querySelector('.switch-buttons');
   if (!buttonsDiv || !char) return;
@@ -171,16 +181,6 @@ function updateSwitchButtonsState(card, state, char) {
       }
     });
   });
-}
-
-// 生成单个开关 HTML
-function createToggleSwitch(type, checked, label) {
-  return `
-    <label class="toggle-switch" data-type="${type}" title="${label}">
-      <input type="checkbox" ${checked ? 'checked' : ''}>
-      <span class="slider"></span>
-    </label>
-  `;
 }
 
 // 卡片状态管理
