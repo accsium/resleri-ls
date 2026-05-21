@@ -286,8 +286,8 @@ button {
 }
 
 .info-left {
-  display: flex;
-  flex-direction: column;
+  width: 220px; /* 固定宽度，使右列对齐 */
+  flex-shrink: 0;
 }
 
 /* 调和模块 */
