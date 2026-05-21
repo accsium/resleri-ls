@@ -357,19 +357,96 @@ function renderAllCards() {
 }
 
 // ========== 详情展开 ==========
+// ========== 详情展开（带固定头部） ==========
 async function toggleCardDetail(id) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
-  if (detailDiv.classList.contains('open')) { detailDiv.classList.remove('open'); return; }
+
+  // 如果已展开，则收起
+  if (detailDiv.classList.contains('open')) {
+    detailDiv.classList.remove('open');
+    const card = detailDiv.closest('.card');
+    card.classList.remove('card-sticky');
+    // 移除滚动监听
+    window.removeEventListener('scroll', card._stickyHandler);
+    return;
+  }
+
   detailDiv.innerHTML = `<div class="loading">${t('loading')}</div>`;
   detailDiv.classList.add('open');
+
   try {
     const char = await loadCharacter(id);
     if (!char) throw new Error('角色数据为空');
     renderDetailContent(id, char, getCardState(id));
+
+    // 为展开的卡片添加固定头部行为
+    const card = detailDiv.closest('.card');
+    card.classList.add('card-sticky');
+    initStickyCard(card);
   } catch (e) {
     detailDiv.innerHTML = `<div class="no-data">${t('loadFailed')}: ${e.message || e}</div>`;
   }
+}
+
+// 初始化卡片的固定头部行为
+function initStickyCard(card) {
+  // 移除旧监听
+  if (card._stickyHandler) {
+    window.removeEventListener('scroll', card._stickyHandler);
+  }
+
+  const header = card.querySelector('.card-header');
+  const detailDiv = card.querySelector('.card-detail');
+
+  const handler = () => {
+    if (!card.classList.contains('card-sticky')) return;
+
+    const headerRect = header.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    // 头部占视口高度比例（可调整）
+    const maxHeaderRatio = 0.4;
+    const maxHeaderHeight = viewportHeight * maxHeaderRatio;
+
+    if (headerRect.top <= 0) {
+      // 头部到达顶部，固定它并让详情可滚动
+      const usedHeight = Math.min(headerRect.height, maxHeaderHeight);
+      const availableHeight = viewportHeight - usedHeight;
+      detailDiv.style.maxHeight = `${availableHeight}px`;
+      detailDiv.style.overflowY = 'auto';
+      header.style.position = 'sticky';
+      header.style.top = '0';
+      header.style.zIndex = '5';
+      header.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+    } else {
+      // 头部还在视口内，恢复正常
+      detailDiv.style.maxHeight = '';
+      detailDiv.style.overflowY = '';
+      header.style.position = '';
+      header.style.top = '';
+      header.style.zIndex = '';
+      header.style.boxShadow = '';
+    }
+
+    // 当详情滚动到底部，头部完全被遮住后，恢复滚动
+    if (detailDiv.scrollTop + detailDiv.clientHeight >= detailDiv.scrollHeight - 1) {
+      card.classList.remove('card-sticky');
+      detailDiv.style.maxHeight = '';
+      detailDiv.style.overflowY = '';
+      header.style.position = '';
+      header.style.top = '';
+      header.style.zIndex = '';
+      header.style.boxShadow = '';
+      window.removeEventListener('scroll', handler);
+    }
+  };
+
+  card._stickyHandler = handler;
+  window.addEventListener('scroll', handler);
+  // 初始调用一次
+  handler();
 }
 
 function renderDetailContent(id, char, state) {
