@@ -142,7 +142,7 @@ function renderAvatar(id, traitColor, supportColor, size = 300) {
           <polygon points="22,44 278,44 278,172 150,300 22,172" />
         </clipPath>
       </defs>
-      <image id="${imgId}" href="${fallbackPath}" x="22" y="44" height="256"
+      <image id="${imgId}" href="${fallbackPath}" x="22" y="44" width="256" height="256"
              clip-path="url(#clip-${id})" preserveAspectRatio="xMidYMax meet" />
     </svg>
   `;
