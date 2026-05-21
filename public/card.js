@@ -120,9 +120,67 @@ function createCard(indexEntry) {
   // 异步加载真实头像
   initAvatar(indexEntry.id);
 
-  // 移除卡片头部的点击展开行为（不再绑定）
-
   return card;
+}
+
+// 更新开关状态（新）
+function updateSwitchButtonsState(card, state, char) {
+  const buttonsDiv = card.querySelector('.switch-buttons');
+  if (!buttonsDiv || !char) return;
+
+  const hasEvo = (char._skills || []).some(s => s.post_evolution.length > 0);
+  const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
+  const hasTransform = char._transform != null;
+
+  let html = '';
+
+  if (hasEvo) {
+    html += createToggleSwitch('evo', state.evo === 'post', '切换进化状态');
+  }
+  if (hasRange) {
+    html += createToggleSwitch('range', state.range === 'inrange', '切换范围状态');
+  }
+  if (hasTransform) {
+    html += createToggleSwitch('transform', state.showTransform, '切换变身状态');
+  }
+
+  buttonsDiv.innerHTML = html;
+
+  // 绑定开关事件
+  buttonsDiv.querySelectorAll('.toggle-switch input').forEach(input => {
+    input.addEventListener('change', (e) => {
+      const type = e.target.closest('.toggle-switch').dataset.type;
+      const id = parseInt(card.dataset.id);
+      const currentState = getCardState(id);
+      switch(type) {
+        case 'evo':
+          setCardState(id, { evo: currentState.evo === 'post' ? 'pre' : 'post' });
+          break;
+        case 'range':
+          setCardState(id, { range: currentState.range === 'inrange' ? 'normal' : 'inrange' });
+          break;
+        case 'transform':
+          setCardState(id, { showTransform: !currentState.showTransform });
+          break;
+      }
+      // 如果卡片已展开，刷新详情
+      const detailDiv = card.querySelector('.card-detail.open');
+      if (detailDiv) {
+        const char = loadedCharacters[id];
+        if (char) renderDetailContent(id, char, getCardState(id));
+      }
+    });
+  });
+}
+
+// 生成单个开关 HTML
+function createToggleSwitch(type, checked, label) {
+  return `
+    <label class="toggle-switch" data-type="${type}" title="${label}">
+      <input type="checkbox" ${checked ? 'checked' : ''}>
+      <span class="slider"></span>
+    </label>
+  `;
 }
 
 // 卡片状态管理
