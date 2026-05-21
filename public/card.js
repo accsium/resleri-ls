@@ -71,7 +71,10 @@ function createCard(indexEntry) {
               ${name}${alias ? `<span class="alias">${alias}</span>` : ''}
               <span class="char-id">ID:${indexEntry.id}</span>
             </div>
-            <div class="switch-buttons"></div>
+            <div class="header-buttons">
+              <div class="switch-buttons"></div>
+              <button class="expand-btn" data-action="toggle" aria-label="展开">▼</button>
+            </div>
           </div>
           <div class="info-lower">
             <div class="info-left">
@@ -87,7 +90,6 @@ function createCard(indexEntry) {
       </div>
       <div class="card-part2">
         <div class="stats-row">${statCards}</div>
-        <button class="expand-btn" data-action="toggle">展开</button>
       </div>
     </div>
     <div class="card-detail"></div>
@@ -97,7 +99,11 @@ function createCard(indexEntry) {
   const expandBtn = card.querySelector('.expand-btn');
   expandBtn.addEventListener('click', (e) => {
     e.stopPropagation();
+    const detailDiv = card.querySelector('.card-detail');
+    const willBeOpen = !detailDiv.classList.contains('open');
     toggleCardDetail(indexEntry.id);
+    expandBtn.innerHTML = willBeOpen ? '▲' : '▼';
+    expandBtn.setAttribute('aria-label', willBeOpen ? '收起' : '展开');
   });
 
   // 加载角色详情以填充调和模块和切换按钮
@@ -114,10 +120,7 @@ function createCard(indexEntry) {
   // 异步加载真实头像
   initAvatar(indexEntry.id);
 
-  card.querySelector('.card-header').addEventListener('click', (e) => {
-    if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
-    toggleCardDetail(indexEntry.id);
-  });
+  // 移除卡片头部的点击展开行为（不再绑定）
 
   return card;
 }
