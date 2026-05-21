@@ -393,4 +393,9 @@ visibleCharacters.forEach(char => {
 
 fs.writeFileSync(path.join(outDir, 'character_index.json'), JSON.stringify(index, null, 2), 'utf-8');
 
+// 生成元数据（构建时间）
+const meta = { build_time: new Date().toISOString() };
+fs.writeFileSync(path.join(outDir, 'meta.json'), JSON.stringify(meta, null, 2), 'utf-8');
+console.log(`🕒 构建时间已写入 meta.json`);
+
 console.log(`✅ 已生成角色文件，索引包含 ${index.length} 个角色`);
