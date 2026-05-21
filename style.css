@@ -175,6 +175,7 @@ button {
 .card-header {
   padding: 16px;
   cursor: pointer;
+  position: relative; /* 为切换按钮定位提供上下文 */
 }
 
 .card-upper {
@@ -212,12 +213,37 @@ button {
   margin-top: 4px;
 }
 
+/* 调和模块 */
 .harmony-section {
   width: 200px;
   flex-shrink: 0;
-  margin-left: auto;
 }
 
+.harmony-module {
+  background: #e4dcce; /* 稍深背景 */
+  padding: 8px;
+  text-align: center;
+}
+
+.harmony-color-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.trait-tag {
+  display: inline-block;
+  background: #f4f1e9;
+  color: #404040;
+  padding: 2px 8px;
+  margin: 2px;
+  font-size: 11px;
+}
+
+/* 切换按钮（右上角） */
 .switch-buttons {
   display: flex;
   gap: 6px;
@@ -238,7 +264,7 @@ button {
 
 /* 卡片下部 */
 .card-lower {
-  padding: 12px 0 0;
+  padding-top: 12px;
 }
 
 /* 基础属性小卡片 */
@@ -363,6 +389,7 @@ button {
   color: #404040;
 }
 
+/* 能力卡片 */
 .ability-card {
   background: #fff;
   padding: 8px 14px;
@@ -374,6 +401,7 @@ button {
   color: #3e2e1e;
 }
 
+/* 支援能力标题行 */
 .support-ability-header {
   display: flex;
   align-items: center;
@@ -402,4 +430,10 @@ button {
   height: 75px;
   overflow: hidden;
   position: relative;
+}
+
+/* 默认头像占位样式 */
+.avatar-diamond,
+.avatar-image {
+  /* 已在 avatar.js 中内联样式 */
 }
