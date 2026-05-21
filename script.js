@@ -740,8 +740,21 @@ async function switchLang(lang) {
 
 document.getElementById('btn-refresh').onclick = () => { if (confirm('确定要清除缓存并刷新数据？')) location.reload(true); };
 
+async function loadBuildTime() {
+  try {
+    const resp = await fetch('data/meta.json');
+    const meta = await resp.json();
+    const buildTime = new Date(meta.build_time);
+    // 格式化为本地时间，精确到秒（根据浏览器语言）
+    document.getElementById('updateTime').textContent = buildTime.toLocaleString();
+  } catch (e) {
+    document.getElementById('updateTime').textContent = '—';
+  }
+}
+
 (async () => {
   updateUILanguage();
   await loadIndex();
   renderAllCards();
+  loadBuildTime();   // 添加这一行
 })();
