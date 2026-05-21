@@ -66,7 +66,8 @@ function createCard(indexEntry) {
     if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
     toggleCardDetail(indexEntry.id);
   });
-
+  // 异步加载真实头像
+  initAvatar(indexEntry.id);
   return card;
 }
 
