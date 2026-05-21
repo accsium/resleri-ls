@@ -175,7 +175,7 @@ button {
 .card-header {
   padding: 16px;
   cursor: pointer;
-  position: relative; /* 为切换按钮定位提供上下文 */
+  position: relative;
 }
 
 .card-upper {
@@ -213,14 +213,33 @@ button {
   margin-top: 4px;
 }
 
+/* 标签（与原样式一致） */
+.tag {
+  background: #e4dcce;
+  color: #404040;
+  padding: 3px 10px;
+  font-size: 11px;
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 2px;
+}
+
+.tags {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
 /* 调和模块 */
 .harmony-section {
   width: 200px;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .harmony-module {
-  background: #e4dcce; /* 稍深背景 */
+  background: #e4dcce;
   padding: 8px;
   text-align: center;
 }
@@ -234,12 +253,13 @@ button {
   font-size: 13px;
 }
 
+/* 特性词条（垂直排列，每个一行） */
 .trait-tag {
-  display: inline-block;
+  display: block;
   background: #f4f1e9;
   color: #404040;
   padding: 2px 8px;
-  margin: 2px;
+  margin-bottom: 3px;
   font-size: 11px;
 }
 
@@ -389,7 +409,6 @@ button {
   color: #404040;
 }
 
-/* 能力卡片 */
 .ability-card {
   background: #fff;
   padding: 8px 14px;
@@ -401,7 +420,6 @@ button {
   color: #3e2e1e;
 }
 
-/* 支援能力标题行 */
 .support-ability-header {
   display: flex;
   align-items: center;
@@ -424,16 +442,10 @@ button {
   color: #888;
 }
 
-/* ========== 头像组件 ========== */
+/* ========== 头像组件（尺寸由 avatar.js 控制） ========== */
 .avatar-wrapper {
   width: 75px;
   height: 75px;
   overflow: hidden;
   position: relative;
-}
-
-/* 默认头像占位样式 */
-.avatar-diamond,
-.avatar-image {
-  /* 已在 avatar.js 中内联样式 */
 }
