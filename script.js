@@ -1,7 +1,6 @@
-// 全局数据
+// ========== 全局数据 ==========
 let characterIndex = [];
 let loadedCharacters = {};
-const cardStates = {};
 
 // 可用排序字段
 const AVAILABLE_SORT_FIELDS = [
@@ -25,6 +24,7 @@ let activeFilters = { attack_attributes: [], role: [] };
 async function loadIndex() {
   const resp = await fetch('data/character_index.json');
   characterIndex = await resp.json();
+  // 确保 sort_id 存在（兼容旧索引）
   characterIndex.forEach(c => {
     if (!c.sort_id && c.start_at) {
       const dateStr = c.start_at.substring(0, 10).replace(/-/g, '');
@@ -144,11 +144,10 @@ async function toggleCardDetail(id) {
     if (!char) throw new Error('角色数据为空');
     renderDetailContent(id, char, getCardState(id));
   } catch (e) {
-    detailDiv.innerHTML = `<div class="no-data">${t('loadFailed')}: ${e.message}</div>`;
+    detailDiv.innerHTML = `<div class="no-data">${t('loadFailed')}: ${e.message || e}</div>`;
   }
 }
 
-// 修改 renderDetailContent，捕获错误并显示具体信息
 function renderDetailContent(id, char, state) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
@@ -164,72 +163,86 @@ function renderDetailContent(id, char, state) {
   }
 }
 
-// 修改 generateDetailHTML，增加防御性检查
+// ========== 生成详情 HTML（含队长技能整合） ==========
 function generateDetailHTML(activeChar, state) {
   let html = '';
 
-  // 队长技能
+  // 收集所有技能类型，包括队长技能（作为子类）
+  const allSkillTypes = [];
+
+  // 队长技能（作为技能子类）
   if (activeChar.leader_skill) {
-    const leaderName = activeChar.leader_skill.name || t('leaderSkillSection');
-    const leaderDesc = activeChar.leader_skill.description || '';
-    html += `<div class="section-title">${t('leaderSkillSection')}</div>`;
-    html += `<div class="banner-title">${leaderName}</div>`;
-    html += `<div class="content-block"><div class="skill-desc">${leaderDesc}</div></div>`;
+    allSkillTypes.push({
+      type: 'leader',
+      name: t('leaderSkillSection'),
+      levels: [activeChar.leader_skill]
+    });
   }
 
-  // 技能区块
+  // 处理 _skills 数组
   const skills = activeChar._skills || [];
+  const typeText = t('skillType');
+  const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
+
+  skills.forEach(group => {
+    let levels = [];
+    if (state.range === 'inrange' && rangeGroup) {
+      if (group.type === 'normal1') levels = rangeGroup.skill1 || [];
+      else if (group.type === 'normal2') levels = rangeGroup.skill2 || [];
+      else levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
+    } else {
+      levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
+    }
+    if (!levels || levels.length === 0) {
+      levels = (group.post_evolution && group.post_evolution.length > 0) ? group.post_evolution : group.pre_evolution;
+    }
+    if (levels && levels.length > 0) {
+      allSkillTypes.push({
+        type: group.type,
+        name: typeText[group.type] || group.type,
+        levels
+      });
+    }
+  });
+
+  // EX 技能
   const exSkills = activeChar._exSkills || [];
-  if (skills.length > 0 || exSkills.length > 0) {
+  if (exSkills.length > 0) {
+    allSkillTypes.push({
+      type: 'extra',
+      name: t('skillType').extra,
+      levels: exSkills
+    });
+  }
+
+  // 生成技能区块
+  if (allSkillTypes.length > 0) {
     html += `<div class="section-title">${t('skillSection')}</div>`;
 
-    const typeText = t('skillType');
-    const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
+    allSkillTypes.forEach(skillType => {
+      html += `<div class="subsection-title">${skillType.name}</div>`;
 
-    skills.forEach(group => {
-      let levels = [];
-      if (state.range === 'inrange' && rangeGroup) {
-        if (group.type === 'normal1') levels = rangeGroup.skill1 || [];
-        else if (group.type === 'normal2') levels = rangeGroup.skill2 || [];
-        else levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
-      } else {
-        levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
-      }
-      if (!levels || levels.length === 0) {
-        levels = (group.post_evolution && group.post_evolution.length > 0) ? group.post_evolution : group.pre_evolution;
-      }
-      if (!levels || levels.length === 0) return; // 无技能数据，跳过
-
-      html += `<div class="subsection-title">${typeText[group.type] || group.type}</div>`;
-
+      const levels = skillType.levels;
       const currentSkill = levels[levels.length - 1] || {};
       const skillName = currentSkill.name || '??';
       const skillId = currentSkill.id || '';
 
-      const levelTabs = levels.length > 1
+      // 等级选项卡（队长技能不需要）
+      const levelTabs = (skillType.type !== 'leader' && levels.length > 1)
         ? `<div class="level-tabs">${levels.map((s, i) => `<button class="level-tab ${i === levels.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>`
         : '';
 
-      html += `<div class="skill-group" data-group="${group.type}">`;
+      html += `<div class="skill-group" data-group="${skillType.type}">`;
       html += `<div class="banner-title"><span>${skillName} <small>(ID:${skillId})</small></span>${levelTabs}</div>`;
-      html += `<div class="content-block">${currentSkill ? renderSkillCard(currentSkill) : `<div class="no-data">${t('none')}</div>`}</div>`;
+
+      // 内容区：队长技能只显示描述，其他技能调用 renderSkillCard
+      if (skillType.type === 'leader') {
+        html += `<div class="content-block"><div class="skill-desc">${currentSkill.description || ''}</div></div>`;
+      } else {
+        html += `<div class="content-block">${currentSkill ? renderSkillCard(currentSkill) : `<div class="no-data">${t('none')}</div>`}</div>`;
+      }
       html += `</div>`;
     });
-
-    // EX技能
-    if (exSkills.length > 0) {
-      html += `<div class="subsection-title">${t('skillType').extra}</div>`;
-      const currentSkill = exSkills[exSkills.length - 1] || {};
-      const skillName = currentSkill.name || '??';
-      const skillId = currentSkill.id || '';
-      const levelTabs = exSkills.length > 1
-        ? `<div class="level-tabs">${exSkills.map((s, i) => `<button class="level-tab ${i === exSkills.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>`
-        : '';
-      html += `<div class="skill-group" data-group="extra">`;
-      html += `<div class="banner-title"><span>${skillName} <small>(ID:${skillId})</small></span>${levelTabs}</div>`;
-      html += `<div class="content-block">${currentSkill ? renderSkillCard(currentSkill) : `<div class="no-data">${t('none')}</div>`}</div>`;
-      html += `</div>`;
-    }
   }
 
   // 能力区块
@@ -247,6 +260,7 @@ function generateDetailHTML(activeChar, state) {
     html += `<div class="banner-title">${a.name || `ID:${a.id}`}</div>`;
     html += `<div class="content-block">${renderAbilityCard(a)}</div>`;
   });
+
   if (abilities.length === 0 && supportIds.length === 0) {
     html += `<div class="no-data">${t('none')}</div>`;
   }
@@ -268,14 +282,14 @@ function generateDetailHTML(activeChar, state) {
   return html;
 }
 
+// ========== 卡片渲染（不含技能名） ==========
 function renderSkillCard(skill) {
   const target = getField(skill, 'target_name') || skill.skill_target_type || '?';
   const attr = (skill.attack_attributes || []).map(a => ({1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'}[a] || a)).join('/');
   let desc = skill.description || '';
   if (skill.effects) skill.effects.forEach((eff, i) => desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), (eff.value ?? 0) / 100));
   const wt = 200 + (skill.wait ?? 0);
-  return `<div class="skill-detail-card">
-    <div class="skill-name">${skill.name || '??'} <small>(ID:${skill.id})</small></div>
+  return `
     <div class="skill-desc">${desc}</div>
     <div class="skill-stats">
       <span class="skill-stat">${t('target')}: ${target}</span>
@@ -284,8 +298,7 @@ function renderSkillCard(skill) {
       <span class="skill-stat">${t('break')}: ${skill.break_power ?? 0}%</span>
       <span class="skill-stat">${t('wt')}: ${wt}</span>
       <span class="skill-stat">${t('limit')}: ${skill.limit_count ?? '—'}</span>
-    </div>
-  </div>`;
+    </div>`;
 }
 
 function renderAbilityCard(a) {
@@ -326,6 +339,7 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     }
   }
 
+  // 技能等级切换
   card.querySelectorAll('.skill-group').forEach(group => {
     const tabs = group.querySelectorAll('.level-tab');
     const contentBlock = group.querySelector('.content-block');
@@ -335,6 +349,7 @@ function bindCardButtons(id, activeChar, originalChar, state) {
         const idx = parseInt(tab.dataset.index);
         let levelsArr = [];
         if (groupType === 'extra') levelsArr = activeChar._exSkills || [];
+        else if (groupType === 'leader') return; // 队长技能无等级切换
         else {
           const skillObj = (activeChar._skills || []).find(g => g.type === groupType);
           if (skillObj) {
@@ -348,7 +363,7 @@ function bindCardButtons(id, activeChar, originalChar, state) {
           }
         }
         if (levelsArr && levelsArr[idx] && contentBlock) {
-          contentBlock.innerHTML = renderSkillCard(levelsArr[idx]) || `<div class="no-data">${t('none')}</div>`;
+          contentBlock.innerHTML = renderSkillCard(levelsArr[idx]);
           tabs.forEach(t => t.classList.remove('active'));
           tab.classList.add('active');
         }
@@ -356,6 +371,7 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     });
   });
 
+  // 支援能力星级切换
   card.querySelectorAll('.support-rarity-btn').forEach(btn => {
     btn.onclick = () => {
       const idx = parseInt(btn.dataset.supportIdx);
