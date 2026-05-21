@@ -745,10 +745,15 @@ async function loadBuildTime() {
     const resp = await fetch('data/meta.json');
     const meta = await resp.json();
     const buildTime = new Date(meta.build_time);
-    // 格式化为本地时间，精确到秒（根据浏览器语言）
-    document.getElementById('updateTime').textContent = buildTime.toLocaleString();
+    const offset = -buildTime.getTimezoneOffset(); // 分钟
+    const hours = Math.floor(Math.abs(offset) / 60);
+    const sign = offset >= 0 ? '+' : '-';
+    const timeStr = buildTime.toLocaleString();
+    const gmt = `GMT${sign}${String(hours).padStart(2, '0')}:00`;
+    document.getElementById('updateTime').textContent = `更新时间 ${timeStr} (${gmt})`;
   } catch (e) {
-    document.getElementById('updateTime').textContent = '—';
+    // 默认按 GMT+8 显示
+    document.getElementById('updateTime').textContent = `更新时间 — (GMT+08:00)`;
   }
 }
 
