@@ -231,20 +231,19 @@ button {
   gap: 4px;
 }
 
-/* 调和模块 */
-.harmony-section {
+/* 调和模块（synthesis） */
+.synthesis-section {
   width: 200px;
   flex-shrink: 0;
-  margin-left: auto;
 }
 
-.harmony-module {
+.synthesis-module {
   background: #e4dcce;
   padding: 8px;
   text-align: center;
 }
 
-.harmony-color-row {
+.synthesis-color-row {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -409,6 +408,7 @@ button {
   color: #404040;
 }
 
+/* 能力卡片 */
 .ability-card {
   background: #fff;
   padding: 8px 14px;
@@ -420,6 +420,7 @@ button {
   color: #3e2e1e;
 }
 
+/* 支援能力标题行 */
 .support-ability-header {
   display: flex;
   align-items: center;
@@ -442,7 +443,7 @@ button {
   color: #888;
 }
 
-/* ========== 头像组件（尺寸由 avatar.js 控制） ========== */
+/* ========== 头像组件 ========== */
 .avatar-wrapper {
   width: 75px;
   height: 75px;

@@ -30,8 +30,10 @@ const UI_TEXT = {
     level: 'Lv. ',
     initialWTLabel: '初期WT',
     skillType: {
-      normal1: '通常攻撃1', normal2: '通常攻撃2', burst: 'バーストスキル',
-      active1: 'アクティブ1', active2: 'アクティブ2', active3: 'アクティブ3',
+      normal1: 'スキル1',
+      normal2: 'スキル2',
+      burst: 'バーストスキル',
+      active: 'アクティブスキル',
       extra: 'EXスキル'
     },
     statLabels: { hp: 'HP', speed: '速度', attack: '物攻', defense: '物防', magic: '魔攻', mental: '魔防' },
@@ -42,7 +44,7 @@ const UI_TEXT = {
     filterLabel: 'フィルター',
     applyFilter: '適用',
     clearFilter: 'クリア',
-    harmonyTitle: '調和',
+    synthesisTitle: '調和',
     battleTraitTitle: 'バトルアイテム特性',
     equipTraitTitle: '装備アイテム特性',
   },
@@ -76,8 +78,10 @@ const UI_TEXT = {
     level: 'Lv. ',
     initialWTLabel: '初始WT',
     skillType: {
-      normal1: '通常攻击1', normal2: '通常攻击2', burst: '爆发技能',
-      active1: '主动1', active2: '主动2', active3: '主动3',
+      normal1: '第一技能',
+      normal2: '第二技能',
+      burst: '爆发技能',
+      active: '主动技能',
       extra: 'EX技能'
     },
     statLabels: { hp: 'HP', speed: '速度', attack: '物攻', defense: '物防', magic: '魔攻', mental: '魔防' },
@@ -88,7 +92,7 @@ const UI_TEXT = {
     filterLabel: '筛选',
     applyFilter: '应用筛选',
     clearFilter: '清除',
-    harmonyTitle: '调和',
+    synthesisTitle: '调和',
     battleTraitTitle: '战斗道具特性',
     equipTraitTitle: '装备道具特性',
   }
