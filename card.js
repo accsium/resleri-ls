@@ -5,7 +5,6 @@ function renderSynthesisModule(char) {
   const battleTraits = getField(char, 'battle_tool_trait_names') || [];
   const equipTraits = getField(char, 'equipment_tool_trait_names') || [];
 
-  // 合并所有特性词条，每个单独一行
   const allTraits = [...battleTraits, ...equipTraits];
 
   return `
@@ -25,7 +24,7 @@ function renderSynthesisModule(char) {
   `;
 }
 
-// 创建卡片（新布局）
+// 创建卡片
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -44,7 +43,7 @@ function createCard(indexEntry) {
 
   const avatarHTML = renderAvatar(indexEntry.id, getField(indexEntry, 'trait_color_name'), getField(indexEntry, 'support_color_name'), 75);
 
-  // 基础属性顺序：初始WT, HP, 速度, 物攻, 物防, 魔攻, 魔防
+  // 基础属性
   const statOrder = ['initialWT', 'hp', 'speed', 'attack', 'defense', 'magic', 'mental'];
   const statCards = statOrder.map(key => {
     let label, value;
@@ -60,45 +59,50 @@ function createCard(indexEntry) {
 
   card.innerHTML = `
     <div class="card-header">
-      <div class="card-upper">
+      <div class="card-part1">
         <div class="avatar-section">
           <div class="avatar-col">${avatarHTML}</div>
           <div class="initial-rarity">${minStars}</div>
           <div class="attrs">${getField(indexEntry, 'attack_attribute_names').join(' / ')} | ${role}</div>
         </div>
         <div class="info-section">
-          <div class="card-title">
-            ${name}${alias ? `<span class="alias">${alias}</span>` : ''}
-            <span class="char-id">ID:${indexEntry.id}</span>
+          <div class="info-header">
+            <div class="card-title">
+              ${name}${alias ? `<span class="alias">${alias}</span>` : ''}
+              <span class="char-id">ID:${indexEntry.id}</span>
+            </div>
+            <div class="switch-buttons"></div>
           </div>
-          <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
-          <div class="max-rarity" style="color: ${maxRarity === 8 ? '#ff69b4' : '#b8860b'}">${maxStars}</div>
-          <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-        </div>
-        <div class="synthesis-section">
-          <div class="synthesis-placeholder"></div>
+          <div class="info-lower">
+            <div class="info-left">
+              <div class="max-rarity" style="color: ${maxRarity === 8 ? '#ff69b4' : '#b8860b'}">${maxStars}</div>
+              <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+              <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
+            </div>
+            <div class="synthesis-section">
+              <div class="synthesis-placeholder"></div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="switch-buttons"></div>
-      <div class="card-lower">
+      <div class="card-part2">
         <div class="stats-row">${statCards}</div>
       </div>
     </div>
     <div class="card-detail"></div>
   `;
 
-  // 加载角色详情以填充调和模块和切换按钮
+  // 加载角色详情
   loadCharacter(indexEntry.id).then(char => {
     if (char) {
-      const synthesisSection = card.querySelector('.synthesis-section');
-      if (synthesisSection) {
-        synthesisSection.innerHTML = renderSynthesisModule(char);
+      const synthSection = card.querySelector('.synthesis-section');
+      if (synthSection) {
+        synthSection.innerHTML = renderSynthesisModule(char);
       }
       updateSwitchButtonsState(card, getCardState(indexEntry.id), char);
     }
   });
 
-  // 异步加载真实头像
   initAvatar(indexEntry.id);
 
   card.querySelector('.card-header').addEventListener('click', (e) => {

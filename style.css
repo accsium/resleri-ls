@@ -175,10 +175,10 @@ button {
 .card-header {
   padding: 16px;
   cursor: pointer;
-  position: relative;
 }
 
-.card-upper {
+/* 上部区域 (part1) */
+.card-part1 {
   display: flex;
   align-items: flex-start;
   gap: 16px;
@@ -197,9 +197,34 @@ button {
   margin-top: 4px;
 }
 
+/* 右侧信息区 */
 .info-section {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: #3e2e1e;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card-title .alias {
+  font-size: 14px;
+  color: #6b5e8a;
+  font-weight: 400;
 }
 
 .char-id {
@@ -213,7 +238,13 @@ button {
   margin-top: 4px;
 }
 
-/* 标签（与原样式一致） */
+.tags {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
 .tag {
   background: #e4dcce;
   color: #404040;
@@ -224,14 +255,42 @@ button {
   margin-bottom: 2px;
 }
 
-.tags {
-  margin-top: 6px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
+.release-date {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
 }
 
-/* 调和模块（synthesis） */
+/* 切换按钮（现在作为 info-header 右端） */
+.switch-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.switch-buttons button {
+  font-size: 12px;
+  padding: 5px 14px;
+}
+
+.switch-buttons button.active {
+  background: #5b6e82;
+  color: #fff;
+}
+
+/* 信息下方两列布局 */
+.info-lower {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.info-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 调和模块 */
 .synthesis-section {
   width: 200px;
   flex-shrink: 0;
@@ -252,7 +311,6 @@ button {
   font-size: 13px;
 }
 
-/* 特性词条（垂直排列，每个一行） */
 .trait-tag {
   display: block;
   background: #f4f1e9;
@@ -262,28 +320,9 @@ button {
   font-size: 11px;
 }
 
-/* 切换按钮（右上角） */
-.switch-buttons {
-  display: flex;
-  gap: 6px;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-
-.switch-buttons button {
-  font-size: 12px;
-  padding: 5px 14px;
-}
-
-.switch-buttons button.active {
-  background: #5b6e82;
-  color: #fff;
-}
-
-/* 卡片下部 */
-.card-lower {
-  padding-top: 12px;
+/* 下部区域 (part2) */
+.card-part2 {
+  margin-top: 12px;
 }
 
 /* 基础属性小卡片 */
@@ -408,7 +447,6 @@ button {
   color: #404040;
 }
 
-/* 能力卡片 */
 .ability-card {
   background: #fff;
   padding: 8px 14px;
@@ -420,7 +458,6 @@ button {
   color: #3e2e1e;
 }
 
-/* 支援能力标题行 */
 .support-ability-header {
   display: flex;
   align-items: center;
