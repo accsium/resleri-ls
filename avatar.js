@@ -1,33 +1,35 @@
-// 生成头像组件 HTML（默认尺寸 300x300，可缩放）
-function renderAvatar(id, traitColor, supportColor, scale = 1) {
-  const size = Math.round(300 * scale);
+// 生成头像组件 SVG（纯矢量，可任意缩放）
+function renderAvatar(id, traitColor, supportColor, size = 300) {
   const traitHex = getColorHex(traitColor);
   const supportHex = getColorHex(supportColor);
   const imgPath = `images/characters/${id}.png`;
   const fallbackPath = `images/characters/00000.png`;
+  const clipId = `clip-${id}`;
 
   return `
-    <div style="width:${size}px; height:${size}px; overflow:hidden; position:relative;">
-      <div style="width:300px; height:300px; position:absolute; top:0; left:0; transform:scale(${scale}); transform-origin:0 0;">
-        <!-- 背景菱形：(150,0) (0,150) (150,300) (300,150) -->
-        <svg style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0;" viewBox="0 0 300 300">
-          <polygon points="150,0 0,150 150,300" fill="${traitHex}" />
-          <polygon points="150,0 300,150 150,300" fill="${supportHex}" />
-        </svg>
-        <!-- 角色头像（高256，蒙版裁剪） -->
-        <img src="${imgPath}" alt="" 
-             style="position:absolute; bottom:0; left:50%; transform:translateX(-50%); height:256px; width:auto; z-index:1;
-                    clip-path: polygon(0px 0px, 256px 0px, 256px 128px, 128px 256px, 0px 128px);"
+    <svg width="${size}" height="${size}" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+      <!-- 背景菱形 -->
+      <polygon points="150,0 0,150 150,300" fill="${traitHex}" />
+      <polygon points="150,0 300,150 150,300" fill="${supportHex}" />
+      
+      <defs>
+        <!-- 蒙版形状：矩形 + 倒三角形（三个直角） -->
+        <clipPath id="${clipId}">
+          <polygon points="0,0 256,0 256,128 128,256 0,128" />
+        </clipPath>
+      </defs>
+      
+      <!-- 头像图片（256x256，居中，底部对齐，y=44） -->
+      <image href="${imgPath}" x="22" y="44" width="256" height="256"
+             clip-path="url(#${clipId})" preserveAspectRatio="xMidYMid slice"
              onerror="
                if (!this.dataset.fallback) {
                  this.dataset.fallback = '1';
-                 this.src = '${fallbackPath}';
+                 this.setAttribute('href', '${fallbackPath}');
                } else {
-                 this.parentElement.parentElement.style.display = 'none';
+                 this.parentElement.style.display = 'none';
                }
-             "
-        />
-      </div>
-    </div>
+             " />
+    </svg>
   `;
 }

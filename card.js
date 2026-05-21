@@ -36,7 +36,7 @@ function createCard(indexEntry) {
       <div class="stat-card"><div class="stat-label">${t('statLabels').mental}</div><div class="stat-value">${status.mental ?? '?'}</div></div>
     </div>`;
 
-  const avatarHTML = renderAvatar(indexEntry.id, traitColorName, supportColorName, 0.25);
+  const avatarHTML = renderAvatar(indexEntry.id, traitColorName, supportColorName, 75);
 
   card.innerHTML = `
     <div class="card-header">
