@@ -1,5 +1,4 @@
-// ========== utils.js 内容 ==========
-// 多语言界面文本
+// ========== 多语言界面文本 ==========
 const UI_TEXT = {
   ja: {
     pageTitle: 'レスレリ 角色图鉴',
@@ -31,8 +30,11 @@ const UI_TEXT = {
     level: 'Lv. ',
     initialWTLabel: '初期WT',
     skillType: {
-      normal1: 'スキル1', normal2: 'スキル2', burst: 'バーストスキル',
-      active: 'アクティブスキル', extra: 'EXスキル'
+      normal1: 'スキル1',
+      normal2: 'スキル2',
+      burst: 'バーストスキル',
+      active: 'アクティブスキル',
+      extra: 'EXスキル'
     },
     statLabels: { hp: 'HP', speed: '速度', attack: '物攻', defense: '物防', magic: '魔攻', mental: '魔防' },
     abilityTitle: '能力',
@@ -76,8 +78,11 @@ const UI_TEXT = {
     level: 'Lv. ',
     initialWTLabel: '初始WT',
     skillType: {
-      normal1: '第一技能', normal2: '第二技能', burst: '爆发技能',
-      active: '主动技能', extra: 'EX技能'
+      normal1: '第一技能',
+      normal2: '第二技能',
+      burst: '爆发技能',
+      active: '主动技能',
+      extra: 'EX技能'
     },
     statLabels: { hp: 'HP', speed: '速度', attack: '物攻', defense: '物防', magic: '魔攻', mental: '魔防' },
     abilityTitle: '能力',
@@ -125,12 +130,10 @@ const AVAILABLE_SORT_FIELDS = [
   { field: 'support_color_id', label_ja: '調和色-右', label_cn: '调和颜色-右', priority: 8 },
 ];
 
-// ========== avatar.js 内容 ==========
+// ========== 头像组件 ==========
 function renderAvatar(id, traitColor, supportColor, size = 300) {
   const traitHex = getColorHex(traitColor);
   const supportHex = getColorHex(supportColor);
-  // 修正路径：使用 image/character/
-  const imgPath = `image/character/${id}.png`;
   const fallbackPath = `image/character/00000.png`;
   const imgId = `avatar-img-${id}`;
 
@@ -143,7 +146,6 @@ function renderAvatar(id, traitColor, supportColor, size = 300) {
           <polygon points="22,44 278,44 278,172 150,300 22,172" />
         </clipPath>
       </defs>
-      <!-- 添加 width="256" 确保 256x256 区域内等比缩放并居中 -->
       <image id="${imgId}" href="${fallbackPath}" x="22" y="44" width="256" height="256"
              clip-path="url(#clip-${id})" preserveAspectRatio="xMidYMax meet" />
     </svg>
@@ -161,7 +163,7 @@ function initAvatar(card, id) {
   testImg.src = realSrc;
 }
 
-// ========== card.js 内容 ==========
+// ========== 调和模块 ==========
 function renderSynthesisModule(char) {
   const traitName = getField(char, 'trait_color_name') || '?';
   const supportName = getField(char, 'support_color_name') || '?';
@@ -186,6 +188,7 @@ function renderSynthesisModule(char) {
   `;
 }
 
+// 滑块开关
 function createToggleSwitch(type, checked, label) {
   return `
     <label class="toggle-switch" data-type="${type}" title="${label}">
@@ -195,6 +198,7 @@ function createToggleSwitch(type, checked, label) {
   `;
 }
 
+// 创建卡片
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -274,6 +278,7 @@ function createCard(indexEntry) {
     expandBtn.setAttribute('aria-label', willBeOpen ? '收起' : '展开');
   });
 
+  // 异步加载角色详情和真实头像
   loadCharacter(indexEntry.id).then(char => {
     if (char) {
       const synthSection = card.querySelector('.synthesis-section');
@@ -281,9 +286,7 @@ function createCard(indexEntry) {
       updateSwitchButtonsState(card, getCardState(indexEntry.id), char);
     }
   });
-
-  initAvatar(card, indexEntry.id);
-
+  // 真实头像将在卡片插入DOM后通过 renderAllCards 调用 initAvatar 加载，确保元素已存在
   return card;
 }
 
@@ -326,7 +329,7 @@ function getCardState(id) {
 }
 function setCardState(id, newState) { cardStates[id] = { ...cardStates[id], ...newState }; }
 
-// ========== script.js 内容 ==========
+// ========== 全局数据与业务逻辑 ==========
 let characterIndex = [];
 let loadedCharacters = {};
 let activeSortFields = [...AVAILABLE_SORT_FIELDS].sort((a, b) => a.priority - b.priority);
@@ -451,7 +454,13 @@ function buildFilterPanel() {
 function renderAllCards() {
   const container = document.getElementById('cardContainer');
   container.innerHTML = '';
-  getFilteredAndSortedCharacters().forEach(c => container.appendChild(createCard(c)));
+  const cards = getFilteredAndSortedCharacters().map(c => createCard(c));
+  cards.forEach(card => container.appendChild(card));
+  // 在卡片插入 DOM 后加载真实头像
+  cards.forEach(card => {
+    const id = parseInt(card.dataset.id);
+    initAvatar(card, id);
+  });
   filterCards();
 }
 
@@ -495,19 +504,16 @@ function generateDetailHTML(activeChar, state) {
   const typeText = t('skillType');
   const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
 
-  // 将 active 技能统一合并
-  const activeSkills = [];
+  // 合并主动技能
+  const activeLevels = [];
   skills.forEach(group => {
     if (group.type.startsWith('active')) {
       let levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
       if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
-      if (levels && levels.length > 0) activeSkills.push(...levels);
+      if (levels && levels.length > 0) activeLevels.push(...levels);
     }
   });
-
-  if (activeSkills.length > 0) {
-    allSkillTypes.push({ type: 'active', name: t('skillType').active, levels: activeSkills });
-  }
+  if (activeLevels.length > 0) allSkillTypes.push({ type: 'active', name: t('skillType').active, levels: activeLevels });
 
   skills.forEach(group => {
     if (group.type === 'normal1' || group.type === 'normal2' || group.type === 'burst') {
@@ -520,9 +526,7 @@ function generateDetailHTML(activeChar, state) {
         levels = state.evo === 'post' ? group.post_evolution : group.pre_evolution;
       }
       if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
-      if (levels && levels.length > 0) {
-        allSkillTypes.push({ type: group.type, name: typeText[group.type] || group.type, levels });
-      }
+      if (levels && levels.length > 0) allSkillTypes.push({ type: group.type, name: typeText[group.type] || group.type, levels });
     }
   });
 
