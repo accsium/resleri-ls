@@ -129,8 +129,9 @@ const AVAILABLE_SORT_FIELDS = [
 function renderAvatar(id, traitColor, supportColor, size = 300) {
   const traitHex = getColorHex(traitColor);
   const supportHex = getColorHex(supportColor);
-  const imgPath = `images/characters/${id}.png`;
-  const fallbackPath = `images/characters/00000.png`;
+  // 修正路径：使用 image/character/
+  const imgPath = `image/character/${id}.png`;
+  const fallbackPath = `image/character/00000.png`;
   const imgId = `avatar-img-${id}`;
 
   return `
@@ -142,18 +143,21 @@ function renderAvatar(id, traitColor, supportColor, size = 300) {
           <polygon points="22,44 278,44 278,172 150,300 22,172" />
         </clipPath>
       </defs>
+      <!-- 添加 width="256" 确保 256x256 区域内等比缩放并居中 -->
       <image id="${imgId}" href="${fallbackPath}" x="22" y="44" width="256" height="256"
              clip-path="url(#clip-${id})" preserveAspectRatio="xMidYMax meet" />
     </svg>
   `;
 }
 
-function initAvatar(id) {
-  const img = document.getElementById(`avatar-img-${id}`);
+function initAvatar(card, id) {
+  const img = card.querySelector(`#avatar-img-${id}`);
   if (!img) return;
-  const realSrc = `images/characters/${id}.png`;
+  const realSrc = `image/character/${id}.png`;
   const testImg = new Image();
-  testImg.onload = () => { img.setAttribute('href', realSrc); };
+  testImg.onload = () => {
+    img.setAttribute('href', realSrc);
+  };
   testImg.src = realSrc;
 }
 
@@ -278,7 +282,7 @@ function createCard(indexEntry) {
     }
   });
 
-  initAvatar(indexEntry.id);
+  initAvatar(card, indexEntry.id);
 
   return card;
 }
