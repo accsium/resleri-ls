@@ -93,9 +93,11 @@ function renderStarGroup(rarity, scale = 0.5) {
   const starFile = rarity === 8 ? 'star_2.png' : 'star_1.png';
   const w = Math.round(67 * scale);
   const h = Math.round(64 * scale);
+  const marginStep = -Math.round(20 * scale); // 每颗星星向左移动的像素（20为图片空白总宽度）
   let html = '';
   for (let i = 0; i < count; i++) {
-    html += `<img src="image/misc/${starFile}" alt="" style="width:${w}px;height:${h}px;flex-shrink:0;">`;
+    const marginLeft = i === 0 ? '0px' : `${i * marginStep}px`;
+    html += `<img src="image/misc/${starFile}" alt="" style="width:${w}px;height:${h}px;margin-left:${marginLeft};flex-shrink:0;">`;
   }
   return `<span class="stars-group" style="display:inline-flex;gap:0;align-items:center;">${html}</span>`;
 }
@@ -138,10 +140,13 @@ function renderAvatarComponent(indexEntry, size = 75) {
 
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const starCount = starCountMap[indexEntry.initial_rarity] || 0;
-  const starWidth = 33.5, starHeight = 32;
-  const totalWidth = starCount * starWidth;
+  const starImgPadding = 20;           // 图片左右空白总像素
+  const starRealWidth = Math.round((67 - starImgPadding) * 0.5); // 23.5
+  const starHeight = 32;
+  const totalWidth = starCount * starRealWidth;
   const startX = (300 - totalWidth) / 2;
   const startY = 300 - starHeight;
+  // ... 然后生成 starsContainer ...
   const starsContainer = starCount > 0
     ? `<div style="position:absolute; left:${startX}px; top:${startY}px; width:${totalWidth}px; height:${starHeight}px;">${renderStarGroup(indexEntry.initial_rarity, 0.5)}</div>`
     : '';
