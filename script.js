@@ -120,8 +120,8 @@ let cardStates = {};
 
 const AVAILABLE_SORT_FIELDS = [
   { field: 'start_at', label_ja: '実装日', label_cn: '实装日期', priority: 0 },
-  { field: 'id', label_ja: 'ID', label_cn: 'ID', priority: 1 },
-  { field: 'initial_rarity', label_ja: '初期レアリティ', label_cn: '初始稀有度', priority: 2 },
+  { field: 'initial_rarity', label_ja: '初期レアリティ', label_cn: '初始稀有度', priority: 1 },
+  { field: 'id', label_ja: 'ID', label_cn: 'ID', priority: 2 },
   { field: 'max_rarity', label_ja: '最大レアリティ', label_cn: '最大稀有度', priority: 3 },
   { field: 'role', label_ja: 'ロール', label_cn: '职业', priority: 4 },
   { field: 'base_character_id', label_ja: 'ベースキャラ', label_cn: '原型', priority: 5 },
@@ -204,7 +204,7 @@ function createCard(indexEntry) {
   card.className = 'card';
   card.dataset.id = indexEntry.id;
 
-  const name = currentLang === 'cn' ? (indexEntry.name_cn || indexEntry.name_ja) : indexEntry.name_ja;
+  const name = getField(indexEntry, 'base_character_name') || (currentLang === 'cn' ? (indexEntry.name_cn || indexEntry.name_ja) : indexEntry.name_ja);
   const alias = indexEntry.another_name || '';
   const minStars = rarityToStars(indexEntry.initial_rarity);
   const maxStars = rarityToStars(indexEntry.max_rarity);
