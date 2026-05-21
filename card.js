@@ -1,4 +1,4 @@
-// 卡片创建（包含头像）
+// 卡片创建（头像缩小为 75x75）
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -40,7 +40,9 @@ function createCard(indexEntry) {
 
   card.innerHTML = `
     <div class="card-header">
-      <div class="avatar-col">${avatarHTML}</div>
+      <div class="avatar-col">
+        <div class="avatar-card-size">${avatarHTML}</div>
+      </div>
       <div class="card-left">
         <div class="card-title">
           ${name}${alias ? `<span class="alias">${alias}</span>` : ''}

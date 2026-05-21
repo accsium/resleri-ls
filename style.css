@@ -425,22 +425,20 @@ button {
   color: #888;
 }
 
-/* ========== 头像组件 ========== */
+/* ========== 头像组件（默认 300x300，卡片内缩小为 75x75） ========== */
 .avatar-wrapper {
   position: relative;
-  width: 256px;
-  height: 256px;
-  flex-shrink: 0;
-  overflow: visible;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
 }
 
 .avatar-diamond {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  width: 256px;
-  height: 300px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
 }
 
@@ -449,8 +447,19 @@ button {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  height: 256px;
+  height: 100%;
   width: auto;
   z-index: 1;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+/* 卡片中头像的缩放容器 */
+.avatar-card-size {
+  width: 75px;
+  height: 75px;
+}
+
+.avatar-card-size .avatar-wrapper {
+  width: 100%;
+  height: 100%;
 }
