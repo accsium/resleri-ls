@@ -277,6 +277,53 @@ function buildLocalizedChar(character, lang) {
 
 // ========== 8. 生成索引条目（双语） ==========
 function buildIndexEntry(character) {
+  let defaultWait = 0;
+  const evolvedNormal2 = character.evolved_normal2_skill_ids;
+  const normal2 = character.normal2_skill_ids;
+  const skillIdsToCheck = (evolvedNormal2 && evolvedNormal2.length > 0) ? evolvedNormal2 : (normal2 || []);
+  if (skillIdsToCheck.length > 0) {
+    const maxId = Math.max(...skillIdsToCheck);
+    const skillObj = tables.skill?.get(maxId);
+    if (skillObj && typeof skillObj.wait === 'number') defaultWait = skillObj.wait;
+  }
+  const speed = character.initial_status?.speed;
+  const initialWT = (speed != null && speed > 0) ? Math.floor(57600 / speed + defaultWait) : null;
+
+  return {
+    id: character.id,
+    name_ja: character.name,
+    name_cn: character.name,
+    another_name: character.another_name,
+    initial_rarity: character.initial_rarity,
+    max_rarity: character.max_rarity,
+    role: character.role,
+    attack_attributes: character.attack_attributes,
+    tag_names_ja: (character.tag_ids || []).map(id => jpMaps.character_tag?.get(id) || `ID:${id}`),
+    tag_names_cn: (character.tag_ids || []).map(id => cnMaps.character_tag?.get(id) || jpMaps.character_tag?.get(id) || `ID:${id}`),
+    attack_attribute_names_ja: (character.attack_attributes || []).map(id => jpMaps.attack_attribute?.get(id) || `ID:${id}`),
+    attack_attribute_names_cn: (character.attack_attributes || []).map(id => cnMaps.attack_attribute?.get(id) || jpMaps.attack_attribute?.get(id) || `ID:${id}`),
+    role_name_ja: jpMaps.role?.get(character.role) || `ID:${character.role}`,
+    role_name_cn: cnMaps.role?.get(character.role) || jpMaps.role?.get(character.role) || `ID:${character.role}`,
+    base_character_id: character.base_character_id || null,
+    original_title_id: character.original_title_id || null,
+    trait_color_id: character.trait_color_id || null,
+    support_color_id: character.support_color_id || null,
+    start_at: character.start_at || null,
+    initial_status: character.initial_status,
+    initial_wt: initialWT,
+    trait_color_name_ja: jpMaps.trait_color?.get(character.trait_color_id) || null,
+    trait_color_name_cn: cnMaps.trait_color?.get(character.trait_color_id) || null,
+    support_color_name_ja: jpMaps.trait_color?.get(character.support_color_id) || null,
+    support_color_name_cn: cnMaps.trait_color?.get(character.support_color_id) || null,
+    battle_tool_trait_names_ja: (character.battle_tool_trait_ids || []).map(id => jpMaps.battle_tool_trait?.get(id) || ''),
+    battle_tool_trait_names_cn: (character.battle_tool_trait_ids || []).map(id => cnMaps.battle_tool_trait?.get(id) || ''),
+    equipment_tool_trait_names_ja: (character.equipment_tool_trait_ids || []).map(id => jpMaps.equipment_tool_trait?.get(id) || ''),
+    equipment_tool_trait_names_cn: (character.equipment_tool_trait_ids || []).map(id => cnMaps.equipment_tool_trait?.get(id) || ''),
+    // 新增基础角色名
+    base_character_name_ja: jpMaps.base_character?.get(character.base_character_id) || null,
+    base_character_name_cn: cnMaps.base_character?.get(character.base_character_id) || null,
+  };
+}
   // 计算默认初始WT（与前端逻辑一致）
   let defaultWait = 0;
   const evolvedNormal2 = character.evolved_normal2_skill_ids;
