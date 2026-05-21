@@ -608,17 +608,27 @@ async function loadBuildTime() {
   try {
     const resp = await fetch('data/meta.json');
     const meta = await resp.json();
-    const buildTime = new Date(meta.build_time);
-    const gmt8Time = new Date(buildTime.getTime() + 8 * 3600000);
-    const defaultStr = gmt8Time.toLocaleString() + ' GMT+08:00';
-    document.getElementById('updateTime').textContent = `更新时间 ${defaultStr}`;
+    const buildTime = new Date(meta.build_time); // UTC 时间
 
-    const offset = -buildTime.getTimezoneOffset();
-    if (offset !== 480) {
-      const localStr = buildTime.toLocaleString();
-      const sign = offset >= 0 ? '+' : '-';
-      const hours = Math.floor(Math.abs(offset) / 60);
-      const gmt = `GMT${sign}${String(hours).padStart(2,'0')}:00`;
+    const pad = (n) => String(n).padStart(2, '0');
+
+    // 1. 默认显示 GMT+8 时间（使用 UTC 方法避免本地时区干扰）
+    const gmt8Timestamp = buildTime.getTime() + 8 * 60 * 60 * 1000;
+    const gmt8 = new Date(gmt8Timestamp);
+    const gmt8Str = `${gmt8.getUTCFullYear()}/${pad(gmt8.getUTCMonth() + 1)}/${pad(gmt8.getUTCDate())} ${pad(gmt8.getUTCHours())}:${pad(gmt8.getUTCMinutes())}:${pad(gmt8.getUTCSeconds())} GMT+08:00`;
+
+    // 2. 检测本地时区偏移（分钟）
+    const localOffset = -new Date().getTimezoneOffset(); // 例如 +480 表示 UTC+8
+    if (localOffset === 480) {
+      // 本地就是 GMT+8，直接显示
+      document.getElementById('updateTime').textContent = `更新时间 ${gmt8Str}`;
+    } else {
+      // 本地时区不同，转换为本地时间显示
+      const localStr = `${buildTime.getFullYear()}/${pad(buildTime.getMonth() + 1)}/${pad(buildTime.getDate())} ${pad(buildTime.getHours())}:${pad(buildTime.getMinutes())}:${pad(buildTime.getSeconds())}`;
+      const sign = localOffset >= 0 ? '+' : '-';
+      const hours = Math.floor(Math.abs(localOffset) / 60);
+      const minutes = Math.abs(localOffset) % 60;
+      const gmt = `GMT${sign}${pad(hours)}:${pad(minutes)}`;
       document.getElementById('updateTime').textContent = `更新时间 ${localStr} (${gmt})`;
     }
   } catch (e) {
