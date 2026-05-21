@@ -17,6 +17,7 @@ const UI_TEXT = {
     loadFailed: '読み込み失敗',
     initial: '初期',
     max: '最大',
+    maxRarityLabel: '最大レアリティ：',
     rarity: 'レアリティ',
     target: '対象',
     power: '威力',
@@ -56,6 +57,7 @@ const UI_TEXT = {
     loadFailed: '加载失败',
     initial: '初期',
     max: '最大',
+    maxRarityLabel: '最大星级：',
     rarity: '稀有度',
     target: '对象',
     power: '威力',
@@ -154,7 +156,7 @@ function createToggleSwitch(type, checked, label) {
   return `<label class="toggle-switch" data-type="${type}" title="${label}"><input type="checkbox" ${checked?'checked':''}><span class="slider"></span></label>`;
 }
 
-// ========== 创建卡片（新布局） ==========
+// ========== 创建卡片 ==========
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -172,7 +174,6 @@ function createCard(indexEntry) {
   const initialWT = indexEntry.initial_wt ?? '—';
   const avatarHTML = renderAvatar(indexEntry.id, getField(indexEntry, 'trait_color_name'), getField(indexEntry, 'support_color_name'), 75);
 
-  // 基础属性
   const statOrder = ['initialWT', 'hp', 'speed', 'attack', 'defense', 'magic', 'mental'];
   const statCards = statOrder.map(key => {
     const label = key === 'initialWT' ? t('initialWTLabel') : t('statLabels')[key];
@@ -180,7 +181,6 @@ function createCard(indexEntry) {
     return `<div class="stat-card"><div class="stat-label">${label}</div><div class="stat-value">${value}</div></div>`;
   }).join('');
 
-  // 调和词条（P2-1 底部）
   const traits = [...(getField(indexEntry, 'battle_tool_trait_names')||[]), ...(getField(indexEntry, 'equipment_tool_trait_names')||[])];
 
   card.innerHTML = `<div class="card-header">
@@ -196,7 +196,7 @@ function createCard(indexEntry) {
         <div class="inline-traits">${traits.map(t => `<span class="trait-tag">${t}</span>`).join('')}</div>
       </div>
       <div class="p2-col p2-col2">
-        <div class="max-rarity" style="color:${maxRarity===8?'#ff69b4':'#b8860b'}">${maxStars}</div>
+        <div class="max-rarity" style="color:${maxRarity===8?'#ff69b4':'#b8860b'}">${t('maxRarityLabel')}${maxStars}</div>
         <div class="tags">${tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
         <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
         <div class="stats-row">${statCards}</div>
@@ -204,14 +204,14 @@ function createCard(indexEntry) {
       <div class="p2-col p2-col3">
         <button class="expand-btn" data-action="toggle" aria-label="展开">
           <svg width="24" height="24" viewBox="0 0 24 24">
-            <path d="M8 10 L12 16 L16 10" stroke="#5b6e82" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="10" stroke="#5b6e82" stroke-width="2" fill="none"/>
+            <path d="M9 10 L12 13 L15 10" stroke="#5b6e82" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
       </div>
     </div>
   </div><div class="card-detail"></div>`;
 
-  // 展开按钮事件
   card.querySelector('.expand-btn').onclick = e => {
     e.stopPropagation();
     const detailDiv = card.querySelector('.card-detail');
@@ -219,11 +219,12 @@ function createCard(indexEntry) {
     toggleCardDetail(indexEntry.id);
     const svg = card.querySelector('.expand-btn svg');
     if (svg) {
-      svg.innerHTML = willOpen ? '<path d="M8 14 L12 8 L16 14" stroke="#5b6e82" stroke-width="2" fill="none" stroke-linecap="round"/>' : '<path d="M8 10 L12 16 L16 10" stroke="#5b6e82" stroke-width="2" fill="none" stroke-linecap="round"/>';
+      svg.innerHTML = willOpen
+        ? '<circle cx="12" cy="12" r="10" stroke="#5b6e82" stroke-width="2" fill="none"/><path d="M9 14 L12 11 L15 14" stroke="#5b6e82" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+        : '<circle cx="12" cy="12" r="10" stroke="#5b6e82" stroke-width="2" fill="none"/><path d="M9 10 L12 13 L15 10" stroke="#5b6e82" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>';
     }
   };
 
-  // 切换按钮状态
   loadCharacter(indexEntry.id).then(char => {
     if (char) updateSwitchButtonsState(card, getCardState(indexEntry.id), char);
   });
@@ -259,7 +260,7 @@ function updateSwitchButtonsState(card, state, char) {
 function getCardState(id) { return cardStates[id] || (cardStates[id] = { evo:'post', range:'inrange', showTransform:false }); }
 function setCardState(id, ns) { cardStates[id] = { ...cardStates[id], ...ns }; }
 
-// ========== 全局数据与排序 ==========
+// ========== 全局数据 ==========
 let characterIndex = [], loadedCharacters = {};
 let activeSortFields = [...SORT_FIELDS].sort((a,b) => a.priority - b.priority);
 let currentSortOrder = 'desc';
@@ -299,7 +300,7 @@ function getFilteredAndSortedCharacters() {
   return filtered;
 }
 
-// ========== UI 控制 ==========
+// ========== UI 更新 ==========
 function updateUILanguage() {
   document.title = t('pageTitle');
   document.getElementById('pageTitle').textContent = t('pageTitle');
@@ -355,7 +356,7 @@ function renderAllCards() {
   filterCards();
 }
 
-// ========== 详情展开/渲染 ==========
+// ========== 详情展开 ==========
 async function toggleCardDetail(id) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
@@ -396,7 +397,6 @@ function generateDetailHTML(activeChar, state, id, originalChar) {
   const typeText = t('skillType');
   const rangeGroup = activeChar._rangeSkills ? activeChar._rangeSkills['inrange'] : null;
 
-  // 合并主动技能
   const activeLevels = [];
   skills.forEach(group => {
     if (group.type.startsWith('active')) {
@@ -474,7 +474,6 @@ function generateDetailHTML(activeChar, state, id, originalChar) {
     html += `<div class="content-block">${supportAbility ? renderAbilityCard(supportAbility) : `<div class="no-data">${t('none')}</div>`}</div>`;
   }
 
-  // 在能力之后添加调和模块
   if (originalChar) {
     html += `<div id="synthesis-bottom">${renderSynthesisModule(originalChar)}</div>`;
   }
@@ -581,7 +580,7 @@ document.getElementById('orderToggle').onclick = () => {
   renderAllCards();
 };
 
-// 语言切换（保持展开卡片）
+// ========== 语言切换 ==========
 document.getElementById('btn-ja').onclick = () => switchLang('ja');
 document.getElementById('btn-cn').onclick = () => switchLang('cn');
 async function switchLang(lang) {
@@ -604,10 +603,34 @@ async function switchLang(lang) {
   }
 }
 
+// ========== 更新时间 ==========
+async function loadBuildTime() {
+  try {
+    const resp = await fetch('data/meta.json');
+    const meta = await resp.json();
+    const buildTime = new Date(meta.build_time);
+    const gmt8Time = new Date(buildTime.getTime() + 8 * 3600000);
+    const defaultStr = gmt8Time.toLocaleString() + ' GMT+08:00';
+    document.getElementById('updateTime').textContent = `更新时间 ${defaultStr}`;
+
+    const offset = -buildTime.getTimezoneOffset();
+    if (offset !== 480) {
+      const localStr = buildTime.toLocaleString();
+      const sign = offset >= 0 ? '+' : '-';
+      const hours = Math.floor(Math.abs(offset) / 60);
+      const gmt = `GMT${sign}${String(hours).padStart(2,'0')}:00`;
+      document.getElementById('updateTime').textContent = `更新时间 ${localStr} (${gmt})`;
+    }
+  } catch (e) {
+    document.getElementById('updateTime').textContent = '更新时间 — (GMT+08:00)';
+  }
+}
+
 document.getElementById('btn-refresh').onclick = () => { if (confirm('确定要清除缓存并刷新数据？')) location.reload(true); };
 
 (async () => {
   updateUILanguage();
   await loadIndex();
   renderAllCards();
+  loadBuildTime();
 })();
