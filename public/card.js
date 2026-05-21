@@ -92,7 +92,7 @@ function createCard(indexEntry) {
     <div class="card-detail"></div>
   `;
 
-  // 加载角色详情
+  // 加载角色详情以填充调和模块和切换按钮
   loadCharacter(indexEntry.id).then(char => {
     if (char) {
       const synthSection = card.querySelector('.synthesis-section');
@@ -103,6 +103,7 @@ function createCard(indexEntry) {
     }
   });
 
+  // 异步加载真实头像
   initAvatar(indexEntry.id);
 
   card.querySelector('.card-header').addEventListener('click', (e) => {
