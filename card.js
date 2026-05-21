@@ -87,10 +87,18 @@ function createCard(indexEntry) {
       </div>
       <div class="card-part2">
         <div class="stats-row">${statCards}</div>
+        <button class="expand-btn" data-action="toggle">展开</button>
       </div>
     </div>
     <div class="card-detail"></div>
   `;
+
+  // 绑定展开/收起按钮事件
+  const expandBtn = card.querySelector('.expand-btn');
+  expandBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleCardDetail(indexEntry.id);
+  });
 
   // 加载角色详情以填充调和模块和切换按钮
   loadCharacter(indexEntry.id).then(char => {

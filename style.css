@@ -326,6 +326,27 @@ button {
   margin-top: 12px;
 }
 
+/* 展开/收起按钮 */
+.card-part2 {
+  position: relative;
+}
+
+.expand-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  border: none;
+  color: #5b6e82;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.expand-btn:hover {
+  text-decoration: underline;
+}
+
 /* 基础属性小卡片 */
 .stats-row {
   display: flex;
