@@ -1,22 +1,25 @@
-// 生成头像 SVG（默认占位图）
-function renderAvatar(id, traitColor, supportColor, size = 300) {
+// 生成头像 HTML 结构（默认尺寸 300x300，可缩放）
+function renderAvatar(id, traitColor, supportColor, scale = 1) {
+  const size = Math.round(300 * scale);
   const traitHex = getColorHex(traitColor);
   const supportHex = getColorHex(supportColor);
   const imgId = `avatar-img-${id}`;
   const fallbackPath = `images/characters/00000.png`;
 
   return `
-    <svg width="${size}" height="${size}" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="150,0 0,150 150,300" fill="${traitHex}" />
-      <polygon points="150,0 300,150 150,300" fill="${supportHex}" />
-      <defs>
-        <clipPath id="clip-${id}">
-          <polygon points="22,44 278,44 278,172 150,300 22,172" />
-        </clipPath>
-      </defs>
-      <image id="${imgId}" href="${fallbackPath}" x="22" y="44" height="256"
-             clip-path="url(#clip-${id})" preserveAspectRatio="xMidYMax meet" />
-    </svg>
+    <div style="width:${size}px; height:${size}px; overflow:hidden; position:relative;">
+      <!-- 底层：菱形背景 SVG -->
+      <svg style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0;" viewBox="0 0 300 300">
+        <polygon points="150,0 0,150 150,300" fill="${traitHex}" />
+        <polygon points="150,0 300,150 150,300" fill="${supportHex}" />
+      </svg>
+
+      <!-- 上层：带蒙版的头像图片（底对齐居中，高256，宽自适应） -->
+      <img id="${imgId}" src="${fallbackPath}" alt=""
+           style="position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+                  height:256px; width:auto; z-index:1;
+                  clip-path: polygon(22px 44px, 278px 44px, 278px 172px, 150px 300px, 22px 172px);" />
+    </div>
   `;
 }
 
@@ -27,7 +30,7 @@ function initAvatar(id) {
   const realSrc = `images/characters/${id}.png`;
   const testImg = new Image();
   testImg.onload = () => {
-    img.setAttribute('href', realSrc);
+    img.src = realSrc;
   };
   testImg.src = realSrc;
 }
