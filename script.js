@@ -108,11 +108,24 @@ const SORT_FIELDS = [
   { field: 'support_color_id', label_ja: '調和色-右', label_cn: '调和颜色-右', priority: 8 }
 ];
 
-// ========== 头像组件 ==========
-function renderAvatar(id, traitColor, supportColor, size = 300) {
-  const traitHex = getColorHex(traitColor), supportHex = getColorHex(supportColor);
+// ========== 头像组件 (新) ==========
+// 生成星星图片组件
+function renderStars(initialRarity) {
+  // 映射：rarity -> 星星数量 (半星取整)
+  const starCount = [1, 2, 3, 3, 4, 4, 5, 6][initialRarity - 1] || 0;
+  let html = '';
+  for (let i = 0; i < starCount; i++) {
+    html += `<img src="image/character/star_1.png" class="star-img" alt="">`;
+  }
+  return `<div class="stars-row">${html}</div>`;
+}
+
+// 生成头像背景 SVG (菱形 + 蒙版头像)
+function renderAvatarSVG(id, traitColor, supportColor, size = 300) {
+  const traitHex = getColorHex(traitColor);
+  const supportHex = getColorHex(supportColor);
   const imgId = `avatar-img-${id}`;
-  return `<svg width="${size}" height="${size}" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  return `<svg width="${size}" height="${size}" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="avatar-svg">
     <polygon points="150,0 0,150 150,300" fill="${traitHex}"/><polygon points="150,0 300,150 150,300" fill="${supportHex}"/>
     <defs>
       <linearGradient id="gt-${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/></linearGradient>
@@ -129,6 +142,37 @@ function renderAvatar(id, traitColor, supportColor, size = 300) {
   </svg>`;
 }
 
+// 生成完整的头像组件 (包含图标和星星)
+function renderAvatarComponent(indexEntry, size = 75) {
+  const id = indexEntry.id;
+  const traitColor = getField(indexEntry, 'trait_color_name');
+  const supportColor = getField(indexEntry, 'support_color_name');
+  const attrId = (indexEntry.attack_attributes || [])[0];      // 取第一个属性
+  const roleId = indexEntry.role;
+
+  // 属性图标 (50% 尺寸，基于 118x112 -> 59x56)
+  const attrIcon = attrId ? `<img src="image/character/attack_attribute_${attrId}.png" class="attr-icon" alt="">` : '';
+  // 职业图标 (50% 尺寸，不同大小需微调位置)
+  const roleIcon = roleId ? `<img src="image/character/role_${roleId}.png" class="role-icon" alt="">` : '';
+
+  const stars = renderStars(indexEntry.initial_rarity);
+  const svg = renderAvatarSVG(id, traitColor, supportColor, 300); // 内部 SVG 保持 300x300，容器缩放
+
+  return `
+    <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative; display:flex; flex-direction:column; align-items:center; margin-bottom:4px;">
+      <div class="avatar-icons-layer" style="position:absolute; top:0; left:0; right:0; bottom:0; pointer-events:none;">
+        ${attrIcon}
+        ${roleIcon}
+      </div>
+      <div class="avatar-svg-container" style="transform:scale(${size/300}); transform-origin:0 0; width:300px; height:300px;">
+        ${svg}
+      </div>
+    </div>
+    ${stars}
+  `;
+}
+
+// 异步加载头像的真实图片 (initAvatar 保持不变)
 function initAvatar(card, id) {
   const img = card.querySelector(`#avatar-img-${id}`);
   if (!img) return;
@@ -164,7 +208,6 @@ function createCard(indexEntry) {
 
   const baseName = getField(indexEntry, 'base_character_name') || (currentLang === 'cn' ? (indexEntry.name_cn || indexEntry.name_ja) : indexEntry.name_ja);
   const alias = indexEntry.another_name || '';
-  const minStars = rarityToStars(indexEntry.initial_rarity);
   const maxStars = rarityToStars(indexEntry.max_rarity);
   const maxRarity = indexEntry.max_rarity || 8;
   const role = getField(indexEntry, 'role_name');
@@ -172,7 +215,6 @@ function createCard(indexEntry) {
   const releaseDate = indexEntry.start_at ? new Date(indexEntry.start_at).toLocaleDateString('ja-JP') : '—';
   const status = indexEntry.initial_status || {};
   const initialWT = indexEntry.initial_wt ?? '—';
-  const avatarHTML = renderAvatar(indexEntry.id, getField(indexEntry, 'trait_color_name'), getField(indexEntry, 'support_color_name'), 75);
 
   const statOrder = ['initialWT', 'hp', 'speed', 'attack', 'defense', 'magic', 'mental'];
   const statCards = statOrder.map(key => {
@@ -183,6 +225,9 @@ function createCard(indexEntry) {
 
   const traits = [...(getField(indexEntry, 'battle_tool_trait_names')||[]), ...(getField(indexEntry, 'equipment_tool_trait_names')||[])];
 
+  // 使用新的头像组件
+  const avatarHTML = renderAvatarComponent(indexEntry, 75);
+
   card.innerHTML = `<div class="card-header">
     <div class="card-p1">
       <div class="p1-title">${baseName}${alias?`<span class="alias">${alias}</span>`:''}<span class="char-id">ID:${indexEntry.id}</span></div>
@@ -191,7 +236,6 @@ function createCard(indexEntry) {
     <div class="card-p2">
       <div class="p2-col p2-col1">
         <div class="avatar-col">${avatarHTML}</div>
-        <div class="initial-rarity">${minStars}</div>
         <div class="attrs">${getField(indexEntry, 'attack_attribute_names').join(' / ')} | ${role}</div>
         <div class="inline-traits">${traits.map(t => `<span class="trait-tag">${t}</span>`).join('')}</div>
       </div>

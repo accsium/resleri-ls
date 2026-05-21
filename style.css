@@ -60,7 +60,6 @@ button { font-family: inherit; cursor: pointer; font-size: 14px; padding: 8px 18
 
 /* P2-1 内容 */
 .avatar-col { margin-bottom: 8px; }
-.initial-rarity { font-size: 13px; color: #b8860b; margin-bottom: 4px; }
 .attrs { font-size: 13px; color: #555; margin-bottom: 8px; }
 .inline-traits { display: flex; flex-direction: column; gap: 3px; align-items: center; margin-top: 6px; }
 
@@ -133,4 +132,54 @@ input:checked + .slider:before { transform: translateX(16px); }
 .card-detail[style*="overflow-y: auto"]::-webkit-scrollbar-thumb {
   background: #c4b8a0;
   border-radius: 3px;
+}
+
+/* 头像组件 */
+.avatar-component {
+  position: relative;
+}
+
+.avatar-icons-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.attr-icon {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 59px;   /* 118/2 */
+  height: 56px;  /* 112/2 */
+}
+
+/* 职业图标尺寸不同，需要居中微调 */
+.role-icon {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  /* 宽高由 JS 或默认不设置，依赖图片本身大小 */
+  width: auto;
+  height: auto;
+  max-width: 60px;
+  max-height: 60px;
+}
+
+/* 星星行 */
+.stars-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 4px; /* 与头像间距 */
+  line-height: 0;
+}
+
+.star-img {
+  width: 67px;
+  height: 64px;
+  flex-shrink: 0;
 }
