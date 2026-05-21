@@ -1,4 +1,4 @@
-// 卡片创建（头像缩小为 75x75）
+// 卡片创建（头像通过 .avatar-card-size 缩小为 75x75）
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -36,7 +36,7 @@ function createCard(indexEntry) {
       <div class="stat-card"><div class="stat-label">${t('statLabels').mental}</div><div class="stat-value">${status.mental ?? '?'}</div></div>
     </div>`;
 
-  const avatarHTML = renderAvatar(indexEntry.id, traitColorName, supportColorName);
+  const avatarHTML = renderAvatar(indexEntry.id, traitColorName, supportColorName, 0.25);
 
   card.innerHTML = `
     <div class="card-header">
