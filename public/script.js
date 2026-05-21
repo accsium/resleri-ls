@@ -93,7 +93,7 @@ function renderStarGroup(rarity, scale = 0.5) {
   const starFile = rarity === 8 ? 'star_2.png' : 'star_1.png';
   const w = Math.round(67 * scale);
   const h = Math.round(64 * scale);
-  const marginStep = -Math.round(20 * scale); // 每颗星星向左移动的像素（20为图片空白总宽度）
+  const marginStep = -Math.round(20 * scale); // 图片左右空白像素总和
   let html = '';
   for (let i = 0; i < count; i++) {
     const marginLeft = i === 0 ? '0px' : `${i * marginStep}px`;
@@ -138,18 +138,29 @@ function renderAvatarComponent(indexEntry, size = 75) {
   const attrId = (indexEntry.attack_attributes || [])[0];
   const roleId = indexEntry.role;
 
+  const starScale = 0.3;
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const starCount = starCountMap[indexEntry.initial_rarity] || 0;
-  const starImgPadding = 20;           // 图片左右空白总像素
-  const starRealWidth = Math.round((67 - starImgPadding) * 0.5); // 23.5
-  const starHeight = 32;
+  const starImgPadding = 20;
+  const starRealWidth = Math.round((67 - starImgPadding) * starScale); // (67-20)*0.3 ≈ 14.1 → 14
+  const starHeight = Math.round(64 * starScale);                       // 19.2 → 19
   const totalWidth = starCount * starRealWidth;
   const startX = (300 - totalWidth) / 2;
   const startY = 300 - starHeight;
-  // ... 然后生成 starsContainer ...
   const starsContainer = starCount > 0
-    ? `<div style="position:absolute; left:${startX}px; top:${startY}px; width:${totalWidth}px; height:${starHeight}px;">${renderStarGroup(indexEntry.initial_rarity, 0.5)}</div>`
+    ? `<div style="position:absolute; left:${startX}px; top:${startY}px; width:${totalWidth}px; height:${starHeight}px;">${renderStarGroup(indexEntry.initial_rarity, starScale)}</div>`
     : '';
+
+  return `
+    <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative;">
+      <div class="avatar-svg-container" style="transform:scale(${size/300}); transform-origin:0 0; width:300px; height:300px;">
+        ${svg}
+        ${starsContainer}
+        ${attrIcon}
+        ${roleIcon}
+      </div>
+    </div>
+  `;
 
   const attrIcon = attrId ? `<img src="image/misc/attack_attribute_${attrId}.png" class="attr-icon" style="position:absolute; left:0px; top:0px; width:29.5px; height:28px;" alt="">` : '';
 
