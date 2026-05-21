@@ -1,20 +1,20 @@
-// 生成调和模块 HTML
-function renderHarmonyModule(indexEntry) {
-  const traitName = getField(indexEntry, 'trait_color_name');
-  const supportName = getField(indexEntry, 'support_color_name');
-  const battleTraits = getField(indexEntry, 'battle_tool_trait_names') || [];
-  const equipTraits = getField(indexEntry, 'equipment_tool_trait_names') || [];
+// 生成调和模块 HTML（使用角色详情数据）
+function renderHarmonyModule(char) {
+  const traitName = getField(char, 'trait_color_name') || '?';
+  const supportName = getField(char, 'support_color_name') || '?';
+  const battleTraits = getField(char, 'battle_tool_trait_names') || [];
+  const equipTraits = getField(char, 'equipment_tool_trait_names') || [];
 
   return `
     <div class="harmony-module">
       <div class="harmony-header">${t('harmonyTitle')}</div>
       <div class="harmony-color">
-        <span style="color:${getColorHex(traitName)}">${traitName || '?'}</span>
+        <span style="color:${getColorHex(traitName)}">${traitName}</span>
         <svg width="24" height="24" viewBox="0 0 30 30">
           <polygon points="15,0 0,15 15,30" fill="${getColorHex(traitName)}" />
           <polygon points="15,0 30,15 15,30" fill="${getColorHex(supportName)}" />
         </svg>
-        <span style="color:${getColorHex(supportName)}">${supportName || '?'}</span>
+        <span style="color:${getColorHex(supportName)}">${supportName}</span>
       </div>
       <div class="harmony-traits">
         ${battleTraits.length ? `<div><span class="trait-label">${t('battleTraitTitle')}:</span> ${battleTraits.join('、')}</div>` : ''}
@@ -24,7 +24,7 @@ function renderHarmonyModule(indexEntry) {
   `;
 }
 
-// 创建卡片（包含头像、切换按钮占位、调和模块）
+// 创建卡片（新布局）
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -32,8 +32,9 @@ function createCard(indexEntry) {
 
   const name = currentLang === 'cn' ? (indexEntry.name_cn || indexEntry.name_ja) : indexEntry.name_ja;
   const alias = indexEntry.another_name || '';
-  const stars = rarityToStars(indexEntry.initial_rarity);
-  const attrs = getField(indexEntry, 'attack_attribute_names').join(' / ');
+  const minStars = rarityToStars(indexEntry.initial_rarity);
+  const maxStars = rarityToStars(indexEntry.max_rarity);
+  const maxRarity = indexEntry.max_rarity || 8;
   const role = getField(indexEntry, 'role_name');
   const tags = (getField(indexEntry, 'tag_names') || []).slice(0, 3);
   const releaseDate = indexEntry.start_at ? new Date(indexEntry.start_at).toLocaleDateString('ja-JP') : '—';
@@ -41,36 +42,63 @@ function createCard(indexEntry) {
   const initialWT = indexEntry.initial_wt != null ? indexEntry.initial_wt : '—';
 
   const avatarHTML = renderAvatar(indexEntry.id, getField(indexEntry, 'trait_color_name'), getField(indexEntry, 'support_color_name'), 75);
-  const harmonyHTML = renderHarmonyModule(indexEntry);
+
+  // 基础属性顺序：初始WT, HP, 速度, 物攻, 物防, 魔攻, 魔防
+  const statOrder = ['initialWT', 'hp', 'speed', 'attack', 'defense', 'magic', 'mental'];
+  const statCards = statOrder.map(key => {
+    let label, value;
+    if (key === 'initialWT') {
+      label = t('initialWTLabel');
+      value = initialWT;
+    } else {
+      label = t('statLabels')[key];
+      value = status[key] ?? '?';
+    }
+    return `<div class="stat-card"><div class="stat-label">${label}</div><div class="stat-value">${value}</div></div>`;
+  }).join('');
 
   card.innerHTML = `
     <div class="card-header">
-      <div class="avatar-col">${avatarHTML}</div>
-      <div class="card-left">
-        <div class="card-title">
-          ${name}${alias ? `<span class="alias">${alias}</span>` : ''}
-          <span class="initial-wt">${t('initialWTLabel')}: ${initialWT}</span>
+      <div class="card-upper">
+        <div class="avatar-section">
+          <div class="avatar-col">${avatarHTML}</div>
+          <div class="initial-rarity">${minStars}</div>
+          <div class="attrs">${getField(indexEntry, 'attack_attribute_names').join(' / ')} | ${role}</div>
         </div>
-        <div class="rarity">${stars} (${indexEntry.initial_rarity}→${indexEntry.max_rarity})</div>
-        <div class="attrs">${attrs} | ${role}</div>
-        <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-        <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
-        <div class="stats-row">
-          <div class="stat-card"><div class="stat-label">${t('statLabels').hp}</div><div class="stat-value">${status.hp ?? '?'}</div></div>
-          <div class="stat-card"><div class="stat-label">${t('statLabels').speed}</div><div class="stat-value">${status.speed ?? '?'}</div></div>
-          <div class="stat-card"><div class="stat-label">${t('statLabels').attack}</div><div class="stat-value">${status.attack ?? '?'}</div></div>
-          <div class="stat-card"><div class="stat-label">${t('statLabels').defense}</div><div class="stat-value">${status.defense ?? '?'}</div></div>
-          <div class="stat-card"><div class="stat-label">${t('statLabels').magic}</div><div class="stat-value">${status.magic ?? '?'}</div></div>
-          <div class="stat-card"><div class="stat-label">${t('statLabels').mental}</div><div class="stat-value">${status.mental ?? '?'}</div></div>
+        <div class="info-section">
+          <div class="card-title">
+            ${name}${alias ? `<span class="alias">${alias}</span>` : ''}
+            <span class="char-id">ID:${indexEntry.id}</span>
+          </div>
+          <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
+          <div class="max-rarity" style="color: ${maxRarity === 8 ? '#ff69b4' : '#b8860b'}">${maxStars}</div>
+          <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
         </div>
-      </div>
-      <div class="card-right">
+        <div class="harmony-section">
+          <div class="harmony-placeholder"></div>
+        </div>
         <div class="switch-buttons"></div>
-        ${harmonyHTML}
+      </div>
+      <div class="card-lower">
+        <div class="stats-row">${statCards}</div>
       </div>
     </div>
     <div class="card-detail"></div>
   `;
+
+  // 异步加载真实头像和调和模块数据
+  initAvatar(indexEntry.id);
+  // 加载角色详情以填充调和模块
+  loadCharacter(indexEntry.id).then(char => {
+    if (char) {
+      const harmonySection = card.querySelector('.harmony-section');
+      if (harmonySection) {
+        harmonySection.innerHTML = renderHarmonyModule(char);
+      }
+      // 更新切换按钮
+      updateSwitchButtonsState(card, getCardState(indexEntry.id), char);
+    }
+  });
 
   card.querySelector('.card-header').addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
@@ -80,7 +108,7 @@ function createCard(indexEntry) {
   return card;
 }
 
-// 卡片状态读写函数
+// 卡片状态读写函数（保持不变）
 function getCardState(id) {
   if (!cardStates[id]) cardStates[id] = { evo: 'post', range: 'inrange', showTransform: false };
   return cardStates[id];

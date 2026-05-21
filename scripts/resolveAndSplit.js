@@ -41,7 +41,6 @@ function loadMapFile(name, lang) {
 
 const jpMaps = {};
 const cnMaps = {};
-// support_color 与 trait_color 共用同一张表
 const mapKeys = [
   'character_tag', 'base_character', 'equipment_tool_trait',
   'original_title', 'attack_attribute', 'role', 'skill_target_type',
@@ -173,22 +172,11 @@ function buildSkillsArray(character, skillDetails) {
   return skillsArray;
 }
 
-// 计算 sort_id
-function calcSortId(character) {
-  if (character.start_at) {
-    const dateStr = character.start_at.substring(0, 10).replace(/-/g, ''); // YYYYMMDD
-    const yymmdd = dateStr.substring(2); // YYMMDD
-    return parseInt(yymmdd + String(character.id).padStart(5, '0'));
-  }
-  // 如果没有 start_at，则放到最后（用一个非常大的数字）
-  return 9999999999999;
-}
-
 // ========== 7. 生成带有双语字段的角色对象 ==========
-function buildLocalizedChar(character) {
+function buildLocalizedChar(character, lang) {
+  const maps = lang === 'cn' ? cnMaps : jpMaps;
   const char = JSON.parse(JSON.stringify(character));
 
-  // 日文名称
   char.tag_names_ja = (char.tag_ids || []).map(id => jpMaps.character_tag?.get(id) || `ID:${id}`);
   char.base_character_name_ja = jpMaps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
   char.original_title_name_ja = jpMaps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
@@ -201,13 +189,14 @@ function buildLocalizedChar(character) {
     char.trait_color_name_ja = jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
   }
   if (char.support_color_id != null) {
+    // support_color 与 trait_color 共用同一张表
     char.support_color_name_ja = jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
   }
   if (char.battle_tool_trait_ids) {
     char.battle_tool_trait_names_ja = char.battle_tool_trait_ids.map(id => jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
   }
 
-  // 中文名称（若映射不存在则回退到日文）
+  // 中文名称
   char.tag_names_cn = (char.tag_ids || []).map(id => cnMaps.character_tag?.get(id) || jpMaps.character_tag?.get(id) || `ID:${id}`);
   char.base_character_name_cn = cnMaps.base_character?.get(char.base_character_id) || jpMaps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
   char.original_title_name_cn = cnMaps.original_title?.get(char.original_title_id) || jpMaps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
@@ -283,17 +272,13 @@ function buildLocalizedChar(character) {
     }
   }
 
-  // 计算 sort_id
-  char.sort_id = calcSortId(character);
-
   return char;
 }
 
 // ========== 8. 生成索引条目（双语） ==========
 function buildIndexEntry(character) {
-  // 计算默认初始WT
+  // 计算默认初始WT（与前端逻辑一致）
   let defaultWait = 0;
-  // 优先使用进化后技能2的最高等级wait
   const evolvedNormal2 = character.evolved_normal2_skill_ids;
   const normal2 = character.normal2_skill_ids;
   const skillIdsToCheck = (evolvedNormal2 && evolvedNormal2.length > 0) ? evolvedNormal2 : (normal2 || []);
@@ -325,13 +310,16 @@ function buildIndexEntry(character) {
     trait_color_id: character.trait_color_id || null,
     support_color_id: character.support_color_id || null,
     start_at: character.start_at || null,
-    sort_id: calcSortId(character),
     initial_status: character.initial_status,
     initial_wt: initialWT,
     trait_color_name_ja: jpMaps.trait_color?.get(character.trait_color_id) || null,
     trait_color_name_cn: cnMaps.trait_color?.get(character.trait_color_id) || null,
     support_color_name_ja: jpMaps.trait_color?.get(character.support_color_id) || null,
     support_color_name_cn: cnMaps.trait_color?.get(character.support_color_id) || null,
+    battle_tool_trait_names_ja: (character.battle_tool_trait_ids || []).map(id => jpMaps.battle_tool_trait?.get(id) || ''),
+    battle_tool_trait_names_cn: (character.battle_tool_trait_ids || []).map(id => cnMaps.battle_tool_trait?.get(id) || ''),
+    equipment_tool_trait_names_ja: (character.equipment_tool_trait_ids || []).map(id => jpMaps.equipment_tool_trait?.get(id) || ''),
+    equipment_tool_trait_names_cn: (character.equipment_tool_trait_ids || []).map(id => cnMaps.equipment_tool_trait?.get(id) || ''),
   };
 }
 
@@ -353,7 +341,7 @@ if (fs.existsSync(excludeFile)) {
   console.log(`📋 已加载排除角色 ID：${excludeIds.size} 个`);
 }
 
-// 读取变身配置（数组对）
+// 读取变身配置
 const transformFile = path.join(__dirname, '..', 'config', 'transform.json');
 let transformPairs = [];
 let hiddenTransformIds = new Set();
@@ -361,12 +349,12 @@ if (fs.existsSync(transformFile)) {
   const pairs = JSON.parse(fs.readFileSync(transformFile, 'utf-8'));
   transformPairs = pairs;
   pairs.forEach(pair => {
-    hiddenTransformIds.add(pair[1]);   // 第二个 ID 隐藏
+    hiddenTransformIds.add(pair[1]);
   });
   console.log(`🔄 已加载变身配对：${pairs.length} 组`);
 }
 
-// 过滤角色（排除列表中的角色、变身隐藏角色均不加入索引）
+// 过滤角色
 let visibleCharacters = Array.from(tables.character.values()).filter(c =>
   !excludeIds.has(c.id) && !hiddenTransformIds.has(c.id)
 );
@@ -382,7 +370,7 @@ fs.mkdirSync(outDir, { recursive: true });
 const pairedIds = new Set();
 const index = [];
 
-// 处理变身配对：生成合并文件
+// 处理变身配对
 transformPairs.forEach(pair => {
   const [firstId, secondId] = pair;
   pairedIds.add(firstId);
@@ -399,7 +387,6 @@ transformPairs.forEach(pair => {
   const secondData = buildLocalizedChar(secondChar);
   const merged = { ...firstData, _transform: secondData };
   fs.writeFileSync(path.join(outDir, `${firstId}.json`), JSON.stringify(merged, null, 2), 'utf-8');
-
   if (!excludeIds.has(firstId)) {
     index.push(buildIndexEntry(firstChar));
   }
@@ -413,7 +400,6 @@ visibleCharacters.forEach(char => {
   index.push(buildIndexEntry(char));
 });
 
-// 保存索引
 fs.writeFileSync(path.join(outDir, 'character_index.json'), JSON.stringify(index, null, 2), 'utf-8');
 
 console.log(`✅ 已生成角色文件，索引包含 ${index.length} 个角色`);
