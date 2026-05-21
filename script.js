@@ -111,21 +111,19 @@ const SORT_FIELDS = [
 // ========== 头像组件 (新) ==========
 // 生成星星图片组件
 function renderStars(initialRarity) {
-  // 映射：rarity -> 星星数量 (半星取整)
   const starCount = [1, 2, 3, 3, 4, 4, 5, 6][initialRarity - 1] || 0;
   let html = '';
   for (let i = 0; i < starCount; i++) {
-    html += `<img src="image/character/star_1.png" class="star-img" alt="">`;
+    html += `<img src="image/misc/star_1.png" class="star-img" alt="">`;
   }
   return `<div class="stars-row">${html}</div>`;
 }
 
-// 生成头像背景 SVG (菱形 + 蒙版头像)
+// ========== 头像背景 SVG（占位图路径已改） ==========
 function renderAvatarSVG(id, traitColor, supportColor, size = 300) {
-  const traitHex = getColorHex(traitColor);
-  const supportHex = getColorHex(supportColor);
+  const traitHex = getColorHex(traitColor), supportHex = getColorHex(supportColor);
   const imgId = `avatar-img-${id}`;
-  return `<svg width="${size}" height="${size}" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="avatar-svg">
+  return `<svg width="${size}" height="${size}" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
     <polygon points="150,0 0,150 150,300" fill="${traitHex}"/><polygon points="150,0 300,150 150,300" fill="${supportHex}"/>
     <defs>
       <linearGradient id="gt-${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/></linearGradient>
@@ -138,7 +136,8 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 300) {
         <rect x="263" y="44" width="15" height="128" fill="url(#gr-${id})"/>
       </mask>
     </defs>
-    <image id="${imgId}" href="image/character/00000.png" x="22" y="44" width="256" height="256" mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet"/>
+    <!-- 占位图路径已改为 image/misc/00000.png -->
+    <image id="${imgId}" href="image/misc/00000.png" x="22" y="44" width="256" height="256" mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet"/>
   </svg>`;
 }
 
@@ -147,16 +146,14 @@ function renderAvatarComponent(indexEntry, size = 75) {
   const id = indexEntry.id;
   const traitColor = getField(indexEntry, 'trait_color_name');
   const supportColor = getField(indexEntry, 'support_color_name');
-  const attrId = (indexEntry.attack_attributes || [])[0];      // 取第一个属性
+  const attrId = (indexEntry.attack_attributes || [])[0];
   const roleId = indexEntry.role;
 
-  // 属性图标 (50% 尺寸，基于 118x112 -> 59x56)
-  const attrIcon = attrId ? `<img src="image/character/attack_attribute_${attrId}.png" class="attr-icon" alt="">` : '';
-  // 职业图标 (50% 尺寸，不同大小需微调位置)
-  const roleIcon = roleId ? `<img src="image/character/role_${roleId}.png" class="role-icon" alt="">` : '';
+  const attrIcon = attrId ? `<img src="image/misc/attack_attribute_${attrId}.png" class="attr-icon" alt="">` : '';
+  const roleIcon = roleId ? `<img src="image/misc/role_${roleId}.png" class="role-icon" alt="">` : '';
 
   const stars = renderStars(indexEntry.initial_rarity);
-  const svg = renderAvatarSVG(id, traitColor, supportColor, 300); // 内部 SVG 保持 300x300，容器缩放
+  const svg = renderAvatarSVG(id, traitColor, supportColor, 300);
 
   return `
     <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative; display:flex; flex-direction:column; align-items:center; margin-bottom:4px;">
@@ -172,7 +169,7 @@ function renderAvatarComponent(indexEntry, size = 75) {
   `;
 }
 
-// 异步加载头像的真实图片 (initAvatar 保持不变)
+// ========== 异步加载真实头像（路径仍是 image/character/） ==========
 function initAvatar(card, id) {
   const img = card.querySelector(`#avatar-img-${id}`);
   if (!img) return;
