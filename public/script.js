@@ -229,12 +229,13 @@ function createToggleSwitch(type, checked, label) {
 }
 
 // 创建卡片
+// 创建卡片（新布局）
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
   card.dataset.id = indexEntry.id;
 
-  const name = getField(indexEntry, 'base_character_name') || (currentLang === 'cn' ? (indexEntry.name_cn || indexEntry.name_ja) : indexEntry.name_ja);
+  const baseName = getField(indexEntry, 'base_character_name') || (currentLang === 'cn' ? (indexEntry.name_cn || indexEntry.name_ja) : indexEntry.name_ja);
   const alias = indexEntry.another_name || '';
   const minStars = rarityToStars(indexEntry.initial_rarity);
   const maxStars = rarityToStars(indexEntry.max_rarity);
@@ -244,79 +245,83 @@ function createCard(indexEntry) {
   const releaseDate = indexEntry.start_at ? new Date(indexEntry.start_at).toLocaleDateString('ja-JP') : '—';
   const status = indexEntry.initial_status || {};
   const initialWT = indexEntry.initial_wt != null ? indexEntry.initial_wt : '—';
-
   const avatarHTML = renderAvatar(indexEntry.id, getField(indexEntry, 'trait_color_name'), getField(indexEntry, 'support_color_name'), 75);
 
+  // 基础属性
   const statOrder = ['initialWT', 'hp', 'speed', 'attack', 'defense', 'magic', 'mental'];
   const statCards = statOrder.map(key => {
     let label, value;
-    if (key === 'initialWT') {
-      label = t('initialWTLabel');
-      value = initialWT;
-    } else {
-      label = t('statLabels')[key];
-      value = status[key] ?? '?';
-    }
+    if (key === 'initialWT') { label = t('initialWTLabel'); value = initialWT; }
+    else { label = t('statLabels')[key]; value = status[key] ?? '?'; }
     return `<div class="stat-card"><div class="stat-label">${label}</div><div class="stat-value">${value}</div></div>`;
   }).join('');
 
+  // 调和词条（用于 P2-1 底部）
+  const battleTraits = getField(indexEntry, 'battle_tool_trait_names') || [];
+  const equipTraits = getField(indexEntry, 'equipment_tool_trait_names') || [];
+  const allTraits = [...battleTraits, ...equipTraits];
+
   card.innerHTML = `
     <div class="card-header">
-      <div class="card-part1">
-        <div class="avatar-section">
+      <!-- P1: 角色名 + 切换按钮 -->
+      <div class="card-p1">
+        <div class="p1-title">
+          ${baseName}${alias ? `<span class="alias">${alias}</span>` : ''}
+          <span class="char-id">ID:${indexEntry.id}</span>
+        </div>
+        <div class="switch-buttons"></div>
+      </div>
+
+      <!-- P2: 三栏布局 -->
+      <div class="card-p2">
+        <!-- P2-1: 头像、星级、属性、调和词条 -->
+        <div class="p2-col p2-col1">
           <div class="avatar-col">${avatarHTML}</div>
           <div class="initial-rarity">${minStars}</div>
           <div class="attrs">${getField(indexEntry, 'attack_attribute_names').join(' / ')} | ${role}</div>
-        </div>
-        <div class="info-section">
-          <div class="info-header">
-            <div class="card-title">
-              ${name}${alias ? `<span class="alias">${alias}</span>` : ''}
-              <span class="char-id">ID:${indexEntry.id}</span>
-            </div>
-            <div class="header-buttons">
-              <div class="switch-buttons"></div>
-              <button class="expand-btn" data-action="toggle" aria-label="展开">▼</button>
-            </div>
-          </div>
-          <div class="info-lower">
-            <div class="info-left">
-              <div class="max-rarity" style="color: ${maxRarity === 8 ? '#ff69b4' : '#b8860b'}">${maxStars}</div>
-              <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-              <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
-            </div>
-            <div class="synthesis-section">
-              <div class="synthesis-placeholder"></div>
-            </div>
+          <div class="inline-traits">
+            ${allTraits.map(t => `<span class="trait-tag">${t}</span>`).join('')}
           </div>
         </div>
-      </div>
-      <div class="card-part2">
-        <div class="stats-row">${statCards}</div>
+
+        <!-- P2-2: 最大星级、标签、加入时间、基础属性 -->
+        <div class="p2-col p2-col2">
+          <div class="max-rarity" style="color: ${maxRarity === 8 ? '#ff69b4' : '#b8860b'}">${maxStars}</div>
+          <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+          <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
+          <div class="stats-row">${statCards}</div>
+        </div>
+
+        <!-- P2-3: 展开按钮 -->
+        <div class="p2-col p2-col3">
+          <button class="expand-btn" data-action="toggle" aria-label="展开">
+            <span class="expand-circle">▼</span>
+          </button>
+        </div>
       </div>
     </div>
     <div class="card-detail"></div>
   `;
 
+  // 绑定展开按钮
   const expandBtn = card.querySelector('.expand-btn');
   expandBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     const detailDiv = card.querySelector('.card-detail');
     const willBeOpen = !detailDiv.classList.contains('open');
     toggleCardDetail(indexEntry.id);
-    expandBtn.innerHTML = willBeOpen ? '▲' : '▼';
+    expandBtn.querySelector('.expand-circle').innerHTML = willBeOpen ? '▲' : '▼';
     expandBtn.setAttribute('aria-label', willBeOpen ? '收起' : '展开');
   });
 
-  // 异步加载角色详情和真实头像
+  // 异步加载切换按钮状态
   loadCharacter(indexEntry.id).then(char => {
     if (char) {
-      const synthSection = card.querySelector('.synthesis-section');
-      if (synthSection) synthSection.innerHTML = renderSynthesisModule(char);
       updateSwitchButtonsState(card, getCardState(indexEntry.id), char);
     }
   });
-  // 真实头像将在卡片插入DOM后通过 renderAllCards 调用 initAvatar 加载，确保元素已存在
+
+  initAvatar(card, indexEntry.id);
   return card;
 }
 
