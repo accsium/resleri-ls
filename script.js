@@ -141,13 +141,34 @@ function renderAvatar(id, traitColor, supportColor, size = 300) {
     <svg width="${size}" height="${size}" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
       <polygon points="150,0 0,150 150,300" fill="${traitHex}" />
       <polygon points="150,0 300,150 150,300" fill="${supportHex}" />
+
       <defs>
-        <clipPath id="clip-${id}">
-          <polygon points="22,44 278,44 278,172 150,300 22,172" />
-        </clipPath>
+        <linearGradient id="grad-top-${id}" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="black" />
+          <stop offset="100%" stop-color="white" />
+        </linearGradient>
+        <linearGradient id="grad-left-${id}" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="black" />
+          <stop offset="100%" stop-color="white" />
+        </linearGradient>
+        <linearGradient id="grad-right-${id}" x1="1" y1="0" x2="0" y2="0">
+          <stop offset="0%" stop-color="black" />
+          <stop offset="100%" stop-color="white" />
+        </linearGradient>
+
+        <mask id="mask-${id}">
+          <rect x="22" y="44" width="256" height="256" fill="white" />
+          <!-- 顶部羽化 5px -->
+          <rect x="22" y="44" width="256" height="5" fill="url(#grad-top-${id})" />
+          <!-- 左侧羽化 5px -->
+          <rect x="22" y="44" width="5" height="256" fill="url(#grad-left-${id})" />
+          <!-- 右侧羽化 5px -->
+          <rect x="273" y="44" width="5" height="256" fill="url(#grad-right-${id})" />
+        </mask>
       </defs>
+
       <image id="${imgId}" href="${fallbackPath}" x="22" y="44" width="256" height="256"
-             clip-path="url(#clip-${id})" preserveAspectRatio="xMidYMax meet" />
+             mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet" />
     </svg>
   `;
 }
