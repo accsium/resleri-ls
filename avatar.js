@@ -17,7 +17,7 @@ function renderAvatar(id, traitColor, supportColor, scale = 1) {
         <!-- 角色头像（高256，蒙版裁剪） -->
         <img src="${imgPath}" alt="" 
              style="position:absolute; bottom:0; left:50%; transform:translateX(-50%); height:256px; width:auto; z-index:1;
-                    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 100%, 0% 50%);"
+                    clip-path: polygon(0px 0px, 256px 0px, 256px 128px, 128px 256px, 0px 128px);"
              onerror="
                if (!this.dataset.fallback) {
                  this.dataset.fallback = '1';
