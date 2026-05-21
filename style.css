@@ -1,4 +1,4 @@
-/* ========== 基础与通用 ========== */
+/* ========== 基础设置 ========== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,33 +12,14 @@ body {
   min-height: 100vh;
 }
 
-/* 通用交互控件 */
-button,
-select,
-input {
-  font-family: inherit;
-  outline: none;
-  border: none;
-}
-
 button {
+  font-family: inherit;
   cursor: pointer;
   font-size: 14px;
   padding: 8px 18px;
   background: #f4f1e9;
   color: #404040;
-}
-
-select {
-  padding: 8px 14px;
-  background: #f4f1e9;
-  color: #404040;
-  font-size: 14px;
-}
-
-input {
-  background: #f4f1e9;
-  color: #404040;
+  border: none;
 }
 
 /* ========== 顶栏 ========== */
@@ -88,7 +69,12 @@ input {
 .search-box input {
   width: 100%;
   padding: 14px 20px;
+  background: #f4f1e9;
+  color: #404040;
   font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  border: none;
 }
 
 .search-box input:focus {
@@ -114,6 +100,16 @@ input {
 
 .sort-control label {
   color: #555;
+}
+
+.sort-control select {
+  padding: 8px 14px;
+  background: #f4f1e9;
+  color: #404040;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  border: none;
 }
 
 .order-btn {
@@ -160,7 +156,7 @@ input {
   color: #fffeef;
 }
 
-/* ========== 卡片容器与卡片 ========== */
+/* ========== 卡片容器 ========== */
 .card-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -177,79 +173,72 @@ input {
 
 /* ========== 卡片头部 ========== */
 .card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px 24px;
+  padding: 16px;
   cursor: pointer;
 }
 
-.card-left {
-  flex: 1;
-  min-width: 0;
+.card-upper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
 }
 
-.card-right {
+.avatar-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
   flex-shrink: 0;
 }
 
-.color-swatch-inline {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-}
-
-.card-title {
-  font-size: 20px;
-  font-weight: 400;
-  color: #3e2e1e;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.card-title .alias {
-  font-size: 14px;
-  color: #6b5e8a;
-}
-
-.rarity {
+.initial-rarity {
   font-size: 13px;
   color: #b8860b;
   margin-top: 4px;
 }
 
-.attrs {
-  font-size: 13px;
-  color: #555;
-  margin-top: 4px;
+.info-section {
+  flex: 1;
+  min-width: 0;
 }
 
-.tags {
-  margin-top: 6px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.tag {
-  background: #e4dcce;
-  color: #404040;
-  padding: 3px 10px;
-  font-size: 11px;
-}
-
-.release-date {
+.char-id {
   font-size: 12px;
-  color: #777;
+  color: #888;
+  margin-left: 8px;
+}
+
+.max-rarity {
+  font-size: 13px;
   margin-top: 4px;
+}
+
+.harmony-section {
+  width: 200px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.switch-buttons {
+  display: flex;
+  gap: 6px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.switch-buttons button {
+  font-size: 12px;
+  padding: 5px 14px;
+}
+
+.switch-buttons button.active {
+  background: #5b6e82;
+  color: #fff;
+}
+
+/* 卡片下部 */
+.card-lower {
+  padding: 12px 0 0;
 }
 
 /* 基础属性小卡片 */
@@ -257,7 +246,6 @@ input {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 10px;
 }
 
 .stat-card {
@@ -278,24 +266,7 @@ input {
   margin-top: 2px;
 }
 
-/* 切换按钮 */
-.switch-buttons {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-
-.switch-buttons button {
-  font-size: 12px;
-  padding: 5px 14px;
-}
-
-.switch-buttons button.active {
-  background: #5b6e82;
-  color: #fff;
-}
-
-/* ========== 卡片展开详情 ========== */
+/* 卡片展开详情 */
 .card-detail {
   display: none;
   padding: 0 24px 20px;
@@ -306,26 +277,22 @@ input {
   display: block;
 }
 
-/* 统一各级标题样式 */
-.section-title,
-.subsection-title {
-  font-weight: 400;
-  color: #3e4759;
-  margin: 0 0 12px 0;
-}
-
 .section-title {
   font-size: 17px;
+  font-weight: 400;
+  color: #3e4759;
+  margin: 20px 0 12px;
   padding-bottom: 4px;
   border-bottom: 2px solid #b0a898;
-  margin-top: 20px;
 }
 
 .subsection-title {
   font-size: 15px;
+  font-weight: 400;
+  color: #3e4759;
+  margin: 14px 0 8px;
   padding-bottom: 3px;
   border-bottom: 1px solid #c4b8a0;
-  margin-top: 14px;
 }
 
 .banner-title {
@@ -345,8 +312,7 @@ input {
   gap: 4px;
 }
 
-.banner-title .level-tab,
-.level-tab {
+.banner-title .level-tab {
   font-size: 12px;
   padding: 3px 10px;
   background: transparent;
@@ -354,8 +320,7 @@ input {
   border: 1px solid #fffeef;
 }
 
-.banner-title .level-tab.active,
-.level-tab.active {
+.banner-title .level-tab.active {
   background: #fffeef;
   color: #3e4759;
 }
@@ -398,7 +363,6 @@ input {
   color: #404040;
 }
 
-/* 能力卡片 */
 .ability-card {
   background: #fff;
   padding: 8px 14px;
@@ -410,12 +374,10 @@ input {
   color: #3e2e1e;
 }
 
-/* 支援能力标题行 */
 .support-ability-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
 .support-rarity-tabs {
@@ -432,4 +394,12 @@ input {
   text-align: center;
   padding: 30px;
   color: #888;
+}
+
+/* ========== 头像组件 ========== */
+.avatar-wrapper {
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  position: relative;
 }
