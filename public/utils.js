@@ -97,6 +97,7 @@ const COLOR_MAP = {
 
 // 当前语言，默认中文
 let currentLang = 'cn';
+let cardStates = {};
 function t(key) { return UI_TEXT[currentLang][key] || key; }
 function getField(obj, field) {
   if (currentLang === 'cn' && obj[field + '_cn'] !== undefined) return obj[field + '_cn'];
