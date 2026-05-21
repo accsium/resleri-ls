@@ -428,3 +428,56 @@ button {
   padding: 30px;
   color: #888;
 }
+
+/* ... 前面的样式保持不变 ... */
+
+/* 卡片头部布局：头像列 + 卡片左 + 卡片右 */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 24px;
+  cursor: pointer;
+}
+
+.avatar-col {
+  flex-shrink: 0;
+  width: 256px; /* 头像基础宽度 */
+  height: 256px;
+  position: relative;
+  overflow: visible; /* 允许菱形超出 */
+}
+
+/* 头像包装器内的图片加载失败时隐藏 */
+.avatar-wrapper img {
+  display: block;
+}
+
+/* 基础属性小卡片 */
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.stat-card {
+  background: #ede8dc;
+  padding: 6px 10px;
+  text-align: center;
+  min-width: 60px;
+}
+
+.stat-card .stat-label {
+  font-size: 10px;
+  color: #777;
+}
+
+.stat-card .stat-value {
+  font-size: 16px;
+  color: #3e2e1e;
+  margin-top: 2px;
+}
+
+/* 其他样式与之前版本完全相同... */

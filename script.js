@@ -1,111 +1,9 @@
-// ========== 多语言界面文本 ==========
-const UI_TEXT = {
-  ja: {
-    pageTitle: 'レスレリ 角色图鉴',
-    searchPlaceholder: '名前で検索...',
-    skillSection: 'スキル',
-    abilitySection: 'アビリティ',
-    leaderSkillSection: 'リーダースキル',
-    base: 'ベース',
-    series: 'シリーズ',
-    releaseDate: '実装日',
-    joinDate: '加入日',
-    attribute: '属性',
-    role: 'ロール',
-    alchemist: '錬金術士',
-    yes: 'はい',
-    no: 'いいえ',
-    none: 'なし',
-    loading: '読み込み中...',
-    loadFailed: '読み込み失敗',
-    initial: '初期',
-    max: '最大',
-    rarity: 'レアリティ',
-    target: '対象',
-    power: '威力',
-    break: 'ブレイク',
-    wt: 'WT',
-    limit: '制限',
-    switchText: '切替',
-    level: 'Lv. ',
-    initialWTLabel: '初期WT',
-    skillType: {
-      normal1: '通常攻撃1', normal2: '通常攻撃2', burst: 'バーストスキル',
-      active1: 'アクティブ1', active2: 'アクティブ2', active3: 'アクティブ3',
-      extra: 'EXスキル'
-    },
-    statLabels: { hp: 'HP', speed: '速度', attack: '物攻', defense: '物防', magic: '魔攻', mental: '魔防' },
-    abilityTitle: '能力',
-    supportAbilityTitle: '亜空支援能力',
-    rarityLabel: ['1星','2星','3星','3.5星','4星','4.5星','5星','6星'],
-    sortLabel: '並べ替え',
-    filterLabel: 'フィルター',
-    applyFilter: '適用',
-    clearFilter: 'クリア',
-  },
-  cn: {
-    pageTitle: '雷斯雷利 角色图鉴',
-    searchPlaceholder: '搜索角色名称...',
-    skillSection: '技能',
-    abilitySection: '能力',
-    leaderSkillSection: '队长技能',
-    base: '原型',
-    series: '系列',
-    releaseDate: '实装日期',
-    joinDate: '加入日期',
-    attribute: '属性',
-    role: '职业',
-    alchemist: '炼金术士',
-    yes: '是',
-    no: '否',
-    none: '无',
-    loading: '加载中...',
-    loadFailed: '加载失败',
-    initial: '初期',
-    max: '最大',
-    rarity: '稀有度',
-    target: '对象',
-    power: '威力',
-    break: '破防',
-    wt: 'WT',
-    limit: '限制',
-    switchText: '切换',
-    level: 'Lv. ',
-    initialWTLabel: '初始WT',
-    skillType: {
-      normal1: '通常攻击1', normal2: '通常攻击2', burst: '爆发技能',
-      active1: '主动1', active2: '主动2', active3: '主动3',
-      extra: 'EX技能'
-    },
-    statLabels: { hp: 'HP', speed: '速度', attack: '物攻', defense: '物防', magic: '魔攻', mental: '魔防' },
-    abilityTitle: '能力',
-    supportAbilityTitle: '亚空支援能力',
-    rarityLabel: ['1星','2星','3星','3.5星','4星','4.5星','5星','6星'],
-    sortLabel: '排序',
-    filterLabel: '筛选',
-    applyFilter: '应用筛选',
-    clearFilter: '清除',
-  }
-};
-
-// 颜色名称 → hex 值
-const COLOR_MAP = {
-  '赤': '#E74C3C', '青': '#3498DB', '緑': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
-  '红': '#E74C3C', '蓝': '#3498DB', '绿': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
-  '白': '#FFFFFF', '黒': '#333333', '黑': '#333333',
-};
-
-let currentLang = 'cn';
-function t(key) { return UI_TEXT[currentLang][key] || key; }
-function getField(obj, field) {
-  if (currentLang === 'cn' && obj[field + '_cn'] !== undefined) return obj[field + '_cn'];
-  return obj[field + '_ja'] || obj[field] || '';
-}
-
+// 全局数据
 let characterIndex = [];
 let loadedCharacters = {};
 const cardStates = {};
 
+// 可用排序字段
 const AVAILABLE_SORT_FIELDS = [
   { field: 'sort_id', label_ja: '実装日+ID', label_cn: '实装日期+ID' },
   { field: 'start_at', label_ja: '実装日', label_cn: '实装日期' },
@@ -144,11 +42,7 @@ async function loadCharacter(id) {
   return char;
 }
 
-function rarityToStars(r) {
-  const map = {1:'★',2:'★★',3:'★★★',4:'★★★☆',5:'★★★★',6:'★★★★☆',7:'★★★★★',8:'★★★★★★'};
-  return map[r] || '★'.repeat(r);
-}
-
+// ========== 排序与筛选 ==========
 function compareCharacters(a, b) {
   const field = currentSortField;
   const order = currentSortOrder === 'desc' ? -1 : 1;
@@ -179,6 +73,7 @@ function getFilteredAndSortedCharacters() {
   return filtered;
 }
 
+// ========== UI 更新 ==========
 function updateUILanguage() {
   document.title = t('pageTitle');
   document.getElementById('pageTitle').textContent = t('pageTitle');
@@ -235,81 +130,7 @@ function renderAllCards() {
   filterCards();
 }
 
-function createCard(indexEntry) {
-  const card = document.createElement('div');
-  card.className = 'card';
-  card.dataset.id = indexEntry.id;
-
-  const name = currentLang === 'cn' ? (indexEntry.name_cn || indexEntry.name_ja) : indexEntry.name_ja;
-  const alias = indexEntry.another_name || '';
-  const stars = rarityToStars(indexEntry.initial_rarity);
-  const attrs = getField(indexEntry, 'attack_attribute_names').join(' / ');
-  const role = getField(indexEntry, 'role_name');
-  const tags = (getField(indexEntry, 'tag_names') || []).slice(0, 3);
-  const releaseDate = indexEntry.start_at ? new Date(indexEntry.start_at).toLocaleDateString('ja-JP') : '—';
-  const status = indexEntry.initial_status || {};
-  const initialWT = indexEntry.initial_wt != null ? indexEntry.initial_wt : '—';
-
-  const traitColorName = getField(indexEntry, 'trait_color_name');
-  const supportColorName = getField(indexEntry, 'support_color_name');
-  const colorSwatch = (traitColorName || supportColorName) ? `
-    <div class="color-swatch-inline">
-      <span style="color:${getColorHex(traitColorName)}">${traitColorName || '?'}</span>
-      <svg width="26" height="26" viewBox="0 0 30 30">
-        <polygon points="15,0 0,15 15,30" fill="${getColorHex(traitColorName)}" />
-        <polygon points="15,0 30,15 15,30" fill="${getColorHex(supportColorName)}" />
-      </svg>
-      <span style="color:${getColorHex(supportColorName)}">${supportColorName || '?'}</span>
-    </div>` : '';
-
-  const statCards = `
-    <div class="stats-row">
-      <div class="stat-card"><div class="stat-label">${t('statLabels').hp}</div><div class="stat-value">${status.hp ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').speed}</div><div class="stat-value">${status.speed ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').attack}</div><div class="stat-value">${status.attack ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').defense}</div><div class="stat-value">${status.defense ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').magic}</div><div class="stat-value">${status.magic ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').mental}</div><div class="stat-value">${status.mental ?? '?'}</div></div>
-    </div>`;
-
-  card.innerHTML = `
-    <div class="card-header">
-      <div class="card-left">
-        <div class="card-title">
-          ${name}${alias ? `<span class="alias">${alias}</span>` : ''}
-          <span class="initial-wt">${t('initialWTLabel')}: ${initialWT}</span>
-        </div>
-        <div class="rarity">${stars} (${indexEntry.initial_rarity}→${indexEntry.max_rarity})</div>
-        <div class="attrs">${attrs} | ${role}</div>
-        <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-        <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
-        ${statCards}
-      </div>
-      <div class="card-right">
-        ${colorSwatch}
-        <div class="switch-buttons"></div>
-      </div>
-    </div>
-    <div class="card-detail"></div>
-  `;
-
-  card.querySelector('.card-header').addEventListener('click', (e) => {
-    if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
-    toggleCardDetail(indexEntry.id);
-  });
-
-  return card;
-}
-
-function getCardState(id) {
-  if (!cardStates[id]) cardStates[id] = { evo: 'post', range: 'inrange', showTransform: false };
-  return cardStates[id];
-}
-
-function setCardState(id, newState) {
-  cardStates[id] = { ...cardStates[id], ...newState };
-}
-
+// ========== 卡片详情展开 ==========
 async function toggleCardDetail(id) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
@@ -323,7 +144,7 @@ async function toggleCardDetail(id) {
     if (!char) throw new Error('角色数据为空');
     renderDetailContent(id, char, getCardState(id));
   } catch (e) {
-    detailDiv.innerHTML = `<div class="no-data">${t('loadFailed')}：${e.message}</div>`;
+    detailDiv.innerHTML = `<div class="no-data">${t('loadFailed')}: ${e.message}</div>`;
   }
 }
 
@@ -371,13 +192,10 @@ function generateDetailHTML(activeChar, state) {
       }
       if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution;
 
-      if (!levels || levels.length === 0) return; // 无技能数据时跳过
-
       html += `<div class="subsection-title">${typeText[group.type] || group.type}</div>`;
 
-      const levelTabs = levels.length > 1 ? `<div class="level-tabs">${levels.map((skill, i) => `<button class="level-tab ${i === levels.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>` : '';
-      const currentSkill = levels[levels.length - 1];
-      const skillCard = currentSkill ? renderSkillCard(currentSkill) : '';
+      const levelTabs = levels.length > 1 ? `<div class="level-tabs">${levels.map((s, i) => `<button class="level-tab ${i === levels.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>` : '';
+      const skillCard = levels[levels.length - 1] ? renderSkillCard(levels[levels.length - 1]) : '';
 
       html += `<div class="skill-group" data-group="${group.type}">`;
       html += `<div class="banner-title">${levelTabs}</div>`;
@@ -385,12 +203,10 @@ function generateDetailHTML(activeChar, state) {
       html += `</div>`;
     });
 
-    // EX技能
     if (exSkills.length > 0) {
       html += `<div class="subsection-title">${t('skillType').extra}</div>`;
-      const levelTabs = exSkills.length > 1 ? `<div class="level-tabs">${exSkills.map((skill, i) => `<button class="level-tab ${i === exSkills.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>` : '';
-      const currentSkill = exSkills[exSkills.length - 1];
-      const skillCard = currentSkill ? renderSkillCard(currentSkill) : '';
+      const levelTabs = exSkills.length > 1 ? `<div class="level-tabs">${exSkills.map((s, i) => `<button class="level-tab ${i === exSkills.length - 1 ? 'active' : ''}" data-index="${i}">${t('level')}${i+1}</button>`).join('')}</div>` : '';
+      const skillCard = exSkills[exSkills.length - 1] ? renderSkillCard(exSkills[exSkills.length - 1]) : '';
       html += `<div class="skill-group" data-group="extra">`;
       html += `<div class="banner-title">${levelTabs}</div>`;
       html += `<div class="content-block">${skillCard || `<div class="no-data">${t('none')}</div>`}</div>`;
@@ -413,6 +229,9 @@ function generateDetailHTML(activeChar, state) {
     html += `<div class="banner-title">${a.name || `ID:${a.id}`}</div>`;
     html += `<div class="content-block">${renderAbilityCard(a)}</div>`;
   });
+  if (abilities.length === 0 && supportIds.length === 0) {
+    html += `<div class="no-data">${t('none')}</div>`;
+  }
 
   if (supportIds.length > 0) {
     const maxRarity = activeChar.max_rarity || 8;
@@ -426,8 +245,6 @@ function generateDetailHTML(activeChar, state) {
 
     html += `<div class="banner-title"><span>${t('supportAbilityTitle')}</span>${rarityTabs}</div>`;
     html += `<div class="content-block">${supportAbility ? renderAbilityCard(supportAbility) : `<div class="no-data">${t('none')}</div>`}</div>`;
-  } else if (abilities.length === 0) {
-    html += `<div class="no-data">${t('none')}</div>`;
   }
 
   return html;
@@ -459,10 +276,7 @@ function renderAbilityCard(a) {
   return `<div>${desc}</div>`;
 }
 
-function getColorHex(name) {
-  return name ? (COLOR_MAP[name] || '#CCCCCC') : '#CCCCCC';
-}
-
+// ========== 事件绑定 ==========
 function bindCardButtons(id, activeChar, originalChar, state) {
   const card = document.querySelector(`.card[data-id="${id}"]`);
   if (!card) return;
@@ -539,11 +353,13 @@ function bindCardButtons(id, activeChar, originalChar, state) {
   });
 }
 
+// 搜索过滤
 function filterCards() {
   const q = document.getElementById('searchInput').value.toLowerCase();
   document.querySelectorAll('.card').forEach(c => c.style.display = c.querySelector('.card-title')?.textContent.toLowerCase().includes(q) ? '' : 'none');
 }
 
+// 筛选面板事件
 document.getElementById('applyFilterBtn').onclick = () => {
   activeFilters.attack_attributes = Array.from(document.querySelectorAll('.attr-check:checked')).map(cb => parseInt(cb.value));
   activeFilters.role = Array.from(document.querySelectorAll('.role-check:checked')).map(cb => parseInt(cb.value));
@@ -566,6 +382,7 @@ document.getElementById('orderToggle').onclick = () => {
   renderAllCards();
 };
 
+// 语言切换
 document.getElementById('btn-ja').onclick = () => switchLang('ja');
 document.getElementById('btn-cn').onclick = () => switchLang('cn');
 async function switchLang(lang) {
@@ -590,6 +407,7 @@ async function switchLang(lang) {
 
 document.getElementById('btn-refresh').onclick = () => { if (confirm('确定要清除缓存并刷新数据？')) location.reload(true); };
 
+// 初始化
 (async () => {
   updateUILanguage();
   await loadIndex();
