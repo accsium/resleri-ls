@@ -308,7 +308,6 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     }
   }
 
-  // 技能等级切换
   card.querySelectorAll('.skill-group').forEach(group => {
     const tabs = group.querySelectorAll('.level-tab');
     const contentBlock = group.querySelector('.content-block');
@@ -339,7 +338,6 @@ function bindCardButtons(id, activeChar, originalChar, state) {
     });
   });
 
-  // 支援能力星级切换
   card.querySelectorAll('.support-rarity-btn').forEach(btn => {
     btn.onclick = () => {
       const idx = parseInt(btn.dataset.supportIdx);
