@@ -1,30 +1,31 @@
-// 生成调和模块 HTML（使用角色详情数据）
+// 生成调和模块 HTML
 function renderHarmonyModule(char) {
   const traitName = getField(char, 'trait_color_name') || '?';
   const supportName = getField(char, 'support_color_name') || '?';
   const battleTraits = getField(char, 'battle_tool_trait_names') || [];
   const equipTraits = getField(char, 'equipment_tool_trait_names') || [];
 
+  // 合并所有特性词条
+  const allTraits = [...battleTraits, ...equipTraits];
+
   return `
     <div class="harmony-module">
-      <div class="harmony-header">${t('harmonyTitle')}</div>
-      <div class="harmony-color">
+      <div class="harmony-color-row">
         <span style="color:${getColorHex(traitName)}">${traitName}</span>
-        <svg width="24" height="24" viewBox="0 0 30 30">
+        <svg width="20" height="20" viewBox="0 0 30 30">
           <polygon points="15,0 0,15 15,30" fill="${getColorHex(traitName)}" />
           <polygon points="15,0 30,15 15,30" fill="${getColorHex(supportName)}" />
         </svg>
         <span style="color:${getColorHex(supportName)}">${supportName}</span>
       </div>
       <div class="harmony-traits">
-        ${battleTraits.length ? `<div><span class="trait-label">${t('battleTraitTitle')}:</span> ${battleTraits.join('、')}</div>` : ''}
-        ${equipTraits.length ? `<div><span class="trait-label">${t('equipTraitTitle')}:</span> ${equipTraits.join('、')}</div>` : ''}
+        ${allTraits.map(trait => `<span class="trait-tag">${trait}</span>`).join('')}
       </div>
     </div>
   `;
 }
 
-// 创建卡片（新布局）
+// 创建卡片
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -77,8 +78,8 @@ function createCard(indexEntry) {
         <div class="harmony-section">
           <div class="harmony-placeholder"></div>
         </div>
-        <div class="switch-buttons"></div>
       </div>
+      <div class="switch-buttons"></div>
       <div class="card-lower">
         <div class="stats-row">${statCards}</div>
       </div>
@@ -86,19 +87,19 @@ function createCard(indexEntry) {
     <div class="card-detail"></div>
   `;
 
-  // 异步加载真实头像和调和模块数据
-  initAvatar(indexEntry.id);
-  // 加载角色详情以填充调和模块
+  // 加载角色详情以填充调和模块和切换按钮
   loadCharacter(indexEntry.id).then(char => {
     if (char) {
       const harmonySection = card.querySelector('.harmony-section');
       if (harmonySection) {
         harmonySection.innerHTML = renderHarmonyModule(char);
       }
-      // 更新切换按钮
       updateSwitchButtonsState(card, getCardState(indexEntry.id), char);
     }
   });
+
+  // 异步加载真实头像
+  initAvatar(indexEntry.id);
 
   card.querySelector('.card-header').addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
@@ -108,7 +109,7 @@ function createCard(indexEntry) {
   return card;
 }
 
-// 卡片状态读写函数（保持不变）
+// 卡片状态管理（已在 utils.js 中声明 cardStates）
 function getCardState(id) {
   if (!cardStates[id]) cardStates[id] = { evo: 'post', range: 'inrange', showTransform: false };
   return cardStates[id];
