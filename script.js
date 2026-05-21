@@ -157,16 +157,17 @@ function renderAvatar(id, traitColor, supportColor, size = 300) {
         </linearGradient>
 
         <mask id="mask-${id}">
-          <!-- 基础裁剪形状（矩形 + 底部倒三角形） -->
+          <!-- 上部矩形区域（高128） -->
           <rect x="22" y="44" width="256" height="128" fill="white" />
+          <!-- 底部三角形区域 -->
           <polygon points="22,172 278,172 150,300" fill="white" />
 
           <!-- 顶部羽化 5px -->
           <rect x="22" y="44" width="256" height="5" fill="url(#grad-top-${id})" />
-          <!-- 左侧羽化 5px -->
-          <rect x="22" y="44" width="5" height="256" fill="url(#grad-left-${id})" />
-          <!-- 右侧羽化 5px -->
-          <rect x="273" y="44" width="5" height="256" fill="url(#grad-right-${id})" />
+          <!-- 左侧羽化 5px（仅矩形区域，高度128） -->
+          <rect x="22" y="44" width="5" height="128" fill="url(#grad-left-${id})" />
+          <!-- 右侧羽化 5px（仅矩形区域，高度128） -->
+          <rect x="273" y="44" width="5" height="128" fill="url(#grad-right-${id})" />
         </mask>
       </defs>
 
