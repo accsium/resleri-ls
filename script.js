@@ -93,7 +93,7 @@ function renderStarGroup(rarity, scale = 0.5) {
   const starFile = rarity === 8 ? 'star_2.png' : 'star_1.png';
   const w = Math.round(67 * scale);
   const h = Math.round(64 * scale);
-  const marginStep = -Math.round(20 * scale); // 图片左右空白像素总和
+  const marginStep = -Math.round(20 * scale); // 消除图片内边距
   let html = '';
   for (let i = 0; i < count; i++) {
     const marginLeft = i === 0 ? '0px' : `${i * marginStep}px`;
@@ -138,7 +138,7 @@ function renderAvatarComponent(indexEntry, size = 75) {
   const attrId = (indexEntry.attack_attributes || [])[0];
   const roleId = indexEntry.role;
 
-  // 星星容器
+  // 星星容器（30%缩放，底边对齐，水平居中，允许溢出）
   const starScale = 0.3;
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const starCount = starCountMap[indexEntry.initial_rarity] || 0;
@@ -149,15 +149,15 @@ function renderAvatarComponent(indexEntry, size = 75) {
   const startX = (300 - totalWidth) / 2;
   const startY = 300 - starHeight;
   const starsContainer = starCount > 0
-    ? `<div style="position:absolute; left:${startX}px; top:${startY}px; width:${totalWidth}px; height:${starHeight}px;">${renderStarGroup(indexEntry.initial_rarity, starScale)}</div>`
+    ? `<div style="position:absolute; left:${startX}px; top:${startY}px; width:${totalWidth}px; height:${starHeight}px; overflow:visible;">${renderStarGroup(indexEntry.initial_rarity, starScale)}</div>`
     : '';
 
-  // 属性图标
+  // 属性图标（25%缩放）
   const attrIcon = attrId
-    ? `<img src="image/misc/attack_attribute_${attrId}.png" class="attr-icon" style="position:absolute; left:0px; top:0px; width:29.5px; height:28px;" alt="">`
+    ? `<img src="image/misc/attack_attribute_${attrId}.png" style="position:absolute; left:0px; top:0px; width:29.5px; height:28px;" alt="">`
     : '';
 
-  // 职业图标
+  // 职业图标（坐标固定）
   let roleIcon = '';
   if (roleId) {
     const rolePos = {
@@ -167,15 +167,14 @@ function renderAvatarComponent(indexEntry, size = 75) {
       4: { left: 270, top: 2, width: 29.75, height: 24.75 }
     };
     const p = rolePos[roleId] || rolePos[1];
-    roleIcon = `<img src="image/misc/role_${roleId}.png" class="role-icon" style="position:absolute; left:${p.left}px; top:${p.top}px; width:${p.width}px; height:${p.height}px;" alt="">`;
+    roleIcon = `<img src="image/misc/role_${roleId}.png" style="position:absolute; left:${p.left}px; top:${p.top}px; width:${p.width}px; height:${p.height}px;" alt="">`;
   }
 
-  // 头像背景 SVG
   const svg = renderAvatarSVG(id, traitColor, supportColor, 300);
 
   return `
-    <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative; overflow:hidden;">
-      <div class="avatar-svg-container" style="transform:scale(${size/300}); transform-origin:0 0; width:300px; height:300px;">
+    <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative; overflow:visible;">
+      <div class="avatar-svg-container" style="transform:scale(${size/300}); transform-origin:0 0; width:300px; height:300px; overflow:visible;">
         ${svg}
         ${starsContainer}
         ${attrIcon}
@@ -184,7 +183,6 @@ function renderAvatarComponent(indexEntry, size = 75) {
     </div>
   `;
 }
-
 // ========== 调和模块 ==========
 function renderSynthesisModule(char) {
   const traitName = getField(char, 'trait_color_name') || '?';
