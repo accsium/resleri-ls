@@ -10,20 +10,12 @@ const UI_TEXT = {
     attribute: '属性',
     role: 'ロール',
     alchemist: '錬金術士',
-    yes: 'はい',
-    no: 'いいえ',
-    none: 'なし',
+    yes: 'はい', no: 'いいえ', none: 'なし',
     loading: '読み込み中...',
     loadFailed: '読み込み失敗',
-    initial: '初期',
-    max: '最大',
+    initial: '初期', max: '最大',
     maxRarityLabel: '最大レアリティ：',
-    rarity: 'レアリティ',
-    target: '対象',
-    power: '威力',
-    break: 'ブレイク',
-    wt: 'WT',
-    limit: '制限',
+    target: '対象', power: '威力', break: 'ブレイク', wt: 'WT', limit: '制限',
     switchText: '切替',
     level: 'Lv. ',
     initialWTLabel: '初期WT',
@@ -32,10 +24,7 @@ const UI_TEXT = {
     abilityTitle: '能力',
     supportAbilityTitle: '亜空支援能力',
     rarityLabel: ['1星','2星','3星','3.5星','4星','4.5星','5星','6星'],
-    sortLabel: '並べ替え',
-    filterLabel: 'フィルター',
-    applyFilter: '適用',
-    clearFilter: 'クリア',
+    sortLabel: '並べ替え', filterLabel: 'フィルター', applyFilter: '適用', clearFilter: 'クリア',
     synthesisTitle: '調和',
     battleTraitTitle: 'バトルアイテム特性',
     equipTraitTitle: '装備アイテム特性'
@@ -50,20 +39,12 @@ const UI_TEXT = {
     attribute: '属性',
     role: '职业',
     alchemist: '炼金术士',
-    yes: '是',
-    no: '否',
-    none: '无',
+    yes: '是', no: '否', none: '无',
     loading: '加载中...',
     loadFailed: '加载失败',
-    initial: '初期',
-    max: '最大',
+    initial: '初期', max: '最大',
     maxRarityLabel: '最大星级：',
-    rarity: '稀有度',
-    target: '对象',
-    power: '威力',
-    break: '破防',
-    wt: 'WT',
-    limit: '限制',
+    target: '对象', power: '威力', break: '破防', wt: 'WT', limit: '限制',
     switchText: '切换',
     level: 'Lv. ',
     initialWTLabel: '初始WT',
@@ -72,10 +53,7 @@ const UI_TEXT = {
     abilityTitle: '能力',
     supportAbilityTitle: '亚空支援能力',
     rarityLabel: ['1星','2星','3星','3.5星','4星','4.5星','5星','6星'],
-    sortLabel: '排序',
-    filterLabel: '筛选',
-    applyFilter: '应用筛选',
-    clearFilter: '清除',
+    sortLabel: '排序', filterLabel: '筛选', applyFilter: '应用筛选', clearFilter: '清除',
     synthesisTitle: '调和',
     battleTraitTitle: '战斗道具特性',
     equipTraitTitle: '装备道具特性'
@@ -89,9 +67,8 @@ const COLOR_MAP = {
 };
 
 let currentLang = 'cn';
-const t = (k) => UI_TEXT[currentLang][k] || k;
+const t = k => UI_TEXT[currentLang][k] || k;
 const getField = (o, f) => currentLang === 'cn' && o[f+'_cn'] !== undefined ? o[f+'_cn'] : (o[f+'_ja'] || o[f] || '');
-const rarityToStars = r => ({1:'★',2:'★★',3:'★★★',4:'★★★☆',5:'★★★★',6:'★★★★☆',7:'★★★★★',8:'★★★★★★'}[r] || '★'.repeat(r));
 const getColorHex = n => n ? (COLOR_MAP[n] || '#CCCCCC') : '#CCCCCC';
 
 let cardStates = {};
@@ -108,18 +85,22 @@ const SORT_FIELDS = [
   { field: 'support_color_id', label_ja: '調和色-右', label_cn: '调和颜色-右', priority: 8 }
 ];
 
-// ========== 头像组件 (新) ==========
-// 生成星星图片组件
-function renderStars(initialRarity) {
-  const starCount = [1, 2, 3, 3, 4, 4, 5, 6][initialRarity - 1] || 0;
+// ========== 星星组件（通用） ==========
+function renderStarGroup(rarity, scale = 0.5) {
+  const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
+  const count = starCountMap[rarity] || 0;
+  if (count === 0) return '';
+  const starFile = rarity === 8 ? 'star_2.png' : 'star_1.png';
+  const w = Math.round(67 * scale);
+  const h = Math.round(64 * scale);
   let html = '';
-  for (let i = 0; i < starCount; i++) {
-    html += `<img src="image/misc/star_1.png" class="star-img" alt="">`;
+  for (let i = 0; i < count; i++) {
+    html += `<img src="image/misc/${starFile}" alt="" style="width:${w}px;height:${h}px;flex-shrink:0;">`;
   }
-  return `<div class="stars-row">${html}</div>`;
+  return `<span class="stars-group" style="display:inline-flex;gap:0;align-items:center;">${html}</span>`;
 }
 
-// ========== 头像背景 SVG（占位图路径已改） ==========
+// ========== 头像组件 ==========
 function renderAvatarSVG(id, traitColor, supportColor, size = 300) {
   const traitHex = getColorHex(traitColor), supportHex = getColorHex(supportColor);
   const imgId = `avatar-img-${id}`;
@@ -136,40 +117,10 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 300) {
         <rect x="263" y="44" width="15" height="128" fill="url(#gr-${id})"/>
       </mask>
     </defs>
-    <!-- 占位图路径已改为 image/misc/00000.png -->
     <image id="${imgId}" href="image/misc/00000.png" x="22" y="44" width="256" height="256" mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet"/>
   </svg>`;
 }
 
-// 生成完整的头像组件 (包含图标和星星)
-function renderAvatarComponent(indexEntry, size = 75) {
-  const id = indexEntry.id;
-  const traitColor = getField(indexEntry, 'trait_color_name');
-  const supportColor = getField(indexEntry, 'support_color_name');
-  const attrId = (indexEntry.attack_attributes || [])[0];
-  const roleId = indexEntry.role;
-
-  const attrIcon = attrId ? `<img src="image/misc/attack_attribute_${attrId}.png" class="attr-icon" alt="">` : '';
-  const roleIcon = roleId ? `<img src="image/misc/role_${roleId}.png" class="role-icon" alt="">` : '';
-
-  const stars = renderStars(indexEntry.initial_rarity);
-  const svg = renderAvatarSVG(id, traitColor, supportColor, 300);
-
-  return `
-    <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative; display:flex; flex-direction:column; align-items:center; margin-bottom:4px;">
-      <div class="avatar-icons-layer" style="position:absolute; top:0; left:0; right:0; bottom:0; pointer-events:none;">
-        ${attrIcon}
-        ${roleIcon}
-      </div>
-      <div class="avatar-svg-container" style="transform:scale(${size/300}); transform-origin:0 0; width:300px; height:300px;">
-        ${svg}
-      </div>
-    </div>
-    ${stars}
-  `;
-}
-
-// ========== 异步加载真实头像（路径仍是 image/character/） ==========
 function initAvatar(card, id) {
   const img = card.querySelector(`#avatar-img-${id}`);
   if (!img) return;
@@ -178,7 +129,52 @@ function initAvatar(card, id) {
   test.src = `image/character/${id}.png`;
 }
 
-// ========== 调和模块（展开后底部） ==========
+function renderAvatarComponent(indexEntry, size = 75) {
+  const id = indexEntry.id;
+  const traitColor = getField(indexEntry, 'trait_color_name');
+  const supportColor = getField(indexEntry, 'support_color_name');
+  const attrId = (indexEntry.attack_attributes || [])[0];
+  const roleId = indexEntry.role;
+
+  const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
+  const starCount = starCountMap[indexEntry.initial_rarity] || 0;
+  const starWidth = 33.5, starHeight = 32;
+  const totalWidth = starCount * starWidth;
+  const startX = (300 - totalWidth) / 2;
+  const startY = 300 - starHeight;
+  const starsContainer = starCount > 0
+    ? `<div style="position:absolute; left:${startX}px; top:${startY}px; width:${totalWidth}px; height:${starHeight}px;">${renderStarGroup(indexEntry.initial_rarity, 0.5)}</div>`
+    : '';
+
+  const attrIcon = attrId ? `<img src="image/misc/attack_attribute_${attrId}.png" class="attr-icon" style="position:absolute; left:0px; top:0px; width:29.5px; height:28px;" alt="">` : '';
+
+  let roleIcon = '';
+  if (roleId) {
+    const rolePos = {
+      1: { left: 272.875, top: 2.375, width: 24, height: 24 },
+      2: { left: 269.75, top: 0, width: 30.25, height: 28.75 },
+      3: { left: 269.875, top: 1.25, width: 30, height: 26.25 },
+      4: { left: 270, top: 2, width: 29.75, height: 24.75 }
+    };
+    const p = rolePos[roleId] || rolePos[1];
+    roleIcon = `<img src="image/misc/role_${roleId}.png" class="role-icon" style="position:absolute; left:${p.left}px; top:${p.top}px; width:${p.width}px; height:${p.height}px;" alt="">`;
+  }
+
+  const svg = renderAvatarSVG(id, traitColor, supportColor, 300);
+
+  return `
+    <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative; overflow:hidden;">
+      <div class="avatar-svg-container" style="transform:scale(${size/300}); transform-origin:0 0; width:300px; height:300px;">
+        ${svg}
+        ${starsContainer}
+        ${attrIcon}
+        ${roleIcon}
+      </div>
+    </div>
+  `;
+}
+
+// ========== 调和模块 ==========
 function renderSynthesisModule(char) {
   const traitName = getField(char, 'trait_color_name') || '?';
   const supportName = getField(char, 'support_color_name') || '?';
@@ -205,8 +201,6 @@ function createCard(indexEntry) {
 
   const baseName = getField(indexEntry, 'base_character_name') || (currentLang === 'cn' ? (indexEntry.name_cn || indexEntry.name_ja) : indexEntry.name_ja);
   const alias = indexEntry.another_name || '';
-  const maxStars = rarityToStars(indexEntry.max_rarity);
-  const maxRarity = indexEntry.max_rarity || 8;
   const role = getField(indexEntry, 'role_name');
   const tags = (getField(indexEntry, 'tag_names') || []).slice(0, 3);
   const releaseDate = indexEntry.start_at ? new Date(indexEntry.start_at).toLocaleDateString('ja-JP') : '—';
@@ -222,7 +216,6 @@ function createCard(indexEntry) {
 
   const traits = [...(getField(indexEntry, 'battle_tool_trait_names')||[]), ...(getField(indexEntry, 'equipment_tool_trait_names')||[])];
 
-  // 使用新的头像组件
   const avatarHTML = renderAvatarComponent(indexEntry, 75);
 
   card.innerHTML = `<div class="card-header">
@@ -237,7 +230,10 @@ function createCard(indexEntry) {
         <div class="inline-traits">${traits.map(t => `<span class="trait-tag">${t}</span>`).join('')}</div>
       </div>
       <div class="p2-col p2-col2">
-        <div class="max-rarity" style="color:${maxRarity===8?'#ff69b4':'#b8860b'}">${t('maxRarityLabel')}${maxStars}</div>
+        <div class="max-rarity-row">
+          <span class="max-rarity-label">${t('maxRarityLabel')}</span>
+          ${renderStarGroup(indexEntry.max_rarity, 0.5)}
+        </div>
         <div class="tags">${tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
         <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
         <div class="stats-row">${statCards}</div>
@@ -397,19 +393,18 @@ function renderAllCards() {
   filterCards();
 }
 
-// ========== 详情展开 ==========
 // ========== 详情展开（带固定头部） ==========
 async function toggleCardDetail(id) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
-
-  // 如果已展开，则收起
   if (detailDiv.classList.contains('open')) {
     detailDiv.classList.remove('open');
     const card = detailDiv.closest('.card');
     card.classList.remove('card-sticky');
-    // 移除滚动监听
-    window.removeEventListener('scroll', card._stickyHandler);
+    if (card._stickyHandler) {
+      window.removeEventListener('scroll', card._stickyHandler);
+      delete card._stickyHandler;
+    }
     return;
   }
 
@@ -421,7 +416,6 @@ async function toggleCardDetail(id) {
     if (!char) throw new Error('角色数据为空');
     renderDetailContent(id, char, getCardState(id));
 
-    // 为展开的卡片添加固定头部行为
     const card = detailDiv.closest('.card');
     card.classList.add('card-sticky');
     initStickyCard(card);
@@ -430,39 +424,23 @@ async function toggleCardDetail(id) {
   }
 }
 
-// 初始化卡片的固定头部行为
 function initStickyCard(card) {
-  // 移除旧监听
-  if (card._stickyHandler) {
-    window.removeEventListener('scroll', card._stickyHandler);
-  }
+  if (card._stickyHandler) window.removeEventListener('scroll', card._stickyHandler);
 
   const header = card.querySelector('.card-header');
   const detailDiv = card.querySelector('.card-detail');
 
   const handler = () => {
     if (!card.classList.contains('card-sticky')) return;
-
     const headerRect = header.getBoundingClientRect();
-    const cardRect = card.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
-
-    // 头部占视口高度比例（可调整）
-    const maxHeaderRatio = 0.4;
-    const maxHeaderHeight = viewportHeight * maxHeaderRatio;
-
     if (headerRect.top <= 0) {
-      // 头部到达顶部，固定它并让详情可滚动
-      const usedHeight = Math.min(headerRect.height, maxHeaderHeight);
-      const availableHeight = viewportHeight - usedHeight;
-      detailDiv.style.maxHeight = `${availableHeight}px`;
+      detailDiv.style.maxHeight = `${window.innerHeight - header.offsetHeight}px`;
       detailDiv.style.overflowY = 'auto';
       header.style.position = 'sticky';
       header.style.top = '0';
       header.style.zIndex = '5';
       header.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
     } else {
-      // 头部还在视口内，恢复正常
       detailDiv.style.maxHeight = '';
       detailDiv.style.overflowY = '';
       header.style.position = '';
@@ -470,8 +448,6 @@ function initStickyCard(card) {
       header.style.zIndex = '';
       header.style.boxShadow = '';
     }
-
-    // 当详情滚动到底部，头部完全被遮住后，恢复滚动
     if (detailDiv.scrollTop + detailDiv.clientHeight >= detailDiv.scrollHeight - 1) {
       card.classList.remove('card-sticky');
       detailDiv.style.maxHeight = '';
@@ -481,12 +457,12 @@ function initStickyCard(card) {
       header.style.zIndex = '';
       header.style.boxShadow = '';
       window.removeEventListener('scroll', handler);
+      delete card._stickyHandler;
     }
   };
 
   card._stickyHandler = handler;
   window.addEventListener('scroll', handler);
-  // 初始调用一次
   handler();
 }
 
@@ -726,23 +702,16 @@ async function loadBuildTime() {
   try {
     const resp = await fetch('data/meta.json');
     const meta = await resp.json();
-    const buildTime = new Date(meta.build_time); // UTC 时间
-
+    const buildTime = new Date(meta.build_time);
+    const gmt8 = new Date(buildTime.getTime() + 8 * 60 * 60 * 1000);
     const pad = (n) => String(n).padStart(2, '0');
+    const timeStr = `${gmt8.getUTCFullYear()}/${pad(gmt8.getUTCMonth() + 1)}/${pad(gmt8.getUTCDate())} ${pad(gmt8.getUTCHours())}:${pad(gmt8.getUTCMinutes())}:${pad(gmt8.getUTCSeconds())} GMT+08:00`;
 
-    // 1. 默认显示 GMT+8 时间（使用 UTC 方法避免本地时区干扰）
-    const gmt8Timestamp = buildTime.getTime() + 8 * 60 * 60 * 1000;
-    const gmt8 = new Date(gmt8Timestamp);
-    const gmt8Str = `${gmt8.getUTCFullYear()}/${pad(gmt8.getUTCMonth() + 1)}/${pad(gmt8.getUTCDate())} ${pad(gmt8.getUTCHours())}:${pad(gmt8.getUTCMinutes())}:${pad(gmt8.getUTCSeconds())} GMT+08:00`;
-
-    // 2. 检测本地时区偏移（分钟）
-    const localOffset = -new Date().getTimezoneOffset(); // 例如 +480 表示 UTC+8
+    const localOffset = -new Date().getTimezoneOffset();
     if (localOffset === 480) {
-      // 本地就是 GMT+8，直接显示
-      document.getElementById('updateTime').textContent = `更新时间 ${gmt8Str}`;
+      document.getElementById('updateTime').textContent = `更新时间 ${timeStr}`;
     } else {
-      // 本地时区不同，转换为本地时间显示
-      const localStr = `${buildTime.getFullYear()}/${pad(buildTime.getMonth() + 1)}/${pad(buildTime.getDate())} ${pad(buildTime.getHours())}:${pad(buildTime.getMinutes())}:${pad(buildTime.getSeconds())}`;
+      const localStr = buildTime.toLocaleString();
       const sign = localOffset >= 0 ? '+' : '-';
       const hours = Math.floor(Math.abs(localOffset) / 60);
       const minutes = Math.abs(localOffset) % 60;
