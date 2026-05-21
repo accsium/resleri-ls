@@ -138,12 +138,13 @@ function renderAvatarComponent(indexEntry, size = 75) {
   const attrId = (indexEntry.attack_attributes || [])[0];
   const roleId = indexEntry.role;
 
+  // 星星容器
   const starScale = 0.3;
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const starCount = starCountMap[indexEntry.initial_rarity] || 0;
   const starImgPadding = 20;
-  const starRealWidth = Math.round((67 - starImgPadding) * starScale); // (67-20)*0.3 ≈ 14.1 → 14
-  const starHeight = Math.round(64 * starScale);                       // 19.2 → 19
+  const starRealWidth = Math.round((67 - starImgPadding) * starScale);
+  const starHeight = Math.round(64 * starScale);
   const totalWidth = starCount * starRealWidth;
   const startX = (300 - totalWidth) / 2;
   const startY = 300 - starHeight;
@@ -151,19 +152,12 @@ function renderAvatarComponent(indexEntry, size = 75) {
     ? `<div style="position:absolute; left:${startX}px; top:${startY}px; width:${totalWidth}px; height:${starHeight}px;">${renderStarGroup(indexEntry.initial_rarity, starScale)}</div>`
     : '';
 
-  return `
-    <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative;">
-      <div class="avatar-svg-container" style="transform:scale(${size/300}); transform-origin:0 0; width:300px; height:300px;">
-        ${svg}
-        ${starsContainer}
-        ${attrIcon}
-        ${roleIcon}
-      </div>
-    </div>
-  `;
+  // 属性图标
+  const attrIcon = attrId
+    ? `<img src="image/misc/attack_attribute_${attrId}.png" class="attr-icon" style="position:absolute; left:0px; top:0px; width:29.5px; height:28px;" alt="">`
+    : '';
 
-  const attrIcon = attrId ? `<img src="image/misc/attack_attribute_${attrId}.png" class="attr-icon" style="position:absolute; left:0px; top:0px; width:29.5px; height:28px;" alt="">` : '';
-
+  // 职业图标
   let roleIcon = '';
   if (roleId) {
     const rolePos = {
@@ -176,6 +170,7 @@ function renderAvatarComponent(indexEntry, size = 75) {
     roleIcon = `<img src="image/misc/role_${roleId}.png" class="role-icon" style="position:absolute; left:${p.left}px; top:${p.top}px; width:${p.width}px; height:${p.height}px;" alt="">`;
   }
 
+  // 头像背景 SVG
   const svg = renderAvatarSVG(id, traitColor, supportColor, 300);
 
   return `
