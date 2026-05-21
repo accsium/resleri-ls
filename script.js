@@ -1,4 +1,4 @@
-// ========== 多语言界面文本 ==========
+// ========== 多语言文本 ==========
 const UI_TEXT = {
   ja: {
     pageTitle: 'レスレリ 角色图鉴',
@@ -6,9 +6,6 @@ const UI_TEXT = {
     skillSection: 'スキル',
     abilitySection: 'アビリティ',
     leaderSkillSection: 'リーダースキル',
-    base: 'ベース',
-    series: 'シリーズ',
-    releaseDate: '実装日',
     joinDate: '加入日',
     attribute: '属性',
     role: 'ロール',
@@ -29,13 +26,7 @@ const UI_TEXT = {
     switchText: '切替',
     level: 'Lv. ',
     initialWTLabel: '初期WT',
-    skillType: {
-      normal1: 'スキル1',
-      normal2: 'スキル2',
-      burst: 'バーストスキル',
-      active: 'アクティブスキル',
-      extra: 'EXスキル'
-    },
+    skillType: { normal1: 'スキル1', normal2: 'スキル2', burst: 'バーストスキル', active: 'アクティブスキル', extra: 'EXスキル' },
     statLabels: { hp: 'HP', speed: '速度', attack: '物攻', defense: '物防', magic: '魔攻', mental: '魔防' },
     abilityTitle: '能力',
     supportAbilityTitle: '亜空支援能力',
@@ -46,7 +37,7 @@ const UI_TEXT = {
     clearFilter: 'クリア',
     synthesisTitle: '調和',
     battleTraitTitle: 'バトルアイテム特性',
-    equipTraitTitle: '装備アイテム特性',
+    equipTraitTitle: '装備アイテム特性'
   },
   cn: {
     pageTitle: '蕾斯莱莉 角色图鉴',
@@ -54,9 +45,6 @@ const UI_TEXT = {
     skillSection: '技能',
     abilitySection: '能力',
     leaderSkillSection: '队长技能',
-    base: '原型',
-    series: '系列',
-    releaseDate: '实装日期',
     joinDate: '加入日期',
     attribute: '属性',
     role: '职业',
@@ -77,13 +65,7 @@ const UI_TEXT = {
     switchText: '切换',
     level: 'Lv. ',
     initialWTLabel: '初始WT',
-    skillType: {
-      normal1: '第一技能',
-      normal2: '第二技能',
-      burst: '爆发技能',
-      active: '主动技能',
-      extra: 'EX技能'
-    },
+    skillType: { normal1: '第一技能', normal2: '第二技能', burst: '爆发技能', active: '主动技能', extra: 'EX技能' },
     statLabels: { hp: 'HP', speed: '速度', attack: '物攻', defense: '物防', magic: '魔攻', mental: '魔防' },
     abilityTitle: '能力',
     supportAbilityTitle: '亚空支援能力',
@@ -94,31 +76,25 @@ const UI_TEXT = {
     clearFilter: '清除',
     synthesisTitle: '调和',
     battleTraitTitle: '战斗道具特性',
-    equipTraitTitle: '装备道具特性',
+    equipTraitTitle: '装备道具特性'
   }
 };
 
 const COLOR_MAP = {
   '赤': '#E74C3C', '青': '#3498DB', '緑': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
   '红': '#E74C3C', '蓝': '#3498DB', '绿': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
-  '白': '#FFFFFF', '黒': '#333333', '黑': '#333333',
+  '白': '#FFFFFF', '黒': '#333333', '黑': '#333333'
 };
 
 let currentLang = 'cn';
-function t(key) { return UI_TEXT[currentLang][key] || key; }
-function getField(obj, field) {
-  if (currentLang === 'cn' && obj[field + '_cn'] !== undefined) return obj[field + '_cn'];
-  return obj[field + '_ja'] || obj[field] || '';
-}
-function rarityToStars(r) {
-  const map = {1:'★',2:'★★',3:'★★★',4:'★★★☆',5:'★★★★',6:'★★★★☆',7:'★★★★★',8:'★★★★★★'};
-  return map[r] || '★'.repeat(r);
-}
-function getColorHex(name) { return name ? (COLOR_MAP[name] || '#CCCCCC') : '#CCCCCC'; }
+const t = (k) => UI_TEXT[currentLang][k] || k;
+const getField = (o, f) => currentLang === 'cn' && o[f+'_cn'] !== undefined ? o[f+'_cn'] : (o[f+'_ja'] || o[f] || '');
+const rarityToStars = r => ({1:'★',2:'★★',3:'★★★',4:'★★★☆',5:'★★★★',6:'★★★★☆',7:'★★★★★',8:'★★★★★★'}[r] || '★'.repeat(r));
+const getColorHex = n => n ? (COLOR_MAP[n] || '#CCCCCC') : '#CCCCCC';
 
 let cardStates = {};
 
-const AVAILABLE_SORT_FIELDS = [
+const SORT_FIELDS = [
   { field: 'start_at', label_ja: '実装日', label_cn: '实装日期', priority: 0 },
   { field: 'initial_rarity', label_ja: '初期レアリティ', label_cn: '初始稀有度', priority: 1 },
   { field: 'id', label_ja: 'ID', label_cn: 'ID', priority: 2 },
@@ -127,109 +103,58 @@ const AVAILABLE_SORT_FIELDS = [
   { field: 'base_character_id', label_ja: 'ベースキャラ', label_cn: '原型', priority: 5 },
   { field: 'original_title_id', label_ja: 'シリーズ', label_cn: '系列', priority: 6 },
   { field: 'trait_color_id', label_ja: '調和色-左', label_cn: '调和颜色-左', priority: 7 },
-  { field: 'support_color_id', label_ja: '調和色-右', label_cn: '调和颜色-右', priority: 8 },
+  { field: 'support_color_id', label_ja: '調和色-右', label_cn: '调和颜色-右', priority: 8 }
 ];
 
 // ========== 头像组件 ==========
 function renderAvatar(id, traitColor, supportColor, size = 300) {
-  const traitHex = getColorHex(traitColor);
-  const supportHex = getColorHex(supportColor);
-  const fallbackPath = `image/character/00000.png`;
+  const traitHex = getColorHex(traitColor), supportHex = getColorHex(supportColor);
   const imgId = `avatar-img-${id}`;
-
-  return `
-    <svg width="${size}" height="${size}" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-      <!-- 背景菱形 -->
-      <polygon points="150,0 0,150 150,300" fill="${traitHex}" />
-      <polygon points="150,0 300,150 150,300" fill="${supportHex}" />
-
-      <defs>
-        <!-- 顶部渐变：从上到下由透明逐渐变为不透明 -->
-        <linearGradient id="grad-top-${id}" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="black" />
-          <stop offset="100%" stop-color="white" />
-        </linearGradient>
-        <!-- 左侧渐变：从左到右由透明逐渐变为不透明 -->
-        <linearGradient id="grad-left-${id}" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="black" />
-          <stop offset="100%" stop-color="white" />
-        </linearGradient>
-        <!-- 右侧渐变：从右到左由透明逐渐变为不透明 -->
-        <linearGradient id="grad-right-${id}" x1="1" y1="0" x2="0" y2="0">
-          <stop offset="0%" stop-color="black" />
-          <stop offset="100%" stop-color="white" />
-        </linearGradient>
-
-        <mask id="mask-${id}">
-          <!-- 上部矩形区域（高128） -->
-          <rect x="22" y="44" width="256" height="128" fill="white" />
-          <!-- 底部三角形区域 -->
-          <polygon points="22,172 278,172 150,300" fill="white" />
-
-          <!-- 顶部羽化 15px -->
-          <rect x="22" y="44" width="256" height="15" fill="url(#grad-top-${id})" />
-          <!-- 左侧羽化 15px（仅矩形区域，高度128） -->
-          <rect x="22" y="44" width="15" height="128" fill="url(#grad-left-${id})" />
-          <!-- 右侧羽化 15px（仅矩形区域，高度128，x坐标已修正为263） -->
-          <rect x="263" y="44" width="15" height="128" fill="url(#grad-right-${id})" />
-        </mask>
-      </defs>
-
-      <!-- 头像图片（应用羽化蒙版） -->
-      <image id="${imgId}" href="${fallbackPath}" x="22" y="44" width="256" height="256"
-             mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet" />
-    </svg>
-  `;
+  return `<svg width="${size}" height="${size}" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="150,0 0,150 150,300" fill="${traitHex}"/><polygon points="150,0 300,150 150,300" fill="${supportHex}"/>
+    <defs>
+      <linearGradient id="gt-${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/></linearGradient>
+      <linearGradient id="gl-${id}" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/></linearGradient>
+      <linearGradient id="gr-${id}" x1="1" y1="0" x2="0" y2="0"><stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/></linearGradient>
+      <mask id="mask-${id}">
+        <rect x="22" y="44" width="256" height="128" fill="white"/><polygon points="22,172 278,172 150,300" fill="white"/>
+        <rect x="22" y="44" width="256" height="15" fill="url(#gt-${id})"/>
+        <rect x="22" y="44" width="15" height="128" fill="url(#gl-${id})"/>
+        <rect x="263" y="44" width="15" height="128" fill="url(#gr-${id})"/>
+      </mask>
+    </defs>
+    <image id="${imgId}" href="image/character/00000.png" x="22" y="44" width="256" height="256" mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet"/>
+  </svg>`;
 }
 
 function initAvatar(card, id) {
   const img = card.querySelector(`#avatar-img-${id}`);
   if (!img) return;
-  const realSrc = `image/character/${id}.png`;
-  const testImg = new Image();
-  testImg.onload = () => {
-    img.setAttribute('href', realSrc);
-  };
-  testImg.src = realSrc;
+  const test = new Image();
+  test.onload = () => img.setAttribute('href', `image/character/${id}.png`);
+  test.src = `image/character/${id}.png`;
 }
 
-// ========== 调和模块 ==========
+// ========== 调和模块（展开后底部） ==========
 function renderSynthesisModule(char) {
   const traitName = getField(char, 'trait_color_name') || '?';
   const supportName = getField(char, 'support_color_name') || '?';
-  const battleTraits = getField(char, 'battle_tool_trait_names') || [];
-  const equipTraits = getField(char, 'equipment_tool_trait_names') || [];
-  const allTraits = [...battleTraits, ...equipTraits];
-
-  return `
-    <div class="synthesis-module">
-      <div class="synthesis-color-row">
-        <span style="color:${getColorHex(traitName)}">${traitName}</span>
-        <svg width="20" height="20" viewBox="0 0 30 30">
-          <polygon points="15,0 0,15 15,30" fill="${getColorHex(traitName)}" />
-          <polygon points="15,0 30,15 15,30" fill="${getColorHex(supportName)}" />
-        </svg>
-        <span style="color:${getColorHex(supportName)}">${supportName}</span>
-      </div>
-      <div class="synthesis-traits">
-        ${allTraits.map(trait => `<div class="trait-tag">${trait}</div>`).join('')}
-      </div>
+  const traits = [...(getField(char, 'battle_tool_trait_names')||[]), ...(getField(char, 'equipment_tool_trait_names')||[])];
+  return `<div class="synthesis-module">
+    <div class="synthesis-color-row">
+      <span style="color:${getColorHex(traitName)}">${traitName}</span>
+      <svg width="20" height="20" viewBox="0 0 30 30"><polygon points="15,0 0,15 15,30" fill="${getColorHex(traitName)}"/><polygon points="15,0 30,15 15,30" fill="${getColorHex(supportName)}"/></svg>
+      <span style="color:${getColorHex(supportName)}">${supportName}</span>
     </div>
-  `;
+    <div class="synthesis-traits">${traits.map(t => `<div class="trait-tag">${t}</div>`).join('')}</div>
+  </div>`;
 }
 
-// 滑块开关
 function createToggleSwitch(type, checked, label) {
-  return `
-    <label class="toggle-switch" data-type="${type}" title="${label}">
-      <input type="checkbox" ${checked ? 'checked' : ''}>
-      <span class="slider"></span>
-    </label>
-  `;
+  return `<label class="toggle-switch" data-type="${type}" title="${label}"><input type="checkbox" ${checked?'checked':''}><span class="slider"></span></label>`;
 }
 
-// 创建卡片
-// 创建卡片（新布局）
+// ========== 创建卡片（新布局） ==========
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -244,218 +169,163 @@ function createCard(indexEntry) {
   const tags = (getField(indexEntry, 'tag_names') || []).slice(0, 3);
   const releaseDate = indexEntry.start_at ? new Date(indexEntry.start_at).toLocaleDateString('ja-JP') : '—';
   const status = indexEntry.initial_status || {};
-  const initialWT = indexEntry.initial_wt != null ? indexEntry.initial_wt : '—';
+  const initialWT = indexEntry.initial_wt ?? '—';
   const avatarHTML = renderAvatar(indexEntry.id, getField(indexEntry, 'trait_color_name'), getField(indexEntry, 'support_color_name'), 75);
 
   // 基础属性
   const statOrder = ['initialWT', 'hp', 'speed', 'attack', 'defense', 'magic', 'mental'];
   const statCards = statOrder.map(key => {
-    let label, value;
-    if (key === 'initialWT') { label = t('initialWTLabel'); value = initialWT; }
-    else { label = t('statLabels')[key]; value = status[key] ?? '?'; }
+    const label = key === 'initialWT' ? t('initialWTLabel') : t('statLabels')[key];
+    const value = key === 'initialWT' ? initialWT : (status[key] ?? '?');
     return `<div class="stat-card"><div class="stat-label">${label}</div><div class="stat-value">${value}</div></div>`;
   }).join('');
 
-  // 调和词条（用于 P2-1 底部）
-  const battleTraits = getField(indexEntry, 'battle_tool_trait_names') || [];
-  const equipTraits = getField(indexEntry, 'equipment_tool_trait_names') || [];
-  const allTraits = [...battleTraits, ...equipTraits];
+  // 调和词条（P2-1 底部）
+  const traits = [...(getField(indexEntry, 'battle_tool_trait_names')||[]), ...(getField(indexEntry, 'equipment_tool_trait_names')||[])];
 
-  card.innerHTML = `
-    <div class="card-header">
-      <!-- P1: 角色名 + 切换按钮 -->
-      <div class="card-p1">
-        <div class="p1-title">
-          ${baseName}${alias ? `<span class="alias">${alias}</span>` : ''}
-          <span class="char-id">ID:${indexEntry.id}</span>
-        </div>
-        <div class="switch-buttons"></div>
+  card.innerHTML = `<div class="card-header">
+    <div class="card-p1">
+      <div class="p1-title">${baseName}${alias?`<span class="alias">${alias}</span>`:''}<span class="char-id">ID:${indexEntry.id}</span></div>
+      <div class="switch-buttons"></div>
+    </div>
+    <div class="card-p2">
+      <div class="p2-col p2-col1">
+        <div class="avatar-col">${avatarHTML}</div>
+        <div class="initial-rarity">${minStars}</div>
+        <div class="attrs">${getField(indexEntry, 'attack_attribute_names').join(' / ')} | ${role}</div>
+        <div class="inline-traits">${traits.map(t => `<span class="trait-tag">${t}</span>`).join('')}</div>
       </div>
-
-      <!-- P2: 三栏布局 -->
-      <div class="card-p2">
-        <!-- P2-1: 头像、星级、属性、调和词条 -->
-        <div class="p2-col p2-col1">
-          <div class="avatar-col">${avatarHTML}</div>
-          <div class="initial-rarity">${minStars}</div>
-          <div class="attrs">${getField(indexEntry, 'attack_attribute_names').join(' / ')} | ${role}</div>
-          <div class="inline-traits">
-            ${allTraits.map(t => `<span class="trait-tag">${t}</span>`).join('')}
-          </div>
-        </div>
-
-        <!-- P2-2: 最大星级、标签、加入时间、基础属性 -->
-        <div class="p2-col p2-col2">
-          <div class="max-rarity" style="color: ${maxRarity === 8 ? '#ff69b4' : '#b8860b'}">${maxStars}</div>
-          <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-          <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
-          <div class="stats-row">${statCards}</div>
-        </div>
-
-        <!-- P2-3: 展开按钮 -->
-        <div class="p2-col p2-col3">
-          <button class="expand-btn" data-action="toggle" aria-label="展开">
-            <span class="expand-circle">▼</span>
-          </button>
-        </div>
+      <div class="p2-col p2-col2">
+        <div class="max-rarity" style="color:${maxRarity===8?'#ff69b4':'#b8860b'}">${maxStars}</div>
+        <div class="tags">${tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
+        <div class="stats-row">${statCards}</div>
+      </div>
+      <div class="p2-col p2-col3">
+        <button class="expand-btn" data-action="toggle" aria-label="展开">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path d="M8 10 L12 16 L16 10" stroke="#5b6e82" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
       </div>
     </div>
-    <div class="card-detail"></div>
-  `;
+  </div><div class="card-detail"></div>`;
 
-  // 绑定展开按钮
-  const expandBtn = card.querySelector('.expand-btn');
-  expandBtn.addEventListener('click', (e) => {
+  // 展开按钮事件
+  card.querySelector('.expand-btn').onclick = e => {
     e.stopPropagation();
     const detailDiv = card.querySelector('.card-detail');
-    const willBeOpen = !detailDiv.classList.contains('open');
+    const willOpen = !detailDiv.classList.contains('open');
     toggleCardDetail(indexEntry.id);
-    expandBtn.querySelector('.expand-circle').innerHTML = willBeOpen ? '▲' : '▼';
-    expandBtn.setAttribute('aria-label', willBeOpen ? '收起' : '展开');
-  });
-
-  // 异步加载切换按钮状态
-  loadCharacter(indexEntry.id).then(char => {
-    if (char) {
-      updateSwitchButtonsState(card, getCardState(indexEntry.id), char);
+    const svg = card.querySelector('.expand-btn svg');
+    if (svg) {
+      svg.innerHTML = willOpen ? '<path d="M8 14 L12 8 L16 14" stroke="#5b6e82" stroke-width="2" fill="none" stroke-linecap="round"/>' : '<path d="M8 10 L12 16 L16 10" stroke="#5b6e82" stroke-width="2" fill="none" stroke-linecap="round"/>';
     }
-  });
+  };
 
+  // 切换按钮状态
+  loadCharacter(indexEntry.id).then(char => {
+    if (char) updateSwitchButtonsState(card, getCardState(indexEntry.id), char);
+  });
   initAvatar(card, indexEntry.id);
   return card;
 }
 
 function updateSwitchButtonsState(card, state, char) {
-  const buttonsDiv = card.querySelector('.switch-buttons');
-  if (!buttonsDiv || !char) return;
-  const hasEvo = (char._skills || []).some(s => s.post_evolution.length > 0);
+  const div = card.querySelector('.switch-buttons');
+  if (!div || !char) return;
+  const hasEvo = (char._skills||[]).some(s => s.post_evolution.length > 0);
   const hasRange = Object.keys(char._rangeSkills || {}).length > 0;
   const hasTransform = char._transform != null;
-
-  let html = '';
-  if (hasEvo) html += createToggleSwitch('evo', state.evo === 'post', '切换进化状态');
-  if (hasRange) html += createToggleSwitch('range', state.range === 'inrange', '切换范围状态');
-  if (hasTransform) html += createToggleSwitch('transform', state.showTransform, '切换变身状态');
-
-  buttonsDiv.innerHTML = html;
-
-  buttonsDiv.querySelectorAll('.toggle-switch input').forEach(input => {
-    input.addEventListener('change', (e) => {
-      const type = e.target.closest('.toggle-switch').dataset.type;
+  div.innerHTML = (hasEvo?createToggleSwitch('evo',state.evo==='post','切换进化状态'):'') +
+                  (hasRange?createToggleSwitch('range',state.range==='inrange','切换范围状态'):'') +
+                  (hasTransform?createToggleSwitch('transform',state.showTransform,'切换变身状态'):'');
+  div.querySelectorAll('.toggle-switch input').forEach(inp => {
+    inp.onchange = () => {
+      const type = inp.closest('.toggle-switch').dataset.type;
       const id = parseInt(card.dataset.id);
-      const currentState = getCardState(id);
+      const cs = getCardState(id);
       switch(type) {
-        case 'evo': setCardState(id, { evo: currentState.evo === 'post' ? 'pre' : 'post' }); break;
-        case 'range': setCardState(id, { range: currentState.range === 'inrange' ? 'normal' : 'inrange' }); break;
-        case 'transform': setCardState(id, { showTransform: !currentState.showTransform }); break;
+        case 'evo': setCardState(id, { evo: cs.evo === 'post' ? 'pre' : 'post' }); break;
+        case 'range': setCardState(id, { range: cs.range === 'inrange' ? 'normal' : 'inrange' }); break;
+        case 'transform': setCardState(id, { showTransform: !cs.showTransform }); break;
       }
       const detailDiv = card.querySelector('.card-detail.open');
-      if (detailDiv) {
-        const ch = loadedCharacters[id];
-        if (ch) renderDetailContent(id, ch, getCardState(id));
-      }
-    });
+      if (detailDiv) { const ch = loadedCharacters[id]; if (ch) renderDetailContent(id, ch, getCardState(id)); }
+    };
   });
 }
 
-function getCardState(id) {
-  if (!cardStates[id]) cardStates[id] = { evo: 'post', range: 'inrange', showTransform: false };
-  return cardStates[id];
-}
-function setCardState(id, newState) { cardStates[id] = { ...cardStates[id], ...newState }; }
+function getCardState(id) { return cardStates[id] || (cardStates[id] = { evo:'post', range:'inrange', showTransform:false }); }
+function setCardState(id, ns) { cardStates[id] = { ...cardStates[id], ...ns }; }
 
-// ========== 全局数据与业务逻辑 ==========
-let characterIndex = [];
-let loadedCharacters = {};
-let activeSortFields = [...AVAILABLE_SORT_FIELDS].sort((a, b) => a.priority - b.priority);
+// ========== 全局数据与排序 ==========
+let characterIndex = [], loadedCharacters = {};
+let activeSortFields = [...SORT_FIELDS].sort((a,b) => a.priority - b.priority);
 let currentSortOrder = 'desc';
 let activeFilters = { attack_attributes: [], role: [] };
 
-async function loadIndex() {
-  const resp = await fetch('data/character_index.json');
-  characterIndex = await resp.json();
-}
+async function loadIndex() { const r = await fetch('data/character_index.json'); characterIndex = await r.json(); }
 async function loadCharacter(id) {
   if (loadedCharacters[id]) return loadedCharacters[id];
-  const resp = await fetch(`data/${id}.json`);
-  const char = await resp.json();
-  loadedCharacters[id] = char;
-  return char;
+  const r = await fetch(`data/${id}.json`);
+  return loadedCharacters[id] = await r.json();
 }
 
 function compareCharacters(a, b) {
   for (const sf of activeSortFields) {
     const order = currentSortOrder === 'desc' ? -1 : 1;
-    let valA = a[sf.field], valB = b[sf.field];
-    if (Array.isArray(valA)) valA = valA[0];
-    if (Array.isArray(valB)) valB = valB[0];
-    if (valA == null && valB == null) continue;
-    if (valA == null) return 1 * order;
-    if (valB == null) return -1 * order;
-    if (typeof valA === 'string' && typeof valB === 'string') { const cmp = valA.localeCompare(valB); if (cmp !== 0) return cmp * order; }
-    else if (valA < valB) return -1 * order;
-    else if (valA > valB) return 1 * order;
+    let va = a[sf.field], vb = b[sf.field];
+    if (Array.isArray(va)) va = va[0];
+    if (Array.isArray(vb)) vb = vb[0];
+    if (va == null && vb == null) continue;
+    if (va == null) return 1 * order;
+    if (vb == null) return -1 * order;
+    if (typeof va === 'string') { const c = va.localeCompare(vb); if (c) return c * order; }
+    else if (va < vb) return -1 * order; else if (va > vb) return 1 * order;
   }
   return 0;
 }
 
 function applyFilters(char) {
-  if (activeFilters.attack_attributes.length > 0) {
-    const attrs = char.attack_attributes || [];
-    if (!activeFilters.attack_attributes.some(a => attrs.includes(a))) return false;
-  }
-  if (activeFilters.role.length > 0 && !activeFilters.role.includes(char.role)) return false;
+  if (activeFilters.attack_attributes.length && !activeFilters.attack_attributes.some(a => (char.attack_attributes||[]).includes(a))) return false;
+  if (activeFilters.role.length && !activeFilters.role.includes(char.role)) return false;
   return true;
 }
 
 function getFilteredAndSortedCharacters() {
-  let filtered = characterIndex.filter(applyFilters);
+  const filtered = characterIndex.filter(applyFilters);
   filtered.sort(compareCharacters);
   return filtered;
 }
 
+// ========== UI 控制 ==========
 function updateUILanguage() {
   document.title = t('pageTitle');
   document.getElementById('pageTitle').textContent = t('pageTitle');
   document.getElementById('searchInput').placeholder = t('searchPlaceholder');
-  buildSortSelect();
-  updateOrderButton();
-  buildFilterPanel();
-  renderAllCards();
+  buildSortSelect(); updateOrderButton(); buildFilterPanel(); renderAllCards();
 }
 
 function buildSortSelect() {
-  const select = document.getElementById('sortSelect');
-  if (!select) return;
-  select.innerHTML = '';
-  const defaultOpt = document.createElement('option');
-  defaultOpt.value = '__default__';
-  defaultOpt.textContent = currentLang === 'cn' ? '默认排序' : 'デフォルト';
-  if (activeSortFields[0]?.field === 'start_at' && activeSortFields[1]?.field === 'id') defaultOpt.selected = true;
-  select.appendChild(defaultOpt);
-  AVAILABLE_SORT_FIELDS.forEach(sf => {
+  const sel = document.getElementById('sortSelect');
+  if (!sel) return;
+  sel.innerHTML = '';
+  SORT_FIELDS.forEach(sf => {
     const opt = document.createElement('option');
     opt.value = sf.field;
     opt.textContent = currentLang === 'cn' ? sf.label_cn : sf.label_ja;
     if (activeSortFields[0]?.field === sf.field) opt.selected = true;
-    select.appendChild(opt);
+    sel.appendChild(opt);
   });
-  select.onchange = () => {
-    const chosenField = select.value;
-    if (chosenField === '__default__') {
-      activeSortFields = [...AVAILABLE_SORT_FIELDS].sort((a, b) => a.priority - b.priority);
-    } else {
-      const newList = [...AVAILABLE_SORT_FIELDS];
-      const idx = newList.findIndex(sf => sf.field === chosenField);
-      if (idx !== -1) {
-        const [chosen] = newList.splice(idx, 1);
-        newList.unshift(chosen);
-        activeSortFields = newList.sort((a, b) => {
-          if (a.field === chosen.field) return -1;
-          if (b.field === chosen.field) return 1;
-          return a.priority - b.priority;
-        });
-      }
+  sel.onchange = () => {
+    const field = sel.value;
+    const list = [...SORT_FIELDS];
+    const idx = list.findIndex(sf => sf.field === field);
+    if (idx !== -1) {
+      const [chosen] = list.splice(idx, 1);
+      list.unshift(chosen);
+      activeSortFields = list.sort((a,b) => (a.field===field ? -1 : b.field===field ? 1 : a.priority-b.priority));
     }
     renderAllCards();
   };
@@ -469,36 +339,23 @@ function updateOrderButton() {
 }
 
 function buildFilterPanel() {
-  const attrDiv = document.getElementById('attrFilters');
-  const roleDiv = document.getElementById('roleFilters');
+  const attrDiv = document.getElementById('attrFilters'), roleDiv = document.getElementById('roleFilters');
   if (!attrDiv || !roleDiv) return;
-  const attrMap = {1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'};
-  const attrMapCn = {1:'斩',2:'打',3:'突',5:'火',6:'冰',7:'雷',8:'风'};
-  attrDiv.innerHTML = Object.entries(attrMap).map(([id, name]) => {
-    const label = currentLang === 'cn' ? attrMapCn[id] : name;
-    return `<label><input type="checkbox" value="${id}" class="attr-check">${label}</label>`;
-  }).join('');
-  const roleMap = {1:'攻',2:'破',3:'防',4:'輔'};
-  const roleMapCn = {1:'攻',2:'破',3:'防',4:'辅'};
-  roleDiv.innerHTML = Object.entries(roleMap).map(([id, name]) => {
-    const label = currentLang === 'cn' ? roleMapCn[id] : name;
-    return `<label><input type="checkbox" value="${id}" class="role-check">${label}</label>`;
-  }).join('');
+  const attrMap = {1:'斬',2:'打',3:'突',5:'火',6:'氷',7:'雷',8:'風'}, attrMapCn = {1:'斩',2:'打',3:'突',5:'火',6:'冰',7:'雷',8:'风'};
+  attrDiv.innerHTML = Object.entries(attrMap).map(([id,name]) => `<label><input type="checkbox" value="${id}" class="attr-check">${currentLang==='cn'?attrMapCn[id]:name}</label>`).join('');
+  const roleMap = {1:'攻',2:'破',3:'防',4:'輔'}, roleMapCn = {1:'攻',2:'破',3:'防',4:'辅'};
+  roleDiv.innerHTML = Object.entries(roleMap).map(([id,name]) => `<label><input type="checkbox" value="${id}" class="role-check">${currentLang==='cn'?roleMapCn[id]:name}</label>`).join('');
 }
 
 function renderAllCards() {
   const container = document.getElementById('cardContainer');
   container.innerHTML = '';
   const cards = getFilteredAndSortedCharacters().map(c => createCard(c));
-  cards.forEach(card => container.appendChild(card));
-  // 在卡片插入 DOM 后加载真实头像
-  cards.forEach(card => {
-    const id = parseInt(card.dataset.id);
-    initAvatar(card, id);
-  });
+  cards.forEach(c => { container.appendChild(c); initAvatar(c, parseInt(c.dataset.id)); });
   filterCards();
 }
 
+// ========== 详情展开/渲染 ==========
 async function toggleCardDetail(id) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
@@ -520,14 +377,14 @@ function renderDetailContent(id, char, state) {
   try {
     let activeChar = char;
     if (state.showTransform && char._transform) activeChar = char._transform;
-    detailDiv.innerHTML = generateDetailHTML(activeChar, state);
+    detailDiv.innerHTML = generateDetailHTML(activeChar, state, id, char);
     bindInnerButtons(id, activeChar, char, state);
   } catch (e) {
     detailDiv.innerHTML = `<div class="no-data">渲染失败：${e.message || e}</div>`;
   }
 }
 
-function generateDetailHTML(activeChar, state) {
+function generateDetailHTML(activeChar, state, id, originalChar) {
   let html = '';
   const allSkillTypes = [];
 
@@ -617,6 +474,11 @@ function generateDetailHTML(activeChar, state) {
     html += `<div class="content-block">${supportAbility ? renderAbilityCard(supportAbility) : `<div class="no-data">${t('none')}</div>`}</div>`;
   }
 
+  // 在能力之后添加调和模块
+  if (originalChar) {
+    html += `<div id="synthesis-bottom">${renderSynthesisModule(originalChar)}</div>`;
+  }
+
   return html;
 }
 
@@ -693,12 +555,10 @@ function bindInnerButtons(id, activeChar, originalChar, state) {
 
 function filterCards() {
   const q = document.getElementById('searchInput').value.toLowerCase();
-  document.querySelectorAll('.card').forEach(c => {
-    const name = c.querySelector('.card-title')?.textContent?.toLowerCase() || '';
-    c.style.display = name.includes(q) ? '' : 'none';
-  });
+  document.querySelectorAll('.card').forEach(c => c.style.display = c.querySelector('.p1-title')?.textContent?.toLowerCase().includes(q) ? '' : 'none');
 }
 
+// ========== 筛选面板事件 ==========
 document.getElementById('applyFilterBtn').onclick = () => {
   activeFilters.attack_attributes = Array.from(document.querySelectorAll('.attr-check:checked')).map(cb => parseInt(cb.value));
   activeFilters.role = Array.from(document.querySelectorAll('.role-check:checked')).map(cb => parseInt(cb.value));
@@ -721,21 +581,22 @@ document.getElementById('orderToggle').onclick = () => {
   renderAllCards();
 };
 
+// 语言切换（保持展开卡片）
 document.getElementById('btn-ja').onclick = () => switchLang('ja');
 document.getElementById('btn-cn').onclick = () => switchLang('cn');
 async function switchLang(lang) {
   if (currentLang === lang) return;
-  const openedCard = document.querySelector('.card-detail.open');
-  const openedId = openedCard ? parseInt(openedCard.closest('.card').dataset.id) : null;
+  const opened = document.querySelector('.card-detail.open');
+  const openedId = opened ? parseInt(opened.closest('.card').dataset.id) : null;
   currentLang = lang;
-  document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
-  document.getElementById('btn-cn').classList.toggle('active', lang === 'cn');
+  document.getElementById('btn-ja').classList.toggle('active', lang==='ja');
+  document.getElementById('btn-cn').classList.toggle('active', lang==='cn');
   updateUILanguage();
   if (openedId) {
     await new Promise(r => setTimeout(r, 0));
     const detailDiv = document.querySelector(`.card[data-id="${openedId}"] .card-detail`);
     if (detailDiv && !detailDiv.classList.contains('open')) await toggleCardDetail(openedId);
-    else if (detailDiv && detailDiv.classList.contains('open')) {
+    else if (detailDiv?.classList.contains('open')) {
       const state = getCardState(openedId);
       const ch = loadedCharacters[openedId];
       if (ch) renderDetailContent(openedId, ch, state);
@@ -745,26 +606,8 @@ async function switchLang(lang) {
 
 document.getElementById('btn-refresh').onclick = () => { if (confirm('确定要清除缓存并刷新数据？')) location.reload(true); };
 
-async function loadBuildTime() {
-  try {
-    const resp = await fetch('data/meta.json');
-    const meta = await resp.json();
-    const buildTime = new Date(meta.build_time);
-    const offset = -buildTime.getTimezoneOffset(); // 分钟
-    const hours = Math.floor(Math.abs(offset) / 60);
-    const sign = offset >= 0 ? '+' : '-';
-    const timeStr = buildTime.toLocaleString();
-    const gmt = `GMT${sign}${String(hours).padStart(2, '0')}:00`;
-    document.getElementById('updateTime').textContent = `更新时间 ${timeStr} (${gmt})`;
-  } catch (e) {
-    // 默认按 GMT+8 显示
-    document.getElementById('updateTime').textContent = `更新时间 — (GMT+08:00)`;
-  }
-}
-
 (async () => {
   updateUILanguage();
   await loadIndex();
   renderAllCards();
-  loadBuildTime();   // 添加这一行
 })();
