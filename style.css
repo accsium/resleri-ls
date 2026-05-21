@@ -115,3 +115,22 @@ input:checked + .slider:before { transform: translateX(16px); }
 .no-data { color: #999; font-style: italic; }
 .loading { text-align: center; padding: 30px; color: #888; }
 .avatar-wrapper { width: 75px; height: 75px; overflow: hidden; position: relative; }
+
+/* ========== 展开卡片固定头部 ========== */
+.card-sticky .card-header {
+  background: inherit;
+  transition: box-shadow 0.2s;
+}
+
+.card-detail[style*="overflow-y: auto"]::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card-detail[style*="overflow-y: auto"]::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card-detail[style*="overflow-y: auto"]::-webkit-scrollbar-thumb {
+  background: #c4b8a0;
+  border-radius: 3px;
+}
