@@ -110,6 +110,7 @@ button {
   font-family: inherit;
   outline: none;
   border: none;
+  width: 180px;           /* 固定宽度，防止语言切换时下拉框变宽 */
 }
 
 .order-btn {
@@ -212,12 +213,14 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .header-buttons {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;          /* 防止按钮组被挤压缩小 */
 }
 
 .card-title {
@@ -228,6 +231,10 @@ button {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+  flex: 1;                 /* 允许文字区域占据剩余空间 */
+  overflow: hidden;
+  white-space: nowrap;     /* 强制角色名不换行 */
+  text-overflow: ellipsis; /* 过长时显示省略号 */
 }
 
 .card-title .alias {
@@ -240,6 +247,7 @@ button {
   font-size: 12px;
   color: #888;
   margin-left: 8px;
+  flex-shrink: 0;          /* ID 不换行，不被省略 */
 }
 
 .max-rarity {
@@ -275,6 +283,7 @@ button {
   display: flex;
   gap: 8px;
   align-items: center;
+  flex-shrink: 0;          /* 防止开关容器被挤压变形 */
 }
 
 .toggle-switch {
@@ -282,6 +291,7 @@ button {
   display: inline-block;
   width: 40px;
   height: 24px;
+  flex-shrink: 0;
 }
 
 .toggle-switch input {
@@ -331,6 +341,7 @@ input:checked + .slider:before {
   cursor: pointer;
   padding: 4px 8px;
   line-height: 1;
+  flex-shrink: 0;          /* 防止展开按钮被挤压 */
 }
 
 .expand-btn:hover {
