@@ -1,5 +1,5 @@
-// 生成调和模块 HTML
-function renderHarmonyModule(char) {
+// 生成调和模块 HTML（使用 synthesis）
+function renderSynthesisModule(char) {
   const traitName = getField(char, 'trait_color_name') || '?';
   const supportName = getField(char, 'support_color_name') || '?';
   const battleTraits = getField(char, 'battle_tool_trait_names') || [];
@@ -9,8 +9,8 @@ function renderHarmonyModule(char) {
   const allTraits = [...battleTraits, ...equipTraits];
 
   return `
-    <div class="harmony-module">
-      <div class="harmony-color-row">
+    <div class="synthesis-module">
+      <div class="synthesis-color-row">
         <span style="color:${getColorHex(traitName)}">${traitName}</span>
         <svg width="20" height="20" viewBox="0 0 30 30">
           <polygon points="15,0 0,15 15,30" fill="${getColorHex(traitName)}" />
@@ -18,14 +18,14 @@ function renderHarmonyModule(char) {
         </svg>
         <span style="color:${getColorHex(supportName)}">${supportName}</span>
       </div>
-      <div class="harmony-traits">
+      <div class="synthesis-traits">
         ${allTraits.map(trait => `<div class="trait-tag">${trait}</div>`).join('')}
       </div>
     </div>
   `;
 }
 
-// 创建卡片（布局与之前一致）
+// 创建卡片（新布局）
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -75,8 +75,8 @@ function createCard(indexEntry) {
           <div class="max-rarity" style="color: ${maxRarity === 8 ? '#ff69b4' : '#b8860b'}">${maxStars}</div>
           <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
         </div>
-        <div class="harmony-section">
-          <div class="harmony-placeholder"></div>
+        <div class="synthesis-section">
+          <div class="synthesis-placeholder"></div>
         </div>
       </div>
       <div class="switch-buttons"></div>
@@ -90,9 +90,9 @@ function createCard(indexEntry) {
   // 加载角色详情以填充调和模块和切换按钮
   loadCharacter(indexEntry.id).then(char => {
     if (char) {
-      const harmonySection = card.querySelector('.harmony-section');
-      if (harmonySection) {
-        harmonySection.innerHTML = renderHarmonyModule(char);
+      const synthesisSection = card.querySelector('.synthesis-section');
+      if (synthesisSection) {
+        synthesisSection.innerHTML = renderSynthesisModule(char);
       }
       updateSwitchButtonsState(card, getCardState(indexEntry.id), char);
     }
