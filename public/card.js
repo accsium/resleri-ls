@@ -1,4 +1,30 @@
-// 卡片创建（包含头像）
+// 生成调和模块 HTML
+function renderHarmonyModule(indexEntry) {
+  const traitName = getField(indexEntry, 'trait_color_name');
+  const supportName = getField(indexEntry, 'support_color_name');
+  const battleTraits = getField(indexEntry, 'battle_tool_trait_names') || [];
+  const equipTraits = getField(indexEntry, 'equipment_tool_trait_names') || [];
+
+  return `
+    <div class="harmony-module">
+      <div class="harmony-header">${t('harmonyTitle')}</div>
+      <div class="harmony-color">
+        <span style="color:${getColorHex(traitName)}">${traitName || '?'}</span>
+        <svg width="24" height="24" viewBox="0 0 30 30">
+          <polygon points="15,0 0,15 15,30" fill="${getColorHex(traitName)}" />
+          <polygon points="15,0 30,15 15,30" fill="${getColorHex(supportName)}" />
+        </svg>
+        <span style="color:${getColorHex(supportName)}">${supportName || '?'}</span>
+      </div>
+      <div class="harmony-traits">
+        ${battleTraits.length ? `<div><span class="trait-label">${t('battleTraitTitle')}:</span> ${battleTraits.join('、')}</div>` : ''}
+        ${equipTraits.length ? `<div><span class="trait-label">${t('equipTraitTitle')}:</span> ${equipTraits.join('、')}</div>` : ''}
+      </div>
+    </div>
+  `;
+}
+
+// 创建卡片（包含头像、切换按钮占位、调和模块）
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -14,35 +40,12 @@ function createCard(indexEntry) {
   const status = indexEntry.initial_status || {};
   const initialWT = indexEntry.initial_wt != null ? indexEntry.initial_wt : '—';
 
-  const traitColorName = getField(indexEntry, 'trait_color_name');
-  const supportColorName = getField(indexEntry, 'support_color_name');
-  const colorSwatch = (traitColorName || supportColorName) ? `
-    <div class="color-swatch-inline">
-      <span style="color:${getColorHex(traitColorName)}">${traitColorName || '?'}</span>
-      <svg width="26" height="26" viewBox="0 0 30 30">
-        <polygon points="15,0 0,15 15,30" fill="${getColorHex(traitColorName)}" />
-        <polygon points="15,0 30,15 15,30" fill="${getColorHex(supportColorName)}" />
-      </svg>
-      <span style="color:${getColorHex(supportColorName)}">${supportColorName || '?'}</span>
-    </div>` : '';
-
-  const statCards = `
-    <div class="stats-row">
-      <div class="stat-card"><div class="stat-label">${t('statLabels').hp}</div><div class="stat-value">${status.hp ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').speed}</div><div class="stat-value">${status.speed ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').attack}</div><div class="stat-value">${status.attack ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').defense}</div><div class="stat-value">${status.defense ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').magic}</div><div class="stat-value">${status.magic ?? '?'}</div></div>
-      <div class="stat-card"><div class="stat-label">${t('statLabels').mental}</div><div class="stat-value">${status.mental ?? '?'}</div></div>
-    </div>`;
-
-  const avatarHTML = renderAvatar(indexEntry.id, traitColorName, supportColorName, 75);
+  const avatarHTML = renderAvatar(indexEntry.id, getField(indexEntry, 'trait_color_name'), getField(indexEntry, 'support_color_name'), 75);
+  const harmonyHTML = renderHarmonyModule(indexEntry);
 
   card.innerHTML = `
     <div class="card-header">
-      <div class="avatar-col">
-        <div class="avatar-card-size">${avatarHTML}</div>
-      </div>
+      <div class="avatar-col">${avatarHTML}</div>
       <div class="card-left">
         <div class="card-title">
           ${name}${alias ? `<span class="alias">${alias}</span>` : ''}
@@ -52,11 +55,18 @@ function createCard(indexEntry) {
         <div class="attrs">${attrs} | ${role}</div>
         <div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
         <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
-        ${statCards}
+        <div class="stats-row">
+          <div class="stat-card"><div class="stat-label">${t('statLabels').hp}</div><div class="stat-value">${status.hp ?? '?'}</div></div>
+          <div class="stat-card"><div class="stat-label">${t('statLabels').speed}</div><div class="stat-value">${status.speed ?? '?'}</div></div>
+          <div class="stat-card"><div class="stat-label">${t('statLabels').attack}</div><div class="stat-value">${status.attack ?? '?'}</div></div>
+          <div class="stat-card"><div class="stat-label">${t('statLabels').defense}</div><div class="stat-value">${status.defense ?? '?'}</div></div>
+          <div class="stat-card"><div class="stat-label">${t('statLabels').magic}</div><div class="stat-value">${status.magic ?? '?'}</div></div>
+          <div class="stat-card"><div class="stat-label">${t('statLabels').mental}</div><div class="stat-value">${status.mental ?? '?'}</div></div>
+        </div>
       </div>
       <div class="card-right">
-        ${colorSwatch}
         <div class="switch-buttons"></div>
+        ${harmonyHTML}
       </div>
     </div>
     <div class="card-detail"></div>
@@ -67,19 +77,15 @@ function createCard(indexEntry) {
     toggleCardDetail(indexEntry.id);
   });
 
-  // 异步加载真实头像
-  initAvatar(indexEntry.id);
-
   return card;
 }
 
-// 获取卡片状态
+// 卡片状态读写函数
 function getCardState(id) {
   if (!cardStates[id]) cardStates[id] = { evo: 'post', range: 'inrange', showTransform: false };
   return cardStates[id];
 }
 
-// 设置卡片状态
 function setCardState(id, newState) {
   cardStates[id] = { ...cardStates[id], ...newState };
 }
