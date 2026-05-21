@@ -58,7 +58,6 @@ button {
   gap: 8px;
 }
 
-/* 语言切换按钮（圆形，一个字，白色边框） */
 .lang-btn {
   width: 36px;
   height: 36px;
@@ -81,7 +80,6 @@ button {
   color: #3e4759;
 }
 
-/* 强制刷新按钮（白色边缘） */
 .btn-refresh {
   background: transparent;
   color: #fffeef;
@@ -94,12 +92,11 @@ button {
 }
 
 .btn-refresh:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
-/* 更新时间 */
 .update-time {
-  color: #6bb7ff;                      /* 类似官网链接的蓝色 */
+  color: #6bb7ff;
   font-size: 13px;
   white-space: nowrap;
 }
@@ -214,7 +211,7 @@ button {
 
 .card {
   background: #f4f1e9;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 /* ========== 卡片头部 ========== */
@@ -222,108 +219,37 @@ button {
   padding: 16px;
 }
 
-.card-part1 {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.avatar-section {
-  width: calc(100% / 3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.initial-rarity {
-  font-size: 13px;
-  color: #b8860b;
-  margin-top: 4px;
-}
-
-.attrs {
-  font-size: 13px;
-  color: #555;
-  margin-top: 4px;
-}
-
-.info-section {
-  width: calc(200% / 3);
-  display: flex;
-  flex-direction: column;
-}
-
-.info-header {
+/* P1: 角色名 + 切换按钮 */
+.card-p1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  height: 36px;
+  margin-bottom: 12px;
 }
 
-.header-buttons {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-}
-
-.card-title {
+.p1-title {
   font-size: 20px;
   font-weight: 400;
   color: #3e2e1e;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  flex: 1;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.card-title .alias {
+.p1-title .alias {
   font-size: 14px;
   color: #6b5e8a;
-  font-weight: 400;
+  margin-left: 8px;
 }
 
 .char-id {
   font-size: 12px;
   color: #888;
   margin-left: 8px;
-  flex-shrink: 0;
 }
 
-.max-rarity {
-  font-size: 13px;
-  margin-top: 4px;
-}
-
-.tags {
-  margin-top: 6px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-.tag {
-  background: #e4dcce;
-  color: #404040;
-  padding: 3px 10px;
-  font-size: 11px;
-  display: inline-block;
-  margin-right: 4px;
-  margin-bottom: 2px;
-}
-
-.release-date {
-  font-size: 12px;
-  color: #777;
-  margin-top: 4px;
-}
-
-/* ========== 切换开关（胶囊状） ========== */
+/* 切换按钮容器 */
 .switch-buttons {
   display: flex;
   gap: 8px;
@@ -331,114 +257,97 @@ button {
   flex-shrink: 0;
 }
 
-.toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 24px;
-  flex-shrink: 0;
-}
-
-.toggle-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.2s;
-  border-radius: 24px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: 0.2s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #5b6e82;
-}
-
-input:checked + .slider:before {
-  transform: translateX(16px);
-}
-
-/* ========== 展开/收起按钮 ========== */
-.expand-btn {
-  background: transparent;
-  border: none;
-  color: #5b6e82;
-  font-size: 14px;
-  cursor: pointer;
-  padding: 4px 8px;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.expand-btn:hover {
-  color: #3e4759;
-}
-
-/* ========== 信息下部两列布局 ========== */
-.info-lower {
+/* ========== P2：三栏布局 ========== */
+.card-p2 {
   display: flex;
+  gap: 0;
   align-items: flex-start;
-  gap: 16px;
-  margin-top: 8px;
 }
 
-.info-left {
-  width: 50%;
+.p2-col {
+  padding: 0 16px;
+}
+
+.p2-col1 {
+  width: 30%;
   display: flex;
   flex-direction: column;
-}
-
-.synthesis-section {
-  width: 50%;
-  max-width: 200px;
-}
-
-.synthesis-module {
-  background: #ede8dc;
-  padding: 8px;
-  text-align: center;
-}
-
-.synthesis-color-row {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
-  margin-bottom: 6px;
-  font-size: 13px;
+  border-right: 1px solid #d4c8b0;
 }
 
+.p2-col2 {
+  width: 50%;
+  border-right: 1px solid #d4c8b0;
+}
+
+.p2-col3 {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+}
+
+/* P2-1 内容 */
+.avatar-col {
+  margin-bottom: 8px;
+}
+
+.initial-rarity {
+  font-size: 13px;
+  color: #b8860b;
+  margin-bottom: 4px;
+}
+
+.attrs {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.inline-traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  justify-content: center;
+}
+
+/* P2-2 内容 */
+.max-rarity {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.tags {
+  margin-bottom: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag,
 .trait-tag {
-  display: block;
   background: #e4dcce;
   color: #404040;
   padding: 3px 10px;
   font-size: 11px;
-  margin-bottom: 3px;
+  display: inline-block;
 }
 
-/* ========== 下部区域 ========== */
-.card-part2 {
-  margin-top: 12px;
+.tag {
+  margin-right: 4px;
+  margin-bottom: 2px;
+}
+
+.trait-tag {
+  padding: 2px 8px;
+}
+
+.release-date {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 8px;
 }
 
 .stats-row {
@@ -463,6 +372,32 @@ input:checked + .slider:before {
   font-size: 16px;
   color: #3e2e1e;
   margin-top: 2px;
+}
+
+/* P2-3 展开按钮 */
+.expand-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.expand-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #5b6e82;
+  color: #5b6e82;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.expand-circle:hover {
+  background: #5b6e82;
+  color: #fff;
 }
 
 /* ========== 卡片展开详情 ========== */
@@ -584,6 +519,23 @@ input:checked + .slider:before {
   gap: 4px;
 }
 
+/* ========== 调和模块（展开后底部） ========== */
+.synthesis-module {
+  background: #ede8dc;
+  padding: 8px;
+  text-align: center;
+}
+
+.synthesis-color-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+/* ========== 杂项 ========== */
 .no-data {
   color: #999;
   font-style: italic;
@@ -595,7 +547,6 @@ input:checked + .slider:before {
   color: #888;
 }
 
-/* ========== 头像组件 ========== */
 .avatar-wrapper {
   width: 75px;
   height: 75px;
