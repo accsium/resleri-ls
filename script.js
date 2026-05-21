@@ -139,18 +139,22 @@ function renderAvatar(id, traitColor, supportColor, size = 300) {
 
   return `
     <svg width="${size}" height="${size}" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+      <!-- 背景菱形 -->
       <polygon points="150,0 0,150 150,300" fill="${traitHex}" />
       <polygon points="150,0 300,150 150,300" fill="${supportHex}" />
 
       <defs>
+        <!-- 顶部渐变：从上到下由透明逐渐变为不透明 -->
         <linearGradient id="grad-top-${id}" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="black" />
           <stop offset="100%" stop-color="white" />
         </linearGradient>
+        <!-- 左侧渐变：从左到右由透明逐渐变为不透明 -->
         <linearGradient id="grad-left-${id}" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%" stop-color="black" />
           <stop offset="100%" stop-color="white" />
         </linearGradient>
+        <!-- 右侧渐变：从右到左由透明逐渐变为不透明 -->
         <linearGradient id="grad-right-${id}" x1="1" y1="0" x2="0" y2="0">
           <stop offset="0%" stop-color="black" />
           <stop offset="100%" stop-color="white" />
@@ -162,15 +166,16 @@ function renderAvatar(id, traitColor, supportColor, size = 300) {
           <!-- 底部三角形区域 -->
           <polygon points="22,172 278,172 150,300" fill="white" />
 
-          <!-- 顶部羽化 5px -->
-          <rect x="22" y="44" width="256" height="5" fill="url(#grad-top-${id})" />
-          <!-- 左侧羽化 5px（仅矩形区域，高度128） -->
-          <rect x="22" y="44" width="5" height="128" fill="url(#grad-left-${id})" />
-          <!-- 右侧羽化 5px（仅矩形区域，高度128） -->
-          <rect x="273" y="44" width="5" height="128" fill="url(#grad-right-${id})" />
+          <!-- 顶部羽化 15px -->
+          <rect x="22" y="44" width="256" height="15" fill="url(#grad-top-${id})" />
+          <!-- 左侧羽化 15px（仅矩形区域，高度128） -->
+          <rect x="22" y="44" width="15" height="128" fill="url(#grad-left-${id})" />
+          <!-- 右侧羽化 15px（仅矩形区域，高度128，x坐标已修正为263） -->
+          <rect x="263" y="44" width="15" height="128" fill="url(#grad-right-${id})" />
         </mask>
       </defs>
 
+      <!-- 头像图片（应用羽化蒙版） -->
       <image id="${imgId}" href="${fallbackPath}" x="22" y="44" width="256" height="256"
              mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet" />
     </svg>
