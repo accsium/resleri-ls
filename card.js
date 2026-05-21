@@ -5,7 +5,7 @@ function renderHarmonyModule(char) {
   const battleTraits = getField(char, 'battle_tool_trait_names') || [];
   const equipTraits = getField(char, 'equipment_tool_trait_names') || [];
 
-  // 合并所有特性词条
+  // 合并所有特性词条，每个单独一行
   const allTraits = [...battleTraits, ...equipTraits];
 
   return `
@@ -19,13 +19,13 @@ function renderHarmonyModule(char) {
         <span style="color:${getColorHex(supportName)}">${supportName}</span>
       </div>
       <div class="harmony-traits">
-        ${allTraits.map(trait => `<span class="trait-tag">${trait}</span>`).join('')}
+        ${allTraits.map(trait => `<div class="trait-tag">${trait}</div>`).join('')}
       </div>
     </div>
   `;
 }
 
-// 创建卡片
+// 创建卡片（布局与之前一致）
 function createCard(indexEntry) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -109,7 +109,7 @@ function createCard(indexEntry) {
   return card;
 }
 
-// 卡片状态管理（已在 utils.js 中声明 cardStates）
+// 卡片状态管理
 function getCardState(id) {
   if (!cardStates[id]) cardStates[id] = { evo: 'post', range: 'inrange', showTransform: false };
   return cardStates[id];
