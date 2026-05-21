@@ -174,10 +174,9 @@ button {
 /* ========== 卡片头部 ========== */
 .card-header {
   padding: 16px;
-  cursor: pointer;
 }
 
-/* 上部区域 (part1) */
+/* 上部区域 */
 .card-part1 {
   display: flex;
   align-items: flex-start;
@@ -199,6 +198,12 @@ button {
   margin-top: 4px;
 }
 
+.attrs {
+  font-size: 13px;
+  color: #555;
+  margin-top: 4px;
+}
+
 /* 右侧信息区域：占 2/3 宽度 */
 .info-section {
   width: calc(200% / 3);
@@ -210,6 +215,13 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* 按钮组容器 */
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .card-title {
@@ -278,6 +290,21 @@ button {
   color: #fff;
 }
 
+/* 展开/收起按钮（三角形） */
+.expand-btn {
+  background: transparent;
+  border: none;
+  color: #5b6e82;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.expand-btn:hover {
+  color: #3e4759;
+}
+
 /* 信息下部两列布局 */
 .info-lower {
   display: flex;
@@ -292,7 +319,7 @@ button {
   flex-direction: column;
 }
 
-/* 调和模块区域 (右侧列) */
+/* 调和模块区域 */
 .synthesis-section {
   width: 50%;
 }
@@ -321,30 +348,9 @@ button {
   font-size: 11px;
 }
 
-/* 下部区域 (part2) */
+/* 下部区域 */
 .card-part2 {
   margin-top: 12px;
-}
-
-/* 展开/收起按钮 */
-.card-part2 {
-  position: relative;
-}
-
-.expand-btn {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background: transparent;
-  border: none;
-  color: #5b6e82;
-  font-size: 13px;
-  cursor: pointer;
-  padding: 4px 8px;
-}
-
-.expand-btn:hover {
-  text-decoration: underline;
 }
 
 /* 基础属性小卡片 */
