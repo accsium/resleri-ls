@@ -373,10 +373,11 @@ input:checked + .slider:before {
 
 .synthesis-section {
   width: 50%;
+  max-width: 220px;          /* 限制最大宽度，防止过宽 */
 }
 
 .synthesis-module {
-  background: #e4dcce;
+  background: #f4f1e9;      /* 更浅的背景色 */
   padding: 8px;
   text-align: center;
 }
