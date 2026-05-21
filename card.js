@@ -36,7 +36,7 @@ function createCard(indexEntry) {
       <div class="stat-card"><div class="stat-label">${t('statLabels').mental}</div><div class="stat-value">${status.mental ?? '?'}</div></div>
     </div>`;
 
-  const avatarHTML = renderAvatar(indexEntry.id, traitColorName, supportColorName, 1);
+  const avatarHTML = renderAvatar(indexEntry.id, traitColorName, supportColorName);
 
   card.innerHTML = `
     <div class="card-header">
@@ -59,17 +59,6 @@ function createCard(indexEntry) {
     </div>
     <div class="card-detail"></div>
   `;
-
-  // 头像图片加载失败时隐藏
-  const avatarImg = card.querySelector('.avatar-wrapper');
-  if (avatarImg) {
-    const imgEl = avatarImg.querySelector('image');
-    if (imgEl) {
-      imgEl.addEventListener('error', () => {
-        avatarImg.style.display = 'none';
-      });
-    }
-  }
 
   card.querySelector('.card-header').addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON' || e.target.closest('button')) return;
