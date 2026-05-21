@@ -42,6 +42,9 @@ const UI_TEXT = {
     filterLabel: 'フィルター',
     applyFilter: '適用',
     clearFilter: 'クリア',
+    harmonyTitle: '調和',
+    battleTraitTitle: 'バトルアイテム特性',
+    equipTraitTitle: '装備アイテム特性',
   },
   cn: {
     pageTitle: '蕾斯莱莉 角色图鉴',
@@ -85,6 +88,9 @@ const UI_TEXT = {
     filterLabel: '筛选',
     applyFilter: '应用筛选',
     clearFilter: '清除',
+    harmonyTitle: '调和',
+    battleTraitTitle: '战斗道具特性',
+    equipTraitTitle: '装备道具特性',
   }
 };
 
@@ -97,7 +103,6 @@ const COLOR_MAP = {
 
 // 当前语言，默认中文
 let currentLang = 'cn';
-let cardStates = {};
 function t(key) { return UI_TEXT[currentLang][key] || key; }
 function getField(obj, field) {
   if (currentLang === 'cn' && obj[field + '_cn'] !== undefined) return obj[field + '_cn'];
@@ -114,3 +119,19 @@ function rarityToStars(r) {
 function getColorHex(name) {
   return name ? (COLOR_MAP[name] || '#CCCCCC') : '#CCCCCC';
 }
+
+// 卡片状态存储（全局）
+let cardStates = {};
+
+// 可用排序字段（优先级系统）
+const AVAILABLE_SORT_FIELDS = [
+  { field: 'start_at', label_ja: '実装日', label_cn: '实装日期', priority: 0 },
+  { field: 'id', label_ja: 'ID', label_cn: 'ID', priority: 1 },
+  { field: 'initial_rarity', label_ja: '初期レアリティ', label_cn: '初始稀有度', priority: 2 },
+  { field: 'max_rarity', label_ja: '最大レアリティ', label_cn: '最大稀有度', priority: 3 },
+  { field: 'role', label_ja: 'ロール', label_cn: '职业', priority: 4 },
+  { field: 'base_character_id', label_ja: 'ベースキャラ', label_cn: '原型', priority: 5 },
+  { field: 'original_title_id', label_ja: 'シリーズ', label_cn: '系列', priority: 6 },
+  { field: 'trait_color_id', label_ja: '調和色-左', label_cn: '调和颜色-左', priority: 7 },
+  { field: 'support_color_id', label_ja: '調和色-右', label_cn: '调和颜色-右', priority: 8 },
+];
