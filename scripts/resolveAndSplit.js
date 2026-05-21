@@ -17,7 +17,7 @@ for (const [entityName, entityConfig] of Object.entries(config.entities)) {
   tables[entityName] = new Map(raw.map(item => [item[entityConfig.idField], item]));
 }
 
-// ========== 2. 加载翻译映射表（支持 name_cn） ==========
+// ========== 2. 加载翻译映射表 ==========
 function loadMapFile(name, lang) {
   const folder = lang === 'cn' ? 'cn' : 'jp';
   const filePath = path.join(dataDir, folder, `${name}.json`);
@@ -189,14 +189,12 @@ function buildLocalizedChar(character, lang) {
     char.trait_color_name_ja = jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
   }
   if (char.support_color_id != null) {
-    // support_color 与 trait_color 共用同一张表
     char.support_color_name_ja = jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
   }
   if (char.battle_tool_trait_ids) {
     char.battle_tool_trait_names_ja = char.battle_tool_trait_ids.map(id => jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
   }
 
-  // 中文名称
   char.tag_names_cn = (char.tag_ids || []).map(id => cnMaps.character_tag?.get(id) || jpMaps.character_tag?.get(id) || `ID:${id}`);
   char.base_character_name_cn = cnMaps.base_character?.get(char.base_character_id) || jpMaps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
   char.original_title_name_cn = cnMaps.original_title?.get(char.original_title_id) || jpMaps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
@@ -215,7 +213,6 @@ function buildLocalizedChar(character, lang) {
     char.battle_tool_trait_names_cn = char.battle_tool_trait_ids.map(id => cnMaps.battle_tool_trait?.get(id) || jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
   }
 
-  // 技能/能力详情
   char._skillDetails = buildSkillDetails(character);
   const targetMapJa = jpMaps.skill_target_type;
   const targetMapCn = cnMaps.skill_target_type;
@@ -231,7 +228,6 @@ function buildLocalizedChar(character, lang) {
 
   char._skills = buildSkillsArray(char, char._skillDetails);
 
-  // EX 技能处理
   const extraIds = char.extra_skill_ids || [];
   const normalEx = [];
   const rangeGroups = {};
@@ -275,7 +271,7 @@ function buildLocalizedChar(character, lang) {
   return char;
 }
 
-// ========== 8. 生成索引条目（双语） ==========
+// ========== 8. 生成索引条目 ==========
 function buildIndexEntry(character) {
   let defaultWait = 0;
   const evolvedNormal2 = character.evolved_normal2_skill_ids;
@@ -319,54 +315,8 @@ function buildIndexEntry(character) {
     battle_tool_trait_names_cn: (character.battle_tool_trait_ids || []).map(id => cnMaps.battle_tool_trait?.get(id) || ''),
     equipment_tool_trait_names_ja: (character.equipment_tool_trait_ids || []).map(id => jpMaps.equipment_tool_trait?.get(id) || ''),
     equipment_tool_trait_names_cn: (character.equipment_tool_trait_ids || []).map(id => cnMaps.equipment_tool_trait?.get(id) || ''),
-    // 新增基础角色名
     base_character_name_ja: jpMaps.base_character?.get(character.base_character_id) || null,
     base_character_name_cn: cnMaps.base_character?.get(character.base_character_id) || null,
-  };
-}
-  // 计算默认初始WT（与前端逻辑一致）
-  let defaultWait = 0;
-  const evolvedNormal2 = character.evolved_normal2_skill_ids;
-  const normal2 = character.normal2_skill_ids;
-  const skillIdsToCheck = (evolvedNormal2 && evolvedNormal2.length > 0) ? evolvedNormal2 : (normal2 || []);
-  if (skillIdsToCheck.length > 0) {
-    const maxId = Math.max(...skillIdsToCheck);
-    const skillObj = tables.skill?.get(maxId);
-    if (skillObj && typeof skillObj.wait === 'number') defaultWait = skillObj.wait;
-  }
-  const speed = character.initial_status?.speed;
-  const initialWT = (speed != null && speed > 0) ? Math.floor(57600 / speed + defaultWait) : null;
-
-  return {
-    id: character.id,
-    name_ja: character.name,
-    name_cn: character.name,
-    another_name: character.another_name,
-    initial_rarity: character.initial_rarity,
-    max_rarity: character.max_rarity,
-    role: character.role,
-    attack_attributes: character.attack_attributes,
-    tag_names_ja: (character.tag_ids || []).map(id => jpMaps.character_tag?.get(id) || `ID:${id}`),
-    tag_names_cn: (character.tag_ids || []).map(id => cnMaps.character_tag?.get(id) || jpMaps.character_tag?.get(id) || `ID:${id}`),
-    attack_attribute_names_ja: (character.attack_attributes || []).map(id => jpMaps.attack_attribute?.get(id) || `ID:${id}`),
-    attack_attribute_names_cn: (character.attack_attributes || []).map(id => cnMaps.attack_attribute?.get(id) || jpMaps.attack_attribute?.get(id) || `ID:${id}`),
-    role_name_ja: jpMaps.role?.get(character.role) || `ID:${character.role}`,
-    role_name_cn: cnMaps.role?.get(character.role) || jpMaps.role?.get(character.role) || `ID:${character.role}`,
-    base_character_id: character.base_character_id || null,
-    original_title_id: character.original_title_id || null,
-    trait_color_id: character.trait_color_id || null,
-    support_color_id: character.support_color_id || null,
-    start_at: character.start_at || null,
-    initial_status: character.initial_status,
-    initial_wt: initialWT,
-    trait_color_name_ja: jpMaps.trait_color?.get(character.trait_color_id) || null,
-    trait_color_name_cn: cnMaps.trait_color?.get(character.trait_color_id) || null,
-    support_color_name_ja: jpMaps.trait_color?.get(character.support_color_id) || null,
-    support_color_name_cn: cnMaps.trait_color?.get(character.support_color_id) || null,
-    battle_tool_trait_names_ja: (character.battle_tool_trait_ids || []).map(id => jpMaps.battle_tool_trait?.get(id) || ''),
-    battle_tool_trait_names_cn: (character.battle_tool_trait_ids || []).map(id => cnMaps.battle_tool_trait?.get(id) || ''),
-    equipment_tool_trait_names_ja: (character.equipment_tool_trait_ids || []).map(id => jpMaps.equipment_tool_trait?.get(id) || ''),
-    equipment_tool_trait_names_cn: (character.equipment_tool_trait_ids || []).map(id => cnMaps.equipment_tool_trait?.get(id) || ''),
   };
 }
 
@@ -376,7 +326,6 @@ if (!tables.character) {
   process.exit(1);
 }
 
-// 读取排除列表
 const excludeFile = path.join(__dirname, '..', 'config', 'exclude.txt');
 let excludeIds = new Set();
 if (fs.existsSync(excludeFile)) {
@@ -388,7 +337,6 @@ if (fs.existsSync(excludeFile)) {
   console.log(`📋 已加载排除角色 ID：${excludeIds.size} 个`);
 }
 
-// 读取变身配置
 const transformFile = path.join(__dirname, '..', 'config', 'transform.json');
 let transformPairs = [];
 let hiddenTransformIds = new Set();
@@ -401,13 +349,11 @@ if (fs.existsSync(transformFile)) {
   console.log(`🔄 已加载变身配对：${pairs.length} 组`);
 }
 
-// 过滤角色
 let visibleCharacters = Array.from(tables.character.values()).filter(c =>
   !excludeIds.has(c.id) && !hiddenTransformIds.has(c.id)
 );
 console.log(`👥 列表显示角色数量：${visibleCharacters.length}`);
 
-// 输出目录
 const outDir = publicDataDir;
 if (fs.existsSync(outDir)) {
   fs.rmSync(outDir, { recursive: true, force: true });
@@ -417,7 +363,6 @@ fs.mkdirSync(outDir, { recursive: true });
 const pairedIds = new Set();
 const index = [];
 
-// 处理变身配对
 transformPairs.forEach(pair => {
   const [firstId, secondId] = pair;
   pairedIds.add(firstId);
@@ -439,7 +384,6 @@ transformPairs.forEach(pair => {
   }
 });
 
-// 处理其他角色
 visibleCharacters.forEach(char => {
   if (pairedIds.has(char.id)) return;
   const localizedChar = buildLocalizedChar(char);
