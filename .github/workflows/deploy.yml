@@ -3,6 +3,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+      - 'config/**'
+      - 'public/**'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:
@@ -14,6 +20,8 @@ jobs:
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
       - name: 设置 Node.js
         uses: actions/setup-node@v4
