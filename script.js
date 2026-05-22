@@ -103,20 +103,19 @@ function renderStarGroup(rarity, scale = 1) {
 }
 
 // ========== 头像组件（职业左上，属性右上，星星底边居中） ==========
-// 生成菱形背景 SVG（带外发光，360×360，遮罩无外发光）
+// 生成菱形背景 SVG（带外发光，360×360）
 function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
   const traitHex = getColorHex(traitColor);
   const supportHex = getColorHex(supportColor);
   const imgId = `avatar-img-${id}`;
 
-  return `<svg width="${size}" height="${size}" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+  return `<svg width="${size}" height="${size}" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
     <defs>
-      <filter id="glow-left-${id}" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+      <!-- 通用模糊滤镜 -->
+      <filter id="blur-${id}" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="8"/>
       </filter>
-      <filter id="glow-right-${id}" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
-      </filter>
+
       <linearGradient id="gt-${id}" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
       </linearGradient>
@@ -135,12 +134,15 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
       </mask>
     </defs>
 
-    <!-- 左侧三角形（带外发光） -->
-    <polygon points="180,0 0,180 180,360" fill="${traitHex}" filter="url(#glow-left-${id})"/>
-    <!-- 右侧三角形（带外发光） -->
-    <polygon points="180,0 360,180 180,360" fill="${supportHex}" filter="url(#glow-right-${id})"/>
+    <!-- 底层模糊三角形（外发光，半透明） -->
+    <polygon points="180,0 0,180 180,360" fill="${traitHex}" fill-opacity="0.4" filter="url(#blur-${id})" style="overflow:visible;"/>
+    <polygon points="180,0 360,180 180,360" fill="${supportHex}" fill-opacity="0.4" filter="url(#blur-${id})" style="overflow:visible;"/>
 
-    <!-- 头像图片（遮罩裁剪，无外发光） -->
+    <!-- 上层清晰三角形 -->
+    <polygon points="180,0 0,180 180,360" fill="${traitHex}"/>
+    <polygon points="180,0 360,180 180,360" fill="${supportHex}"/>
+
+    <!-- 头像图片（遮罩裁剪） -->
     <image id="${imgId}" href="image/misc/00000.png" x="52" y="74" width="256" height="256"
            mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet"/>
   </svg>`;
