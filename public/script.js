@@ -103,7 +103,7 @@ function renderStarGroup(rarity, scale = 1) {
 }
 
 // ========== 头像组件（职业左上，属性右上，星星底边居中） ==========
-// 生成菱形背景 SVG（带外发光，360×360）
+// 生成菱形背景 SVG（带外发光，360×360，遮罩无外发光）
 function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
   const traitHex = getColorHex(traitColor);
   const supportHex = getColorHex(supportColor);
@@ -127,14 +127,10 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
         <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
       </linearGradient>
       <mask id="mask-${id}">
-        <!-- 蒙版形状（平移后） -->
         <rect x="52" y="74" width="256" height="128" fill="white"/>
         <polygon points="52,202 308,202 180,330" fill="white"/>
-        <!-- 顶部羽化 15px -->
         <rect x="52" y="74" width="256" height="15" fill="url(#gt-${id})"/>
-        <!-- 左侧羽化 15px -->
         <rect x="52" y="74" width="15" height="128" fill="url(#gl-${id})"/>
-        <!-- 右侧羽化 15px（x坐标修正） -->
         <rect x="293" y="74" width="15" height="128" fill="url(#gr-${id})"/>
       </mask>
     </defs>
@@ -144,13 +140,13 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
     <!-- 右侧三角形（带外发光） -->
     <polygon points="180,0 360,180 180,360" fill="${supportHex}" filter="url(#glow-right-${id})"/>
 
-    <!-- 头像图片（遮罩裁剪） -->
+    <!-- 头像图片（遮罩裁剪，无外发光） -->
     <image id="${imgId}" href="image/misc/00000.png" x="52" y="74" width="256" height="256"
            mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet"/>
   </svg>`;
 }
 
-// 头像组件（画布 360×360，星星/职业/属性坐标已重算）
+// 头像组件（画布 360×360，星星/职业/属性坐标已重算，且变量作用域修正）
 function renderAvatarComponent(indexEntry, size = 100) {
   const id = indexEntry.id;
   const traitColor = getField(indexEntry, 'trait_color_name');
@@ -159,6 +155,14 @@ function renderAvatarComponent(indexEntry, size = 100) {
   const roleId = indexEntry.role;
 
   const canvasW = 360, canvasH = 360;
+
+  // 职业图标尺寸表（提取到外部以确保属性图标可用）
+  const roleSizes = {
+    1: { w: 96, h: 96 },
+    2: { w: 121, h: 115 },
+    3: { w: 120, h: 105 },
+    4: { w: 119, h: 99 }
+  };
 
   // 背景 SVG（含外发光）
   const svg = renderAvatarSVG(id, traitColor, supportColor, canvasW);
@@ -183,12 +187,6 @@ function renderAvatarComponent(indexEntry, size = 100) {
   // 职业图标（左上角）
   let roleHTML = '';
   if (roleId) {
-    const roleSizes = {
-      1: { w: 96, h: 96 },
-      2: { w: 121, h: 115 },
-      3: { w: 120, h: 105 },
-      4: { w: 119, h: 99 }
-    };
     const r = roleSizes[roleId] || roleSizes[1];
     roleHTML = `<img src="image/misc/role_${roleId}.png" alt=""
       style="position:absolute; left:0; top:0; width:${r.w}px; height:${r.h}px;">`;
