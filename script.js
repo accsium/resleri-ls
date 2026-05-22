@@ -85,24 +85,91 @@ const SORT_FIELDS = [
   { field: 'support_color_id', label_ja: '調和色-右', label_cn: '调和颜色-右', priority: 8 }
 ];
 
-// ========== 星星组件（通用） ==========
-function renderStarGroup(rarity, scale = 0.5) {
+// ========== 星星组件（通用，绝对定位，原始尺寸） ==========
+function renderStarGroup(rarity, scale = 1) {
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const count = starCountMap[rarity] || 0;
   if (count === 0) return '';
   const starFile = rarity === 8 ? 'star_2.png' : 'star_1.png';
-  const w = Math.round(67 * scale);
-  const h = Math.round(64 * scale);
-  const marginStep = -Math.round(20 * scale); // 消除图片内边距
+  const w = 67; // 原始宽度
+  const h = 64;
+  const visibleWidth = w - 20; // 有效宽度
   let html = '';
   for (let i = 0; i < count; i++) {
-    const marginLeft = i === 0 ? '0px' : `${i * marginStep}px`;
-    html += `<img src="image/misc/${starFile}" alt="" style="width:${w}px;height:${h}px;margin-left:${marginLeft};flex-shrink:0;">`;
+    const left = visibleWidth * i - 10; // 绝对定位 left 公式
+    html += `<img src="image/misc/${starFile}" alt="" style="position:absolute; left:${left}px; top:0; width:${w}px; height:${h}px;">`;
   }
-  return `<span class="stars-group" style="display:inline-flex;gap:0;align-items:center;">${html}</span>`;
+  return html;
 }
 
-// ========== 头像组件 ==========
+// ========== 头像组件（所有图标/星星使用原始尺寸，坐标固定） ==========
+function renderAvatarComponent(indexEntry, size = 75) {
+  const id = indexEntry.id;
+  const traitColor = getField(indexEntry, 'trait_color_name');
+  const supportColor = getField(indexEntry, 'support_color_name');
+  const attrId = (indexEntry.attack_attributes || [])[0];
+  const roleId = indexEntry.role;
+
+  // 星星容器：底边对齐，水平居中，可溢出
+  const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
+  const starCount = starCountMap[indexEntry.initial_rarity] || 0;
+  const starVisibleWidth = 47; // 67-20
+  const starTotalWidth = starCount * starVisibleWidth;
+  const starStartX = (300 - starTotalWidth) / 2;
+  const starContainer = starCount > 0
+    ? `<div style="position:absolute; left:${starStartX}px; bottom:0; width:${starTotalWidth}px; height:64px; overflow:visible;">
+        ${renderStarGroup(indexEntry.initial_rarity)}
+      </div>`
+    : '';
+
+  // 属性图标 (118x112) - 与职业图标几何中心水平对齐，对称于 x=150
+  // 职业图标几何中心：职业图标右对齐、顶对齐，几何中心 = (300 - w/2, h/2)
+  let attrIcon = '', roleIcon = '';
+  if (roleId && attrId) {
+    const roleSizes = {
+      1: { w: 96, h: 96 },
+      2: { w: 121, h: 115 },
+      3: { w: 120, h: 105 },
+      4: { w: 119, h: 99 }
+    };
+    const rSize = roleSizes[roleId] || roleSizes[1];
+    // 职业图标位置：右对齐，顶部对齐
+    const roleLeft = 300 - rSize.w;
+    const roleTop = 0;
+    // 职业图标几何中心
+    const roleCenterX = roleLeft + rSize.w / 2;
+    const roleCenterY = roleTop + rSize.h / 2;
+    // 属性图标几何中心关于 x=150 对称
+    const attrCenterX = 300 - roleCenterX;
+    const attrCenterY = roleCenterY;
+    const attrLeft = attrCenterX - 59; // 118/2
+    const attrTop = attrCenterY - 56;  // 112/2
+
+    attrIcon = `<img src="image/misc/attack_attribute_${attrId}.png" style="position:absolute; left:${attrLeft}px; top:${attrTop}px; width:118px; height:112px;" alt="">`;
+    roleIcon = `<img src="image/misc/role_${roleId}.png" style="position:absolute; left:${roleLeft}px; top:${roleTop}px; width:${rSize.w}px; height:${rSize.h}px;" alt="">`;
+  } else if (attrId) {
+    // 没有职业图标，属性图标放左上角
+    attrIcon = `<img src="image/misc/attack_attribute_${attrId}.png" style="position:absolute; left:0; top:0; width:118px; height:112px;" alt="">`;
+  } else if (roleId) {
+    // 没有属性图标，职业图标放右上角
+    const rSize = {1:{w:96,h:96},2:{w:121,h:115},3:{w:120,h:105},4:{w:119,h:99}}[roleId] || {w:96,h:96};
+    roleIcon = `<img src="image/misc/role_${roleId}.png" style="position:absolute; left:${300 - rSize.w}px; top:0; width:${rSize.w}px; height:${rSize.h}px;" alt="">`;
+  }
+
+  const svg = renderAvatarSVG(id, traitColor, supportColor, 300);
+
+  return `
+    <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative; overflow:visible;">
+      <div class="avatar-svg-container" style="transform:scale(${size/300}); transform-origin:0 0; width:300px; height:300px; overflow:visible;">
+        ${svg}
+        ${starContainer}
+        ${attrIcon}
+        ${roleIcon}
+      </div>
+    </div>
+  `;
+}
+
 function renderAvatarSVG(id, traitColor, supportColor, size = 300) {
   const traitHex = getColorHex(traitColor), supportHex = getColorHex(supportColor);
   const imgId = `avatar-img-${id}`;
@@ -131,58 +198,6 @@ function initAvatar(card, id) {
   test.src = `image/character/${id}.png`;
 }
 
-function renderAvatarComponent(indexEntry, size = 75) {
-  const id = indexEntry.id;
-  const traitColor = getField(indexEntry, 'trait_color_name');
-  const supportColor = getField(indexEntry, 'support_color_name');
-  const attrId = (indexEntry.attack_attributes || [])[0];
-  const roleId = indexEntry.role;
-
-  // 星星容器（30%缩放，底边对齐，水平居中，允许溢出）
-  const starScale = 0.3;
-  const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
-  const starCount = starCountMap[indexEntry.initial_rarity] || 0;
-  const starImgPadding = 20;
-  const starRealWidth = Math.round((67 - starImgPadding) * starScale);
-  const starHeight = Math.round(64 * starScale);
-  const totalWidth = starCount * starRealWidth;
-  const startX = (300 - totalWidth) / 2;
-  const startY = 300 - starHeight;
-  const starsContainer = starCount > 0
-    ? `<div style="position:absolute; left:${startX}px; top:${startY}px; width:${totalWidth}px; height:${starHeight}px; overflow:visible;">${renderStarGroup(indexEntry.initial_rarity, starScale)}</div>`
-    : '';
-
-  // 属性图标（25%缩放）
-  const attrIcon = attrId
-    ? `<img src="image/misc/attack_attribute_${attrId}.png" style="position:absolute; left:0px; top:0px; width:29.5px; height:28px;" alt="">`
-    : '';
-
-  // 职业图标（坐标固定）
-  let roleIcon = '';
-  if (roleId) {
-    const rolePos = {
-      1: { left: 272.875, top: 2.375, width: 24, height: 24 },
-      2: { left: 269.75, top: 0, width: 30.25, height: 28.75 },
-      3: { left: 269.875, top: 1.25, width: 30, height: 26.25 },
-      4: { left: 270, top: 2, width: 29.75, height: 24.75 }
-    };
-    const p = rolePos[roleId] || rolePos[1];
-    roleIcon = `<img src="image/misc/role_${roleId}.png" style="position:absolute; left:${p.left}px; top:${p.top}px; width:${p.width}px; height:${p.height}px;" alt="">`;
-  }
-
-  const svg = renderAvatarSVG(id, traitColor, supportColor, 300);
-
-  return `
-    <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative; overflow:visible;">
-      <div class="avatar-svg-container" style="transform:scale(${size/300}); transform-origin:0 0; width:300px; height:300px; overflow:visible;">
-        ${svg}
-        ${starsContainer}
-        ${attrIcon}
-        ${roleIcon}
-      </div>
-    </div>
-  `;
-}
 // ========== 调和模块 ==========
 function renderSynthesisModule(char) {
   const traitName = getField(char, 'trait_color_name') || '?';
@@ -227,21 +242,27 @@ function createCard(indexEntry) {
 
   const avatarHTML = renderAvatarComponent(indexEntry, 75);
 
+  // P1 中的属性/职业文字
+  const attrsText = getField(indexEntry, 'attack_attribute_names').join(' / ') + ' | ' + role;
+
   card.innerHTML = `<div class="card-header">
     <div class="card-p1">
-      <div class="p1-title">${baseName}${alias?`<span class="alias">${alias}</span>`:''}<span class="char-id">ID:${indexEntry.id}</span></div>
+      <div class="p1-left">
+        <span class="p1-attrs">${attrsText}</span>
+        <span class="p1-title">${baseName}${alias?`<span class="alias">${alias}</span>`:''}</span>
+      </div>
       <div class="switch-buttons"></div>
     </div>
     <div class="card-p2">
       <div class="p2-col p2-col1">
         <div class="avatar-col">${avatarHTML}</div>
-        <div class="attrs">${getField(indexEntry, 'attack_attribute_names').join(' / ')} | ${role}</div>
         <div class="inline-traits">${traits.map(t => `<span class="trait-tag">${t}</span>`).join('')}</div>
       </div>
       <div class="p2-col p2-col2">
+        <div class="char-id">ID:${indexEntry.id}</div>
         <div class="max-rarity-row">
           <span class="max-rarity-label">${t('maxRarityLabel')}</span>
-          ${renderStarGroup(indexEntry.max_rarity, 0.5)}
+          ${renderStarGroup(indexEntry.max_rarity)}
         </div>
         <div class="tags">${tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
         <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
@@ -258,6 +279,7 @@ function createCard(indexEntry) {
     </div>
   </div><div class="card-detail"></div>`;
 
+  // 展开按钮事件
   card.querySelector('.expand-btn').onclick = e => {
     e.stopPropagation();
     const detailDiv = card.querySelector('.card-detail');
@@ -271,10 +293,14 @@ function createCard(indexEntry) {
     }
   };
 
+  // 加载角色详情（切换按钮状态）
   loadCharacter(indexEntry.id).then(char => {
     if (char) updateSwitchButtonsState(card, getCardState(indexEntry.id), char);
   });
+
+  // 异步加载真实头像
   initAvatar(card, indexEntry.id);
+
   return card;
 }
 
