@@ -136,9 +136,9 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
       </mask>
     </defs>
 
-    <!-- 底层外发光三角形（360×360尺寸，超出顶层范围，模糊后形成光晕） -->
-    <polygon points="180,0 0,180 180,360" fill="${traitHex}" opacity="0.5" filter="url(#glow-${id})" style="overflow:visible;"/>
-    <polygon points="180,0 360,180 180,360" fill="${supportHex}" opacity="0.5" filter="url(#glow-${id})" style="overflow:visible;"/>
+    <!-- 底层外发光三角形（340×340尺寸，模糊后形成光晕） -->
+    <polygon points="180,10 10,180 180,350" fill="${traitHex}" opacity="0.5" filter="url(#glow-${id})" style="overflow:visible;"/>
+    <polygon points="180,10 350,180 180,350" fill="${supportHex}" opacity="0.5" filter="url(#glow-${id})" style="overflow:visible;"/>
 
     <!-- 顶层清晰三角形（300×300，覆盖中间区域，边缘露出光晕） -->
     <polygon points="180,30 30,180 180,330" fill="${traitHex}"/>
