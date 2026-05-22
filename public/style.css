@@ -25,15 +25,16 @@ button {
 /* ========== 顶栏 ========== */
 .header {
   background: #3e4759;
-  min-height: 80px;
-  padding: 16px 40px;
+  height: 96px;               /* 固定高度，内容垂直居中 */
+  padding: 0 40px;            /* 仅水平内边距 */
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;        /* 内部元素垂直居中 */
   gap: 16px;
   position: sticky;
   top: 0;
   z-index: 10;
+  overflow: hidden;           /* 防止内容溢出撑高 */
 }
 
 .header h1 {
@@ -41,7 +42,7 @@ button {
   font-weight: 400;
   letter-spacing: 2px;
   color: #fffeef;
-  white-space: nowrap;
+  white-space: nowrap;        /* 标题不换行 */
 }
 
 .header-right {
@@ -108,11 +109,9 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 48px;
-  position: fixed;          /* 固定定位 */
-  top: 0;                   /* 新增：固定在视口顶部 */
-  left: 0;
-  right: 0;
+  height: 48px;               /* 固定高度 */
+  position: sticky;
+  top: 96px;                  /* 吸附在顶栏正下方 */
   z-index: 9;
   gap: 20px;
 }
@@ -173,7 +172,7 @@ button {
 /* ========== 控制栏 ========== */
 .controls-bar {
   max-width: 900px;
-  margin: 128px auto 20px;  /* 上边距 = 导航栏高度(48) + 顶栏最小高度(80) */
+  margin: 16px auto 20px;     /* 恢复正常间距（不再需要大额补偿） */
   padding: 0 20px;
   display: flex;
   gap: 14px;
