@@ -292,7 +292,7 @@ function bindInnerButtons(id, activeChar, originalChar, state) {
 }
 
 function filterCards() {
-  if (currentView !== 'chara_dex') return;  // 视图名改为 chara_dex
+  if (currentView !== 'chara_dex') return;
   const q = document.getElementById('searchInput').value.toLowerCase();
   document.querySelectorAll('#guideContainer .card').forEach(c => {
     const name = c.querySelector('.p1-title')?.textContent?.toLowerCase() || '';

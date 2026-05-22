@@ -1,4 +1,3 @@
-let currentView = 'chara_dex';  // 视图内部名改为 chara_dex
 let characterIndex = [], loadedCharacters = {};
 let activeSortFields = [...SORT_FIELDS].sort((a,b) => a.priority - b.priority);
 let currentSortOrder = 'desc';
@@ -35,6 +34,9 @@ function switchView(view) {
   }
 }
 
+function handleSearch() { if (currentView === 'chara_dex') filterCards(); }
+
+// ... 其余函数保持不变，与之前提供的 app.js 完全一致 ...
 function handleSearch() { if (currentView === 'chara_dex') filterCards(); }
 
 // 数据加载
