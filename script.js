@@ -103,11 +103,7 @@ function renderStarGroup(rarity, scale = 1) {
 }
 
 // ========== 可复用图标模块 ==========
-function renderIconModule(type, iconId, iconSize, containerSize = 128) {
-  // type: 'role' 或 'attribute'
-  // iconId: 图标 id（数字或 undefined）
-  // iconSize: 图标原始尺寸 { w, h } 或 null（职业图标自动查表，属性图标固定118x112）
-  // containerSize: 容器边长，默认 128
+function renderIconModule(type, iconId, containerSize = 128) {
   if (!iconId) return '';
 
   let w, h;
@@ -120,7 +116,7 @@ function renderIconModule(type, iconId, iconSize, containerSize = 128) {
     };
     const r = roleSizes[iconId] || roleSizes[1];
     w = r.w; h = r.h;
-  } else if (type === 'attribute') {
+  } else if (type === 'attack_attribute') {
     w = 118; h = 112;
   } else {
     return '';
@@ -130,7 +126,7 @@ function renderIconModule(type, iconId, iconSize, containerSize = 128) {
   const top = (containerSize - h) / 2;
 
   return `
-    <div style="width:${containerSize}px; height:${containerSize}px; position:absolute; overflow:visible; display:flex; align-items:center; justify-content:center;">
+    <div style="width:${containerSize}px; height:${containerSize}px; position:relative; overflow:visible;">
       <img src="image/misc/${type}_${iconId}.png" alt=""
            style="position:absolute; left:${left}px; top:${top}px; width:${w}px; height:${h}px;">
     </div>
@@ -213,10 +209,9 @@ function renderAvatarComponent(indexEntry, size = 100) {
       style="position:absolute; left:${left}px; top:${starStartY}px; width:${starFullW}px; height:${starFullH}px;">`;
   }
 
-  // 职业图标模块（左上角）
-  const roleModule = renderIconModule('role', roleId, null, 128);
-  // 属性图标模块（右上角）
-  const attrModule = renderIconModule('attribute', attrId, null, 128);
+  // 图标模块（职业：左上，属性：右上）
+  const roleModule = renderIconModule('role', roleId, 128);
+  const attrModule = renderIconModule('attack_attribute', attrId, 128);
 
   const scale = size / canvasW;
 
@@ -224,10 +219,8 @@ function renderAvatarComponent(indexEntry, size = 100) {
     <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative; overflow:visible;">
       <div style="position:absolute; top:0; left:0; width:${canvasW}px; height:${canvasH}px; transform:scale(${scale}); transform-origin:0 0;">
         ${svg}
-        <!-- 职业图标：左上角 -->
         <div style="position:absolute; left:0; top:0;">${roleModule}</div>
-        <!-- 属性图标：右上角 -->
-        <div style="position:absolute; right:0; top:0;">${attrModule}</div>
+        <div style="position:absolute; left:${canvasW - 128}px; top:0;">${attrModule}</div>
         ${starsHTML}
       </div>
     </div>
