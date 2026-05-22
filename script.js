@@ -103,7 +103,7 @@ function renderStarGroup(rarity, scale = 1) {
 }
 
 // ========== 头像组件（职业左上，属性右上，星星底边居中） ==========
-// 生成菱形背景 SVG（带外发光，360×360）
+// 生成菱形背景 SVG（外发光更柔和，360×360）
 function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
   const traitHex = getColorHex(traitColor);
   const supportHex = getColorHex(supportColor);
@@ -111,9 +111,9 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
 
   return `<svg width="${size}" height="${size}" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
     <defs>
-      <!-- 外发光模糊滤镜 -->
+      <!-- 外发光模糊滤镜（增大模糊度，更柔和） -->
       <filter id="blur-${id}" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur stdDeviation="8"/>
+        <feGaussianBlur stdDeviation="12"/>
       </filter>
 
       <!-- 羽化蒙版渐变色 -->
@@ -135,11 +135,11 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
       </mask>
     </defs>
 
-    <!-- 底层模糊三角形（尺寸 360×360，向外发光） -->
-    <polygon points="180,0 0,180 180,360" fill="${traitHex}" fill-opacity="0.5" filter="url(#blur-${id})" style="overflow:visible;"/>
-    <polygon points="180,0 360,180 180,360" fill="${supportHex}" fill-opacity="0.5" filter="url(#blur-${id})" style="overflow:visible;"/>
+    <!-- 底层模糊三角形（外发光，降低透明度使光晕柔和） -->
+    <polygon points="180,0 0,180 180,360" fill="${traitHex}" fill-opacity="0.35" filter="url(#blur-${id})" style="overflow:visible;"/>
+    <polygon points="180,0 360,180 180,360" fill="${supportHex}" fill-opacity="0.35" filter="url(#blur-${id})" style="overflow:visible;"/>
 
-    <!-- 顶层清晰三角形（尺寸 300×300，向内收缩 30px，中间拼缝清晰） -->
+    <!-- 顶层清晰三角形（收缩30px，保留拼缝） -->
     <polygon points="180,30 30,180 180,330" fill="${traitHex}"/>
     <polygon points="180,30 330,180 180,330" fill="${supportHex}"/>
 
@@ -149,7 +149,7 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
   </svg>`;
 }
 
-// 头像组件（画布 360×360，星星/职业/属性坐标已重算，且变量作用域修正）
+// 头像组件（画布 360×360，图标/星星坐标已调整）
 function renderAvatarComponent(indexEntry, size = 100) {
   const id = indexEntry.id;
   const traitColor = getField(indexEntry, 'trait_color_name');
@@ -158,8 +158,6 @@ function renderAvatarComponent(indexEntry, size = 100) {
   const roleId = indexEntry.role;
 
   const canvasW = 360, canvasH = 360;
-
-  // 职业图标尺寸表（提取到外部以确保属性图标可用）
   const roleSizes = {
     1: { w: 96, h: 96 },
     2: { w: 121, h: 115 },
@@ -167,17 +165,16 @@ function renderAvatarComponent(indexEntry, size = 100) {
     4: { w: 119, h: 99 }
   };
 
-  // 背景 SVG（含外发光）
   const svg = renderAvatarSVG(id, traitColor, supportColor, canvasW);
 
-  // 星星：原始尺寸，水平居中，底边对齐
+  // 星星：向上移动30px
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const starCount = starCountMap[indexEntry.initial_rarity] || 0;
   const starFullW = 67, starFullH = 64;
   const starVisibleW = 47;
   const starTotalW = starCount * starVisibleW;
   const starStartX = (canvasW - starTotalW) / 2;
-  const starStartY = canvasH - starFullH;
+  const starStartY = canvasH - starFullH - 30; // 原先底边对齐，现在上移30px
 
   let starsHTML = '';
   for (let i = 0; i < starCount; i++) {
@@ -187,26 +184,30 @@ function renderAvatarComponent(indexEntry, size = 100) {
       style="position:absolute; left:${left}px; top:${starStartY}px; width:${starFullW}px; height:${starFullH}px;">`;
   }
 
-  // 职业图标（左上角）
+  // 职业图标：向右下移动30px
   let roleHTML = '';
   if (roleId) {
     const r = roleSizes[roleId] || roleSizes[1];
     roleHTML = `<img src="image/misc/role_${roleId}.png" alt=""
-      style="position:absolute; left:0; top:0; width:${r.w}px; height:${r.h}px;">`;
+      style="position:absolute; left:30px; top:30px; width:${r.w}px; height:${r.h}px;">`;
   }
 
-  // 属性图标（关于 x=180 与职业图标对称，顶部对齐）
+  // 属性图标：纵坐标+30，横坐标-30（相对于原来计算的位置）
   let attrHTML = '';
   if (attrId) {
     const roleW = roleId ? (roleSizes[roleId]?.w || 96) : 96;
     const roleH = roleId ? (roleSizes[roleId]?.h || 96) : 96;
-    const roleCenterX = roleW / 2;
-    const roleCenterY = roleH / 2;
-    const attrCenterX = 360 - roleCenterX; // 关于 180 对称
-    const attrCenterY = roleCenterY;
+    const roleCenterX = 30 + roleW / 2; // 职业图标已向右偏移30px，因此中心点需重新计算
+    const roleCenterY = 30 + roleH / 2;
+    const attrCenterX = 360 - roleCenterX; // 关于180对称，但职业已偏移，对称轴应仍是180？还是对称轴保持180不变？
+    // 根据用户要求，属性图标纵+30横-30，且原先是对称于x=180，现在职业移动后对称轴可能不变化，我们按照原方法计算再偏移。
+    // 原本职业未移动时，attrCenterX = 360 - roleCenterX (原来roleCenterX = r.w/2)。现在职业左移30，职业中心变为 30 + r.w/2。
+    // 属性图标仍需与职业图标关于 x=180 对称，因此 attrCenterX = 360 - (30 + r.w/2) = 330 - r.w/2
+    const attrCenterX_new = 360 - (30 + roleW / 2);
+    const attrCenterY_new = (30 + roleH / 2) + 30; // 纵坐标+30
     const attrW = 118, attrH = 112;
-    const attrLeft = attrCenterX - attrW / 2;
-    const attrTop = attrCenterY - attrH / 2;
+    const attrLeft = attrCenterX_new - attrW / 2 - 30; // 横坐标-30
+    const attrTop = attrCenterY_new - attrH / 2;
     attrHTML = `<img src="image/misc/attack_attribute_${attrId}.png" alt=""
       style="position:absolute; left:${attrLeft}px; top:${attrTop}px; width:${attrW}px; height:${attrH}px;">`;
   }
