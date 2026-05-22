@@ -219,7 +219,6 @@ button {
   padding: 16px;
 }
 
-/* P1：属性职业 + 角色名，与切换按钮同行 */
 .card-p1 {
   display: flex;
   justify-content: space-between;
@@ -257,7 +256,6 @@ button {
   margin-left: 8px;
 }
 
-/* 切换按钮容器 */
 .switch-buttons {
   display: flex;
   gap: 8px;
@@ -265,7 +263,7 @@ button {
   flex-shrink: 0;
 }
 
-/* ========== P2：三栏布局 ========== */
+/* ========== P2 三栏 ========== */
 .card-p2 {
   display: flex;
   gap: 0;
@@ -279,7 +277,6 @@ button {
   justify-content: center;
 }
 
-/* P2-1：头像与调和词条（宽度调整为200px） */
 .p2-col1 {
   width: 200px;
   align-items: center;
@@ -287,14 +284,12 @@ button {
   padding: 0 16px;
 }
 
-/* P2-2：ID、最大星级、标签、日期、基础属性 */
 .p2-col2 {
   flex: 1;
   border-right: 1px solid #d4c8b0;
   padding: 0 16px;
 }
 
-/* P2-3：展开按钮 */
 .p2-col3 {
   width: 180px;
   display: flex;
@@ -302,7 +297,6 @@ button {
   align-items: center;
 }
 
-/* P2-1 内容 */
 .avatar-col {
   margin-bottom: 8px;
 }
@@ -315,7 +309,6 @@ button {
   margin-top: 6px;
 }
 
-/* P2-2 内容 */
 .char-id {
   font-size: 12px;
   color: #888;
@@ -381,7 +374,6 @@ button {
   margin-top: 2px;
 }
 
-/* P2-3 展开按钮 */
 .expand-btn {
   background: transparent;
   border: none;
@@ -394,7 +386,7 @@ button {
   height: 40px;
 }
 
-/* ========== 切换开关（胶囊状） ========== */
+/* ========== 切换开关 ========== */
 .toggle-switch {
   position: relative;
   display: inline-block;
@@ -579,7 +571,7 @@ input:checked + .slider:before {
   gap: 4px;
 }
 
-/* ========== 调和模块（展开后底部） ========== */
+/* ========== 调和模块 ========== */
 .synthesis-module {
   background: #ede8dc;
   padding: 8px;
@@ -595,7 +587,6 @@ input:checked + .slider:before {
   font-size: 13px;
 }
 
-/* 调和词条样式 */
 .trait-tag {
   display: block;
   background: #e4dcce;
@@ -617,7 +608,6 @@ input:checked + .slider:before {
   color: #888;
 }
 
-/* ========== 头像组件 ========== */
 .avatar-wrapper {
   width: 75px;
   height: 75px;
@@ -637,7 +627,6 @@ input:checked + .slider:before {
   overflow: hidden;
 }
 
-/* 星星组（内联显示） */
 .stars-group {
   display: inline-flex;
   gap: 0;
