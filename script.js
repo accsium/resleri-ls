@@ -93,11 +93,13 @@ function renderStarGroup(rarity, scale = 1) {
   const starFile = rarity === 8 ? 'star_2.png' : 'star_1.png';
   const w = Math.round(67 * scale);
   const h = Math.round(64 * scale);
-  const visibleWidth = Math.round((67 - 20) * scale); // 有效宽度
+  const visibleW = Math.round((67 - 20) * scale);   // 有效宽度（去除图片内边距）
+  const offset = Math.round(10 * scale);             // 左侧内边距补偿
   let html = '';
   for (let i = 0; i < count; i++) {
-    const left = visibleWidth * i - Math.round(10 * scale);
-    html += `<img src="image/misc/${starFile}" alt="" style="position:absolute; left:${left}px; top:0; width:${w}px; height:${h}px;">`;
+    const left = visibleW * i - offset;
+    html += `<img src="image/misc/${starFile}" alt=""
+      style="position:absolute; left:${left}px; top:0; width:${w}px; height:${h}px;">`;
   }
   return html;
 }
@@ -192,24 +194,24 @@ function renderAvatarComponent(indexEntry, size = 100) {
   const canvasW = 360, canvasH = 360;
   const svg = renderAvatarSVG(id, traitColor, supportColor, canvasW);
 
-  // 星星：2倍大小，底边对齐后上移15px
+  // ========== 星星参数（集中调整） ==========
+  const avatarStarScale = 1.5;               // 头像内星星的倍率
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const starCount = starCountMap[indexEntry.initial_rarity] || 0;
-  const starFullW = 67 * 1.5, starFullH = 64 * 1.5;       // 134×128
-  const starVisibleW = 47 * 1.5;                         // 94（消除内边距后的可见宽度）
+  const starFullW = Math.round(67 * avatarStarScale);
+  const starFullH = Math.round(64 * avatarStarScale);
+  const starVisibleW = Math.round((67 - 20) * avatarStarScale);
   const starTotalW = starCount * starVisibleW;
   const starStartX = (canvasW - starTotalW) / 2;
-  const starStartY = canvasH - starFullH; 
+  const starStartY = canvasH - starFullH;     // 底边对齐，不再上移
+  // =====================================
 
-  let starsHTML = '';
-  for (let i = 0; i < starCount; i++) {
-    const starFile = indexEntry.initial_rarity === 8 ? 'star_2.png' : 'star_1.png';
-    const left = starStartX + starVisibleW * i - 10 * 1.5; // 内边距同步缩放
-    starsHTML += `<img src="image/misc/${starFile}" alt=""
-      style="position:absolute; left:${left}px; top:${starStartY}px; width:${starFullW}px; height:${starFullH}px;">`;
-  }
+  const starsHTML = starCount > 0
+    ? `<div style="position:absolute; left:${starStartX}px; top:${starStartY}px; width:${starTotalW}px; height:${starFullH}px; overflow:visible;">
+        ${renderStarGroup(indexEntry.initial_rarity, avatarStarScale)}
+      </div>`
+    : '';
 
-  // 图标模块
   const roleModule = renderIconModule('role', roleId, 128);
   const attrModule = renderIconModule('attack_attribute', attrId, 128);
 
