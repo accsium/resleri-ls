@@ -19,11 +19,19 @@
     </div>
   </div>
 
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="搜索角色名称..." oninput="filterCards()">
+  <!-- 导航栏 + 搜索框 -->
+  <div class="nav-bar">
+    <nav class="nav-links">
+      <a id="nav-guide" class="nav-link active">角色图鉴</a>
+      <a id="nav-collection" class="nav-link">角色收藏</a>
+    </nav>
+    <div class="nav-search">
+      <input type="text" id="searchInput" placeholder="搜索角色名称..." oninput="handleSearch()">
+    </div>
   </div>
 
-  <div class="controls-bar">
+  <!-- 排序、筛选控件（仅在图鉴视图显示） -->
+  <div id="guideControls" class="controls-bar">
     <div class="sort-control">
       <label for="sortSelect">排序：</label>
       <select id="sortSelect"></select>
@@ -45,8 +53,18 @@
     <button id="clearFilterBtn">清除</button>
   </div>
 
-  <div class="card-container" id="cardContainer"></div>
+  <!-- 角色图鉴容器 -->
+  <div id="guideContainer" class="card-container"></div>
 
-  <script src="script.js"></script>
+  <!-- 角色收藏容器（初始隐藏） -->
+  <div id="collectionContainer" class="collection-container" style="display:none;">
+    <div class="collection-placeholder" id="collectionPlaceholder">收藏功能即将上线</div>
+  </div>
+
+  <script src="utils.js"></script>
+  <script src="components.js"></script>
+  <script src="avatar.js"></script>
+  <script src="chara_dex.js.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
