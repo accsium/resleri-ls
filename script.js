@@ -233,14 +233,17 @@ function createCard(indexEntry) {
 
   const avatarHTML = renderAvatarComponent(indexEntry, 75);
 
-  // 最大星级（绝对定位）
+  // 最大星级（50% 缩放）
   const maxStarCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const maxStarCount = maxStarCountMap[indexEntry.max_rarity] || 0;
+  const maxStarScale = 0.5;
+  const maxStarVisibleWidth = Math.round((67 - 20) * maxStarScale); // 23.5 取整 24
+  const maxStarTotalWidth = maxStarCount * maxStarVisibleWidth;
   const maxStarRow = maxStarCount > 0
     ? `<div class="max-rarity-row">
         <span class="max-rarity-label">${t('maxRarityLabel')}</span>
-        <span style="display:inline-block; position:relative; vertical-align:middle; width:${maxStarCount * 47}px; height:64px; overflow:visible;">
-          ${renderStarGroup(indexEntry.max_rarity)}
+        <span style="display:inline-block; position:relative; vertical-align:middle; width:${maxStarTotalWidth}px; height:${Math.round(64 * maxStarScale)}px; overflow:visible;">
+          ${renderStarGroup(indexEntry.max_rarity, maxStarScale)}
         </span>
       </div>`
     : '';
