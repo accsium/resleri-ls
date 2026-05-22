@@ -111,11 +111,12 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
 
   return `<svg width="${size}" height="${size}" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
     <defs>
-      <!-- 通用模糊滤镜 -->
+      <!-- 外发光模糊滤镜 -->
       <filter id="blur-${id}" x="-20%" y="-20%" width="140%" height="140%">
         <feGaussianBlur stdDeviation="8"/>
       </filter>
 
+      <!-- 羽化蒙版渐变色 -->
       <linearGradient id="gt-${id}" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
       </linearGradient>
@@ -134,13 +135,13 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
       </mask>
     </defs>
 
-    <!-- 底层模糊三角形（外发光，半透明） -->
-    <polygon points="180,0 0,180 180,360" fill="${traitHex}" fill-opacity="0.4" filter="url(#blur-${id})" style="overflow:visible;"/>
-    <polygon points="180,0 360,180 180,360" fill="${supportHex}" fill-opacity="0.4" filter="url(#blur-${id})" style="overflow:visible;"/>
+    <!-- 底层模糊三角形（尺寸 360×360，向外发光） -->
+    <polygon points="180,0 0,180 180,360" fill="${traitHex}" fill-opacity="0.5" filter="url(#blur-${id})" style="overflow:visible;"/>
+    <polygon points="180,0 360,180 180,360" fill="${supportHex}" fill-opacity="0.5" filter="url(#blur-${id})" style="overflow:visible;"/>
 
-    <!-- 上层清晰三角形 -->
-    <polygon points="180,0 0,180 180,360" fill="${traitHex}"/>
-    <polygon points="180,0 360,180 180,360" fill="${supportHex}"/>
+    <!-- 顶层清晰三角形（尺寸 300×300，向内收缩 30px，中间拼缝清晰） -->
+    <polygon points="180,30 30,180 180,330" fill="${traitHex}"/>
+    <polygon points="180,30 330,180 180,330" fill="${supportHex}"/>
 
     <!-- 头像图片（遮罩裁剪） -->
     <image id="${imgId}" href="image/misc/00000.png" x="52" y="74" width="256" height="256"
