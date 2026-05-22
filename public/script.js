@@ -111,9 +111,9 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
 
   return `<svg width="${size}" height="${size}" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
     <defs>
-      <!-- 外发光滤镜 -->
+      <!-- 外发光滤镜（增强模糊度） -->
       <filter id="glow-${id}" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="15" result="blur"/>
+        <feGaussianBlur stdDeviation="25" result="blur"/>
         <feComposite in="blur" in2="SourceGraphic" operator="over"/>
       </filter>
 
@@ -136,11 +136,11 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
       </mask>
     </defs>
 
-    <!-- 底层外发光三角形（340×340尺寸，模糊后形成光晕） -->
-    <polygon points="180,10 10,180 180,350" fill="${traitHex}" opacity="0.5" filter="url(#glow-${id})" style="overflow:visible;"/>
-    <polygon points="180,10 350,180 180,350" fill="${supportHex}" opacity="0.5" filter="url(#glow-${id})" style="overflow:visible;"/>
+    <!-- 底层外发光三角形（340×340，增强模糊和透明度，光晕更明显） -->
+    <polygon points="180,10 10,180 180,350" fill="${traitHex}" opacity="0.7" filter="url(#glow-${id})" style="overflow:visible;"/>
+    <polygon points="180,10 350,180 180,350" fill="${supportHex}" opacity="0.7" filter="url(#glow-${id})" style="overflow:visible;"/>
 
-    <!-- 顶层清晰三角形（300×300，覆盖中间区域，边缘露出光晕） -->
+    <!-- 顶层清晰三角形（300×300，保留拼缝） -->
     <polygon points="180,30 30,180 180,330" fill="${traitHex}"/>
     <polygon points="180,30 330,180 180,330" fill="${supportHex}"/>
 
@@ -185,29 +185,27 @@ function renderAvatarComponent(indexEntry, size = 100) {
       style="position:absolute; left:${left}px; top:${starStartY}px; width:${starFullW}px; height:${starFullH}px;">`;
   }
 
-  // 职业图标：向右下移动30px
+  // 职业图标：向右移动15，向上移动15
   let roleHTML = '';
   if (roleId) {
     const r = roleSizes[roleId] || roleSizes[1];
+    const roleLeft = 15;           // 原0，右移15
+    const roleTop = -15;           // 原0，上移15
     roleHTML = `<img src="image/misc/role_${roleId}.png" alt=""
-      style="position:absolute; left:30px; top:30px; width:${r.w}px; height:${r.h}px;">`;
+      style="position:absolute; left:${roleLeft}px; top:${roleTop}px; width:${r.w}px; height:${r.h}px;">`;
   }
 
-  // 属性图标：横坐标-30，纵坐标+30（基于原始对称中心计算，无重复叠加）
+  // 属性图标：向左移动15，向上移动15（关于x=180与职业图标对称，再应用偏移）
   let attrHTML = '';
   if (attrId) {
     const roleW = roleId ? (roleSizes[roleId]?.w || 96) : 96;
     const roleH = roleId ? (roleSizes[roleId]?.h || 96) : 96;
-    // 职业图标原始中心（无偏移时，位于左上角）
-    const origRoleCenterX = roleW / 2;
-    const origRoleCenterY = roleH / 2;
-    // 属性图标原始中心（关于 x=180 对称，与职业图标中心水平镜像，垂直对齐）
-    const origAttrCenterX = 360 - origRoleCenterX;
-    const origAttrCenterY = origRoleCenterY;
-    // 应用要求的偏移：横-30，纵+30
-    const attrCenterX = origAttrCenterX - 30;
-    const attrCenterY = origAttrCenterY + 30;
-
+    // 职业图标中心（右移15、上移15后）
+    const roleCenterX = 15 + roleW / 2;
+    const roleCenterY = roleH / 2 - 15;  // 向上移动15，中心y减小
+    // 属性图标中心（关于x=180对称，然后向左移动15，向上移动15）
+    const attrCenterX = 360 - roleCenterX - 15;   // 对称后再左移15
+    const attrCenterY = roleCenterY;               // y坐标相同（已向上移动）
     const attrW = 118, attrH = 112;
     const attrLeft = attrCenterX - attrW / 2;
     const attrTop = attrCenterY - attrH / 2;
