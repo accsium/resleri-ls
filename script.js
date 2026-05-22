@@ -110,20 +110,31 @@ function renderAvatarComponent(indexEntry, size = 75) {
   const attrId = (indexEntry.attack_attributes || [])[0];
   const roleId = indexEntry.role;
 
-  // 星星容器（底边对齐，水平居中）
+  // 内部画布尺寸
+  const canvasW = 300, canvasH = 300;
+
+  // 背景菱形 SVG（原始尺寸 300×300）
+  const svg = renderAvatarSVG(id, traitColor, supportColor, canvasW);
+
+  // 星星：水平居中，底边对齐，在 300×300 画布上使用原始像素
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const starCount = starCountMap[indexEntry.initial_rarity] || 0;
-  const starVisibleWidth = 47; // 67-20
-  const starTotalWidth = starCount * starVisibleWidth;
-  const starStartX = (300 - starTotalWidth) / 2;
-  const starContainer = starCount > 0
-    ? `<div style="position:absolute; left:${starStartX}px; bottom:0; width:${starTotalWidth}px; height:64px; overflow:visible;">
-        ${renderStarGroup(indexEntry.initial_rarity)}
-      </div>`
-    : '';
+  const starFullW = 67, starFullH = 64;
+  const starVisibleW = 47; // 67 - 20
+  const starTotalW = starCount * starVisibleW;
+  const starStartX = (canvasW - starTotalW) / 2;
+  const starStartY = canvasH - starFullH;
 
-  // 图标坐标（职业左上，属性右上，几何中心关于 x=150 对称）
-  let roleIcon = '', attrIcon = '';
+  let starsHTML = '';
+  for (let i = 0; i < starCount; i++) {
+    const starFile = indexEntry.initial_rarity === 8 ? 'star_2.png' : 'star_1.png';
+    const left = starStartX + starVisibleW * i - 10; // 抵消图片左侧空白
+    starsHTML += `<img src="image/misc/${starFile}" alt=""
+      style="position:absolute; left:${left}px; top:${starStartY}px; width:${starFullW}px; height:${starFullH}px;">`;
+  }
+
+  // 职业图标（原始尺寸，左上角对齐）
+  let roleHTML = '';
   if (roleId) {
     const roleSizes = {
       1: { w: 96, h: 96 },
@@ -131,31 +142,30 @@ function renderAvatarComponent(indexEntry, size = 75) {
       3: { w: 120, h: 105 },
       4: { w: 119, h: 99 }
     };
-    const rSize = roleSizes[roleId] || roleSizes[1];
-    const roleLeft = 0, roleTop = 0;
-    const roleCenterX = roleLeft + rSize.w / 2;
-    const roleCenterY = roleTop + rSize.h / 2;
-    const attrCenterX = 300 - roleCenterX;
-    const attrCenterY = roleCenterY;
-    const attrLeft = attrCenterX - 59, attrTop = attrCenterY - 56;
-    roleIcon = `<img src="image/misc/role_${roleId}.png" style="position:absolute; left:${roleLeft}px; top:${roleTop}px; width:${rSize.w}px; height:${rSize.h}px;" alt="">`;
-    if (attrId) {
-      attrIcon = `<img src="image/misc/attack_attribute_${attrId}.png" style="position:absolute; left:${attrLeft}px; top:${attrTop}px; width:118px; height:112px;" alt="">`;
-    }
-  } else if (attrId) {
-    // 无职业图标时，属性图标放右上角
-    attrIcon = `<img src="image/misc/attack_attribute_${attrId}.png" style="position:absolute; right:0; top:0; width:118px; height:112px;" alt="">`;
+    const r = roleSizes[roleId] || roleSizes[1];
+    roleHTML = `<img src="image/misc/role_${roleId}.png" alt=""
+      style="position:absolute; left:0; top:0; width:${r.w}px; height:${r.h}px;">`;
   }
 
-  const svg = renderAvatarSVG(id, traitColor, supportColor, 300);
+  // 属性图标（原始尺寸，右边缘对齐画布右边，顶部对齐）
+  let attrHTML = '';
+  if (attrId) {
+    const aw = 118, ah = 112;
+    const attrLeft = canvasW - aw;
+    attrHTML = `<img src="image/misc/attack_attribute_${attrId}.png" alt=""
+      style="position:absolute; left:${attrLeft}px; top:0; width:${aw}px; height:${ah}px;">`;
+  }
+
+  // 缩放比例
+  const scale = size / canvasW;
 
   return `
     <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative; overflow:visible;">
-      <div class="avatar-svg-container" style="transform:scale(${size/300}); transform-origin:0 0; width:300px; height:300px; overflow:visible;">
+      <div style="position:absolute; top:0; left:0; width:${canvasW}px; height:${canvasH}px; transform:scale(${scale}); transform-origin:0 0;">
         ${svg}
-        ${starContainer}
-        ${roleIcon}
-        ${attrIcon}
+        ${roleHTML}
+        ${attrHTML}
+        ${starsHTML}
       </div>
     </div>
   `;
