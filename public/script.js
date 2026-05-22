@@ -144,13 +144,11 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
 
   return `<svg width="${size}" height="${size}" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
     <defs>
-      <!-- 外发光滤镜（增强模糊度） -->
       <filter id="glow-${id}" x="-50%" y="-50%" width="200%" height="200%">
         <feGaussianBlur stdDeviation="25" result="blur"/>
         <feComposite in="blur" in2="SourceGraphic" operator="over"/>
       </filter>
 
-      <!-- 羽化蒙版渐变色 -->
       <linearGradient id="gt-${id}" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
       </linearGradient>
@@ -161,23 +159,26 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
         <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
       </linearGradient>
       <mask id="mask-${id}">
-        <rect x="52" y="74" width="256" height="128" fill="white"/>
-        <polygon points="52,202 308,202 180,330" fill="white"/>
+        <!-- 完整的五边形蒙版（矩形 + 倒三角，无缝拼接） -->
+        <polygon points="52,74 308,74 308,202 180,330 52,202" fill="white"/>
+        <!-- 顶部羽化 -->
         <rect x="52" y="74" width="256" height="15" fill="url(#gt-${id})"/>
+        <!-- 左侧羽化 -->
         <rect x="52" y="74" width="15" height="128" fill="url(#gl-${id})"/>
+        <!-- 右侧羽化 -->
         <rect x="293" y="74" width="15" height="128" fill="url(#gr-${id})"/>
       </mask>
     </defs>
 
-    <!-- 底层外发光三角形（340×340，增强模糊和透明度，光晕更明显） -->
+    <!-- 底层外发光三角形（340×340） -->
     <polygon points="180,10 10,180 180,350" fill="${traitHex}" opacity="0.7" filter="url(#glow-${id})" style="overflow:visible;"/>
     <polygon points="180,10 350,180 180,350" fill="${supportHex}" opacity="0.7" filter="url(#glow-${id})" style="overflow:visible;"/>
 
-    <!-- 顶层清晰三角形（300×300，保留拼缝） -->
+    <!-- 顶层清晰三角形（300×300） -->
     <polygon points="180,30 30,180 180,330" fill="${traitHex}"/>
     <polygon points="180,30 330,180 180,330" fill="${supportHex}"/>
 
-    <!-- 头像图片（遮罩裁剪） -->
+    <!-- 头像图片（使用五边形蒙版裁剪） -->
     <image id="${imgId}" href="image/misc/00000.png" x="52" y="74" width="256" height="256"
            mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet"/>
   </svg>`;
