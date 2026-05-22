@@ -109,8 +109,8 @@ button {
   justify-content: space-between;
   align-items: center;
   height: 48px;
-  position: fixed;        /* 改为固定定位 */
-  top: 80px;              /* 顶栏下方 */
+  position: fixed;          /* 固定定位 */
+  top: 112px;               /* 修正为顶栏的实际总高度 */
   left: 0;
   right: 0;
   z-index: 9;
@@ -173,7 +173,7 @@ button {
 /* ========== 控制栏 ========== */
 .controls-bar {
   max-width: 900px;
-  margin: 128px auto 20px;   /* 上边距避开固定导航栏 */
+  margin: 160px auto 20px;  /* 上边距 = 顶栏总高度(112) + 导航栏高度(48) */
   padding: 0 20px;
   display: flex;
   gap: 14px;
