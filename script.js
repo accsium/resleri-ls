@@ -195,16 +195,16 @@ function renderAvatarComponent(indexEntry, size = 100) {
   // 星星：2倍大小，底边对齐后上移15px
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const starCount = starCountMap[indexEntry.initial_rarity] || 0;
-  const starFullW = 67 * 2, starFullH = 64 * 2;       // 134×128
-  const starVisibleW = 47 * 2;                         // 94（消除内边距后的可见宽度）
+  const starFullW = 67 * 1.5, starFullH = 64 * 1.5;       // 134×128
+  const starVisibleW = 47 * 1.5;                         // 94（消除内边距后的可见宽度）
   const starTotalW = starCount * starVisibleW;
   const starStartX = (canvasW - starTotalW) / 2;
-  const starStartY = canvasH - starFullH - 15;         // 上移15px
+  const starStartY = canvasH - starFullH; 
 
   let starsHTML = '';
   for (let i = 0; i < starCount; i++) {
     const starFile = indexEntry.initial_rarity === 8 ? 'star_2.png' : 'star_1.png';
-    const left = starStartX + starVisibleW * i - 10 * 2; // 内边距同步缩放
+    const left = starStartX + starVisibleW * i - 10 * 1.5; // 内边距同步缩放
     starsHTML += `<img src="image/misc/${starFile}" alt=""
       style="position:absolute; left:${left}px; top:${starStartY}px; width:${starFullW}px; height:${starFullH}px;">`;
   }
