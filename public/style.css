@@ -109,8 +109,10 @@ button {
   justify-content: space-between;
   align-items: center;
   height: 48px;
-  position: sticky;
-  top: 80px;
+  position: fixed;        /* 改为固定定位 */
+  top: 80px;              /* 顶栏下方 */
+  left: 0;
+  right: 0;
   z-index: 9;
   gap: 20px;
 }
@@ -171,7 +173,7 @@ button {
 /* ========== 控制栏 ========== */
 .controls-bar {
   max-width: 900px;
-  margin: 0 auto 20px;
+  margin: 128px auto 20px;   /* 上边距避开固定导航栏 */
   padding: 0 20px;
   display: flex;
   gap: 14px;
