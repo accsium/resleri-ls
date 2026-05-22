@@ -102,6 +102,41 @@ function renderStarGroup(rarity, scale = 1) {
   return html;
 }
 
+// ========== 可复用图标模块 ==========
+function renderIconModule(type, iconId, iconSize, containerSize = 128) {
+  // type: 'role' 或 'attribute'
+  // iconId: 图标 id（数字或 undefined）
+  // iconSize: 图标原始尺寸 { w, h } 或 null（职业图标自动查表，属性图标固定118x112）
+  // containerSize: 容器边长，默认 128
+  if (!iconId) return '';
+
+  let w, h;
+  if (type === 'role') {
+    const roleSizes = {
+      1: { w: 96, h: 96 },
+      2: { w: 121, h: 115 },
+      3: { w: 120, h: 105 },
+      4: { w: 119, h: 99 }
+    };
+    const r = roleSizes[iconId] || roleSizes[1];
+    w = r.w; h = r.h;
+  } else if (type === 'attribute') {
+    w = 118; h = 112;
+  } else {
+    return '';
+  }
+
+  const left = (containerSize - w) / 2;
+  const top = (containerSize - h) / 2;
+
+  return `
+    <div style="width:${containerSize}px; height:${containerSize}px; position:absolute; overflow:visible; display:flex; align-items:center; justify-content:center;">
+      <img src="image/misc/${type}_${iconId}.png" alt=""
+           style="position:absolute; left:${left}px; top:${top}px; width:${w}px; height:${h}px;">
+    </div>
+  `;
+}
+
 // ========== 头像组件（职业左上，属性右上，星星底边居中） ==========
 // 生成菱形背景 SVG（外发光更柔和，360×360）
 function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
@@ -159,13 +194,6 @@ function renderAvatarComponent(indexEntry, size = 100) {
   const roleId = indexEntry.role;
 
   const canvasW = 360, canvasH = 360;
-  const roleSizes = {
-    1: { w: 96, h: 96 },
-    2: { w: 121, h: 115 },
-    3: { w: 120, h: 105 },
-    4: { w: 119, h: 99 }
-  };
-
   const svg = renderAvatarSVG(id, traitColor, supportColor, canvasW);
 
   // 星星：向上移动30px
@@ -185,34 +213,10 @@ function renderAvatarComponent(indexEntry, size = 100) {
       style="position:absolute; left:${left}px; top:${starStartY}px; width:${starFullW}px; height:${starFullH}px;">`;
   }
 
-  // 职业图标：向右移动15，向上移动15
-  let roleHTML = '';
-  if (roleId) {
-    const r = roleSizes[roleId] || roleSizes[1];
-    const roleLeft = 15;           // 原0，右移15
-    const roleTop = -15;           // 原0，上移15
-    roleHTML = `<img src="image/misc/role_${roleId}.png" alt=""
-      style="position:absolute; left:${roleLeft}px; top:${roleTop}px; width:${r.w}px; height:${r.h}px;">`;
-  }
-
-  // 属性图标：向左移动15，向上移动15（关于x=180与职业图标对称，再应用偏移）
-  let attrHTML = '';
-  if (attrId) {
-    const roleW = roleId ? (roleSizes[roleId]?.w || 96) : 96;
-    const roleH = roleId ? (roleSizes[roleId]?.h || 96) : 96;
-    // 职业图标中心（右移15、上移15后）
-    const roleCenterX = 15 + roleW / 2;
-    const roleCenterY = roleH / 2 - 15;  // 向上移动15，中心y减小
-    // 属性图标中心（关于x=180对称，然后向左移动15，向上移动15）
-    const attrCenterX = 360 - roleCenterX - 15;   // 对称后再左移15
-    const attrCenterY = roleCenterY;               // y坐标相同（已向上移动）
-    const attrW = 118, attrH = 112;
-    const attrLeft = attrCenterX - attrW / 2;
-    const attrTop = attrCenterY - attrH / 2;
-
-    attrHTML = `<img src="image/misc/attack_attribute_${attrId}.png" alt=""
-      style="position:absolute; left:${attrLeft}px; top:${attrTop}px; width:${attrW}px; height:${attrH}px;">`;
-  }
+  // 职业图标模块（左上角）
+  const roleModule = renderIconModule('role', roleId, null, 128);
+  // 属性图标模块（右上角）
+  const attrModule = renderIconModule('attribute', attrId, null, 128);
 
   const scale = size / canvasW;
 
@@ -220,8 +224,10 @@ function renderAvatarComponent(indexEntry, size = 100) {
     <div class="avatar-component" style="width:${size}px; height:${size}px; position:relative; overflow:visible;">
       <div style="position:absolute; top:0; left:0; width:${canvasW}px; height:${canvasH}px; transform:scale(${scale}); transform-origin:0 0;">
         ${svg}
-        ${roleHTML}
-        ${attrHTML}
+        <!-- 职业图标：左上角 -->
+        <div style="position:absolute; left:0; top:0;">${roleModule}</div>
+        <!-- 属性图标：右上角 -->
+        <div style="position:absolute; right:0; top:0;">${attrModule}</div>
         ${starsHTML}
       </div>
     </div>
