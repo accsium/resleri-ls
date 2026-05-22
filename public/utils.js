@@ -73,6 +73,7 @@ const COLOR_MAP = {
 };
 
 let currentLang = 'cn';
+let currentView = 'chara_dex'; // 全局视图状态
 let cardStates = {};
 
 const SORT_FIELDS = [
