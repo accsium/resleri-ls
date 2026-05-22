@@ -103,24 +103,71 @@ function renderStarGroup(rarity, scale = 1) {
 }
 
 // ========== 头像组件（职业左上，属性右上，星星底边居中） ==========
-function renderAvatarComponent(indexEntry, size = 75) {
+// 生成菱形背景 SVG（带外发光，360×360）
+function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
+  const traitHex = getColorHex(traitColor);
+  const supportHex = getColorHex(supportColor);
+  const imgId = `avatar-img-${id}`;
+
+  return `<svg width="${size}" height="${size}" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow-left-${id}" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+      </filter>
+      <filter id="glow-right-${id}" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+      </filter>
+      <linearGradient id="gt-${id}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+      </linearGradient>
+      <linearGradient id="gl-${id}" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+      </linearGradient>
+      <linearGradient id="gr-${id}" x1="1" y1="0" x2="0" y2="0">
+        <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+      </linearGradient>
+      <mask id="mask-${id}">
+        <!-- 蒙版形状（平移后） -->
+        <rect x="52" y="74" width="256" height="128" fill="white"/>
+        <polygon points="52,202 308,202 180,330" fill="white"/>
+        <!-- 顶部羽化 15px -->
+        <rect x="52" y="74" width="256" height="15" fill="url(#gt-${id})"/>
+        <!-- 左侧羽化 15px -->
+        <rect x="52" y="74" width="15" height="128" fill="url(#gl-${id})"/>
+        <!-- 右侧羽化 15px（x坐标修正） -->
+        <rect x="293" y="74" width="15" height="128" fill="url(#gr-${id})"/>
+      </mask>
+    </defs>
+
+    <!-- 左侧三角形（带外发光） -->
+    <polygon points="180,0 0,180 180,360" fill="${traitHex}" filter="url(#glow-left-${id})"/>
+    <!-- 右侧三角形（带外发光） -->
+    <polygon points="180,0 360,180 180,360" fill="${supportHex}" filter="url(#glow-right-${id})"/>
+
+    <!-- 头像图片（遮罩裁剪） -->
+    <image id="${imgId}" href="image/misc/00000.png" x="52" y="74" width="256" height="256"
+           mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet"/>
+  </svg>`;
+}
+
+// 头像组件（画布 360×360，星星/职业/属性坐标已重算）
+function renderAvatarComponent(indexEntry, size = 100) {
   const id = indexEntry.id;
   const traitColor = getField(indexEntry, 'trait_color_name');
   const supportColor = getField(indexEntry, 'support_color_name');
   const attrId = (indexEntry.attack_attributes || [])[0];
   const roleId = indexEntry.role;
 
-  // 内部画布尺寸
-  const canvasW = 300, canvasH = 300;
+  const canvasW = 360, canvasH = 360;
 
-  // 背景菱形 SVG（原始尺寸 300×300）
+  // 背景 SVG（含外发光）
   const svg = renderAvatarSVG(id, traitColor, supportColor, canvasW);
 
-  // 星星：水平居中，底边对齐，在 300×300 画布上使用原始像素
+  // 星星：原始尺寸，水平居中，底边对齐
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const starCount = starCountMap[indexEntry.initial_rarity] || 0;
   const starFullW = 67, starFullH = 64;
-  const starVisibleW = 47; // 67 - 20
+  const starVisibleW = 47;
   const starTotalW = starCount * starVisibleW;
   const starStartX = (canvasW - starTotalW) / 2;
   const starStartY = canvasH - starFullH;
@@ -128,12 +175,12 @@ function renderAvatarComponent(indexEntry, size = 75) {
   let starsHTML = '';
   for (let i = 0; i < starCount; i++) {
     const starFile = indexEntry.initial_rarity === 8 ? 'star_2.png' : 'star_1.png';
-    const left = starStartX + starVisibleW * i - 10; // 抵消图片左侧空白
+    const left = starStartX + starVisibleW * i - 10;
     starsHTML += `<img src="image/misc/${starFile}" alt=""
       style="position:absolute; left:${left}px; top:${starStartY}px; width:${starFullW}px; height:${starFullH}px;">`;
   }
 
-  // 职业图标（原始尺寸，左上角对齐）
+  // 职业图标（左上角）
   let roleHTML = '';
   if (roleId) {
     const roleSizes = {
@@ -147,16 +194,22 @@ function renderAvatarComponent(indexEntry, size = 75) {
       style="position:absolute; left:0; top:0; width:${r.w}px; height:${r.h}px;">`;
   }
 
-  // 属性图标（原始尺寸，右边缘对齐画布右边，顶部对齐）
+  // 属性图标（关于 x=180 与职业图标对称，顶部对齐）
   let attrHTML = '';
   if (attrId) {
-    const aw = 118, ah = 112;
-    const attrLeft = canvasW - aw;
+    const roleW = roleId ? (roleSizes[roleId]?.w || 96) : 96;
+    const roleH = roleId ? (roleSizes[roleId]?.h || 96) : 96;
+    const roleCenterX = roleW / 2;
+    const roleCenterY = roleH / 2;
+    const attrCenterX = 360 - roleCenterX; // 关于 180 对称
+    const attrCenterY = roleCenterY;
+    const attrW = 118, attrH = 112;
+    const attrLeft = attrCenterX - attrW / 2;
+    const attrTop = attrCenterY - attrH / 2;
     attrHTML = `<img src="image/misc/attack_attribute_${attrId}.png" alt=""
-      style="position:absolute; left:${attrLeft}px; top:0; width:${aw}px; height:${ah}px;">`;
+      style="position:absolute; left:${attrLeft}px; top:${attrTop}px; width:${attrW}px; height:${attrH}px;">`;
   }
 
-  // 缩放比例
   const scale = size / canvasW;
 
   return `
@@ -169,26 +222,6 @@ function renderAvatarComponent(indexEntry, size = 75) {
       </div>
     </div>
   `;
-}
-
-function renderAvatarSVG(id, traitColor, supportColor, size = 300) {
-  const traitHex = getColorHex(traitColor), supportHex = getColorHex(supportColor);
-  const imgId = `avatar-img-${id}`;
-  return `<svg width="${size}" height="${size}" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="150,0 0,150 150,300" fill="${traitHex}"/><polygon points="150,0 300,150 150,300" fill="${supportHex}"/>
-    <defs>
-      <linearGradient id="gt-${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/></linearGradient>
-      <linearGradient id="gl-${id}" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/></linearGradient>
-      <linearGradient id="gr-${id}" x1="1" y1="0" x2="0" y2="0"><stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/></linearGradient>
-      <mask id="mask-${id}">
-        <rect x="22" y="44" width="256" height="128" fill="white"/><polygon points="22,172 278,172 150,300" fill="white"/>
-        <rect x="22" y="44" width="256" height="15" fill="url(#gt-${id})"/>
-        <rect x="22" y="44" width="15" height="128" fill="url(#gl-${id})"/>
-        <rect x="263" y="44" width="15" height="128" fill="url(#gr-${id})"/>
-      </mask>
-    </defs>
-    <image id="${imgId}" href="image/misc/00000.png" x="22" y="44" width="256" height="256" mask="url(#mask-${id})" preserveAspectRatio="xMidYMax meet"/>
-  </svg>`;
 }
 
 function initAvatar(card, id) {
@@ -241,7 +274,7 @@ function createCard(indexEntry) {
 
   const traits = [...(getField(indexEntry, 'battle_tool_trait_names')||[]), ...(getField(indexEntry, 'equipment_tool_trait_names')||[])];
 
-  const avatarHTML = renderAvatarComponent(indexEntry, 75);
+  const avatarHTML = renderAvatarComponent(indexEntry, 100);
 
   // 最大星级（50% 缩放）
   const maxStarCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
