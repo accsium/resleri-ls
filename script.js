@@ -111,9 +111,9 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
 
   return `<svg width="${size}" height="${size}" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
     <defs>
-      <!-- 外发光模糊滤镜（增大模糊度，更柔和） -->
-      <filter id="blur-${id}" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur stdDeviation="12"/>
+      <!-- 外发光模糊滤镜（增大模糊度，光晕范围约30px） -->
+      <filter id="blur-${id}" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="15"/>
       </filter>
 
       <!-- 羽化蒙版渐变色 -->
@@ -135,11 +135,11 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
       </mask>
     </defs>
 
-    <!-- 底层模糊三角形（外发光，降低透明度使光晕柔和） -->
-    <polygon points="180,0 0,180 180,360" fill="${traitHex}" fill-opacity="0.35" filter="url(#blur-${id})" style="overflow:visible;"/>
-    <polygon points="180,0 360,180 180,360" fill="${supportHex}" fill-opacity="0.35" filter="url(#blur-${id})" style="overflow:visible;"/>
+    <!-- 底层模糊三角形（尺寸 300×300，光晕扩散至360边界，透明度柔和） -->
+    <polygon points="180,30 30,180 180,330" fill="${traitHex}" fill-opacity="0.3" filter="url(#blur-${id})" style="overflow:visible;"/>
+    <polygon points="180,30 330,180 180,330" fill="${supportHex}" fill-opacity="0.3" filter="url(#blur-${id})" style="overflow:visible;"/>
 
-    <!-- 顶层清晰三角形（收缩30px，保留拼缝） -->
+    <!-- 顶层清晰三角形（保持拼缝锐利） -->
     <polygon points="180,30 30,180 180,330" fill="${traitHex}"/>
     <polygon points="180,30 330,180 180,330" fill="${supportHex}"/>
 
@@ -174,7 +174,7 @@ function renderAvatarComponent(indexEntry, size = 100) {
   const starVisibleW = 47;
   const starTotalW = starCount * starVisibleW;
   const starStartX = (canvasW - starTotalW) / 2;
-  const starStartY = canvasH - starFullH - 30; // 原先底边对齐，现在上移30px
+  const starStartY = canvasH - starFullH - 30;
 
   let starsHTML = '';
   for (let i = 0; i < starCount; i++) {
@@ -192,22 +192,25 @@ function renderAvatarComponent(indexEntry, size = 100) {
       style="position:absolute; left:30px; top:30px; width:${r.w}px; height:${r.h}px;">`;
   }
 
-  // 属性图标：纵坐标+30，横坐标-30（相对于原来计算的位置）
+  // 属性图标：横坐标-30，纵坐标+30（基于原始对称中心计算，无重复叠加）
   let attrHTML = '';
   if (attrId) {
     const roleW = roleId ? (roleSizes[roleId]?.w || 96) : 96;
     const roleH = roleId ? (roleSizes[roleId]?.h || 96) : 96;
-    const roleCenterX = 30 + roleW / 2; // 职业图标已向右偏移30px，因此中心点需重新计算
-    const roleCenterY = 30 + roleH / 2;
-    const attrCenterX = 360 - roleCenterX; // 关于180对称，但职业已偏移，对称轴应仍是180？还是对称轴保持180不变？
-    // 根据用户要求，属性图标纵+30横-30，且原先是对称于x=180，现在职业移动后对称轴可能不变化，我们按照原方法计算再偏移。
-    // 原本职业未移动时，attrCenterX = 360 - roleCenterX (原来roleCenterX = r.w/2)。现在职业左移30，职业中心变为 30 + r.w/2。
-    // 属性图标仍需与职业图标关于 x=180 对称，因此 attrCenterX = 360 - (30 + r.w/2) = 330 - r.w/2
-    const attrCenterX_new = 360 - (30 + roleW / 2);
-    const attrCenterY_new = (30 + roleH / 2) + 30; // 纵坐标+30
+    // 职业图标原始中心（无偏移时，位于左上角）
+    const origRoleCenterX = roleW / 2;
+    const origRoleCenterY = roleH / 2;
+    // 属性图标原始中心（关于 x=180 对称，与职业图标中心水平镜像，垂直对齐）
+    const origAttrCenterX = 360 - origRoleCenterX;
+    const origAttrCenterY = origRoleCenterY;
+    // 应用要求的偏移：横-30，纵+30
+    const attrCenterX = origAttrCenterX - 30;
+    const attrCenterY = origAttrCenterY + 30;
+
     const attrW = 118, attrH = 112;
-    const attrLeft = attrCenterX_new - attrW / 2 - 30; // 横坐标-30
-    const attrTop = attrCenterY_new - attrH / 2;
+    const attrLeft = attrCenterX - attrW / 2;
+    const attrTop = attrCenterY - attrH / 2;
+
     attrHTML = `<img src="image/misc/attack_attribute_${attrId}.png" alt=""
       style="position:absolute; left:${attrLeft}px; top:${attrTop}px; width:${attrW}px; height:${attrH}px;">`;
   }
