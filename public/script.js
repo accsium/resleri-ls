@@ -85,24 +85,24 @@ const SORT_FIELDS = [
   { field: 'support_color_id', label_ja: '調和色-右', label_cn: '调和颜色-右', priority: 8 }
 ];
 
-// ========== 星星组件（通用，绝对定位，原始尺寸） ==========
+// ========== 星星组件（绝对定位，可缩放） ==========
 function renderStarGroup(rarity, scale = 1) {
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const count = starCountMap[rarity] || 0;
   if (count === 0) return '';
   const starFile = rarity === 8 ? 'star_2.png' : 'star_1.png';
-  const w = 67; // 原始宽度
-  const h = 64;
-  const visibleWidth = w - 20; // 有效宽度
+  const w = Math.round(67 * scale);
+  const h = Math.round(64 * scale);
+  const visibleWidth = Math.round((67 - 20) * scale); // 有效宽度
   let html = '';
   for (let i = 0; i < count; i++) {
-    const left = visibleWidth * i - 10; // 绝对定位 left 公式
+    const left = visibleWidth * i - Math.round(10 * scale);
     html += `<img src="image/misc/${starFile}" alt="" style="position:absolute; left:${left}px; top:0; width:${w}px; height:${h}px;">`;
   }
   return html;
 }
 
-// ========== 头像组件（所有图标/星星使用原始尺寸，坐标固定） ==========
+// ========== 头像组件（职业左上，属性右上，星星底边居中） ==========
 function renderAvatarComponent(indexEntry, size = 75) {
   const id = indexEntry.id;
   const traitColor = getField(indexEntry, 'trait_color_name');
@@ -110,7 +110,7 @@ function renderAvatarComponent(indexEntry, size = 75) {
   const attrId = (indexEntry.attack_attributes || [])[0];
   const roleId = indexEntry.role;
 
-  // 星星容器：底边对齐，水平居中，可溢出
+  // 星星容器（底边对齐，水平居中）
   const starCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
   const starCount = starCountMap[indexEntry.initial_rarity] || 0;
   const starVisibleWidth = 47; // 67-20
@@ -122,10 +122,9 @@ function renderAvatarComponent(indexEntry, size = 75) {
       </div>`
     : '';
 
-  // 属性图标 (118x112) - 与职业图标几何中心水平对齐，对称于 x=150
-  // 职业图标几何中心：职业图标右对齐、顶对齐，几何中心 = (300 - w/2, h/2)
-  let attrIcon = '', roleIcon = '';
-  if (roleId && attrId) {
+  // 图标坐标（职业左上，属性右上，几何中心关于 x=150 对称）
+  let roleIcon = '', attrIcon = '';
+  if (roleId) {
     const roleSizes = {
       1: { w: 96, h: 96 },
       2: { w: 121, h: 115 },
@@ -133,27 +132,19 @@ function renderAvatarComponent(indexEntry, size = 75) {
       4: { w: 119, h: 99 }
     };
     const rSize = roleSizes[roleId] || roleSizes[1];
-    // 职业图标位置：右对齐，顶部对齐
-    const roleLeft = 300 - rSize.w;
-    const roleTop = 0;
-    // 职业图标几何中心
+    const roleLeft = 0, roleTop = 0;
     const roleCenterX = roleLeft + rSize.w / 2;
     const roleCenterY = roleTop + rSize.h / 2;
-    // 属性图标几何中心关于 x=150 对称
     const attrCenterX = 300 - roleCenterX;
     const attrCenterY = roleCenterY;
-    const attrLeft = attrCenterX - 59; // 118/2
-    const attrTop = attrCenterY - 56;  // 112/2
-
-    attrIcon = `<img src="image/misc/attack_attribute_${attrId}.png" style="position:absolute; left:${attrLeft}px; top:${attrTop}px; width:118px; height:112px;" alt="">`;
+    const attrLeft = attrCenterX - 59, attrTop = attrCenterY - 56;
     roleIcon = `<img src="image/misc/role_${roleId}.png" style="position:absolute; left:${roleLeft}px; top:${roleTop}px; width:${rSize.w}px; height:${rSize.h}px;" alt="">`;
+    if (attrId) {
+      attrIcon = `<img src="image/misc/attack_attribute_${attrId}.png" style="position:absolute; left:${attrLeft}px; top:${attrTop}px; width:118px; height:112px;" alt="">`;
+    }
   } else if (attrId) {
-    // 没有职业图标，属性图标放左上角
-    attrIcon = `<img src="image/misc/attack_attribute_${attrId}.png" style="position:absolute; left:0; top:0; width:118px; height:112px;" alt="">`;
-  } else if (roleId) {
-    // 没有属性图标，职业图标放右上角
-    const rSize = {1:{w:96,h:96},2:{w:121,h:115},3:{w:120,h:105},4:{w:119,h:99}}[roleId] || {w:96,h:96};
-    roleIcon = `<img src="image/misc/role_${roleId}.png" style="position:absolute; left:${300 - rSize.w}px; top:0; width:${rSize.w}px; height:${rSize.h}px;" alt="">`;
+    // 无职业图标时，属性图标放右上角
+    attrIcon = `<img src="image/misc/attack_attribute_${attrId}.png" style="position:absolute; right:0; top:0; width:118px; height:112px;" alt="">`;
   }
 
   const svg = renderAvatarSVG(id, traitColor, supportColor, 300);
@@ -163,8 +154,8 @@ function renderAvatarComponent(indexEntry, size = 75) {
       <div class="avatar-svg-container" style="transform:scale(${size/300}); transform-origin:0 0; width:300px; height:300px; overflow:visible;">
         ${svg}
         ${starContainer}
-        ${attrIcon}
         ${roleIcon}
+        ${attrIcon}
       </div>
     </div>
   `;
@@ -242,6 +233,18 @@ function createCard(indexEntry) {
 
   const avatarHTML = renderAvatarComponent(indexEntry, 75);
 
+  // 最大星级（绝对定位）
+  const maxStarCountMap = {1:1, 2:2, 3:3, 5:4, 7:5, 8:6};
+  const maxStarCount = maxStarCountMap[indexEntry.max_rarity] || 0;
+  const maxStarRow = maxStarCount > 0
+    ? `<div class="max-rarity-row">
+        <span class="max-rarity-label">${t('maxRarityLabel')}</span>
+        <span style="display:inline-block; position:relative; vertical-align:middle; width:${maxStarCount * 47}px; height:64px; overflow:visible;">
+          ${renderStarGroup(indexEntry.max_rarity)}
+        </span>
+      </div>`
+    : '';
+
   // P1 中的属性/职业文字
   const attrsText = getField(indexEntry, 'attack_attribute_names').join(' / ') + ' | ' + role;
 
@@ -260,10 +263,7 @@ function createCard(indexEntry) {
       </div>
       <div class="p2-col p2-col2">
         <div class="char-id">ID:${indexEntry.id}</div>
-        <div class="max-rarity-row">
-          <span class="max-rarity-label">${t('maxRarityLabel')}</span>
-          ${renderStarGroup(indexEntry.max_rarity)}
-        </div>
+        ${maxStarRow}
         <div class="tags">${tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
         <div class="release-date">${t('joinDate')}: ${releaseDate}</div>
         <div class="stats-row">${statCards}</div>
@@ -293,14 +293,10 @@ function createCard(indexEntry) {
     }
   };
 
-  // 加载角色详情（切换按钮状态）
   loadCharacter(indexEntry.id).then(char => {
     if (char) updateSwitchButtonsState(card, getCardState(indexEntry.id), char);
   });
-
-  // 异步加载真实头像
   initAvatar(card, indexEntry.id);
-
   return card;
 }
 
