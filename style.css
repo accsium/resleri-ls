@@ -110,6 +110,7 @@ button {
   align-items: center;
   height: 48px;
   position: fixed;          /* 固定定位 */
+  top: 0;                   /* 新增：固定在视口顶部 */
   left: 0;
   right: 0;
   z-index: 9;
@@ -172,7 +173,7 @@ button {
 /* ========== 控制栏 ========== */
 .controls-bar {
   max-width: 900px;
-  margin: 160px auto 20px;  /* 上边距 = 顶栏总高度(112) + 导航栏高度(48) */
+  margin: 128px auto 20px;  /* 上边距 = 导航栏高度(48) + 顶栏最小高度(80) */
   padding: 0 20px;
   display: flex;
   gap: 14px;
