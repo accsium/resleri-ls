@@ -101,26 +101,71 @@ button {
   white-space: nowrap;
 }
 
-/* ========== 搜索框 ========== */
-.search-box {
-  max-width: 700px;
-  margin: 28px auto;
-  padding: 0 20px;
+/* ========== 导航栏 ========== */
+.nav-bar {
+  background: #2c3648;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  position: sticky;
+  top: 80px;
+  z-index: 9;
+  gap: 20px;
 }
 
-.search-box input {
-  width: 100%;
-  padding: 14px 20px;
-  background: #f4f1e9;
-  color: #404040;
+.nav-links {
+  display: flex;
+  gap: 0;
+  height: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  color: #9aa0ad;
+  text-decoration: none;
   font-size: 15px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: 0.2s;
+}
+
+.nav-link.active {
+  color: #fff;
+  border-bottom-color: #cac19c;
+}
+
+.nav-link:hover {
+  color: #cac19c;
+}
+
+.nav-search {
+  flex-shrink: 0;
+}
+
+.nav-search input {
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  font-size: 14px;
   font-family: inherit;
   outline: none;
-  border: none;
+  width: 220px;
+  transition: 0.2s;
 }
 
-.search-box input:focus {
-  background: #ede8dc;
+.nav-search input::placeholder {
+  color: #9aa0ad;
+}
+
+.nav-search input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #cac19c;
 }
 
 /* ========== 控制栏 ========== */
@@ -389,7 +434,7 @@ button {
   height: 40px;
 }
 
-/* ========== 切换开关 ========== */
+/* ========== 切换开关（胶囊状） ========== */
 .toggle-switch {
   position: relative;
   display: inline-block;
@@ -574,7 +619,7 @@ input:checked + .slider:before {
   gap: 4px;
 }
 
-/* ========== 调和模块 ========== */
+/* ========== 调和模块（展开后底部） ========== */
 .synthesis-module {
   background: #ede8dc;
   padding: 8px;
@@ -590,6 +635,7 @@ input:checked + .slider:before {
   font-size: 13px;
 }
 
+/* 调和词条样式 */
 .trait-tag {
   display: block;
   background: #e4dcce;
@@ -630,8 +676,16 @@ input:checked + .slider:before {
   overflow: hidden;
 }
 
+/* 星星组（内联显示） */
 .stars-group {
   display: inline-flex;
   gap: 0;
   align-items: center;
+}
+
+/* ========== 收藏容器 ========== */
+.collection-container {
+  padding: 40px;
+  text-align: center;
+  color: #888;
 }
