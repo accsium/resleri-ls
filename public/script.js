@@ -111,6 +111,13 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
 
   return `<svg width="${size}" height="${size}" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
     <defs>
+      <!-- 外发光滤镜 -->
+      <filter id="glow-${id}" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="15" result="blur"/>
+        <feComposite in="blur" in2="SourceGraphic" operator="over"/>
+      </filter>
+
+      <!-- 羽化蒙版渐变色 -->
       <linearGradient id="gt-${id}" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
       </linearGradient>
@@ -129,11 +136,13 @@ function renderAvatarSVG(id, traitColor, supportColor, size = 360) {
       </mask>
     </defs>
 
-    <!-- 三角形使用 CSS drop-shadow 实现外发光 -->
-    <polygon points="180,30 30,180 180,330" fill="${traitHex}"
-             style="filter: drop-shadow(0 0 20px ${traitHex}44) drop-shadow(0 0 40px ${traitHex}22);"/>
-    <polygon points="180,30 330,180 180,330" fill="${supportHex}"
-             style="filter: drop-shadow(0 0 20px ${supportHex}44) drop-shadow(0 0 40px ${supportHex}22);"/>
+    <!-- 底层外发光三角形（360×360尺寸，超出顶层范围，模糊后形成光晕） -->
+    <polygon points="180,0 0,180 180,360" fill="${traitHex}" opacity="0.5" filter="url(#glow-${id})" style="overflow:visible;"/>
+    <polygon points="180,0 360,180 180,360" fill="${supportHex}" opacity="0.5" filter="url(#glow-${id})" style="overflow:visible;"/>
+
+    <!-- 顶层清晰三角形（300×300，覆盖中间区域，边缘露出光晕） -->
+    <polygon points="180,30 30,180 180,330" fill="${traitHex}"/>
+    <polygon points="180,30 330,180 180,330" fill="${supportHex}"/>
 
     <!-- 头像图片（遮罩裁剪） -->
     <image id="${imgId}" href="image/misc/00000.png" x="52" y="74" width="256" height="256"
