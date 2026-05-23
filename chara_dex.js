@@ -105,7 +105,7 @@ function updateSwitchButtonsState(card, state, char) {
 function getCardState(id) { return cardStates[id] || (cardStates[id] = { evo:'post', range:'inrange', showTransform:false }); }
 function setCardState(id, ns) { cardStates[id] = { ...cardStates[id], ...ns }; }
 
-// ========== 详情展开（移动自 app.js） ==========
+// ========== 详情展开 ==========
 async function toggleCardDetail(id) {
   const detailDiv = document.querySelector(`.card[data-id="${id}"] .card-detail`);
   if (!detailDiv) return;
@@ -224,7 +224,7 @@ function generateDetailHTML(activeChar, state, id, originalChar) {
     const maxRarity = activeChar.max_rarity || 8, defaultIdx = Math.min(maxRarity - 1, supportIds.length - 1);
     const supportAbility = abilityMap[supportIds[defaultIdx]];
     const rarityTabs = `<div class="support-rarity-tabs">${supportIds.map((sid, idx) => sid == null ? '' : `<button class="level-tab support-rarity-btn ${idx === defaultIdx ? 'active' : ''}" data-support-idx="${idx}">${t('rarityLabel')[idx]}</button>`).join('')}</div>`;
-    html += `<div class="banner-title"><span>${t('supportAbilityTitle')}</span>${rarityTabs}</div><div class="content-block">${supportAbility ? renderAbilityCard(supportAbility) : `<div class="no-data">${t('none')}</div>`}</div>`;
+    html += `<div class="banner-title"><span>${t('supportAbilityTitle')}</span>${rarityTabs}</div><div class="content-block support-ability-content">${supportAbility ? renderAbilityCard(supportAbility) : `<div class="no-data">${t('none')}</div>`}</div>`;
   }
   if (originalChar) html += `<div id="synthesis-bottom">${renderSynthesisModule(originalChar)}</div>`;
   return html;
@@ -245,9 +245,12 @@ function renderAbilityCard(a) {
   return `<div>${desc}</div>`;
 }
 
+// ========== 内部按钮绑定（修复版） ==========
 function bindInnerButtons(id, activeChar, originalChar, state) {
   const card = document.querySelector(`.card[data-id="${id}"]`);
   if (!card) return;
+
+  // 技能等级切换
   card.querySelectorAll('.skill-group').forEach(group => {
     const tabs = group.querySelectorAll('.level-tab');
     const contentBlock = group.querySelector('.content-block');
@@ -278,13 +281,17 @@ function bindInnerButtons(id, activeChar, originalChar, state) {
       };
     });
   });
+
+  // 支援能力星级切换（修复：直接定位到正确的容器）
   card.querySelectorAll('.support-rarity-btn').forEach(btn => {
     btn.onclick = () => {
       const idx = parseInt(btn.dataset.supportIdx);
       const supportIds = activeChar.support_ability_ids || [];
       const ability = (activeChar._skillDetails || {})[supportIds[idx]];
-      const content = card.querySelector('.support-ability-content') || card.querySelector('.content-block:last-of-type');
-      if (content) content.innerHTML = ability ? renderAbilityCard(ability) : `<div class="no-data">${t('none')}</div>`;
+      const content = card.querySelector('.support-ability-content');
+      if (content) {
+        content.innerHTML = ability ? renderAbilityCard(ability) : `<div class="no-data">${t('none')}</div>`;
+      }
       card.querySelectorAll('.support-rarity-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     };
