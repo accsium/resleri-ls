@@ -220,12 +220,34 @@ function generateDetailHTML(activeChar, state, id, originalChar) {
   html += `<div class="section-title">${t('abilityTitle')}</div>`;
   abilities.forEach(a => { html += `<div class="banner-title">${a.name || `ID:${a.id}`}</div><div class="content-block">${renderAbilityCard(a)}</div>`; });
   if (abilities.length === 0 && supportIds.length === 0) html += `<div class="no-data">${t('none')}</div>`;
+
+  // 支援能力部分（已更新）
   if (supportIds.length > 0) {
-    const maxRarity = activeChar.max_rarity || 8, defaultIdx = Math.min(maxRarity - 1, supportIds.length - 1);
-    const supportAbility = abilityMap[supportIds[defaultIdx]];
-    const rarityTabs = `<div class="support-rarity-tabs">${supportIds.map((sid, idx) => sid == null ? '' : `<button class="level-tab support-rarity-btn ${idx === defaultIdx ? 'active' : ''}" data-support-idx="${idx}">${t('rarityLabel')[idx]}</button>`).join('')}</div>`;
-    html += `<div class="banner-title"><span>${t('supportAbilityTitle')}</span>${rarityTabs}</div><div class="content-block support-ability-content">${supportAbility ? renderAbilityCard(supportAbility) : `<div class="no-data">${t('none')}</div>`}</div>`;
+    const maxRarity = activeChar.max_rarity || 8;
+    const defaultIdx = Math.min(maxRarity - 1, supportIds.length - 1);
+    const rarityMap = [1, 2, 3, 4, 5, 6, 7, 8];
+    const initialRarity = activeChar.initial_rarity || 1;
+
+    const rarityTabs = `<div class="support-rarity-tabs">${supportIds.map((sid, idx) => {
+      if (sid == null) return '';
+      const rarity = rarityMap[idx];
+      const isUnreachable = rarity < initialRarity || rarity > maxRarity;
+      return `<button class="level-tab support-rarity-btn ${idx === defaultIdx ? 'active' : ''} ${isUnreachable ? 'support-unreachable' : ''}" 
+              data-support-idx="${idx}">${t('rarityLabel')[idx]}</button>`;
+    }).join('')}</div>`;
+
+    const currentIdx = defaultIdx;
+    const currentRarity = rarityMap[currentIdx];
+    const currentUnreachable = currentRarity < initialRarity || currentRarity > maxRarity;
+    const supportAbility = abilityMap[supportIds[currentIdx]];
+
+    html += `<div class="banner-title"><span>${t('supportAbilityTitle')}</span>${rarityTabs}</div>
+    <div class="content-block support-ability-content">
+      ${supportAbility ? renderAbilityCard(supportAbility) : `<div class="no-data">${t('none')}</div>`}
+      ${currentUnreachable ? `<div class="support-note">该角色目前无法到达此星级。</div>` : ''}
+    </div>`;
   }
+
   if (originalChar) html += `<div id="synthesis-bottom">${renderSynthesisModule(originalChar)}</div>`;
   return html;
 }
@@ -282,16 +304,24 @@ function bindInnerButtons(id, activeChar, originalChar, state) {
     });
   });
 
-  // 支援能力星级切换（修复：直接定位到正确的容器）
+  // 支援能力星级切换（已更新，包含不可达星级的注释）
   card.querySelectorAll('.support-rarity-btn').forEach(btn => {
     btn.onclick = () => {
       const idx = parseInt(btn.dataset.supportIdx);
       const supportIds = activeChar.support_ability_ids || [];
       const ability = (activeChar._skillDetails || {})[supportIds[idx]];
       const content = card.querySelector('.support-ability-content');
-      if (content) {
-        content.innerHTML = ability ? renderAbilityCard(ability) : `<div class="no-data">${t('none')}</div>`;
-      }
+      if (!content) return;
+
+      const rarityMap = [1, 2, 3, 4, 5, 6, 7, 8];
+      const currentRarity = rarityMap[idx];
+      const initialRarity = activeChar.initial_rarity || 1;
+      const maxRarity = activeChar.max_rarity || 8;
+      const isUnreachable = currentRarity < initialRarity || currentRarity > maxRarity;
+
+      content.innerHTML = (ability ? renderAbilityCard(ability) : `<div class="no-data">${t('none')}</div>`) +
+        (isUnreachable ? `<div class="support-note">该角色目前无法到达此星级。</div>` : '');
+
       card.querySelectorAll('.support-rarity-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     };
