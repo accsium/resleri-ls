@@ -693,8 +693,11 @@ input:checked + .slider:before {
 
 /* 支援能力中无法到达的星级按钮 */
 .support-unreachable {
-  color: #bbb !important;
-  border-color: #ddd !important;
+  color: #ccc !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  cursor: default;
+  opacity: 0.5;
 }
 
 /* 支援能力注释 */
