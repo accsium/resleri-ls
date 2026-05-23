@@ -221,7 +221,7 @@ function generateDetailHTML(activeChar, state, id, originalChar) {
   abilities.forEach(a => { html += `<div class="banner-title">${a.name || `ID:${a.id}`}</div><div class="content-block">${renderAbilityCard(a)}</div>`; });
   if (abilities.length === 0 && supportIds.length === 0) html += `<div class="no-data">${t('none')}</div>`;
 
-  // 支援能力部分（已更新）
+  // 支援能力部分（含不可达星级样式）
   if (supportIds.length > 0) {
     const maxRarity = activeChar.max_rarity || 8;
     const defaultIdx = Math.min(maxRarity - 1, supportIds.length - 1);
@@ -242,7 +242,7 @@ function generateDetailHTML(activeChar, state, id, originalChar) {
     const supportAbility = abilityMap[supportIds[currentIdx]];
 
     html += `<div class="banner-title"><span>${t('supportAbilityTitle')}</span>${rarityTabs}</div>
-    <div class="content-block support-ability-content">
+    <div class="content-block support-ability-content${currentUnreachable ? ' support-unreachable' : ''}">
       ${supportAbility ? renderAbilityCard(supportAbility) : `<div class="no-data">${t('none')}</div>`}
       ${currentUnreachable ? `<div class="support-note">该角色目前无法到达此星级。</div>` : ''}
     </div>`;
