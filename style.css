@@ -690,3 +690,16 @@ input:checked + .slider:before {
   text-align: center;
   color: #888;
 }
+
+/* 支援能力中无法到达的星级按钮 */
+.support-unreachable {
+  color: #bbb !important;
+  border-color: #ddd !important;
+}
+
+/* 支援能力注释 */
+.support-note {
+  color: #6bb7ff;
+  font-size: 12px;
+  margin-top: 6px;
+}
