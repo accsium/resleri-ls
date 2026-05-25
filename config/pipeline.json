@@ -1,0 +1,22 @@
+{
+  "dataRawDir": "data_raw/jp",
+
+  "mainDataFiles": {
+    "character": "character.json",
+    "skill": "skill.json",
+    "ability": "ability.json",
+    "effect": "effect.json"
+  },
+
+  "translationFiles": {
+    "character_tag": { "file": "character_tag.json", "static": false },
+    "base_character": { "file": "base_character.json", "static": false },
+    "trait_color": { "file": "trait_color.json", "static": false },
+    "original_title": { "file": "original_title.json", "static": false },
+    "equipment_tool_trait": { "file": "equipment_tool_trait.json", "static": false },
+    "battle_tool_trait": { "file": "battle_tool_trait.json", "static": false },
+    "attack_attribute": { "file": "attack_attribute.json", "static": true },
+    "role": { "file": "role.json", "static": true },
+    "skill_target_type": { "file": "skill_target_type.json", "static": true }
+  }
+}

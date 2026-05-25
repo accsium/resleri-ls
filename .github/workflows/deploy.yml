@@ -4,10 +4,15 @@ on:
   push:
     branches: [ "main" ]
     paths:
+      - 'data_raw/**'
       - 'data/**'
       - 'scripts/**'
       - 'config/**'
       - 'public/**'
+      - 'src/**'
+      - 'index.html'
+      - 'package.json'
+      - 'vite.config.js'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
@@ -28,11 +33,19 @@ jobs:
         with:
           node-version: 20
 
+      - name: 准备数据与翻译
+        run: node scripts/prepareData.js
+
       - name: 运行拆分脚本
         run: node scripts/resolveAndSplit.js
+
+      - name: 构建 Vue 应用
+        run: |
+          npm ci
+          npm run build
 
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./dist
