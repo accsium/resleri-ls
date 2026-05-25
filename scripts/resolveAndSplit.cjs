@@ -41,11 +41,10 @@ function loadMapFile(name, lang) {
 
 const jpMaps = {};
 const cnMaps = {};
-const mapKeys = [
-  'character_tag', 'base_character', 'equipment_tool_trait',
-  'original_title', 'attack_attribute', 'role', 'skill_target_type',
-  'trait_color', 'battle_tool_trait'
-];
+const pipelineConfig = JSON.parse(fs.readFileSync(
+  path.join(__dirname, '..', 'config', 'pipeline.json'), 'utf-8'
+));
+const mapKeys = Object.keys(pipelineConfig.translationFiles || {});
 mapKeys.forEach(key => {
   jpMaps[key] = loadMapFile(key, 'ja');
   cnMaps[key] = loadMapFile(key, 'cn');

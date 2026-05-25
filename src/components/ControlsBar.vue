@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useFilters } from '../composables/useFilters'
 
@@ -10,8 +11,6 @@ const { activeSortFields, currentSortOrder, setSortField, toggleOrder } = useFil
 function handleSortChange(e) {
   setSortField(e.target.value)
 }
-
-import { computed } from 'vue'
 
 const orderLabel = computed(() => currentSortOrder.value === 'desc' ? '↓' : '↑')
 </script>

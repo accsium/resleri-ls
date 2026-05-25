@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from '../composables/useI18n'
+import { replaceEffects } from '../utils/effects.js'
 
 const props = defineProps({
   supportIds: Array,
@@ -15,13 +16,7 @@ const rarityMap = [1, 2, 3, 4, 5, 6, 7, 8]
 
 function formatDescription(ability) {
   if (!ability) return ''
-  let desc = ability.description || ''
-  if (ability.effects) {
-    ability.effects.forEach((eff, i) => {
-      desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), (eff.value ?? 0) / 100)
-    })
-  }
-  return desc
+  return replaceEffects(ability.description, ability.effects)
 }
 
 const entries = computed(() => {

@@ -13,7 +13,7 @@ const props = defineProps({
   indexEntry: Object,
 })
 
-const { t, getField } = useI18n()
+const { t, getField, currentLang } = useI18n()
 const { loadCharacter, loadedCharacters } = useCharacterData()
 const { getCardState, setCardState } = useCardState()
 
@@ -22,7 +22,6 @@ const detailLoading = ref(false)
 const detailError = ref('')
 
 const starCountMap = { 1: 1, 2: 2, 3: 3, 5: 4, 7: 5, 8: 6 }
-const maxStarScale = 0.5
 
 const baseName = computed(() => getField(props.indexEntry, 'base_character_name') || (props.indexEntry.name_cn || props.indexEntry.name_ja))
 const alias = computed(() => props.indexEntry.another_name || '')
@@ -59,8 +58,6 @@ const hasRange = computed(() => props.indexEntry.has_range)
 const hasTransform = computed(() => props.indexEntry.has_transform)
 
 const toggleEnabled = computed(() => hasEvo.value || hasRange.value || hasTransform.value)
-
-const { currentLang } = useI18n()
 
 const state = getCardState(props.indexEntry.id)
 if (!('_init' in state)) {
@@ -189,14 +186,12 @@ onUnmounted(cleanupSticky)
           <div v-if="maxStars > 0" class="cb-rarity">
             <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
             <div class="stars-row-wrap" :style="{ height: 45 * 0.5 + 'px' }">
-              <div class="stars-row-wrap" :style="{ height: 45 * 0.5 + 'px' }">
-                <StarsDisplay :scale="0.5">
-                  <StarIcon
-                    v-for="i in maxStars" :key="i"
-                    :src="'image/misc/' + maxStarType + '.png'"
-                  />
-                </StarsDisplay>
-              </div>
+              <StarsDisplay :scale="0.5">
+                <StarIcon
+                  v-for="i in maxStars" :key="i"
+                  :src="'image/misc/' + maxStarType + '.png'"
+                />
+              </StarsDisplay>
             </div>
           </div>
           <div class="cb-tags">
@@ -239,13 +234,13 @@ onUnmounted(cleanupSticky)
             <div v-if="maxStars > 0" class="cb-rarity">
               <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
               <div class="stars-row-wrap" :style="{ height: 45 * 0.5 + 'px' }">
-                <StarsDisplay :scale="0.5">
-                  <StarIcon
-                    v-for="i in maxStars" :key="i"
-                    :src="'image/misc/' + maxStarType + '.png'"
-                  />
-                </StarsDisplay>
-              </div>
+              <StarsDisplay :scale="0.5">
+                <StarIcon
+                  v-for="i in maxStars" :key="i"
+                  :src="'image/misc/' + maxStarType + '.png'"
+                />
+              </StarsDisplay>
+            </div>
             </div>
             <div class="cb-tags">
               <span class="cb-tags-label">标签：</span>

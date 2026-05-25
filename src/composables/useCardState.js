@@ -15,5 +15,5 @@ export function useCardState() {
     Object.assign(current, patch)
   }
 
-  return { getCardState, setCardState, cardStates }
+  return { getCardState, setCardState }
 }

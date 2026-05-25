@@ -53,12 +53,6 @@ const UI_TEXT = {
   }
 }
 
-const COLOR_MAP = {
-  '赤': '#E74C3C', '青': '#3498DB', '緑': '#2ECC71', '黄': '#F1C40F', '紫': '#9B59B6',
-  '红': '#E74C3C', '蓝': '#3498DB', '绿': '#2ECC71', '紫': '#9B59B6',
-  '白': '#FFFFFF', '黒': '#333333', '黑': '#333333'
-}
-
 const TRAIT_COLOR_HEX = { 1: '#3498DB', 2: '#9B59B6', 3: '#F1C40F', 4: '#E74C3C', 5: '#2ECC71' }
 
 const SORT_FIELDS = [
@@ -91,13 +85,9 @@ export function useI18n() {
     currentLang.value = lang
   }
 
-  function getColorHex(name) {
-    return name ? (COLOR_MAP[name] || '#CCCCCC') : '#CCCCCC'
-  }
-
   function getTraitColorHex(id) {
     return TRAIT_COLOR_HEX[id] || '#CCCCCC'
   }
 
-  return { currentLang, t, getField, setLang, getColorHex, getTraitColorHex, SORT_FIELDS }
+  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_FIELDS }
 }

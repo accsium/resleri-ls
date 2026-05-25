@@ -33,12 +33,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: 准备数据与翻译
-        run: node scripts/prepareData.cjs
-
-      - name: 运行拆分脚本
-        run: node scripts/resolveAndSplit.cjs
-
       - name: 构建 Vue 应用
         run: |
           npm ci

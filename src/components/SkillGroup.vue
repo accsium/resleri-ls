@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { useI18n } from '../composables/useI18n'
+import { replaceEffects } from '../utils/effects.js'
 
 const props = defineProps({
   skillType: Object,
@@ -20,22 +21,18 @@ const skillName = computed(() => currentSkill.value.name || '??')
 const skillId = computed(() => currentSkill.value.id || '')
 const hasLevels = computed(() => props.skillType.type !== 'leader' && props.skillType.levels.length > 1)
 
-function renderSkillStats(skill) {
+const skillStats = computed(() => {
+  const skill = currentSkill.value
   const target = getField(skill, 'target_name') || skill.skill_target_type || '?'
   const attributeNames = (skill.attack_attributes || []).map(a => {
     const map = { 1: '斬', 2: '打', 3: '突', 5: '火', 6: '氷', 7: '雷', 8: '風' }
     return map[a] || a
   })
   const attr = attributeNames.join('/')
-  let desc = skill.description || ''
-  if (skill.effects) {
-    skill.effects.forEach((eff, i) => {
-      desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), (eff.value ?? 0) / 100)
-    })
-  }
+  const desc = replaceEffects(skill.description, skill.effects)
   const wt = 200 + (skill.wait ?? 0)
   return { target, attr, desc, wt }
-}
+})
 </script>
 
 <template>
@@ -58,13 +55,13 @@ function renderSkillStats(skill) {
         <div class="skill-desc" v-html="currentSkill.description || ''"></div>
       </template>
       <template v-else>
-        <div class="skill-desc" v-html="renderSkillStats(currentSkill).desc"></div>
+        <div class="skill-desc" v-html="skillStats.desc"></div>
         <div class="skill-stats">
-          <span class="skill-stat">{{ t('target') }}: {{ renderSkillStats(currentSkill).target }}</span>
-          <span v-if="renderSkillStats(currentSkill).attr" class="skill-stat">{{ t('attribute') }}: {{ renderSkillStats(currentSkill).attr }}</span>
+          <span class="skill-stat">{{ t('target') }}: {{ skillStats.target }}</span>
+          <span v-if="skillStats.attr" class="skill-stat">{{ t('attribute') }}: {{ skillStats.attr }}</span>
           <span class="skill-stat">{{ t('power') }}: {{ currentSkill.power ?? 0 }}%</span>
           <span class="skill-stat">{{ t('break') }}: {{ currentSkill.break_power ?? 0 }}%</span>
-          <span class="skill-stat">{{ t('wt') }}: {{ renderSkillStats(currentSkill).wt }}</span>
+          <span class="skill-stat">{{ t('wt') }}: {{ skillStats.wt }}</span>
           <span class="skill-stat">{{ t('limit') }}: {{ currentSkill.limit_count ?? '—' }}</span>
         </div>
       </template>

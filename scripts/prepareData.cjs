@@ -14,8 +14,8 @@ const cnDir = path.join(dataDir, 'cn');
 const untransDir = path.join(dataDir, 'untranslated');
 
 if (!fs.existsSync(dataRawDir)) {
-  console.error('❌ data_raw/jp/ 目录不存在');
-  console.log('请将游戏解包 JSON 文件放入 data_raw/jp/ 后重新运行');
+  console.error(`❌ ${pipelineConfig.dataRawDir}/ 目录不存在`);
+  console.log(`请将游戏解包 JSON 文件放入 ${pipelineConfig.dataRawDir}/ 后重新运行`);
   process.exit(1);
 }
 
