@@ -1,24 +1,25 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from '../composables/useI18n'
+import StarIcon from './StarIcon.vue'
+import StarsRow from './StarsRow.vue'
 
 const props = defineProps({
   indexEntry: Object,
   size: { type: Number, default: 100 },
 })
 
-const { getField, getColorHex } = useI18n()
+const { getTraitColorHex } = useI18n()
 
-const traitColor = computed(() => getField(props.indexEntry, 'trait_color_name'))
-const supportColor = computed(() => getField(props.indexEntry, 'support_color_name'))
-const traitHex = computed(() => getColorHex(traitColor.value))
-const supportHex = computed(() => getColorHex(supportColor.value))
+const traitHex = computed(() => getTraitColorHex(props.indexEntry.trait_color_id))
+const supportHex = computed(() => getTraitColorHex(props.indexEntry.support_color_id))
 const attributeId = computed(() => (props.indexEntry.attack_attributes || [])[0])
 const roleId = computed(() => props.indexEntry.role)
 const canvasSize = 360
 
 const starCountMap = { 1: 1, 2: 2, 3: 3, 5: 4, 7: 5, 8: 6 }
-const initialStars = computed(() => starCountMap[props.indexEntry.initial_rarity] || 0)
+const starCount = computed(() => starCountMap[props.indexEntry.initial_rarity] || 0)
+const starType = computed(() => props.indexEntry.initial_rarity === 8 ? 'star_3' : 'star_1')
 const imageSrc = computed(() => `image/character/${props.indexEntry.id}.png`)
 
 function onImageError(e) {
@@ -68,42 +69,27 @@ function onImageError(e) {
           @error="onImageError"
         />
       </svg>
-      <!-- 职业图标 -->
-      <div v-if="roleId" style="position: absolute; left: 0; top: 0;">
-        <img
-          :src="'image/misc/role_' + roleId + '.png'" alt=""
-          :style="{ width: '96px', height: '96px', position: 'relative', left: '16px', top: '16px' }"
-        >
+      <!-- 图标容器：无缩放居中 -->
+      <div v-if="roleId" class="overlay-icon overlay-icon-left">
+        <img :src="'image/misc/role_' + roleId + '.png'" alt="">
       </div>
-      <!-- 属性图标 -->
-      <div v-if="attributeId" style="position: absolute; left: 0; top: 0;">
-        <img
-          :src="'image/misc/attack_attribute_' + attributeId + '.png'" alt=""
-          :style="{ width: '118px', height: '112px', position: 'relative', left: (canvasSize - 118 - 16) + 'px', top: '8px' }"
-        >
+      <div v-if="attributeId" class="overlay-icon overlay-icon-right">
+        <img :src="'image/misc/attack_attribute_' + attributeId + '.png'" alt="">
       </div>
       <!-- 初始星星 -->
-      <div v-if="initialStars > 0" style="position: absolute; left: 0; top: 0;">
-        <div :style="{
+      <div v-if="starCount > 0"
+        :style="{
           position: 'absolute',
-          left: ((canvasSize - initialStars * (67 - 20) * 1.5) / 2) + 'px',
-          top: (canvasSize - 64 * 1.5) + 'px',
-          width: (initialStars * (67 - 20) * 1.5) + 'px',
-          height: (64 * 1.5) + 'px',
-          overflow: 'visible'
-        }">
-          <img
-            v-for="i in initialStars" :key="i"
-            :src="'image/misc/star_' + (props.indexEntry.initial_rarity === 8 ? '2' : '1') + '.png'"
-            style="position: absolute;"
-            :style="{
-              left: ((i - 1) * (67 - 20) * 1.5 - 10 * 1.5) + 'px',
-              top: 0,
-              width: (67 * 1.5) + 'px',
-              height: (64 * 1.5) + 'px'
-            }"
-          >
-        </div>
+          left: ((canvasSize - starCount * 45 * 1.5) / 2) + 'px',
+          top: (canvasSize - 45 * 1.5 - 10) + 'px',
+        }"
+      >
+        <StarsRow :scale="1.5">
+          <StarIcon
+            v-for="i in starCount" :key="i"
+            :src="'image/misc/' + starType + '.png'"
+          />
+        </StarsRow>
       </div>
     </div>
   </div>

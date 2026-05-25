@@ -59,6 +59,8 @@ const COLOR_MAP = {
   '白': '#FFFFFF', '黒': '#333333', '黑': '#333333'
 }
 
+const TRAIT_COLOR_HEX = { 1: '#3498DB', 2: '#9B59B6', 3: '#F1C40F', 4: '#E74C3C', 5: '#2ECC71' }
+
 const SORT_FIELDS = [
   { field: 'start_at',        label_ja: '実装日',          label_cn: '实装日期',     priority: 0 },
   { field: 'initial_rarity',  label_ja: '初期レアリティ',  label_cn: '初始稀有度',    priority: 1 },
@@ -93,5 +95,9 @@ export function useI18n() {
     return name ? (COLOR_MAP[name] || '#CCCCCC') : '#CCCCCC'
   }
 
-  return { currentLang, t, getField, setLang, getColorHex, SORT_FIELDS }
+  function getTraitColorHex(id) {
+    return TRAIT_COLOR_HEX[id] || '#CCCCCC'
+  }
+
+  return { currentLang, t, getField, setLang, getColorHex, getTraitColorHex, SORT_FIELDS }
 }

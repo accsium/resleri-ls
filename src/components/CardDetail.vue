@@ -122,22 +122,22 @@ const abilitiesCollapsed = ref(false)
     <span class="collapse-arrow">{{ abilitiesCollapsed ? '▶' : '▼' }}</span>
   </div>
   <div v-show="!abilitiesCollapsed">
-    <template v-if="abilities.length > 0 || supportIds.length > 0">
+    <template v-if="abilities.length > 0">
       <div v-for="a in abilities" :key="a.id">
         <div class="banner-title">{{ a.name || `ID:${a.id}` }}</div>
         <div class="content-block">
           <AbilityCard :ability="a" />
         </div>
       </div>
-      <SupportAbilitySection
-        v-if="supportIds.length > 0"
-        :support-ids="supportIds"
-        :ability-map="abilityMap"
-        :max-rarity="activeChar.max_rarity || 8"
-        :initial-rarity="activeChar.initial_rarity || 1"
-      />
     </template>
-    <div v-else class="no-data">{{ t('none') }}</div>
+    <SupportAbilitySection
+      v-if="supportIds.length > 0"
+      :support-ids="supportIds"
+      :ability-map="abilityMap"
+      :max-rarity="activeChar.max_rarity || 8"
+      :initial-rarity="activeChar.initial_rarity || 1"
+    />
+    <div v-if="abilities.length === 0 && supportIds.length === 0" class="no-data">{{ t('none') }}</div>
   </div>
 
   <SynthesisModule :character-data="characterData" />

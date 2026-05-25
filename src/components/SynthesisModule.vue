@@ -6,10 +6,12 @@ const props = defineProps({
   characterData: Object,
 })
 
-const { getField, getColorHex } = useI18n()
+const { getField, getTraitColorHex } = useI18n()
 
 const traitName = computed(() => getField(props.characterData, 'trait_color_name') || '?')
 const supportName = computed(() => getField(props.characterData, 'support_color_name') || '?')
+const traitHex = computed(() => getTraitColorHex(props.characterData.trait_color_id))
+const supportHex = computed(() => getTraitColorHex(props.characterData.support_color_id))
 const traits = computed(() => [
   ...(getField(props.characterData, 'battle_tool_trait_names') || []),
   ...(getField(props.characterData, 'equipment_tool_trait_names') || [])
@@ -19,12 +21,12 @@ const traits = computed(() => [
 <template>
   <div class="synthesis-module" style="margin-top: 20px;">
     <div class="synthesis-color-row">
-      <span :style="{ color: getColorHex(traitName) }">{{ traitName }}</span>
+      <span :style="{ color: traitHex }">{{ traitName }}</span>
       <svg width="20" height="20" viewBox="0 0 30 30">
-        <polygon points="15,0 0,15 15,30" :fill="getColorHex(traitName)"/>
-        <polygon points="15,0 30,15 15,30" :fill="getColorHex(supportName)"/>
+        <polygon points="15,0 0,15 15,30" :fill="traitHex"/>
+        <polygon points="15,0 30,15 15,30" :fill="supportHex"/>
       </svg>
-      <span :style="{ color: getColorHex(supportName) }">{{ supportName }}</span>
+      <span :style="{ color: supportHex }">{{ supportName }}</span>
     </div>
     <div class="synthesis-traits">
       <div v-for="(t, i) in traits" :key="i" class="trait-tag">{{ t }}</div>

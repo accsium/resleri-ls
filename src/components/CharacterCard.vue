@@ -6,6 +6,8 @@ import { useCardState } from '../composables/useCardState'
 import AvatarDisplay from './AvatarDisplay.vue'
 import ToggleSwitch from './ToggleSwitch.vue'
 import CardDetail from './CardDetail.vue'
+import StarIcon from './StarIcon.vue'
+import StarsRow from './StarsRow.vue'
 
 const props = defineProps({
   indexEntry: Object,
@@ -25,7 +27,7 @@ const maxStarScale = 0.5
 const baseName = computed(() => getField(props.indexEntry, 'base_character_name') || (props.indexEntry.name_cn || props.indexEntry.name_ja))
 const alias = computed(() => props.indexEntry.another_name || '')
 const roleName = computed(() => getField(props.indexEntry, 'role_name'))
-const tags = computed(() => (getField(props.indexEntry, 'tag_names') || []).slice(0, 3))
+const tags = computed(() => getField(props.indexEntry, 'tag_names') || [])
 const releaseDate = computed(() => {
   if (!props.indexEntry.start_at) return '—'
   return new Date(props.indexEntry.start_at).toLocaleDateString('ja-JP')
@@ -47,6 +49,7 @@ const traits = computed(() => [
 ])
 
 const maxStars = computed(() => starCountMap[props.indexEntry.max_rarity] || 0)
+const maxStarType = computed(() => props.indexEntry.max_rarity === 8 ? 'star_3' : 'star_1')
 
 const cardState = computed(() => getCardState(props.indexEntry.id))
 
@@ -108,20 +111,26 @@ function setupScrollHandler() {
     const header = el.querySelector('.card-header')
     const detailDiv = el.querySelector('.card-detail')
     if (!header || !detailDiv) return
-    const stickyTop = 124
-    const rect = header.getBoundingClientRect()
+
+    const isMobile = window.innerWidth < 768
+    const stickyEl = isMobile ? el.querySelector('.cb-avatar') : header
+    if (!stickyEl) return
+    const stickyTop = isMobile ? 104 : 124
+
+    const rect = stickyEl.getBoundingClientRect()
     if (rect.top <= stickyTop) {
-      detailDiv.style.maxHeight = `${window.innerHeight - stickyTop - header.offsetHeight}px`
-      header.style.position = 'sticky'
-      header.style.top = stickyTop + 'px'
-      header.style.zIndex = '5'
-      header.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)'
+      const h = isMobile ? stickyEl.offsetHeight : header.offsetHeight
+      detailDiv.style.maxHeight = `${window.innerHeight - stickyTop - h}px`
+      stickyEl.style.position = 'sticky'
+      stickyEl.style.top = stickyTop + 'px'
+      stickyEl.style.zIndex = '5'
+      if (!isMobile) header.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)'
     } else {
       detailDiv.style.maxHeight = ''
-      header.style.position = ''
-      header.style.top = ''
-      header.style.zIndex = ''
-      header.style.boxShadow = ''
+      stickyEl.style.position = ''
+      stickyEl.style.top = ''
+      stickyEl.style.zIndex = ''
+      if (!isMobile) header.style.boxShadow = ''
     }
   }
   window.addEventListener('scroll', scrollHandler, { passive: true })
@@ -141,63 +150,100 @@ onUnmounted(removeScrollHandler)
 <template>
   <div class="card" :data-id="indexEntry.id" :class="{ 'card-sticky': expanded }">
     <div class="card-header">
-      <div class="card-p1">
-        <div class="p1-left">
-          <span class="p1-attrs">{{ attrsText }}</span>
-          <span class="p1-title">
+      <!-- 第一行：名字 + 切换 -->
+      <div class="card-top">
+        <span class="card-top-left">
+          <span class="card-attrs">{{ attrsText }}</span>
+          <span class="card-name">
             {{ baseName }}<span v-if="alias" class="alias">{{ alias }}</span>
           </span>
-        </div>
+        </span>
         <div class="switch-buttons">
           <span v-if="toggleLabel" class="toggle-label">{{ toggleLabel }}</span>
           <ToggleSwitch :model-value="cardState.toggleActive" :disabled="!toggleEnabled" @update:model-value="onToggle" :title="toggleLabel" :type="hasEvo ? 'evo' : hasRange ? 'range' : 'transform'" />
         </div>
       </div>
-      <div class="card-p2">
-        <div class="p2-col p2-col1">
-          <div class="avatar-col">
+
+      <!-- 第二行+：网格布局，桌面和移动共用元素，CSS Grid 重排 -->
+      <div class="card-body">
+        <!-- ====== 桌面：三列 flex ====== -->
+        <div class="card-body-col-left desk-only">
+          <div class="cb-avatar">
             <AvatarDisplay :index-entry="indexEntry" :size="100" />
           </div>
-          <div class="inline-traits">
+          <div class="cb-traits">
             <span v-for="(trait, i) in traits" :key="i" class="trait-tag">{{ trait }}</span>
           </div>
         </div>
-        <div class="p2-col p2-col2">
-          <div class="char-id">ID:{{ indexEntry.id }}</div>
-          <div v-if="maxStars > 0" class="max-rarity-row">
-            <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
-            <span class="stars-group">
-              <img
-                v-for="i in maxStars" :key="i"
-                :src="'image/misc/' + (indexEntry.max_rarity === 8 ? 'star_2' : 'star_1') + '.png'"
-                :style="{
-                  width: Math.round(67 * maxStarScale) + 'px',
-                  height: Math.round(64 * maxStarScale) + 'px',
-                  marginLeft: i === 1 ? '0' : Math.round(-20 * maxStarScale) + 'px'
-                }"
-              >
-            </span>
+
+        <div class="card-body-col-mid desk-only">
+          <div class="cb-info">
+            <span class="cb-attrs">{{ attrsText }}</span>
+            <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
+            <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
+            <div class="char-id">ID:{{ indexEntry.id }}</div>
+            <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
           </div>
-          <div class="tags">
+          <div v-if="maxStars > 0" class="cb-rarity">
+            <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
+            <StarsRow :scale="0.5">
+              <StarIcon
+                v-for="i in maxStars" :key="i"
+                :src="'image/misc/' + maxStarType + '.png'"
+              />
+            </StarsRow>          </div>
+          <div class="cb-tags">
+            <span class="cb-tags-label">标签：</span>
             <span v-for="(tag, i) in tags" :key="i" class="tag">{{ tag }}</span>
           </div>
-          <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
-          <div class="stats-row">
+          <div class="cb-stats">
             <div v-for="stat in statCards" :key="stat.label" class="stat-card">
               <div class="stat-label">{{ stat.label }}</div>
               <div class="stat-value">{{ stat.value }}</div>
             </div>
           </div>
         </div>
-        <div class="p2-col p2-col3">
-          <button class="expand-btn" @click="toggleExpand" aria-label="展开">
-            <svg width="24" height="24" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10" stroke="#5b6e82" stroke-width="2" fill="none"/>
-              <path
-                :d="expanded ? 'M9 14 L12 11 L15 14' : 'M9 10 L12 13 L15 10'"
-                stroke="#5b6e82" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-              />
-            </svg>
+
+        <div class="card-body-col-right desk-only">
+          <button class="cb-expand-desk" @click="toggleExpand">
+            {{ expanded ? '收起 ▲' : '展开 ▼' }}
+          </button>
+        </div>
+
+        <!-- ====== 移动：独立行布局 ====== -->
+        <div class="mob-only row-info-avatar">
+          <div class="cb-info-mob">
+            <span class="cb-attrs">{{ attrsText }}</span>
+            <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
+            <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
+            <div class="char-id">ID:{{ indexEntry.id }}</div>
+            <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
+          </div>
+          <div class="cb-avatar-mob">
+            <AvatarDisplay :index-entry="indexEntry" :size="100" />
+          </div>
+          <div class="cb-traits-mob">
+            <span v-for="(trait, i) in traits" :key="i" class="trait-tag">{{ trait }}</span>
+          </div>
+        </div>
+
+        <div class="mob-only row-rarity-expand">
+          <div class="mob-rarity-tags">
+            <div v-if="maxStars > 0" class="cb-rarity">
+              <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
+              <StarsRow :scale="0.5">
+                <StarIcon
+                  v-for="i in maxStars" :key="i"
+                  :src="'image/misc/' + maxStarType + '.png'"
+                />
+              </StarsRow>            </div>
+            <div class="cb-tags">
+              <span class="cb-tags-label">标签：</span>
+              <span v-for="(tag, i) in tags" :key="i" class="tag">{{ tag }}</span>
+            </div>
+          </div>
+          <button class="cb-expand-mob" @click="toggleExpand">
+            {{ expanded ? '收起 ▲' : '展开 ▼' }}
           </button>
         </div>
       </div>
@@ -206,7 +252,18 @@ onUnmounted(removeScrollHandler)
     <div class="card-detail" :class="{ open: expanded }">
       <div v-if="detailLoading" class="loading">{{ t('loading') }}</div>
       <div v-else-if="detailError" class="no-data">{{ t('loadFailed') }}: {{ detailError }}</div>
-      <CardDetail v-else-if="char" :character-data="char" :card-state="cardState" :character-id="indexEntry.id" />
+      <template v-else-if="char">
+        <div class="mobile-stats">
+          <div class="section-title">基础属性</div>
+          <div class="stats-row">
+            <div v-for="stat in statCards" :key="stat.label" class="stat-card">
+              <div class="stat-label">{{ stat.label }}</div>
+              <div class="stat-value">{{ stat.value }}</div>
+            </div>
+          </div>
+        </div>
+        <CardDetail :character-data="char" :card-state="cardState" :character-id="indexEntry.id" />
+      </template>
     </div>
   </div>
 </template>

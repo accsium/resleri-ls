@@ -290,6 +290,8 @@ function buildIndexEntry(character) {
     name_ja: character.name,
     name_cn: character.name,
     another_name: character.another_name,
+    fullname: character.fullname || null,
+    overlay_name: character.overlay_name || null,
     initial_rarity: character.initial_rarity,
     max_rarity: character.max_rarity,
     role: character.role,

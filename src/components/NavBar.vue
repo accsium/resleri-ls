@@ -11,6 +11,7 @@ const { searchText } = useFilters()
     <nav class="nav-links">
       <router-link to="/" class="nav-link">{{ t('navGuide') }}</router-link>
       <router-link to="/collection" class="nav-link">{{ t('navCollection') }}</router-link>
+      <router-link to="/test" class="nav-link">Test</router-link>
     </nav>
     <div class="nav-search">
       <input

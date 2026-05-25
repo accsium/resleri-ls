@@ -36,7 +36,7 @@ const entries = computed(() => {
 </script>
 
 <template>
-  <div class="section-title">{{ t('supportAbilityTitle') }}</div>
+  <div class="subsection-title">{{ t('supportAbilityTitle') }}</div>
   <div v-for="entry in entries" :key="entry.idx" class="support-row">
     <div class="support-rarity-col" :class="{ 'support-unreachable': entry.unreachable }">
       {{ t('rarityLabel')[entry.idx] }}
