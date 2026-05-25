@@ -108,18 +108,16 @@ function setupScrollHandler() {
     const header = el.querySelector('.card-header')
     const detailDiv = el.querySelector('.card-detail')
     if (!header || !detailDiv) return
-    const stickyTop = 144
+    const stickyTop = 124
     const rect = header.getBoundingClientRect()
     if (rect.top <= stickyTop) {
       detailDiv.style.maxHeight = `${window.innerHeight - stickyTop - header.offsetHeight}px`
-      detailDiv.style.overflowY = 'auto'
       header.style.position = 'sticky'
       header.style.top = stickyTop + 'px'
       header.style.zIndex = '5'
       header.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)'
     } else {
       detailDiv.style.maxHeight = ''
-      detailDiv.style.overflowY = ''
       header.style.position = ''
       header.style.top = ''
       header.style.zIndex = ''

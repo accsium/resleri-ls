@@ -103,8 +103,7 @@ const abilitiesCollapsed = ref(false)
 </script>
 
 <template>
-  <!-- 技能 -->
-  <div v-if="allSkillTypes.length > 0">
+  <template v-if="allSkillTypes.length > 0">
     <div class="section-title section-collapsible" @click="skillsCollapsed = !skillsCollapsed">
       {{ t('skillSection') }}
       <span class="collapse-arrow">{{ skillsCollapsed ? '▶' : '▼' }}</span>
@@ -116,9 +115,8 @@ const abilitiesCollapsed = ref(false)
         :skill-type="skillType"
       />
     </div>
-  </div>
+  </template>
 
-  <!-- 能力 -->
   <div class="section-title section-collapsible" @click="abilitiesCollapsed = !abilitiesCollapsed">
     {{ t('abilityTitle') }}
     <span class="collapse-arrow">{{ abilitiesCollapsed ? '▶' : '▼' }}</span>
@@ -142,6 +140,5 @@ const abilitiesCollapsed = ref(false)
     <div v-else class="no-data">{{ t('none') }}</div>
   </div>
 
-  <!-- 调和 -->
   <SynthesisModule :character-data="characterData" />
 </template>
