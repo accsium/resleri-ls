@@ -5,8 +5,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "data": "node scripts/resolveAndSplit.js",
-    "prepare-data": "node scripts/prepareData.js",
+    "data": "node scripts/resolveAndSplit.cjs",
+    "prepare-data": "node scripts/prepareData.cjs",
     "prebuild": "npm run prepare-data && npm run data"
   },
   "dependencies": {

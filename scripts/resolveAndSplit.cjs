@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const config = require('./resolveConfig');
+const config = require('./resolveConfig.cjs');
 
 const dataDir = path.join(__dirname, '..', 'data');
 const publicDataDir = path.join(__dirname, '..', 'public', 'data');
