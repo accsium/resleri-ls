@@ -6,7 +6,7 @@ const props = defineProps({
 })
 
 const containerStyle = computed(() => ({
-  display: 'inline-flex',
+  display: 'flex',
   gap: '0',
   transform: `scale(${props.scale})`,
   transformOrigin: 'top left',

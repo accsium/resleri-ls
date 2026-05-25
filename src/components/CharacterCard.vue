@@ -179,19 +179,30 @@ onUnmounted(removeScrollHandler)
         <div class="card-body-col-mid desk-only">
           <div class="cb-info">
             <span class="cb-attrs">{{ attrsText }}</span>
-            <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
-            <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
-            <div class="char-id">ID:{{ indexEntry.id }}</div>
-            <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
+            <div class="cb-info-row">
+              <div class="cb-info-left">
+                <div class="char-id">ID:{{ indexEntry.id }}</div>
+                <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
+              </div>
+              <div class="cb-info-right">
+                <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
+                <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
+              </div>
+            </div>
           </div>
           <div v-if="maxStars > 0" class="cb-rarity">
             <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
-            <StarsRow :scale="0.5">
-              <StarIcon
-                v-for="i in maxStars" :key="i"
-                :src="'image/misc/' + maxStarType + '.png'"
-              />
-            </StarsRow>          </div>
+            <div class="stars-row-wrap" :style="{ height: 45 * 0.5 + 'px' }">
+              <div class="stars-row-wrap" :style="{ height: 45 * 0.5 + 'px' }">
+                <StarsRow :scale="0.5">
+                  <StarIcon
+                    v-for="i in maxStars" :key="i"
+                    :src="'image/misc/' + maxStarType + '.png'"
+                  />
+                </StarsRow>
+              </div>
+            </div>
+          </div>
           <div class="cb-tags">
             <span class="cb-tags-label">标签：</span>
             <span v-for="(tag, i) in tags" :key="i" class="tag">{{ tag }}</span>
@@ -214,10 +225,10 @@ onUnmounted(removeScrollHandler)
         <div class="mob-only row-info-avatar">
           <div class="cb-info-mob">
             <span class="cb-attrs">{{ attrsText }}</span>
-            <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
-            <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
             <div class="char-id">ID:{{ indexEntry.id }}</div>
             <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
+            <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
+            <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
           </div>
           <div class="cb-avatar-mob">
             <AvatarDisplay :index-entry="indexEntry" :size="100" />
@@ -231,12 +242,15 @@ onUnmounted(removeScrollHandler)
           <div class="mob-rarity-tags">
             <div v-if="maxStars > 0" class="cb-rarity">
               <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
-              <StarsRow :scale="0.5">
-                <StarIcon
-                  v-for="i in maxStars" :key="i"
-                  :src="'image/misc/' + maxStarType + '.png'"
-                />
-              </StarsRow>            </div>
+              <div class="stars-row-wrap" :style="{ height: 45 * 0.5 + 'px' }">
+                <StarsRow :scale="0.5">
+                  <StarIcon
+                    v-for="i in maxStars" :key="i"
+                    :src="'image/misc/' + maxStarType + '.png'"
+                  />
+                </StarsRow>
+              </div>
+            </div>
             <div class="cb-tags">
               <span class="cb-tags-label">标签：</span>
               <span v-for="(tag, i) in tags" :key="i" class="tag">{{ tag }}</span>
