@@ -17,5 +17,5 @@ const description = computed(() => {
 </script>
 
 <template>
-  <div>{{ description }}</div>
+  <div class="skill-desc" v-html="description"></div>
 </template>

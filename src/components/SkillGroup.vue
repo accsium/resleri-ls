@@ -58,10 +58,10 @@ function renderSkillStats(skill) {
     </div>
     <div class="content-block">
       <template v-if="skillType.type === 'leader'">
-        <div class="skill-desc">{{ currentSkill.description || '' }}</div>
+        <div class="skill-desc" v-html="currentSkill.description || ''"></div>
       </template>
       <template v-else>
-        <div class="skill-desc">{{ renderSkillStats(currentSkill).desc }}</div>
+        <div class="skill-desc" v-html="renderSkillStats(currentSkill).desc"></div>
         <div class="skill-stats">
           <span class="skill-stat">{{ t('target') }}: {{ renderSkillStats(currentSkill).target }}</span>
           <span v-if="renderSkillStats(currentSkill).attr" class="skill-stat">{{ t('attribute') }}: {{ renderSkillStats(currentSkill).attr }}</span>

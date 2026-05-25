@@ -517,6 +517,14 @@ input:checked + .slider:before {
   border-bottom: 2px solid #b0a898;
 }
 
+.section-collapsible {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .subsection-title {
   font-size: 15px;
   font-weight: 400;
@@ -538,6 +546,21 @@ input:checked + .slider:before {
   justify-content: space-between;
 }
 
+.banner-collapsible {
+  cursor: pointer;
+  user-select: none;
+}
+
+.banner-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.collapse-arrow {
+  font-size: 10px;
+}
+
 .banner-title .level-tabs {
   display: flex;
   gap: 4px;
@@ -554,6 +577,14 @@ input:checked + .slider:before {
 .banner-title .level-tab.active {
   background: #fffeef;
   color: #3e4759;
+}
+
+/* ========== 详情滚动锁定标题 ========== */
+.card-detail .section-title {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: #f4f1e9;
 }
 
 .content-block {
@@ -585,6 +616,30 @@ input:checked + .slider:before {
 .support-rarity-tabs {
   display: flex;
   gap: 4px;
+}
+
+.support-row {
+  display: flex;
+  align-items: stretch;
+}
+
+.support-rarity-col {
+  width: 80px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3e4759;
+  color: #fffeef;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.support-desc-col {
+  flex: 1;
+  background: #fff;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e8e0d0;
 }
 
 /* ========== 调和模块 ========== */
@@ -656,5 +711,5 @@ input:checked + .slider:before {
 .support-note {
   color: #6bb7ff;
   font-size: 12px;
-  margin-top: 6px;
+  margin-left: 6px;
 }

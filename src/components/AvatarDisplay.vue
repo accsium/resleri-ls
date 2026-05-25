@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { useI18n } from '../composables/useI18n'
 
 const props = defineProps({
@@ -16,11 +16,14 @@ const supportHex = computed(() => getColorHex(supportColor.value))
 const attributeId = computed(() => (props.indexEntry.attack_attributes || [])[0])
 const roleId = computed(() => props.indexEntry.role)
 const canvasSize = 360
-const imageOK = ref(false)
 
 const starCountMap = { 1: 1, 2: 2, 3: 3, 5: 4, 7: 5, 8: 6 }
 const initialStars = computed(() => starCountMap[props.indexEntry.initial_rarity] || 0)
 const imageSrc = computed(() => `image/character/${props.indexEntry.id}.png`)
+
+function onImageError(e) {
+  e.target.setAttribute('href', 'image/misc/00000.png')
+}
 </script>
 
 <template>
@@ -58,12 +61,11 @@ const imageSrc = computed(() => `image/character/${props.indexEntry.id}.png`)
         <polygon points="180,30 30,180 180,330" :fill="traitHex"/>
         <polygon points="180,30 330,180 180,330" :fill="supportHex"/>
         <image
-          :href="imageOK ? imageSrc : 'image/misc/00000.png'"
+          :href="imageSrc"
           x="52" y="74" width="256" height="256"
           :mask="'url(#mask-' + indexEntry.id + ')'"
           preserveAspectRatio="xMidYMax meet"
-          @load="imageOK = true"
-          @error="imageOK = false"
+          @error="onImageError"
         />
       </svg>
       <!-- 职业图标 -->

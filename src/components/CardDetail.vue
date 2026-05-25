@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import SkillGroup from './SkillGroup.vue'
 import AbilityCard from './AbilityCard.vue'
@@ -92,13 +92,19 @@ const allAbilityIds = computed(() => [...new Set([...normalAbilityIds.value, ...
 const abilities = computed(() => allAbilityIds.value.map(id => abilityMap.value[id]).filter(Boolean))
 
 const supportIds = computed(() => activeChar.value.support_ability_ids || [])
+
+const skillsCollapsed = ref(false)
+const abilitiesCollapsed = ref(false)
 </script>
 
 <template>
-  <div>
-    <!-- 技能 -->
-    <div v-if="allSkillTypes.length > 0">
-      <div class="section-title">{{ t('skillSection') }}</div>
+  <!-- 技能 -->
+  <div v-if="allSkillTypes.length > 0">
+    <div class="section-title section-collapsible" @click="skillsCollapsed = !skillsCollapsed">
+      {{ t('skillSection') }}
+      <span class="collapse-arrow">{{ skillsCollapsed ? '▶' : '▼' }}</span>
+    </div>
+    <div v-show="!skillsCollapsed">
       <SkillGroup
         v-for="skillType in allSkillTypes"
         :key="skillType.type"
@@ -108,9 +114,14 @@ const supportIds = computed(() => activeChar.value.support_ability_ids || [])
         :range-group="rangeGroup"
       />
     </div>
+  </div>
 
-    <!-- 能力 -->
-    <div class="section-title">{{ t('abilityTitle') }}</div>
+  <!-- 能力 -->
+  <div class="section-title section-collapsible" @click="abilitiesCollapsed = !abilitiesCollapsed">
+    {{ t('abilityTitle') }}
+    <span class="collapse-arrow">{{ abilitiesCollapsed ? '▶' : '▼' }}</span>
+  </div>
+  <div v-show="!abilitiesCollapsed">
     <template v-if="abilities.length > 0 || supportIds.length > 0">
       <div v-for="a in abilities" :key="a.id">
         <div class="banner-title">{{ a.name || `ID:${a.id}` }}</div>
@@ -127,8 +138,8 @@ const supportIds = computed(() => activeChar.value.support_ability_ids || [])
       />
     </template>
     <div v-else class="no-data">{{ t('none') }}</div>
-
-    <!-- 调和 -->
-    <SynthesisModule :character-data="characterData" />
   </div>
+
+  <!-- 调和 -->
+  <SynthesisModule :character-data="characterData" />
 </template>
