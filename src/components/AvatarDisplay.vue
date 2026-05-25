@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import StarIcon from './StarIcon.vue'
 import StarsRow from './StarsRow.vue'
@@ -20,11 +20,16 @@ const canvasSize = 360
 const starCountMap = { 1: 1, 2: 2, 3: 3, 5: 4, 7: 5, 8: 6 }
 const starCount = computed(() => starCountMap[props.indexEntry.initial_rarity] || 0)
 const starType = computed(() => props.indexEntry.initial_rarity === 8 ? 'star_3' : 'star_1')
-const imageSrc = computed(() => `image/character/${props.indexEntry.id}.png`)
 
-function onImageError(e) {
-  e.target.setAttribute('href', 'image/misc/00000.png')
-}
+const charImage = computed(() => `image/character/${props.indexEntry.id}.png`)
+const showImage = ref(false)
+
+onMounted(() => {
+  const img = new Image()
+  img.onload = () => { showImage.value = true }
+  img.onerror = () => {}
+  img.src = charImage.value
+})
 </script>
 
 <template>
@@ -62,11 +67,10 @@ function onImageError(e) {
         <polygon points="180,30 30,180 180,330" :fill="traitHex"/>
         <polygon points="180,30 330,180 180,330" :fill="supportHex"/>
         <image
-          :href="imageSrc"
+          :href="showImage ? charImage : 'image/misc/00000.png'"
           x="52" y="74" width="256" height="256"
           :mask="'url(#mask-' + indexEntry.id + ')'"
           preserveAspectRatio="xMidYMax meet"
-          @error="onImageError"
         />
       </svg>
       <!-- 图标容器：无缩放居中 -->

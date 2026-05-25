@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-const updateTimeText = ref('更新时间 — (GMT+08:00)')
+const updateTimeText = ref('最后更新： — (GMT+08:00)')
 
 export function useBuildInfo() {
   async function loadBuildTime() {
@@ -13,16 +13,16 @@ export function useBuildInfo() {
       const timeStr = `${gmt8.getUTCFullYear()}/${pad(gmt8.getUTCMonth() + 1)}/${pad(gmt8.getUTCDate())} ${pad(gmt8.getUTCHours())}:${pad(gmt8.getUTCMinutes())}:${pad(gmt8.getUTCSeconds())} GMT+08:00`
       const localOffset = -new Date().getTimezoneOffset()
       if (localOffset === 480) {
-        updateTimeText.value = `更新时间 ${timeStr}`
+        updateTimeText.value = `最后更新： ${timeStr}`
       } else {
         const localStr = buildTime.toLocaleString()
         const sign = localOffset >= 0 ? '+' : '-'
         const hours = Math.floor(Math.abs(localOffset) / 60)
         const minutes = Math.abs(localOffset) % 60
-        updateTimeText.value = `更新时间 ${localStr} (GMT${sign}${pad(hours)}:${pad(minutes)})`
+        updateTimeText.value = `最后更新： ${localStr} (GMT${sign}${pad(hours)}:${pad(minutes)})`
       }
     } catch {
-      updateTimeText.value = '更新时间 — (GMT+08:00)'
+      updateTimeText.value = '最后更新： — (GMT+08:00)'
     }
   }
 
