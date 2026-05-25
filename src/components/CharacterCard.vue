@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onUnmounted, nextTick, watch } from 'vue'
+import { ref, computed, nextTick, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useCardState } from '../composables/useCardState'
@@ -7,7 +7,7 @@ import AvatarDisplay from './AvatarDisplay.vue'
 import ToggleSwitch from './ToggleSwitch.vue'
 import CardDetail from './CardDetail.vue'
 import StarIcon from './StarIcon.vue'
-import StarsRow from './StarsRow.vue'
+import StarsDisplay from './StarsDisplay.vue'
 
 const props = defineProps({
   indexEntry: Object,
@@ -77,74 +77,70 @@ const toggleLabel = computed(() => {
   return ''
 })
 
-let scrollHandler = null
 
 function onToggle(val) {
   setCardState(props.indexEntry.id, { toggleActive: val })
 }
 
+let scrollHandler = null
+let detailDiv = null
+let stickyTop = 0
+
 async function toggleExpand() {
   if (expanded.value) {
     expanded.value = false
-    removeScrollHandler()
+    cleanupSticky()
     return
   }
   expanded.value = true
   detailLoading.value = true
   detailError.value = ''
+  setupStickyHeader()
   try {
     await loadCharacter(props.indexEntry.id)
     detailLoading.value = false
     await nextTick()
-    setupScrollHandler()
   } catch (e) {
     detailLoading.value = false
     detailError.value = e.message || String(e)
   }
 }
 
-function setupScrollHandler() {
-  removeScrollHandler()
+function setupStickyHeader() {
+  const el = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
+  if (!el) return
+  const header = el.querySelector('.card-header')
+  detailDiv = el.querySelector('.card-detail')
+  if (!header || !detailDiv) return
+  stickyTop = window.innerWidth < 768 ? 104 : 124
+
   scrollHandler = () => {
-    const el = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
-    if (!el || !expanded.value) return
-    const header = el.querySelector('.card-header')
-    const detailDiv = el.querySelector('.card-detail')
-    if (!header || !detailDiv) return
-
-    const isMobile = window.innerWidth < 768
-    const stickyEl = isMobile ? el.querySelector('.cb-avatar') : header
-    if (!stickyEl) return
-    const stickyTop = isMobile ? 104 : 124
-
-    const rect = stickyEl.getBoundingClientRect()
+    if (!expanded.value) return
+    const rect = header.getBoundingClientRect()
     if (rect.top <= stickyTop) {
-      const h = isMobile ? stickyEl.offsetHeight : header.offsetHeight
-      detailDiv.style.maxHeight = `${window.innerHeight - stickyTop - h}px`
-      stickyEl.style.position = 'sticky'
-      stickyEl.style.top = stickyTop + 'px'
-      stickyEl.style.zIndex = '5'
-      if (!isMobile) header.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)'
+      detailDiv.style.overflowY = 'auto'
+      detailDiv.style.maxHeight = `${window.innerHeight - stickyTop - header.offsetHeight}px`
     } else {
+      detailDiv.style.overflowY = ''
       detailDiv.style.maxHeight = ''
-      stickyEl.style.position = ''
-      stickyEl.style.top = ''
-      stickyEl.style.zIndex = ''
-      if (!isMobile) header.style.boxShadow = ''
     }
   }
   window.addEventListener('scroll', scrollHandler, { passive: true })
   scrollHandler()
 }
 
-function removeScrollHandler() {
+function cleanupSticky() {
   if (scrollHandler) {
     window.removeEventListener('scroll', scrollHandler)
     scrollHandler = null
   }
+  if (detailDiv) {
+    detailDiv.style.maxHeight = ''
+  }
 }
 
-onUnmounted(removeScrollHandler)
+onUnmounted(cleanupSticky)
+
 </script>
 
 <template>
@@ -194,12 +190,12 @@ onUnmounted(removeScrollHandler)
             <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
             <div class="stars-row-wrap" :style="{ height: 45 * 0.5 + 'px' }">
               <div class="stars-row-wrap" :style="{ height: 45 * 0.5 + 'px' }">
-                <StarsRow :scale="0.5">
+                <StarsDisplay :scale="0.5">
                   <StarIcon
                     v-for="i in maxStars" :key="i"
                     :src="'image/misc/' + maxStarType + '.png'"
                   />
-                </StarsRow>
+                </StarsDisplay>
               </div>
             </div>
           </div>
@@ -243,12 +239,12 @@ onUnmounted(removeScrollHandler)
             <div v-if="maxStars > 0" class="cb-rarity">
               <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
               <div class="stars-row-wrap" :style="{ height: 45 * 0.5 + 'px' }">
-                <StarsRow :scale="0.5">
+                <StarsDisplay :scale="0.5">
                   <StarIcon
                     v-for="i in maxStars" :key="i"
                     :src="'image/misc/' + maxStarType + '.png'"
                   />
-                </StarsRow>
+                </StarsDisplay>
               </div>
             </div>
             <div class="cb-tags">

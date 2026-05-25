@@ -2,7 +2,8 @@
 import { computed, ref, onMounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import StarIcon from './StarIcon.vue'
-import StarsRow from './StarsRow.vue'
+import StarsDisplay from './StarsDisplay.vue'
+import IconDisplay from './IconDisplay.vue'
 
 const props = defineProps({
   indexEntry: Object,
@@ -74,12 +75,8 @@ onMounted(() => {
         />
       </svg>
       <!-- 图标容器：无缩放居中 -->
-      <div v-if="roleId" class="overlay-icon overlay-icon-left">
-        <img :src="'image/misc/role_' + roleId + '.png'" alt="">
-      </div>
-      <div v-if="attributeId" class="overlay-icon overlay-icon-right">
-        <img :src="'image/misc/attack_attribute_' + attributeId + '.png'" alt="">
-      </div>
+      <IconDisplay v-if="roleId" side="left" :icon-src="'image/misc/role_' + roleId + '.png'" />
+      <IconDisplay v-if="attributeId" side="right" :icon-src="'image/misc/attack_attribute_' + attributeId + '.png'" />
       <!-- 初始星星 -->
       <div v-if="starCount > 0"
         :style="{
@@ -88,12 +85,12 @@ onMounted(() => {
           top: (canvasSize - 45 * 1.5 - 10) + 'px',
         }"
       >
-        <StarsRow :scale="1.5">
+        <StarsDisplay :scale="1.5">
           <StarIcon
             v-for="i in starCount" :key="i"
             :src="'image/misc/' + starType + '.png'"
           />
-        </StarsRow>
+        </StarsDisplay>
       </div>
     </div>
   </div>

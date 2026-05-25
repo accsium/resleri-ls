@@ -234,6 +234,7 @@ input[type="text"]:focus { border-color: var(--accent); }
   box-shadow: var(--shadow);
   overflow: hidden;
 }
+.card-sticky { overflow: visible; }
 
 /* ========== 卡片头部 ========== */
 .card-header { padding: 16px 20px; }
@@ -261,9 +262,11 @@ input[type="text"]:focus { border-color: var(--accent); }
 .card-body {
   display: flex;
   gap: 0;
-  min-height: 150px;
   align-items: stretch;
+  min-height: 150px;
 }
+
+.card-body-col-mid .cb-rarity { margin-top: auto; }
 .cb-attrs { display: none; }
 .mob-only { display: none; }
 
@@ -280,7 +283,7 @@ input[type="text"]:focus { border-color: var(--accent); }
   padding: 0 16px;
   border-right: 1px solid var(--border-light);
 }
-.card-body-col-mid .cb-rarity { margin-top: auto; }
+.card-body-col-mid .cb-rarity { margin-top: 8px; }
 .card-body-col-right {
   width: 52px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
@@ -368,19 +371,21 @@ input:checked + .slider::before { transform: translateX(16px); }
 
 /* ========== 展开详情 ========== */
 .card-sticky .card-header {
+  position: sticky;
+  top: var(--sticky-top);
+  z-index: 5;
   background: inherit;
-  box-shadow: var(--shadow-lg);
 }
 .card-detail { display: none; padding: 0 20px 20px; background: inherit; }
-.card-detail.open { display: block; max-height: 60vh; overflow-y: auto; }
+.card-detail.open { display: block; }
 
 .mobile-stats { display: none; }
 
 .mobile-stats { display: none; }
 
-.card-detail.open::-webkit-scrollbar { width: 5px; }
-.card-detail.open::-webkit-scrollbar-track { background: transparent; }
-.card-detail.open::-webkit-scrollbar-thumb { background: #c4b8a0; border-radius: 3px; }
+.card-detail::-webkit-scrollbar { width: 5px; }
+.card-detail::-webkit-scrollbar-track { background: transparent; }
+.card-detail::-webkit-scrollbar-thumb { background: #c4b8a0; border-radius: 3px; }
 
 .section-title {
   font-size: 15px; font-weight: 600;
@@ -586,7 +591,6 @@ input:checked + .slider::before { transform: translateX(16px); }
 
   .filter-panel { margin: 0 10px 12px; padding: 12px 14px; }
 
-  .card-detail.open { max-height: 50vh; }
   .card-detail { padding: 0 12px 16px; }
 
   .support-row { flex-direction: column; }
