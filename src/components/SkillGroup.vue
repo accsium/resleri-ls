@@ -4,9 +4,6 @@ import { useI18n } from '../composables/useI18n'
 
 const props = defineProps({
   skillType: Object,
-  activeChar: Object,
-  cardState: Object,
-  rangeGroup: Object,
 })
 
 const { t, getField } = useI18n()

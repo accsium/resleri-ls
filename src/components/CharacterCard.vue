@@ -51,20 +51,33 @@ const maxStars = computed(() => starCountMap[props.indexEntry.max_rarity] || 0)
 const cardState = computed(() => getCardState(props.indexEntry.id))
 
 const char = computed(() => loadedCharacters.value[props.indexEntry.id])
-const hasEvo = computed(() => (char.value?._skills || []).some(s => s.post_evolution.length > 0))
-const hasRange = computed(() => Object.keys(char.value?._rangeSkills || {}).length > 0)
-const hasTransform = computed(() => char.value?._transform != null)
+const hasEvo = computed(() => props.indexEntry.has_evo)
+const hasRange = computed(() => props.indexEntry.has_range)
+const hasTransform = computed(() => props.indexEntry.has_transform)
+
+const toggleEnabled = computed(() => hasEvo.value || hasRange.value || hasTransform.value)
+
+const { currentLang } = useI18n()
+
+const state = getCardState(props.indexEntry.id)
+if (!('_init' in state)) {
+  state._init = true
+  if (hasEvo.value || hasTransform.value) {
+    state.toggleActive = true
+  }
+}
+
+const toggleLabel = computed(() => {
+  if (hasEvo.value) return currentLang.value === 'cn' ? '进化' : '進化'
+  if (hasRange.value) return currentLang.value === 'cn' ? '范围' : '範囲'
+  if (hasTransform.value) return currentLang.value === 'cn' ? '变身' : '変身'
+  return ''
+})
 
 let scrollHandler = null
 
-function onEvoToggle(val) {
-  setCardState(props.indexEntry.id, { evo: val ? 'pre' : 'post' })
-}
-function onRangeToggle(val) {
-  setCardState(props.indexEntry.id, { range: val ? 'normal' : 'inrange' })
-}
-function onTransformToggle(val) {
-  setCardState(props.indexEntry.id, { showTransform: val })
+function onToggle(val) {
+  setCardState(props.indexEntry.id, { toggleActive: val })
 }
 
 async function toggleExpand() {
@@ -138,9 +151,8 @@ onUnmounted(removeScrollHandler)
           </span>
         </div>
         <div class="switch-buttons">
-          <ToggleSwitch v-if="hasEvo" :model-value="cardState.evo === 'pre'" @update:model-value="onEvoToggle" title="切换进化状态" type="evo" />
-          <ToggleSwitch v-if="hasRange" :model-value="cardState.range === 'normal'" @update:model-value="onRangeToggle" title="切换范围状态" type="range" />
-          <ToggleSwitch v-if="hasTransform" :model-value="cardState.showTransform" @update:model-value="onTransformToggle" title="切换变身状态" type="transform" />
+          <span v-if="toggleLabel" class="toggle-label">{{ toggleLabel }}</span>
+          <ToggleSwitch :model-value="cardState.toggleActive" :disabled="!toggleEnabled" @update:model-value="onToggle" :title="toggleLabel" :type="hasEvo ? 'evo' : hasRange ? 'range' : 'transform'" />
         </div>
       </div>
       <div class="card-p2">

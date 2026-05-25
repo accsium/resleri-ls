@@ -5,7 +5,7 @@ const cardStates = reactive({})
 export function useCardState() {
   function getCardState(id) {
     if (!cardStates[id]) {
-      cardStates[id] = { evo: 'post', range: 'inrange', showTransform: false }
+      cardStates[id] = { toggleActive: false }
     }
     return cardStates[id]
   }

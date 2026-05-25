@@ -317,6 +317,19 @@ function buildIndexEntry(character) {
     equipment_tool_trait_names_cn: (character.equipment_tool_trait_ids || []).map(id => cnMaps.equipment_tool_trait?.get(id) || ''),
     base_character_name_ja: jpMaps.base_character?.get(character.base_character_id) || null,
     base_character_name_cn: cnMaps.base_character?.get(character.base_character_id) || null,
+	    has_evo: !!(
+	      (character.evolved_normal1_skill_ids && character.evolved_normal1_skill_ids.length > 0) ||
+	      (character.evolved_normal2_skill_ids && character.evolved_normal2_skill_ids.length > 0) ||
+	      (character.evolved_burst_skill_ids && character.evolved_burst_skill_ids.length > 0)
+	    ),
+	    has_range: (character.extra_skill_ids || []).length > 0 &&
+	      exRules.some(r => {
+	        if (!r.character_ids) return false
+	        if (r.character_ids === '*') return true
+	        if (Array.isArray(r.character_ids)) return r.character_ids.includes(character.id)
+	        return false
+	      }),
+	    has_transform: transformPairs.some(p => p[0] === character.id),
   };
 }
 

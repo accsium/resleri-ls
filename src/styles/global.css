@@ -306,6 +306,11 @@ button {
   flex-shrink: 0;
 }
 
+.toggle-label {
+  font-size: 13px;
+  color: #4CAF50;
+}
+
 /* ========== P2 三栏 ========== */
 .card-p2 {
   display: flex;
@@ -471,11 +476,20 @@ button {
 }
 
 input:checked + .slider {
-  background-color: #5b6e82;
+  background-color: #4CAF50;
 }
 
 input:checked + .slider:before {
   transform: translateX(16px);
+}
+
+.toggle-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.toggle-disabled .slider {
+  cursor: not-allowed;
 }
 
 /* ========== 展开卡片固定头部 ========== */

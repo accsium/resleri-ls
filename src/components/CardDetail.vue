@@ -14,30 +14,32 @@ const props = defineProps({
 
 const { t } = useI18n()
 
+const toggleActive = computed(() => props.cardState.toggleActive)
+
 const activeChar = computed(() => {
-  if (props.cardState.showTransform && props.characterData._transform) {
+  if (toggleActive.value && props.characterData._transform) {
     return props.characterData._transform
   }
   return props.characterData
 })
 
-const rangeGroup = computed(() => activeChar.value._rangeSkills?.['inrange'] || null)
+const rangeGroup = computed(() => props.characterData._rangeSkills?.['inrange'] || null)
 
 const allSkillTypes = computed(() => {
   const types = []
   const char = activeChar.value
-  const evo = props.cardState.evo
-  const range = props.cardState.range
+  const originalChar = props.characterData
 
   if (char.leader_skill) {
     types.push({ type: 'leader', name: t('leaderSkillSection'), levels: [char.leader_skill] })
   }
 
-  const skills = char._skills || []
+  const skills = (toggleActive.value && rangeGroup.value) ? originalChar._skills : char._skills || []
+
   const activeLevels = []
   skills.forEach(group => {
     if (group.type.startsWith('active')) {
-      let levels = evo === 'post' ? group.post_evolution : group.pre_evolution
+      let levels = toggleActive.value ? group.post_evolution : group.pre_evolution
       if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution
       if (levels && levels.length > 0) activeLevels.push(...levels)
     }
@@ -50,12 +52,12 @@ const allSkillTypes = computed(() => {
   skills.forEach(group => {
     if (group.type === 'normal1' || group.type === 'normal2' || group.type === 'burst') {
       let levels = []
-      if (range === 'inrange' && rangeGroup.value) {
+      if (toggleActive.value && rangeGroup.value) {
         if (group.type === 'normal1') levels = rangeGroup.value.skill1 || []
         else if (group.type === 'normal2') levels = rangeGroup.value.skill2 || []
-        else levels = evo === 'post' ? group.post_evolution : group.pre_evolution
+        else levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution
       } else {
-        levels = evo === 'post' ? group.post_evolution : group.pre_evolution
+        levels = toggleActive.value ? group.post_evolution : group.pre_evolution
       }
       if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution
       if (levels && levels.length > 0) {
@@ -64,7 +66,10 @@ const allSkillTypes = computed(() => {
     }
   })
 
-  const exSkills = char._exSkills || []
+  let exSkills = char._exSkills || []
+  if (toggleActive.value && rangeGroup.value) {
+    exSkills = []
+  }
   if (exSkills.length > 0) {
     types.push({ type: 'extra', name: t('skillType').extra, levels: exSkills })
   }
@@ -84,7 +89,7 @@ const normalAbilityIds = computed(() => {
 })
 
 const evoAbilityIds = computed(() => {
-  return props.cardState.evo === 'post' ? (activeChar.value.all_skill_evolved_ability_ids || []) : []
+  return toggleActive.value ? (activeChar.value.all_skill_evolved_ability_ids || []) : []
 })
 
 const allAbilityIds = computed(() => [...new Set([...normalAbilityIds.value, ...evoAbilityIds.value])])
@@ -109,9 +114,6 @@ const abilitiesCollapsed = ref(false)
         v-for="skillType in allSkillTypes"
         :key="skillType.type"
         :skill-type="skillType"
-        :active-char="activeChar"
-        :card-state="cardState"
-        :range-group="rangeGroup"
       />
     </div>
   </div>
