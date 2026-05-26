@@ -1,7 +1,6 @@
 <script setup>
 import { computed, ref, onMounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
-import StarIcon from './StarIcon.vue'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
@@ -18,9 +17,12 @@ const attributeId = computed(() => (props.indexEntry.attack_attributes || [])[0]
 const roleId = computed(() => props.indexEntry.role)
 const canvasSize = 360
 
-const starCountMap = { 1: 1, 2: 2, 3: 3, 5: 4, 7: 5, 8: 6 }
-const starCount = computed(() => starCountMap[props.indexEntry.initial_rarity] || 0)
-const starType = computed(() => props.indexEntry.initial_rarity === 8 ? 'star_3' : 'star_1')
+const starLevel = { 1:1, 2:2, 3:3, 4:3.5, 5:4, 6:4.5, 7:5, 8:6 }
+const starDisplayCount = computed(() => {
+  const level = starLevel[props.indexEntry.initial_rarity] || 0
+  const hasHalf = level !== Math.floor(level)
+  return Math.floor(level) + (hasHalf ? 1 : 0)
+})
 
 const charImage = computed(() => `image/character/${props.indexEntry.id}.png`)
 const showImage = ref(false)
@@ -78,19 +80,14 @@ onMounted(() => {
       <IconDisplay v-if="roleId" side="left" :icon-src="'image/misc/role_' + roleId + '.png'" />
       <IconDisplay v-if="attributeId" side="right" :icon-src="'image/misc/attack_attribute_' + attributeId + '.png'" />
       <!-- 初始星星 -->
-      <div v-if="starCount > 0"
+      <div v-if="starDisplayCount > 0"
         :style="{
           position: 'absolute',
-          left: ((canvasSize - starCount * 45 * 1.5) / 2) + 'px',
+          left: ((canvasSize - starDisplayCount * 45 * 1.5) / 2) + 'px',
           top: (canvasSize - 45 * 1.5 - 10) + 'px',
         }"
       >
-        <StarsDisplay :scale="1.5">
-          <StarIcon
-            v-for="i in starCount" :key="i"
-            :src="'image/misc/' + starType + '.png'"
-          />
-        </StarsDisplay>
+        <StarsDisplay :mode="1" :rarity="indexEntry.initial_rarity" :max-rarity="indexEntry.max_rarity" :scale="1.5" />
       </div>
     </div>
   </div>

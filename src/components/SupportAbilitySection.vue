@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { replaceEffects } from '../utils/effects.js'
+import StarsDisplay from './StarsDisplay.vue'
 
 const props = defineProps({
   supportIds: Array,
@@ -34,7 +35,7 @@ const entries = computed(() => {
   <div class="subsection-title">{{ t('supportAbilityTitle') }}</div>
   <div v-for="entry in entries" :key="entry.idx" class="support-row">
     <div class="support-rarity-col" :class="{ 'support-unreachable': entry.unreachable }">
-      {{ t('rarityLabel')[entry.idx] }}
+      <StarsDisplay :mode="2" :rarity="entry.rarity" :max-rarity="maxRarity" :scale="0.3" />
     </div>
     <div class="support-desc-col" :class="{ 'support-unreachable': entry.unreachable }">
       <span v-if="entry.ability" class="skill-desc" v-html="formatDescription(entry.ability)"></span>
