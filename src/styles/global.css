@@ -300,7 +300,7 @@ input[type="text"] {
   margin-bottom: 4px; display: flex; flex-wrap: nowrap; gap: 4px; align-items: center;
 }
 .cb-tags-label { font-size: 12px; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
-.cb-tags-items { display: flex; flex-wrap: wrap; gap: 4px; }
+.cb-tags-items { display: flex; flex-wrap: wrap; gap: 4px; min-width: 0; }
 
 .char-id { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
 .cb-fullname, .cb-overlay-name { font-size: 12px; color: var(--text-muted); margin-bottom: 2px; }
