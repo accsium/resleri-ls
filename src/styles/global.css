@@ -309,6 +309,7 @@ input[type="text"] {
 .tag, .trait-tag {
   background: var(--bg-trait); color: var(--text-primary);
   padding: 2px 10px; font-size: 11px; border-radius: 2px;
+  white-space: nowrap; flex-shrink: 0;
 }
 .trait-tag { display: inline-block; margin: 2px; }
 
