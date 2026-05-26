@@ -1,0 +1,1 @@
+import{e as s,a as r,k as a}from"./index-T1CBvuaP.js";const l=(o,e)=>{const t=o.__vccOpts||o;for(const[c,n]of e)t[c]=n;return t},i={},_={class:"collection-container"};function d(o,e){return a(),s("div",_,[...e[0]||(e[0]=[r("div",{class:"collection-placeholder"},"收藏功能即将上线",-1)])])}const p=l(i,[["render",d]]);export{p as default};
