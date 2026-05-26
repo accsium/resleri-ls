@@ -318,6 +318,8 @@ function buildIndexEntry(character) {
     equipment_tool_trait_names_cn: (character.equipment_tool_trait_ids || []).map(id => cnMaps.equipment_tool_trait?.get(id) || ''),
     base_character_name_ja: jpMaps.base_character?.get(character.base_character_id) || null,
     base_character_name_cn: cnMaps.base_character?.get(character.base_character_id) || null,
+	    original_title_name_ja: jpMaps.original_title?.get(character.original_title_id) || null,
+	    original_title_name_cn: cnMaps.original_title?.get(character.original_title_id) || null,
 	    has_evo: !!(
 	      (character.evolved_normal1_skill_ids && character.evolved_normal1_skill_ids.length > 0) ||
 	      (character.evolved_normal2_skill_ids && character.evolved_normal2_skill_ids.length > 0) ||

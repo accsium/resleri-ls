@@ -42,6 +42,7 @@ const statCards = computed(() => statOrder.map(key => {
   return { label, value }
 }))
 
+const originalTitle = computed(() => getField(props.indexEntry, 'original_title_name'))
 const traits = computed(() => [
   ...(getField(props.indexEntry, 'battle_tool_trait_names') || []),
   ...(getField(props.indexEntry, 'equipment_tool_trait_names') || [])
@@ -180,6 +181,7 @@ onUnmounted(cleanupSticky)
               <div class="cb-info-right">
                 <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
                 <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
+                <div v-if="originalTitle" class="cb-overlay-name">作品出处: {{ originalTitle }}</div>
               </div>
             </div>
           </div>
@@ -220,6 +222,7 @@ onUnmounted(cleanupSticky)
             <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
             <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
             <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
+            <div v-if="originalTitle" class="cb-overlay-name">作品出处: {{ originalTitle }}</div>
           </div>
           <div class="cb-avatar-mob">
             <AvatarDisplay :index-entry="indexEntry" :size="100" />

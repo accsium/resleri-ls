@@ -271,7 +271,7 @@ input[type="text"] {
   flex: 1;
   gap: 4px;
 }
-.card-body-col-mid .cb-rarity { margin-top: 8px; margin-bottom: 2px; }
+.card-body-col-mid .cb-rarity { margin-top: auto; margin-bottom: 2px; }
 .card-body-col-right {
   width: 52px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
@@ -281,7 +281,7 @@ input[type="text"] {
 .cb-info       { display: flex; flex-direction: column; gap: 2px; }
 .cb-info-row   { display: flex; gap: 12px; }
 .cb-info-left  { flex: 1; }
-.cb-info-right { flex: 1; }
+.cb-info-right { flex: 2; }
 .cb-rarity     { display: flex; align-items: flex-end; gap: 4px; margin-bottom: 4px; }
 .cb-traits     { display: flex; flex-direction: column; gap: 2px; align-items: center; }
 
