@@ -21,7 +21,7 @@
   --shadow-lg:      0 2px 8px rgba(0,0,0,0.10);
   --radius:         4px;
   --radius-lg:      8px;
-  --header-h:       80px;
+  --header-h:       72px;
   --nav-h:           44px;
   --sticky-top:     calc(var(--header-h) + var(--nav-h));
   --max-width:      900px;
@@ -81,10 +81,11 @@ input[type="text"] {
 .header {
   background: var(--bg-header);
   height: var(--header-h);
-  padding: 0 20px 0 24px;
+  padding: 12px 20px 8px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 2px;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -133,6 +134,7 @@ input[type="text"] {
   white-space: nowrap;
   text-align: right;
   width: 100%;
+  margin-top: 2px;
 }
 
 /* ========== 导航栏 ========== */
@@ -297,10 +299,10 @@ input[type="text"] {
 }
 .cb-expand-desk:hover { color: var(--accent); background: var(--bg-stat); }
 .cb-tags {
-  margin-bottom: 4px; display: flex; flex-wrap: nowrap; gap: 4px; align-items: center;
+  margin-bottom: 4px; display: grid; grid-template-columns: auto 1fr; gap: 4px; align-items: center;
 }
-.cb-tags-label { font-size: 12px; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
-.cb-tags-items { display: flex; flex-wrap: wrap; gap: 4px; min-width: 0; }
+.cb-tags-label { font-size: 12px; color: var(--text-muted); white-space: nowrap; }
+.cb-tags-items { display: flex; flex-wrap: wrap; gap: 4px; }
 
 .char-id { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
 .cb-fullname, .cb-overlay-name { font-size: 12px; color: var(--text-muted); margin-bottom: 2px; }
@@ -309,7 +311,8 @@ input[type="text"] {
 .tag, .trait-tag {
   background: var(--bg-trait); color: var(--text-primary);
   padding: 2px 10px; font-size: 11px; border-radius: 2px;
-  overflow-wrap: break-word; word-break: keep-all;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 .trait-tag { display: inline-block; margin: 2px; }
 

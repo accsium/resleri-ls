@@ -101,7 +101,7 @@ function setupStickyHeader() {
   if (!el) return
   detailDiv = el.querySelector('.card-detail')
   if (!detailDiv) return
-  const stickyTop = window.innerWidth < 768 ? 104 : 124
+  const stickyTop = window.innerWidth < 768 ? 104 : 116
 
   detailDiv.style.overflowY = 'auto'
   detailDiv.style.maxHeight = `${window.innerHeight - stickyTop}px`
@@ -205,7 +205,7 @@ function cleanupSticky() {
             </div>
             <div class="cb-tags">
               <span class="cb-tags-label">标签：</span>
-              <span v-for="(tag, i) in tags" :key="i" class="tag">{{ tag }}</span>
+              <span class="cb-tags-items"><span v-for="(tag, i) in tags" :key="i" class="tag">{{ tag }}</span></span>
             </div>
           </div>
           <button class="cb-expand-mob" @click="toggleExpand">
