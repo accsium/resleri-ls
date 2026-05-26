@@ -12,8 +12,8 @@ function handleRefresh() {
 
 <template>
   <div class="header">
-    <h1>{{ t('pageTitle') }}</h1>
-    <div class="header-right">
+    <div class="header-top">
+      <h1>{{ t('pageTitle') }}</h1>
       <div class="lang-switcher">
         <button
           class="lang-btn"
@@ -27,7 +27,7 @@ function handleRefresh() {
         >中</button>
         <button class="btn-refresh" @click="handleRefresh">强制刷新</button>
       </div>
-      <div class="update-time">{{ updateTimeText }}</div>
     </div>
+    <div class="update-time">{{ updateTimeText }}</div>
   </div>
 </template>
