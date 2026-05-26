@@ -220,9 +220,6 @@ onUnmounted(cleanupSticky)
             <span class="cb-attrs">{{ attrsText }}</span>
             <div class="char-id">ID:{{ indexEntry.id }}</div>
             <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
-            <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
-            <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
-            <div v-if="originalTitle" class="cb-overlay-name">作品出处: {{ originalTitle }}</div>
           </div>
           <div class="cb-avatar-mob">
             <AvatarDisplay :index-entry="indexEntry" :size="100" />
@@ -262,13 +259,16 @@ onUnmounted(cleanupSticky)
       <div v-else-if="detailError" class="no-data">{{ t('loadFailed') }}: {{ detailError }}</div>
       <template v-else-if="char">
         <div class="mobile-stats">
-          <div class="section-title">基础属性</div>
+          <div class="section-title">基础信息</div>
           <div class="stats-row">
             <div v-for="stat in statCards" :key="stat.label" class="stat-card">
               <div class="stat-label">{{ stat.label }}</div>
               <div class="stat-value">{{ stat.value }}</div>
             </div>
           </div>
+          <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
+          <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
+          <div v-if="originalTitle" class="cb-overlay-name">作品出处: {{ originalTitle }}</div>
         </div>
         <CardDetail :character-data="char" :card-state="cardState" :character-id="indexEntry.id" />
       </template>
