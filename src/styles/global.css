@@ -537,7 +537,7 @@ input:checked + .slider::before { transform: translateX(16px); }
 
   .row-info-avatar { gap: 8px; align-items: flex-start; }
   .row-info-avatar .cb-info-mob   { flex: 1; display: flex; flex-direction: column; gap: 2px; }
-  .row-info-avatar .cb-avatar-mob { flex: 0 0 auto; display: flex; justify-content: center; align-self: center; }
+  .row-info-avatar .cb-avatar-mob { flex: 1; display: flex; justify-content: center; align-self: center; }
   .row-info-avatar .cb-traits-mob { flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; align-self: center; }
 
   .row-rarity-expand { gap: 8px; align-items: center; }
