@@ -166,7 +166,7 @@ function cleanupSticky() {
           </div>
           <div class="cb-tags">
             <span class="cb-tags-label">标签：</span>
-            <span v-for="(tag, i) in tags" :key="i" class="tag">{{ tag }}</span>
+            <span class="cb-tags-items"><span v-for="(tag, i) in tags" :key="i" class="tag">{{ tag }}</span></span>
           </div>
           <div class="cb-stats">
             <div v-for="stat in statCards" :key="stat.label" class="stat-card">
