@@ -304,8 +304,9 @@ input[type="text"] {
 .cb-tags-label { font-size: 12px; color: var(--text-muted); white-space: nowrap; }
 .cb-tags-items { display: flex; flex-wrap: wrap; gap: 4px; }
 
-.char-id { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
-.cb-fullname, .cb-overlay-name { font-size: 12px; color: var(--text-muted); margin-bottom: 2px; }
+.char-id, .release-date, .cb-fullname, .cb-overlay-name {
+  font-size: 12px; color: var(--text-muted); margin-bottom: 2px;
+}
 .max-rarity-label { font-size: 12px; color: var(--text-muted); margin-right: 4px; flex-shrink: 0; white-space: nowrap; align-self: center; }
 
 .tag, .trait-tag {
@@ -315,8 +316,6 @@ input[type="text"] {
   max-width: 100%;
 }
 .trait-tag { display: inline-block; margin: 2px; }
-
-.release-date { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
 
 .cb-stats {
   display: flex; flex-wrap: wrap; gap: 6px; align-content: flex-start;
