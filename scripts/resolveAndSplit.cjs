@@ -272,6 +272,16 @@ function buildLocalizedChar(character, lang) {
 
 // ========== 8. 生成索引条目 ==========
 function buildIndexEntry(character) {
+  // 预计算搜索文本：技能名/描述 + 能力名/描述
+  const searchParts = [];
+  if (character._skillDetails) {
+    for (const detail of Object.values(character._skillDetails)) {
+      if (detail.name) searchParts.push(detail.name);
+      if (detail.description) searchParts.push(detail.description);
+      if (detail.summary) searchParts.push(detail.summary);
+    }
+  }
+
   let defaultWait = 0;
   const evolvedNormal2 = character.evolved_normal2_skill_ids;
   const normal2 = character.normal2_skill_ids;
@@ -335,6 +345,7 @@ function buildIndexEntry(character) {
 	    has_transform: transformPairs.some(p => p[0] === character.id),
 	    has_active: !!(character.active1_skill_id || character.active2_skill_id || character.active3_skill_id),
 	    has_ex: (character.extra_skill_ids || []).length > 0,
+    _search_text: searchParts.join(' '),
   };
 }
 
@@ -411,7 +422,7 @@ transformPairs.forEach(pair => {
   const merged = { ...firstData, _transform: secondData };
   fs.writeFileSync(path.join(outDir, `${firstId}.json`), JSON.stringify(merged, null, 2), 'utf-8');
   if (!excludeIds.has(firstId)) {
-    index.push(buildIndexEntry(firstChar));
+    index.push(buildIndexEntry(firstData));
   }
 });
 
@@ -419,7 +430,7 @@ visibleCharacters.forEach(char => {
   if (pairedIds.has(char.id)) return;
   const localizedChar = buildLocalizedChar(char);
   fs.writeFileSync(path.join(outDir, `${char.id}.json`), JSON.stringify(localizedChar, null, 2), 'utf-8');
-  index.push(buildIndexEntry(char));
+  index.push(buildIndexEntry(localizedChar));
 });
 
 fs.writeFileSync(path.join(outDir, 'character_index.json'), JSON.stringify(index, null, 2), 'utf-8');

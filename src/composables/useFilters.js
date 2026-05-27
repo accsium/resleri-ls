@@ -111,7 +111,11 @@ export function useFilters() {
       list = list.filter(c =>
         (c.name_cn || '').toLowerCase().includes(q) ||
         (c.name_ja || '').toLowerCase().includes(q) ||
-        (c.another_name || '').toLowerCase().includes(q)
+        (c.another_name || '').toLowerCase().includes(q) ||
+        String(c.id).toLowerCase().includes(q) ||
+        (c.fullname || '').toLowerCase().includes(q) ||
+        (c.overlay_name || '').toLowerCase().includes(q) ||
+        (c._search_text || '').toLowerCase().includes(q)
       )
     }
     return list
