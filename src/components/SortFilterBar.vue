@@ -215,33 +215,7 @@ const selectedEquipTraits = computed({
 <template>
   <div class="sf-wrapper">
     <div ref="panelEl" class="sort-filter-bar">
-    <!-- 行1：职业 + 属性 -->
-    <div class="sf-row">
-      <span class="sf-label">职业</span>
-      <div class="sf-group sf-icons">
-        <button
-          v-for="id in ROLE_IDS" :key="'r'+id"
-          class="sf-icon-btn"
-          :class="{ active: selectedRoles.includes(id) }"
-          @click="toggleRole(id)"
-        >
-          <IconDisplay type="role" :id="id" :size="24" :alt="roleMap[id]" />
-        </button>
-      </div>
-      <div class="sf-divider"></div>
-      <span class="sf-label">属性</span>
-      <div class="sf-group sf-icons">
-        <button
-          v-for="id in ATTR_IDS" :key="'a'+id"
-          class="sf-icon-btn"
-          :class="{ active: selectedAttrs.includes(id) }"
-          @click="toggleAttr(id)"
-        >
-          <IconDisplay type="attribute" :id="id" :size="24" :alt="attrMap[id]" />
-        </button>
-      </div>
-    </div>
-    <!-- 行2：初始星级 + 调和颜色 + 展开 -->
+    <!-- 行1：初始星级 + 职业/属性图标 + 展开 -->
     <div class="sf-row">
       <div class="sf-field">
         <span class="sf-label">初始星级</span>
@@ -253,6 +227,36 @@ const selectedEquipTraits = computed({
         </div>
       </div>
       <div class="sf-divider"></div>
+      <div class="sf-group sf-icons">
+        <button
+          v-for="id in ROLE_IDS" :key="'r'+id"
+          class="sf-icon-btn"
+          :class="{ active: selectedRoles.includes(id) }"
+          @click="toggleRole(id)"
+        >
+          <IconDisplay type="role" :id="id" :size="24" :alt="roleMap[id]" />
+        </button>
+      </div>
+      <div class="sf-divider"></div>
+      <div class="sf-group sf-icons">
+        <button
+          v-for="id in ATTR_IDS" :key="'a'+id"
+          class="sf-icon-btn"
+          :class="{ active: selectedAttrs.includes(id) }"
+          @click="toggleAttr(id)"
+        >
+          <IconDisplay type="attribute" :id="id" :size="24" :alt="attrMap[id]" />
+        </button>
+      </div>
+      <div class="sf-spacer"></div>
+      <div class="sf-right-group">
+        <button class="sf-collapse-btn" @click="collapsed = !collapsed">
+          {{ collapsed ? '展开 ▼' : '收起 ▲' }}
+        </button>
+      </div>
+    </div>
+    <!-- 行2：调和颜色 + 词条语言 -->
+    <div class="sf-row" v-show="!collapsed">
       <div class="sf-group sf-icons">
         <span class="sf-label">调和颜色</span>
         <button
@@ -286,31 +290,10 @@ const selectedEquipTraits = computed({
             <option value="cn">中文</option>
           </select>
         </div>
-        <button class="sf-collapse-btn" @click="collapsed = !collapsed">
-          {{ collapsed ? '展开 ▼' : '收起 ▲' }}
-        </button>
       </div>
     </div>
 
-    <!-- 行3：特殊机制 -->
-    <div class="sf-row" v-show="!collapsed">
-      <div class="sf-field">
-        <span class="sf-label">特殊机制</span>
-        <div class="sf-field-items">
-        <button
-          v-for="(label, key) in { has_evo: '可进化', has_range: '有范围', has_transform: '可变身', has_active: '发动技能', has_ex: 'EX技能' }"
-          :key="key"
-          class="sf-tri-btn"
-          :class="{ active: activeFilters[key] === 1, exclude: activeFilters[key] === 2 }"
-          @click="toggleFilter(key, (activeFilters[key] || 0) < 2 ? (activeFilters[key] || 0) + 1 : 0)"
-        >
-          {{ label }}{{ activeFilters[key] === 1 ? ' ✓' : activeFilters[key] === 2 ? ' ✕' : '' }}
-        </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 行4：道具词条 + 装备词条 -->
+    <!-- 行3：道具词条 + 装备词条 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">道具词条</span>
@@ -344,7 +327,7 @@ const selectedEquipTraits = computed({
       </div>
     </div>
 
-    <!-- 行5：标签 -->
+    <!-- 行4：标签 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">标签</span>
@@ -360,37 +343,59 @@ const selectedEquipTraits = computed({
       </div>
     </div>
 
+    <!-- 行5：特殊机制 -->
+    <div class="sf-row" v-show="!collapsed">
+      <div class="sf-field">
+        <span class="sf-label">特殊机制</span>
+        <div class="sf-field-items">
+        <button
+          v-for="(label, key) in { has_evo: '进化', has_range: '范围变化', has_transform: '变身', has_active: '发动技能', has_ex: 'EX技能' }"
+          :key="key"
+          class="sf-tri-btn"
+          :class="{ active: activeFilters[key] === 1, exclude: activeFilters[key] === 2 }"
+          @click="toggleFilter(key, (activeFilters[key] || 0) < 2 ? (activeFilters[key] || 0) + 1 : 0)"
+        >
+          {{ label }}{{ activeFilters[key] === 1 ? ' ✓' : activeFilters[key] === 2 ? ' ✕' : '' }}
+        </button>
+        </div>
+      </div>
+    </div>
+
     <!-- 行6：排序 + 搜索 -->
     <div class="sf-row">
       <div class="sort-control">
-        <span class="sf-label">排序</span>
-        <select :value="sortCategory" @change="onCategoryChange">
-          <option v-for="cat in SORT_CATEGORIES" :key="cat.key" :value="cat.key">
-            {{ currentLang === 'cn' ? cat.label_cn : cat.label_ja }}
-          </option>
-        </select>
-        <template v-if="sortCategory !== 'skill'">
-          <select v-model="sortField" @change="(e) => setSortField(e.target.value)">
-            <option v-for="f in activeCategory.fields" :key="f.field" :value="f.field">
-              {{ currentLang === 'cn' ? f.label_cn : f.label_ja }}
+        <div class="sort-control-head">
+          <span class="sf-label">排序</span>
+          <select :value="sortCategory" @change="onCategoryChange">
+            <option v-for="cat in SORT_CATEGORIES" :key="cat.key" :value="cat.key">
+              {{ currentLang === 'cn' ? cat.label_cn : cat.label_ja }}
             </option>
           </select>
-        </template>
-        <template v-else>
-          <select class="sf-skill-sel" v-model="sortSkillType" @change="(e) => setSortSkillType(e.target.value)">
-            <option v-for="st in SKILL_TYPE_OPTS" :key="st.key" :value="st.key">
-              {{ currentLang === 'cn' ? st.label_cn : st.label_ja }}
-            </option>
-          </select>
-          <select class="sf-skill-sel" v-model="sortSkillStat" @change="(e) => setSortSkillStat(e.target.value)">
-            <option v-for="ss in SKILL_STAT_OPTS" :key="ss.key" :value="ss.key">
-              {{ currentLang === 'cn' ? ss.label_cn : ss.label_ja }}
-            </option>
-          </select>
-        </template>
-        <button class="sf-order-btn" @click="toggleOrder()">
-          {{ currentSortOrder === 'desc' ? '↓ 降序' : '↑ 升序' }}
-        </button>
+        </div>
+        <div class="sort-control-tail">
+          <template v-if="sortCategory !== 'skill'">
+            <select v-model="sortField" @change="(e) => setSortField(e.target.value)">
+              <option v-for="f in activeCategory.fields" :key="f.field" :value="f.field">
+                {{ currentLang === 'cn' ? f.label_cn : f.label_ja }}
+              </option>
+            </select>
+          </template>
+          <template v-else>
+            <select class="sf-skill-sel" v-model="sortSkillType" @change="(e) => setSortSkillType(e.target.value)">
+              <option v-for="st in SKILL_TYPE_OPTS" :key="st.key" :value="st.key">
+                {{ currentLang === 'cn' ? st.label_cn : st.label_ja }}
+              </option>
+            </select>
+            <select class="sf-skill-sel" v-model="sortSkillStat" @change="(e) => setSortSkillStat(e.target.value)">
+              <option v-for="ss in SKILL_STAT_OPTS" :key="ss.key" :value="ss.key">
+                {{ currentLang === 'cn' ? ss.label_cn : ss.label_ja }}
+              </option>
+            </select>
+          </template>
+          <button class="sf-order-btn" @click="toggleOrder()">
+            {{ currentSortOrder === 'desc' ? '↓ 降序' : '↑ 升序' }}
+          </button>
+        </div>
       </div>
       <div class="sf-search">
         <input type="text" v-model="searchText" :placeholder="t('searchPlaceholder')">
