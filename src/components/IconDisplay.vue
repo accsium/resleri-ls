@@ -1,12 +1,23 @@
 <script setup>
+const PREFIX = { attribute: 'attack_attribute', role: 'role' }
+
 defineProps({
-  side: { type: String, required: true },
-  iconSrc: { type: String, required: true },
+  type: { type: String, required: true },
+  id: { type: Number, required: true },
+  size: { type: Number, required: true },
+  alt: { type: String, default: '' },
 })
 </script>
 
 <template>
-  <div :class="['overlay-icon', 'overlay-icon-' + side]">
-    <img :src="iconSrc" alt="">
+  <div
+    class="icon-box"
+    :style="{ width: size + 'px', height: size + 'px' }"
+    :title="alt"
+  >
+    <img
+      :src="'image/misc/' + PREFIX[type] + '_' + id + '.png'"
+      :alt="alt"
+    >
   </div>
 </template>

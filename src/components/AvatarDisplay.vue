@@ -77,8 +77,12 @@ onMounted(() => {
         />
       </svg>
       <!-- 图标容器：无缩放居中 -->
-      <IconDisplay v-if="roleId" side="left" :icon-src="'image/misc/role_' + roleId + '.png'" />
-      <IconDisplay v-if="attributeId" side="right" :icon-src="'image/misc/attack_attribute_' + attributeId + '.png'" />
+      <div v-if="roleId" class="overlay-icon overlay-icon-left">
+        <IconDisplay type="role" :id="roleId" :size="128" />
+      </div>
+      <div v-if="attributeId" class="overlay-icon overlay-icon-right">
+        <IconDisplay type="attribute" :id="attributeId" :size="128" />
+      </div>
       <!-- 初始星星 -->
       <div v-if="starDisplayCount > 0"
         :style="{

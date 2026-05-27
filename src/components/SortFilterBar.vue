@@ -3,6 +3,7 @@ import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useFilters } from '../composables/useFilters'
 import StarsDisplay from './StarsDisplay.vue'
+import IconDisplay from './IconDisplay.vue'
 
 const { t, currentLang, SORT_CATEGORIES, SKILL_TYPE_OPTS, SKILL_STAT_OPTS, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 const {
@@ -212,8 +213,35 @@ const selectedEquipTraits = computed({
 </script>
 
 <template>
-  <div ref="panelEl" class="sort-filter-bar">
-    <!-- 行1：初始星级 + 属性 + 职业 + 调和颜色 -->
+  <div class="sf-wrapper">
+    <div ref="panelEl" class="sort-filter-bar">
+    <!-- 行1：职业 + 属性 -->
+    <div class="sf-row">
+      <span class="sf-label">职业</span>
+      <div class="sf-group sf-icons">
+        <button
+          v-for="id in ROLE_IDS" :key="'r'+id"
+          class="sf-icon-btn"
+          :class="{ active: selectedRoles.includes(id) }"
+          @click="toggleRole(id)"
+        >
+          <IconDisplay type="role" :id="id" :size="24" :alt="roleMap[id]" />
+        </button>
+      </div>
+      <div class="sf-divider"></div>
+      <span class="sf-label">属性</span>
+      <div class="sf-group sf-icons">
+        <button
+          v-for="id in ATTR_IDS" :key="'a'+id"
+          class="sf-icon-btn"
+          :class="{ active: selectedAttrs.includes(id) }"
+          @click="toggleAttr(id)"
+        >
+          <IconDisplay type="attribute" :id="id" :size="24" :alt="attrMap[id]" />
+        </button>
+      </div>
+    </div>
+    <!-- 行2：初始星级 + 调和颜色 + 展开 -->
     <div class="sf-row">
       <div class="sf-field">
         <span class="sf-label">初始星级</span>
@@ -223,28 +251,6 @@ const selectedEquipTraits = computed({
           <StarsDisplay :mode="1" :rarity="r" :max-rarity="8" :scale="0.25" />
         </label>
         </div>
-      </div>
-      <div class="sf-divider"></div>
-      <div class="sf-group sf-icons">
-        <button
-          v-for="id in ATTR_IDS" :key="'a'+id"
-          class="sf-icon-btn"
-          :class="{ active: selectedAttrs.includes(id) }"
-          @click="toggleAttr(id)"
-        >
-          <img :src="'image/misc/attack_attribute_' + id + '.png'" :title="attrMap[id]" class="sf-img">
-        </button>
-      </div>
-      <div class="sf-divider"></div>
-      <div class="sf-group sf-icons">
-        <button
-          v-for="id in ROLE_IDS" :key="'r'+id"
-          class="sf-icon-btn"
-          :class="{ active: selectedRoles.includes(id) }"
-          @click="toggleRole(id)"
-        >
-          <img :src="'image/misc/role_' + id + '.png'" :title="roleMap[id]" class="sf-img">
-        </button>
       </div>
       <div class="sf-divider"></div>
       <div class="sf-group sf-icons">
@@ -272,13 +278,21 @@ const selectedEquipTraits = computed({
           </svg>
         </button>
       </div>
-      <div class="sf-spacer"></div>
-      <button class="sf-collapse-btn" @click="collapsed = !collapsed">
-        {{ collapsed ? '展开 ▼' : '收起 ▲' }}
-      </button>
+      <div class="sf-right-group">
+        <div class="sf-group">
+          <span class="sf-label">词条语言</span>
+          <select class="sf-select" v-model="panelLang">
+            <option value="ja">日本語</option>
+            <option value="cn">中文</option>
+          </select>
+        </div>
+        <button class="sf-collapse-btn" @click="collapsed = !collapsed">
+          {{ collapsed ? '展开 ▼' : '收起 ▲' }}
+        </button>
+      </div>
     </div>
 
-    <!-- 行2：特殊机制 + 词条语言 -->
+    <!-- 行3：特殊机制 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">特殊机制</span>
@@ -294,17 +308,9 @@ const selectedEquipTraits = computed({
         </button>
         </div>
       </div>
-      <div class="sf-spacer"></div>
-      <div class="sf-group">
-        <span class="sf-label">词条语言</span>
-        <select class="sf-select" v-model="panelLang">
-          <option value="ja">日本語</option>
-          <option value="cn">中文</option>
-        </select>
-      </div>
     </div>
 
-    <!-- 行3：道具词条 + 装备词条 -->
+    <!-- 行4：道具词条 + 装备词条 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">道具词条</span>
@@ -338,7 +344,7 @@ const selectedEquipTraits = computed({
       </div>
     </div>
 
-    <!-- 行4：标签 -->
+    <!-- 行5：标签 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">标签</span>
@@ -354,13 +360,10 @@ const selectedEquipTraits = computed({
       </div>
     </div>
 
-    <!-- 行5：搜索 + 排序 -->
-    <div class="sf-row sf-row-bottom">
-      <div class="sf-search">
-        <input type="text" v-model="searchText" :placeholder="t('searchPlaceholder')">
-      </div>
-      <div class="sf-spacer"></div>
+    <!-- 行6：排序 + 搜索 -->
+    <div class="sf-row">
       <div class="sort-control">
+        <span class="sf-label">排序</span>
         <select :value="sortCategory" @change="onCategoryChange">
           <option v-for="cat in SORT_CATEGORIES" :key="cat.key" :value="cat.key">
             {{ currentLang === 'cn' ? cat.label_cn : cat.label_ja }}
@@ -374,12 +377,12 @@ const selectedEquipTraits = computed({
           </select>
         </template>
         <template v-else>
-          <select v-model="sortSkillType" @change="(e) => setSortSkillType(e.target.value)">
+          <select class="sf-skill-sel" v-model="sortSkillType" @change="(e) => setSortSkillType(e.target.value)">
             <option v-for="st in SKILL_TYPE_OPTS" :key="st.key" :value="st.key">
               {{ currentLang === 'cn' ? st.label_cn : st.label_ja }}
             </option>
           </select>
-          <select v-model="sortSkillStat" @change="(e) => setSortSkillStat(e.target.value)">
+          <select class="sf-skill-sel" v-model="sortSkillStat" @change="(e) => setSortSkillStat(e.target.value)">
             <option v-for="ss in SKILL_STAT_OPTS" :key="ss.key" :value="ss.key">
               {{ currentLang === 'cn' ? ss.label_cn : ss.label_ja }}
             </option>
@@ -389,6 +392,10 @@ const selectedEquipTraits = computed({
           {{ currentSortOrder === 'desc' ? '↓ 降序' : '↑ 升序' }}
         </button>
       </div>
+      <div class="sf-search">
+        <input type="text" v-model="searchText" :placeholder="t('searchPlaceholder')">
+      </div>
+    </div>
     </div>
   </div>
 </template>
