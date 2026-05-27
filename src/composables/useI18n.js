@@ -3,7 +3,7 @@ import { ref } from 'vue'
 const UI_TEXT = {
   ja: {
     pageTitle: 'レスレリ 角色图鉴',
-    searchPlaceholder: '名前で検索...',
+    searchPlaceholder: 'キャラ・スキル・アビリティを検索...',
     skillSection: 'スキル',
     abilityTitle: '能力',
     leaderSkillSection: 'リーダースキル',
@@ -14,7 +14,7 @@ const UI_TEXT = {
     loading: '読み込み中...',
     loadFailed: '読み込み失敗',
     maxRarityLabel: '最大レアリティ：',
-    target: '対象', power: '威力', break: 'ブレイク', wt: 'WT', limit: '制限',
+    target: '対象', power: '倍率', break: 'ブレイク', wt: 'WT', limit: '制限',
     level: 'Lv. ',
     initialWTLabel: '初期WT',
     skillType: { normal1: 'スキル1', normal2: 'スキル2', burst: 'バーストスキル', active: 'アクティブスキル', extra: 'EXスキル' },
@@ -27,7 +27,7 @@ const UI_TEXT = {
   },
   cn: {
     pageTitle: '蕾斯莱莉 角色图鉴',
-    searchPlaceholder: '搜索角色名称...',
+    searchPlaceholder: '搜索角色、技能、能力...',
     skillSection: '技能',
     abilityTitle: '能力',
     leaderSkillSection: '队长技能',
@@ -51,18 +51,58 @@ const UI_TEXT = {
   }
 }
 
+const ATTR_MAP    = { 1: '斬', 2: '打', 3: '突', 5: '火', 6: '氷', 7: '雷', 8: '風' }
+const ATTR_MAP_CN = { 1: '斩', 2: '打', 3: '突', 5: '火', 6: '冰', 7: '雷', 8: '风' }
+const ROLE_MAP    = { 1: '攻', 2: '破', 3: '防', 4: '輔' }
+const ROLE_MAP_CN = { 1: '攻', 2: '破', 3: '防', 4: '辅' }
 const TRAIT_COLOR_HEX = { 1: '#3498DB', 2: '#9B59B6', 3: '#F1C40F', 4: '#E74C3C', 5: '#2ECC71' }
 
-const SORT_FIELDS = [
-  { field: 'start_at',        label_ja: '実装日',          label_cn: '实装日期',     priority: 0 },
-  { field: 'initial_rarity',  label_ja: '初期レアリティ',  label_cn: '初始稀有度',    priority: 1 },
-  { field: 'id',              label_ja: 'ID',                label_cn: 'ID',              priority: 2 },
-  { field: 'max_rarity',      label_ja: '最大レアリティ',  label_cn: '最大稀有度',    priority: 3 },
-  { field: 'role',            label_ja: 'ロール',           label_cn: '职业',             priority: 4 },
-  { field: 'base_character_id', label_ja: 'ベースキャラ',  label_cn: '原型',             priority: 5 },
-  { field: 'original_title_id', label_ja: 'シリーズ',      label_cn: '系列',             priority: 6 },
-  { field: 'trait_color_id',  label_ja: '調和色-左',        label_cn: '调和颜色-左',   priority: 7 },
-  { field: 'support_color_id', label_ja: '調和色-右',       label_cn: '调和颜色-右',   priority: 8 }
+const SORT_CATEGORIES = [
+  {
+    key: 'character',
+    label_ja: 'キャラ情報',
+    label_cn: '角色信息',
+    fields: [
+      { field: 'start_at',        label_ja: '実装日',     label_cn: '加入时间' },
+      { field: 'initial_rarity',  label_ja: '初期レア',   label_cn: '初始稀有度' },
+      { field: 'id',              label_ja: 'ID',          label_cn: 'ID' },
+      { field: 'base_character_name', label_ja: '名前',   label_cn: '名字' },
+      { field: 'fullname',        label_ja: 'フルネーム', label_cn: '全名' },
+      { field: 'overlay_name',    label_ja: '作品',       label_cn: '作品出处' },
+      { field: 'tag_count',       label_ja: 'タグ数',     label_cn: '标签数' },
+    ]
+  },
+  {
+    key: 'stats',
+    label_ja: '基礎ステータス',
+    label_cn: '基础数值',
+    fields: [
+      { field: 'initial_wt',      label_ja: '初期WT',     label_cn: '初始WT' },
+      { field: 'hp',              label_ja: 'HP',          label_cn: 'HP' },
+      { field: 'speed',           label_ja: '速度',       label_cn: '速度' },
+      { field: 'attack',          label_ja: '物攻',       label_cn: '物攻' },
+      { field: 'defense',         label_ja: '物防',       label_cn: '物防' },
+      { field: 'magic',           label_ja: '魔攻',       label_cn: '魔攻' },
+      { field: 'mental',          label_ja: '魔防',       label_cn: '魔防' },
+    ]
+  },
+  {
+    key: 'skill',
+    label_ja: 'スキル',
+    label_cn: '技能数值',
+  }
+]
+
+const SKILL_TYPE_OPTS = [
+  { key: 'normal1', label_ja: 'スキル1', label_cn: '一技能' },
+  { key: 'normal2', label_ja: 'スキル2', label_cn: '二技能' },
+  { key: 'burst',   label_ja: 'バースト', label_cn: '爆发技能' },
+]
+
+const SKILL_STAT_OPTS = [
+  { key: 'power',       label_ja: '倍率', label_cn: '倍率' },
+  { key: 'break_power', label_ja: '破防', label_cn: '破防' },
+  { key: 'wait',        label_ja: 'WT',   label_cn: 'WT' },
 ]
 
 const currentLang = ref('cn')
@@ -87,5 +127,5 @@ export function useI18n() {
     return TRAIT_COLOR_HEX[id] || '#CCCCCC'
   }
 
-  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_FIELDS, TRAIT_COLOR_HEX }
+  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_CATEGORIES, SKILL_TYPE_OPTS, SKILL_STAT_OPTS, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN }
 }

@@ -4,10 +4,12 @@ import { useI18n } from '../composables/useI18n'
 import { useFilters } from '../composables/useFilters'
 import StarsDisplay from './StarsDisplay.vue'
 
-const { t, currentLang, SORT_FIELDS, TRAIT_COLOR_HEX } = useI18n()
+const { t, currentLang, SORT_CATEGORIES, SKILL_TYPE_OPTS, SKILL_STAT_OPTS, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 const {
-  activeSortFields, currentSortOrder, activeFilters, searchText,
-  setSortField, toggleOrder, toggleFilter,
+  sortCategory, sortField, sortSkillType, sortSkillStat, currentSortOrder,
+  activeFilters, searchText,
+  setSortCategory, setSortField, setSortSkillType, setSortSkillStat,
+  toggleOrder, toggleFilter,
 } = useFilters()
 
 const panelLang = ref('ja')
@@ -40,15 +42,20 @@ onMounted(() => {
 })
 
 // ── 排序 ──
-const sortField = computed({
-  get: () => activeSortFields.value[0]?.field || '',
-  set: (v) => setSortField(v),
-})
+const activeCategory = computed(() =>
+  SORT_CATEGORIES.find(c => c.key === sortCategory.value) || SORT_CATEGORIES[0]
+)
+
+function onCategoryChange(e) {
+  const cat = SORT_CATEGORIES.find(c => c.key === e.target.value)
+  setSortCategory(cat.key)
+  if (cat.key !== 'skill') {
+    setSortField(cat.fields[0].field)
+  }
+}
 
 // ── 属性 (attack_attribute 按 id 顺序: 1=斩 2=打 3=突 5=火 6=冰 7=雷 8=风) ──
 const ATTR_IDS = [1, 2, 3, 5, 6, 7, 8]
-const ATTR_MAP = { 1: '斬', 2: '打', 3: '突', 5: '火', 6: '氷', 7: '雷', 8: '風' }
-const ATTR_MAP_CN = { 1: '斩', 2: '打', 3: '突', 5: '火', 6: '冰', 7: '雷', 8: '风' }
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
 const selectedAttrs = computed({
   get: () => activeFilters.value.attack_attributes || [],
@@ -65,8 +72,6 @@ function toggleAttr(id) {
 
 // ── 职业 (按 id 顺序: 1=攻 2=破 3=防 4=輔) ──
 const ROLE_IDS = [1, 2, 3, 4]
-const ROLE_MAP = { 1: '攻', 2: '破', 3: '防', 4: '輔' }
-const ROLE_MAP_CN = { 1: '攻', 2: '破', 3: '防', 4: '辅' }
 const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP)
 const selectedRoles = computed({
   get: () => activeFilters.value.role || [],
@@ -356,11 +361,30 @@ const selectedEquipTraits = computed({
       </div>
       <div class="sf-spacer"></div>
       <div class="sort-control">
-        <select v-model="sortField">
-          <option v-for="sf in SORT_FIELDS" :key="sf.field" :value="sf.field">
-            {{ currentLang === 'cn' ? sf.label_cn : sf.label_ja }}
+        <select :value="sortCategory" @change="onCategoryChange">
+          <option v-for="cat in SORT_CATEGORIES" :key="cat.key" :value="cat.key">
+            {{ currentLang === 'cn' ? cat.label_cn : cat.label_ja }}
           </option>
         </select>
+        <template v-if="sortCategory !== 'skill'">
+          <select v-model="sortField" @change="(e) => setSortField(e.target.value)">
+            <option v-for="f in activeCategory.fields" :key="f.field" :value="f.field">
+              {{ currentLang === 'cn' ? f.label_cn : f.label_ja }}
+            </option>
+          </select>
+        </template>
+        <template v-else>
+          <select v-model="sortSkillType" @change="(e) => setSortSkillType(e.target.value)">
+            <option v-for="st in SKILL_TYPE_OPTS" :key="st.key" :value="st.key">
+              {{ currentLang === 'cn' ? st.label_cn : st.label_ja }}
+            </option>
+          </select>
+          <select v-model="sortSkillStat" @change="(e) => setSortSkillStat(e.target.value)">
+            <option v-for="ss in SKILL_STAT_OPTS" :key="ss.key" :value="ss.key">
+              {{ currentLang === 'cn' ? ss.label_cn : ss.label_ja }}
+            </option>
+          </select>
+        </template>
         <button class="sf-order-btn" @click="toggleOrder()">
           {{ currentSortOrder === 'desc' ? '↓ 降序' : '↑ 升序' }}
         </button>

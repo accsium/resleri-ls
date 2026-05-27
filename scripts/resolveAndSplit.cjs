@@ -270,6 +270,158 @@ function buildLocalizedChar(character, lang) {
   return char;
 }
 
+// ========== 8. 精简输出 + 构建 switch/switch_stat ==========
+const CHAR_KEEP = [
+  'id', 'attack_attributes', 'initial_rarity', 'max_rarity',
+  'trait_color_id', 'support_color_id',
+  'trait_color_name_ja', 'trait_color_name_cn',
+  'support_color_name_ja', 'support_color_name_cn',
+  'battle_tool_trait_names_ja', 'battle_tool_trait_names_cn',
+  'equipment_tool_trait_names_ja', 'equipment_tool_trait_names_cn',
+  'leader_skill', 'ability_ids', 'support_ability_ids',
+  '_exSkills',
+]
+
+const DETAIL_KEEP = [
+  'name', 'id', 'target_name_ja', 'target_name_cn',
+  'skill_target_type', 'attack_attributes',
+  'description', 'effects', 'wait', 'power', 'break_power', 'limit_count',
+]
+
+function hasEvolvedSkills(char) {
+  return ['normal1','normal2','burst'].some(p =>
+    char[`evolved_${p}_skill_ids`] && char[`evolved_${p}_skill_ids`].length > 0)
+}
+
+function slimSkillDetails(details) {
+  if (!details) return details
+  const out = {}
+  for (const [id, obj] of Object.entries(details)) {
+    const slim = {}
+    for (const k of DETAIL_KEEP) {
+      if (obj[k] !== undefined && obj[k] !== null) slim[k] = obj[k]
+    }
+    out[id] = slim
+  }
+  return out
+}
+
+function pickKeys(obj, keys) {
+  const out = {}
+  for (const k of keys) {
+    if (obj[k] !== undefined && obj[k] !== null && !(Array.isArray(obj[k]) && obj[k].length === 0))
+      out[k] = obj[k]
+  }
+  return out
+}
+
+function diffObjects(base, alt) {
+  const diff = {}
+  for (const k of Object.keys(alt)) {
+    if (JSON.stringify(base[k]) !== JSON.stringify(alt[k])) diff[k] = alt[k]
+  }
+  return diff
+}
+
+function buildSwitchSkills(char, type) {
+  if (type === 'evolve') {
+    const skills = []
+    if (char._skills) {
+      for (const group of char._skills) {
+        if (group.post_evolution && group.post_evolution.length > 0) {
+          skills.push({ type: group.type, skills: group.post_evolution })
+        }
+      }
+    }
+    return skills.length > 0 ? skills : null
+  }
+  if (type === 'range') {
+    const skills = []
+    const inrange = char._rangeSkills?.inrange
+    if (inrange?.skill1?.length > 0) skills.push({ type: 'normal1', skills: inrange.skill1 })
+    if (inrange?.skill2?.length > 0) skills.push({ type: 'normal2', skills: inrange.skill2 })
+    return skills.length > 0 ? skills : null
+  }
+  return null
+}
+
+function finalizeOutput(char) {
+  let sw = null
+  if (char._transform) {
+    sw = 'change'
+  } else if (char._rangeSkills?.inrange) {
+    sw = 'range'
+  } else if (hasEvolvedSkills(char)) {
+    sw = 'evolve'
+  }
+
+  let switchStat = null
+  if (sw === 'change') {
+    const trans = finalizeOutput(char._transform)
+    trans.switch = undefined
+    trans.switch_stat = undefined
+    switchStat = diffObjects(char, trans)
+    if (char._skillDetails || trans._skillDetails) {
+      switchStat._skillDetails = { ...(char._skillDetails || {}), ...(trans._skillDetails || {}) }
+    }
+  } else if (sw === 'evolve') {
+    switchStat = {}
+    const skills = buildSwitchSkills(char, 'evolve')
+    if (skills) switchStat._skills = skills
+    const evoAbiIds = char.all_skill_evolved_ability_ids || []
+    if (evoAbiIds.length > 0) {
+      switchStat.ability_ids = char.ability_ids
+      char.ability_ids = (char.ability_ids || []).filter(id => !evoAbiIds.includes(id))
+    }
+    const evoWT = computeWT(char, true)
+    const baseWT = computeWT(char, false)
+    if (evoWT !== baseWT) switchStat.initial_wt = evoWT
+  } else if (sw === 'range') {
+    switchStat = {}
+    const skills = buildSwitchSkills(char, 'range')
+    if (skills) switchStat._skills = skills
+    const evoWT = computeWT(char, true)
+    const baseWT = computeWT(char, false)
+    if (evoWT !== baseWT) switchStat.initial_wt = evoWT
+  }
+
+  const slimDetails = slimSkillDetails(char._skillDetails)
+  if (switchStat?._skillDetails) {
+    switchStat._skillDetails = slimSkillDetails(switchStat._skillDetails)
+  }
+
+  const out = pickKeys(char, CHAR_KEEP)
+  out._skillDetails = slimDetails
+  out.initial_wt = computeWT(char, true)
+  // 基表 _skills：pre_evolution → { type, skills }
+  if (char._skills) {
+    out._skills = char._skills
+      .map(g => ({ type: g.type, skills: g.pre_evolution }))
+      .filter(g => g.skills && g.skills.length > 0)
+  }
+  if (sw) {
+    out.switch = sw
+    out.switch_stat = switchStat
+  }
+
+  function clean(obj) {
+    if (Array.isArray(obj)) return obj
+    if (obj && typeof obj === 'object') {
+      const result = {}
+      for (const [k, v] of Object.entries(obj)) {
+        if (v === null || v === undefined || v === '' || v === false) continue
+        if (Array.isArray(v) && v.length === 0) continue
+        if (typeof v === 'object' && !Array.isArray(v) && Object.keys(clean(v)).length === 0) continue
+        result[k] = typeof v === 'object' ? clean(v) : v
+      }
+      return result
+    }
+    return obj
+  }
+
+  return clean(out)
+}
+
 // ========== 8. 生成索引条目 ==========
 function buildIndexEntry(character) {
   // 预计算搜索文本：技能名/描述 + 能力名/描述
@@ -282,19 +434,10 @@ function buildIndexEntry(character) {
     }
   }
 
-  let defaultWait = 0;
-  const evolvedNormal2 = character.evolved_normal2_skill_ids;
-  const normal2 = character.normal2_skill_ids;
-  const skillIdsToCheck = (evolvedNormal2 && evolvedNormal2.length > 0) ? evolvedNormal2 : (normal2 || []);
-  if (skillIdsToCheck.length > 0) {
-    const maxId = Math.max(...skillIdsToCheck);
-    const skillObj = tables.skill?.get(maxId);
-    if (skillObj && typeof skillObj.wait === 'number') defaultWait = skillObj.wait;
-  }
-  const speed = character.initial_status?.speed;
-  const initialWT = (speed != null && speed > 0) ? Math.floor(57600 / speed + defaultWait) : null;
+  const initialWT = computeWT(character, true);
+  const baseInitialWT = computeWT(character, false);
 
-  return {
+  const entry = {
     id: character.id,
     name_ja: character.name,
     name_cn: character.name,
@@ -304,20 +447,16 @@ function buildIndexEntry(character) {
     initial_rarity: character.initial_rarity,
     max_rarity: character.max_rarity,
     role: character.role,
+    tag_count: (character.tag_ids || []).length,
     attack_attributes: character.attack_attributes,
     tag_names_ja: (character.tag_ids || []).map(id => jpMaps.character_tag?.get(id) || `ID:${id}`),
     tag_names_cn: (character.tag_ids || []).map(id => cnMaps.character_tag?.get(id) || jpMaps.character_tag?.get(id) || `ID:${id}`),
-    attack_attribute_names_ja: (character.attack_attributes || []).map(id => jpMaps.attack_attribute?.get(id) || `ID:${id}`),
-    attack_attribute_names_cn: (character.attack_attributes || []).map(id => cnMaps.attack_attribute?.get(id) || jpMaps.attack_attribute?.get(id) || `ID:${id}`),
-    role_name_ja: jpMaps.role?.get(character.role) || `ID:${character.role}`,
-    role_name_cn: cnMaps.role?.get(character.role) || jpMaps.role?.get(character.role) || `ID:${character.role}`,
-    base_character_id: character.base_character_id || null,
-    original_title_id: character.original_title_id || null,
     trait_color_id: character.trait_color_id || null,
     support_color_id: character.support_color_id || null,
     start_at: character.start_at || null,
     initial_status: character.initial_status,
-    initial_wt: initialWT,
+    alt_initial_wt: initialWT,
+    base_initial_wt: baseInitialWT,
     trait_color_name_ja: jpMaps.trait_color?.get(character.trait_color_id) || null,
     trait_color_name_cn: cnMaps.trait_color?.get(character.trait_color_id) || null,
     support_color_name_ja: jpMaps.trait_color?.get(character.support_color_id) || null,
@@ -347,6 +486,63 @@ function buildIndexEntry(character) {
 	    has_ex: (character.extra_skill_ids || []).length > 0,
     _search_text: searchParts.join(' '),
   };
+
+  // 技能排序字段（进化后 / 进化前）
+  for (const prefix of ['normal1', 'normal2', 'burst']) {
+    for (const stat of ['power', 'break_power', 'wait']) {
+      const val = getSkillStat(character, prefix, stat, true);
+      entry[`alt_${prefix}_${stat}`] = val;
+      entry[`base_${prefix}_${stat}`] = getSkillStat(character, prefix, stat, false);
+    }
+  }
+
+  return entry;
+}
+
+function getSkillStat(character, prefix, stat, useEvolved) {
+  // 范围角色：切换后 normal1/2 来自 _rangeSkills
+  if (useEvolved && character._rangeSkills?.inrange) {
+    const rangeKey = prefix === 'normal1' ? 'skill1' : prefix === 'normal2' ? 'skill2' : null;
+    if (rangeKey) {
+      const skills = character._rangeSkills.inrange[rangeKey];
+      if (skills && skills.length > 0) {
+        const maxId = Math.max(...skills.map(s => s.id));
+        const skill = skills.find(s => s.id === maxId);
+        if (skill) return skill[stat] ?? null;
+      }
+    }
+  }
+  const field = useEvolved ? `evolved_${prefix}_skill_ids` : `${prefix}_skill_ids`;
+  const ids = character[field];
+  if (!ids || ids.length === 0) return null;
+  const maxId = Math.max(...ids);
+  const skill = tables.skill?.get(maxId);
+  if (!skill) return null;
+  return skill[stat] ?? null;
+}
+
+function computeWT(character, useEvolved) {
+  const speed = character.initial_status?.speed;
+  if (speed == null || speed <= 0) return null;
+  let wait = 0;
+  // 范围角色：切换后 normal2 来自 _rangeSkills
+  if (useEvolved && character._rangeSkills?.inrange?.skill2) {
+    const skills = character._rangeSkills.inrange.skill2;
+    if (skills.length > 0) {
+      const maxId = Math.max(...skills.map(s => s.id));
+      const skill = skills.find(s => s.id === maxId);
+      if (skill && typeof skill.wait === 'number') wait = skill.wait;
+    }
+  } else {
+    const field = useEvolved ? 'evolved_normal2_skill_ids' : 'normal2_skill_ids';
+    const ids = character[field];
+    if (ids && ids.length > 0) {
+      const maxId = Math.max(...ids);
+      const skill = tables.skill?.get(maxId);
+      if (skill && typeof skill.wait === 'number') wait = skill.wait;
+    }
+  }
+  return Math.floor(57600 / speed + wait);
 }
 
 // ========== 9. 主流程 ==========
@@ -420,17 +616,26 @@ transformPairs.forEach(pair => {
   const firstData = buildLocalizedChar(firstChar);
   const secondData = buildLocalizedChar(secondChar);
   const merged = { ...firstData, _transform: secondData };
-  fs.writeFileSync(path.join(outDir, `${firstId}.json`), JSON.stringify(merged, null, 2), 'utf-8');
   if (!excludeIds.has(firstId)) {
-    index.push(buildIndexEntry(firstData));
+    const entry = buildIndexEntry(firstData);
+    entry.alt_initial_wt = computeWT(secondData, false);
+    for (const prefix of ['normal1', 'normal2', 'burst']) {
+      for (const stat of ['power', 'break_power', 'wait']) {
+        entry[`alt_${prefix}_${stat}`] = getSkillStat(secondData, prefix, stat, false);
+      }
+    }
+    index.push(entry);
   }
+  const finalMerged = finalizeOutput(merged);
+  fs.writeFileSync(path.join(outDir, `${firstId}.json`), JSON.stringify(finalMerged, null, 2), 'utf-8');
 });
 
 visibleCharacters.forEach(char => {
   if (pairedIds.has(char.id)) return;
   const localizedChar = buildLocalizedChar(char);
-  fs.writeFileSync(path.join(outDir, `${char.id}.json`), JSON.stringify(localizedChar, null, 2), 'utf-8');
   index.push(buildIndexEntry(localizedChar));
+  const finalChar = finalizeOutput(localizedChar);
+  fs.writeFileSync(path.join(outDir, `${char.id}.json`), JSON.stringify(finalChar, null, 2), 'utf-8');
 });
 
 fs.writeFileSync(path.join(outDir, 'character_index.json'), JSON.stringify(index, null, 2), 'utf-8');

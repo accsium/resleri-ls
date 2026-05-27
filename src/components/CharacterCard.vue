@@ -12,7 +12,7 @@ const props = defineProps({
   indexEntry: Object,
 })
 
-const { t, getField, currentLang } = useI18n()
+const { t, getField, currentLang, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 const { loadCharacter, loadedCharacters } = useCharacterData()
 const { getCardState, setCardState } = useCardState()
 
@@ -22,14 +22,24 @@ const detailError = ref('')
 
 const baseName = computed(() => getField(props.indexEntry, 'base_character_name') || (props.indexEntry.name_cn || props.indexEntry.name_ja))
 const alias = computed(() => props.indexEntry.another_name || '')
-const roleName = computed(() => getField(props.indexEntry, 'role_name'))
+const roleName = computed(() => {
+  const map = currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP
+  return map[props.indexEntry.role] || ''
+})
 const tags = computed(() => getField(props.indexEntry, 'tag_names') || [])
 const releaseDate = computed(() => {
   if (!props.indexEntry.start_at) return '—'
   return new Date(props.indexEntry.start_at).toLocaleDateString('ja-JP')
 })
-const attrsText = computed(() => (getField(props.indexEntry, 'attack_attribute_names') || []).join(' / ') + ' | ' + roleName.value)
-const initialWT = computed(() => props.indexEntry.initial_wt ?? '—')
+const attrsText = computed(() => {
+  const attrMap = currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP
+  const names = (props.indexEntry.attack_attributes || []).map(id => attrMap[id] || id)
+  return names.join(' / ') + ' | ' + roleName.value
+})
+const initialWT = computed(() => {
+  const cardState = getCardState(props.indexEntry.id)
+  return cardState.toggleActive ? props.indexEntry.alt_initial_wt ?? '—' : props.indexEntry.base_initial_wt ?? '—'
+})
 const status = computed(() => props.indexEntry.initial_status || {})
 
 const statOrder = ['initialWT', 'hp', 'speed', 'attack', 'defense', 'magic', 'mental']

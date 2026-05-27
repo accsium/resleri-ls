@@ -15,33 +15,29 @@ const props = defineProps({
 const { t } = useI18n()
 
 const toggleActive = computed(() => props.cardState.toggleActive)
+const sw = computed(() => props.characterData.switch)
 
 const activeChar = computed(() => {
-  if (toggleActive.value && props.characterData._transform) {
-    return props.characterData._transform
+  if (toggleActive.value && props.characterData.switch_stat) {
+    return { ...props.characterData, ...props.characterData.switch_stat }
   }
   return props.characterData
 })
 
-const rangeGroup = computed(() => props.characterData._rangeSkills?.['inrange'] || null)
+const skills = computed(() => activeChar.value._skills || [])
 
 const allSkillTypes = computed(() => {
   const types = []
   const char = activeChar.value
-  const originalChar = props.characterData
 
   if (char.leader_skill) {
     types.push({ type: 'leader', name: t('leaderSkillSection'), levels: [char.leader_skill] })
   }
 
-  const skills = (toggleActive.value && rangeGroup.value) ? originalChar._skills : char._skills || []
-
   const activeLevels = []
-  skills.forEach(group => {
+  skills.value.forEach(group => {
     if (group.type.startsWith('active')) {
-      let levels = toggleActive.value ? group.post_evolution : group.pre_evolution
-      if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution
-      if (levels && levels.length > 0) activeLevels.push(...levels)
+      if (group.skills?.length > 0) activeLevels.push(...group.skills)
     }
   })
   if (activeLevels.length > 0) {
@@ -49,27 +45,15 @@ const allSkillTypes = computed(() => {
   }
 
   const typeText = t('skillType')
-  skills.forEach(group => {
+  skills.value.forEach(group => {
     if (group.type === 'normal1' || group.type === 'normal2' || group.type === 'burst') {
-      let levels = []
-      if (toggleActive.value && rangeGroup.value) {
-        if (group.type === 'normal1') levels = rangeGroup.value.skill1 || []
-        else if (group.type === 'normal2') levels = rangeGroup.value.skill2 || []
-        else levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution
-      } else {
-        levels = toggleActive.value ? group.post_evolution : group.pre_evolution
-      }
-      if (!levels || levels.length === 0) levels = group.post_evolution.length > 0 ? group.post_evolution : group.pre_evolution
-      if (levels && levels.length > 0) {
-        types.push({ type: group.type, name: typeText[group.type] || group.type, levels })
+      if (group.skills && group.skills.length > 0) {
+        types.push({ type: group.type, name: typeText[group.type] || group.type, levels: group.skills })
       }
     }
   })
 
-  let exSkills = char._exSkills || []
-  if (toggleActive.value && rangeGroup.value) {
-    exSkills = []
-  }
+  const exSkills = char._exSkills || []
   if (exSkills.length > 0) {
     types.push({ type: 'extra', name: t('skillType').extra, levels: exSkills })
   }
@@ -79,22 +63,9 @@ const allSkillTypes = computed(() => {
 
 const abilityMap = computed(() => activeChar.value._skillDetails || {})
 
-const evolvedIds = computed(() => {
-  const ids = activeChar.value.all_skill_evolved_ability_ids || []
-  return new Set(ids)
-})
+const abilityIds = computed(() => activeChar.value.ability_ids || [])
 
-const normalAbilityIds = computed(() => {
-  return (activeChar.value.ability_ids || []).filter(id => !evolvedIds.value.has(id))
-})
-
-const evoAbilityIds = computed(() => {
-  return toggleActive.value ? (activeChar.value.all_skill_evolved_ability_ids || []) : []
-})
-
-const allAbilityIds = computed(() => [...new Set([...normalAbilityIds.value, ...evoAbilityIds.value])])
-
-const abilities = computed(() => allAbilityIds.value.map(id => abilityMap.value[id]).filter(Boolean))
+const abilities = computed(() => abilityIds.value.map(id => abilityMap.value[id]).filter(Boolean))
 
 const supportIds = computed(() => activeChar.value.support_ability_ids || [])
 

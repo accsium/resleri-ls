@@ -368,7 +368,7 @@ input:checked + .slider::before { transform: translateX(16px); }
 /* ========== 展开详情 ========== */
 .card-sticky .card-header {
   position: sticky;
-  top: var(--sticky-top);
+  top: calc(var(--sticky-top) + var(--card-offset, 0px));
   z-index: 5;
   background: inherit;
 }
