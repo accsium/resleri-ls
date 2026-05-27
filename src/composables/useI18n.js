@@ -87,5 +87,5 @@ export function useI18n() {
     return TRAIT_COLOR_HEX[id] || '#CCCCCC'
   }
 
-  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_FIELDS }
+  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_FIELDS, TRAIT_COLOR_HEX }
 }

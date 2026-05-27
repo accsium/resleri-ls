@@ -333,6 +333,8 @@ function buildIndexEntry(character) {
 	        return false
 	      }),
 	    has_transform: transformPairs.some(p => p[0] === character.id),
+	    has_active: !!(character.active1_skill_id || character.active2_skill_id || character.active3_skill_id),
+	    has_ex: (character.extra_skill_ids || []).length > 0,
   };
 }
 
@@ -375,6 +377,19 @@ if (fs.existsSync(outDir)) {
   fs.rmSync(outDir, { recursive: true, force: true });
 }
 fs.mkdirSync(outDir, { recursive: true });
+
+// 复制词条数据到 public/data/ 供筛选面板使用
+for (const lang of ['jp', 'cn']) {
+  const srcDir = path.join(dataDir, lang);
+  const destDir = path.join(outDir, lang);
+  if (fs.existsSync(srcDir)) {
+    fs.mkdirSync(destDir, { recursive: true });
+    for (const name of ['battle_tool_trait.json', 'equipment_tool_trait.json']) {
+      const src = path.join(srcDir, name);
+      if (fs.existsSync(src)) fs.copyFileSync(src, path.join(destDir, name));
+    }
+  }
+}
 
 const pairedIds = new Set();
 const index = [];

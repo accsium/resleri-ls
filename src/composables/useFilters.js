@@ -4,8 +4,23 @@ import { useCharacterData } from './useCharacterData'
 
 const activeSortFields = ref([])
 const currentSortOrder = ref('desc')
-const activeFilters = ref({ attack_attributes: [], role: [] })
 const searchText = ref('')
+
+const activeFilters = ref({
+  attack_attributes: [],
+  role: [],
+  initial_rarity: [],
+  trait_color: [],
+  support_color: [],
+  tags: [],
+  battle_tool_traits: [],
+  equipment_tool_traits: [],
+  has_evo: 0,
+  has_range: 0,
+  has_transform: 0,
+  has_active: 0,
+  has_ex: 0,
+})
 
 export function useFilters() {
   const { SORT_FIELDS } = useI18n()
@@ -13,6 +28,10 @@ export function useFilters() {
 
   if (activeSortFields.value.length === 0) {
     activeSortFields.value = [...SORT_FIELDS].sort((a, b) => a.priority - b.priority)
+  }
+
+  function toggleFilter(key, value) {
+    activeFilters.value = { ...activeFilters.value, [key]: value }
   }
 
   function compareCharacters(a, b) {
@@ -34,12 +53,53 @@ export function useFilters() {
   }
 
   function applyFilter(char) {
-    if (activeFilters.value.attack_attributes.length &&
-        !activeFilters.value.attack_attributes.some(a => (char.attack_attributes || []).includes(a)))
+    const f = activeFilters.value
+
+    // OR: 属性
+    if (f.attack_attributes.length && !f.attack_attributes.some(a => (char.attack_attributes || []).includes(a)))
       return false
-    if (activeFilters.value.role.length &&
-        !activeFilters.value.role.includes(char.role))
+    // OR: 职业
+    if (f.role.length && !f.role.includes(char.role))
       return false
+    // OR: 初始星级
+    if (f.initial_rarity.length && !f.initial_rarity.includes(char.initial_rarity))
+      return false
+    // OR: 调和色-左
+    if (f.trait_color.length && !f.trait_color.includes(char.trait_color_id))
+      return false
+    // OR: 调和色-右
+    if (f.support_color.length && !f.support_color.includes(char.support_color_id))
+      return false
+    // AND: 标签
+    if (f.tags.length) {
+      const charTags = char.tag_names_ja || []
+      if (!f.tags.filter(t => t).every(t => charTags.includes(t)))
+        return false
+    }
+    // AND: 道具词条 (by id)
+    if (f.battle_tool_traits.length) {
+      const charTraits = char.battle_tool_trait_ids || []
+      if (!f.battle_tool_traits.filter(t => t).every(t => charTraits.includes(t)))
+        return false
+    }
+    // AND: 装备词条 (by id)
+    if (f.equipment_tool_traits.length) {
+      const charTraits = char.equipment_tool_trait_ids || []
+      if (!f.equipment_tool_traits.filter(t => t).every(t => charTraits.includes(t)))
+        return false
+    }
+    // 三态: has_evo/has_range/has_transform
+    if (f.has_evo === 1 && !char.has_evo) return false
+    if (f.has_evo === 2 && char.has_evo) return false
+    if (f.has_range === 1 && !char.has_range) return false
+    if (f.has_range === 2 && char.has_range) return false
+    if (f.has_transform === 1 && !char.has_transform) return false
+    if (f.has_transform === 2 && char.has_transform) return false
+    if (f.has_active === 1 && !char.has_active) return false
+    if (f.has_active === 2 && char.has_active) return false
+    if (f.has_ex === 1 && !char.has_ex) return false
+    if (f.has_ex === 2 && char.has_ex) return false
+
     return true
   }
 
@@ -73,17 +133,9 @@ export function useFilters() {
     currentSortOrder.value = currentSortOrder.value === 'desc' ? 'asc' : 'desc'
   }
 
-  function setFilters(filters) {
-    activeFilters.value = filters
-  }
-
-  function clearFilters() {
-    activeFilters.value = { attack_attributes: [], role: [] }
-  }
-
   return {
     activeSortFields, currentSortOrder, activeFilters, searchText,
     filteredCharacters,
-    setSortField, toggleOrder, setFilters, clearFilters
+    setSortField, toggleOrder, toggleFilter,
   }
 }
