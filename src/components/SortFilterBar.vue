@@ -277,6 +277,20 @@ const selectedEquipTraits = computed({
           </svg>
         </button>
       </div>
+      <div class="sf-divider"></div>
+      <div class="sf-field">
+        <span class="sf-label">恒常化状态</span>
+        <div class="sf-field-items">
+          <select class="sf-select" :value="activeFilters.permanent_status" @change="(e) => toggleFilter('permanent_status', e.target.value)">
+            <option value="">全部</option>
+            <option value="已恒常化">已恒常化</option>
+            <option value="ATELIER FES I">ATELIER FES I</option>
+            <option value="ATELIER FES II">ATELIER FES II</option>
+            <option value="未恒常化">未恒常化</option>
+            <option value="非恒常角色">非恒常角色</option>
+          </select>
+        </div>
+      </div>
       <div class="sf-right-group">
         <div class="sf-group">
           <span class="sf-label">词条语言</span>
@@ -352,20 +366,6 @@ const selectedEquipTraits = computed({
         >
           {{ label }}{{ activeFilters[key] === 1 ? ' ✓' : activeFilters[key] === 2 ? ' ✕' : '' }}
         </button>
-        </div>
-      </div>
-      <div class="sf-divider"></div>
-      <div class="sf-field">
-        <span class="sf-label">恒常化</span>
-        <div class="sf-field-items">
-          <select class="sf-select" :value="activeFilters.permanent_status" @change="(e) => toggleFilter('permanent_status', e.target.value)">
-            <option value="">全部</option>
-            <option value="已恒常化">已恒常化</option>
-            <option value="ATELIER FES I">ATELIER FES I</option>
-            <option value="ATELIER FES II">ATELIER FES II</option>
-            <option value="未恒常化">未恒常化</option>
-            <option value="非恒常角色">非恒常角色</option>
-          </select>
         </div>
       </div>
     </div>
