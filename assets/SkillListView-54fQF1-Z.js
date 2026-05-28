@@ -1,1 +1,0 @@
-import{_ as t}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{e,m as o}from"./index-BEosM_v6.js";const r={},c={style:{"margin-top":"var(--sticky-top)",padding:"40px","text-align":"center",color:"var(--text-muted)"}};function n(s,a){return o(),e("div",c," 施工中 ")}const l=t(r,[["render",n]]);export{l as default};
