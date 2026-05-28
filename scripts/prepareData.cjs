@@ -24,20 +24,7 @@ if (!fs.existsSync(dataRawDir)) {
   if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
 });
 
-// ========== 2. 复制主数据文件 ==========
-console.log('📦 复制主数据文件...');
-for (const [name, filename] of Object.entries(pipelineConfig.mainDataFiles)) {
-  const src = path.join(dataRawDir, filename);
-  const dest = path.join(dataDir, filename);
-  if (!fs.existsSync(src)) {
-    console.warn(`  ⚠ ${filename} 不在 data_raw 中，跳过`);
-    continue;
-  }
-  fs.copyFileSync(src, dest);
-  console.log(`  ✓ ${filename} → data/`);
-}
-
-// ========== 3. 复制日文文本文件 ==========
+// ========== 2. 复制日文文本文件 ==========
 console.log('📝 复制日文文本文件...');
 for (const [name, config] of Object.entries(pipelineConfig.translationFiles)) {
   if (config.static) {

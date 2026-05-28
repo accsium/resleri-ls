@@ -178,14 +178,14 @@ input[type="text"] {
 .sort-filter-bar .sf-label { color: #aaa; }
 .sort-filter-bar select { background: var(--bg-nav); color: var(--text-light); border-color: rgba(255,255,255,0.15); }
 .sort-filter-bar select option { background: var(--bg-header); color: var(--text-light); }
-.sf-search input {
+.sort-filter-bar input[type="text"] {
   width: 200px; font-size: 13px; padding: 5px 10px;
   background: rgba(255,255,255,0.08); color: var(--text-light);
   border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius);
   outline: none;
 }
-.sf-search input::placeholder { color: #888; }
-.sf-search input:focus { border-color: var(--accent); }
+.sort-filter-bar input[type="text"]::placeholder { color: #888; }
+.sort-filter-bar input[type="text"]:focus { border-color: var(--accent); }
 .sf-collapse-btn {
   font-size: 12px; padding: 3px 10px; border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius); background: transparent; color: #aaa; cursor: pointer;
@@ -256,9 +256,8 @@ input[type="text"] {
   background: var(--bg-card);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
-  overflow: hidden;
+  overflow: clip;
 }
-.card-sticky { overflow: visible; }
 
 /* ========== 卡片头部 ========== */
 .card-header { padding: 16px 20px; }
@@ -473,15 +472,46 @@ input:checked + .slider::before { transform: translateX(16px); }
 }
 
 /* ========== 调和模块 ========== */
-.synthesis-module {
-  background: var(--bg-synthesis);
-  padding: 12px; text-align: center;
-  border-radius: var(--radius);
-  margin-top: 20px;
-}
 .synthesis-color-row {
-  display: flex; align-items: center; justify-content: center;
-  gap: 6px; margin-bottom: 6px; font-size: 13px;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; margin-left: 12px;
+}
+.synthesis-body {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 0 0 16px;
+}
+.syn-box {
+  display: flex;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  font-size: 12px;
+}
+.syn-box-name {
+  flex-shrink: 0; width: 25%;
+  padding: 6px 10px;
+  font-weight: 500;
+  background: var(--bg-banner);
+  color: var(--text-light);
+  display: flex; align-items: center;
+}
+.syn-box-desc {
+  flex: 1; min-width: 0;
+  padding: 8px 10px;
+  line-height: 1.8;
+  background: var(--bg-content);
+}
+.syn-values {
+  display: inline-flex; gap: 3px;
+  vertical-align: middle;
+}
+.syn-value-box {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 22px; height: 18px;
+  padding: 0 4px;
+  background: var(--bg-stat);
+  border-radius: 2px;
+  font-size: 11px;
 }
 
 /* ========== 杂项 ========== */
@@ -581,4 +611,7 @@ input:checked + .slider::before { transform: translateX(16px); }
 
   .support-row { flex-direction: column; }
   .support-rarity-col { width: 100%; border-right: none; border-bottom: 1px solid var(--border-light); justify-content: center; }
+
+  .syn-box { flex-direction: column; }
+  .syn-box-name { width: 100%; }
 }

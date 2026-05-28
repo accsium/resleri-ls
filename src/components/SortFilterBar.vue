@@ -132,11 +132,6 @@ function toggleTraitRight(id) {
   selectedTraitRight.value = cur
 }
 
-// ── 可进化/范围/变身（三态：未选 / 是 / 否）──
-const TRI_STATE = { none: 0, yes: 1, no: 2 }
-const triLabels = ['', '✓', '✕']
-function triNext(v) { return (v + 1) % 3 }
-
 // ── 标签/词条下拉数据 ──
 // Uses character_index data provided by useCharacterData prop injection
 import { useCharacterData } from '../composables/useCharacterData'
@@ -359,6 +354,20 @@ const selectedEquipTraits = computed({
         </button>
         </div>
       </div>
+      <div class="sf-divider"></div>
+      <div class="sf-field">
+        <span class="sf-label">恒常化</span>
+        <div class="sf-field-items">
+          <select class="sf-select" :value="activeFilters.permanent_status" @change="(e) => toggleFilter('permanent_status', e.target.value)">
+            <option value="">全部</option>
+            <option value="已恒常化">已恒常化</option>
+            <option value="ATELIER FES I">ATELIER FES I</option>
+            <option value="ATELIER FES II">ATELIER FES II</option>
+            <option value="未恒常化">未恒常化</option>
+            <option value="非恒常角色">非恒常角色</option>
+          </select>
+        </div>
+      </div>
     </div>
 
     <!-- 行6：排序 + 搜索 -->
@@ -397,8 +406,11 @@ const selectedEquipTraits = computed({
           </button>
         </div>
       </div>
-      <div class="sf-search">
-        <input type="text" v-model="searchText" :placeholder="t('searchPlaceholder')">
+      <div class="sf-right-group">
+        <div class="sf-group">
+          <span class="sf-label">搜索</span>
+          <input type="text" v-model="searchText" :placeholder="t('searchPlaceholder')">
+        </div>
       </div>
     </div>
     </div>

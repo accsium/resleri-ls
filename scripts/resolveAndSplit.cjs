@@ -2,13 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const config = require('./resolveConfig.cjs');
 
+const dataRawDir = path.join(__dirname, '..', 'data_raw', 'jp');
 const dataDir = path.join(__dirname, '..', 'data');
 const publicDataDir = path.join(__dirname, '..', 'public', 'data');
 
 // ========== 1. 加载实体表 ==========
 const tables = {};
 for (const [entityName, entityConfig] of Object.entries(config.entities)) {
-  const filePath = path.join(dataDir, entityConfig.file);
+  const filePath = path.join(dataRawDir, entityConfig.file);
   if (!fs.existsSync(filePath)) {
     console.warn(`⚠️ 文件 ${entityConfig.file} 不存在，跳过实体 ${entityName}`);
     continue;
@@ -172,45 +173,32 @@ function buildSkillsArray(character, skillDetails) {
 }
 
 // ========== 7. 生成带有双语字段的角色对象 ==========
-function buildLocalizedChar(character, lang) {
-  const maps = lang === 'cn' ? cnMaps : jpMaps;
+function buildLocalizedChar(character) {
   const char = JSON.parse(JSON.stringify(character));
 
   char.tag_names_ja = (char.tag_ids || []).map(id => jpMaps.character_tag?.get(id) || `ID:${id}`);
   char.base_character_name_ja = jpMaps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
   char.original_title_name_ja = jpMaps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
-  char.attack_attribute_names_ja = (char.attack_attributes || []).map(id => jpMaps.attack_attribute?.get(id) || `ID:${id}`);
-  char.role_name_ja = jpMaps.role?.get(char.role) || `ID:${char.role}`;
-  if (char.equipment_tool_trait_ids) {
+  if (char.equipment_tool_trait_ids)
     char.equipment_tool_trait_names_ja = char.equipment_tool_trait_ids.map(id => jpMaps.equipment_tool_trait?.get(id) || `ID:${id}`);
-  }
-  if (char.trait_color_id != null) {
+  if (char.trait_color_id != null)
     char.trait_color_name_ja = jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
-  }
-  if (char.support_color_id != null) {
+  if (char.support_color_id != null)
     char.support_color_name_ja = jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
-  }
-  if (char.battle_tool_trait_ids) {
+  if (char.battle_tool_trait_ids)
     char.battle_tool_trait_names_ja = char.battle_tool_trait_ids.map(id => jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
-  }
 
   char.tag_names_cn = (char.tag_ids || []).map(id => cnMaps.character_tag?.get(id) || jpMaps.character_tag?.get(id) || `ID:${id}`);
   char.base_character_name_cn = cnMaps.base_character?.get(char.base_character_id) || jpMaps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
   char.original_title_name_cn = cnMaps.original_title?.get(char.original_title_id) || jpMaps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
-  char.attack_attribute_names_cn = (char.attack_attributes || []).map(id => cnMaps.attack_attribute?.get(id) || jpMaps.attack_attribute?.get(id) || `ID:${id}`);
-  char.role_name_cn = cnMaps.role?.get(char.role) || jpMaps.role?.get(char.role) || `ID:${char.role}`;
-  if (char.equipment_tool_trait_ids) {
+  if (char.equipment_tool_trait_ids)
     char.equipment_tool_trait_names_cn = char.equipment_tool_trait_ids.map(id => cnMaps.equipment_tool_trait?.get(id) || jpMaps.equipment_tool_trait?.get(id) || `ID:${id}`);
-  }
-  if (char.trait_color_id != null) {
+  if (char.trait_color_id != null)
     char.trait_color_name_cn = cnMaps.trait_color?.get(char.trait_color_id) || jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
-  }
-  if (char.support_color_id != null) {
+  if (char.support_color_id != null)
     char.support_color_name_cn = cnMaps.trait_color?.get(char.support_color_id) || jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
-  }
-  if (char.battle_tool_trait_ids) {
+  if (char.battle_tool_trait_ids)
     char.battle_tool_trait_names_cn = char.battle_tool_trait_ids.map(id => cnMaps.battle_tool_trait?.get(id) || jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
-  }
 
   char._skillDetails = buildSkillDetails(character);
   const targetMapJa = jpMaps.skill_target_type;
@@ -270,7 +258,7 @@ function buildLocalizedChar(character, lang) {
   return char;
 }
 
-// ========== 8. 精简输出 + 构建 switch/switch_stat ==========
+// ========== 8. 精简输出 + switch/switch_stat ==========
 const CHAR_KEEP = [
   'id', 'attack_attributes', 'initial_rarity', 'max_rarity',
   'trait_color_id', 'support_color_id',
@@ -278,6 +266,7 @@ const CHAR_KEEP = [
   'support_color_name_ja', 'support_color_name_cn',
   'battle_tool_trait_names_ja', 'battle_tool_trait_names_cn',
   'equipment_tool_trait_names_ja', 'equipment_tool_trait_names_cn',
+  'battle_tool_trait_ids', 'equipment_tool_trait_ids',
   'leader_skill', 'ability_ids', 'support_ability_ids',
   '_exSkills',
 ]
@@ -434,8 +423,37 @@ function buildIndexEntry(character) {
     }
   }
 
-  const initialWT = computeWT(character, true);
-  const baseInitialWT = computeWT(character, false);
+  // 恒常化 + FES
+  const fesName = getFesName(character.start_at);
+  let permanent_status = null;
+  let permanent_date = null;
+  if (character.initial_rarity > 2) {
+    if (permExcludeIds.has(character.id)) {
+      permanent_status = '非恒常角色';
+      permanent_date = '-';
+    } else {
+      if (fesName === 'ATELIER FES') {
+        // 初始角色，属于 ATELIER FES I，不需要卡池数据
+        permanent_status = '已恒常化';
+        permanent_date = 'ATELIER FES I';
+      } else {
+        const gachaEnd = gachaEndMap.get(character.id);
+        if (!gachaEnd) {
+          permanent_status = null;
+          permanent_date = null;
+        } else if (fesName) {
+          permanent_status = '已恒常化';
+          permanent_date = fesName;
+        } else {
+          const permDate = new Date(gachaEnd);
+          permDate.setDate(permDate.getDate() + 56);
+          const permStr = permDate.toISOString().substring(0, 10);
+          permanent_date = permStr;
+          permanent_status = (updateTime && updateTime >= permStr) ? '已恒常化' : '未恒常化';
+        }
+      }
+    }
+  }
 
   const entry = {
     id: character.id,
@@ -455,8 +473,8 @@ function buildIndexEntry(character) {
     support_color_id: character.support_color_id || null,
     start_at: character.start_at || null,
     initial_status: character.initial_status,
-    alt_initial_wt: initialWT,
-    base_initial_wt: baseInitialWT,
+    alt_initial_wt: computeWT(character, true),
+    base_initial_wt: computeWT(character, false),
     trait_color_name_ja: jpMaps.trait_color?.get(character.trait_color_id) || null,
     trait_color_name_cn: cnMaps.trait_color?.get(character.trait_color_id) || null,
     support_color_name_ja: jpMaps.trait_color?.get(character.support_color_id) || null,
@@ -485,6 +503,9 @@ function buildIndexEntry(character) {
 	    has_active: !!(character.active1_skill_id || character.active2_skill_id || character.active3_skill_id),
 	    has_ex: (character.extra_skill_ids || []).length > 0,
     _search_text: searchParts.join(' '),
+    gacha_end_at: (fesName === 'ATELIER FES') ? null : (gachaEndMap.get(character.id) || null),
+    permanent_status,
+    permanent_date,
   };
 
   // 技能排序字段（进化后 / 进化前）
@@ -579,6 +600,52 @@ let visibleCharacters = Array.from(tables.character.values()).filter(c =>
 );
 console.log(`👥 列表显示角色数量：${visibleCharacters.length}`);
 
+// ========== 处理卡池结束时间 ==========
+const gachaEndMap = new Map(); // character_id → earliest end_at (YYYY-MM-DD)
+const gachaFile = path.join(dataRawDir, 'gacha.json');
+if (fs.existsSync(gachaFile)) {
+  const gachaData = JSON.parse(fs.readFileSync(gachaFile, 'utf-8'));
+  for (const g of gachaData) {
+    if (!g.additional_pieces || !g.end_at) continue;
+    const dateStr = g.end_at.substring(0, 10); // YYYY-MM-DD
+    for (const piece of g.additional_pieces) {
+      if (!piece.character_ids) continue;
+      for (const cid of piece.character_ids) {
+        const existing = gachaEndMap.get(cid);
+        if (!existing || dateStr < existing) gachaEndMap.set(cid, dateStr);
+      }
+    }
+  }
+  console.log(`🎫 已加载卡池数据：${gachaEndMap.size} 个角色有卡池结束时间`);
+}
+
+// ========== 加载非恒常角色配置 ==========
+const permExcludeFile = path.join(__dirname, '..', 'config', 'permanent_exclude.json');
+const permExcludeIds = new Set();
+if (fs.existsSync(permExcludeFile)) {
+  const excludeList = JSON.parse(fs.readFileSync(permExcludeFile, 'utf-8'));
+  for (const id of excludeList) permExcludeIds.add(id);
+  console.log(`📋 已加载非恒常角色：${permExcludeIds.size} 个`);
+}
+
+// ========== 加载 ATELIER FES 配置 ==========
+let fesConfig = [];
+const fesFile = path.join(__dirname, '..', 'config', 'atelier_fes.json');
+if (fs.existsSync(fesFile)) {
+  fesConfig = JSON.parse(fs.readFileSync(fesFile, 'utf-8'));
+  console.log(`🎪 已加载 ATELIER FES：${fesConfig.length} 个`);
+}
+
+function getFesName(startAt) {
+  if (!startAt) return null;
+  const d = startAt.substring(0, 10).replace(/-/g, '/');
+  for (const f of fesConfig) {
+    if (d >= f.start_date && d <= f.end_date) return f.name;
+  }
+  return null;
+}
+
+const updateTime = new Date().toISOString();
 const outDir = publicDataDir;
 if (fs.existsSync(outDir)) {
   fs.rmSync(outDir, { recursive: true, force: true });
@@ -596,6 +663,13 @@ for (const lang of ['jp', 'cn']) {
       if (fs.existsSync(src)) fs.copyFileSync(src, path.join(destDir, name));
     }
   }
+}
+// 复制词条效果描述文件到 public/data/
+for (const name of ['battle_tool_trait_effects.json', 'equipment_tool_trait_effects.json']) {
+  const srcJp = path.join(dataDir, 'jp', name);
+  if (fs.existsSync(srcJp)) fs.copyFileSync(srcJp, path.join(outDir, name));
+  const srcUntrans = path.join(dataDir, 'untranslated', name);
+  if (fs.existsSync(srcUntrans)) fs.copyFileSync(srcUntrans, path.join(outDir, name));
 }
 
 const pairedIds = new Set();

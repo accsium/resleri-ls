@@ -27,9 +27,25 @@ const roleName = computed(() => {
   return map[props.indexEntry.role] || ''
 })
 const tags = computed(() => getField(props.indexEntry, 'tag_names') || [])
-const releaseDate = computed(() => {
-  if (!props.indexEntry.start_at) return '—'
-  return new Date(props.indexEntry.start_at).toLocaleDateString('ja-JP')
+const fmtDate = (d) => {
+  if (!d) return '—'
+  return d.substring(0, 10).replace(/-/g, '/')
+}
+const releaseDate = computed(() => fmtDate(props.indexEntry.start_at))
+
+const permanentLabel = computed(() => {
+  if (!props.indexEntry.permanent_status) return ''
+  if (props.indexEntry.permanent_status === '未恒常化') return t('permanentTime')
+  return t('permanentDate')
+})
+const permanentText = computed(() => {
+  const s = props.indexEntry.permanent_status
+  const d = props.indexEntry.permanent_date
+  if (!s) return ''
+  if (s === '未恒常化') return d ? fmtDate(d) : '—'
+  if (s === '非恒常角色') return '非恒常角色'
+  if (d) return d
+  return s
 })
 const attrsText = computed(() => {
   const attrMap = currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP
@@ -162,6 +178,8 @@ function cleanupSticky() {
               <div class="cb-info-left">
                 <div class="char-id">ID:{{ indexEntry.id }}</div>
                 <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
+                <div v-if="indexEntry.gacha_end_at" class="release-date">{{ t('gachaEnd') }}: {{ fmtDate(indexEntry.gacha_end_at) }}</div>
+                <div v-if="permanentLabel" class="release-date">{{ permanentLabel }}: {{ permanentText }}</div>
               </div>
               <div class="cb-info-right">
                 <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
@@ -198,6 +216,8 @@ function cleanupSticky() {
             <span class="cb-attrs">{{ attrsText }}</span>
             <div class="char-id">ID:{{ indexEntry.id }}</div>
             <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
+            <div v-if="indexEntry.gacha_end_at" class="release-date">{{ t('gachaEnd') }}: {{ fmtDate(indexEntry.gacha_end_at) }}</div>
+            <div v-if="permanentLabel" class="release-date">{{ permanentLabel }}: {{ permanentText }}</div>
           </div>
           <div class="cb-avatar-mob">
             <AvatarDisplay :index-entry="indexEntry" :size="100" />

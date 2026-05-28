@@ -15,8 +15,6 @@ const props = defineProps({
 const { t } = useI18n()
 
 const toggleActive = computed(() => props.cardState.toggleActive)
-const sw = computed(() => props.characterData.switch)
-
 const activeChar = computed(() => {
   if (toggleActive.value && props.characterData.switch_stat) {
     return { ...props.characterData, ...props.characterData.switch_stat }

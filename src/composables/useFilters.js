@@ -7,6 +7,7 @@ const sortCategory = ref('character')
 const sortField = ref('start_at')
 const sortSkillType = ref('normal1')
 const sortSkillStat = ref('power')
+const sortPriority = ref([]) // ordered list of { field, type } for multi-field sort
 const currentSortOrder = ref('desc')
 const searchText = ref('')
 
@@ -24,21 +25,27 @@ const activeFilters = ref({
   has_transform: 0,
   has_active: 0,
   has_ex: 0,
+  permanent_status: '',
 })
 
 export function useFilters() {
-  const { currentLang } = useI18n()
+  const { currentLang, SORT_CATEGORIES } = useI18n()
   const { characterIndex } = useCharacterData()
   const { getCardState } = useCardState()
+
+  // 初始化优先级列表
+  if (sortPriority.value.length === 0) {
+    const cat = SORT_CATEGORIES.find(c => c.key === sortCategory.value)
+    if (cat && cat.fields) {
+      sortPriority.value = cat.fields.map(f => ({ cat: sortCategory.value, field: f.field }))
+    }
+  }
 
   function toggleFilter(key, value) {
     activeFilters.value = { ...activeFilters.value, [key]: value }
   }
 
-  function getSortValue(c) {
-    const cat = sortCategory.value
-    const field = sortField.value
-
+  function getSortValue(c, cat, field) {
     if (cat === 'character') {
       if (field === 'base_character_name') {
         const v = currentLang.value === 'cn' ? c.base_character_name_cn : c.base_character_name_ja
@@ -64,11 +71,7 @@ export function useFilters() {
     return null
   }
 
-  function compareCharacters(a, b) {
-    const order = currentSortOrder.value === 'desc' ? -1 : 1
-    let va = getSortValue(a)
-    let vb = getSortValue(b)
-
+  function cmpVal(va, vb, order) {
     if (Array.isArray(va)) va = va[0]
     if (Array.isArray(vb)) vb = vb[0]
     if (va == null && vb == null) return 0
@@ -80,6 +83,17 @@ export function useFilters() {
     }
     if (va < vb) return -1 * order
     if (va > vb) return 1 * order
+    return 0
+  }
+
+  function compareCharacters(a, b) {
+    const order = currentSortOrder.value === 'desc' ? -1 : 1
+    for (const item of sortPriority.value) {
+      const va = getSortValue(a, item.cat, item.field)
+      const vb = getSortValue(b, item.cat, item.field)
+      const r = cmpVal(va, vb, order)
+      if (r !== 0) return r
+    }
     return 0
   }
 
@@ -121,6 +135,13 @@ export function useFilters() {
     if (f.has_active === 2 && char.has_active) return false
     if (f.has_ex === 1 && !char.has_ex) return false
     if (f.has_ex === 2 && char.has_ex) return false
+    if (f.permanent_status) {
+      if (f.permanent_status === 'ATELIER FES I') {
+        if (char.permanent_date !== 'ATELIER FES I') return false
+      } else if (f.permanent_status === 'ATELIER FES II') {
+        if (char.permanent_date !== 'ATELIER FES II') return false
+      } else if (char.permanent_status !== f.permanent_status) return false
+    }
 
     return true
   }
@@ -143,12 +164,35 @@ export function useFilters() {
     return list
   })
 
+  function buildPriority(cat, field) {
+    const category = SORT_CATEGORIES.find(c => c.key === cat)
+    if (!category || !category.fields) {
+      sortPriority.value = [{ cat, field }]
+      return
+    }
+    const list = category.fields.map(f => ({ cat, field: f.field }))
+    // 将选中字段移到最前
+    const idx = list.findIndex(f => f.field === field)
+    if (idx > 0) {
+      const [item] = list.splice(idx, 1)
+      list.unshift(item)
+    }
+    sortPriority.value = list
+  }
+
   function setSortCategory(key) {
     sortCategory.value = key
+    if (key === 'skill') {
+      sortPriority.value = [{ cat: 'skill', field: 'skill' }]
+    } else {
+      buildPriority(key, sortField.value)
+    }
   }
 
   function setSortField(field) {
     sortField.value = field
+    const cat = sortCategory.value
+    if (cat !== 'skill') buildPriority(cat, field)
   }
 
   function setSortSkillType(type) {
