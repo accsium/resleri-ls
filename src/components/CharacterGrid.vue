@@ -7,6 +7,7 @@ const { filteredCharacters } = useFilters()
 
 <template>
   <div class="card-container">
+    <div class="card-mask"></div>
     <CharacterCard
       v-for="entry in filteredCharacters"
       :key="entry.id"

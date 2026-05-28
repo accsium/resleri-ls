@@ -256,11 +256,32 @@ input[type="text"] {
   background: var(--bg-card);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
-  overflow: clip;
+  overflow: visible;
 }
-
+.card-header {
+  position: sticky;
+  top: calc(var(--sticky-top) + var(--card-offset, 0px));
+  z-index: 5;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+}
+.card-body, .card-detail {
+  overflow: hidden;
+}
+.card-detail {
+  border-radius: var(--radius-lg);
+}
+.card-mask {
+  position: fixed;
+  top: var(--sticky-top);
+  left: 0; right: 0;
+  z-index: 3;
+  height: calc(var(--card-offset, 0px) + 8px);
+  background: var(--bg-page);
+  pointer-events: none;
+}
 /* ========== 卡片头部 ========== */
-.card-header { padding: 16px 20px; }
 
 /* --- 第一行：名字 + 切换 --- */
 .card-top { min-height: 32px; margin-bottom: 12px; gap: 12px; }
@@ -376,21 +397,11 @@ input:checked + .slider::before { transform: translateX(16px); }
 .toggle-disabled .slider { cursor: not-allowed; }
 
 /* ========== 展开详情 ========== */
-.card-sticky .card-header {
-  position: sticky;
-  top: calc(var(--sticky-top) + var(--card-offset, 0px));
-  z-index: 5;
-  background: inherit;
-}
 .card-detail { display: none; padding: 0 20px 20px; background: inherit; }
 .card-detail.open { display: block; }
 
 .mobile-stats { display: none; }
 
-
-.card-detail::-webkit-scrollbar { width: 5px; }
-.card-detail::-webkit-scrollbar-track { background: transparent; }
-.card-detail::-webkit-scrollbar-thumb { background: #c4b8a0; border-radius: 3px; }
 
 .section-title {
   font-size: 15px; font-weight: 600;
@@ -429,7 +440,7 @@ input:checked + .slider::before { transform: translateX(16px); }
 
 .card-detail .section-title {
   position: sticky;
-  top: 0; z-index: 3;
+  top: 0; z-index: 1;
   background: var(--bg-card);
 }
 

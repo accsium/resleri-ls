@@ -100,18 +100,21 @@ function onToggle(val) {
   setCardState(props.indexEntry.id, { toggleActive: val })
 }
 
-let detailDiv = null
-
 async function toggleExpand() {
   if (expanded.value) {
+    const card = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
+    const header = card?.querySelector('.card-header')
+    const top = header?.getBoundingClientRect().top
     expanded.value = false
-    cleanupSticky()
+    if (header && top != null) {
+      await nextTick()
+      window.scrollBy(0, header.getBoundingClientRect().top - top)
+    }
     return
   }
   expanded.value = true
   detailLoading.value = true
   detailError.value = ''
-  setupStickyHeader()
   try {
     await loadCharacter(props.indexEntry.id)
     detailLoading.value = false
@@ -122,28 +125,10 @@ async function toggleExpand() {
   }
 }
 
-function setupStickyHeader() {
-  const el = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
-  if (!el) return
-  detailDiv = el.querySelector('.card-detail')
-  if (!detailDiv) return
-  const stickyTop = window.innerWidth < 768 ? 104 : 116
-
-  detailDiv.style.overflowY = 'auto'
-  detailDiv.style.maxHeight = `${window.innerHeight - stickyTop}px`
-}
-
-function cleanupSticky() {
-  if (detailDiv) {
-    detailDiv.style.overflowY = ''
-    detailDiv.style.maxHeight = ''
-  }
-}
-
 </script>
 
 <template>
-  <div class="card" :data-id="indexEntry.id" :class="{ 'card-sticky': expanded }">
+  <div class="card" :data-id="indexEntry.id">
     <div class="card-header">
       <!-- 第一行：名字 + 切换 -->
       <div class="card-top">
