@@ -115,9 +115,9 @@ function sortArrow(col) {
         <tr>
           <th @click="onSort('id')">ID{{ sortArrow('id') }}</th>
           <th @click="onSort('default')">角色头像{{ sortArrow('default') }}</th>
+          <th @click="onSort('name')">角色名{{ sortArrow('name') }}</th>
           <th @click="onSort('attr')">属性{{ sortArrow('attr') }}</th>
           <th @click="onSort('role')">职业{{ sortArrow('role') }}</th>
-          <th @click="onSort('name')">角色名{{ sortArrow('name') }}</th>
           <th @click="onSort('skillName')">队长技能{{ sortArrow('skillName') }}</th>
           <th @click="onSort('skillDesc')">效果{{ sortArrow('skillDesc') }}</th>
         </tr>
@@ -126,9 +126,9 @@ function sortArrow(col) {
         <tr v-for="c in sortedChars" :key="c.id">
           <td>{{ c.id }}</td>
           <td class="ls-td-avatar"><AvatarDisplay :indexEntry="c" :size="72" /></td>
+          <td>{{ currentLang === 'cn' ? c.base_character_name_cn : c.base_character_name_ja }}<template v-if="c.another_name"> {{ c.another_name }}</template></td>
           <td>{{ (c.attack_attributes || []).map(a => attrMap[a] || a).join(' ') }}</td>
           <td>{{ roleMap[c.role] || c.role }}</td>
-          <td>{{ currentLang === 'cn' ? c.base_character_name_cn : c.base_character_name_ja }}<template v-if="c.another_name"> {{ c.another_name }}</template></td>
           <td>{{ c.leader_skill_name }}</td>
           <td>{{ c.leader_skill_description }}</td>
         </tr>

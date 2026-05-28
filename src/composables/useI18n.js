@@ -2,7 +2,7 @@ import { ref } from 'vue'
 
 const UI_TEXT = {
   ja: {
-    pageTitle: 'レスレリ 角色图鉴',
+    pageTitle: 'レスレリ図鑑',
     searchPlaceholder: 'キャラ・スキル・アビリティを検索...',
     skillSection: 'スキル',
     abilityTitle: '能力',
@@ -23,14 +23,15 @@ const UI_TEXT = {
     skillType: { normal1: 'スキル1', normal2: 'スキル2', burst: 'バーストスキル', active: 'アクティブスキル', extra: 'EXスキル' },
     statLabels: { hp: 'HP', speed: '速度', attack: '物攻', defense: '物防', magic: '魔攻', mental: '魔防' },
     supportAbilityTitle: '亜空支援能力',
-    navGuide: '角色図鑑',
-    navCollection: 'キャラコレクション',
+    navGuide: 'キャラ図鑑',
+    navCollection: '所持キャラ',
+    navSkills: 'スキル一覧',
     navLeaderSkills: '隊長スキル',
     collectionPlaceholder: 'コレクション機能は近日公開',
     applyFilter: '適用', clearFilter: 'クリア',
   },
   cn: {
-    pageTitle: '蕾斯莱莉 角色图鉴',
+    pageTitle: '蕾斯莱莉图鉴',
     searchPlaceholder: '搜索角色、技能、能力...',
     skillSection: '技能',
     abilityTitle: '能力',
@@ -56,6 +57,7 @@ const UI_TEXT = {
     supportAbilityTitle: '亚空支援能力',
     navGuide: '角色图鉴',
     navCollection: '角色收藏',
+    navSkills: '技能一览',
     navLeaderSkills: '队长技能',
     collectionPlaceholder: '收藏功能即将上线',
     applyFilter: '应用筛选', clearFilter: '清除',

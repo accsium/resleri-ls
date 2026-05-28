@@ -1,5 +1,5 @@
 <template>
   <div class="collection-container">
-    <div class="collection-placeholder">收藏功能即将上线</div>
+    <div class="collection-placeholder">施工中</div>
   </div>
 </template>

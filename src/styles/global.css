@@ -148,7 +148,8 @@ input[type="text"] {
 .nav-links { display: flex; height: 100%; }
 
 .nav-link {
-  padding: 0 20px;
+  width: 100px;
+  justify-content: center;
   color: #8888;
   text-decoration: none;
   font-size: 14px;
@@ -558,7 +559,7 @@ input:checked + .slider::before { transform: translateX(16px); }
 .overlay-icon-right { justify-content: flex-end;   padding: 12px 12px 0 0; }
 
 /* ========== 收藏 ========== */
-.collection-container { padding: 40px; text-align: center; color: var(--text-muted); }
+.collection-container { margin-top: var(--sticky-top); padding: 40px; text-align: center; color: var(--text-muted); }
 
 /* ========== 支援能力特殊状态 ========== */
 .support-unreachable {
@@ -584,7 +585,7 @@ input:checked + .slider::before { transform: translateX(16px); }
   .lang-btn { width: 30px; height: 30px; font-size: 12px; }
 
   .nav-bar { padding: 0 10px; }
-  .nav-link { padding: 0 14px; font-size: 13px; }
+  .nav-link { width: 100px; font-size: 13px; }
 
   .card-container { padding: 0 10px 30px; gap: 12px; }
   .card-header { padding: 12px 14px; }
@@ -696,25 +697,25 @@ input:checked + .slider::before { transform: translateX(16px); }
 }
 
 /* 列宽 */
-.ls-table th:nth-child(3),
-.ls-table td:nth-child(3),
 .ls-table th:nth-child(4),
-.ls-table td:nth-child(4) {
+.ls-table td:nth-child(4),
+.ls-table th:nth-child(5),
+.ls-table td:nth-child(5) {
   width: 68px;
 }
-.ls-table td:nth-child(3),
-.ls-table td:nth-child(4) {
+.ls-table td:nth-child(4),
+.ls-table td:nth-child(5) {
   text-align: center;
 }
-.ls-table th:nth-child(5),
-.ls-table td:nth-child(5),
+.ls-table th:nth-child(3),
+.ls-table td:nth-child(3),
 .ls-table th:nth-child(6),
 .ls-table td:nth-child(6) {
-  min-width: 150px;
+  min-width: 100px;
 }
 .ls-table th:last-child,
 .ls-table td:last-child {
-  min-width: 300px;
+  min-width: 200px;
   white-space: normal;
 }
 .ls-td-avatar {

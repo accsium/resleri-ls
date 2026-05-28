@@ -12,6 +12,11 @@ const routes = [
     component: () => import('../views/CollectionView.vue'),
   },
   {
+    path: '/skills',
+    name: 'skills',
+    component: () => import('../views/SkillListView.vue'),
+  },
+  {
     path: '/leader-skills',
     name: 'leader-skills',
     component: () => import('../views/LeaderSkillView.vue'),

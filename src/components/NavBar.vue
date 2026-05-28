@@ -9,6 +9,7 @@ const { t } = useI18n()
     <nav class="nav-links">
       <router-link to="/" class="nav-link">{{ t('navGuide') }}</router-link>
       <router-link to="/collection" class="nav-link">{{ t('navCollection') }}</router-link>
+      <router-link to="/skills" class="nav-link">{{ t('navSkills') }}</router-link>
       <router-link to="/leader-skills" class="nav-link">{{ t('navLeaderSkills') }}</router-link>
       <router-link to="/test" class="nav-link">Test</router-link>
     </nav>
