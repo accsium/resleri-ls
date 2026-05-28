@@ -17,7 +17,7 @@ const UI_TEXT = {
     loading: '読み込み中...',
     loadFailed: '読み込み失敗',
     maxRarityLabel: '最大レアリティ：',
-    target: '対象', power: '倍率', break: 'ブレイク', wt: 'WT', limit: '制限',
+    target: '対象', dmgPower: 'ダメージ倍率', breakPower: 'ブレイク倍率', healPower: '回復倍率', wt: 'WT', limit: '制限',
     level: 'Lv. ',
     initialWTLabel: '初期WT',
     skillType: { normal1: 'スキル1', normal2: 'スキル2', burst: 'バーストスキル', active: 'アクティブスキル', extra: 'EXスキル' },
@@ -44,7 +44,10 @@ const UI_TEXT = {
     loading: '加载中...',
     loadFailed: '加载失败',
     maxRarityLabel: '最大星级：',
-    target: '对象', power: '威力', break: '破防', wt: 'WT', limit: '限制',
+    target: '对象', dmgPower: '伤害倍率', breakPower: '破防倍率', healPower: '治疗倍率', wt: 'WT', limit: '限制',
+    level: 'Lv. ',
+    initialWTLabel: '初始WT',
+    skillType: { normal1: '第一技能', normal2: '第二技能', burst: '爆发技能', active: '主动技能', extra: 'EX技能' },
     level: 'Lv. ',
     initialWTLabel: '初始WT',
     skillType: { normal1: '第一技能', normal2: '第二技能', burst: '爆发技能', active: '主动技能', extra: 'EX技能' },
@@ -106,9 +109,10 @@ const SKILL_TYPE_OPTS = [
 ]
 
 const SKILL_STAT_OPTS = [
-  { key: 'power',       label_ja: '倍率', label_cn: '倍率' },
-  { key: 'break_power', label_ja: '破防', label_cn: '破防' },
-  { key: 'wait',        label_ja: 'WT',   label_cn: 'WT' },
+  { key: 'dmg_power',   label_ja: 'ダメージ倍率', label_cn: '伤害倍率' },
+  { key: 'break_power', label_ja: 'ブレイク倍率', label_cn: '破防倍率' },
+  { key: 'heal_power',  label_ja: '回復倍率',     label_cn: '治疗倍率' },
+  { key: 'wait',        label_ja: 'WT',            label_cn: 'WT' },
 ]
 
 const currentLang = ref('cn')

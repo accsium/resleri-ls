@@ -6,7 +6,7 @@ import { useCardState } from './useCardState'
 const sortCategory = ref('character')
 const sortField = ref('start_at')
 const sortSkillType = ref('normal1')
-const sortSkillStat = ref('power')
+const sortSkillStat = ref('dmg_power')
 const sortPriority = ref([]) // ordered list of { field, type } for multi-field sort
 const currentSortOrder = ref('desc')
 const searchText = ref('')
@@ -25,6 +25,9 @@ const activeFilters = ref({
   has_transform: 0,
   has_active: 0,
   has_ex: 0,
+  skill_range_1: '',
+  skill_range_2: '',
+  skill_range_burst: '',
   permanent_status: '',
 })
 
@@ -65,7 +68,9 @@ export function useFilters() {
     if (cat === 'skill') {
       const cardState = getCardState(c.id)
       const prefix = cardState.toggleActive ? 'alt' : 'base'
-      return c[`${prefix}_${sortSkillType.value}_${sortSkillStat.value}`]
+      const val = c[`${prefix}_${sortSkillType.value}_${sortSkillStat.value}`]
+      const stat = sortSkillStat.value
+      return (val == null && (stat === 'dmg_power' || stat === 'heal_power')) ? 0 : val
     }
 
     return null
@@ -135,6 +140,16 @@ export function useFilters() {
     if (f.has_active === 2 && char.has_active) return false
     if (f.has_ex === 1 && !char.has_ex) return false
     if (f.has_ex === 2 && char.has_ex) return false
+    // 技能范围
+    for (const [key, field] of [['skill_range_1', 'normal1_target_type'], ['skill_range_2', 'normal2_target_type'], ['skill_range_burst', 'burst_target_type']]) {
+      const v = f[key]
+      if (!v) continue
+      const t = char[field]
+      if (t == null) return false
+      if (v === 'single' && ![2,3].includes(t)) return false
+      if (v === 'aoe' && ![4,5].includes(t)) return false
+      if (v === 'other' && ![1,6].includes(t)) return false
+    }
     if (f.permanent_status) {
       if (f.permanent_status === 'ATELIER FES I') {
         if (char.permanent_date !== 'ATELIER FES I') return false

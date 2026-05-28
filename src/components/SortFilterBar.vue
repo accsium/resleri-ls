@@ -352,7 +352,35 @@ const selectedEquipTraits = computed({
       </div>
     </div>
 
-    <!-- 行5：特殊机制 -->
+    <!-- 行5：技能范围 -->
+    <div class="sf-row" v-show="!collapsed">
+      <span class="sf-label">技能范围</span>
+      <div class="sf-field-items">
+        <span class="sf-label">一技能</span>
+        <select class="sf-select" :value="activeFilters.skill_range_1" @change="(e) => toggleFilter('skill_range_1', e.target.value)">
+          <option value="">—</option>
+          <option value="single">单体</option>
+          <option value="aoe">群体</option>
+          <option value="other">其他</option>
+        </select>
+        <span class="sf-label">二技能</span>
+        <select class="sf-select" :value="activeFilters.skill_range_2" @change="(e) => toggleFilter('skill_range_2', e.target.value)">
+          <option value="">—</option>
+          <option value="single">单体</option>
+          <option value="aoe">群体</option>
+          <option value="other">其他</option>
+        </select>
+        <span class="sf-label">爆发技能</span>
+        <select class="sf-select" :value="activeFilters.skill_range_burst" @change="(e) => toggleFilter('skill_range_burst', e.target.value)">
+          <option value="">—</option>
+          <option value="single">单体</option>
+          <option value="aoe">群体</option>
+          <option value="other">其他</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 行6：特殊机制 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">特殊机制</span>
@@ -390,12 +418,12 @@ const selectedEquipTraits = computed({
             </select>
           </template>
           <template v-else>
-            <select class="sf-skill-sel" v-model="sortSkillType" @change="(e) => setSortSkillType(e.target.value)">
+            <select class="sf-skill-sel" v-model="sortSkillType">
               <option v-for="st in SKILL_TYPE_OPTS" :key="st.key" :value="st.key">
                 {{ currentLang === 'cn' ? st.label_cn : st.label_ja }}
               </option>
             </select>
-            <select class="sf-skill-sel" v-model="sortSkillStat" @change="(e) => setSortSkillStat(e.target.value)">
+            <select class="sf-skill-sel" v-model="sortSkillStat">
               <option v-for="ss in SKILL_STAT_OPTS" :key="ss.key" :value="ss.key">
                 {{ currentLang === 'cn' ? ss.label_cn : ss.label_ja }}
               </option>

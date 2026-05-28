@@ -207,8 +207,9 @@ input[type="text"] {
 }
 .sf-icon-btn.active { opacity: 1; }
 .icon-box {
-  display: flex; align-items: center; justify-content: center;
-  overflow: visible; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  overflow: visible; flex-shrink: 0; vertical-align: -0.15em;
+  line-height: 0;
 }
 .icon-box img { max-width: 100%; max-height: 100%; }
 

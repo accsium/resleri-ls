@@ -508,6 +508,12 @@ function buildIndexEntry(character) {
     permanent_date,
   };
 
+  // 技能范围（用于筛选）
+  for (const prefix of ['normal1', 'normal2', 'burst']) {
+    const target = getSkillStat(character, prefix, 'skill_target_type', true);
+    entry[`${prefix}_target_type`] = target;
+  }
+
   // 技能排序字段（进化后 / 进化前）
   for (const prefix of ['normal1', 'normal2', 'burst']) {
     for (const stat of ['power', 'break_power', 'wait']) {
@@ -515,9 +521,39 @@ function buildIndexEntry(character) {
       entry[`alt_${prefix}_${stat}`] = val;
       entry[`base_${prefix}_${stat}`] = getSkillStat(character, prefix, stat, false);
     }
+    // 分离伤害/治疗倍率
+    for (const variant of ['alt', 'base']) {
+      const useEvo = variant === 'alt';
+      const powerType = getSkillPowerType(character, prefix, useEvo);
+      const pow = entry[`${variant}_${prefix}_power`];
+      const isDmg = powerType && [1,2,3,4].includes(powerType);
+      const isHeal = powerType && [5,6,7].includes(powerType);
+      entry[`${variant}_${prefix}_dmg_power`] = isDmg ? pow : null;
+      entry[`${variant}_${prefix}_heal_power`] = isHeal ? pow : null;
+    }
   }
 
   return entry;
+}
+
+function getSkillPowerType(character, prefix, useEvolved) {
+  if (useEvolved && character._rangeSkills?.inrange) {
+    const rangeKey = prefix === 'normal1' ? 'skill1' : prefix === 'normal2' ? 'skill2' : null;
+    if (rangeKey) {
+      const skills = character._rangeSkills.inrange[rangeKey];
+      if (skills && skills.length > 0) {
+        const maxId = Math.max(...skills.map(s => s.id));
+        const skill = skills.find(s => s.id === maxId);
+        if (skill) return skill.skill_power_type;
+      }
+    }
+  }
+  const field = useEvolved ? `evolved_${prefix}_skill_ids` : `${prefix}_skill_ids`;
+  const ids = character[field];
+  if (!ids || ids.length === 0) return null;
+  const maxId = Math.max(...ids);
+  const skill = tables.skill?.get(maxId);
+  return skill?.skill_power_type;
 }
 
 function getSkillStat(character, prefix, stat, useEvolved) {
