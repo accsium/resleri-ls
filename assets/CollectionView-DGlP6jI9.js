@@ -1,1 +1,0 @@
-import{f as s,b as r,p as l}from"./index-DoF8bgsP.js";const a=(o,e)=>{const t=o.__vccOpts||o;for(const[c,n]of e)t[c]=n;return t},i={},_={class:"collection-container"};function d(o,e){return l(),s("div",_,[...e[0]||(e[0]=[r("div",{class:"collection-placeholder"},"收藏功能即将上线",-1)])])}const p=a(i,[["render",d]]);export{p as default};

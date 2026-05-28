@@ -1,0 +1,1 @@
+import{_ as o}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{e as c,a as t,m as s}from"./index-DCAExsGV.js";const n={},r={class:"collection-container"};function a(l,e){return s(),c("div",r,[...e[0]||(e[0]=[t("div",{class:"collection-placeholder"},"收藏功能即将上线",-1)])])}const d=o(n,[["render",a]]);export{d as default};
