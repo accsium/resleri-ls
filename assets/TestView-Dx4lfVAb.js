@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{e as t,m as o}from"./index-BdLPQpu9.js";const r={},c={style:{padding:"40px","text-align":"center",color:"var(--text-muted)"}};function n(s,a){return o(),t("div",c," 测试页 ")}const d=e(r,[["render",n]]);export{d as default};
