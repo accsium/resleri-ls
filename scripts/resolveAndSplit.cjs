@@ -506,6 +506,8 @@ function buildIndexEntry(character) {
     gacha_end_at: (fesName === 'ATELIER FES') ? null : (gachaEndMap.get(character.id) || null),
     permanent_status,
     permanent_date,
+    leader_skill_name: character.leader_skill?.name || null,
+    leader_skill_description: character.leader_skill?.description || null,
   };
 
   // 技能范围（用于筛选）

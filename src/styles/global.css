@@ -34,6 +34,7 @@
 .lang-btn, .card-body-col-right, .support-rarity-col, .star-icon, .synthesis-color-row { display: flex; align-items: center; justify-content: center; }
 
 body {
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   background: var(--bg-page);
   color: var(--text-primary);
@@ -231,11 +232,14 @@ input[type="text"] {
 .sort-control-head { display: flex; align-items: center; gap: 8px; }
 .sort-control-tail { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .sort-control select {
-  width: 140px; font-size: 12px; padding: 3px 6px;
+  width: 168px; font-size: 12px; padding: 3px 6px;
   border: 1px solid var(--border); border-radius: var(--radius);
 }
+.sort-control-head select {
+  width: 80px;
+}
 .sort-control select.sf-skill-sel {
-  width: 66px;
+  width: 80px;
 }
 .sf-order-btn {
   font-size: 12px; padding: 4px 10px; border: 1px solid rgba(255,255,255,0.15);
@@ -581,8 +585,6 @@ input:checked + .slider::before { transform: translateX(16px); }
 
   .nav-bar { padding: 0 10px; }
   .nav-link { padding: 0 14px; font-size: 13px; }
-  .sort-control select { width: 130px; }
-  .sort-control select.sf-skill-sel { width: 61px; }
 
   .card-container { padding: 0 10px 30px; gap: 12px; }
   .card-header { padding: 12px 14px; }
@@ -626,4 +628,105 @@ input:checked + .slider::before { transform: translateX(16px); }
 
   .syn-box { flex-direction: column; }
   .syn-box-name { width: 100%; }
+}
+
+/* ========== 队长技能表格 ========== */
+.ls-table-wrap {
+  margin-top: var(--sticky-top);
+  height: calc(100vh - var(--sticky-top));
+  overflow: auto;
+}
+.ls-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  table-layout: fixed;
+}
+.ls-table th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #5a5a5a;
+  color: #ddd;
+  font-weight: 600;
+  padding: 10px 12px;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+}
+.ls-table th, .ls-table td {
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 12px;
+  vertical-align: middle;
+}
+.ls-table th:first-child,
+.ls-table td:first-child {
+  border-left: 1px solid var(--border);
+}
+.ls-table th:last-child,
+.ls-table td:last-child {
+  border-right: none;
+}
+.ls-table tbody tr:nth-child(even) {
+  background: rgba(0,0,0,0.06);
+}
+
+/* 冻结列 */
+.ls-table th:first-child,
+.ls-table td:first-child {
+  position: sticky;
+  left: 0;
+  width: 72px;
+  z-index: 4;
+}
+.ls-table th:first-child { z-index: 6; }
+.ls-table th:nth-child(2),
+.ls-table td:nth-child(2) {
+  position: sticky;
+  left: 72px;
+  width: 88px;
+  z-index: 4;
+}
+.ls-table th:nth-child(2) { z-index: 6; }
+.ls-table td:first-child,
+.ls-table td:nth-child(2) {
+  background: var(--bg-card);
+}
+
+/* 列宽 */
+.ls-table th:nth-child(3),
+.ls-table td:nth-child(3),
+.ls-table th:nth-child(4),
+.ls-table td:nth-child(4) {
+  width: 68px;
+}
+.ls-table td:nth-child(3),
+.ls-table td:nth-child(4) {
+  text-align: center;
+}
+.ls-table th:nth-child(5),
+.ls-table td:nth-child(5),
+.ls-table th:nth-child(6),
+.ls-table td:nth-child(6) {
+  min-width: 150px;
+}
+.ls-table th:last-child,
+.ls-table td:last-child {
+  min-width: 300px;
+  white-space: normal;
+}
+.ls-td-avatar {
+  text-align: center;
+  line-height: 0;
+}
+
+@media (max-width: 768px) {
+  .ls-table { font-size: 12px; }
+  .ls-table th, .ls-table td { padding: 6px 8px; }
+  .ls-table th:first-child,
+  .ls-table td:first-child { width: 56px; }
+  .ls-table th:nth-child(2),
+  .ls-table td:nth-child(2) { left: 56px; width: 72px; }
 }

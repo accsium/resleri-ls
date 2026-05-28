@@ -25,6 +25,7 @@ const UI_TEXT = {
     supportAbilityTitle: '亜空支援能力',
     navGuide: '角色図鑑',
     navCollection: 'キャラコレクション',
+    navLeaderSkills: '隊長スキル',
     collectionPlaceholder: 'コレクション機能は近日公開',
     applyFilter: '適用', clearFilter: 'クリア',
   },
@@ -55,6 +56,7 @@ const UI_TEXT = {
     supportAbilityTitle: '亚空支援能力',
     navGuide: '角色图鉴',
     navCollection: '角色收藏',
+    navLeaderSkills: '队长技能',
     collectionPlaceholder: '收藏功能即将上线',
     applyFilter: '应用筛选', clearFilter: '清除',
   }
