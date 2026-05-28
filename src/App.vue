@@ -2,6 +2,7 @@
 import { onMounted } from 'vue'
 import AppHeader from './components/AppHeader.vue'
 import NavBar from './components/NavBar.vue'
+import AnnouncementBar from './components/AnnouncementBar.vue'
 import { useI18n } from './composables/useI18n'
 import { useCharacterData } from './composables/useCharacterData'
 import { useBuildInfo } from './composables/useBuildInfo'
@@ -18,7 +19,14 @@ onMounted(async () => {
 </script>
 
 <template>
-  <AppHeader />
-  <NavBar />
-  <router-view />
+  <div class="app-shell">
+    <div class="app-top">
+      <AppHeader />
+      <NavBar />
+    </div>
+    <AnnouncementBar />
+    <div class="app-content">
+      <router-view />
+    </div>
+  </div>
 </template>

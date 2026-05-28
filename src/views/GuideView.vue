@@ -4,6 +4,10 @@ import CharacterGrid from '../components/CharacterGrid.vue'
 </script>
 
 <template>
-  <SortFilterBar />
-  <CharacterGrid />
+  <div class="guide-layout">
+    <SortFilterBar />
+    <div class="card-panel">
+      <CharacterGrid />
+    </div>
+  </div>
 </template>
