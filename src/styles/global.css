@@ -266,17 +266,13 @@ input[type="text"] {
   background: #e2ddd2;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
-}
-.card-panel::-webkit-scrollbar {
-  display: none;
-}
-/* ========== 卡片容器 ========== */
-.card-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
   padding: 0;
-  margin: 0 auto;
+}
+.card-panel::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
@@ -598,7 +594,7 @@ input:checked + .slider::before { transform: translateX(16px); }
   .nav-bar { height: 40px; padding: 0 10px; }
   .nav-link { font-size: 13px; }
 
-  .card-container { padding: 0 0 30px; gap: 12px; }
+  .card-panel { padding: 0 0 30px; gap: 12px; }
   .card-header { padding: 12px 14px; }
   .card-top { margin-bottom: 8px; }
   .card-attrs { display: none; }

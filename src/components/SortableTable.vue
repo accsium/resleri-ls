@@ -184,6 +184,8 @@ function cellStyle(col) {
   padding: 8px 12px;
   vertical-align: middle;
 }
+.st-table th { height: 40px; }
+.st-table td { height: 88px; overflow: hidden; }
 .st-table th:last-child,
 .st-table td:last-child {
   border-right: none;

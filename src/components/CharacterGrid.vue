@@ -6,11 +6,9 @@ const { filteredCharacters } = useFilters()
 </script>
 
 <template>
-  <div class="card-container">
-    <CharacterCard
-      v-for="entry in filteredCharacters"
-      :key="entry.id"
-      :index-entry="entry"
-    />
-  </div>
+  <CharacterCard
+    v-for="entry in filteredCharacters"
+    :key="entry.id"
+    :index-entry="entry"
+  />
 </template>
