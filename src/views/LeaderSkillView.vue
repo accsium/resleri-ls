@@ -12,13 +12,13 @@ const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_M
 const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP)
 
 const columns = [
-  { key: 'id', label: 'ID', width: 72, minWidth: 72 },
-  { key: 'avatar', label: '角色头像', width: 88, minWidth: 88 },
-  { key: 'name', label: '角色名', width: 140, minWidth: 80 },
-  { key: 'attr', label: '属性', width: 68, minWidth: 48, align: 'center' },
-  { key: 'role', label: '职业', width: 68, minWidth: 48, align: 'center' },
-  { key: 'skillName', label: '队长技能', width: 120, minWidth: 80 },
-  { key: 'skillDesc', label: '效果', width: 260, minWidth: 150 },
+  { key: 'id', label: 'ID', width: 72 },
+  { key: 'avatar', label: '角色头像', width: 88 },
+  { key: 'name', label: '角色名', minWidth: 120 },
+  { key: 'attr', label: '属性', width: 56, align: 'center' },
+  { key: 'role', label: '职业', width: 56, align: 'center' },
+  { key: 'skillName', label: '队长技能', minWidth: 120 },
+  { key: 'skillDesc', label: '效果', minWidth: 240 },
 ]
 
 const leaderChars = computed(() =>
@@ -59,7 +59,7 @@ const sortedChars = computed(() => {
   const list = [...leaderChars.value]
   const dir = sortDir.value === 'desc' ? -1 : 1
 
-  if (sortCol.value === 'default') {
+  if (sortCol.value === 'default' || sortCol.value === 'avatar') {
     list.sort((a, b) => defaultCompare(a, b, dir))
     return list
   }
