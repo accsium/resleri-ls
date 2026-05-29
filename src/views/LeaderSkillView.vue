@@ -18,7 +18,7 @@ const columns = [
   { key: 'attr', label: '属性', width: 56, align: 'center' },
   { key: 'role', label: '职业', width: 56, align: 'center' },
   { key: 'skillName', label: '队长技能', minWidth: 120 },
-  { key: 'skillDesc', label: '效果', minWidth: 240 },
+  { key: 'skillDesc', label: '效果', minWidth: 300 },
 ]
 
 const leaderChars = computed(() =>
