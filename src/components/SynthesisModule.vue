@@ -23,8 +23,8 @@ const traitEffects = ref({})
 onMounted(async () => {
   try {
     const [bt, et] = await Promise.all([
-      fetch('data/battle_tool_trait_effects.json').then(r => r.json()),
-      fetch('data/equipment_tool_trait_effects.json').then(r => r.json()),
+      fetch('data/battle_tool_trait.json').then(r => r.json()),
+      fetch('data/equipment_tool_trait.json').then(r => r.json()),
     ])
     for (const t of bt) traitEffects.value['bt_' + t.id] = t
     for (const t of et) traitEffects.value['et_' + t.id] = t

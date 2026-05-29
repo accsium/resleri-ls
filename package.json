@@ -6,7 +6,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "data": "node scripts/resolveAndSplit.cjs",
-    "prepare-data": "node scripts/prepareData.cjs",
+    "prepare-data": "node scripts/translations.cjs",
     "prebuild": "npm run prepare-data && npm run data"
   },
   "dependencies": {

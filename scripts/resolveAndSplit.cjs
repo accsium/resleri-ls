@@ -3,7 +3,7 @@ const path = require('path');
 const config = require('./resolveConfig.cjs');
 
 const dataRawDir = path.join(__dirname, '..', 'data_raw', 'jp');
-const dataDir = path.join(__dirname, '..', 'data');
+const dataDir = path.join(__dirname, '..', 'language');
 const publicDataDir = path.join(__dirname, '..', 'public', 'data');
 
 // ========== 1. 加载实体表 ==========
@@ -19,36 +19,36 @@ for (const [entityName, entityConfig] of Object.entries(config.entities)) {
 }
 
 // ========== 2. 加载翻译映射表 ==========
-function loadMapFile(name, lang) {
-  const folder = lang === 'cn' ? 'cn' : 'jp';
-  const filePath = path.join(dataDir, folder, `${name}.json`);
+const pipelineConfig = JSON.parse(fs.readFileSync(
+  path.join(__dirname, '..', 'config', 'pipeline.json'), 'utf-8'
+));
+
+function loadJpMap(name) {
+  // JP name 从 data_raw 中读取
+  const filePath = path.join(dataRawDir, `${name}.json`);
   if (fs.existsSync(filePath)) {
     const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-    if (Array.isArray(raw)) {
-      return new Map(raw.map(item => [
-        item.id,
-        lang === 'cn' ? (item.name_cn || item.name) : item.name
-      ]));
-    } else if (typeof raw === 'object') {
-      const map = new Map();
-      for (const [id, obj] of Object.entries(raw)) {
-        map.set(Number(id), lang === 'cn' ? (obj.name_cn || obj.name) : obj.name);
-      }
-      return map;
-    }
+    return new Map(raw.map(item => [item.id, item.name]));
+  }
+  return new Map();
+}
+
+function loadCnMap(name) {
+  // CN name 从 language/ 中读取
+  const filePath = path.join(dataDir, `${name}.json`);
+  if (fs.existsSync(filePath)) {
+    const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    return new Map(raw.map(item => [item.id, item.name_cn || '']));
   }
   return new Map();
 }
 
 const jpMaps = {};
 const cnMaps = {};
-const pipelineConfig = JSON.parse(fs.readFileSync(
-  path.join(__dirname, '..', 'config', 'pipeline.json'), 'utf-8'
-));
 const mapKeys = Object.keys(pipelineConfig.translationFiles || {});
 mapKeys.forEach(key => {
-  jpMaps[key] = loadMapFile(key, 'ja');
-  cnMaps[key] = loadMapFile(key, 'cn');
+  jpMaps[key] = loadJpMap(key);
+  cnMaps[key] = loadCnMap(key);
 });
 
 // ========== 3. 加载 EX 技能规则 ==========
@@ -686,26 +686,58 @@ if (fs.existsSync(outDir)) {
   fs.rmSync(outDir, { recursive: true, force: true });
 }
 fs.mkdirSync(outDir, { recursive: true });
+const charOutDir = path.join(outDir, 'character');
+fs.mkdirSync(charOutDir, { recursive: true });
 
-// 复制词条数据到 public/data/ 供筛选面板使用
-for (const lang of ['jp', 'cn']) {
-  const srcDir = path.join(dataDir, lang);
-  const destDir = path.join(outDir, lang);
-  if (fs.existsSync(srcDir)) {
-    fs.mkdirSync(destDir, { recursive: true });
-    for (const name of ['battle_tool_trait.json', 'equipment_tool_trait.json']) {
-      const src = path.join(srcDir, name);
-      if (fs.existsSync(src)) fs.copyFileSync(src, path.join(destDir, name));
-    }
+// 输出词条数据到 public/data/（翻译由 translations.cjs 处理）
+function buildTraitOutput(name, buildValues) {
+  const rawFile = path.join(dataRawDir, `${name}.json`);
+  if (!fs.existsSync(rawFile)) return;
+  const traits = JSON.parse(fs.readFileSync(rawFile, 'utf-8'));
+
+  const langFile = path.join(dataDir, `${name}.json`);
+  const langData = fs.existsSync(langFile) ? JSON.parse(fs.readFileSync(langFile, 'utf-8')) : [];
+  const langMap = new Map(langData.map(t => [t.id, t]));
+
+  const output = [];
+  for (const t of traits) {
+    const lang = langMap.get(t.id) || {};
+    output.push({
+      id: t.id,
+      name: lang.name || t.name,
+      name_cn: lang.name_cn || '',
+      effect_description: lang.effect_description || '',
+      effect_description_cn: lang.effect_description_cn || '',
+      values: buildValues(t),
+    });
   }
+  fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(output, null, 2), 'utf-8');
+  console.log(`  ✓ ${name}.json (${output.length} 条)`);
 }
-// 复制词条效果描述文件到 public/data/
-for (const name of ['battle_tool_trait_effects.json', 'equipment_tool_trait_effects.json']) {
-  const srcJp = path.join(dataDir, 'jp', name);
-  if (fs.existsSync(srcJp)) fs.copyFileSync(srcJp, path.join(outDir, name));
-  const srcUntrans = path.join(dataDir, 'untranslated', name);
-  if (fs.existsSync(srcUntrans)) fs.copyFileSync(srcUntrans, path.join(outDir, name));
+
+function btValues(t) {
+  return (t.effects || []).map(e => (e.values || []).map(v => v / 100));
 }
+function etValues(t) {
+  if (!t.ability_ids || t.ability_ids.length === 0) return [];
+  const firstAbi = tables.ability?.get(t.ability_ids[0]);
+  if (!firstAbi) return [];
+  const blockCount = firstAbi.effects?.length || 1;
+  const vals = [];
+  for (let b = 0; b < blockCount; b++) {
+    const r = [];
+    for (const aid of t.ability_ids) {
+      const abi = tables.ability?.get(aid);
+      const v = abi?.effects?.[b]?.value;
+      if (v != null) r.push(v / 100);
+    }
+    if (r.length > 0) vals.push(r);
+  }
+  return vals;
+}
+
+buildTraitOutput('battle_tool_trait', btValues);
+buildTraitOutput('equipment_tool_trait', etValues);
 
 const pairedIds = new Set();
 const index = [];
@@ -736,7 +768,7 @@ transformPairs.forEach(pair => {
     index.push(entry);
   }
   const finalMerged = finalizeOutput(merged);
-  fs.writeFileSync(path.join(outDir, `${firstId}.json`), JSON.stringify(finalMerged, null, 2), 'utf-8');
+  fs.writeFileSync(path.join(charOutDir, `${firstId}.json`), JSON.stringify(finalMerged, null, 2), 'utf-8');
 });
 
 visibleCharacters.forEach(char => {
@@ -744,7 +776,7 @@ visibleCharacters.forEach(char => {
   const localizedChar = buildLocalizedChar(char);
   index.push(buildIndexEntry(localizedChar));
   const finalChar = finalizeOutput(localizedChar);
-  fs.writeFileSync(path.join(outDir, `${char.id}.json`), JSON.stringify(finalChar, null, 2), 'utf-8');
+  fs.writeFileSync(path.join(charOutDir, `${char.id}.json`), JSON.stringify(finalChar, null, 2), 'utf-8');
 });
 
 fs.writeFileSync(path.join(outDir, 'character_index.json'), JSON.stringify(index, null, 2), 'utf-8');

@@ -179,16 +179,14 @@ onMounted(async () => {
 
   // 词条数据
   try {
-    const [bttJ, bttC, ettJ, ettC] = await Promise.all([
-      fetch('data/jp/battle_tool_trait.json').then(r => r.json()),
-      fetch('data/cn/battle_tool_trait.json').then(r => r.json()).catch(() => []),
-      fetch('data/jp/equipment_tool_trait.json').then(r => r.json()),
-      fetch('data/cn/equipment_tool_trait.json').then(r => r.json()).catch(() => []),
+    const [bt, et] = await Promise.all([
+      fetch('data/battle_tool_trait.json').then(r => r.json()),
+      fetch('data/equipment_tool_trait.json').then(r => r.json()),
     ])
-    battleTraitsJa.value = groupTraits(bttJ, t => t.name)
-    battleTraitsCn.value = groupTraits(bttC.length ? bttC : bttJ, t => t.name_cn || t.name)
-    equipTraitsJa.value = groupTraits(ettJ, t => t.name)
-    equipTraitsCn.value = groupTraits(ettC.length ? ettC : ettJ, t => t.name_cn || t.name)
+    battleTraitsJa.value = groupTraits(bt, t => t.name)
+    battleTraitsCn.value = groupTraits(bt, t => t.name_cn || t.name)
+    equipTraitsJa.value = groupTraits(et, t => t.name)
+    equipTraitsCn.value = groupTraits(et, t => t.name_cn || t.name)
   } catch {}
 })
 
