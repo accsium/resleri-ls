@@ -1,0 +1,1 @@
+import{_ as e,e as t,m as c}from"./index-BkZXpLPo.js";const n={},o={style:{padding:"40px","text-align":"center",color:"var(--text-muted)"}};function r(s,a){return c(),t("div",o," 施工中 ")}const i=e(n,[["render",r]]);export{i as default};
