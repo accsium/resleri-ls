@@ -1,0 +1,5372 @@
+{
+  "id": 50101,
+  "attack_attributes": [
+    5
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 1,
+  "support_color_id": 5,
+  "trait_color_name_ja": "青",
+  "trait_color_name_cn": "蓝",
+  "support_color_name_ja": "緑",
+  "support_color_name_cn": "绿",
+  "battle_tool_trait_names_ja": [
+    "火の呪詛",
+    "火の盾"
+  ],
+  "battle_tool_trait_names_cn": [
+    "火之诅咒",
+    "火之盾"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "火スキル威力上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "火技能威力提升"
+  ],
+  "battle_tool_trait_ids": [
+    18,
+    25
+  ],
+  "equipment_tool_trait_ids": [
+    77
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980183,
+        "combat_power_coefficient": 2500,
+        "condition_ids": [
+          12
+        ]
+      }
+    ],
+    "description": "味方全員は「アラディス調査団」1人につき「魔攻・魔防+10%」",
+    "name": "記憶を辿って"
+  },
+  "ability_ids": [
+    1990334,
+    1990335
+  ],
+  "support_ability_ids": [
+    500550,
+    500545,
+    500540,
+    500535,
+    500530,
+    500525,
+    500520,
+    500515
+  ],
+  "_exSkills": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        5
+      ],
+      "break_power": 38,
+      "break_power_type": 2,
+      "description": "ダメージ+{0}%<br>※状態変化の回数を消費せず、追加効果を発動しない",
+      "effects": [
+        {
+          "id": 91002028,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14002551,
+      "is_restrict_after_skill_timing_effects": true,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "スタビングアーツ",
+      "not_state_change_count_decrease": true,
+      "power": 246,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "5187188467304351512",
+      "summary": "ダメージアップ<br>状態変化回数を消費しない",
+      "timeline_hash": "2671723980271887687",
+      "wait": 0,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体"
+    }
+  ],
+  "_skillDetails": {
+    "500515": {
+      "id": 500515,
+      "description": "「アラディス調査団」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500067,
+          "limit_count": null,
+          "value": 2300,
+          "_detail": {
+            "description": "自身が「アラディス調査団」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500067,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500520": {
+      "id": 500520,
+      "description": "「アラディス調査団」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500067,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "自身が「アラディス調査団」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500067,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500525": {
+      "id": 500525,
+      "description": "「アラディス調査団」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500067,
+          "limit_count": null,
+          "value": 1700,
+          "_detail": {
+            "description": "自身が「アラディス調査団」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500067,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500530": {
+      "id": 500530,
+      "description": "「アラディス調査団」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500067,
+          "limit_count": null,
+          "value": 1400,
+          "_detail": {
+            "description": "自身が「アラディス調査団」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500067,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500535": {
+      "id": 500535,
+      "description": "「アラディス調査団」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500067,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "自身が「アラディス調査団」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500067,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500540": {
+      "id": 500540,
+      "description": "「アラディス調査団」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500067,
+          "limit_count": null,
+          "value": 1200,
+          "_detail": {
+            "description": "自身が「アラディス調査団」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500067,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500545": {
+      "id": 500545,
+      "description": "「アラディス調査団」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500067,
+          "limit_count": null,
+          "value": 1100,
+          "_detail": {
+            "description": "自身が「アラディス調査団」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500067,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500550": {
+      "id": 500550,
+      "description": "「アラディス調査団」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500067,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "自身が「アラディス調査団」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500067,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980183": {
+      "name": "記憶を辿って",
+      "id": 1980183,
+      "description": "「アラディス調査団」1人につき「魔攻・魔防+{0}%」",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500160,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/アラディス調査団が多いほど/魔攻アップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500160,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500161,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/アラディス調査団が多いほど/魔防アップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500161,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990334": {
+      "name": "私にしかできないことを",
+      "id": 1990334,
+      "description": "強化系パネル獲得時または誰かが戦闘アイテム使用時、自身に「クリティカル確率+{0}%」を1回行動終了するまで付与<br>※アイテムを複数同時に使用しても発動は1回<br><br>自身がプラスパネル獲得時またはバーストパネル獲得時、現在HPが最大の敵へパネルスキル：{{hyperlink_id 37}}を発動する",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001236,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001236,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001237,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001237,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001234,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001234,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001235,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001235,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001242,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001242,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990335": {
+      "name": "これが私の可能性！",
+      "id": 1990335,
+      "description": "スキル発動後、自身に「素早さ+{0}%」を付与(上限15%)し、<br>「スキルダメージ+{1}%」を付与(上限175%)<br>対象が被ダメージUP状態の時、ダメージ+{2}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001238,
+          "limit_count": null,
+          "value": 300,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001238,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001239,
+          "limit_count": null,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001239,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001241,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001241,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990414": {
+      "name": "クリティカルダメージアップⅢ",
+      "id": 1990414,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990439": {
+      "name": "クリティカルダメージアップⅡ",
+      "id": 1990439,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990464": {
+      "name": "クリティカルダメージアップⅠ",
+      "id": 1990464,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11002386": {
+      "name": "ピアシングアーツ",
+      "id": 11002386,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、「魔攻+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 27}",
+      "effects": [
+        {
+          "id": 91001020,
+          "value": 2000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001270,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001270,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001610,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001610,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001609,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001609,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 100,
+      "break_power": 6
+    },
+    "11002387": {
+      "name": "ピアシングアーツ",
+      "id": 11002387,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、「魔攻+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 27}",
+      "effects": [
+        {
+          "id": 91001020,
+          "value": 2000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001270,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001270,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001610,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001610,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001609,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001609,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 106,
+      "break_power": 6
+    },
+    "11002388": {
+      "name": "ピアシングアーツ",
+      "id": 11002388,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、「魔攻+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 27}",
+      "effects": [
+        {
+          "id": 91001020,
+          "value": 2000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001270,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001270,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001610,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001610,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001609,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001609,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 112,
+      "break_power": 6
+    },
+    "11002389": {
+      "name": "ピアシングアーツ",
+      "id": 11002389,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、「魔攻+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 27}",
+      "effects": [
+        {
+          "id": 91001020,
+          "value": 2000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001270,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001270,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001610,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001610,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001609,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001609,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 118,
+      "break_power": 6
+    },
+    "11002390": {
+      "name": "ピアシングアーツ",
+      "id": 11002390,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、「魔攻+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 27}",
+      "effects": [
+        {
+          "id": 91001020,
+          "value": 2000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001270,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001270,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001610,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001610,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001609,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001609,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 125,
+      "break_power": 7
+    },
+    "11002541": {
+      "name": "ストライクアーツ",
+      "id": 11002541,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを{0}%回復し、<br>対象に「受ける火属性ダメージ+{1}％」を2回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 17}",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001620,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001620,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001611,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001611,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 100,
+      "break_power": 6
+    },
+    "11002542": {
+      "name": "ストライクアーツ",
+      "id": 11002542,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを{0}%回復し、<br>対象に「受ける火属性ダメージ+{1}％」を2回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 18}",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001620,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001620,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001611,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001611,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 106,
+      "break_power": 6
+    },
+    "11002543": {
+      "name": "ストライクアーツ",
+      "id": 11002543,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを{0}%回復し、<br>対象に「受ける火属性ダメージ+{1}％」を2回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 19}",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001620,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001620,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001611,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001611,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 112,
+      "break_power": 6
+    },
+    "11002544": {
+      "name": "ストライクアーツ",
+      "id": 11002544,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを{0}%回復し、<br>対象に「受ける火属性ダメージ+{1}％」を2回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 20}",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001620,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001620,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001611,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001611,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 118,
+      "break_power": 6
+    },
+    "11002545": {
+      "name": "ストライクアーツ",
+      "id": 11002545,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを{0}%回復し、<br>対象に「受ける火属性ダメージ+{1}％」を2回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 21}",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001620,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001620,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001607,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001607,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001608,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001608,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001611,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001611,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 125,
+      "break_power": 7
+    },
+    "12002391": {
+      "name": "スパイラルロンド",
+      "id": 12002391,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与<br>アウトレンジ時のスキル：{hyperlink_id 32}",
+      "effects": [
+        {
+          "id": 91001376,
+          "value": 2500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 326,
+      "break_power": 29
+    },
+    "12002392": {
+      "name": "スパイラルロンド",
+      "id": 12002392,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与<br>アウトレンジ時のスキル：{hyperlink_id 33}",
+      "effects": [
+        {
+          "id": 91001376,
+          "value": 2500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 346,
+      "break_power": 30
+    },
+    "12002393": {
+      "name": "スパイラルロンド",
+      "id": 12002393,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与<br>アウトレンジ時のスキル：{hyperlink_id 34}",
+      "effects": [
+        {
+          "id": 91001376,
+          "value": 2500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 366,
+      "break_power": 32
+    },
+    "12002394": {
+      "name": "スパイラルロンド",
+      "id": 12002394,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与<br>アウトレンジ時のスキル：{hyperlink_id 35}",
+      "effects": [
+        {
+          "id": 91001376,
+          "value": 2500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 386,
+      "break_power": 34
+    },
+    "12002395": {
+      "name": "スパイラルロンド",
+      "id": 12002395,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与<br>アウトレンジ時のスキル：{hyperlink_id 36}",
+      "effects": [
+        {
+          "id": 91001376,
+          "value": 2500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 407,
+      "break_power": 36
+    },
+    "12002546": {
+      "name": "メイルシュトローム",
+      "id": 12002546,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "description": "敵の数に応じ、ダメージ+30～120％(1～4体で多いほど増加)<br>敵の数に応じ、クリティカルダメージ+60～180％(1～4体で少ないほど増加)<br>攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与し、アイテムゲージを{2}%回復<br>インレンジ時のスキル：{hyperlink_id 22}",
+      "effects": [
+        {
+          "id": 91001050,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001050,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 2500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002004,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002028,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000949,
+          "value": 9000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000949,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001616,
+          "value": 6000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001616,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001615,
+          "value": 12000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001615,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 195,
+      "break_power": 14
+    },
+    "12002547": {
+      "name": "メイルシュトローム",
+      "id": 12002547,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "description": "敵の数に応じ、ダメージ+30～120％(1～4体で多いほど増加)<br>敵の数に応じ、クリティカルダメージ+60～180％(1～4体で少ないほど増加)<br>攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与し、アイテムゲージを{2}%回復<br>インレンジ時のスキル：{hyperlink_id 23}",
+      "effects": [
+        {
+          "id": 91001050,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001050,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 2500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002004,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002028,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000949,
+          "value": 9000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000949,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001616,
+          "value": 6000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001616,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001615,
+          "value": 12000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001615,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 207,
+      "break_power": 14
+    },
+    "12002548": {
+      "name": "メイルシュトローム",
+      "id": 12002548,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "description": "敵の数に応じ、ダメージ+30～120％(1～4体で多いほど増加)<br>敵の数に応じ、クリティカルダメージ+60～180％(1～4体で少ないほど増加)<br>攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与し、アイテムゲージを{2}%回復<br>インレンジ時のスキル：{hyperlink_id 24}",
+      "effects": [
+        {
+          "id": 91001050,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001050,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 2500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002004,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002028,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000949,
+          "value": 9000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000949,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001616,
+          "value": 6000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001616,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001615,
+          "value": 12000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001615,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 219,
+      "break_power": 15
+    },
+    "12002549": {
+      "name": "メイルシュトローム",
+      "id": 12002549,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "description": "敵の数に応じ、ダメージ+30～120％(1～4体で多いほど増加)<br>敵の数に応じ、クリティカルダメージ+60～180％(1～4体で少ないほど増加)<br>攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与し、アイテムゲージを{2}%回復<br>インレンジ時のスキル：{hyperlink_id 25}",
+      "effects": [
+        {
+          "id": 91001050,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001050,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 2500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002004,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002028,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000949,
+          "value": 9000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000949,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001616,
+          "value": 6000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001616,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001615,
+          "value": 12000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001615,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 231,
+      "break_power": 16
+    },
+    "12002550": {
+      "name": "メイルシュトローム",
+      "id": 12002550,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "description": "敵の数に応じ、ダメージ+30～120％(1～4体で多いほど増加)<br>敵の数に応じ、クリティカルダメージ+60～180％(1～4体で少ないほど増加)<br>攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与し、アイテムゲージを{2}%回復<br>インレンジ時のスキル：{hyperlink_id 26}",
+      "effects": [
+        {
+          "id": 91001050,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001050,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 2500,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002004,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002028,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000949,
+          "value": 9000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000949,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001616,
+          "value": 6000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001616,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001615,
+          "value": 12000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001615,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 243,
+      "break_power": 17
+    },
+    "14002396": {
+      "name": "レクイエムトリガー",
+      "id": 14002396,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001619,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001619,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 432,
+      "break_power": 75
+    },
+    "14002397": {
+      "name": "レクイエムトリガー",
+      "id": 14002397,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001619,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001619,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 459,
+      "break_power": 79
+    },
+    "14002398": {
+      "name": "レクイエムトリガー",
+      "id": 14002398,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001619,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001619,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 486,
+      "break_power": 84
+    },
+    "14002399": {
+      "name": "レクイエムトリガー",
+      "id": 14002399,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001619,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001619,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 513,
+      "break_power": 88
+    },
+    "14002400": {
+      "name": "レクイエムトリガー",
+      "id": 14002400,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000904,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001619,
+          "value": 3500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001619,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001378,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 540,
+      "break_power": 93
+    },
+    "14002551": {
+      "name": "スタビングアーツ",
+      "id": 14002551,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "ダメージ+{0}%<br>※状態変化の回数を消費せず、追加効果を発動しない",
+      "effects": [
+        {
+          "id": 91002028,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002028,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 246,
+      "break_power": 38
+    }
+  },
+  "initial_wt": 237,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、「魔攻+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 27}",
+          "effects": [
+            {
+              "id": 91001020,
+              "value": 2000,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001020,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001270,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001270,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001610,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001610,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002386,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ピアシングアーツ",
+          "not_state_change_count_decrease": false,
+          "power": 100,
+          "require_command_value": false,
+          "skill_destination": 11002541,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の魔攻とスキルダメージアップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "4488748995537041915",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、「魔攻+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 27}",
+          "effects": [
+            {
+              "id": 91001020,
+              "value": 2000,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001020,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001270,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001270,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001610,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001610,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002387,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ピアシングアーツ",
+          "not_state_change_count_decrease": false,
+          "power": 106,
+          "require_command_value": false,
+          "skill_destination": 11002542,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の魔攻とスキルダメージアップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "4488748995537041915",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、「魔攻+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 27}",
+          "effects": [
+            {
+              "id": 91001020,
+              "value": 2000,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001020,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001270,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001270,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001610,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001610,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002388,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ピアシングアーツ",
+          "not_state_change_count_decrease": false,
+          "power": 112,
+          "require_command_value": false,
+          "skill_destination": 11002543,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の魔攻とスキルダメージアップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "4488748995537041915",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、「魔攻+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 27}",
+          "effects": [
+            {
+              "id": 91001020,
+              "value": 2000,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001020,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001270,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001270,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001610,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001610,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002389,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ピアシングアーツ",
+          "not_state_change_count_decrease": false,
+          "power": 118,
+          "require_command_value": false,
+          "skill_destination": 11002544,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の魔攻とスキルダメージアップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "4488748995537041915",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、「魔攻+{0}%」と「スキルダメージ+{1}%」を1回行動終了するまで付与<br>自身の位置をアウトレンジに移動<br>アウトレンジ時のスキル：{hyperlink_id 27}",
+          "effects": [
+            {
+              "id": 91001020,
+              "value": 2000,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001020,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001270,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001270,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001607,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001607,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001610,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001610,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001609,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001609,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002390,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ピアシングアーツ",
+          "not_state_change_count_decrease": false,
+          "power": 125,
+          "require_command_value": false,
+          "skill_destination": 11002545,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の魔攻とスキルダメージアップ<br>自身の位置をアウトレンジに移動",
+          "timeline_hash": "4488748995537041915",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 29,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与<br>アウトレンジ時のスキル：{hyperlink_id 32}",
+          "effects": [
+            {
+              "id": 91001376,
+              "value": 2500,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002391,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スパイラルロンド",
+          "not_state_change_count_decrease": false,
+          "power": 326,
+          "require_command_value": false,
+          "skill_destination": 12002546,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "2694886319769360836",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与<br>アウトレンジ時のスキル：{hyperlink_id 33}",
+          "effects": [
+            {
+              "id": 91001376,
+              "value": 2500,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002392,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スパイラルロンド",
+          "not_state_change_count_decrease": false,
+          "power": 346,
+          "require_command_value": false,
+          "skill_destination": 12002547,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "2694886319769360836",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 32,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与<br>アウトレンジ時のスキル：{hyperlink_id 34}",
+          "effects": [
+            {
+              "id": 91001376,
+              "value": 2500,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002393,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スパイラルロンド",
+          "not_state_change_count_decrease": false,
+          "power": 366,
+          "require_command_value": false,
+          "skill_destination": 12002548,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "2694886319769360836",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 34,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与<br>アウトレンジ時のスキル：{hyperlink_id 35}",
+          "effects": [
+            {
+              "id": 91001376,
+              "value": 2500,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002394,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スパイラルロンド",
+          "not_state_change_count_decrease": false,
+          "power": 386,
+          "require_command_value": false,
+          "skill_destination": 12002549,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "2694886319769360836",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 36,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を2回行動終了するまで付与<br>アウトレンジ時のスキル：{hyperlink_id 36}",
+          "effects": [
+            {
+              "id": 91001376,
+              "value": 2500,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002395,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "スパイラルロンド",
+          "not_state_change_count_decrease": false,
+          "power": 407,
+          "require_command_value": false,
+          "skill_destination": 12002550,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "2694886319769360836",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000904,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000904,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001619,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001619,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 5000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002396,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "レクイエムトリガー",
+          "not_state_change_count_decrease": false,
+          "power": 432,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3998479868866454123",
+          "summary": "この攻撃のクリティカルダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "1735213091213325494",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000904,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000904,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001619,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001619,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 5000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002397,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "レクイエムトリガー",
+          "not_state_change_count_decrease": false,
+          "power": 459,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3998479868866454123",
+          "summary": "この攻撃のクリティカルダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "1735213091213325494",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000904,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000904,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001619,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001619,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 5000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002398,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "レクイエムトリガー",
+          "not_state_change_count_decrease": false,
+          "power": 486,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3998479868866454123",
+          "summary": "この攻撃のクリティカルダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "1735213091213325494",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000904,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000904,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001619,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001619,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 5000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002399,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "レクイエムトリガー",
+          "not_state_change_count_decrease": false,
+          "power": 513,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3998479868866454123",
+          "summary": "この攻撃のクリティカルダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "1735213091213325494",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "この攻撃のクリティカルダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000904,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000904,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001619,
+              "value": 3500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001619,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 5000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001378,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002400,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "レクイエムトリガー",
+          "not_state_change_count_decrease": false,
+          "power": 540,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "3998479868866454123",
+          "summary": "この攻撃のクリティカルダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "1735213091213325494",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ],
+  "switch": "range",
+  "switch_stat": {
+    "_skills": [
+      {
+        "type": "normal1",
+        "skills": [
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 6,
+            "break_power_type": 2,
+            "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを{0}%回復し、<br>対象に「受ける火属性ダメージ+{1}％」を2回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 17}",
+            "effects": [
+              {
+                "id": 91002004,
+                "value": 1500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002004,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001620,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001620,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001607,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001607,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001608,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001608,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001611,
+                "value": 10000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001611,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001007,
+                "value": 10000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001007,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11002541,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ストライクアーツ",
+            "not_state_change_count_decrease": false,
+            "power": 100,
+            "require_command_value": false,
+            "skill_destination": 11002386,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": 4,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを回復<br>対象の受ける火属性ダメージアップ<br>自身の位置をインレンジに移動",
+            "timeline_hash": "8060062387444669885",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 6,
+            "break_power_type": 2,
+            "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを{0}%回復し、<br>対象に「受ける火属性ダメージ+{1}％」を2回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 18}",
+            "effects": [
+              {
+                "id": 91002004,
+                "value": 1500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002004,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001620,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001620,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001607,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001607,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001608,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001608,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001611,
+                "value": 10000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001611,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001007,
+                "value": 10000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001007,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11002542,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ストライクアーツ",
+            "not_state_change_count_decrease": false,
+            "power": 106,
+            "require_command_value": false,
+            "skill_destination": 11002387,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": 4,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを回復<br>対象の受ける火属性ダメージアップ<br>自身の位置をインレンジに移動",
+            "timeline_hash": "8060062387444669885",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 6,
+            "break_power_type": 2,
+            "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを{0}%回復し、<br>対象に「受ける火属性ダメージ+{1}％」を2回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 19}",
+            "effects": [
+              {
+                "id": 91002004,
+                "value": 1500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002004,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001620,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001620,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001607,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001607,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001608,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001608,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001611,
+                "value": 10000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001611,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001007,
+                "value": 10000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001007,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11002543,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ストライクアーツ",
+            "not_state_change_count_decrease": false,
+            "power": 112,
+            "require_command_value": false,
+            "skill_destination": 11002388,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": 4,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを回復<br>対象の受ける火属性ダメージアップ<br>自身の位置をインレンジに移動",
+            "timeline_hash": "8060062387444669885",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 6,
+            "break_power_type": 2,
+            "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを{0}%回復し、<br>対象に「受ける火属性ダメージ+{1}％」を2回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 20}",
+            "effects": [
+              {
+                "id": 91002004,
+                "value": 1500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002004,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001620,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001620,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001607,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001607,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001608,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001608,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001611,
+                "value": 10000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001611,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001007,
+                "value": 10000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001007,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11002544,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ストライクアーツ",
+            "not_state_change_count_decrease": false,
+            "power": 118,
+            "require_command_value": false,
+            "skill_destination": 11002389,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": 4,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを回復<br>対象の受ける火属性ダメージアップ<br>自身の位置をインレンジに移動",
+            "timeline_hash": "8060062387444669885",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 7,
+            "break_power_type": 2,
+            "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを{0}%回復し、<br>対象に「受ける火属性ダメージ+{1}％」を2回行動終了するまで付与<br>自身の位置をインレンジに移動<br>インレンジ時のスキル：{hyperlink_id 21}",
+            "effects": [
+              {
+                "id": 91002004,
+                "value": 1500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002004,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001620,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001620,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001607,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001607,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001608,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001608,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001611,
+                "value": 10000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001611,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001007,
+                "value": 10000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001007,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11002545,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ストライクアーツ",
+            "not_state_change_count_decrease": false,
+            "power": 125,
+            "require_command_value": false,
+            "skill_destination": 11002390,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": 4,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、アイテムゲージを回復<br>対象の受ける火属性ダメージアップ<br>自身の位置をインレンジに移動",
+            "timeline_hash": "8060062387444669885",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          }
+        ]
+      },
+      {
+        "type": "normal2",
+        "skills": [
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 14,
+            "break_power_type": 2,
+            "description": "敵の数に応じ、ダメージ+30～120％(1～4体で多いほど増加)<br>敵の数に応じ、クリティカルダメージ+60～180％(1～4体で少ないほど増加)<br>攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与し、アイテムゲージを{2}%回復<br>インレンジ時のスキル：{hyperlink_id 22}",
+            "effects": [
+              {
+                "id": 91001050,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001050,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001376,
+                "value": 2500,
+                "_detail": {
+                  "description": "魔攻アップ(2回)",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001376,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91002004,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002004,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91002028,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002028,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91000949,
+                "value": 9000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000949,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001616,
+                "value": 6000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001616,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001615,
+                "value": 12000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001615,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12002546,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "メイルシュトローム",
+            "not_state_change_count_decrease": false,
+            "power": 195,
+            "require_command_value": false,
+            "skill_destination": 12002391,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 5,
+            "state_change_visual_type": 4,
+            "still_path_hash": "2186025754385462788",
+            "summary": "敵の数に応じスキルダメージアップとクリティカルダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ<br>アイテムゲージを回復",
+            "timeline_hash": "8427938803245235590",
+            "wait": 0,
+            "target_name_ja": "ID:5",
+            "target_name_cn": "敌方全体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 14,
+            "break_power_type": 2,
+            "description": "敵の数に応じ、ダメージ+30～120％(1～4体で多いほど増加)<br>敵の数に応じ、クリティカルダメージ+60～180％(1～4体で少ないほど増加)<br>攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与し、アイテムゲージを{2}%回復<br>インレンジ時のスキル：{hyperlink_id 23}",
+            "effects": [
+              {
+                "id": 91001050,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001050,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001376,
+                "value": 2500,
+                "_detail": {
+                  "description": "魔攻アップ(2回)",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001376,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91002004,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002004,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91002028,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002028,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91000949,
+                "value": 9000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000949,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001616,
+                "value": 6000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001616,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001615,
+                "value": 12000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001615,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12002547,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "メイルシュトローム",
+            "not_state_change_count_decrease": false,
+            "power": 207,
+            "require_command_value": false,
+            "skill_destination": 12002392,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 5,
+            "state_change_visual_type": 4,
+            "still_path_hash": "2186025754385462788",
+            "summary": "敵の数に応じスキルダメージアップとクリティカルダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ<br>アイテムゲージを回復",
+            "timeline_hash": "8427938803245235590",
+            "wait": 0,
+            "target_name_ja": "ID:5",
+            "target_name_cn": "敌方全体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 15,
+            "break_power_type": 2,
+            "description": "敵の数に応じ、ダメージ+30～120％(1～4体で多いほど増加)<br>敵の数に応じ、クリティカルダメージ+60～180％(1～4体で少ないほど増加)<br>攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与し、アイテムゲージを{2}%回復<br>インレンジ時のスキル：{hyperlink_id 24}",
+            "effects": [
+              {
+                "id": 91001050,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001050,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001376,
+                "value": 2500,
+                "_detail": {
+                  "description": "魔攻アップ(2回)",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001376,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91002004,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002004,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91002028,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002028,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91000949,
+                "value": 9000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000949,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001616,
+                "value": 6000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001616,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001615,
+                "value": 12000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001615,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12002548,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "メイルシュトローム",
+            "not_state_change_count_decrease": false,
+            "power": 219,
+            "require_command_value": false,
+            "skill_destination": 12002393,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 5,
+            "state_change_visual_type": 4,
+            "still_path_hash": "2186025754385462788",
+            "summary": "敵の数に応じスキルダメージアップとクリティカルダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ<br>アイテムゲージを回復",
+            "timeline_hash": "8427938803245235590",
+            "wait": 0,
+            "target_name_ja": "ID:5",
+            "target_name_cn": "敌方全体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 16,
+            "break_power_type": 2,
+            "description": "敵の数に応じ、ダメージ+30～120％(1～4体で多いほど増加)<br>敵の数に応じ、クリティカルダメージ+60～180％(1～4体で少ないほど増加)<br>攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与し、アイテムゲージを{2}%回復<br>インレンジ時のスキル：{hyperlink_id 25}",
+            "effects": [
+              {
+                "id": 91001050,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001050,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001376,
+                "value": 2500,
+                "_detail": {
+                  "description": "魔攻アップ(2回)",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001376,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91002004,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002004,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91002028,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002028,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91000949,
+                "value": 9000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000949,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001616,
+                "value": 6000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001616,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001615,
+                "value": 12000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001615,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12002549,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "メイルシュトローム",
+            "not_state_change_count_decrease": false,
+            "power": 231,
+            "require_command_value": false,
+            "skill_destination": 12002394,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 5,
+            "state_change_visual_type": 4,
+            "still_path_hash": "2186025754385462788",
+            "summary": "敵の数に応じスキルダメージアップとクリティカルダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ<br>アイテムゲージを回復",
+            "timeline_hash": "8427938803245235590",
+            "wait": 0,
+            "target_name_ja": "ID:5",
+            "target_name_cn": "敌方全体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 17,
+            "break_power_type": 2,
+            "description": "敵の数に応じ、ダメージ+30～120％(1～4体で多いほど増加)<br>敵の数に応じ、クリティカルダメージ+60～180％(1～4体で少ないほど増加)<br>攻撃前、対象に「火属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与し、アイテムゲージを{2}%回復<br>インレンジ時のスキル：{hyperlink_id 26}",
+            "effects": [
+              {
+                "id": 91001050,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001050,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001376,
+                "value": 2500,
+                "_detail": {
+                  "description": "魔攻アップ(2回)",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001376,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91002004,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002004,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91002028,
+                "value": 3000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91002028,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91000949,
+                "value": 9000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000949,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001616,
+                "value": 6000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001616,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001615,
+                "value": 12000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001615,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12002550,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "メイルシュトローム",
+            "not_state_change_count_decrease": false,
+            "power": 243,
+            "require_command_value": false,
+            "skill_destination": 12002395,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 5,
+            "state_change_visual_type": 4,
+            "still_path_hash": "2186025754385462788",
+            "summary": "敵の数に応じスキルダメージアップとクリティカルダメージアップ<br>攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ<br>アイテムゲージを回復",
+            "timeline_hash": "8427938803245235590",
+            "wait": 0,
+            "target_name_ja": "ID:5",
+            "target_name_cn": "敌方全体"
+          }
+        ]
+      }
+    ]
+  }
+}

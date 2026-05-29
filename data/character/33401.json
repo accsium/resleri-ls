@@ -1,0 +1,1618 @@
+{
+  "id": 33401,
+  "attack_attributes": [
+    7
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 5,
+  "support_color_id": 1,
+  "trait_color_name_ja": "緑",
+  "trait_color_name_cn": "绿",
+  "support_color_name_ja": "青",
+  "support_color_name_cn": "蓝",
+  "battle_tool_trait_names_ja": [
+    "魔力の呪詛",
+    "魔力の祝福"
+  ],
+  "battle_tool_trait_names_cn": [
+    "魔力之诅咒",
+    "魔力之祝福"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "物理耐性上昇【D】"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "物理耐性提升【D】"
+  ],
+  "battle_tool_trait_ids": [
+    17,
+    5
+  ],
+  "equipment_tool_trait_ids": [
+    43
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980054,
+        "combat_power_coefficient": 2500,
+        "condition_ids": [
+          51
+        ]
+      }
+    ],
+    "description": "「キルヘン・ベル」は「物攻・魔攻・物防・魔防+15%」",
+    "name": "ぐるこん一級"
+  },
+  "ability_ids": [
+    1990040,
+    1990041
+  ],
+  "support_ability_ids": [
+    500643,
+    500637,
+    500631,
+    500625,
+    500619,
+    500613,
+    500607,
+    500601
+  ],
+  "_skillDetails": {
+    "500601": {
+      "id": 500601,
+      "description": "「ハルフェン復興隊」の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500077,
+          "limit_count": null,
+          "value": 2300,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500077,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500607": {
+      "id": 500607,
+      "description": "「ハルフェン復興隊」の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500077,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500077,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500613": {
+      "id": 500613,
+      "description": "「ハルフェン復興隊」の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500077,
+          "limit_count": null,
+          "value": 1700,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500077,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500619": {
+      "id": 500619,
+      "description": "「ハルフェン復興隊」の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500077,
+          "limit_count": null,
+          "value": 1400,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500077,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500625": {
+      "id": 500625,
+      "description": "「ハルフェン復興隊」の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500077,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500077,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500631": {
+      "id": 500631,
+      "description": "「ハルフェン復興隊」の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500077,
+          "limit_count": null,
+          "value": 1200,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500077,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500637": {
+      "id": 500637,
+      "description": "「ハルフェン復興隊」の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500077,
+          "limit_count": null,
+          "value": 1100,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500077,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500643": {
+      "id": 500643,
+      "description": "「ハルフェン復興隊」の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500077,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500077,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980054": {
+      "name": "ぐるこん一級",
+      "id": 1980054,
+      "description": "物攻・魔攻・物防・魔防+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500002,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/物攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500002,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500003,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/魔攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500003,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500004,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500005,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990040": {
+      "name": "援護はお願い！",
+      "id": 1990040,
+      "description": "敵にとても狙われやすくなる<br>受けるHP回復量+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001066,
+          "limit_count": null,
+          "value": 500,
+          "_detail": {
+            "description": "[自身/受ける回復量UP付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001066,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72000913,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "狙われやすさ+100％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000913,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990041": {
+      "name": "レジストアップ毒",
+      "id": 1990041,
+      "description": "毒耐性+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001062,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/毒耐性上昇付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001062,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990398": {
+      "name": "ガードアップⅢ",
+      "id": 1990398,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001415,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001415,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990423": {
+      "name": "ガードアップⅡ",
+      "id": 1990423,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001415,
+          "limit_count": null,
+          "value": 600,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001415,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990448": {
+      "name": "ガードアップⅠ",
+      "id": 1990448,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001415,
+          "limit_count": null,
+          "value": 300,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001415,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11000166": {
+      "name": "ソフィアブロウ",
+      "id": 11000166,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、自身のHPに応じ、自身のHPを0〜30%回復(HP25〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91001027,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001027,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 45,
+      "break_power": 5
+    },
+    "11000167": {
+      "name": "ソフィアブロウ",
+      "id": 11000167,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、自身のHPに応じ、自身のHPを0〜30%回復(HP25〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91001027,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001027,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 47,
+      "break_power": 5
+    },
+    "11000168": {
+      "name": "ソフィアブロウ",
+      "id": 11000168,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、自身のHPに応じ、自身のHPを0〜30%回復(HP25〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91001027,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001027,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 50,
+      "break_power": 5
+    },
+    "11000169": {
+      "name": "ソフィアブロウ",
+      "id": 11000169,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、自身のHPに応じ、自身のHPを0〜30%回復(HP25〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91001027,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001027,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 53,
+      "break_power": 5
+    },
+    "11000170": {
+      "name": "ソフィアブロウ",
+      "id": 11000170,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、自身のHPに応じ、自身のHPを0〜30%回復(HP25〜100%で少ないほど増加)",
+      "effects": [
+        {
+          "id": 91001027,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001027,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 56,
+      "break_power": 6
+    },
+    "12000171": {
+      "name": "フォースブレイク",
+      "id": 12000171,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 182,
+      "break_power": 25
+    },
+    "12000172": {
+      "name": "フォースブレイク",
+      "id": 12000172,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 193,
+      "break_power": 26
+    },
+    "12000173": {
+      "name": "フォースブレイク",
+      "id": 12000173,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 204,
+      "break_power": 28
+    },
+    "12000174": {
+      "name": "フォースブレイク",
+      "id": 12000174,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 215,
+      "break_power": 29
+    },
+    "12000175": {
+      "name": "フォースブレイク",
+      "id": 12000175,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 227,
+      "break_power": 31
+    },
+    "14000176": {
+      "name": "百科繚乱の法",
+      "id": 14000176,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 400,
+      "break_power": 75
+    },
+    "14000177": {
+      "name": "百科繚乱の法",
+      "id": 14000177,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 425,
+      "break_power": 79
+    },
+    "14000178": {
+      "name": "百科繚乱の法",
+      "id": 14000178,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 450,
+      "break_power": 84
+    },
+    "14000179": {
+      "name": "百科繚乱の法",
+      "id": 14000179,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 475,
+      "break_power": 88
+    },
+    "14000180": {
+      "name": "百科繚乱の法",
+      "id": 14000180,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001014,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001014,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 500,
+      "break_power": 93
+    }
+  },
+  "initial_wt": 225,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPに応じ、自身のHPを0〜30%回復(HP25〜100%で少ないほど増加)",
+          "effects": [
+            {
+              "id": 91001027,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001027,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000166,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ソフィアブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 45,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPが少ないほど自身のHPを回復",
+          "timeline_hash": "7287856173073013234",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPに応じ、自身のHPを0〜30%回復(HP25〜100%で少ないほど増加)",
+          "effects": [
+            {
+              "id": 91001027,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001027,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000167,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ソフィアブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 47,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPが少ないほど自身のHPを回復",
+          "timeline_hash": "7287856173073013234",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPに応じ、自身のHPを0〜30%回復(HP25〜100%で少ないほど増加)",
+          "effects": [
+            {
+              "id": 91001027,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001027,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000168,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ソフィアブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 50,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPが少ないほど自身のHPを回復",
+          "timeline_hash": "7287856173073013234",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPに応じ、自身のHPを0〜30%回復(HP25〜100%で少ないほど増加)",
+          "effects": [
+            {
+              "id": 91001027,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001027,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000169,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ソフィアブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 53,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPが少ないほど自身のHPを回復",
+          "timeline_hash": "7287856173073013234",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPに応じ、自身のHPを0〜30%回復(HP25〜100%で少ないほど増加)",
+          "effects": [
+            {
+              "id": 91001027,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001027,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000170,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ソフィアブロウ",
+          "not_state_change_count_decrease": false,
+          "power": 56,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPが少ないほど自身のHPを回復",
+          "timeline_hash": "7287856173073013234",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 25,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001014,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001014,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000171,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フォースブレイク",
+          "not_state_change_count_decrease": false,
+          "power": 182,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の全属性耐性ダウン",
+          "timeline_hash": "4400957864027401826",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 26,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001014,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001014,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000172,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フォースブレイク",
+          "not_state_change_count_decrease": false,
+          "power": 193,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の全属性耐性ダウン",
+          "timeline_hash": "4400957864027401826",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 28,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001014,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001014,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000173,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フォースブレイク",
+          "not_state_change_count_decrease": false,
+          "power": 204,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の全属性耐性ダウン",
+          "timeline_hash": "4400957864027401826",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 29,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001014,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001014,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000174,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フォースブレイク",
+          "not_state_change_count_decrease": false,
+          "power": 215,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の全属性耐性ダウン",
+          "timeline_hash": "4400957864027401826",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001014,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001014,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000175,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フォースブレイク",
+          "not_state_change_count_decrease": false,
+          "power": 227,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の全属性耐性ダウン",
+          "timeline_hash": "4400957864027401826",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001014,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001014,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000176,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "百科繚乱の法",
+          "not_state_change_count_decrease": false,
+          "power": 400,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7602040502513459427",
+          "summary": "攻撃後、対象の全属性耐性ダウン",
+          "timeline_hash": "8436212886310011805",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001014,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001014,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000177,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "百科繚乱の法",
+          "not_state_change_count_decrease": false,
+          "power": 425,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7602040502513459427",
+          "summary": "攻撃後、対象の全属性耐性ダウン",
+          "timeline_hash": "8436212886310011805",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001014,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001014,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000178,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "百科繚乱の法",
+          "not_state_change_count_decrease": false,
+          "power": 450,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7602040502513459427",
+          "summary": "攻撃後、対象の全属性耐性ダウン",
+          "timeline_hash": "8436212886310011805",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001014,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001014,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000179,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "百科繚乱の法",
+          "not_state_change_count_decrease": false,
+          "power": 475,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7602040502513459427",
+          "summary": "攻撃後、対象の全属性耐性ダウン",
+          "timeline_hash": "8436212886310011805",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「全属性耐性-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001014,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001014,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000180,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "百科繚乱の法",
+          "not_state_change_count_decrease": false,
+          "power": 500,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7602040502513459427",
+          "summary": "攻撃後、対象の全属性耐性ダウン",
+          "timeline_hash": "8436212886310011805",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ]
+}

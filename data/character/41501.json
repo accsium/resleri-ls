@@ -1,0 +1,2736 @@
+{
+  "id": 41501,
+  "attack_attributes": [
+    1
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 1,
+  "support_color_id": 3,
+  "trait_color_name_ja": "青",
+  "trait_color_name_cn": "蓝",
+  "support_color_name_ja": "黄",
+  "support_color_name_cn": "黄",
+  "battle_tool_trait_names_ja": [
+    "物防の祝福",
+    "単体回復ボーナス"
+  ],
+  "battle_tool_trait_names_cn": [
+    "物防之祝福",
+    "单体恢复奖励"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "全耐性上昇【背水】"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "全耐性提升【残血】"
+  ],
+  "battle_tool_trait_ids": [
+    12,
+    45
+  ],
+  "equipment_tool_trait_ids": [
+    34
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980072,
+        "combat_power_coefficient": 1500,
+        "condition_ids": [
+          37
+        ]
+      }
+    ],
+    "description": "「季節の装い」は「物攻・魔攻・物防・魔防+15%」",
+    "name": "星誕祭のプレゼント"
+  },
+  "ability_ids": [
+    1990134,
+    1990135
+  ],
+  "support_ability_ids": [
+    500397,
+    500341,
+    500285,
+    500229,
+    500173,
+    500117,
+    500061,
+    500005
+  ],
+  "_exSkills": [
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000816,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "カウンター(雪抜剣)",
+      "not_state_change_count_decrease": false,
+      "power": 58,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の受けるダメージダウン<br>自身のHPを回復",
+      "timeline_hash": "568211328090412231",
+      "wait": -100,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000817,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "カウンター(雪抜剣)",
+      "not_state_change_count_decrease": false,
+      "power": 61,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の受けるダメージダウン<br>自身のHPを回復",
+      "timeline_hash": "568211328090412231",
+      "wait": -100,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000818,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "カウンター(雪抜剣)",
+      "not_state_change_count_decrease": false,
+      "power": 65,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の受けるダメージダウン<br>自身のHPを回復",
+      "timeline_hash": "568211328090412231",
+      "wait": -100,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 6,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000819,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "カウンター(雪抜剣)",
+      "not_state_change_count_decrease": false,
+      "power": 68,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の受けるダメージダウン<br>自身のHPを回復",
+      "timeline_hash": "568211328090412231",
+      "wait": -100,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体"
+    },
+    {
+      "attack_attribute_category": 1,
+      "attack_attributes": [
+        1
+      ],
+      "break_power": 7,
+      "break_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14000820,
+      "is_restrict_after_skill_timing_effects": false,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "カウンター(雪抜剣)",
+      "not_state_change_count_decrease": false,
+      "power": 72,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "787735710988328316",
+      "summary": "攻撃後、自身の受けるダメージダウン<br>自身のHPを回復",
+      "timeline_hash": "568211328090412231",
+      "wait": -100,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体"
+    }
+  ],
+  "_skillDetails": {
+    "500005": {
+      "id": 500005,
+      "description": "得意属性が斬属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50005,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500094,
+          "limit_count": null,
+          "value": 15525,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500094,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500061": {
+      "id": 500061,
+      "description": "得意属性が斬属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50005,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500094,
+          "limit_count": null,
+          "value": 13500,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500094,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500117": {
+      "id": 500117,
+      "description": "得意属性が斬属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50005,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500094,
+          "limit_count": null,
+          "value": 11475,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500094,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500173": {
+      "id": 500173,
+      "description": "得意属性が斬属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50005,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500094,
+          "limit_count": null,
+          "value": 9450,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500094,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500229": {
+      "id": 500229,
+      "description": "得意属性が斬属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50005,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500094,
+          "limit_count": null,
+          "value": 8775,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500094,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500285": {
+      "id": 500285,
+      "description": "得意属性が斬属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50005,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500094,
+          "limit_count": null,
+          "value": 8100,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500094,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500341": {
+      "id": 500341,
+      "description": "得意属性が斬属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50005,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500094,
+          "limit_count": null,
+          "value": 7425,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500094,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500397": {
+      "id": 500397,
+      "description": "得意属性が斬属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 50005,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 50005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500094,
+          "limit_count": null,
+          "value": 6750,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が斬属性の時、スキルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500094,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980072": {
+      "name": "星誕祭のプレゼント",
+      "id": 1980072,
+      "description": "物攻・魔攻・物防・魔防+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500002,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/物攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500002,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500003,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/魔攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500003,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500004,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500005,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990134": {
+      "name": "使者の転身",
+      "id": 1990134,
+      "description": "敵にとても狙われやすくなる\nカウンターを成功させた時、自身に「受けるダメージ-{0}%」を付与(上限20%)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000939,
+          "limit_count": null,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000939,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72000914,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "狙われやすさ+100％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000914,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990135": {
+      "name": "レジストアップ暗闇",
+      "id": 1990135,
+      "description": "暗闇耐性+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001064,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/暗闇耐性上昇付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990399": {
+      "name": "アタックダメージダウンⅢ",
+      "id": 1990399,
+      "description": "攻撃後、対象に「与えるダメージ-{0}%」(固定)を1回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001416,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "攻撃後、対象に「与えるダメージ-{0}%」(固定)を1回行動終了するまで付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001416,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990424": {
+      "name": "アタックダメージダウンⅡ",
+      "id": 1990424,
+      "description": "攻撃後、対象に「与えるダメージ-{0}%」(固定)を1回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001416,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "攻撃後、対象に「与えるダメージ-{0}%」(固定)を1回行動終了するまで付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001416,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990449": {
+      "name": "アタックダメージダウンⅠ",
+      "id": 1990449,
+      "description": "攻撃後、対象に「与えるダメージ-{0}%」(固定)を1回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001416,
+          "limit_count": null,
+          "value": 600,
+          "_detail": {
+            "description": "攻撃後、対象に「与えるダメージ-{0}%」(固定)を1回行動終了するまで付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001416,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11000796": {
+      "name": "雪抜剣",
+      "id": 11000796,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 58,
+      "break_power": 6
+    },
+    "11000797": {
+      "name": "雪抜剣",
+      "id": 11000797,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 61,
+      "break_power": 6
+    },
+    "11000798": {
+      "name": "雪抜剣",
+      "id": 11000798,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 65,
+      "break_power": 6
+    },
+    "11000799": {
+      "name": "雪抜剣",
+      "id": 11000799,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 68,
+      "break_power": 6
+    },
+    "11000800": {
+      "name": "雪抜剣",
+      "id": 11000800,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 72,
+      "break_power": 7
+    },
+    "12000786": {
+      "name": "雪花の型",
+      "id": 12000786,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>自身に「カウンター(雪抜剣)」を2回カウンターするまで付与(重複不可)",
+      "effects": [
+        {
+          "id": 91000997,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000997,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001086,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001086,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 197,
+      "break_power": 29
+    },
+    "12000787": {
+      "name": "雪花の型",
+      "id": 12000787,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>自身に「カウンター(雪抜剣)」を2回カウンターするまで付与(重複不可)",
+      "effects": [
+        {
+          "id": 91000997,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000997,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001087,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001087,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 209,
+      "break_power": 30
+    },
+    "12000788": {
+      "name": "雪花の型",
+      "id": 12000788,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>自身に「カウンター(雪抜剣)」を2回カウンターするまで付与(重複不可)",
+      "effects": [
+        {
+          "id": 91000997,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000997,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001088,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001088,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 221,
+      "break_power": 32
+    },
+    "12000789": {
+      "name": "雪花の型",
+      "id": 12000789,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>自身に「カウンター(雪抜剣)」を2回カウンターするまで付与(重複不可)",
+      "effects": [
+        {
+          "id": 91000997,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000997,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001089,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001089,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 233,
+      "break_power": 34
+    },
+    "12000790": {
+      "name": "雪花の型",
+      "id": 12000790,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>自身に「カウンター(雪抜剣)」を2回カウンターするまで付与(重複不可)",
+      "effects": [
+        {
+          "id": 91000997,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000997,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001090,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001090,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 246,
+      "break_power": 36
+    },
+    "14000811": {
+      "name": "フローレスブリザード",
+      "id": 14000811,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 400,
+      "break_power": 75
+    },
+    "14000812": {
+      "name": "フローレスブリザード",
+      "id": 14000812,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 425,
+      "break_power": 79
+    },
+    "14000813": {
+      "name": "フローレスブリザード",
+      "id": 14000813,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 450,
+      "break_power": 84
+    },
+    "14000814": {
+      "name": "フローレスブリザード",
+      "id": 14000814,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 475,
+      "break_power": 88
+    },
+    "14000815": {
+      "name": "フローレスブリザード",
+      "id": 14000815,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001007,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 500,
+      "break_power": 93
+    },
+    "14000816": {
+      "name": "カウンター(雪抜剣)",
+      "id": 14000816,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 58,
+      "break_power": 6
+    },
+    "14000817": {
+      "name": "カウンター(雪抜剣)",
+      "id": 14000817,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 61,
+      "break_power": 6
+    },
+    "14000818": {
+      "name": "カウンター(雪抜剣)",
+      "id": 14000818,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 65,
+      "break_power": 6
+    },
+    "14000819": {
+      "name": "カウンター(雪抜剣)",
+      "id": 14000819,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 68,
+      "break_power": 6
+    },
+    "14000820": {
+      "name": "カウンター(雪抜剣)",
+      "id": 14000820,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001038,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001038,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000926,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000926,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 72,
+      "break_power": 7
+    }
+  },
+  "initial_wt": 238,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001038,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001038,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000926,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000796,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪抜剣",
+          "not_state_change_count_decrease": false,
+          "power": 58,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の受けるダメージダウン<br>自身のHPを回復",
+          "timeline_hash": "2008902670252904800",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001038,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001038,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000926,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000797,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪抜剣",
+          "not_state_change_count_decrease": false,
+          "power": 61,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の受けるダメージダウン<br>自身のHPを回復",
+          "timeline_hash": "2008902670252904800",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001038,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001038,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000926,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000798,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪抜剣",
+          "not_state_change_count_decrease": false,
+          "power": 65,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の受けるダメージダウン<br>自身のHPを回復",
+          "timeline_hash": "2008902670252904800",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001038,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001038,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000926,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000799,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪抜剣",
+          "not_state_change_count_decrease": false,
+          "power": 68,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の受けるダメージダウン<br>自身のHPを回復",
+          "timeline_hash": "2008902670252904800",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与し、<br>自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001038,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001038,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000926,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000800,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪抜剣",
+          "not_state_change_count_decrease": false,
+          "power": 72,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の受けるダメージダウン<br>自身のHPを回復",
+          "timeline_hash": "2008902670252904800",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 29,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>自身に「カウンター(雪抜剣)」を2回カウンターするまで付与(重複不可)",
+          "effects": [
+            {
+              "id": 91000997,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000997,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001086,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001086,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000786,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪花の型",
+          "not_state_change_count_decrease": false,
+          "power": 197,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の受けるダメージダウン<br>攻撃後、自身にカウンターを付与",
+          "timeline_hash": "4886954364980504308",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>自身に「カウンター(雪抜剣)」を2回カウンターするまで付与(重複不可)",
+          "effects": [
+            {
+              "id": 91000997,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000997,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001087,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001087,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000787,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪花の型",
+          "not_state_change_count_decrease": false,
+          "power": 209,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の受けるダメージダウン<br>攻撃後、自身にカウンターを付与",
+          "timeline_hash": "4886954364980504308",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 32,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>自身に「カウンター(雪抜剣)」を2回カウンターするまで付与(重複不可)",
+          "effects": [
+            {
+              "id": 91000997,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000997,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001088,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001088,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000788,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪花の型",
+          "not_state_change_count_decrease": false,
+          "power": 221,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の受けるダメージダウン<br>攻撃後、自身にカウンターを付与",
+          "timeline_hash": "4886954364980504308",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 34,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>自身に「カウンター(雪抜剣)」を2回カウンターするまで付与(重複不可)",
+          "effects": [
+            {
+              "id": 91000997,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000997,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001089,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001089,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000789,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪花の型",
+          "not_state_change_count_decrease": false,
+          "power": 233,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の受けるダメージダウン<br>攻撃後、自身にカウンターを付与",
+          "timeline_hash": "4886954364980504308",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 36,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>自身に「カウンター(雪抜剣)」を2回カウンターするまで付与(重複不可)",
+          "effects": [
+            {
+              "id": 91000997,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000997,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001090,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001090,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000790,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雪花の型",
+          "not_state_change_count_decrease": false,
+          "power": 246,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の受けるダメージダウン<br>攻撃後、自身にカウンターを付与",
+          "timeline_hash": "4886954364980504308",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000926,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000811,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フローレスブリザード",
+          "not_state_change_count_decrease": false,
+          "power": 400,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4939914438376157769",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを回復",
+          "timeline_hash": "8629863849012663502",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000926,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000812,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フローレスブリザード",
+          "not_state_change_count_decrease": false,
+          "power": 425,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4939914438376157769",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを回復",
+          "timeline_hash": "8629863849012663502",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000926,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000813,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フローレスブリザード",
+          "not_state_change_count_decrease": false,
+          "power": 450,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4939914438376157769",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを回復",
+          "timeline_hash": "8629863849012663502",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000926,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000814,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フローレスブリザード",
+          "not_state_change_count_decrease": false,
+          "power": 475,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4939914438376157769",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを回復",
+          "timeline_hash": "8629863849012663502",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除し、<br>攻撃後、自身のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001007,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000926,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000926,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000815,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フローレスブリザード",
+          "not_state_change_count_decrease": false,
+          "power": 500,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4939914438376157769",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを回復",
+          "timeline_hash": "8629863849012663502",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ]
+}

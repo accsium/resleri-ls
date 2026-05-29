@@ -1,0 +1,2484 @@
+{
+  "id": 40004,
+  "attack_attributes": [
+    3
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 5,
+  "support_color_id": 4,
+  "trait_color_name_ja": "緑",
+  "trait_color_name_cn": "绿",
+  "support_color_name_ja": "赤",
+  "support_color_name_cn": "红",
+  "battle_tool_trait_names_ja": [
+    "突の祝福",
+    "使い切り回復強化"
+  ],
+  "battle_tool_trait_names_cn": [
+    "突刺之祝福",
+    "一次性恢复强化"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "属性耐性ダウン強化【突】"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "属性耐性下降强化【突刺】"
+  ],
+  "battle_tool_trait_ids": [
+    4,
+    47
+  ],
+  "equipment_tool_trait_ids": [
+    70
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980176,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          12
+        ]
+      }
+    ],
+    "description": "味方全員は「クーケン島」1人につき「物攻・魔攻+10%」",
+    "name": "あの夏の思い出を胸に"
+  },
+  "ability_ids": [
+    1990294,
+    1990295
+  ],
+  "support_ability_ids": [
+    500441,
+    500385,
+    500329,
+    500273,
+    500217,
+    500161,
+    500105,
+    500049
+  ],
+  "_skillDetails": {
+    "500049": {
+      "id": 500049,
+      "description": "得意属性が突属性の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500049,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500049,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500105": {
+      "id": 500105,
+      "description": "得意属性が突属性の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500049,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500049,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500161": {
+      "id": 500161,
+      "description": "得意属性が突属性の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500049,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500049,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500217": {
+      "id": 500217,
+      "description": "得意属性が突属性の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500049,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500049,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500273": {
+      "id": 500273,
+      "description": "得意属性が突属性の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500049,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500049,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500329": {
+      "id": 500329,
+      "description": "得意属性が突属性の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500049,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500049,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500385": {
+      "id": 500385,
+      "description": "得意属性が突属性の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500049,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500049,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500441": {
+      "id": 500441,
+      "description": "得意属性が突属性の時、受けるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500049,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が突属性の時、受けるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500049,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980176": {
+      "name": "あの夏の思い出を胸に",
+      "id": 1980176,
+      "description": "「クーケン島」1人につき「物攻・魔攻+{0}%」",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500158,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クーケン島が多いほど/物攻アップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500158,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500159,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クーケン島が多いほど/魔攻アップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500159,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990294": {
+      "name": "弓使いの心得",
+      "id": 1990294,
+      "description": "味方全員の物攻+{0}%<br>味方全員のスキルダメージ+{1}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000907,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[味方全体/常時/物攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000907,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72000922,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000922,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990295": {
+      "name": "補助の一矢",
+      "id": 1990295,
+      "description": "スキル発動後、アイテムゲージを{0}%回復",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001085,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[アイテムゲージ回復]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001085,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990393": {
+      "name": "クリティカルダメージアップオールⅢ",
+      "id": 1990393,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990418": {
+      "name": "クリティカルダメージアップオールⅡ",
+      "id": 1990418,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990443": {
+      "name": "クリティカルダメージアップオールⅠ",
+      "id": 1990443,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 600,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11002214": {
+      "name": "クイックショット",
+      "id": 11002214,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、味方全員に「物攻+{0}%」を付与(上限40%)し、<br>対象に「受ける突属性ダメージ+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001551,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001551,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001521,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001521,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 47,
+      "break_power": 5
+    },
+    "11002215": {
+      "name": "クイックショット",
+      "id": 11002215,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、味方全員に「物攻+{0}%」を付与(上限40%)し、<br>対象に「受ける突属性ダメージ+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001551,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001551,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001521,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001521,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 49,
+      "break_power": 5
+    },
+    "11002216": {
+      "name": "クイックショット",
+      "id": 11002216,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、味方全員に「物攻+{0}%」を付与(上限40%)し、<br>対象に「受ける突属性ダメージ+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001551,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001551,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001521,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001521,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 52,
+      "break_power": 5
+    },
+    "11002217": {
+      "name": "クイックショット",
+      "id": 11002217,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、味方全員に「物攻+{0}%」を付与(上限40%)し、<br>対象に「受ける突属性ダメージ+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001551,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001551,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001521,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001521,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 55,
+      "break_power": 5
+    },
+    "11002218": {
+      "name": "クイックショット",
+      "id": 11002218,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、味方全員に「物攻+{0}%」を付与(上限40%)し、<br>対象に「受ける突属性ダメージ+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001551,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001551,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001521,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001521,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 58,
+      "break_power": 6
+    },
+    "12002219": {
+      "name": "ホワイトアリアff",
+      "id": 12002219,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        3
+      ],
+      "description": "得意属性が突属性の味方全員に「物攻+{0}%」と「突属性ダメージ+{1}%」を2回行動終了するまで付与し、<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001520,
+          "value": 3600,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001520,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001522,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001522,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001321,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001321,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 0,
+      "break_power": 0
+    },
+    "12002220": {
+      "name": "ホワイトアリアff",
+      "id": 12002220,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        3
+      ],
+      "description": "得意属性が突属性の味方全員に「物攻+{0}%」と「突属性ダメージ+{1}%」を2回行動終了するまで付与し、<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001520,
+          "value": 3700,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001520,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001522,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001522,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001321,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001321,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 0,
+      "break_power": 0
+    },
+    "12002221": {
+      "name": "ホワイトアリアff",
+      "id": 12002221,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        3
+      ],
+      "description": "得意属性が突属性の味方全員に「物攻+{0}%」と「突属性ダメージ+{1}%」を2回行動終了するまで付与し、<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001520,
+          "value": 3800,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001520,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001522,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001522,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001321,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001321,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 0,
+      "break_power": 0
+    },
+    "12002222": {
+      "name": "ホワイトアリアff",
+      "id": 12002222,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        3
+      ],
+      "description": "得意属性が突属性の味方全員に「物攻+{0}%」と「突属性ダメージ+{1}%」を2回行動終了するまで付与し、<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001520,
+          "value": 3900,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001520,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001522,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001522,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001321,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001321,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 0,
+      "break_power": 0
+    },
+    "12002223": {
+      "name": "ホワイトアリアff",
+      "id": 12002223,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        3
+      ],
+      "description": "得意属性が突属性の味方全員に「物攻+{0}%」と「突属性ダメージ+{1}%」を2回行動終了するまで付与し、<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001520,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001520,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001522,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001522,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001321,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001321,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 0,
+      "break_power": 0
+    },
+    "14002224": {
+      "name": "ラスト・リ・ステージ",
+      "id": 14002224,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「物攻+{1}%」と「クリティカル確率＋{2}％」と「クリティカルダメージ+{3}％」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001540,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001540,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001523,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001523,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001524,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001524,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001525,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001525,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 252,
+      "break_power": 30
+    },
+    "14002225": {
+      "name": "ラスト・リ・ステージ",
+      "id": 14002225,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「物攻+{1}%」と「クリティカル確率＋{2}％」と「クリティカルダメージ+{3}％」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001540,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001540,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001523,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001523,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001524,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001524,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001525,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001525,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 267,
+      "break_power": 31
+    },
+    "14002226": {
+      "name": "ラスト・リ・ステージ",
+      "id": 14002226,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「物攻+{1}%」と「クリティカル確率＋{2}％」と「クリティカルダメージ+{3}％」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001540,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001540,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001523,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001523,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001524,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001524,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001525,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001525,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 283,
+      "break_power": 33
+    },
+    "14002227": {
+      "name": "ラスト・リ・ステージ",
+      "id": 14002227,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「物攻+{1}%」と「クリティカル確率＋{2}％」と「クリティカルダメージ+{3}％」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001540,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001540,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001523,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001523,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001524,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001524,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001525,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001525,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 299,
+      "break_power": 35
+    },
+    "14002228": {
+      "name": "ラスト・リ・ステージ",
+      "id": 14002228,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「物攻+{1}%」と「クリティカル確率＋{2}％」と「クリティカルダメージ+{3}％」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001540,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001540,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001523,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001523,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001524,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001524,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001525,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001525,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 315,
+      "break_power": 37
+    }
+  },
+  "initial_wt": 221,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「物攻+{0}%」を付与(上限40%)し、<br>対象に「受ける突属性ダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001551,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001551,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001521,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001521,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002214,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クイックショット",
+          "not_state_change_count_decrease": false,
+          "power": 47,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、味方全員の物攻アップ<br>対象の受ける突属性ダメージアップ",
+          "timeline_hash": "7989939495722121548",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「物攻+{0}%」を付与(上限40%)し、<br>対象に「受ける突属性ダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001551,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001551,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001521,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001521,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002215,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クイックショット",
+          "not_state_change_count_decrease": false,
+          "power": 49,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、味方全員の物攻アップ<br>対象の受ける突属性ダメージアップ",
+          "timeline_hash": "7989939495722121548",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「物攻+{0}%」を付与(上限40%)し、<br>対象に「受ける突属性ダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001551,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001551,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001521,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001521,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002216,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クイックショット",
+          "not_state_change_count_decrease": false,
+          "power": 52,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、味方全員の物攻アップ<br>対象の受ける突属性ダメージアップ",
+          "timeline_hash": "7989939495722121548",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「物攻+{0}%」を付与(上限40%)し、<br>対象に「受ける突属性ダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001551,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001551,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001521,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001521,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002217,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クイックショット",
+          "not_state_change_count_decrease": false,
+          "power": 55,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、味方全員の物攻アップ<br>対象の受ける突属性ダメージアップ",
+          "timeline_hash": "7989939495722121548",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「物攻+{0}%」を付与(上限40%)し、<br>対象に「受ける突属性ダメージ+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001551,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001551,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001521,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001521,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002218,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "クイックショット",
+          "not_state_change_count_decrease": false,
+          "power": 58,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、味方全員の物攻アップ<br>対象の受ける突属性ダメージアップ",
+          "timeline_hash": "7989939495722121548",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "得意属性が突属性の味方全員に「物攻+{0}%」と「突属性ダメージ+{1}%」を2回行動終了するまで付与し、<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001520,
+              "value": 3600,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001520,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001522,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001522,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001321,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001321,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002219,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ホワイトアリアff",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "得意属性が突属性の味方全員の物攻アップと突属性ダメージアップ<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換",
+          "timeline_hash": "3949950357002931936",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "得意属性が突属性の味方全員に「物攻+{0}%」と「突属性ダメージ+{1}%」を2回行動終了するまで付与し、<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001520,
+              "value": 3700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001520,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001522,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001522,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001321,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001321,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002220,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ホワイトアリアff",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "得意属性が突属性の味方全員の物攻アップと突属性ダメージアップ<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換",
+          "timeline_hash": "3949950357002931936",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "得意属性が突属性の味方全員に「物攻+{0}%」と「突属性ダメージ+{1}%」を2回行動終了するまで付与し、<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001520,
+              "value": 3800,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001520,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001522,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001522,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001321,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001321,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002221,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ホワイトアリアff",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "得意属性が突属性の味方全員の物攻アップと突属性ダメージアップ<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換",
+          "timeline_hash": "3949950357002931936",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "得意属性が突属性の味方全員に「物攻+{0}%」と「突属性ダメージ+{1}%」を2回行動終了するまで付与し、<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001520,
+              "value": 3900,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001520,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001522,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001522,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001321,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001321,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002222,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ホワイトアリアff",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "得意属性が突属性の味方全員の物攻アップと突属性ダメージアップ<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換",
+          "timeline_hash": "3949950357002931936",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "得意属性が突属性の味方全員に「物攻+{0}%」と「突属性ダメージ+{1}%」を2回行動終了するまで付与し、<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001520,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001520,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001522,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001522,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001321,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001321,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002223,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ホワイトアリアff",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "7357618363648308635",
+          "summary": "得意属性が突属性の味方全員の物攻アップと突属性ダメージアップ<br>味方のクリティカル系パネルとバーストパネルを除いたパネル1つをクリティカルパネルに変換",
+          "timeline_hash": "3949950357002931936",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「物攻+{1}%」と「クリティカル確率＋{2}％」と「クリティカルダメージ+{3}％」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001540,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001540,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001523,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001523,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001524,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001524,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001525,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001525,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002224,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ラスト・リ・ステージ",
+          "not_state_change_count_decrease": false,
+          "power": 252,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2734046315644163542",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ<br>得意属性が突属性の味方全員の物攻アップとクリティカル確率アップとクリティカルダメージアップ",
+          "timeline_hash": "9072289999113428770",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「物攻+{1}%」と「クリティカル確率＋{2}％」と「クリティカルダメージ+{3}％」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001540,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001540,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001523,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001523,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001524,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001524,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001525,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001525,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002225,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ラスト・リ・ステージ",
+          "not_state_change_count_decrease": false,
+          "power": 267,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2734046315644163542",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ<br>得意属性が突属性の味方全員の物攻アップとクリティカル確率アップとクリティカルダメージアップ",
+          "timeline_hash": "9072289999113428770",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「物攻+{1}%」と「クリティカル確率＋{2}％」と「クリティカルダメージ+{3}％」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001540,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001540,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001523,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001523,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001524,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001524,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001525,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001525,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002226,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ラスト・リ・ステージ",
+          "not_state_change_count_decrease": false,
+          "power": 283,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2734046315644163542",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ<br>得意属性が突属性の味方全員の物攻アップとクリティカル確率アップとクリティカルダメージアップ",
+          "timeline_hash": "9072289999113428770",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「物攻+{1}%」と「クリティカル確率＋{2}％」と「クリティカルダメージ+{3}％」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001540,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001540,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001523,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001523,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001524,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001524,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001525,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001525,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002227,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ラスト・リ・ステージ",
+          "not_state_change_count_decrease": false,
+          "power": 299,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2734046315644163542",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ<br>得意属性が突属性の味方全員の物攻アップとクリティカル確率アップとクリティカルダメージアップ",
+          "timeline_hash": "9072289999113428770",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回行動終了するまで付与し、<br>得意属性が突属性の味方全員に「物攻+{1}%」と「クリティカル確率＋{2}％」と「クリティカルダメージ+{3}％」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001540,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001540,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001523,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001523,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001524,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001524,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001525,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001525,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002228,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ラスト・リ・ステージ",
+          "not_state_change_count_decrease": false,
+          "power": 315,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2734046315644163542",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ<br>得意属性が突属性の味方全員の物攻アップとクリティカル確率アップとクリティカルダメージアップ",
+          "timeline_hash": "9072289999113428770",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        }
+      ]
+    }
+  ]
+}

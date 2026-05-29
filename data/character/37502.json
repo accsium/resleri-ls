@@ -1,0 +1,2051 @@
+{
+  "id": 37502,
+  "attack_attributes": [
+    3
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 1,
+  "support_color_id": 4,
+  "trait_color_name_ja": "青",
+  "trait_color_name_cn": "蓝",
+  "support_color_name_ja": "赤",
+  "support_color_name_cn": "红",
+  "battle_tool_trait_names_ja": [
+    "使い切り攻撃強化",
+    "突の呪詛"
+  ],
+  "battle_tool_trait_names_cn": [
+    "一次性攻击强化",
+    "突刺之诅咒"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "物理ダメージ上昇【渾身】"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "物理伤害提升【满血】"
+  ],
+  "battle_tool_trait_ids": [
+    48,
+    16
+  ],
+  "equipment_tool_trait_ids": [
+    31
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980106,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          20
+        ]
+      }
+    ],
+    "description": "「「声」を聴く者たち」は「物攻・魔攻・物防・魔防+30%」",
+    "name": "いたずら好きの小悪魔アイドル"
+  },
+  "ability_ids": [
+    1990170,
+    1990171
+  ],
+  "support_ability_ids": [
+    500427,
+    500371,
+    500315,
+    500259,
+    500203,
+    500147,
+    500091,
+    500035
+  ],
+  "_skillDetails": {
+    "500035": {
+      "id": 500035,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500091": {
+      "id": 500091,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500147": {
+      "id": 500147,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500203": {
+      "id": 500203,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500259": {
+      "id": 500259,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500315": {
+      "id": 500315,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500371": {
+      "id": 500371,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500427": {
+      "id": 500427,
+      "description": "得意属性が突属性かつブレイカーの時、攻撃前、対象に「突属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500035,
+          "limit_count": 1,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が突属性かつブレイカーの時、攻撃前、対象に突属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500035,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980106": {
+      "name": "いたずら好きの小悪魔アイドル",
+      "id": 1980106,
+      "description": "物攻・魔攻・物防・魔防+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500002,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/常時/物攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500002,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500003,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/常時/魔攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500003,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500004,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500005,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990170": {
+      "name": "腰抜かしちゃえ！",
+      "id": 1990170,
+      "description": "パーティの誰かが戦闘アイテム使用後、自身に「攻撃後、対象のターンを1ターン遅らせる」を1回スキル発動するまで付与(発動上限3回)<br>※アイテムを複数同時に使用しても発動は1回",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001037,
+          "limit_count": null,
+          "value": 100,
+          "_detail": {
+            "description": "味方が戦闘アイテム使用後、自身に「攻撃後、対象のターンを{0}ターン遅らせる」を1回スキル発動するまで付与(発動上限回数 3回）<br>※アイテムを複数同時に使用しても発動は1回",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001037,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990171": {
+      "name": "決戦装備シュヴァルツロゼ",
+      "id": 1990171,
+      "description": "状態異常無効",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000987,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "[自身/常時/状態異常無効]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000987,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990414": {
+      "name": "クリティカルダメージアップⅢ",
+      "id": 1990414,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990439": {
+      "name": "クリティカルダメージアップⅡ",
+      "id": 1990439,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990464": {
+      "name": "クリティカルダメージアップⅠ",
+      "id": 1990464,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11001067": {
+      "name": "アメジストスパイク",
+      "id": 11001067,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「物攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001208,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001208,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 79,
+      "break_power": 7
+    },
+    "11001068": {
+      "name": "アメジストスパイク",
+      "id": 11001068,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「物攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001208,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001208,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 83,
+      "break_power": 7
+    },
+    "11001069": {
+      "name": "アメジストスパイク",
+      "id": 11001069,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「物攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001208,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001208,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 88,
+      "break_power": 7
+    },
+    "11001070": {
+      "name": "アメジストスパイク",
+      "id": 11001070,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「物攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001208,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001208,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 93,
+      "break_power": 7
+    },
+    "11001071": {
+      "name": "アメジストスパイク",
+      "id": 11001071,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「物攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001208,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001208,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 98,
+      "break_power": 8
+    },
+    "12001072": {
+      "name": "ファルコンフォール",
+      "id": 12001072,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91001209,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001209,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 300,
+      "break_power": 32
+    },
+    "12001073": {
+      "name": "ファルコンフォール",
+      "id": 12001073,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91001209,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001209,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 318,
+      "break_power": 34
+    },
+    "12001074": {
+      "name": "ファルコンフォール",
+      "id": 12001074,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91001209,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001209,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 337,
+      "break_power": 36
+    },
+    "12001075": {
+      "name": "ファルコンフォール",
+      "id": 12001075,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91001209,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001209,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 356,
+      "break_power": 38
+    },
+    "12001076": {
+      "name": "ファルコンフォール",
+      "id": 12001076,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91001209,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001209,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 375,
+      "break_power": 40
+    },
+    "14001077": {
+      "name": "エフェメラルエッジ",
+      "id": 14001077,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "自身のHPに応じ、ダメージ+10〜100%(HP10〜100%で多いほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001210,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001210,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001211,
+          "value": 9000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001211,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 400,
+      "break_power": 75
+    },
+    "14001078": {
+      "name": "エフェメラルエッジ",
+      "id": 14001078,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "自身のHPに応じ、ダメージ+10〜100%(HP10〜100%で多いほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001210,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001210,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001211,
+          "value": 9000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001211,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 425,
+      "break_power": 79
+    },
+    "14001079": {
+      "name": "エフェメラルエッジ",
+      "id": 14001079,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "自身のHPに応じ、ダメージ+10〜100%(HP10〜100%で多いほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001210,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001210,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001211,
+          "value": 9000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001211,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 450,
+      "break_power": 84
+    },
+    "14001080": {
+      "name": "エフェメラルエッジ",
+      "id": 14001080,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "自身のHPに応じ、ダメージ+10〜100%(HP10〜100%で多いほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001210,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001210,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001211,
+          "value": 9000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001211,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 475,
+      "break_power": 88
+    },
+    "14001081": {
+      "name": "エフェメラルエッジ",
+      "id": 14001081,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        3
+      ],
+      "description": "自身のHPに応じ、ダメージ+10〜100%(HP10〜100%で多いほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001210,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001210,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001211,
+          "value": 9000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001211,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000927,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000927,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 500,
+      "break_power": 93
+    }
+  },
+  "initial_wt": 247,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「物攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001208,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001208,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001067,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アメジストスパイク",
+          "not_state_change_count_decrease": false,
+          "power": 79,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、アイテムゲージを回復<br>自身の物攻アップ",
+          "timeline_hash": "6232917951440843227",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「物攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001208,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001208,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001068,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アメジストスパイク",
+          "not_state_change_count_decrease": false,
+          "power": 83,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、アイテムゲージを回復<br>自身の物攻アップ",
+          "timeline_hash": "6232917951440843227",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「物攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001208,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001208,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001069,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アメジストスパイク",
+          "not_state_change_count_decrease": false,
+          "power": 88,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、アイテムゲージを回復<br>自身の物攻アップ",
+          "timeline_hash": "6232917951440843227",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「物攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001208,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001208,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001070,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アメジストスパイク",
+          "not_state_change_count_decrease": false,
+          "power": 93,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、アイテムゲージを回復<br>自身の物攻アップ",
+          "timeline_hash": "6232917951440843227",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 8,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「物攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001208,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001208,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001071,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アメジストスパイク",
+          "not_state_change_count_decrease": false,
+          "power": 98,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、アイテムゲージを回復<br>自身の物攻アップ",
+          "timeline_hash": "6232917951440843227",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 32,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+          "effects": [
+            {
+              "id": 91001209,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001209,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001072,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ファルコンフォール",
+          "not_state_change_count_decrease": false,
+          "power": 300,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身に回避を付与",
+          "timeline_hash": "1031105056440469065",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 34,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+          "effects": [
+            {
+              "id": 91001209,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001209,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001073,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ファルコンフォール",
+          "not_state_change_count_decrease": false,
+          "power": 318,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身に回避を付与",
+          "timeline_hash": "1031105056440469065",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 36,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+          "effects": [
+            {
+              "id": 91001209,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001209,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001074,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ファルコンフォール",
+          "not_state_change_count_decrease": false,
+          "power": 337,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身に回避を付与",
+          "timeline_hash": "1031105056440469065",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 38,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+          "effects": [
+            {
+              "id": 91001209,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001209,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001075,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ファルコンフォール",
+          "not_state_change_count_decrease": false,
+          "power": 356,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身に回避を付与",
+          "timeline_hash": "1031105056440469065",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 40,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「回避(確率{0}%)」を1回攻撃されるまで付与",
+          "effects": [
+            {
+              "id": 91001209,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001209,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001076,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ファルコンフォール",
+          "not_state_change_count_decrease": false,
+          "power": 375,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身に回避を付与",
+          "timeline_hash": "1031105056440469065",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+10〜100%(HP10〜100%で多いほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001210,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001210,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001211,
+              "value": 9000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001211,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000927,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000927,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001077,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エフェメラルエッジ",
+          "not_state_change_count_decrease": false,
+          "power": 400,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "600235331380329039",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、自身のスキルダメージアップ",
+          "timeline_hash": "654946854515666176",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+10〜100%(HP10〜100%で多いほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001210,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001210,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001211,
+              "value": 9000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001211,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000927,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000927,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001078,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エフェメラルエッジ",
+          "not_state_change_count_decrease": false,
+          "power": 425,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "600235331380329039",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、自身のスキルダメージアップ",
+          "timeline_hash": "654946854515666176",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+10〜100%(HP10〜100%で多いほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001210,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001210,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001211,
+              "value": 9000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001211,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000927,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000927,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001079,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エフェメラルエッジ",
+          "not_state_change_count_decrease": false,
+          "power": 450,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "600235331380329039",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、自身のスキルダメージアップ",
+          "timeline_hash": "654946854515666176",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+10〜100%(HP10〜100%で多いほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001210,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001210,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001211,
+              "value": 9000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001211,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000927,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000927,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001080,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エフェメラルエッジ",
+          "not_state_change_count_decrease": false,
+          "power": 475,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "600235331380329039",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、自身のスキルダメージアップ",
+          "timeline_hash": "654946854515666176",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            3
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "自身のHPに応じ、ダメージ+10〜100%(HP10〜100%で多いほど増加)<br>攻撃前、自身に「スキルダメージ+{0}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001210,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001210,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001211,
+              "value": 9000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001211,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000927,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000927,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001081,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "エフェメラルエッジ",
+          "not_state_change_count_decrease": false,
+          "power": 500,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "600235331380329039",
+          "summary": "自身のHPが多いほどダメージアップ<br>攻撃前、自身のスキルダメージアップ",
+          "timeline_hash": "654946854515666176",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ]
+}

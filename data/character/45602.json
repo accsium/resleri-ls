@@ -1,0 +1,2523 @@
+{
+  "id": 45602,
+  "attack_attributes": [
+    7
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 5,
+  "support_color_id": 3,
+  "trait_color_name_ja": "緑",
+  "trait_color_name_cn": "绿",
+  "support_color_name_ja": "黄",
+  "support_color_name_cn": "黄",
+  "battle_tool_trait_names_ja": [
+    "追い打ち強化",
+    "会心の出来"
+  ],
+  "battle_tool_trait_names_cn": [
+    "追击强化",
+    "暴击成品"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "雷クリティカルダメージ上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "雷暴击伤害提升"
+  ],
+  "battle_tool_trait_ids": [
+    49,
+    50
+  ],
+  "equipment_tool_trait_ids": [
+    98
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980240,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          10
+        ]
+      }
+    ],
+    "description": "得意属性が雷属性のキャラは「魔攻+50%」",
+    "name": "ユニットのリーダー"
+  },
+  "ability_ids": [
+    1990535,
+    1990536
+  ],
+  "support_ability_ids": [
+    500697,
+    500694,
+    500691,
+    500688,
+    500685,
+    500682,
+    500679,
+    500676
+  ],
+  "_exSkills": [
+    {
+      "attack_attribute_category": 2,
+      "attack_attributes": [
+        7
+      ],
+      "break_power": 29,
+      "break_power_type": 2,
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+50%<br>攻撃後、自身に「スキルダメージ+{0}%」を3回行動終了するまで付与し、<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「基礎魔攻+100～300」を付与(上限300)(1～3人で多いほど増加)<br>※状態変化の回数を消費せず、追加効果を発動しない",
+      "effects": [
+        {
+          "id": 91001032,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002207,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002207,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000904,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "id": 14003726,
+      "is_restrict_after_skill_timing_effects": true,
+      "limit_count": null,
+      "max_lamp": 0,
+      "name": "バチっとウィンク",
+      "not_state_change_count_decrease": true,
+      "power": 388,
+      "require_command_value": false,
+      "skill_destination": null,
+      "skill_effect_type": 1,
+      "skill_power_type": 2,
+      "skill_target_type": 3,
+      "state_change_visual_type": null,
+      "still_path_hash": "6523615492000077891",
+      "summary": "この攻撃のクリティカル確率とクリティカルダメージアップ<br>攻撃後、自身のスキルダメージアップ<br>「レスレリ学園」タグを持つキャラ数に応じ、自身の基礎魔攻アップ<br>状態変化回数を消費しない",
+      "timeline_hash": "6709911612634715349",
+      "wait": 0,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体"
+    }
+  ],
+  "_skillDetails": {
+    "500676": {
+      "id": 500676,
+      "description": "「レスレリ学園」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 5000103,
+          "limit_count": null,
+          "value": 2875,
+          "_detail": {
+            "description": "自身が「レスレリ学園」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 5000103,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500679": {
+      "id": 500679,
+      "description": "「レスレリ学園」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 5000103,
+          "limit_count": null,
+          "value": 2500,
+          "_detail": {
+            "description": "自身が「レスレリ学園」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 5000103,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500682": {
+      "id": 500682,
+      "description": "「レスレリ学園」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 5000103,
+          "limit_count": null,
+          "value": 2125,
+          "_detail": {
+            "description": "自身が「レスレリ学園」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 5000103,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500685": {
+      "id": 500685,
+      "description": "「レスレリ学園」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 5000103,
+          "limit_count": null,
+          "value": 1750,
+          "_detail": {
+            "description": "自身が「レスレリ学園」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 5000103,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500688": {
+      "id": 500688,
+      "description": "「レスレリ学園」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 5000103,
+          "limit_count": null,
+          "value": 1625,
+          "_detail": {
+            "description": "自身が「レスレリ学園」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 5000103,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500691": {
+      "id": 500691,
+      "description": "「レスレリ学園」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 5000103,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身が「レスレリ学園」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 5000103,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500694": {
+      "id": 500694,
+      "description": "「レスレリ学園」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 5000103,
+          "limit_count": null,
+          "value": 1375,
+          "_detail": {
+            "description": "自身が「レスレリ学園」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 5000103,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500697": {
+      "id": 500697,
+      "description": "「レスレリ学園」の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 5000103,
+          "limit_count": null,
+          "value": 1250,
+          "_detail": {
+            "description": "自身が「レスレリ学園」の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 5000103,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980240": {
+      "name": "ユニットのリーダー",
+      "id": 1980240,
+      "description": "得意属性が雷属性のキャラは「魔攻+{0}%」",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500003,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "[自身/常時/魔攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500003,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990414": {
+      "name": "クリティカルダメージアップⅢ",
+      "id": 1990414,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990439": {
+      "name": "クリティカルダメージアップⅡ",
+      "id": 1990439,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990464": {
+      "name": "クリティカルダメージアップⅠ",
+      "id": 1990464,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990535": {
+      "name": "よそ見厳禁でござる！",
+      "id": 1990535,
+      "description": "自身のバーストスキルをゲージ化<br>※バーストゲージは3周分ストック可能<br><br>HP回復を受けた時、自身のバーストゲージを{0}%増加<br>WEAK攻撃後、自身のバーストゲージを{1}%増加<br>スキルで撃破時、自身のバーストゲージを{2}%増加",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001474,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001474,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001548,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001548,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001453,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001453,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001452,
+          "limit_count": null,
+          "value": 30000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001452,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990536": {
+      "name": "貴殿の心にお邪魔しまする！",
+      "id": 1990536,
+      "description": "「レスレリ学園」タグを持つキャラ数に応じ、基礎魔攻+100～400(1～4人で多いほど増加)<br><br>バーストゲージが200%以上かつバーストスキル発動後、バーストゲージをさらに100%消費し、現在HPが最も低い敵へ追加攻撃：{hyperlink_id 158}を発動する",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001698,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001698,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001683,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001683,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001684,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001684,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11003681": {
+      "name": "ビリビリクナイ",
+      "id": 11003681,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91001478,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001478,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002205,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002205,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 77,
+      "break_power": 4
+    },
+    "11003682": {
+      "name": "ビリビリクナイ",
+      "id": 11003682,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91001478,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001478,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002205,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002205,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 81,
+      "break_power": 4
+    },
+    "11003683": {
+      "name": "ビリビリクナイ",
+      "id": 11003683,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91001478,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001478,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002205,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002205,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 86,
+      "break_power": 4
+    },
+    "11003684": {
+      "name": "ビリビリクナイ",
+      "id": 11003684,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91001478,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001478,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002205,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002205,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 91,
+      "break_power": 4
+    },
+    "11003685": {
+      "name": "ビリビリクナイ",
+      "id": 11003685,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91001478,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001478,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002205,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002205,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 96,
+      "break_power": 5
+    },
+    "12003686": {
+      "name": "ジョイフルダンシング",
+      "id": 12003686,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を付与(上限50%)<br>攻撃後、自身に「WEAK攻撃ダメージ+{1}%」と「魔攻+{2}%」を3回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002206,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002206,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002234,
+          "value": 7000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002234,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002036,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(3回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002036,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 299,
+      "break_power": 23
+    },
+    "12003687": {
+      "name": "ジョイフルダンシング",
+      "id": 12003687,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を付与(上限50%)<br>攻撃後、自身に「WEAK攻撃ダメージ+{1}%」と「魔攻+{2}%」を3回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002206,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002206,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002234,
+          "value": 7000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002234,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002036,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(3回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002036,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 317,
+      "break_power": 24
+    },
+    "12003688": {
+      "name": "ジョイフルダンシング",
+      "id": 12003688,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を付与(上限50%)<br>攻撃後、自身に「WEAK攻撃ダメージ+{1}%」と「魔攻+{2}%」を3回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002206,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002206,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002234,
+          "value": 7000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002234,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002036,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(3回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002036,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 336,
+      "break_power": 25
+    },
+    "12003689": {
+      "name": "ジョイフルダンシング",
+      "id": 12003689,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を付与(上限50%)<br>攻撃後、自身に「WEAK攻撃ダメージ+{1}%」と「魔攻+{2}%」を3回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002206,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002206,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002234,
+          "value": 7000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002234,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002036,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(3回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002036,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 354,
+      "break_power": 26
+    },
+    "12003690": {
+      "name": "ジョイフルダンシング",
+      "id": 12003690,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を付与(上限50%)<br>攻撃後、自身に「WEAK攻撃ダメージ+{1}%」と「魔攻+{2}%」を3回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002206,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002206,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002234,
+          "value": 7000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002234,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002036,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(3回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002036,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 373,
+      "break_power": 28
+    },
+    "14003691": {
+      "name": "鬼門☆オンステージ",
+      "id": 14003691,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」と「魔攻+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001326,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001326,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001006,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001006,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 302,
+      "break_power": 37
+    },
+    "14003692": {
+      "name": "鬼門☆オンステージ",
+      "id": 14003692,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」と「魔攻+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001326,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001326,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001006,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001006,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 320,
+      "break_power": 39
+    },
+    "14003693": {
+      "name": "鬼門☆オンステージ",
+      "id": 14003693,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」と「魔攻+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001326,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001326,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001006,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001006,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 339,
+      "break_power": 41
+    },
+    "14003694": {
+      "name": "鬼門☆オンステージ",
+      "id": 14003694,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」と「魔攻+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001326,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001326,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001006,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001006,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 358,
+      "break_power": 43
+    },
+    "14003695": {
+      "name": "鬼門☆オンステージ",
+      "id": 14003695,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃前、対象に「雷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」と「魔攻+{2}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001326,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001326,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001006,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001006,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 10000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 377,
+      "break_power": 46
+    },
+    "14003726": {
+      "name": "バチっとウィンク",
+      "id": 14003726,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "この攻撃のクリティカル確率+100%とクリティカルダメージ+50%<br>攻撃後、自身に「スキルダメージ+{0}%」を3回行動終了するまで付与し、<br>「レスレリ学園」タグを持つキャラ数に応じ、自身に「基礎魔攻+100～300」を付与(上限300)(1～3人で多いほど増加)<br>※状態変化の回数を消費せず、追加効果を発動しない",
+      "effects": [
+        {
+          "id": 91001032,
+          "value": 15000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001032,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91002207,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002207,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000904,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000904,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 388,
+      "break_power": 29
+    }
+  },
+  "initial_wt": 217,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001478,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002205,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002205,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003681,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ビリビリクナイ",
+          "not_state_change_count_decrease": false,
+          "power": 77,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のスキルダメージアップ",
+          "timeline_hash": "7998574849367121287",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001478,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002205,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002205,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003682,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ビリビリクナイ",
+          "not_state_change_count_decrease": false,
+          "power": 81,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のスキルダメージアップ",
+          "timeline_hash": "7998574849367121287",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001478,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002205,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002205,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003683,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ビリビリクナイ",
+          "not_state_change_count_decrease": false,
+          "power": 86,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のスキルダメージアップ",
+          "timeline_hash": "7998574849367121287",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 4,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001478,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002205,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002205,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003684,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ビリビリクナイ",
+          "not_state_change_count_decrease": false,
+          "power": 91,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のスキルダメージアップ",
+          "timeline_hash": "7998574849367121287",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001478,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001478,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002205,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002205,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11003685,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ビリビリクナイ",
+          "not_state_change_count_decrease": false,
+          "power": 96,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のスキルダメージアップ",
+          "timeline_hash": "7998574849367121287",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 23,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を付与(上限50%)<br>攻撃後、自身に「WEAK攻撃ダメージ+{1}%」と「魔攻+{2}%」を3回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002206,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002206,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002234,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002234,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002036,
+              "value": 6000,
+              "_detail": {
+                "description": "魔攻アップ(3回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002036,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003686,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ジョイフルダンシング",
+          "not_state_change_count_decrease": false,
+          "power": 299,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のWEAK攻撃ダメージと魔攻アップ",
+          "timeline_hash": "3976775494062418453",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 24,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を付与(上限50%)<br>攻撃後、自身に「WEAK攻撃ダメージ+{1}%」と「魔攻+{2}%」を3回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002206,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002206,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002234,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002234,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002036,
+              "value": 6000,
+              "_detail": {
+                "description": "魔攻アップ(3回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002036,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003687,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ジョイフルダンシング",
+          "not_state_change_count_decrease": false,
+          "power": 317,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のWEAK攻撃ダメージと魔攻アップ",
+          "timeline_hash": "3976775494062418453",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 25,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を付与(上限50%)<br>攻撃後、自身に「WEAK攻撃ダメージ+{1}%」と「魔攻+{2}%」を3回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002206,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002206,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002234,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002234,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002036,
+              "value": 6000,
+              "_detail": {
+                "description": "魔攻アップ(3回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002036,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003688,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ジョイフルダンシング",
+          "not_state_change_count_decrease": false,
+          "power": 336,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のWEAK攻撃ダメージと魔攻アップ",
+          "timeline_hash": "3976775494062418453",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 26,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を付与(上限50%)<br>攻撃後、自身に「WEAK攻撃ダメージ+{1}%」と「魔攻+{2}%」を3回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002206,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002206,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002234,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002234,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002036,
+              "value": 6000,
+              "_detail": {
+                "description": "魔攻アップ(3回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002036,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003689,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ジョイフルダンシング",
+          "not_state_change_count_decrease": false,
+          "power": 354,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のWEAK攻撃ダメージと魔攻アップ",
+          "timeline_hash": "3976775494062418453",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 28,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を付与(上限50%)<br>攻撃後、自身に「WEAK攻撃ダメージ+{1}%」と「魔攻+{2}%」を3回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002206,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002206,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002234,
+              "value": 7000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002234,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91002036,
+              "value": 6000,
+              "_detail": {
+                "description": "魔攻アップ(3回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002036,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12003690,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ジョイフルダンシング",
+          "not_state_change_count_decrease": false,
+          "power": 373,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のWEAK攻撃ダメージと魔攻アップ",
+          "timeline_hash": "3976775494062418453",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」と「魔攻+{2}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001326,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001326,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001006,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001006,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 10000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003691,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "鬼門☆オンステージ",
+          "not_state_change_count_decrease": false,
+          "power": 302,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "733548140876500649",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のスキルダメージと魔攻アップ",
+          "timeline_hash": "6781882946243993387",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 39,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」と「魔攻+{2}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001326,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001326,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001006,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001006,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 10000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003692,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "鬼門☆オンステージ",
+          "not_state_change_count_decrease": false,
+          "power": 320,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "733548140876500649",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のスキルダメージと魔攻アップ",
+          "timeline_hash": "6781882946243993387",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 41,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」と「魔攻+{2}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001326,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001326,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001006,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001006,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 10000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003693,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "鬼門☆オンステージ",
+          "not_state_change_count_decrease": false,
+          "power": 339,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "733548140876500649",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のスキルダメージと魔攻アップ",
+          "timeline_hash": "6781882946243993387",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 43,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」と「魔攻+{2}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001326,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001326,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001006,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001006,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 10000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003694,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "鬼門☆オンステージ",
+          "not_state_change_count_decrease": false,
+          "power": 358,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "733548140876500649",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のスキルダメージと魔攻アップ",
+          "timeline_hash": "6781882946243993387",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 46,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「雷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「スキルダメージ+{1}%」と「魔攻+{2}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001326,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001326,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001006,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001006,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 10000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14003695,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "鬼門☆オンステージ",
+          "not_state_change_count_decrease": false,
+          "power": 377,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "733548140876500649",
+          "summary": "攻撃前、対象の雷属性耐性ダウン<br>攻撃後、自身のスキルダメージと魔攻アップ",
+          "timeline_hash": "6781882946243993387",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        }
+      ]
+    }
+  ]
+}

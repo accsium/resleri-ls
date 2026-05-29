@@ -1,0 +1,2727 @@
+{
+  "id": 39901,
+  "attack_attributes": [
+    5
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 8,
+  "trait_color_id": 5,
+  "support_color_id": 4,
+  "trait_color_name_ja": "緑",
+  "trait_color_name_cn": "绿",
+  "support_color_name_ja": "赤",
+  "support_color_name_cn": "红",
+  "battle_tool_trait_names_ja": [
+    "魔防の祝福",
+    "風の祝福"
+  ],
+  "battle_tool_trait_names_cn": [
+    "魔防之祝福",
+    "风之祝福"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "火ダメージ上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "火伤害提升"
+  ],
+  "battle_tool_trait_ids": [
+    11,
+    8
+  ],
+  "equipment_tool_trait_ids": [
+    6
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980110,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          52
+        ]
+      }
+    ],
+    "description": "「クーケン島」は「物攻・魔攻・物防・魔防+15%」",
+    "name": "あたしたちだけの秘密の隠れ家"
+  },
+  "ability_ids": [
+    1990050,
+    1990051
+  ],
+  "support_ability_ids": [
+    500421,
+    500365,
+    500309,
+    500253,
+    500197,
+    500141,
+    500085,
+    500029
+  ],
+  "_skillDetails": {
+    "500029": {
+      "id": 500029,
+      "description": "得意属性が火属性かつブレイカーの時、攻撃前、対象に「火属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500029,
+          "limit_count": 1,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が火属性かつブレイカーの時、攻撃前、対象に火属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500029,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500085": {
+      "id": 500085,
+      "description": "得意属性が火属性かつブレイカーの時、攻撃前、対象に「火属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500029,
+          "limit_count": 1,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が火属性かつブレイカーの時、攻撃前、対象に火属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500029,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500141": {
+      "id": 500141,
+      "description": "得意属性が火属性かつブレイカーの時、攻撃前、対象に「火属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500029,
+          "limit_count": 1,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が火属性かつブレイカーの時、攻撃前、対象に火属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500029,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500197": {
+      "id": 500197,
+      "description": "得意属性が火属性かつブレイカーの時、攻撃前、対象に「火属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500029,
+          "limit_count": 1,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が火属性かつブレイカーの時、攻撃前、対象に火属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500029,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500253": {
+      "id": 500253,
+      "description": "得意属性が火属性かつブレイカーの時、攻撃前、対象に「火属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500029,
+          "limit_count": 1,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が火属性かつブレイカーの時、攻撃前、対象に火属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500029,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500309": {
+      "id": 500309,
+      "description": "得意属性が火属性かつブレイカーの時、攻撃前、対象に「火属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500029,
+          "limit_count": 1,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が火属性かつブレイカーの時、攻撃前、対象に火属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500029,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500365": {
+      "id": 500365,
+      "description": "得意属性が火属性かつブレイカーの時、攻撃前、対象に「火属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500029,
+          "limit_count": 1,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が火属性かつブレイカーの時、攻撃前、対象に火属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500029,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500421": {
+      "id": 500421,
+      "description": "得意属性が火属性かつブレイカーの時、攻撃前、対象に「火属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500029,
+          "limit_count": 1,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が火属性かつブレイカーの時、攻撃前、対象に火属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500029,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980110": {
+      "name": "あたしたちだけの秘密の隠れ家",
+      "id": 1980110,
+      "description": "物攻・魔攻・物防・魔防+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500002,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/物攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500002,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500003,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/魔攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500003,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500004,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500005,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990050": {
+      "name": "ひと夏のオーバーラン",
+      "id": 1990050,
+      "description": "スキルで撃破時、自身に「スキルダメージ+{0}%」を付与(上限30%)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000911,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "スキルで撃破時、ダメージ+{0}%(上限30%)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000911,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990051": {
+      "name": "レジストアップ毒",
+      "id": 1990051,
+      "description": "毒耐性+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001062,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/毒耐性上昇付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001062,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990298": {
+      "name": "冒険があたしを成長させる！",
+      "id": 1990298,
+      "description": "WEAK攻撃後、自身に「スキル威力+{0}%」を付与(上限5個)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001210,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001210,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990414": {
+      "name": "クリティカルダメージアップⅢ",
+      "id": 1990414,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990439": {
+      "name": "クリティカルダメージアップⅡ",
+      "id": 1990439,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990464": {
+      "name": "クリティカルダメージアップⅠ",
+      "id": 1990464,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11000256": {
+      "name": "ライザスペシャル",
+      "id": 11000256,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91000958,
+          "value": 2000,
+          "_detail": {
+            "description": "バーストスキルダメージ+20%(5回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000958,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 73,
+      "break_power": 7
+    },
+    "11000257": {
+      "name": "ライザスペシャル",
+      "id": 11000257,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91000958,
+          "value": 2000,
+          "_detail": {
+            "description": "バーストスキルダメージ+20%(5回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000958,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 77,
+      "break_power": 7
+    },
+    "11000258": {
+      "name": "ライザスペシャル",
+      "id": 11000258,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91000958,
+          "value": 2000,
+          "_detail": {
+            "description": "バーストスキルダメージ+20%(5回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000958,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 82,
+      "break_power": 7
+    },
+    "11000259": {
+      "name": "ライザスペシャル",
+      "id": 11000259,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91000958,
+          "value": 2000,
+          "_detail": {
+            "description": "バーストスキルダメージ+20%(5回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000958,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 86,
+      "break_power": 7
+    },
+    "11000260": {
+      "name": "ライザスペシャル",
+      "id": 11000260,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91000958,
+          "value": 2000,
+          "_detail": {
+            "description": "バーストスキルダメージ+20%(5回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000958,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 91,
+      "break_power": 8
+    },
+    "11002442": {
+      "name": "ライザスペシャル",
+      "id": 11002442,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限200%)し、<br>自身に「魔攻+{1}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001569,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001569,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001570,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001570,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 76,
+      "break_power": 7
+    },
+    "11002443": {
+      "name": "ライザスペシャル",
+      "id": 11002443,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限200%)し、<br>自身に「魔攻+{1}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001569,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001569,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001570,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001570,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 80,
+      "break_power": 7
+    },
+    "11002444": {
+      "name": "ライザスペシャル",
+      "id": 11002444,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限200%)し、<br>自身に「魔攻+{1}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001569,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001569,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001570,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001570,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 85,
+      "break_power": 8
+    },
+    "11002445": {
+      "name": "ライザスペシャル",
+      "id": 11002445,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限200%)し、<br>自身に「魔攻+{1}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001569,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001569,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001570,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001570,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 90,
+      "break_power": 8
+    },
+    "11002446": {
+      "name": "ライザスペシャル",
+      "id": 11002446,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限200%)し、<br>自身に「魔攻+{1}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001569,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001569,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001570,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001570,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 95,
+      "break_power": 9
+    },
+    "12000261": {
+      "name": "コーリングスター",
+      "id": 12000261,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "追加効果なし",
+      "wait": 0,
+      "power": 360,
+      "break_power": 45
+    },
+    "12000262": {
+      "name": "コーリングスター",
+      "id": 12000262,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "追加効果なし",
+      "wait": 0,
+      "power": 382,
+      "break_power": 47
+    },
+    "12000263": {
+      "name": "コーリングスター",
+      "id": 12000263,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "追加効果なし",
+      "wait": 0,
+      "power": 405,
+      "break_power": 50
+    },
+    "12000264": {
+      "name": "コーリングスター",
+      "id": 12000264,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "追加効果なし",
+      "wait": 0,
+      "power": 427,
+      "break_power": 53
+    },
+    "12000265": {
+      "name": "コーリングスター",
+      "id": 12000265,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "追加効果なし",
+      "wait": 0,
+      "power": 450,
+      "break_power": 56
+    },
+    "12002447": {
+      "name": "コーリングスター",
+      "id": 12002447,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 8000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001599,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001599,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 480,
+      "break_power": 46
+    },
+    "12002448": {
+      "name": "コーリングスター",
+      "id": 12002448,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 8000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001599,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001599,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 510,
+      "break_power": 49
+    },
+    "12002449": {
+      "name": "コーリングスター",
+      "id": 12002449,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 8000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001599,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001599,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 540,
+      "break_power": 52
+    },
+    "12002450": {
+      "name": "コーリングスター",
+      "id": 12002450,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 8000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001599,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001599,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 570,
+      "break_power": 55
+    },
+    "12002451": {
+      "name": "コーリングスター",
+      "id": 12002451,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 8000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001599,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001599,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 600,
+      "break_power": 58
+    },
+    "14000266": {
+      "name": "ヘブンズクエーサー",
+      "id": 14000266,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91000974,
+          "value": 2500,
+          "_detail": {
+            "description": "スキルダメージ+25%(2回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000974,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 400,
+      "break_power": 75
+    },
+    "14000267": {
+      "name": "ヘブンズクエーサー",
+      "id": 14000267,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91000974,
+          "value": 2500,
+          "_detail": {
+            "description": "スキルダメージ+25%(2回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000974,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 425,
+      "break_power": 79
+    },
+    "14000268": {
+      "name": "ヘブンズクエーサー",
+      "id": 14000268,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91000974,
+          "value": 2500,
+          "_detail": {
+            "description": "スキルダメージ+25%(2回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000974,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 450,
+      "break_power": 84
+    },
+    "14000269": {
+      "name": "ヘブンズクエーサー",
+      "id": 14000269,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91000974,
+          "value": 2500,
+          "_detail": {
+            "description": "スキルダメージ+25%(2回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000974,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 475,
+      "break_power": 88
+    },
+    "14000270": {
+      "name": "ヘブンズクエーサー",
+      "id": 14000270,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91000974,
+          "value": 2500,
+          "_detail": {
+            "description": "スキルダメージ+25%(2回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000974,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 500,
+      "break_power": 93
+    },
+    "14002306": {
+      "name": "ヘブンズクエーサー",
+      "id": 14002306,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91000974,
+          "value": 2500,
+          "_detail": {
+            "description": "スキルダメージ+25%(2回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000974,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 520,
+      "break_power": 97
+    },
+    "14002452": {
+      "name": "ヘブンズクエーサー",
+      "id": 14002452,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限300%)",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 12000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001571,
+          "value": 6000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001571,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 700,
+      "break_power": 97
+    }
+  },
+  "initial_wt": 241,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91000958,
+              "value": 2000,
+              "_detail": {
+                "description": "バーストスキルダメージ+20%(5回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000958,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000256,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ライザスペシャル",
+          "not_state_change_count_decrease": false,
+          "power": 73,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身にバーストスキルダメージアップ",
+          "timeline_hash": "5765207080551736834",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91000958,
+              "value": 2000,
+              "_detail": {
+                "description": "バーストスキルダメージ+20%(5回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000958,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000257,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ライザスペシャル",
+          "not_state_change_count_decrease": false,
+          "power": 77,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身にバーストスキルダメージアップ",
+          "timeline_hash": "5765207080551736834",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91000958,
+              "value": 2000,
+              "_detail": {
+                "description": "バーストスキルダメージ+20%(5回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000958,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000258,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ライザスペシャル",
+          "not_state_change_count_decrease": false,
+          "power": 82,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身にバーストスキルダメージアップ",
+          "timeline_hash": "5765207080551736834",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91000958,
+              "value": 2000,
+              "_detail": {
+                "description": "バーストスキルダメージ+20%(5回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000958,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000259,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ライザスペシャル",
+          "not_state_change_count_decrease": false,
+          "power": 86,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身にバーストスキルダメージアップ",
+          "timeline_hash": "5765207080551736834",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 8,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91000958,
+              "value": 2000,
+              "_detail": {
+                "description": "バーストスキルダメージ+20%(5回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000958,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000260,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ライザスペシャル",
+          "not_state_change_count_decrease": false,
+          "power": 91,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身にバーストスキルダメージアップ",
+          "timeline_hash": "5765207080551736834",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 45,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 12000261,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "コーリングスター",
+          "not_state_change_count_decrease": false,
+          "power": 360,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5187188467304351512",
+          "summary": "追加効果なし",
+          "timeline_hash": "280806556929229364",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 47,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 12000262,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "コーリングスター",
+          "not_state_change_count_decrease": false,
+          "power": 382,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5187188467304351512",
+          "summary": "追加効果なし",
+          "timeline_hash": "280806556929229364",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 50,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 12000263,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "コーリングスター",
+          "not_state_change_count_decrease": false,
+          "power": 405,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5187188467304351512",
+          "summary": "追加効果なし",
+          "timeline_hash": "280806556929229364",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 53,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 12000264,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "コーリングスター",
+          "not_state_change_count_decrease": false,
+          "power": 427,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5187188467304351512",
+          "summary": "追加効果なし",
+          "timeline_hash": "280806556929229364",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 56,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 12000265,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "コーリングスター",
+          "not_state_change_count_decrease": false,
+          "power": 450,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5187188467304351512",
+          "summary": "追加効果なし",
+          "timeline_hash": "280806556929229364",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+          "effects": [
+            {
+              "id": 91000974,
+              "value": 2500,
+              "_detail": {
+                "description": "スキルダメージ+25%(2回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000974,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000266,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヘブンズクエーサー",
+          "not_state_change_count_decrease": false,
+          "power": 400,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5983523870410955950",
+          "summary": "攻撃後、自身にスキルダメージアップ",
+          "timeline_hash": "1675167693358269240",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+          "effects": [
+            {
+              "id": 91000974,
+              "value": 2500,
+              "_detail": {
+                "description": "スキルダメージ+25%(2回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000974,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000267,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヘブンズクエーサー",
+          "not_state_change_count_decrease": false,
+          "power": 425,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5983523870410955950",
+          "summary": "攻撃後、自身にスキルダメージアップ",
+          "timeline_hash": "1675167693358269240",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+          "effects": [
+            {
+              "id": 91000974,
+              "value": 2500,
+              "_detail": {
+                "description": "スキルダメージ+25%(2回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000974,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000268,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヘブンズクエーサー",
+          "not_state_change_count_decrease": false,
+          "power": 450,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5983523870410955950",
+          "summary": "攻撃後、自身にスキルダメージアップ",
+          "timeline_hash": "1675167693358269240",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+          "effects": [
+            {
+              "id": 91000974,
+              "value": 2500,
+              "_detail": {
+                "description": "スキルダメージ+25%(2回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000974,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000269,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヘブンズクエーサー",
+          "not_state_change_count_decrease": false,
+          "power": 475,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5983523870410955950",
+          "summary": "攻撃後、自身にスキルダメージアップ",
+          "timeline_hash": "1675167693358269240",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+          "effects": [
+            {
+              "id": 91000974,
+              "value": 2500,
+              "_detail": {
+                "description": "スキルダメージ+25%(2回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000974,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000270,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヘブンズクエーサー",
+          "not_state_change_count_decrease": false,
+          "power": 500,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5983523870410955950",
+          "summary": "攻撃後、自身にスキルダメージアップ",
+          "timeline_hash": "1675167693358269240",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 97,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限50%)",
+          "effects": [
+            {
+              "id": 91000974,
+              "value": 2500,
+              "_detail": {
+                "description": "スキルダメージ+25%(2回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000974,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002306,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヘブンズクエーサー",
+          "not_state_change_count_decrease": false,
+          "power": 520,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5983523870410955950",
+          "summary": "攻撃後、自身にスキルダメージアップ",
+          "timeline_hash": "1675167693358269240",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ],
+  "switch": "evolve",
+  "switch_stat": {
+    "_skills": [
+      {
+        "type": "normal1",
+        "skills": [
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 7,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限200%)し、<br>自身に「魔攻+{1}%」を付与(上限100%)",
+            "effects": [
+              {
+                "id": 91001569,
+                "value": 4000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001569,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001570,
+                "value": 2000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001570,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11002442,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ライザスペシャル",
+            "not_state_change_count_decrease": false,
+            "power": 76,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身にバーストスキルダメージアップ<br>自身の魔攻アップ",
+            "timeline_hash": "5765207080551736834",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 7,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限200%)し、<br>自身に「魔攻+{1}%」を付与(上限100%)",
+            "effects": [
+              {
+                "id": 91001569,
+                "value": 4000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001569,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001570,
+                "value": 2000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001570,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11002443,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ライザスペシャル",
+            "not_state_change_count_decrease": false,
+            "power": 80,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身にバーストスキルダメージアップ<br>自身の魔攻アップ",
+            "timeline_hash": "5765207080551736834",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 8,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限200%)し、<br>自身に「魔攻+{1}%」を付与(上限100%)",
+            "effects": [
+              {
+                "id": 91001569,
+                "value": 4000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001569,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001570,
+                "value": 2000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001570,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11002444,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ライザスペシャル",
+            "not_state_change_count_decrease": false,
+            "power": 85,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身にバーストスキルダメージアップ<br>自身の魔攻アップ",
+            "timeline_hash": "5765207080551736834",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 8,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限200%)し、<br>自身に「魔攻+{1}%」を付与(上限100%)",
+            "effects": [
+              {
+                "id": 91001569,
+                "value": 4000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001569,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001570,
+                "value": 2000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001570,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11002445,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ライザスペシャル",
+            "not_state_change_count_decrease": false,
+            "power": 90,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身にバーストスキルダメージアップ<br>自身の魔攻アップ",
+            "timeline_hash": "5765207080551736834",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 9,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「バーストスキルダメージ+{0}%」を付与(上限200%)し、<br>自身に「魔攻+{1}%」を付与(上限100%)",
+            "effects": [
+              {
+                "id": 91001569,
+                "value": 4000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001569,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001570,
+                "value": 2000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001570,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11002446,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ライザスペシャル",
+            "not_state_change_count_decrease": false,
+            "power": 95,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身にバーストスキルダメージアップ<br>自身の魔攻アップ",
+            "timeline_hash": "5765207080551736834",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          }
+        ]
+      },
+      {
+        "type": "normal2",
+        "skills": [
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 46,
+            "break_power_type": 2,
+            "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)",
+            "effects": [
+              {
+                "id": 91000903,
+                "value": 8000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000903,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001599,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001599,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12002447,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "コーリングスター",
+            "not_state_change_count_decrease": false,
+            "power": 480,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "9019439288131687315",
+            "summary": "WEAK攻撃時、ダメージアップ<br>攻撃前、対象の火属性耐性ダウン",
+            "timeline_hash": "280806556929229364",
+            "wait": 0,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 49,
+            "break_power_type": 2,
+            "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)",
+            "effects": [
+              {
+                "id": 91000903,
+                "value": 8000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000903,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001599,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001599,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12002448,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "コーリングスター",
+            "not_state_change_count_decrease": false,
+            "power": 510,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "9019439288131687315",
+            "summary": "WEAK攻撃時、ダメージアップ<br>攻撃前、対象の火属性耐性ダウン",
+            "timeline_hash": "280806556929229364",
+            "wait": 0,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 52,
+            "break_power_type": 2,
+            "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)",
+            "effects": [
+              {
+                "id": 91000903,
+                "value": 8000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000903,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001599,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001599,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12002449,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "コーリングスター",
+            "not_state_change_count_decrease": false,
+            "power": 540,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "9019439288131687315",
+            "summary": "WEAK攻撃時、ダメージアップ<br>攻撃前、対象の火属性耐性ダウン",
+            "timeline_hash": "280806556929229364",
+            "wait": 0,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 55,
+            "break_power_type": 2,
+            "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)",
+            "effects": [
+              {
+                "id": 91000903,
+                "value": 8000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000903,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001599,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001599,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12002450,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "コーリングスター",
+            "not_state_change_count_decrease": false,
+            "power": 570,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "9019439288131687315",
+            "summary": "WEAK攻撃時、ダメージアップ<br>攻撃前、対象の火属性耐性ダウン",
+            "timeline_hash": "280806556929229364",
+            "wait": 0,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 58,
+            "break_power_type": 2,
+            "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、対象に「火属性耐性-{1}%」を付与(上限50%)",
+            "effects": [
+              {
+                "id": 91000903,
+                "value": 8000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000903,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001599,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001599,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12002451,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "コーリングスター",
+            "not_state_change_count_decrease": false,
+            "power": 600,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "9019439288131687315",
+            "summary": "WEAK攻撃時、ダメージアップ<br>攻撃前、対象の火属性耐性ダウン",
+            "timeline_hash": "280806556929229364",
+            "wait": 0,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          }
+        ]
+      },
+      {
+        "type": "burst",
+        "skills": [
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 97,
+            "break_power_type": 2,
+            "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃後、自身に「スキルダメージ+{1}%」を付与(上限300%)",
+            "effects": [
+              {
+                "id": 91000903,
+                "value": 12000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000903,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001571,
+                "value": 6000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001571,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 14002452,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ヘブンズクエーサー",
+            "not_state_change_count_decrease": false,
+            "power": 700,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "5983523870410955950",
+            "summary": "WEAK攻撃時、ダメージアップ<br>攻撃後、自身にスキルダメージアップ",
+            "timeline_hash": "1675167693358269240",
+            "wait": 0,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          }
+        ]
+      }
+    ],
+    "ability_ids": [
+      1990050,
+      1990051,
+      1990298
+    ]
+  }
+}

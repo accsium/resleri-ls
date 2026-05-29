@@ -1,0 +1,3101 @@
+{
+  "id": 35101,
+  "attack_attributes": [
+    8
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 2,
+  "support_color_id": 4,
+  "trait_color_name_ja": "紫",
+  "trait_color_name_cn": "紫",
+  "support_color_name_ja": "赤",
+  "support_color_name_cn": "红",
+  "battle_tool_trait_names_ja": [
+    "守護の祝福",
+    "会心の出来"
+  ],
+  "battle_tool_trait_names_cn": [
+    "守护之祝福",
+    "暴击成品"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "ブレイク中ダメージ上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "破防中伤害提升"
+  ],
+  "battle_tool_trait_ids": [
+    10,
+    50
+  ],
+  "equipment_tool_trait_ids": [
+    12
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980174,
+        "combat_power_coefficient": 2500,
+        "condition_ids": [
+          11
+        ]
+      }
+    ],
+    "description": "得意属性が風属性のキャラは「物防・魔防+10%」と「攻撃対象がスタン状態の時、スキルダメージ+50%」",
+    "name": "超一流の助けはいかが？"
+  },
+  "ability_ids": [
+    1990290,
+    1990291
+  ],
+  "support_ability_ids": [
+    500445,
+    500389,
+    500333,
+    500277,
+    500221,
+    500165,
+    500109,
+    500053
+  ],
+  "_skillDetails": {
+    "500053": {
+      "id": 500053,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 1150,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500109": {
+      "id": 500109,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 1000,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500165": {
+      "id": 500165,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 850,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500221": {
+      "id": 500221,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 700,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500277": {
+      "id": 500277,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 650,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500333": {
+      "id": 500333,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 600,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500389": {
+      "id": 500389,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 550,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500445": {
+      "id": 500445,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 500,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980174": {
+      "name": "超一流の助けはいかが？",
+      "id": 1980174,
+      "description": "得意属性が風属性のキャラは「物防・魔防+{0}%」と「攻撃対象がスタン状態の時、スキルダメージ+{1}%」",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500004,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500155,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "[自身/対象がスタンの時スキルダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500155,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500005,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990290": {
+      "name": "努力は怠らないわ",
+      "id": 1990290,
+      "description": "スキル発動後、アイテムゲージを{0}%回復",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001085,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[アイテムゲージ回復]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001085,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990291": {
+      "name": "天才の追い風よ！",
+      "id": 1990291,
+      "description": "得意属性が風属性の味方全員のスキルダメージ・ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001153,
+          "limit_count": null,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001153,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001178,
+          "limit_count": null,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001178,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990393": {
+      "name": "クリティカルダメージアップオールⅢ",
+      "id": 1990393,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990418": {
+      "name": "クリティカルダメージアップオールⅡ",
+      "id": 1990418,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990443": {
+      "name": "クリティカルダメージアップオールⅠ",
+      "id": 1990443,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 600,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11002164": {
+      "name": "ウインドシュート",
+      "id": 11002164,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「素早さ+{0}%」を1回行動終了するまで付与し、<br>このスキル使用前に魔攻が最も高い味方1人に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001017,
+          "value": 1500,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001315,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001315,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 57,
+      "break_power": 6
+    },
+    "11002165": {
+      "name": "ウインドシュート",
+      "id": 11002165,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「素早さ+{0}%」を1回行動終了するまで付与し、<br>このスキル使用前に魔攻が最も高い味方1人に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001017,
+          "value": 1500,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001315,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001315,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 60,
+      "break_power": 6
+    },
+    "11002166": {
+      "name": "ウインドシュート",
+      "id": 11002166,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「素早さ+{0}%」を1回行動終了するまで付与し、<br>このスキル使用前に魔攻が最も高い味方1人に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001017,
+          "value": 1500,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001315,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001315,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 64,
+      "break_power": 6
+    },
+    "11002167": {
+      "name": "ウインドシュート",
+      "id": 11002167,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「素早さ+{0}%」を1回行動終了するまで付与し、<br>このスキル使用前に魔攻が最も高い味方1人に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001017,
+          "value": 1500,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001315,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001315,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 67,
+      "break_power": 6
+    },
+    "11002168": {
+      "name": "ウインドシュート",
+      "id": 11002168,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「素早さ+{0}%」を1回行動終了するまで付与し、<br>このスキル使用前に魔攻が最も高い味方1人に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001017,
+          "value": 1500,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001315,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001315,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 71,
+      "break_power": 7
+    },
+    "12002169": {
+      "name": "リボンブラスター",
+      "id": 12002169,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復後、対象に「最大HP+{0}%」(上限30%)と「魔攻+{1}%」(上限30%)と「受ける魔法攻撃ダメージ-{2}%」(上限21%)を付与<br>得意属性が風属性のアタッカーの味方全員に「風属性ダメージ+{3}%」を2回行動終了するまで付与し、<br>「風属性耐性+{4}%」を2回攻撃を受けるまで付与し、<br>「受ける物理攻撃ダメージ-{5}%」(上限21%)を付与",
+      "effects": [
+        {
+          "id": 91001513,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001513,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001505,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001505,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001506,
+          "value": 700,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001506,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001507,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001507,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001509,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001509,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001508,
+          "value": 700,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001508,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 95,
+      "break_power": 0
+    },
+    "12002170": {
+      "name": "リボンブラスター",
+      "id": 12002170,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復後、対象に「最大HP+{0}%」(上限30%)と「魔攻+{1}%」(上限30%)と「受ける魔法攻撃ダメージ-{2}%」(上限21%)を付与<br>得意属性が風属性のアタッカーの味方全員に「風属性ダメージ+{3}%」を2回行動終了するまで付与し、<br>「風属性耐性+{4}%」を2回攻撃を受けるまで付与し、<br>「受ける物理攻撃ダメージ-{5}%」(上限21%)を付与",
+      "effects": [
+        {
+          "id": 91001513,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001513,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001505,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001505,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001506,
+          "value": 700,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001506,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001507,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001507,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001509,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001509,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001508,
+          "value": 700,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001508,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 97,
+      "break_power": 0
+    },
+    "12002171": {
+      "name": "リボンブラスター",
+      "id": 12002171,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復後、対象に「最大HP+{0}%」(上限30%)と「魔攻+{1}%」(上限30%)と「受ける魔法攻撃ダメージ-{2}%」(上限21%)を付与<br>得意属性が風属性のアタッカーの味方全員に「風属性ダメージ+{3}%」を2回行動終了するまで付与し、<br>「風属性耐性+{4}%」を2回攻撃を受けるまで付与し、<br>「受ける物理攻撃ダメージ-{5}%」(上限21%)を付与",
+      "effects": [
+        {
+          "id": 91001513,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001513,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001505,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001505,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001506,
+          "value": 700,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001506,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001507,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001507,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001509,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001509,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001508,
+          "value": 700,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001508,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 99,
+      "break_power": 0
+    },
+    "12002172": {
+      "name": "リボンブラスター",
+      "id": 12002172,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復後、対象に「最大HP+{0}%」(上限30%)と「魔攻+{1}%」(上限30%)と「受ける魔法攻撃ダメージ-{2}%」(上限21%)を付与<br>得意属性が風属性のアタッカーの味方全員に「風属性ダメージ+{3}%」を2回行動終了するまで付与し、<br>「風属性耐性+{4}%」を2回攻撃を受けるまで付与し、<br>「受ける物理攻撃ダメージ-{5}%」(上限21%)を付与",
+      "effects": [
+        {
+          "id": 91001513,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001513,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001505,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001505,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001506,
+          "value": 700,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001506,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001507,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001507,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001509,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001509,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001508,
+          "value": 700,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001508,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 101,
+      "break_power": 0
+    },
+    "12002173": {
+      "name": "リボンブラスター",
+      "id": 12002173,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復後、対象に「最大HP+{0}%」(上限30%)と「魔攻+{1}%」(上限30%)と「受ける魔法攻撃ダメージ-{2}%」(上限21%)を付与<br>得意属性が風属性のアタッカーの味方全員に「風属性ダメージ+{3}%」を2回行動終了するまで付与し、<br>「風属性耐性+{4}%」を2回攻撃を受けるまで付与し、<br>「受ける物理攻撃ダメージ-{5}%」(上限21%)を付与",
+      "effects": [
+        {
+          "id": 91001513,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001513,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001505,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001505,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001506,
+          "value": 700,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001506,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001507,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001507,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001509,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001509,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001508,
+          "value": 700,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001508,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 104,
+      "break_power": 0
+    },
+    "14002174": {
+      "name": "アルケミックゲイル",
+      "id": 14002174,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>「受けるダメージ+{0}%」を2回攻撃を受けるまで付与<br>得意属性が風属性のアタッカーの味方全員に「ターン開始時、HP回復+{1}%」を3回行動開始するまで付与し、<br>「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカルダメージ+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000966,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000966,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001510,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001510,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001511,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001511,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001512,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001512,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 252,
+      "break_power": 30
+    },
+    "14002175": {
+      "name": "アルケミックゲイル",
+      "id": 14002175,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>「受けるダメージ+{0}%」を2回攻撃を受けるまで付与<br>得意属性が風属性のアタッカーの味方全員に「ターン開始時、HP回復+{1}%」を3回行動開始するまで付与し、<br>「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカルダメージ+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000966,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000966,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001510,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001510,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001511,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001511,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001512,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001512,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 267,
+      "break_power": 31
+    },
+    "14002176": {
+      "name": "アルケミックゲイル",
+      "id": 14002176,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>「受けるダメージ+{0}%」を2回攻撃を受けるまで付与<br>得意属性が風属性のアタッカーの味方全員に「ターン開始時、HP回復+{1}%」を3回行動開始するまで付与し、<br>「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカルダメージ+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000966,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000966,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001510,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001510,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001511,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001511,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001512,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001512,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 283,
+      "break_power": 33
+    },
+    "14002177": {
+      "name": "アルケミックゲイル",
+      "id": 14002177,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>「受けるダメージ+{0}%」を2回攻撃を受けるまで付与<br>得意属性が風属性のアタッカーの味方全員に「ターン開始時、HP回復+{1}%」を3回行動開始するまで付与し、<br>「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカルダメージ+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000966,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000966,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001510,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001510,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001511,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001511,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001512,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001512,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 299,
+      "break_power": 35
+    },
+    "14002178": {
+      "name": "アルケミックゲイル",
+      "id": 14002178,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>「受けるダメージ+{0}%」を2回攻撃を受けるまで付与<br>得意属性が風属性のアタッカーの味方全員に「ターン開始時、HP回復+{1}%」を3回行動開始するまで付与し、<br>「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカルダメージ+{3}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000966,
+          "value": 4000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000966,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001510,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001510,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001511,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001511,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001512,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001512,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001064,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001064,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 315,
+      "break_power": 37
+    }
+  },
+  "initial_wt": 230,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「素早さ+{0}%」を1回行動終了するまで付与し、<br>このスキル使用前に魔攻が最も高い味方1人に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001017,
+              "value": 1500,
+              "_detail": {
+                "description": "素早さアップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001017,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001315,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001315,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002164,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ウインドシュート",
+          "not_state_change_count_decrease": false,
+          "power": 57,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の素早さアップ<br>魔攻が最も高い味方1人のスキルダメージアップ",
+          "timeline_hash": "7334220977946284856",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「素早さ+{0}%」を1回行動終了するまで付与し、<br>このスキル使用前に魔攻が最も高い味方1人に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001017,
+              "value": 1500,
+              "_detail": {
+                "description": "素早さアップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001017,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001315,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001315,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002165,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ウインドシュート",
+          "not_state_change_count_decrease": false,
+          "power": 60,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の素早さアップ<br>魔攻が最も高い味方1人のスキルダメージアップ",
+          "timeline_hash": "7334220977946284856",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「素早さ+{0}%」を1回行動終了するまで付与し、<br>このスキル使用前に魔攻が最も高い味方1人に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001017,
+              "value": 1500,
+              "_detail": {
+                "description": "素早さアップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001017,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001315,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001315,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002166,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ウインドシュート",
+          "not_state_change_count_decrease": false,
+          "power": 64,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の素早さアップ<br>魔攻が最も高い味方1人のスキルダメージアップ",
+          "timeline_hash": "7334220977946284856",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「素早さ+{0}%」を1回行動終了するまで付与し、<br>このスキル使用前に魔攻が最も高い味方1人に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001017,
+              "value": 1500,
+              "_detail": {
+                "description": "素早さアップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001017,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001315,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001315,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002167,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ウインドシュート",
+          "not_state_change_count_decrease": false,
+          "power": 67,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の素早さアップ<br>魔攻が最も高い味方1人のスキルダメージアップ",
+          "timeline_hash": "7334220977946284856",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「素早さ+{0}%」を1回行動終了するまで付与し、<br>このスキル使用前に魔攻が最も高い味方1人に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001017,
+              "value": 1500,
+              "_detail": {
+                "description": "素早さアップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001017,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001315,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001315,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002168,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ウインドシュート",
+          "not_state_change_count_decrease": false,
+          "power": 71,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の素早さアップ<br>魔攻が最も高い味方1人のスキルダメージアップ",
+          "timeline_hash": "7334220977946284856",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「最大HP+{0}%」(上限30%)と「魔攻+{1}%」(上限30%)と「受ける魔法攻撃ダメージ-{2}%」(上限21%)を付与<br>得意属性が風属性のアタッカーの味方全員に「風属性ダメージ+{3}%」を2回行動終了するまで付与し、<br>「風属性耐性+{4}%」を2回攻撃を受けるまで付与し、<br>「受ける物理攻撃ダメージ-{5}%」(上限21%)を付与",
+          "effects": [
+            {
+              "id": 91001513,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001513,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001505,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001505,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001506,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001506,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001507,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001507,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001509,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001509,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001508,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001508,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002169,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "リボンブラスター",
+          "not_state_change_count_decrease": false,
+          "power": 95,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "回復後、対象の最大HPと魔攻アップ<br>対象の受ける魔法攻撃ダメージダウン<br>得意属性が風属性のアタッカーの味方全員の風属性ダメージと風属性耐性アップ<br>得意属性が風属性のアタッカーの味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "4465493103150884004",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「最大HP+{0}%」(上限30%)と「魔攻+{1}%」(上限30%)と「受ける魔法攻撃ダメージ-{2}%」(上限21%)を付与<br>得意属性が風属性のアタッカーの味方全員に「風属性ダメージ+{3}%」を2回行動終了するまで付与し、<br>「風属性耐性+{4}%」を2回攻撃を受けるまで付与し、<br>「受ける物理攻撃ダメージ-{5}%」(上限21%)を付与",
+          "effects": [
+            {
+              "id": 91001513,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001513,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001505,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001505,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001506,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001506,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001507,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001507,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001509,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001509,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001508,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001508,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002170,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "リボンブラスター",
+          "not_state_change_count_decrease": false,
+          "power": 97,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "回復後、対象の最大HPと魔攻アップ<br>対象の受ける魔法攻撃ダメージダウン<br>得意属性が風属性のアタッカーの味方全員の風属性ダメージと風属性耐性アップ<br>得意属性が風属性のアタッカーの味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "4465493103150884004",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「最大HP+{0}%」(上限30%)と「魔攻+{1}%」(上限30%)と「受ける魔法攻撃ダメージ-{2}%」(上限21%)を付与<br>得意属性が風属性のアタッカーの味方全員に「風属性ダメージ+{3}%」を2回行動終了するまで付与し、<br>「風属性耐性+{4}%」を2回攻撃を受けるまで付与し、<br>「受ける物理攻撃ダメージ-{5}%」(上限21%)を付与",
+          "effects": [
+            {
+              "id": 91001513,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001513,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001505,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001505,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001506,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001506,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001507,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001507,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001509,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001509,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001508,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001508,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002171,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "リボンブラスター",
+          "not_state_change_count_decrease": false,
+          "power": 99,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "回復後、対象の最大HPと魔攻アップ<br>対象の受ける魔法攻撃ダメージダウン<br>得意属性が風属性のアタッカーの味方全員の風属性ダメージと風属性耐性アップ<br>得意属性が風属性のアタッカーの味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "4465493103150884004",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「最大HP+{0}%」(上限30%)と「魔攻+{1}%」(上限30%)と「受ける魔法攻撃ダメージ-{2}%」(上限21%)を付与<br>得意属性が風属性のアタッカーの味方全員に「風属性ダメージ+{3}%」を2回行動終了するまで付与し、<br>「風属性耐性+{4}%」を2回攻撃を受けるまで付与し、<br>「受ける物理攻撃ダメージ-{5}%」(上限21%)を付与",
+          "effects": [
+            {
+              "id": 91001513,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001513,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001505,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001505,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001506,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001506,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001507,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001507,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001509,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001509,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001508,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001508,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002172,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "リボンブラスター",
+          "not_state_change_count_decrease": false,
+          "power": 101,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "回復後、対象の最大HPと魔攻アップ<br>対象の受ける魔法攻撃ダメージダウン<br>得意属性が風属性のアタッカーの味方全員の風属性ダメージと風属性耐性アップ<br>得意属性が風属性のアタッカーの味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "4465493103150884004",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「最大HP+{0}%」(上限30%)と「魔攻+{1}%」(上限30%)と「受ける魔法攻撃ダメージ-{2}%」(上限21%)を付与<br>得意属性が風属性のアタッカーの味方全員に「風属性ダメージ+{3}%」を2回行動終了するまで付与し、<br>「風属性耐性+{4}%」を2回攻撃を受けるまで付与し、<br>「受ける物理攻撃ダメージ-{5}%」(上限21%)を付与",
+          "effects": [
+            {
+              "id": 91001513,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001513,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001505,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001505,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001506,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001506,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001507,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001507,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001509,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001509,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001508,
+              "value": 700,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001508,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002173,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "リボンブラスター",
+          "not_state_change_count_decrease": false,
+          "power": 104,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "回復後、対象の最大HPと魔攻アップ<br>対象の受ける魔法攻撃ダメージダウン<br>得意属性が風属性のアタッカーの味方全員の風属性ダメージと風属性耐性アップ<br>得意属性が風属性のアタッカーの味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "4465493103150884004",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>「受けるダメージ+{0}%」を2回攻撃を受けるまで付与<br>得意属性が風属性のアタッカーの味方全員に「ターン開始時、HP回復+{1}%」を3回行動開始するまで付与し、<br>「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカルダメージ+{3}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000966,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001510,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001510,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001511,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001511,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001512,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001512,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002174,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アルケミックゲイル",
+          "not_state_change_count_decrease": false,
+          "power": 252,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "7624885015362322351",
+          "summary": "攻撃後、対象にスタンを超高確率で付与<br>対象の受けるダメージアップ<br>得意属性が風属性のアタッカーの味方全員に再生を付与<br>得意属性が風属性のアタッカーの味方全員のブレイクダメージとクリティカルダメージアップ",
+          "timeline_hash": "5907871279403077977",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>「受けるダメージ+{0}%」を2回攻撃を受けるまで付与<br>得意属性が風属性のアタッカーの味方全員に「ターン開始時、HP回復+{1}%」を3回行動開始するまで付与し、<br>「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカルダメージ+{3}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000966,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001510,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001510,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001511,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001511,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001512,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001512,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002175,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アルケミックゲイル",
+          "not_state_change_count_decrease": false,
+          "power": 267,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "7624885015362322351",
+          "summary": "攻撃後、対象にスタンを超高確率で付与<br>対象の受けるダメージアップ<br>得意属性が風属性のアタッカーの味方全員に再生を付与<br>得意属性が風属性のアタッカーの味方全員のブレイクダメージとクリティカルダメージアップ",
+          "timeline_hash": "5907871279403077977",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>「受けるダメージ+{0}%」を2回攻撃を受けるまで付与<br>得意属性が風属性のアタッカーの味方全員に「ターン開始時、HP回復+{1}%」を3回行動開始するまで付与し、<br>「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカルダメージ+{3}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000966,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001510,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001510,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001511,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001511,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001512,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001512,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002176,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アルケミックゲイル",
+          "not_state_change_count_decrease": false,
+          "power": 283,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "7624885015362322351",
+          "summary": "攻撃後、対象にスタンを超高確率で付与<br>対象の受けるダメージアップ<br>得意属性が風属性のアタッカーの味方全員に再生を付与<br>得意属性が風属性のアタッカーの味方全員のブレイクダメージとクリティカルダメージアップ",
+          "timeline_hash": "5907871279403077977",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>「受けるダメージ+{0}%」を2回攻撃を受けるまで付与<br>得意属性が風属性のアタッカーの味方全員に「ターン開始時、HP回復+{1}%」を3回行動開始するまで付与し、<br>「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカルダメージ+{3}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000966,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001510,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001510,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001511,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001511,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001512,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001512,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002177,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アルケミックゲイル",
+          "not_state_change_count_decrease": false,
+          "power": 299,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "7624885015362322351",
+          "summary": "攻撃後、対象にスタンを超高確率で付与<br>対象の受けるダメージアップ<br>得意属性が風属性のアタッカーの味方全員に再生を付与<br>得意属性が風属性のアタッカーの味方全員のブレイクダメージとクリティカルダメージアップ",
+          "timeline_hash": "5907871279403077977",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「スタン」を1回行動開始するまで超高確率で付与し、<br>「受けるダメージ+{0}%」を2回攻撃を受けるまで付与<br>得意属性が風属性のアタッカーの味方全員に「ターン開始時、HP回復+{1}%」を3回行動開始するまで付与し、<br>「ブレイクダメージ+{2}%」を2回行動終了するまで付与し、<br>「クリティカルダメージ+{3}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000966,
+              "value": 4000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000966,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001510,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001510,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001511,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001511,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001512,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001512,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001064,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001064,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002178,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アルケミックゲイル",
+          "not_state_change_count_decrease": false,
+          "power": 315,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "7624885015362322351",
+          "summary": "攻撃後、対象にスタンを超高確率で付与<br>対象の受けるダメージアップ<br>得意属性が風属性のアタッカーの味方全員に再生を付与<br>得意属性が風属性のアタッカーの味方全員のブレイクダメージとクリティカルダメージアップ",
+          "timeline_hash": "5907871279403077977",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        }
+      ]
+    }
+  ]
+}

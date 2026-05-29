@@ -1,0 +1,5620 @@
+{
+  "id": 43106,
+  "attack_attributes": [
+    5
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 4,
+  "support_color_id": 3,
+  "trait_color_name_ja": "赤",
+  "trait_color_name_cn": "红",
+  "support_color_name_ja": "黄",
+  "support_color_name_cn": "黄",
+  "battle_tool_trait_names_ja": [
+    "火の祝福",
+    "火の呪詛"
+  ],
+  "battle_tool_trait_names_cn": [
+    "火之祝福",
+    "火之诅咒"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "ブレイク中ダメージ上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "破防中伤害提升"
+  ],
+  "battle_tool_trait_ids": [
+    6,
+    18
+  ],
+  "equipment_tool_trait_ids": [
+    12
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980149,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          12
+        ]
+      }
+    ],
+    "description": "味方全員は「戦闘アイテムダメージ+30%」と「WEAK攻撃時、スキルダメージ+30%」",
+    "name": "いざ、気炎万丈の時！"
+  },
+  "ability_ids": [
+    1990242,
+    1990236
+  ],
+  "support_ability_ids": [
+    500414,
+    500358,
+    500302,
+    500246,
+    500190,
+    500134,
+    500078,
+    500022
+  ],
+  "_skillDetails": {
+    "500022": {
+      "id": 500022,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500022,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500078": {
+      "id": 500078,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500022,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500134": {
+      "id": 500134,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500022,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500190": {
+      "id": 500190,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500022,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500246": {
+      "id": 500246,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500022,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500302": {
+      "id": 500302,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500022,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500358": {
+      "id": 500358,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500022,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500414": {
+      "id": 500414,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500022,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500022,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980149": {
+      "name": "いざ、気炎万丈の時！",
+      "id": 1980149,
+      "description": "味方全員は「戦闘アイテムダメージ+{0}%」と「WEAK攻撃時、スキルダメージ+{1}%」",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500125,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/戦闘アイテムダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500125,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500137,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/WEAK攻撃時スキルダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500137,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990236": {
+      "name": "パネルアッププラスⅤ",
+      "id": 1990236,
+      "description": "プラスパネルから受ける効果量+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001045,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "state_change用",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001045,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990242": {
+      "name": "目覚める決意",
+      "id": 1990242,
+      "description": "HP回復を受けた時、<br>やや高確率で自身に「火属性ダメージ+{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001116,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "[自身/1回/火属性ダメージアップ/やや高確率]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001116,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990414": {
+      "name": "クリティカルダメージアップⅢ",
+      "id": 1990414,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990439": {
+      "name": "クリティカルダメージアップⅡ",
+      "id": 1990439,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990464": {
+      "name": "クリティカルダメージアップⅠ",
+      "id": 1990464,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11001694": {
+      "name": "ステラトワリング",
+      "id": 11001694,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001375,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001375,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001017,
+          "value": 500,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 2000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 74,
+      "break_power": 7
+    },
+    "11001695": {
+      "name": "ステラトワリング",
+      "id": 11001695,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001375,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001375,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001017,
+          "value": 500,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 2000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 78,
+      "break_power": 7
+    },
+    "11001696": {
+      "name": "ステラトワリング",
+      "id": 11001696,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001375,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001375,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001017,
+          "value": 500,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 2000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 83,
+      "break_power": 7
+    },
+    "11001697": {
+      "name": "ステラトワリング",
+      "id": 11001697,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001375,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001375,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001017,
+          "value": 500,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 2000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 87,
+      "break_power": 7
+    },
+    "11001698": {
+      "name": "ステラトワリング",
+      "id": 11001698,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001375,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001375,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001017,
+          "value": 500,
+          "_detail": {
+            "description": "素早さアップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001017,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 2000,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001020,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 92,
+      "break_power": 8
+    },
+    "12001699": {
+      "name": "アスパイアスター",
+      "id": 12001699,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000911,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000911,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 4000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 242,
+      "break_power": 30
+    },
+    "12001700": {
+      "name": "アスパイアスター",
+      "id": 12001700,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000911,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000911,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 4000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 257,
+      "break_power": 31
+    },
+    "12001701": {
+      "name": "アスパイアスター",
+      "id": 12001701,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000911,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000911,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 4000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 272,
+      "break_power": 33
+    },
+    "12001702": {
+      "name": "アスパイアスター",
+      "id": 12001702,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000911,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000911,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 4000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 287,
+      "break_power": 35
+    },
+    "12001703": {
+      "name": "アスパイアスター",
+      "id": 12001703,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000911,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000911,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 4000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001376,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 302,
+      "break_power": 37
+    },
+    "14001704": {
+      "name": "ルミナスアウルム",
+      "id": 14001704,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000903,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001377,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001377,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 222,
+      "break_power": 30
+    },
+    "14001705": {
+      "name": "ルミナスアウルム",
+      "id": 14001705,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000903,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001377,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001377,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 235,
+      "break_power": 31
+    },
+    "14001706": {
+      "name": "ルミナスアウルム",
+      "id": 14001706,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000903,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001377,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001377,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 249,
+      "break_power": 33
+    },
+    "14001707": {
+      "name": "ルミナスアウルム",
+      "id": 14001707,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000903,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001377,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001377,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 263,
+      "break_power": 35
+    },
+    "14001708": {
+      "name": "ルミナスアウルム",
+      "id": 14001708,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001337,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000903,
+          "value": 10000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001377,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001377,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 277,
+      "break_power": 37
+    }
+  },
+  "initial_wt": 240,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001375,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001375,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001017,
+              "value": 500,
+              "_detail": {
+                "description": "素早さアップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001017,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001020,
+              "value": 2000,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001020,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001694,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラトワリング",
+          "not_state_change_count_decrease": false,
+          "power": 74,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>自身の素早さと魔攻アップ",
+          "timeline_hash": "8141186913012137677",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001375,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001375,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001017,
+              "value": 500,
+              "_detail": {
+                "description": "素早さアップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001017,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001020,
+              "value": 2000,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001020,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001695,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラトワリング",
+          "not_state_change_count_decrease": false,
+          "power": 78,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>自身の素早さと魔攻アップ",
+          "timeline_hash": "8141186913012137677",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001375,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001375,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001017,
+              "value": 500,
+              "_detail": {
+                "description": "素早さアップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001017,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001020,
+              "value": 2000,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001020,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001696,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラトワリング",
+          "not_state_change_count_decrease": false,
+          "power": 83,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>自身の素早さと魔攻アップ",
+          "timeline_hash": "8141186913012137677",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001375,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001375,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001017,
+              "value": 500,
+              "_detail": {
+                "description": "素早さアップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001017,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001020,
+              "value": 2000,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001020,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001697,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラトワリング",
+          "not_state_change_count_decrease": false,
+          "power": 87,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>自身の素早さと魔攻アップ",
+          "timeline_hash": "8141186913012137677",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 8,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001375,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001375,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001017,
+              "value": 500,
+              "_detail": {
+                "description": "素早さアップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001017,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001020,
+              "value": 2000,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001020,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001698,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ステラトワリング",
+          "not_state_change_count_decrease": false,
+          "power": 92,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>自身の素早さと魔攻アップ",
+          "timeline_hash": "8141186913012137677",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000911,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000911,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 4000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001699,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アスパイアスター",
+          "not_state_change_count_decrease": false,
+          "power": 242,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+          "timeline_hash": "2939640074344761695",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000911,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000911,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 4000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001700,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アスパイアスター",
+          "not_state_change_count_decrease": false,
+          "power": 257,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+          "timeline_hash": "2939640074344761695",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000911,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000911,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 4000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001701,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アスパイアスター",
+          "not_state_change_count_decrease": false,
+          "power": 272,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+          "timeline_hash": "2939640074344761695",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000911,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000911,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 4000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001702,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アスパイアスター",
+          "not_state_change_count_decrease": false,
+          "power": 287,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+          "timeline_hash": "2939640074344761695",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000911,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000911,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 4000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001376,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001703,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アスパイアスター",
+          "not_state_change_count_decrease": false,
+          "power": 302,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+          "timeline_hash": "2939640074344761695",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001337,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000903,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001377,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001377,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001704,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ルミナスアウルム",
+          "not_state_change_count_decrease": false,
+          "power": 222,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "4137583808838890648",
+          "summary": "この攻撃の貫通力アップ<br>WEAK攻撃時、ダメージアップ<br>WEAK攻撃時、次の味方のパネルをバーストパネルに変換",
+          "timeline_hash": "5101520695884161729",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001337,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000903,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001377,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001377,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001705,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ルミナスアウルム",
+          "not_state_change_count_decrease": false,
+          "power": 235,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "4137583808838890648",
+          "summary": "この攻撃の貫通力アップ<br>WEAK攻撃時、ダメージアップ<br>WEAK攻撃時、次の味方のパネルをバーストパネルに変換",
+          "timeline_hash": "5101520695884161729",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001337,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000903,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001377,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001377,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001706,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ルミナスアウルム",
+          "not_state_change_count_decrease": false,
+          "power": 249,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "4137583808838890648",
+          "summary": "この攻撃の貫通力アップ<br>WEAK攻撃時、ダメージアップ<br>WEAK攻撃時、次の味方のパネルをバーストパネルに変換",
+          "timeline_hash": "5101520695884161729",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001337,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000903,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001377,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001377,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001707,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ルミナスアウルム",
+          "not_state_change_count_decrease": false,
+          "power": 263,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "4137583808838890648",
+          "summary": "この攻撃の貫通力アップ<br>WEAK攻撃時、ダメージアップ<br>WEAK攻撃時、次の味方のパネルをバーストパネルに変換",
+          "timeline_hash": "5101520695884161729",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001337,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000903,
+              "value": 10000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001377,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001377,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001708,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ルミナスアウルム",
+          "not_state_change_count_decrease": false,
+          "power": 277,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "4137583808838890648",
+          "summary": "この攻撃の貫通力アップ<br>WEAK攻撃時、ダメージアップ<br>WEAK攻撃時、次の味方のパネルをバーストパネルに変換",
+          "timeline_hash": "5101520695884161729",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        }
+      ]
+    }
+  ],
+  "switch": "change",
+  "switch_stat": {
+    "id": 43107,
+    "ability_ids": [
+      1990237,
+      1990243
+    ],
+    "_exSkills": [
+      {
+        "attack_attribute_category": 2,
+        "attack_attributes": [
+          5
+        ],
+        "break_power": 30,
+        "break_power_type": 2,
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91000911,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000911,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001376,
+            "value": 4000,
+            "_detail": {
+              "description": "魔攻アップ(2回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001376,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "id": 12001699,
+        "is_restrict_after_skill_timing_effects": false,
+        "limit_count": null,
+        "max_lamp": 0,
+        "name": "アスパイアスター",
+        "not_state_change_count_decrease": false,
+        "power": 242,
+        "require_command_value": false,
+        "skill_destination": null,
+        "skill_effect_type": 1,
+        "skill_power_type": 2,
+        "skill_target_type": 3,
+        "state_change_visual_type": null,
+        "still_path_hash": "9019439288131687315",
+        "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+        "timeline_hash": "2939640074344761695",
+        "wait": 0,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体"
+      },
+      {
+        "attack_attribute_category": 2,
+        "attack_attributes": [
+          5
+        ],
+        "break_power": 31,
+        "break_power_type": 2,
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91000911,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000911,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001376,
+            "value": 4000,
+            "_detail": {
+              "description": "魔攻アップ(2回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001376,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "id": 12001700,
+        "is_restrict_after_skill_timing_effects": false,
+        "limit_count": null,
+        "max_lamp": 0,
+        "name": "アスパイアスター",
+        "not_state_change_count_decrease": false,
+        "power": 257,
+        "require_command_value": false,
+        "skill_destination": null,
+        "skill_effect_type": 1,
+        "skill_power_type": 2,
+        "skill_target_type": 3,
+        "state_change_visual_type": null,
+        "still_path_hash": "9019439288131687315",
+        "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+        "timeline_hash": "2939640074344761695",
+        "wait": 0,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体"
+      },
+      {
+        "attack_attribute_category": 2,
+        "attack_attributes": [
+          5
+        ],
+        "break_power": 33,
+        "break_power_type": 2,
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91000911,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000911,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001376,
+            "value": 4000,
+            "_detail": {
+              "description": "魔攻アップ(2回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001376,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "id": 12001701,
+        "is_restrict_after_skill_timing_effects": false,
+        "limit_count": null,
+        "max_lamp": 0,
+        "name": "アスパイアスター",
+        "not_state_change_count_decrease": false,
+        "power": 272,
+        "require_command_value": false,
+        "skill_destination": null,
+        "skill_effect_type": 1,
+        "skill_power_type": 2,
+        "skill_target_type": 3,
+        "state_change_visual_type": null,
+        "still_path_hash": "9019439288131687315",
+        "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+        "timeline_hash": "2939640074344761695",
+        "wait": 0,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体"
+      },
+      {
+        "attack_attribute_category": 2,
+        "attack_attributes": [
+          5
+        ],
+        "break_power": 35,
+        "break_power_type": 2,
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91000911,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000911,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001376,
+            "value": 4000,
+            "_detail": {
+              "description": "魔攻アップ(2回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001376,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "id": 12001702,
+        "is_restrict_after_skill_timing_effects": false,
+        "limit_count": null,
+        "max_lamp": 0,
+        "name": "アスパイアスター",
+        "not_state_change_count_decrease": false,
+        "power": 287,
+        "require_command_value": false,
+        "skill_destination": null,
+        "skill_effect_type": 1,
+        "skill_power_type": 2,
+        "skill_target_type": 3,
+        "state_change_visual_type": null,
+        "still_path_hash": "9019439288131687315",
+        "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+        "timeline_hash": "2939640074344761695",
+        "wait": 0,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体"
+      },
+      {
+        "attack_attribute_category": 2,
+        "attack_attributes": [
+          5
+        ],
+        "break_power": 37,
+        "break_power_type": 2,
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91000911,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000911,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001376,
+            "value": 4000,
+            "_detail": {
+              "description": "魔攻アップ(2回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001376,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "id": 12001703,
+        "is_restrict_after_skill_timing_effects": false,
+        "limit_count": null,
+        "max_lamp": 0,
+        "name": "アスパイアスター",
+        "not_state_change_count_decrease": false,
+        "power": 302,
+        "require_command_value": false,
+        "skill_destination": null,
+        "skill_effect_type": 1,
+        "skill_power_type": 2,
+        "skill_target_type": 3,
+        "state_change_visual_type": null,
+        "still_path_hash": "9019439288131687315",
+        "summary": "攻撃前、対象の火属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+        "timeline_hash": "2939640074344761695",
+        "wait": 0,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体"
+      }
+    ],
+    "_skillDetails": {
+      "500022": {
+        "id": 500022,
+        "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 500022,
+            "limit_count": null,
+            "value": 1725,
+            "_detail": {
+              "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 500022,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "500078": {
+        "id": 500078,
+        "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 500022,
+            "limit_count": null,
+            "value": 1500,
+            "_detail": {
+              "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 500022,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "500134": {
+        "id": 500134,
+        "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 500022,
+            "limit_count": null,
+            "value": 1275,
+            "_detail": {
+              "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 500022,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "500190": {
+        "id": 500190,
+        "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 500022,
+            "limit_count": null,
+            "value": 1050,
+            "_detail": {
+              "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 500022,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "500246": {
+        "id": 500246,
+        "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 500022,
+            "limit_count": null,
+            "value": 975,
+            "_detail": {
+              "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 500022,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "500302": {
+        "id": 500302,
+        "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 500022,
+            "limit_count": null,
+            "value": 900,
+            "_detail": {
+              "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 500022,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "500358": {
+        "id": 500358,
+        "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 500022,
+            "limit_count": null,
+            "value": 825,
+            "_detail": {
+              "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 500022,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "500414": {
+        "id": 500414,
+        "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 500022,
+            "limit_count": null,
+            "value": 750,
+            "_detail": {
+              "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 500022,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "1980149": {
+        "name": "いざ、気炎万丈の時！",
+        "id": 1980149,
+        "description": "味方全員は「戦闘アイテムダメージ+{0}%」と「WEAK攻撃時、スキルダメージ+{1}%」",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 72500125,
+            "limit_count": null,
+            "value": 3000,
+            "_detail": {
+              "description": "[自身/戦闘アイテムダメージアップ]",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 72500125,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "ability_timing_value": null,
+            "id": 72500137,
+            "limit_count": null,
+            "value": 3000,
+            "_detail": {
+              "description": "[自身/WEAK攻撃時スキルダメージアップ]",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 72500137,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "1990236": {
+        "name": "パネルアッププラスⅤ",
+        "id": 1990236,
+        "description": "プラスパネルから受ける効果量+{0}%",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 72001045,
+            "limit_count": null,
+            "value": 5000,
+            "_detail": {
+              "description": "state_change用",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 72001045,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "1990237": {
+        "name": "目覚める決意",
+        "id": 1990237,
+        "description": "HP回復を受けた時、<br>「ステラクラフト」のスキルランプを1個点灯する",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 72001094,
+            "limit_count": null,
+            "value": 100,
+            "_detail": {
+              "description": "[スキルランプ点灯]",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 72001094,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "1990242": {
+        "name": "目覚める決意",
+        "id": 1990242,
+        "description": "HP回復を受けた時、<br>やや高確率で自身に「火属性ダメージ+{0}%」を1回行動終了するまで付与",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 72001116,
+            "limit_count": null,
+            "value": 5000,
+            "_detail": {
+              "description": "[自身/1回/火属性ダメージアップ/やや高確率]",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 72001116,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "1990243": {
+        "name": "パネルアッププラスⅤ",
+        "id": 1990243,
+        "description": "プラスパネルから受ける効果量+{0}%",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 72001045,
+            "limit_count": null,
+            "value": 3000,
+            "_detail": {
+              "description": "state_change用",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 72001045,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "1990414": {
+        "name": "クリティカルダメージアップⅢ",
+        "id": 1990414,
+        "description": "クリティカルダメージ+{0}%",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 713001431,
+            "limit_count": null,
+            "value": 3000,
+            "_detail": {
+              "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 713001431,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "1990439": {
+        "name": "クリティカルダメージアップⅡ",
+        "id": 1990439,
+        "description": "クリティカルダメージ+{0}%",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 713001431,
+            "limit_count": null,
+            "value": 2000,
+            "_detail": {
+              "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 713001431,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "1990464": {
+        "name": "クリティカルダメージアップⅠ",
+        "id": 1990464,
+        "description": "クリティカルダメージ+{0}%",
+        "effects": [
+          {
+            "ability_timing_value": null,
+            "id": 713001431,
+            "limit_count": null,
+            "value": 1000,
+            "_detail": {
+              "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 713001431,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ]
+      },
+      "11001694": {
+        "name": "ステラトワリング",
+        "id": 11001694,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91001375,
+            "value": 1500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001375,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001017,
+            "value": 500,
+            "_detail": {
+              "description": "素早さアップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001017,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001020,
+            "value": 2000,
+            "_detail": {
+              "description": "魔攻アップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001020,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": -100,
+        "power": 74,
+        "break_power": 7
+      },
+      "11001695": {
+        "name": "ステラトワリング",
+        "id": 11001695,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91001375,
+            "value": 1500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001375,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001017,
+            "value": 500,
+            "_detail": {
+              "description": "素早さアップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001017,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001020,
+            "value": 2000,
+            "_detail": {
+              "description": "魔攻アップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001020,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": -100,
+        "power": 78,
+        "break_power": 7
+      },
+      "11001696": {
+        "name": "ステラトワリング",
+        "id": 11001696,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91001375,
+            "value": 1500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001375,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001017,
+            "value": 500,
+            "_detail": {
+              "description": "素早さアップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001017,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001020,
+            "value": 2000,
+            "_detail": {
+              "description": "魔攻アップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001020,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": -100,
+        "power": 83,
+        "break_power": 7
+      },
+      "11001697": {
+        "name": "ステラトワリング",
+        "id": 11001697,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91001375,
+            "value": 1500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001375,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001017,
+            "value": 500,
+            "_detail": {
+              "description": "素早さアップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001017,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001020,
+            "value": 2000,
+            "_detail": {
+              "description": "魔攻アップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001020,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": -100,
+        "power": 87,
+        "break_power": 7
+      },
+      "11001698": {
+        "name": "ステラトワリング",
+        "id": 11001698,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」と「魔攻+{2}%」を1回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91001375,
+            "value": 1500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001375,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001017,
+            "value": 500,
+            "_detail": {
+              "description": "素早さアップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001017,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001020,
+            "value": 2000,
+            "_detail": {
+              "description": "魔攻アップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001020,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": -100,
+        "power": 92,
+        "break_power": 8
+      },
+      "11001709": {
+        "name": "ステラシャワー",
+        "id": 11001709,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」を1回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91001375,
+            "value": 1500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001375,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001017,
+            "value": 500,
+            "_detail": {
+              "description": "素早さアップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001017,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": -100,
+        "power": 74,
+        "break_power": 7
+      },
+      "11001710": {
+        "name": "ステラシャワー",
+        "id": 11001710,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」を1回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91001375,
+            "value": 1500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001375,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001017,
+            "value": 500,
+            "_detail": {
+              "description": "素早さアップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001017,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": -100,
+        "power": 78,
+        "break_power": 7
+      },
+      "11001711": {
+        "name": "ステラシャワー",
+        "id": 11001711,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」を1回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91001375,
+            "value": 1500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001375,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001017,
+            "value": 500,
+            "_detail": {
+              "description": "素早さアップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001017,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": -100,
+        "power": 83,
+        "break_power": 7
+      },
+      "11001712": {
+        "name": "ステラシャワー",
+        "id": 11001712,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」を1回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91001375,
+            "value": 1500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001375,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001017,
+            "value": 500,
+            "_detail": {
+              "description": "素早さアップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001017,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": -100,
+        "power": 87,
+        "break_power": 7
+      },
+      "11001713": {
+        "name": "ステラシャワー",
+        "id": 11001713,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」を1回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91001375,
+            "value": 1500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001375,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001017,
+            "value": 500,
+            "_detail": {
+              "description": "素早さアップ(1回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001017,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": -100,
+        "power": 92,
+        "break_power": 8
+      },
+      "12001699": {
+        "name": "アスパイアスター",
+        "id": 12001699,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91000911,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000911,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001376,
+            "value": 4000,
+            "_detail": {
+              "description": "魔攻アップ(2回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001376,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 242,
+        "break_power": 30
+      },
+      "12001700": {
+        "name": "アスパイアスター",
+        "id": 12001700,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91000911,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000911,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001376,
+            "value": 4000,
+            "_detail": {
+              "description": "魔攻アップ(2回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001376,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 257,
+        "break_power": 31
+      },
+      "12001701": {
+        "name": "アスパイアスター",
+        "id": 12001701,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91000911,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000911,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001376,
+            "value": 4000,
+            "_detail": {
+              "description": "魔攻アップ(2回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001376,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 272,
+        "break_power": 33
+      },
+      "12001702": {
+        "name": "アスパイアスター",
+        "id": 12001702,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91000911,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000911,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001376,
+            "value": 4000,
+            "_detail": {
+              "description": "魔攻アップ(2回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001376,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 287,
+        "break_power": 35
+      },
+      "12001703": {
+        "name": "アスパイアスター",
+        "id": 12001703,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を5回攻撃を受けるまで付与し、<br>攻撃後、自身に「魔攻+{1}%」を2回行動終了するまで付与",
+        "effects": [
+          {
+            "id": 91000911,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000911,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001376,
+            "value": 4000,
+            "_detail": {
+              "description": "魔攻アップ(2回)",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001376,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 302,
+        "break_power": 37
+      },
+      "12001714": {
+        "name": "ステラクラフト",
+        "id": 12001714,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与<br>「ステラクラフト」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時<br>攻撃前に変身する",
+        "effects": [
+          {
+            "id": 91001300,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001300,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001369,
+            "value": 0,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001369,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001329,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001329,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 242,
+        "break_power": 30
+      },
+      "12001715": {
+        "name": "ステラクラフト",
+        "id": 12001715,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与<br>「ステラクラフト」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時<br>攻撃前に変身する",
+        "effects": [
+          {
+            "id": 91001300,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001300,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001369,
+            "value": 0,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001369,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001329,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001329,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 257,
+        "break_power": 31
+      },
+      "12001716": {
+        "name": "ステラクラフト",
+        "id": 12001716,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与<br>「ステラクラフト」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時<br>攻撃前に変身する",
+        "effects": [
+          {
+            "id": 91001300,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001300,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001369,
+            "value": 0,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001369,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001329,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001329,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 272,
+        "break_power": 33
+      },
+      "12001717": {
+        "name": "ステラクラフト",
+        "id": 12001717,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与<br>「ステラクラフト」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時<br>攻撃前に変身する",
+        "effects": [
+          {
+            "id": 91001300,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001300,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001369,
+            "value": 0,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001369,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001329,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001329,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 287,
+        "break_power": 35
+      },
+      "12001718": {
+        "name": "ステラクラフト",
+        "id": 12001718,
+        "target_name_ja": "ID:3",
+        "target_name_cn": "敌方单体",
+        "skill_target_type": 3,
+        "attack_attributes": [
+          5
+        ],
+        "description": "攻撃前に、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与<br>「ステラクラフト」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時<br>攻撃前に変身する",
+        "effects": [
+          {
+            "id": 91001300,
+            "value": 2500,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001300,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001369,
+            "value": 0,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001369,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001329,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001329,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 302,
+        "break_power": 37
+      },
+      "14001704": {
+        "name": "ルミナスアウルム",
+        "id": 14001704,
+        "target_name_ja": "ID:5",
+        "target_name_cn": "敌方全体",
+        "skill_target_type": 5,
+        "attack_attributes": [
+          5
+        ],
+        "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+        "effects": [
+          {
+            "id": 91001337,
+            "value": 10000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001337,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91000903,
+            "value": 10000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000903,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001377,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001377,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 222,
+        "break_power": 30
+      },
+      "14001705": {
+        "name": "ルミナスアウルム",
+        "id": 14001705,
+        "target_name_ja": "ID:5",
+        "target_name_cn": "敌方全体",
+        "skill_target_type": 5,
+        "attack_attributes": [
+          5
+        ],
+        "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+        "effects": [
+          {
+            "id": 91001337,
+            "value": 10000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001337,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91000903,
+            "value": 10000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000903,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001377,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001377,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 235,
+        "break_power": 31
+      },
+      "14001706": {
+        "name": "ルミナスアウルム",
+        "id": 14001706,
+        "target_name_ja": "ID:5",
+        "target_name_cn": "敌方全体",
+        "skill_target_type": 5,
+        "attack_attributes": [
+          5
+        ],
+        "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+        "effects": [
+          {
+            "id": 91001337,
+            "value": 10000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001337,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91000903,
+            "value": 10000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000903,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001377,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001377,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 249,
+        "break_power": 33
+      },
+      "14001707": {
+        "name": "ルミナスアウルム",
+        "id": 14001707,
+        "target_name_ja": "ID:5",
+        "target_name_cn": "敌方全体",
+        "skill_target_type": 5,
+        "attack_attributes": [
+          5
+        ],
+        "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+        "effects": [
+          {
+            "id": 91001337,
+            "value": 10000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001337,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91000903,
+            "value": 10000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000903,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001377,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001377,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 263,
+        "break_power": 35
+      },
+      "14001708": {
+        "name": "ルミナスアウルム",
+        "id": 14001708,
+        "target_name_ja": "ID:5",
+        "target_name_cn": "敌方全体",
+        "skill_target_type": 5,
+        "attack_attributes": [
+          5
+        ],
+        "description": "この攻撃の貫通力+{0}<br>WEAK攻撃時、ダメージ+{1}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{2}つをバーストパネルに変換(空パネルの時は生成)",
+        "effects": [
+          {
+            "id": 91001337,
+            "value": 10000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001337,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91000903,
+            "value": 10000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000903,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001377,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001377,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 277,
+        "break_power": 37
+      },
+      "14001719": {
+        "name": "クイックミックス",
+        "id": 14001719,
+        "target_name_ja": "ID:5",
+        "target_name_cn": "敌方全体",
+        "skill_target_type": 5,
+        "attack_attributes": [
+          5
+        ],
+        "description": "WEAK攻撃時、ダメージ+{0}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{1}つをバーストパネルに変換(空パネルの時は生成)",
+        "effects": [
+          {
+            "id": 91000903,
+            "value": 4000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000903,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001377,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001377,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 222,
+        "break_power": 30
+      },
+      "14001720": {
+        "name": "クイックミックス",
+        "id": 14001720,
+        "target_name_ja": "ID:5",
+        "target_name_cn": "敌方全体",
+        "skill_target_type": 5,
+        "attack_attributes": [
+          5
+        ],
+        "description": "WEAK攻撃時、ダメージ+{0}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{1}つをバーストパネルに変換(空パネルの時は生成)",
+        "effects": [
+          {
+            "id": 91000903,
+            "value": 4000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000903,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001377,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001377,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 235,
+        "break_power": 31
+      },
+      "14001721": {
+        "name": "クイックミックス",
+        "id": 14001721,
+        "target_name_ja": "ID:5",
+        "target_name_cn": "敌方全体",
+        "skill_target_type": 5,
+        "attack_attributes": [
+          5
+        ],
+        "description": "WEAK攻撃時、ダメージ+{0}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{1}つをバーストパネルに変換(空パネルの時は生成)",
+        "effects": [
+          {
+            "id": 91000903,
+            "value": 4000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000903,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001377,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001377,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 249,
+        "break_power": 33
+      },
+      "14001722": {
+        "name": "クイックミックス",
+        "id": 14001722,
+        "target_name_ja": "ID:5",
+        "target_name_cn": "敌方全体",
+        "skill_target_type": 5,
+        "attack_attributes": [
+          5
+        ],
+        "description": "WEAK攻撃時、ダメージ+{0}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{1}つをバーストパネルに変換(空パネルの時は生成)",
+        "effects": [
+          {
+            "id": 91000903,
+            "value": 4000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000903,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001377,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001377,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 263,
+        "break_power": 35
+      },
+      "14001723": {
+        "name": "クイックミックス",
+        "id": 14001723,
+        "target_name_ja": "ID:5",
+        "target_name_cn": "敌方全体",
+        "skill_target_type": 5,
+        "attack_attributes": [
+          5
+        ],
+        "description": "WEAK攻撃時、ダメージ+{0}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{1}つをバーストパネルに変換(空パネルの時は生成)",
+        "effects": [
+          {
+            "id": 91000903,
+            "value": 4000,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91000903,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          },
+          {
+            "id": 91001377,
+            "value": 100,
+            "_detail": {
+              "description": "",
+              "effect_motion_id": null,
+              "enemy_hp_gauge": null,
+              "field_effect_id": null,
+              "id": 91001377,
+              "is_expand_timeline": false,
+              "is_positive_popup": null,
+              "popup_text": "",
+              "summons_effect_id": null
+            }
+          }
+        ],
+        "wait": 0,
+        "power": 277,
+        "break_power": 37
+      }
+    },
+    "initial_wt": 240,
+    "_skills": [
+      {
+        "type": "normal1",
+        "skills": [
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 7,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」を1回行動終了するまで付与",
+            "effects": [
+              {
+                "id": 91001375,
+                "value": 1500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001375,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001017,
+                "value": 500,
+                "_detail": {
+                  "description": "素早さアップ(1回)",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001017,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11001709,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ステラシャワー",
+            "not_state_change_count_decrease": false,
+            "power": 74,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身のスキルダメージアップ<br>自身の素早さアップ",
+            "timeline_hash": "6525687954665201320",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 7,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」を1回行動終了するまで付与",
+            "effects": [
+              {
+                "id": 91001375,
+                "value": 1500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001375,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001017,
+                "value": 500,
+                "_detail": {
+                  "description": "素早さアップ(1回)",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001017,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11001710,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ステラシャワー",
+            "not_state_change_count_decrease": false,
+            "power": 78,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身のスキルダメージアップ<br>自身の素早さアップ",
+            "timeline_hash": "6525687954665201320",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 7,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」を1回行動終了するまで付与",
+            "effects": [
+              {
+                "id": 91001375,
+                "value": 1500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001375,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001017,
+                "value": 500,
+                "_detail": {
+                  "description": "素早さアップ(1回)",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001017,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11001711,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ステラシャワー",
+            "not_state_change_count_decrease": false,
+            "power": 83,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身のスキルダメージアップ<br>自身の素早さアップ",
+            "timeline_hash": "6525687954665201320",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 7,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」を1回行動終了するまで付与",
+            "effects": [
+              {
+                "id": 91001375,
+                "value": 1500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001375,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001017,
+                "value": 500,
+                "_detail": {
+                  "description": "素早さアップ(1回)",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001017,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11001712,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ステラシャワー",
+            "not_state_change_count_decrease": false,
+            "power": 87,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身のスキルダメージアップ<br>自身の素早さアップ",
+            "timeline_hash": "6525687954665201320",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 8,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限60%)し、<br>自身に「素早さ+{1}%」を1回行動終了するまで付与",
+            "effects": [
+              {
+                "id": 91001375,
+                "value": 1500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001375,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001017,
+                "value": 500,
+                "_detail": {
+                  "description": "素早さアップ(1回)",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001017,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 11001713,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "ステラシャワー",
+            "not_state_change_count_decrease": false,
+            "power": 92,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身のスキルダメージアップ<br>自身の素早さアップ",
+            "timeline_hash": "6525687954665201320",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          }
+        ]
+      },
+      {
+        "type": "normal2",
+        "skills": [
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 30,
+            "break_power_type": 2,
+            "description": "攻撃前に、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与<br>「ステラクラフト」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時<br>攻撃前に変身する",
+            "effects": [
+              {
+                "id": 91001300,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001300,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001369,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001369,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001329,
+                "value": 100,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001329,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12001714,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 2,
+            "name": "ステラクラフト",
+            "not_state_change_count_decrease": false,
+            "power": 242,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "9019439288131687315",
+            "summary": "攻撃前、対象の火属性耐性ダウン<br>スキルランプの点灯数が2個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が2個の時、攻撃前に変身",
+            "timeline_hash": "197907494333999412",
+            "wait": 0,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 31,
+            "break_power_type": 2,
+            "description": "攻撃前に、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与<br>「ステラクラフト」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時<br>攻撃前に変身する",
+            "effects": [
+              {
+                "id": 91001300,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001300,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001369,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001369,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001329,
+                "value": 100,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001329,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12001715,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 2,
+            "name": "ステラクラフト",
+            "not_state_change_count_decrease": false,
+            "power": 257,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "9019439288131687315",
+            "summary": "攻撃前、対象の火属性耐性ダウン<br>スキルランプの点灯数が2個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が2個の時、攻撃前に変身",
+            "timeline_hash": "197907494333999412",
+            "wait": 0,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 33,
+            "break_power_type": 2,
+            "description": "攻撃前に、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与<br>「ステラクラフト」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時<br>攻撃前に変身する",
+            "effects": [
+              {
+                "id": 91001300,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001300,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001369,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001369,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001329,
+                "value": 100,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001329,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12001716,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 2,
+            "name": "ステラクラフト",
+            "not_state_change_count_decrease": false,
+            "power": 272,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "9019439288131687315",
+            "summary": "攻撃前、対象の火属性耐性ダウン<br>スキルランプの点灯数が2個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が2個の時、攻撃前に変身",
+            "timeline_hash": "197907494333999412",
+            "wait": 0,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 35,
+            "break_power_type": 2,
+            "description": "攻撃前に、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与<br>「ステラクラフト」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時<br>攻撃前に変身する",
+            "effects": [
+              {
+                "id": 91001300,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001300,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001369,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001369,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001329,
+                "value": 100,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001329,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12001717,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 2,
+            "name": "ステラクラフト",
+            "not_state_change_count_decrease": false,
+            "power": 287,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "9019439288131687315",
+            "summary": "攻撃前、対象の火属性耐性ダウン<br>スキルランプの点灯数が2個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が2個の時、攻撃前に変身",
+            "timeline_hash": "197907494333999412",
+            "wait": 0,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 37,
+            "break_power_type": 2,
+            "description": "攻撃前に、対象に「火属性耐性-{0}%」を3回攻撃を受けるまで付与<br>「ステラクラフト」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時<br>攻撃前に変身する",
+            "effects": [
+              {
+                "id": 91001300,
+                "value": 2500,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001300,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001369,
+                "value": 0,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001369,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001329,
+                "value": 100,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001329,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 12001718,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 2,
+            "name": "ステラクラフト",
+            "not_state_change_count_decrease": false,
+            "power": 302,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "state_change_visual_type": null,
+            "still_path_hash": "9019439288131687315",
+            "summary": "攻撃前、対象の火属性耐性ダウン<br>スキルランプの点灯数が2個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が2個の時、攻撃前に変身",
+            "timeline_hash": "197907494333999412",
+            "wait": 0,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          }
+        ]
+      },
+      {
+        "type": "burst",
+        "skills": [
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 30,
+            "break_power_type": 2,
+            "description": "WEAK攻撃時、ダメージ+{0}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{1}つをバーストパネルに変換(空パネルの時は生成)",
+            "effects": [
+              {
+                "id": 91000903,
+                "value": 4000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000903,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001377,
+                "value": 100,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001377,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 14001719,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "クイックミックス",
+            "not_state_change_count_decrease": false,
+            "power": 222,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 5,
+            "state_change_visual_type": null,
+            "still_path_hash": "811266637664474266",
+            "summary": "WEAK攻撃時、ダメージアップ<br>WEAK攻撃時、次の味方のパネルをバーストパネルに変換",
+            "timeline_hash": "1530350322214442333",
+            "wait": 0,
+            "target_name_ja": "ID:5",
+            "target_name_cn": "敌方全体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 31,
+            "break_power_type": 2,
+            "description": "WEAK攻撃時、ダメージ+{0}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{1}つをバーストパネルに変換(空パネルの時は生成)",
+            "effects": [
+              {
+                "id": 91000903,
+                "value": 4000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000903,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001377,
+                "value": 100,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001377,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 14001720,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "クイックミックス",
+            "not_state_change_count_decrease": false,
+            "power": 235,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 5,
+            "state_change_visual_type": null,
+            "still_path_hash": "811266637664474266",
+            "summary": "WEAK攻撃時、ダメージアップ<br>WEAK攻撃時、次の味方のパネルをバーストパネルに変換",
+            "timeline_hash": "1530350322214442333",
+            "wait": 0,
+            "target_name_ja": "ID:5",
+            "target_name_cn": "敌方全体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 33,
+            "break_power_type": 2,
+            "description": "WEAK攻撃時、ダメージ+{0}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{1}つをバーストパネルに変換(空パネルの時は生成)",
+            "effects": [
+              {
+                "id": 91000903,
+                "value": 4000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000903,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001377,
+                "value": 100,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001377,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 14001721,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "クイックミックス",
+            "not_state_change_count_decrease": false,
+            "power": 249,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 5,
+            "state_change_visual_type": null,
+            "still_path_hash": "811266637664474266",
+            "summary": "WEAK攻撃時、ダメージアップ<br>WEAK攻撃時、次の味方のパネルをバーストパネルに変換",
+            "timeline_hash": "1530350322214442333",
+            "wait": 0,
+            "target_name_ja": "ID:5",
+            "target_name_cn": "敌方全体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 35,
+            "break_power_type": 2,
+            "description": "WEAK攻撃時、ダメージ+{0}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{1}つをバーストパネルに変換(空パネルの時は生成)",
+            "effects": [
+              {
+                "id": 91000903,
+                "value": 4000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000903,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001377,
+                "value": 100,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001377,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 14001722,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "クイックミックス",
+            "not_state_change_count_decrease": false,
+            "power": 263,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 5,
+            "state_change_visual_type": null,
+            "still_path_hash": "811266637664474266",
+            "summary": "WEAK攻撃時、ダメージアップ<br>WEAK攻撃時、次の味方のパネルをバーストパネルに変換",
+            "timeline_hash": "1530350322214442333",
+            "wait": 0,
+            "target_name_ja": "ID:5",
+            "target_name_cn": "敌方全体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              5
+            ],
+            "break_power": 37,
+            "break_power_type": 2,
+            "description": "WEAK攻撃時、ダメージ+{0}%<br>WEAK攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル{1}つをバーストパネルに変換(空パネルの時は生成)",
+            "effects": [
+              {
+                "id": 91000903,
+                "value": 4000,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91000903,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              },
+              {
+                "id": 91001377,
+                "value": 100,
+                "_detail": {
+                  "description": "",
+                  "effect_motion_id": null,
+                  "enemy_hp_gauge": null,
+                  "field_effect_id": null,
+                  "id": 91001377,
+                  "is_expand_timeline": false,
+                  "is_positive_popup": null,
+                  "popup_text": "",
+                  "summons_effect_id": null
+                }
+              }
+            ],
+            "id": 14001723,
+            "is_restrict_after_skill_timing_effects": false,
+            "limit_count": null,
+            "max_lamp": 0,
+            "name": "クイックミックス",
+            "not_state_change_count_decrease": false,
+            "power": 277,
+            "require_command_value": false,
+            "skill_destination": null,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 5,
+            "state_change_visual_type": null,
+            "still_path_hash": "811266637664474266",
+            "summary": "WEAK攻撃時、ダメージアップ<br>WEAK攻撃時、次の味方のパネルをバーストパネルに変換",
+            "timeline_hash": "1530350322214442333",
+            "wait": 0,
+            "target_name_ja": "ID:5",
+            "target_name_cn": "敌方全体"
+          }
+        ]
+      }
+    ]
+  }
+}

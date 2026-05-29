@@ -1,0 +1,1552 @@
+{
+  "id": 25901,
+  "attack_attributes": [
+    8
+  ],
+  "initial_rarity": 1,
+  "max_rarity": 7,
+  "trait_color_id": 4,
+  "support_color_id": 2,
+  "trait_color_name_ja": "赤",
+  "trait_color_name_cn": "红",
+  "support_color_name_ja": "紫",
+  "support_color_name_cn": "紫",
+  "battle_tool_trait_names_ja": [
+    "追い打ち強化",
+    "風の呪詛"
+  ],
+  "battle_tool_trait_names_cn": [
+    "追击强化",
+    "风之诅咒"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "ブレイクダメージ上昇【渾身】"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "破防伤害提升【满血】"
+  ],
+  "battle_tool_trait_ids": [
+    49,
+    20
+  ],
+  "equipment_tool_trait_ids": [
+    17
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980088,
+        "combat_power_coefficient": 2500,
+        "condition_ids": [
+          49
+        ]
+      }
+    ],
+    "description": "「アーランド」は「スキルダメージ+30%」",
+    "name": "騎士道の教え"
+  },
+  "ability_ids": [
+    1990158,
+    1990159
+  ],
+  "support_ability_ids": [
+    500403,
+    500347,
+    500291,
+    500235,
+    500179,
+    500123,
+    500067,
+    500011
+  ],
+  "_skillDetails": {
+    "500011": {
+      "id": 500011,
+      "description": "得意属性が風属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500011,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500011,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500067": {
+      "id": 500067,
+      "description": "得意属性が風属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500011,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500011,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500123": {
+      "id": 500123,
+      "description": "得意属性が風属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500011,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500011,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500179": {
+      "id": 500179,
+      "description": "得意属性が風属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500011,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500011,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500235": {
+      "id": 500235,
+      "description": "得意属性が風属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500011,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500011,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500291": {
+      "id": 500291,
+      "description": "得意属性が風属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500011,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500011,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500347": {
+      "id": 500347,
+      "description": "得意属性が風属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500011,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500011,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500403": {
+      "id": 500403,
+      "description": "得意属性が風属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500011,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が風属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500011,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980088": {
+      "name": "騎士道の教え",
+      "id": 1980088,
+      "description": "スキルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500051,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/スキルダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500051,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990158": {
+      "name": "みなぎる闘志",
+      "id": 1990158,
+      "description": "HP回復を受けた時、自身に「ブレイクダメージ+{0}%」を付与(上限20%)<br>スキルで撃破時、自身に「ターン開始時、マイナス効果解除」を1回行動開始するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000962,
+          "limit_count": null,
+          "value": 200,
+          "_detail": {
+            "description": "HP回復を受けた時、自身に「ブレイクダメージ+{0}%」を付与(上限20%)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000962,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72000949,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "撃破時、マイナス効果解除付与(1回)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000949,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990159": {
+      "name": "レジストアップ挑発",
+      "id": 1990159,
+      "description": "挑発耐性+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001067,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/挑発耐性上昇付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001067,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990410": {
+      "name": "アタック被ダメージアップⅢ",
+      "id": 1990410,
+      "description": "攻撃後、対象に「受けるダメージ+{0}%」(固定)を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001427,
+          "limit_count": null,
+          "value": 2500,
+          "_detail": {
+            "description": "[対象/受けるダメージUP/1回][ボードアビリティB3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001427,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990435": {
+      "name": "アタック被ダメージアップⅡ",
+      "id": 1990435,
+      "description": "攻撃後、対象に「受けるダメージ+{0}%」(固定)を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001427,
+          "limit_count": null,
+          "value": 1600,
+          "_detail": {
+            "description": "[対象/受けるダメージUP/1回][ボードアビリティB3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001427,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990460": {
+      "name": "アタック被ダメージアップⅠ",
+      "id": 1990460,
+      "description": "攻撃後、対象に「受けるダメージ+{0}%」(固定)を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001427,
+          "limit_count": null,
+          "value": 800,
+          "_detail": {
+            "description": "[対象/受けるダメージUP/1回][ボードアビリティB3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001427,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11000971": {
+      "name": "ヘビースラッシュ",
+      "id": 11000971,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "追加効果なし",
+      "wait": -100,
+      "power": 70,
+      "break_power": 19
+    },
+    "11000972": {
+      "name": "ヘビースラッシュ",
+      "id": 11000972,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "追加効果なし",
+      "wait": -100,
+      "power": 74,
+      "break_power": 20
+    },
+    "11000973": {
+      "name": "ヘビースラッシュ",
+      "id": 11000973,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "追加効果なし",
+      "wait": -100,
+      "power": 78,
+      "break_power": 21
+    },
+    "11000974": {
+      "name": "ヘビースラッシュ",
+      "id": 11000974,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "追加効果なし",
+      "wait": -100,
+      "power": 82,
+      "break_power": 22
+    },
+    "11000975": {
+      "name": "ヘビースラッシュ",
+      "id": 11000975,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "追加効果なし",
+      "wait": -100,
+      "power": 87,
+      "break_power": 23
+    },
+    "12000976": {
+      "name": "インペリアルライド",
+      "id": 12000976,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限80%)し、<br>自身に「ブレイクダメージ-{1}%」を付与(上限80%)",
+      "effects": [
+        {
+          "id": 91001168,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001168,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001169,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001169,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 182,
+      "break_power": 113
+    },
+    "12000977": {
+      "name": "インペリアルライド",
+      "id": 12000977,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限80%)し、<br>自身に「ブレイクダメージ-{1}%」を付与(上限80%)",
+      "effects": [
+        {
+          "id": 91001168,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001168,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001169,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001169,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 193,
+      "break_power": 120
+    },
+    "12000978": {
+      "name": "インペリアルライド",
+      "id": 12000978,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限80%)し、<br>自身に「ブレイクダメージ-{1}%」を付与(上限80%)",
+      "effects": [
+        {
+          "id": 91001168,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001168,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001169,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001169,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 204,
+      "break_power": 127
+    },
+    "12000979": {
+      "name": "インペリアルライド",
+      "id": 12000979,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限80%)し、<br>自身に「ブレイクダメージ-{1}%」を付与(上限80%)",
+      "effects": [
+        {
+          "id": 91001168,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001168,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001169,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001169,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 215,
+      "break_power": 134
+    },
+    "12000980": {
+      "name": "インペリアルライド",
+      "id": 12000980,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限80%)し、<br>自身に「ブレイクダメージ-{1}%」を付与(上限80%)",
+      "effects": [
+        {
+          "id": 91001168,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001168,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001169,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001169,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 227,
+      "break_power": 141
+    },
+    "14000981": {
+      "name": "ブレイブウインド",
+      "id": 14000981,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91001170,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001170,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 320,
+      "break_power": 270
+    },
+    "14000982": {
+      "name": "ブレイブウインド",
+      "id": 14000982,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91001170,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001170,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 330,
+      "break_power": 286
+    },
+    "14000983": {
+      "name": "ブレイブウインド",
+      "id": 14000983,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91001170,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001170,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 340,
+      "break_power": 303
+    },
+    "14000984": {
+      "name": "ブレイブウインド",
+      "id": 14000984,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91001170,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001170,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 350,
+      "break_power": 320
+    },
+    "14000985": {
+      "name": "ブレイブウインド",
+      "id": 14000985,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)",
+      "effects": [
+        {
+          "id": 91001170,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001170,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 360,
+      "break_power": 337
+    }
+  },
+  "initial_wt": 259,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 19,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 11000971,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヘビースラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 70,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5187188467304351512",
+          "summary": "追加効果なし",
+          "timeline_hash": "7245508321854138357",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 20,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 11000972,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヘビースラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 74,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5187188467304351512",
+          "summary": "追加効果なし",
+          "timeline_hash": "7245508321854138357",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 21,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 11000973,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヘビースラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 78,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5187188467304351512",
+          "summary": "追加効果なし",
+          "timeline_hash": "7245508321854138357",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 22,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 11000974,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヘビースラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 82,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5187188467304351512",
+          "summary": "追加効果なし",
+          "timeline_hash": "7245508321854138357",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 23,
+          "break_power_type": 2,
+          "description": "追加効果なし",
+          "effects": [],
+          "id": 11000975,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヘビースラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 87,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "5187188467304351512",
+          "summary": "追加効果なし",
+          "timeline_hash": "7245508321854138357",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 113,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限80%)し、<br>自身に「ブレイクダメージ-{1}%」を付与(上限80%)",
+          "effects": [
+            {
+              "id": 91001168,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001168,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001169,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001169,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000976,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "インペリアルライド",
+          "not_state_change_count_decrease": false,
+          "power": 182,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>自身のブレイクダメージダウン",
+          "timeline_hash": "4376876658703437927",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 120,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限80%)し、<br>自身に「ブレイクダメージ-{1}%」を付与(上限80%)",
+          "effects": [
+            {
+              "id": 91001168,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001168,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001169,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001169,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000977,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "インペリアルライド",
+          "not_state_change_count_decrease": false,
+          "power": 193,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>自身のブレイクダメージダウン",
+          "timeline_hash": "4376876658703437927",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 127,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限80%)し、<br>自身に「ブレイクダメージ-{1}%」を付与(上限80%)",
+          "effects": [
+            {
+              "id": 91001168,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001168,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001169,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001169,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000978,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "インペリアルライド",
+          "not_state_change_count_decrease": false,
+          "power": 204,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>自身のブレイクダメージダウン",
+          "timeline_hash": "4376876658703437927",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 134,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限80%)し、<br>自身に「ブレイクダメージ-{1}%」を付与(上限80%)",
+          "effects": [
+            {
+              "id": 91001168,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001168,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001169,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001169,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000979,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "インペリアルライド",
+          "not_state_change_count_decrease": false,
+          "power": 215,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>自身のブレイクダメージダウン",
+          "timeline_hash": "4376876658703437927",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 141,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限80%)し、<br>自身に「ブレイクダメージ-{1}%」を付与(上限80%)",
+          "effects": [
+            {
+              "id": 91001168,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001168,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001169,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001169,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000980,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "インペリアルライド",
+          "not_state_change_count_decrease": false,
+          "power": 227,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身のスキルダメージアップ<br>自身のブレイクダメージダウン",
+          "timeline_hash": "4376876658703437927",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 270,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001170,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001170,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000981,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ブレイブウインド",
+          "not_state_change_count_decrease": false,
+          "power": 320,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1643841674861484625",
+          "summary": "攻撃後、自身のスキルダメージアップ",
+          "timeline_hash": "976662739252635103",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 286,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001170,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001170,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000982,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ブレイブウインド",
+          "not_state_change_count_decrease": false,
+          "power": 330,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1643841674861484625",
+          "summary": "攻撃後、自身のスキルダメージアップ",
+          "timeline_hash": "976662739252635103",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 303,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001170,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001170,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000983,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ブレイブウインド",
+          "not_state_change_count_decrease": false,
+          "power": 340,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1643841674861484625",
+          "summary": "攻撃後、自身のスキルダメージアップ",
+          "timeline_hash": "976662739252635103",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 320,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001170,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001170,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000984,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ブレイブウインド",
+          "not_state_change_count_decrease": false,
+          "power": 350,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1643841674861484625",
+          "summary": "攻撃後、自身のスキルダメージアップ",
+          "timeline_hash": "976662739252635103",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 337,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を付与(上限40%)",
+          "effects": [
+            {
+              "id": 91001170,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001170,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000985,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ブレイブウインド",
+          "not_state_change_count_decrease": false,
+          "power": 360,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1643841674861484625",
+          "summary": "攻撃後、自身のスキルダメージアップ",
+          "timeline_hash": "976662739252635103",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ]
+}

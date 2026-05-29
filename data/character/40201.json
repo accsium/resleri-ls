@@ -1,0 +1,1720 @@
+{
+  "id": 40201,
+  "attack_attributes": [
+    2
+  ],
+  "initial_rarity": 2,
+  "max_rarity": 7,
+  "trait_color_id": 5,
+  "support_color_id": 2,
+  "trait_color_name_ja": "緑",
+  "trait_color_name_cn": "绿",
+  "support_color_name_ja": "紫",
+  "support_color_name_cn": "紫",
+  "battle_tool_trait_names_ja": [
+    "打の盾",
+    "雷の祝福"
+  ],
+  "battle_tool_trait_names_cn": [
+    "打击之盾",
+    "雷之祝福"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "物理耐性上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "物理耐性提升"
+  ],
+  "battle_tool_trait_ids": [
+    23,
+    9
+  ],
+  "equipment_tool_trait_ids": [
+    25
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980052,
+        "combat_power_coefficient": 1500,
+        "condition_ids": [
+          38
+        ]
+      }
+    ],
+    "description": "「竜狩り」は「物防・魔防+25%」",
+    "name": "島一番の戦士"
+  },
+  "ability_ids": [
+    1990044,
+    1990045
+  ],
+  "support_ability_ids": [
+    500405,
+    500349,
+    500293,
+    500237,
+    500181,
+    500125,
+    500069,
+    500013
+  ],
+  "_skillDetails": {
+    "500013": {
+      "id": 500013,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 15525,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500069": {
+      "id": 500069,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 13500,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500125": {
+      "id": 500125,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 11475,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500181": {
+      "id": 500181,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 9450,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500237": {
+      "id": 500237,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 8775,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500293": {
+      "id": 500293,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 8100,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500349": {
+      "id": 500349,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 7425,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500405": {
+      "id": 500405,
+      "description": "得意属性が打属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500013,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500013,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 500098,
+          "limit_count": null,
+          "value": 6750,
+          "_detail": {
+            "description": "特殊バトルかつ自身の得意属性が打属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500098,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980052": {
+      "name": "島一番の戦士",
+      "id": 1980052,
+      "description": "物防・魔防+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500004,
+          "limit_count": null,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500005,
+          "limit_count": null,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990044": {
+      "name": "ヘイト&アドバンスオール物防",
+      "id": 1990044,
+      "description": "敵にとても狙われやすくなる<br>味方全員の物防+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000909,
+          "limit_count": null,
+          "value": 300,
+          "_detail": {
+            "description": "[味方全体/常時/物防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000909,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72000913,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "狙われやすさ+100％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000913,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990045": {
+      "name": "レジストアップ毒",
+      "id": 1990045,
+      "description": "毒耐性+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001062,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/毒耐性上昇付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001062,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990398": {
+      "name": "ガードアップⅢ",
+      "id": 1990398,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001415,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001415,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990423": {
+      "name": "ガードアップⅡ",
+      "id": 1990423,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001415,
+          "limit_count": null,
+          "value": 600,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001415,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990448": {
+      "name": "ガードアップⅠ",
+      "id": 1990448,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001415,
+          "limit_count": null,
+          "value": 300,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001415,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11000196": {
+      "name": "ブラッドスラスト",
+      "id": 11000196,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000989,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000989,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 63,
+      "break_power": 7
+    },
+    "11000197": {
+      "name": "ブラッドスラスト",
+      "id": 11000197,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000989,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000989,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 66,
+      "break_power": 7
+    },
+    "11000198": {
+      "name": "ブラッドスラスト",
+      "id": 11000198,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000989,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000989,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 70,
+      "break_power": 7
+    },
+    "11000199": {
+      "name": "ブラッドスラスト",
+      "id": 11000199,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000989,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000989,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 74,
+      "break_power": 7
+    },
+    "11000200": {
+      "name": "ブラッドスラスト",
+      "id": 11000200,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000989,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000989,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 78,
+      "break_power": 8
+    },
+    "12000201": {
+      "name": "アクセルダイブ",
+      "id": 12000201,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000990,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000990,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 203,
+      "break_power": 30
+    },
+    "12000202": {
+      "name": "アクセルダイブ",
+      "id": 12000202,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000990,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000990,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 215,
+      "break_power": 31
+    },
+    "12000203": {
+      "name": "アクセルダイブ",
+      "id": 12000203,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000990,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000990,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 228,
+      "break_power": 33
+    },
+    "12000204": {
+      "name": "アクセルダイブ",
+      "id": 12000204,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000990,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000990,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 240,
+      "break_power": 35
+    },
+    "12000205": {
+      "name": "アクセルダイブ",
+      "id": 12000205,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000990,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000990,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 253,
+      "break_power": 37
+    },
+    "14000206": {
+      "name": "インペリアルクリーヴ",
+      "id": 14000206,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、対象に「物理攻撃ダメージ-{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000921,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000921,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 240,
+      "break_power": 30
+    },
+    "14000207": {
+      "name": "インペリアルクリーヴ",
+      "id": 14000207,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、対象に「物理攻撃ダメージ-{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000921,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000921,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 255,
+      "break_power": 31
+    },
+    "14000208": {
+      "name": "インペリアルクリーヴ",
+      "id": 14000208,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、対象に「物理攻撃ダメージ-{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000921,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000921,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 270,
+      "break_power": 33
+    },
+    "14000209": {
+      "name": "インペリアルクリーヴ",
+      "id": 14000209,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、対象に「物理攻撃ダメージ-{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000921,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000921,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 285,
+      "break_power": 35
+    },
+    "14000210": {
+      "name": "インペリアルクリーヴ",
+      "id": 14000210,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、対象に「物理攻撃ダメージ-{0}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000921,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000921,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 300,
+      "break_power": 37
+    }
+  },
+  "initial_wt": 243,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000989,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000989,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000196,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ブラッドスラスト",
+          "not_state_change_count_decrease": false,
+          "power": 63,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身に受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1649500206442661548",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000989,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000989,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000197,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ブラッドスラスト",
+          "not_state_change_count_decrease": false,
+          "power": 66,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身に受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1649500206442661548",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000989,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000989,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000198,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ブラッドスラスト",
+          "not_state_change_count_decrease": false,
+          "power": 70,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身に受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1649500206442661548",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000989,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000989,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000199,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ブラッドスラスト",
+          "not_state_change_count_decrease": false,
+          "power": 74,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身に受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1649500206442661548",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 8,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000989,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000989,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000200,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ブラッドスラスト",
+          "not_state_change_count_decrease": false,
+          "power": 78,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身に受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1649500206442661548",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000990,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000990,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000201,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アクセルダイブ",
+          "not_state_change_count_decrease": false,
+          "power": 203,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "5680392617301766456",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000990,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000990,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000202,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アクセルダイブ",
+          "not_state_change_count_decrease": false,
+          "power": 215,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "5680392617301766456",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000990,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000990,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000203,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アクセルダイブ",
+          "not_state_change_count_decrease": false,
+          "power": 228,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "5680392617301766456",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000990,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000990,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000204,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アクセルダイブ",
+          "not_state_change_count_decrease": false,
+          "power": 240,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "5680392617301766456",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000990,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000990,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000205,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アクセルダイブ",
+          "not_state_change_count_decrease": false,
+          "power": 253,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "5680392617301766456",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「物理攻撃ダメージ-{0}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000921,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000921,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000206,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "インペリアルクリーヴ",
+          "not_state_change_count_decrease": false,
+          "power": 240,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2698394369922872943",
+          "summary": "攻撃後、対象の物理攻撃ダメージダウン",
+          "timeline_hash": "5804597785474471594",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「物理攻撃ダメージ-{0}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000921,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000921,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000207,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "インペリアルクリーヴ",
+          "not_state_change_count_decrease": false,
+          "power": 255,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2698394369922872943",
+          "summary": "攻撃後、対象の物理攻撃ダメージダウン",
+          "timeline_hash": "5804597785474471594",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「物理攻撃ダメージ-{0}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000921,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000921,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000208,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "インペリアルクリーヴ",
+          "not_state_change_count_decrease": false,
+          "power": 270,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2698394369922872943",
+          "summary": "攻撃後、対象の物理攻撃ダメージダウン",
+          "timeline_hash": "5804597785474471594",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「物理攻撃ダメージ-{0}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000921,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000921,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000209,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "インペリアルクリーヴ",
+          "not_state_change_count_decrease": false,
+          "power": 285,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2698394369922872943",
+          "summary": "攻撃後、対象の物理攻撃ダメージダウン",
+          "timeline_hash": "5804597785474471594",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「物理攻撃ダメージ-{0}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000921,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000921,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000210,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "インペリアルクリーヴ",
+          "not_state_change_count_decrease": false,
+          "power": 300,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "2698394369922872943",
+          "summary": "攻撃後、対象の物理攻撃ダメージダウン",
+          "timeline_hash": "5804597785474471594",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        }
+      ]
+    }
+  ]
+}

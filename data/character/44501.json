@@ -1,0 +1,2634 @@
+{
+  "id": 44501,
+  "attack_attributes": [
+    1
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 5,
+  "support_color_id": 2,
+  "trait_color_name_ja": "緑",
+  "trait_color_name_cn": "绿",
+  "support_color_name_ja": "紫",
+  "support_color_name_cn": "紫",
+  "battle_tool_trait_names_ja": [
+    "斬の呪詛",
+    "剛力の祝福"
+  ],
+  "battle_tool_trait_names_cn": [
+    "斩击之诅咒",
+    "刚力之祝福"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "全体攻撃威力上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "全体攻击威力提升"
+  ],
+  "battle_tool_trait_ids": [
+    14,
+    1
+  ],
+  "equipment_tool_trait_ids": [
+    28
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980161,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          12
+        ]
+      }
+    ],
+    "description": "味方全員は「麻痺耐性+100%」と「攻撃対象が麻痺状態の時、スキルダメージ+50%」",
+    "name": "王の背中に魅せられて"
+  },
+  "ability_ids": [
+    1990266,
+    1990267
+  ],
+  "support_ability_ids": [
+    500432,
+    500376,
+    500320,
+    500264,
+    500208,
+    500152,
+    500096,
+    500040
+  ],
+  "_skillDetails": {
+    "500040": {
+      "id": 500040,
+      "description": "得意属性が斬属性の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500040,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、与えるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500040,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500096": {
+      "id": 500096,
+      "description": "得意属性が斬属性の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500040,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、与えるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500040,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500152": {
+      "id": 500152,
+      "description": "得意属性が斬属性の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500040,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、与えるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500040,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500208": {
+      "id": 500208,
+      "description": "得意属性が斬属性の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500040,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、与えるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500040,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500264": {
+      "id": 500264,
+      "description": "得意属性が斬属性の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500040,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、与えるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500040,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500320": {
+      "id": 500320,
+      "description": "得意属性が斬属性の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500040,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、与えるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500040,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500376": {
+      "id": 500376,
+      "description": "得意属性が斬属性の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500040,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、与えるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500040,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500432": {
+      "id": 500432,
+      "description": "得意属性が斬属性の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500040,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が斬属性の時、与えるHP回復量UPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500040,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980161": {
+      "name": "王の背中に魅せられて",
+      "id": 1980161,
+      "description": "「麻痺耐性+{0}%」と「攻撃対象が麻痺状態の時、スキルダメージ+{1}%」",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500146,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "[自身/麻痺耐性アップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500146,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500006,
+          "limit_count": null,
+          "value": 5000,
+          "_detail": {
+            "description": "[自身/攻撃対象が麻痺状態の時与ダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500006,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990266": {
+      "name": "溢れ出る闘争の力Ⅱ",
+      "id": 1990266,
+      "description": "味方全員のスキルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000922,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000922,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990267": {
+      "name": "心安らげる歌姫の旋律",
+      "id": 1990267,
+      "description": "スキル発動後、アイテムゲージを{0}%回復し、<br>味方全員のHPを{1}%回復",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001085,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[アイテムゲージ回復]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001085,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001131,
+          "limit_count": null,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001131,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990393": {
+      "name": "クリティカルダメージアップオールⅢ",
+      "id": 1990393,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990418": {
+      "name": "クリティカルダメージアップオールⅡ",
+      "id": 1990418,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990443": {
+      "name": "クリティカルダメージアップオールⅠ",
+      "id": 1990443,
+      "description": "味方全員のクリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001410,
+          "limit_count": null,
+          "value": 600,
+          "_detail": {
+            "description": "味方全員のクリティカルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001410,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11001999": {
+      "name": "バタフライスラッシュ",
+      "id": 11001999,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、得意属性が斬属性の味方全員に「物攻+{0}%」を付与(上限20%)し、<br>対象に「受ける斬属性ダメージ+{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001441,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001441,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001434,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001434,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 55,
+      "break_power": 5
+    },
+    "11002000": {
+      "name": "バタフライスラッシュ",
+      "id": 11002000,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、得意属性が斬属性の味方全員に「物攻+{0}%」を付与(上限20%)し、<br>対象に「受ける斬属性ダメージ+{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001441,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001441,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001434,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001434,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 58,
+      "break_power": 5
+    },
+    "11002001": {
+      "name": "バタフライスラッシュ",
+      "id": 11002001,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、得意属性が斬属性の味方全員に「物攻+{0}%」を付与(上限20%)し、<br>対象に「受ける斬属性ダメージ+{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001441,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001441,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001434,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001434,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 61,
+      "break_power": 5
+    },
+    "11002002": {
+      "name": "バタフライスラッシュ",
+      "id": 11002002,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、得意属性が斬属性の味方全員に「物攻+{0}%」を付与(上限20%)し、<br>対象に「受ける斬属性ダメージ+{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001441,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001441,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001434,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001434,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 64,
+      "break_power": 5
+    },
+    "11002003": {
+      "name": "バタフライスラッシュ",
+      "id": 11002003,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、得意属性が斬属性の味方全員に「物攻+{0}%」を付与(上限20%)し、<br>対象に「受ける斬属性ダメージ+{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001441,
+          "value": 1000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001441,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001434,
+          "value": 1500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001434,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 68,
+      "break_power": 6
+    },
+    "12002004": {
+      "name": "デクラレイションブレイド",
+      "id": 12002004,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、得意属性が斬属性のアタッカーの味方全員に「スキル威力+{0}%」(上限60%)を1回行動終了するまで付与し、<br>対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与<br><br>味方全員に以下の追加効果を1回行動終了するまで付与する<br>追加効果:「攻撃前、対象に状態異常耐性-{2}%(上限50%)を<br>1回行動開始するまで付与」<br>「攻撃後、対象に麻痺を1回行動開始するまで超高確率で付与」",
+      "effects": [
+        {
+          "id": 91001435,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001435,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000955,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000955,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001418,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001418,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001419,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001419,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 204,
+      "break_power": 26
+    },
+    "12002005": {
+      "name": "デクラレイションブレイド",
+      "id": 12002005,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、得意属性が斬属性のアタッカーの味方全員に「スキル威力+{0}%」(上限60%)を1回行動終了するまで付与し、<br>対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与<br><br>味方全員に以下の追加効果を1回行動終了するまで付与する<br>追加効果:「攻撃前、対象に状態異常耐性-{2}%(上限50%)を<br>1回行動開始するまで付与」<br>「攻撃後、対象に麻痺を1回行動開始するまで超高確率で付与」",
+      "effects": [
+        {
+          "id": 91001435,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001435,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000955,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000955,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001418,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001418,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001419,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001419,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 216,
+      "break_power": 27
+    },
+    "12002006": {
+      "name": "デクラレイションブレイド",
+      "id": 12002006,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、得意属性が斬属性のアタッカーの味方全員に「スキル威力+{0}%」(上限60%)を1回行動終了するまで付与し、<br>対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与<br><br>味方全員に以下の追加効果を1回行動終了するまで付与する<br>追加効果:「攻撃前、対象に状態異常耐性-{2}%(上限50%)を<br>1回行動開始するまで付与」<br>「攻撃後、対象に麻痺を1回行動開始するまで超高確率で付与」",
+      "effects": [
+        {
+          "id": 91001435,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001435,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000955,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000955,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001418,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001418,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001419,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001419,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 229,
+      "break_power": 29
+    },
+    "12002007": {
+      "name": "デクラレイションブレイド",
+      "id": 12002007,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、得意属性が斬属性のアタッカーの味方全員に「スキル威力+{0}%」(上限60%)を1回行動終了するまで付与し、<br>対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与<br><br>味方全員に以下の追加効果を1回行動終了するまで付与する<br>追加効果:「攻撃前、対象に状態異常耐性-{2}%(上限50%)を<br>1回行動開始するまで付与」<br>「攻撃後、対象に麻痺を1回行動開始するまで超高確率で付与」",
+      "effects": [
+        {
+          "id": 91001435,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001435,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000955,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000955,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001418,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001418,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001419,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001419,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 242,
+      "break_power": 30
+    },
+    "12002008": {
+      "name": "デクラレイションブレイド",
+      "id": 12002008,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、得意属性が斬属性のアタッカーの味方全員に「スキル威力+{0}%」(上限60%)を1回行動終了するまで付与し、<br>対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与<br><br>味方全員に以下の追加効果を1回行動終了するまで付与する<br>追加効果:「攻撃前、対象に状態異常耐性-{2}%(上限50%)を<br>1回行動開始するまで付与」<br>「攻撃後、対象に麻痺を1回行動開始するまで超高確率で付与」",
+      "effects": [
+        {
+          "id": 91001435,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001435,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000955,
+          "value": 2500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000955,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001418,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001418,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001419,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001419,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 255,
+      "break_power": 32
+    },
+    "14002009": {
+      "name": "グローリアスショータイム",
+      "id": 14002009,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{1}%」と<br>「スキル威力+{2}%」(上限100%)を1回行動終了するまで付与<br>攻撃対象が麻痺・ねむり・スタン状態あるいは「王の威光」が付与された状態の時、このスキル使用前にタイムラインに並んでいる、味方全員のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001269,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001269,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001436,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001436,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001420,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001420,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 420,
+      "break_power": 75
+    },
+    "14002010": {
+      "name": "グローリアスショータイム",
+      "id": 14002010,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{1}%」と<br>「スキル威力+{2}%」(上限100%)を1回行動終了するまで付与<br>攻撃対象が麻痺・ねむり・スタン状態あるいは「王の威光」が付与された状態の時、このスキル使用前にタイムラインに並んでいる、味方全員のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001269,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001269,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001436,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001436,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001420,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001420,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 446,
+      "break_power": 79
+    },
+    "14002011": {
+      "name": "グローリアスショータイム",
+      "id": 14002011,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{1}%」と<br>「スキル威力+{2}%」(上限100%)を1回行動終了するまで付与<br>攻撃対象が麻痺・ねむり・スタン状態あるいは「王の威光」が付与された状態の時、このスキル使用前にタイムラインに並んでいる、味方全員のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001269,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001269,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001436,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001436,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001420,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001420,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 472,
+      "break_power": 84
+    },
+    "14002012": {
+      "name": "グローリアスショータイム",
+      "id": 14002012,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{1}%」と<br>「スキル威力+{2}%」(上限100%)を1回行動終了するまで付与<br>攻撃対象が麻痺・ねむり・スタン状態あるいは「王の威光」が付与された状態の時、このスキル使用前にタイムラインに並んでいる、味方全員のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001269,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001269,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001436,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001436,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001420,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001420,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 498,
+      "break_power": 88
+    },
+    "14002013": {
+      "name": "グローリアスショータイム",
+      "id": 14002013,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        1
+      ],
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{1}%」と<br>「スキル威力+{2}%」(上限100%)を1回行動終了するまで付与<br>攻撃対象が麻痺・ねむり・スタン状態あるいは「王の威光」が付与された状態の時、このスキル使用前にタイムラインに並んでいる、味方全員のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91002004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001269,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001269,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001436,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001436,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001420,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001420,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 525,
+      "break_power": 93
+    }
+  },
+  "initial_wt": 228,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が斬属性の味方全員に「物攻+{0}%」を付与(上限20%)し、<br>対象に「受ける斬属性ダメージ+{1}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001441,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001441,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001434,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001434,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001999,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バタフライスラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 55,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、得意属性が斬属性の味方全員の物攻アップ<br>対象の受ける斬属性ダメージアップ",
+          "timeline_hash": "8298316875194044473",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が斬属性の味方全員に「物攻+{0}%」を付与(上限20%)し、<br>対象に「受ける斬属性ダメージ+{1}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001441,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001441,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001434,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001434,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002000,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バタフライスラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 58,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、得意属性が斬属性の味方全員の物攻アップ<br>対象の受ける斬属性ダメージアップ",
+          "timeline_hash": "8298316875194044473",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が斬属性の味方全員に「物攻+{0}%」を付与(上限20%)し、<br>対象に「受ける斬属性ダメージ+{1}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001441,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001441,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001434,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001434,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002001,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バタフライスラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 61,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、得意属性が斬属性の味方全員の物攻アップ<br>対象の受ける斬属性ダメージアップ",
+          "timeline_hash": "8298316875194044473",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 5,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が斬属性の味方全員に「物攻+{0}%」を付与(上限20%)し、<br>対象に「受ける斬属性ダメージ+{1}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001441,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001441,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001434,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001434,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002002,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バタフライスラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 64,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、得意属性が斬属性の味方全員の物攻アップ<br>対象の受ける斬属性ダメージアップ",
+          "timeline_hash": "8298316875194044473",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が斬属性の味方全員に「物攻+{0}%」を付与(上限20%)し、<br>対象に「受ける斬属性ダメージ+{1}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001441,
+              "value": 1000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001441,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001434,
+              "value": 1500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001434,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11002003,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "バタフライスラッシュ",
+          "not_state_change_count_decrease": false,
+          "power": 68,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、得意属性が斬属性の味方全員の物攻アップ<br>対象の受ける斬属性ダメージアップ",
+          "timeline_hash": "8298316875194044473",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 26,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が斬属性のアタッカーの味方全員に「スキル威力+{0}%」(上限60%)を1回行動終了するまで付与し、<br>対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与<br><br>味方全員に以下の追加効果を1回行動終了するまで付与する<br>追加効果:「攻撃前、対象に状態異常耐性-{2}%(上限50%)を<br>1回行動開始するまで付与」<br>「攻撃後、対象に麻痺を1回行動開始するまで超高確率で付与」",
+          "effects": [
+            {
+              "id": 91001435,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001435,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000955,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000955,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001418,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001418,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001419,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001419,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002004,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "デクラレイションブレイド",
+          "not_state_change_count_decrease": false,
+          "power": 204,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、得意属性が斬属性のアタッカーの味方全員のスキル威力アップ<br>対象の斬属性耐性ダウン<br>味方全員に追加効果を付与",
+          "timeline_hash": "3105643661948692395",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 27,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が斬属性のアタッカーの味方全員に「スキル威力+{0}%」(上限60%)を1回行動終了するまで付与し、<br>対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与<br><br>味方全員に以下の追加効果を1回行動終了するまで付与する<br>追加効果:「攻撃前、対象に状態異常耐性-{2}%(上限50%)を<br>1回行動開始するまで付与」<br>「攻撃後、対象に麻痺を1回行動開始するまで超高確率で付与」",
+          "effects": [
+            {
+              "id": 91001435,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001435,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000955,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000955,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001418,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001418,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001419,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001419,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002005,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "デクラレイションブレイド",
+          "not_state_change_count_decrease": false,
+          "power": 216,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、得意属性が斬属性のアタッカーの味方全員のスキル威力アップ<br>対象の斬属性耐性ダウン<br>味方全員に追加効果を付与",
+          "timeline_hash": "3105643661948692395",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 29,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が斬属性のアタッカーの味方全員に「スキル威力+{0}%」(上限60%)を1回行動終了するまで付与し、<br>対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与<br><br>味方全員に以下の追加効果を1回行動終了するまで付与する<br>追加効果:「攻撃前、対象に状態異常耐性-{2}%(上限50%)を<br>1回行動開始するまで付与」<br>「攻撃後、対象に麻痺を1回行動開始するまで超高確率で付与」",
+          "effects": [
+            {
+              "id": 91001435,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001435,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000955,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000955,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001418,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001418,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001419,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001419,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002006,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "デクラレイションブレイド",
+          "not_state_change_count_decrease": false,
+          "power": 229,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、得意属性が斬属性のアタッカーの味方全員のスキル威力アップ<br>対象の斬属性耐性ダウン<br>味方全員に追加効果を付与",
+          "timeline_hash": "3105643661948692395",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が斬属性のアタッカーの味方全員に「スキル威力+{0}%」(上限60%)を1回行動終了するまで付与し、<br>対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与<br><br>味方全員に以下の追加効果を1回行動終了するまで付与する<br>追加効果:「攻撃前、対象に状態異常耐性-{2}%(上限50%)を<br>1回行動開始するまで付与」<br>「攻撃後、対象に麻痺を1回行動開始するまで超高確率で付与」",
+          "effects": [
+            {
+              "id": 91001435,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001435,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000955,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000955,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001418,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001418,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001419,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001419,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002007,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "デクラレイションブレイド",
+          "not_state_change_count_decrease": false,
+          "power": 242,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、得意属性が斬属性のアタッカーの味方全員のスキル威力アップ<br>対象の斬属性耐性ダウン<br>味方全員に追加効果を付与",
+          "timeline_hash": "3105643661948692395",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 32,
+          "break_power_type": 2,
+          "description": "攻撃後、得意属性が斬属性のアタッカーの味方全員に「スキル威力+{0}%」(上限60%)を1回行動終了するまで付与し、<br>対象に「斬属性耐性-{1}%」を2回攻撃を受けるまで付与<br><br>味方全員に以下の追加効果を1回行動終了するまで付与する<br>追加効果:「攻撃前、対象に状態異常耐性-{2}%(上限50%)を<br>1回行動開始するまで付与」<br>「攻撃後、対象に麻痺を1回行動開始するまで超高確率で付与」",
+          "effects": [
+            {
+              "id": 91001435,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001435,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000955,
+              "value": 2500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000955,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001418,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001418,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001419,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001419,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12002008,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "デクラレイションブレイド",
+          "not_state_change_count_decrease": false,
+          "power": 255,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、得意属性が斬属性のアタッカーの味方全員のスキル威力アップ<br>対象の斬属性耐性ダウン<br>味方全員に追加効果を付与",
+          "timeline_hash": "3105643661948692395",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{1}%」と<br>「スキル威力+{2}%」(上限100%)を1回行動終了するまで付与<br>攻撃対象が麻痺・ねむり・スタン状態あるいは「王の威光」が付与された状態の時、このスキル使用前にタイムラインに並んでいる、味方全員のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001269,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001269,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001436,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001436,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001420,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001420,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002009,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "グローリアスショータイム",
+          "not_state_change_count_decrease": false,
+          "power": 420,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7089528233827006444",
+          "summary": "攻撃後、アイテムゲージを回復<br>物攻が最も高い味方1人の物攻アップ<br>物攻が最も高い味方1人のスキル威力アップ<br>対象が特定の状態異常時または特定のマイナス効果を持つ時、味方全員のパネル1つをバーストパネルに変換",
+          "timeline_hash": "3816546562998424082",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{1}%」と<br>「スキル威力+{2}%」(上限100%)を1回行動終了するまで付与<br>攻撃対象が麻痺・ねむり・スタン状態あるいは「王の威光」が付与された状態の時、このスキル使用前にタイムラインに並んでいる、味方全員のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001269,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001269,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001436,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001436,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001420,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001420,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002010,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "グローリアスショータイム",
+          "not_state_change_count_decrease": false,
+          "power": 446,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7089528233827006444",
+          "summary": "攻撃後、アイテムゲージを回復<br>物攻が最も高い味方1人の物攻アップ<br>物攻が最も高い味方1人のスキル威力アップ<br>対象が特定の状態異常時または特定のマイナス効果を持つ時、味方全員のパネル1つをバーストパネルに変換",
+          "timeline_hash": "3816546562998424082",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{1}%」と<br>「スキル威力+{2}%」(上限100%)を1回行動終了するまで付与<br>攻撃対象が麻痺・ねむり・スタン状態あるいは「王の威光」が付与された状態の時、このスキル使用前にタイムラインに並んでいる、味方全員のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001269,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001269,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001436,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001436,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001420,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001420,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002011,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "グローリアスショータイム",
+          "not_state_change_count_decrease": false,
+          "power": 472,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7089528233827006444",
+          "summary": "攻撃後、アイテムゲージを回復<br>物攻が最も高い味方1人の物攻アップ<br>物攻が最も高い味方1人のスキル威力アップ<br>対象が特定の状態異常時または特定のマイナス効果を持つ時、味方全員のパネル1つをバーストパネルに変換",
+          "timeline_hash": "3816546562998424082",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{1}%」と<br>「スキル威力+{2}%」(上限100%)を1回行動終了するまで付与<br>攻撃対象が麻痺・ねむり・スタン状態あるいは「王の威光」が付与された状態の時、このスキル使用前にタイムラインに並んでいる、味方全員のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001269,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001269,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001436,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001436,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001420,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001420,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002012,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "グローリアスショータイム",
+          "not_state_change_count_decrease": false,
+          "power": 498,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7089528233827006444",
+          "summary": "攻撃後、アイテムゲージを回復<br>物攻が最も高い味方1人の物攻アップ<br>物攻が最も高い味方1人のスキル威力アップ<br>対象が特定の状態異常時または特定のマイナス効果を持つ時、味方全員のパネル1つをバーストパネルに変換",
+          "timeline_hash": "3816546562998424082",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            1
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>このスキル使用前に物攻が最も高い味方1人に「物攻+{1}%」と<br>「スキル威力+{2}%」(上限100%)を1回行動終了するまで付与<br>攻撃対象が麻痺・ねむり・スタン状態あるいは「王の威光」が付与された状態の時、このスキル使用前にタイムラインに並んでいる、味方全員のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91002004,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001269,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001269,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001436,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001436,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001420,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001420,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14002013,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "グローリアスショータイム",
+          "not_state_change_count_decrease": false,
+          "power": 525,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "7089528233827006444",
+          "summary": "攻撃後、アイテムゲージを回復<br>物攻が最も高い味方1人の物攻アップ<br>物攻が最も高い味方1人のスキル威力アップ<br>対象が特定の状態異常時または特定のマイナス効果を持つ時、味方全員のパネル1つをバーストパネルに変換",
+          "timeline_hash": "3816546562998424082",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ]
+}

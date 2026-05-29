@@ -1,0 +1,1550 @@
+{
+  "id": 29201,
+  "attack_attributes": [
+    8
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 1,
+  "support_color_id": 3,
+  "trait_color_name_ja": "青",
+  "trait_color_name_cn": "蓝",
+  "support_color_name_ja": "黄",
+  "support_color_name_cn": "黄",
+  "battle_tool_trait_names_ja": [
+    "大きな回復量",
+    "会心の出来"
+  ],
+  "battle_tool_trait_names_cn": [
+    "强大的恢复量",
+    "暴击成品"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "回復量上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "恢复量提升"
+  ],
+  "battle_tool_trait_ids": [
+    44,
+    50
+  ],
+  "equipment_tool_trait_ids": [
+    39
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980036,
+        "combat_power_coefficient": 500,
+        "condition_ids": [
+          12
+        ]
+      }
+    ],
+    "description": "味方全員は「ブレイクダメージ+10%」",
+    "name": "想い出の花園"
+  },
+  "ability_ids": [
+    1990036,
+    1990037
+  ],
+  "support_ability_ids": [
+    500445,
+    500389,
+    500333,
+    500277,
+    500221,
+    500165,
+    500109,
+    500053
+  ],
+  "_skillDetails": {
+    "500053": {
+      "id": 500053,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 1150,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500109": {
+      "id": 500109,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 1000,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500165": {
+      "id": 500165,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 850,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500221": {
+      "id": 500221,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 700,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500277": {
+      "id": 500277,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 650,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500333": {
+      "id": 500333,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 600,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500389": {
+      "id": 500389,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 550,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500445": {
+      "id": 500445,
+      "description": "得意属性が風属性かつディフェンダーであり、攻撃を受けた時、自身のHPを{0}％回復(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500053,
+          "limit_count": 1,
+          "value": 500,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつディフェンダーの時、自身のHP割合回復",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500053,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980036": {
+      "name": "想い出の花園",
+      "id": 1980036,
+      "description": "ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500052,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/ブレイクダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500052,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990036": {
+      "name": "アドバンスオール魔防Ⅰ",
+      "id": 1990036,
+      "description": "味方全員の魔防+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000910,
+          "limit_count": null,
+          "value": 500,
+          "_detail": {
+            "description": "[味方全体/常時/魔防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000910,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990037": {
+      "name": "レジストアップ毒",
+      "id": 1990037,
+      "description": "毒耐性+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001062,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/毒耐性上昇付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001062,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990392": {
+      "name": "ダメージアップオールⅢ",
+      "id": 1990392,
+      "description": "味方全員のスキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001409,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "味方全員のスキルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001409,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990417": {
+      "name": "ダメージアップオールⅡ",
+      "id": 1990417,
+      "description": "味方全員のスキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001409,
+          "limit_count": null,
+          "value": 1300,
+          "_detail": {
+            "description": "味方全員のスキルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001409,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990442": {
+      "name": "ダメージアップオールⅠ",
+      "id": 1990442,
+      "description": "味方全員のスキルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001409,
+          "limit_count": null,
+          "value": 600,
+          "_detail": {
+            "description": "味方全員のスキルダメージ+{0}％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001409,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11000136": {
+      "name": "フルフロルスタッフ",
+      "id": 11000136,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身のHPを{0}%回復",
+      "effects": [
+        {
+          "id": 91000948,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000948,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 60,
+      "break_power": 7
+    },
+    "11000137": {
+      "name": "フルフロルスタッフ",
+      "id": 11000137,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身のHPを{0}%回復",
+      "effects": [
+        {
+          "id": 91000948,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000948,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 63,
+      "break_power": 7
+    },
+    "11000138": {
+      "name": "フルフロルスタッフ",
+      "id": 11000138,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身のHPを{0}%回復",
+      "effects": [
+        {
+          "id": 91000948,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000948,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 67,
+      "break_power": 7
+    },
+    "11000139": {
+      "name": "フルフロルスタッフ",
+      "id": 11000139,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身のHPを{0}%回復",
+      "effects": [
+        {
+          "id": 91000948,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000948,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 71,
+      "break_power": 7
+    },
+    "11000140": {
+      "name": "フルフロルスタッフ",
+      "id": 11000140,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "description": "攻撃後、自身のHPを{0}%回復",
+      "effects": [
+        {
+          "id": 91000948,
+          "value": 2000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000948,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 75,
+      "break_power": 8
+    },
+    "12000141": {
+      "name": "花の加護",
+      "id": 12000141,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復前、対象に「最大HP+{0}%」を付与(上限25%)",
+      "effects": [
+        {
+          "id": 91000961,
+          "value": 500,
+          "_detail": {
+            "description": "最大HP+5%(5回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000961,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 200,
+      "break_power": 0
+    },
+    "12000142": {
+      "name": "花の加護",
+      "id": 12000142,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復前、対象に「最大HP+{0}%」を付与(上限25%)",
+      "effects": [
+        {
+          "id": 91000961,
+          "value": 500,
+          "_detail": {
+            "description": "最大HP+5%(5回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000961,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 212,
+      "break_power": 0
+    },
+    "12000143": {
+      "name": "花の加護",
+      "id": 12000143,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復前、対象に「最大HP+{0}%」を付与(上限25%)",
+      "effects": [
+        {
+          "id": 91000961,
+          "value": 500,
+          "_detail": {
+            "description": "最大HP+5%(5回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000961,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 225,
+      "break_power": 0
+    },
+    "12000144": {
+      "name": "花の加護",
+      "id": 12000144,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復前、対象に「最大HP+{0}%」を付与(上限25%)",
+      "effects": [
+        {
+          "id": 91000961,
+          "value": 500,
+          "_detail": {
+            "description": "最大HP+5%(5回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000961,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 237,
+      "break_power": 0
+    },
+    "12000145": {
+      "name": "花の加護",
+      "id": 12000145,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復前、対象に「最大HP+{0}%」を付与(上限25%)",
+      "effects": [
+        {
+          "id": 91000961,
+          "value": 500,
+          "_detail": {
+            "description": "最大HP+5%(5回まで累積)",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000961,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 250,
+      "break_power": 0
+    },
+    "14000146": {
+      "name": "錦上添花",
+      "id": 14000146,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復後、対象に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000946,
+          "value": 3000,
+          "_detail": {
+            "description": "受けるダメージ-30%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000946,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 240,
+      "break_power": 0
+    },
+    "14000147": {
+      "name": "錦上添花",
+      "id": 14000147,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復後、対象に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000946,
+          "value": 3000,
+          "_detail": {
+            "description": "受けるダメージ-30%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000946,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 255,
+      "break_power": 0
+    },
+    "14000148": {
+      "name": "錦上添花",
+      "id": 14000148,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復後、対象に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000946,
+          "value": 3000,
+          "_detail": {
+            "description": "受けるダメージ-30%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000946,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 270,
+      "break_power": 0
+    },
+    "14000149": {
+      "name": "錦上添花",
+      "id": 14000149,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復後、対象に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000946,
+          "value": 3000,
+          "_detail": {
+            "description": "受けるダメージ-30%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000946,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 285,
+      "break_power": 0
+    },
+    "14000150": {
+      "name": "錦上添花",
+      "id": 14000150,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        8
+      ],
+      "description": "回復後、対象に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000946,
+          "value": 3000,
+          "_detail": {
+            "description": "受けるダメージ-30%",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000946,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 300,
+      "break_power": 0
+    }
+  },
+  "initial_wt": 238,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復",
+          "effects": [
+            {
+              "id": 91000948,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000948,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000136,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フルフロルスタッフ",
+          "not_state_change_count_decrease": false,
+          "power": 60,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復",
+          "timeline_hash": "370580080274999897",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復",
+          "effects": [
+            {
+              "id": 91000948,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000948,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000137,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フルフロルスタッフ",
+          "not_state_change_count_decrease": false,
+          "power": 63,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復",
+          "timeline_hash": "370580080274999897",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復",
+          "effects": [
+            {
+              "id": 91000948,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000948,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000138,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フルフロルスタッフ",
+          "not_state_change_count_decrease": false,
+          "power": 67,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復",
+          "timeline_hash": "370580080274999897",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復",
+          "effects": [
+            {
+              "id": 91000948,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000948,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000139,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フルフロルスタッフ",
+          "not_state_change_count_decrease": false,
+          "power": 71,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復",
+          "timeline_hash": "370580080274999897",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 8,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復",
+          "effects": [
+            {
+              "id": 91000948,
+              "value": 2000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000948,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000140,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "フルフロルスタッフ",
+          "not_state_change_count_decrease": false,
+          "power": 75,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復",
+          "timeline_hash": "370580080274999897",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復前、対象に「最大HP+{0}%」を付与(上限25%)",
+          "effects": [
+            {
+              "id": 91000961,
+              "value": 500,
+              "_detail": {
+                "description": "最大HP+5%(5回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000961,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000141,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "花の加護",
+          "not_state_change_count_decrease": false,
+          "power": 200,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 2,
+          "state_change_visual_type": null,
+          "still_path_hash": "6649912226322360223",
+          "summary": "回復前、対象の最大HPをアップ",
+          "timeline_hash": "6251860252592238191",
+          "wait": 0,
+          "target_name_ja": "ID:2",
+          "target_name_cn": "友方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復前、対象に「最大HP+{0}%」を付与(上限25%)",
+          "effects": [
+            {
+              "id": 91000961,
+              "value": 500,
+              "_detail": {
+                "description": "最大HP+5%(5回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000961,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000142,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "花の加護",
+          "not_state_change_count_decrease": false,
+          "power": 212,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 2,
+          "state_change_visual_type": null,
+          "still_path_hash": "6649912226322360223",
+          "summary": "回復前、対象の最大HPをアップ",
+          "timeline_hash": "6251860252592238191",
+          "wait": 0,
+          "target_name_ja": "ID:2",
+          "target_name_cn": "友方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復前、対象に「最大HP+{0}%」を付与(上限25%)",
+          "effects": [
+            {
+              "id": 91000961,
+              "value": 500,
+              "_detail": {
+                "description": "最大HP+5%(5回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000961,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000143,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "花の加護",
+          "not_state_change_count_decrease": false,
+          "power": 225,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 2,
+          "state_change_visual_type": null,
+          "still_path_hash": "6649912226322360223",
+          "summary": "回復前、対象の最大HPをアップ",
+          "timeline_hash": "6251860252592238191",
+          "wait": 0,
+          "target_name_ja": "ID:2",
+          "target_name_cn": "友方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復前、対象に「最大HP+{0}%」を付与(上限25%)",
+          "effects": [
+            {
+              "id": 91000961,
+              "value": 500,
+              "_detail": {
+                "description": "最大HP+5%(5回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000961,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000144,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "花の加護",
+          "not_state_change_count_decrease": false,
+          "power": 237,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 2,
+          "state_change_visual_type": null,
+          "still_path_hash": "6649912226322360223",
+          "summary": "回復前、対象の最大HPをアップ",
+          "timeline_hash": "6251860252592238191",
+          "wait": 0,
+          "target_name_ja": "ID:2",
+          "target_name_cn": "友方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復前、対象に「最大HP+{0}%」を付与(上限25%)",
+          "effects": [
+            {
+              "id": 91000961,
+              "value": 500,
+              "_detail": {
+                "description": "最大HP+5%(5回まで累積)",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000961,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000145,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "花の加護",
+          "not_state_change_count_decrease": false,
+          "power": 250,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 2,
+          "state_change_visual_type": null,
+          "still_path_hash": "6649912226322360223",
+          "summary": "回復前、対象の最大HPをアップ",
+          "timeline_hash": "6251860252592238191",
+          "wait": 0,
+          "target_name_ja": "ID:2",
+          "target_name_cn": "友方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000946,
+              "value": 3000,
+              "_detail": {
+                "description": "受けるダメージ-30%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000946,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000146,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "錦上添花",
+          "not_state_change_count_decrease": false,
+          "power": 240,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "6729182885227917208",
+          "summary": "回復後、対象の受けるダメージダウン",
+          "timeline_hash": "493784266351256977",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000946,
+              "value": 3000,
+              "_detail": {
+                "description": "受けるダメージ-30%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000946,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000147,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "錦上添花",
+          "not_state_change_count_decrease": false,
+          "power": 255,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "6729182885227917208",
+          "summary": "回復後、対象の受けるダメージダウン",
+          "timeline_hash": "493784266351256977",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000946,
+              "value": 3000,
+              "_detail": {
+                "description": "受けるダメージ-30%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000946,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000148,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "錦上添花",
+          "not_state_change_count_decrease": false,
+          "power": 270,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "6729182885227917208",
+          "summary": "回復後、対象の受けるダメージダウン",
+          "timeline_hash": "493784266351256977",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000946,
+              "value": 3000,
+              "_detail": {
+                "description": "受けるダメージ-30%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000946,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000149,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "錦上添花",
+          "not_state_change_count_decrease": false,
+          "power": 285,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "6729182885227917208",
+          "summary": "回復後、対象の受けるダメージダウン",
+          "timeline_hash": "493784266351256977",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象に「受けるダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000946,
+              "value": 3000,
+              "_detail": {
+                "description": "受けるダメージ-30%",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000946,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000150,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "錦上添花",
+          "not_state_change_count_decrease": false,
+          "power": 300,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "6729182885227917208",
+          "summary": "回復後、対象の受けるダメージダウン",
+          "timeline_hash": "493784266351256977",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        }
+      ]
+    }
+  ]
+}

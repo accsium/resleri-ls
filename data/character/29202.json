@@ -1,0 +1,1768 @@
+{
+  "id": 29202,
+  "attack_attributes": [
+    7
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 2,
+  "support_color_id": 1,
+  "trait_color_name_ja": "紫",
+  "trait_color_name_cn": "紫",
+  "support_color_name_ja": "青",
+  "support_color_name_cn": "蓝",
+  "battle_tool_trait_names_ja": [
+    "守護の祝福",
+    "雷の呪詛"
+  ],
+  "battle_tool_trait_names_cn": [
+    "守护之祝福",
+    "雷之诅咒"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "雷ダメージ上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "雷伤害提升"
+  ],
+  "battle_tool_trait_ids": [
+    10,
+    21
+  ],
+  "equipment_tool_trait_ids": [
+    9
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980112,
+        "combat_power_coefficient": 1000,
+        "condition_ids": [
+          10
+        ]
+      }
+    ],
+    "description": "得意属性が雷属性のキャラは「物攻・魔攻・物防・魔防+10%」",
+    "name": "王宮の薬士"
+  },
+  "ability_ids": [
+    1990140,
+    1990141
+  ],
+  "support_ability_ids": [
+    500402,
+    500346,
+    500290,
+    500234,
+    500178,
+    500122,
+    500066,
+    500010
+  ],
+  "_skillDetails": {
+    "500010": {
+      "id": 500010,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500010,
+          "limit_count": null,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500010,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500066": {
+      "id": 500066,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500010,
+          "limit_count": null,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500010,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500122": {
+      "id": 500122,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500010,
+          "limit_count": null,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500010,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500178": {
+      "id": 500178,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500010,
+          "limit_count": null,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500010,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500234": {
+      "id": 500234,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500010,
+          "limit_count": null,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500010,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500290": {
+      "id": 500290,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500010,
+          "limit_count": null,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500010,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500346": {
+      "id": 500346,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500010,
+          "limit_count": null,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500010,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500402": {
+      "id": 500402,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500010,
+          "limit_count": null,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500010,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980112": {
+      "name": "王宮の薬士",
+      "id": 1980112,
+      "description": "物攻・魔攻・物防・魔防+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500002,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/常時/物攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500002,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500003,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/常時/魔攻上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500003,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500004,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500004,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72500005,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500005,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990140": {
+      "name": "王宮式応急術",
+      "id": 1990140,
+      "description": "敵にとても狙われやすくなる<br>攻撃を受けた時、自身のHPを{0}%回復",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72000950,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/HP回復]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000950,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72000914,
+          "limit_count": null,
+          "value": 10000,
+          "_detail": {
+            "description": "狙われやすさ+100％",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72000914,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990141": {
+      "name": "レジストアップ麻痺",
+      "id": 1990141,
+      "description": "麻痺耐性+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001063,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/麻痺耐性上昇付与]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001063,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990401": {
+      "name": "アクションHPアップⅢ",
+      "id": 1990401,
+      "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001418,
+          "limit_count": null,
+          "value": 500,
+          "_detail": {
+            "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001418,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990426": {
+      "name": "アクションHPアップⅡ",
+      "id": 1990426,
+      "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001418,
+          "limit_count": null,
+          "value": 300,
+          "_detail": {
+            "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001418,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990451": {
+      "name": "アクションHPアップⅠ",
+      "id": 1990451,
+      "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001418,
+          "limit_count": null,
+          "value": 100,
+          "_detail": {
+            "description": "行動後、自身に「最大HP+{0}%」(固定)を2回行動終了するまで付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001418,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11000851": {
+      "name": "ドナーフロルスタッフ",
+      "id": 11000851,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、自身に「自身の最大HPの25%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001120,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001120,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 74,
+      "break_power": 8
+    },
+    "11000852": {
+      "name": "ドナーフロルスタッフ",
+      "id": 11000852,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、自身に「自身の最大HPの25%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001120,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001120,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 78,
+      "break_power": 8
+    },
+    "11000853": {
+      "name": "ドナーフロルスタッフ",
+      "id": 11000853,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、自身に「自身の最大HPの25%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001120,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001120,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 83,
+      "break_power": 9
+    },
+    "11000854": {
+      "name": "ドナーフロルスタッフ",
+      "id": 11000854,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、自身に「自身の最大HPの25%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001120,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001120,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 87,
+      "break_power": 9
+    },
+    "11000855": {
+      "name": "ドナーフロルスタッフ",
+      "id": 11000855,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、自身に「自身の最大HPの25%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001120,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001120,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 92,
+      "break_power": 10
+    },
+    "12000856": {
+      "name": "雷華の盾",
+      "id": 12000856,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        7
+      ],
+      "description": "味方全員に「自身の最大HPの15%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与し、<br>対象のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001121,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001121,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000925,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000925,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 0,
+      "break_power": 0
+    },
+    "12000857": {
+      "name": "雷華の盾",
+      "id": 12000857,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        7
+      ],
+      "description": "味方全員に「自身の最大HPの16%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与し、<br>対象のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001129,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001129,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000925,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000925,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 0,
+      "break_power": 0
+    },
+    "12000858": {
+      "name": "雷華の盾",
+      "id": 12000858,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        7
+      ],
+      "description": "味方全員に「自身の最大HPの17%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与し、<br>対象のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001130,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001130,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000925,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000925,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 0,
+      "break_power": 0
+    },
+    "12000859": {
+      "name": "雷華の盾",
+      "id": 12000859,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        7
+      ],
+      "description": "味方全員に「自身の最大HPの18%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与し、<br>対象のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001131,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001131,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000925,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000925,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 0,
+      "break_power": 0
+    },
+    "12000860": {
+      "name": "雷華の盾",
+      "id": 12000860,
+      "target_name_ja": "ID:4",
+      "target_name_cn": "友方全体",
+      "skill_target_type": 4,
+      "attack_attributes": [
+        7
+      ],
+      "description": "味方全員に「自身の最大HPの19%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与し、<br>対象のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 91001132,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001132,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91000925,
+          "value": 500,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000925,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 0,
+      "break_power": 0
+    },
+    "14000861": {
+      "name": "千花万雷",
+      "id": 14000861,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、味方全員に「自身の最大HPの40%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001122,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001122,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 240,
+      "break_power": 30
+    },
+    "14000862": {
+      "name": "千花万雷",
+      "id": 14000862,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、味方全員に「自身の最大HPの40%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001122,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001122,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 255,
+      "break_power": 31
+    },
+    "14000863": {
+      "name": "千花万雷",
+      "id": 14000863,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、味方全員に「自身の最大HPの40%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001122,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001122,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 270,
+      "break_power": 33
+    },
+    "14000864": {
+      "name": "千花万雷",
+      "id": 14000864,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、味方全員に「自身の最大HPの40%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001122,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001122,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 285,
+      "break_power": 35
+    },
+    "14000865": {
+      "name": "千花万雷",
+      "id": 14000865,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        7
+      ],
+      "description": "攻撃後、味方全員に「自身の最大HPの40%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001122,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001122,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 300,
+      "break_power": 37
+    }
+  },
+  "initial_wt": 254,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 8,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「自身の最大HPの25%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001120,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001120,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000851,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドナーフロルスタッフ",
+          "not_state_change_count_decrease": false,
+          "power": 74,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の最大HPの25%以下のダメージ無効を付与",
+          "timeline_hash": "2192885948897302895",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 8,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「自身の最大HPの25%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001120,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001120,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000852,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドナーフロルスタッフ",
+          "not_state_change_count_decrease": false,
+          "power": 78,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の最大HPの25%以下のダメージ無効を付与",
+          "timeline_hash": "2192885948897302895",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 9,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「自身の最大HPの25%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001120,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001120,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000853,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドナーフロルスタッフ",
+          "not_state_change_count_decrease": false,
+          "power": 83,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の最大HPの25%以下のダメージ無効を付与",
+          "timeline_hash": "2192885948897302895",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 9,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「自身の最大HPの25%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001120,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001120,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000854,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドナーフロルスタッフ",
+          "not_state_change_count_decrease": false,
+          "power": 87,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の最大HPの25%以下のダメージ無効を付与",
+          "timeline_hash": "2192885948897302895",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 10,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「自身の最大HPの25%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001120,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001120,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11000855,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ドナーフロルスタッフ",
+          "not_state_change_count_decrease": false,
+          "power": 92,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身の最大HPの25%以下のダメージ無効を付与",
+          "timeline_hash": "2192885948897302895",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "味方全員に「自身の最大HPの15%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与し、<br>対象のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001121,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001121,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000856,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雷華の盾",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "味方全員に自身の最大HPの15%以下のダメージ無効を付与。対象のHPを回復",
+          "timeline_hash": "5070577544970841853",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "味方全員に「自身の最大HPの16%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与し、<br>対象のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001129,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001129,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000857,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雷華の盾",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "味方全員に自身の最大HPの16%以下のダメージ無効を付与。対象のHPを回復",
+          "timeline_hash": "5070577544970841853",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "味方全員に「自身の最大HPの17%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与し、<br>対象のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001130,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001130,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000858,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雷華の盾",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "味方全員に自身の最大HPの17%以下のダメージ無効を付与。対象のHPを回復",
+          "timeline_hash": "5070577544970841853",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "味方全員に「自身の最大HPの18%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与し、<br>対象のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001131,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001131,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000859,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雷華の盾",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "味方全員に自身の最大HPの18%以下のダメージ無効を付与。対象のHPを回復",
+          "timeline_hash": "5070577544970841853",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        },
+        {
+          "attack_attribute_category": null,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "味方全員に「自身の最大HPの19%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与し、<br>対象のHPを{1}%回復",
+          "effects": [
+            {
+              "id": 91001132,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001132,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91000925,
+              "value": 500,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000925,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12000860,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "雷華の盾",
+          "not_state_change_count_decrease": false,
+          "power": 0,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 3,
+          "skill_power_type": 1,
+          "skill_target_type": 4,
+          "state_change_visual_type": null,
+          "still_path_hash": "4977228245697572752",
+          "summary": "味方全員に自身の最大HPの19%以下のダメージ無効を付与。対象のHPを回復",
+          "timeline_hash": "5070577544970841853",
+          "wait": 0,
+          "target_name_ja": "ID:4",
+          "target_name_cn": "友方全体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「自身の最大HPの40%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001122,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001122,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000861,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "千花万雷",
+          "not_state_change_count_decrease": false,
+          "power": 240,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3790771385617499861",
+          "summary": "攻撃後、味方全員に自身の最大HPの40%以下のダメージ無効を付与",
+          "timeline_hash": "3880980300809538385",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「自身の最大HPの40%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001122,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001122,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000862,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "千花万雷",
+          "not_state_change_count_decrease": false,
+          "power": 255,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3790771385617499861",
+          "summary": "攻撃後、味方全員に自身の最大HPの40%以下のダメージ無効を付与",
+          "timeline_hash": "3880980300809538385",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「自身の最大HPの40%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001122,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001122,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000863,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "千花万雷",
+          "not_state_change_count_decrease": false,
+          "power": 270,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3790771385617499861",
+          "summary": "攻撃後、味方全員に自身の最大HPの40%以下のダメージ無効を付与",
+          "timeline_hash": "3880980300809538385",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「自身の最大HPの40%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001122,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001122,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000864,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "千花万雷",
+          "not_state_change_count_decrease": false,
+          "power": 285,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3790771385617499861",
+          "summary": "攻撃後、味方全員に自身の最大HPの40%以下のダメージ無効を付与",
+          "timeline_hash": "3880980300809538385",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「自身の最大HPの40%以下のダメージを受けた時、受けたダメージを無効」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001122,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001122,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14000865,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "千花万雷",
+          "not_state_change_count_decrease": false,
+          "power": 300,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "state_change_visual_type": null,
+          "still_path_hash": "3790771385617499861",
+          "summary": "攻撃後、味方全員に自身の最大HPの40%以下のダメージ無効を付与",
+          "timeline_hash": "3880980300809538385",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        }
+      ]
+    }
+  ]
+}

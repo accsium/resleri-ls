@@ -1,0 +1,2184 @@
+{
+  "id": 43402,
+  "attack_attributes": [
+    2
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 4,
+  "support_color_id": 5,
+  "trait_color_name_ja": "赤",
+  "trait_color_name_cn": "红",
+  "support_color_name_ja": "緑",
+  "support_color_name_cn": "绿",
+  "battle_tool_trait_names_ja": [
+    "打の呪詛",
+    "突の盾"
+  ],
+  "battle_tool_trait_names_cn": [
+    "打击之诅咒",
+    "突刺之盾"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "物理ダメージ上昇【背水】"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "物理伤害提升【残血】"
+  ],
+  "battle_tool_trait_ids": [
+    15,
+    24
+  ],
+  "equipment_tool_trait_ids": [
+    30
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980132,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          27
+        ]
+      }
+    ],
+    "description": "「騎士」は「WEAK攻撃時、スキルダメージ+75%」",
+    "name": "蒼き騎士"
+  },
+  "ability_ids": [
+    1990202,
+    1990203
+  ],
+  "support_ability_ids": [
+    500426,
+    500370,
+    500314,
+    500258,
+    500202,
+    500146,
+    500090,
+    500034
+  ],
+  "_skillDetails": {
+    "500034": {
+      "id": 500034,
+      "description": "得意属性が打属性かつブレイカーの時、攻撃前、対象に「打属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500034,
+          "limit_count": 1,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が打属性かつブレイカーの時、攻撃前、対象に打属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500034,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500090": {
+      "id": 500090,
+      "description": "得意属性が打属性かつブレイカーの時、攻撃前、対象に「打属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500034,
+          "limit_count": 1,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が打属性かつブレイカーの時、攻撃前、対象に打属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500034,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500146": {
+      "id": 500146,
+      "description": "得意属性が打属性かつブレイカーの時、攻撃前、対象に「打属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500034,
+          "limit_count": 1,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が打属性かつブレイカーの時、攻撃前、対象に打属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500034,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500202": {
+      "id": 500202,
+      "description": "得意属性が打属性かつブレイカーの時、攻撃前、対象に「打属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500034,
+          "limit_count": 1,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が打属性かつブレイカーの時、攻撃前、対象に打属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500034,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500258": {
+      "id": 500258,
+      "description": "得意属性が打属性かつブレイカーの時、攻撃前、対象に「打属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500034,
+          "limit_count": 1,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が打属性かつブレイカーの時、攻撃前、対象に打属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500034,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500314": {
+      "id": 500314,
+      "description": "得意属性が打属性かつブレイカーの時、攻撃前、対象に「打属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500034,
+          "limit_count": 1,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が打属性かつブレイカーの時、攻撃前、対象に打属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500034,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500370": {
+      "id": 500370,
+      "description": "得意属性が打属性かつブレイカーの時、攻撃前、対象に「打属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500034,
+          "limit_count": 1,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が打属性かつブレイカーの時、攻撃前、対象に打属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500034,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "500426": {
+      "id": 500426,
+      "description": "得意属性が打属性かつブレイカーの時、攻撃前、対象に「打属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 500034,
+          "limit_count": 1,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が打属性かつブレイカーの時、攻撃前、対象に打属性耐性DOWNを付与",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 500034,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1980132": {
+      "name": "蒼き騎士",
+      "id": 1980132,
+      "description": "WEAK攻撃時、スキルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72500137,
+          "limit_count": null,
+          "value": 7500,
+          "_detail": {
+            "description": "[自身/WEAK攻撃時スキルダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72500137,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990202": {
+      "name": "研ぎ澄まされた嗅覚",
+      "id": 1990202,
+      "description": "バトル開始時、自身に「白夜の護衛」を2回かばうまで付与<br>「白夜の護衛」が付与されている時、以下のボーナス効果が全て発動する<br>・かばう<br>・受けるダメージ-{0}%<br>・スキルダメージ+{1}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001075,
+          "limit_count": null,
+          "value": 4000,
+          "_detail": {
+            "description": "[自身/白夜の護衛所持時被ダメージダウン]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001075,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001076,
+          "limit_count": null,
+          "value": 4000,
+          "_detail": {
+            "description": "[自身/白夜の護衛所持時与ダメージアップ]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001076,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "ability_timing_value": null,
+          "id": 72001073,
+          "limit_count": null,
+          "value": 0,
+          "_detail": {
+            "description": "[自身/白夜の護衛/2回]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001073,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990203": {
+      "name": "野生の本能",
+      "id": 1990203,
+      "description": "攻撃を受けた時、自身に「物攻+{0}%」を付与(上限25%)",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 72001079,
+          "limit_count": null,
+          "value": 500,
+          "_detail": {
+            "description": "[自身/物攻上昇(上限25%)]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 72001079,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990414": {
+      "name": "クリティカルダメージアップⅢ",
+      "id": 1990414,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990439": {
+      "name": "クリティカルダメージアップⅡ",
+      "id": 1990439,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "1990464": {
+      "name": "クリティカルダメージアップⅠ",
+      "id": 1990464,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "ability_timing_value": null,
+          "id": 713001431,
+          "limit_count": null,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 713001431,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ]
+    },
+    "11001364": {
+      "name": "リゼンシュラーク",
+      "id": 11001364,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001273,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001273,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 66,
+      "break_power": 6
+    },
+    "11001365": {
+      "name": "リゼンシュラーク",
+      "id": 11001365,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001273,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001273,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 70,
+      "break_power": 6
+    },
+    "11001366": {
+      "name": "リゼンシュラーク",
+      "id": 11001366,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001273,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001273,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 74,
+      "break_power": 6
+    },
+    "11001367": {
+      "name": "リゼンシュラーク",
+      "id": 11001367,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001273,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001273,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 78,
+      "break_power": 6
+    },
+    "11001368": {
+      "name": "リゼンシュラーク",
+      "id": 11001368,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001273,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001273,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 82,
+      "break_power": 7
+    },
+    "12001369": {
+      "name": "ヴートドリュッケン",
+      "id": 12001369,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>対象を撃破時、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を1回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001301,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001301,
+            "is_expand_timeline": false,
+            "is_positive_popup": true,
+            "popup_text": "白夜の護衛",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001302,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001302,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 232,
+      "break_power": 28
+    },
+    "12001370": {
+      "name": "ヴートドリュッケン",
+      "id": 12001370,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>対象を撃破時、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を1回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001301,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001301,
+            "is_expand_timeline": false,
+            "is_positive_popup": true,
+            "popup_text": "白夜の護衛",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001302,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001302,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 246,
+      "break_power": 29
+    },
+    "12001371": {
+      "name": "ヴートドリュッケン",
+      "id": 12001371,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>対象を撃破時、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を1回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001301,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001301,
+            "is_expand_timeline": false,
+            "is_positive_popup": true,
+            "popup_text": "白夜の護衛",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001302,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001302,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 261,
+      "break_power": 31
+    },
+    "12001372": {
+      "name": "ヴートドリュッケン",
+      "id": 12001372,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>対象を撃破時、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を1回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001301,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001301,
+            "is_expand_timeline": false,
+            "is_positive_popup": true,
+            "popup_text": "白夜の護衛",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001302,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001302,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 275,
+      "break_power": 33
+    },
+    "12001373": {
+      "name": "ヴートドリュッケン",
+      "id": 12001373,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>対象を撃破時、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を1回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 3000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001301,
+          "value": 100,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001301,
+            "is_expand_timeline": false,
+            "is_positive_popup": true,
+            "popup_text": "白夜の護衛",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001302,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001302,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 290,
+      "break_power": 35
+    },
+    "14001374": {
+      "name": "アインプレーゲン",
+      "id": 14001374,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を2回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001303,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001303,
+            "is_expand_timeline": false,
+            "is_positive_popup": true,
+            "popup_text": "白夜の護衛",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001304,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001304,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 400,
+      "break_power": 75
+    },
+    "14001375": {
+      "name": "アインプレーゲン",
+      "id": 14001375,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を2回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001303,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001303,
+            "is_expand_timeline": false,
+            "is_positive_popup": true,
+            "popup_text": "白夜の護衛",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001304,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001304,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 425,
+      "break_power": 79
+    },
+    "14001376": {
+      "name": "アインプレーゲン",
+      "id": 14001376,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を2回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001303,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001303,
+            "is_expand_timeline": false,
+            "is_positive_popup": true,
+            "popup_text": "白夜の護衛",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001304,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001304,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 450,
+      "break_power": 84
+    },
+    "14001377": {
+      "name": "アインプレーゲン",
+      "id": 14001377,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を2回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001303,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001303,
+            "is_expand_timeline": false,
+            "is_positive_popup": true,
+            "popup_text": "白夜の護衛",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001304,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001304,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 475,
+      "break_power": 88
+    },
+    "14001378": {
+      "name": "アインプレーゲン",
+      "id": 14001378,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        2
+      ],
+      "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を2回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+      "effects": [
+        {
+          "id": 91000903,
+          "value": 5000,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91000903,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001303,
+          "value": 200,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001303,
+            "is_expand_timeline": false,
+            "is_positive_popup": true,
+            "popup_text": "白夜の護衛",
+            "summons_effect_id": null
+          }
+        },
+        {
+          "id": 91001304,
+          "value": 0,
+          "_detail": {
+            "description": "",
+            "effect_motion_id": null,
+            "enemy_hp_gauge": null,
+            "field_effect_id": null,
+            "id": 91001304,
+            "is_expand_timeline": false,
+            "is_positive_popup": null,
+            "popup_text": "",
+            "summons_effect_id": null
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 500,
+      "break_power": 93
+    }
+  },
+  "initial_wt": 234,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001364,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "リゼンシュラーク",
+          "not_state_change_count_decrease": false,
+          "power": 66,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+          "timeline_hash": "6600861440853643733",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001365,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "リゼンシュラーク",
+          "not_state_change_count_decrease": false,
+          "power": 70,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+          "timeline_hash": "6600861440853643733",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001366,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "リゼンシュラーク",
+          "not_state_change_count_decrease": false,
+          "power": 74,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+          "timeline_hash": "6600861440853643733",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001367,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "リゼンシュラーク",
+          "not_state_change_count_decrease": false,
+          "power": 78,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+          "timeline_hash": "6600861440853643733",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001273,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001273,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 11001368,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "リゼンシュラーク",
+          "not_state_change_count_decrease": false,
+          "power": 82,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "攻撃後、自身の次のパネルが強化系パネルでもバーストパネルでもない時、強化パネルに変換",
+          "timeline_hash": "6600861440853643733",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 28,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ダメージ+{0}%<br>対象を撃破時、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を1回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+          "effects": [
+            {
+              "id": 91000903,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001301,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001301,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "白夜の護衛",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001302,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001302,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001369,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヴートドリュッケン",
+          "not_state_change_count_decrease": false,
+          "power": 232,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "WEAK攻撃時、ダメージアップ。対象を撃破時、「白夜の護衛」を付与または残り回数を増加",
+          "timeline_hash": "264029912611989063",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 29,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ダメージ+{0}%<br>対象を撃破時、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を1回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+          "effects": [
+            {
+              "id": 91000903,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001301,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001301,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "白夜の護衛",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001302,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001302,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001370,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヴートドリュッケン",
+          "not_state_change_count_decrease": false,
+          "power": 246,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "WEAK攻撃時、ダメージアップ。対象を撃破時、「白夜の護衛」を付与または残り回数を増加",
+          "timeline_hash": "264029912611989063",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ダメージ+{0}%<br>対象を撃破時、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を1回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+          "effects": [
+            {
+              "id": 91000903,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001301,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001301,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "白夜の護衛",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001302,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001302,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001371,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヴートドリュッケン",
+          "not_state_change_count_decrease": false,
+          "power": 261,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "WEAK攻撃時、ダメージアップ。対象を撃破時、「白夜の護衛」を付与または残り回数を増加",
+          "timeline_hash": "264029912611989063",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ダメージ+{0}%<br>対象を撃破時、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を1回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+          "effects": [
+            {
+              "id": 91000903,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001301,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001301,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "白夜の護衛",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001302,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001302,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001372,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヴートドリュッケン",
+          "not_state_change_count_decrease": false,
+          "power": 275,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "WEAK攻撃時、ダメージアップ。対象を撃破時、「白夜の護衛」を付与または残り回数を増加",
+          "timeline_hash": "264029912611989063",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ダメージ+{0}%<br>対象を撃破時、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を1回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+          "effects": [
+            {
+              "id": 91000903,
+              "value": 3000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001301,
+              "value": 100,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001301,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "白夜の護衛",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001302,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001302,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 12001373,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "ヴートドリュッケン",
+          "not_state_change_count_decrease": false,
+          "power": 290,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "787735710988328316",
+          "summary": "WEAK攻撃時、ダメージアップ。対象を撃破時、「白夜の護衛」を付与または残り回数を増加",
+          "timeline_hash": "264029912611989063",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を2回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+          "effects": [
+            {
+              "id": 91000903,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001303,
+              "value": 200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001303,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "白夜の護衛",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001304,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001304,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001374,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アインプレーゲン",
+          "not_state_change_count_decrease": false,
+          "power": 400,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1963534236367465660",
+          "summary": "WEAK攻撃時、ダメージアップ<br>攻撃前、「白夜の護衛」を付与または残り回数を増加",
+          "timeline_hash": "6322849499767927421",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を2回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+          "effects": [
+            {
+              "id": 91000903,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001303,
+              "value": 200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001303,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "白夜の護衛",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001304,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001304,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001375,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アインプレーゲン",
+          "not_state_change_count_decrease": false,
+          "power": 425,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1963534236367465660",
+          "summary": "WEAK攻撃時、ダメージアップ<br>攻撃前、「白夜の護衛」を付与または残り回数を増加",
+          "timeline_hash": "6322849499767927421",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を2回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+          "effects": [
+            {
+              "id": 91000903,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001303,
+              "value": 200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001303,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "白夜の護衛",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001304,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001304,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001376,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アインプレーゲン",
+          "not_state_change_count_decrease": false,
+          "power": 450,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1963534236367465660",
+          "summary": "WEAK攻撃時、ダメージアップ<br>攻撃前、「白夜の護衛」を付与または残り回数を増加",
+          "timeline_hash": "6322849499767927421",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を2回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+          "effects": [
+            {
+              "id": 91000903,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001303,
+              "value": 200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001303,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "白夜の護衛",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001304,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001304,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001377,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アインプレーゲン",
+          "not_state_change_count_decrease": false,
+          "power": 475,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1963534236367465660",
+          "summary": "WEAK攻撃時、ダメージアップ<br>攻撃前、「白夜の護衛」を付与または残り回数を増加",
+          "timeline_hash": "6322849499767927421",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 1,
+          "attack_attributes": [
+            2
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ダメージ+{0}%<br>攻撃前、自身に「白夜の護衛」が付与されていない時、「白夜の護衛」を2回かばうまで付与<br>既に付与されている時、「白夜の護衛」の残り回数を{1}回増加",
+          "effects": [
+            {
+              "id": 91000903,
+              "value": 5000,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91000903,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001303,
+              "value": 200,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001303,
+                "is_expand_timeline": false,
+                "is_positive_popup": true,
+                "popup_text": "白夜の護衛",
+                "summons_effect_id": null
+              }
+            },
+            {
+              "id": 91001304,
+              "value": 0,
+              "_detail": {
+                "description": "",
+                "effect_motion_id": null,
+                "enemy_hp_gauge": null,
+                "field_effect_id": null,
+                "id": 91001304,
+                "is_expand_timeline": false,
+                "is_positive_popup": null,
+                "popup_text": "",
+                "summons_effect_id": null
+              }
+            }
+          ],
+          "id": 14001378,
+          "is_restrict_after_skill_timing_effects": false,
+          "limit_count": null,
+          "max_lamp": 0,
+          "name": "アインプレーゲン",
+          "not_state_change_count_decrease": false,
+          "power": 500,
+          "require_command_value": false,
+          "skill_destination": null,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "state_change_visual_type": null,
+          "still_path_hash": "1963534236367465660",
+          "summary": "WEAK攻撃時、ダメージアップ<br>攻撃前、「白夜の護衛」を付与または残り回数を増加",
+          "timeline_hash": "6322849499767927421",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ]
+}
