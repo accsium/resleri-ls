@@ -67,6 +67,25 @@ const abilities = computed(() => abilityIds.value.map(id => abilityMap.value[id]
 
 const supportIds = computed(() => activeChar.value.support_ability_ids || [])
 
+const boardAbilities = computed(() => {
+  const result = []
+  ;['board_ability1_ids', 'board_ability2_ids', 'board_ability3_ids'].forEach(key => {
+    const ids = activeChar.value[key]
+    if (ids && ids.length > 0) {
+      result.push({ key, levels: ids.map(id => abilityMap.value[id]).filter(Boolean) })
+    }
+  })
+  return result
+})
+
+const boardActiveIndex = ref({})
+function boardActiveLevel(ba) {
+  if (!(ba.key in boardActiveIndex.value)) {
+    boardActiveIndex.value[ba.key] = ba.levels.length - 1
+  }
+  return ba.levels[boardActiveIndex.value[ba.key]]
+}
+
 const skillsCollapsed = ref(false)
 const abilitiesCollapsed = ref(false)
 </script>
@@ -92,11 +111,29 @@ const abilitiesCollapsed = ref(false)
   </div>
   <div v-show="!abilitiesCollapsed">
     <template v-if="abilities.length > 0">
+      <div class="subsection-title">角色能力</div>
       <div v-for="a in abilities" :key="a.id">
         <div class="banner-title">{{ a.name || `ID:${a.id}` }}</div>
         <div class="content-block">
           <AbilityCard :ability="a" />
         </div>
+      </div>
+    </template>
+    <template v-for="ba in boardAbilities" :key="ba.key">
+      <div class="subsection-title">光玉板能力</div>
+      <div class="banner-title">
+        <span>{{ (boardActiveLevel(ba) || {}).name || '光玉板能力' }}</span>
+        <div v-if="ba.levels.length > 1" class="level-tabs">
+          <button
+            v-for="(lv, li) in ba.levels" :key="li"
+            class="level-tab"
+            :class="{ active: boardActiveIndex[ba.key] === li }"
+            @click="boardActiveIndex[ba.key] = li"
+          >Lv.{{ li + 1 }}</button>
+        </div>
+      </div>
+      <div class="content-block">
+        <AbilityCard :ability="boardActiveLevel(ba)" />
       </div>
     </template>
     <SupportAbilitySection

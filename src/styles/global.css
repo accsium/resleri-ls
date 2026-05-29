@@ -289,8 +289,11 @@ input[type="text"] {
   border-radius: var(--radius-lg);
   padding: 16px 20px;
 }
-.card-body, .card-detail {
+.card-body {
   overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+.card-detail {
   border-radius: var(--radius-lg);
 }
 .card-detail {
@@ -455,7 +458,8 @@ input:checked + .slider::before { transform: translateX(16px); }
 
 .card-detail .section-title {
   position: sticky;
-  top: 0; z-index: 1;
+  top: var(--card-head-h, 0px);
+  z-index: 1;
   background: var(--bg-card);
 }
 

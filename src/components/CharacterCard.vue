@@ -119,6 +119,15 @@ async function toggleExpand() {
     await loadCharacter(props.indexEntry.id)
     detailLoading.value = false
     await nextTick()
+    // ResizeObserver 跟踪 header 高度
+    const card = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
+    const header = card?.querySelector('.card-header')
+    if (card && header && !card._headerObserver) {
+      const update = () => card.style.setProperty('--card-head-h', (header.offsetHeight - 1) + 'px')
+      update()
+      card._headerObserver = new ResizeObserver(update)
+      card._headerObserver.observe(header)
+    }
   } catch (e) {
     detailLoading.value = false
     detailError.value = e.message || String(e)

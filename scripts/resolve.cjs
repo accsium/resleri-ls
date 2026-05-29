@@ -268,6 +268,7 @@ const CHAR_KEEP = [
   'equipment_tool_trait_names_ja', 'equipment_tool_trait_names_cn',
   'battle_tool_trait_ids', 'equipment_tool_trait_ids',
   'leader_skill', 'ability_ids', 'support_ability_ids',
+  'board_ability1_ids', 'board_ability2_ids', 'board_ability3_ids',
   '_exSkills',
 ]
 
