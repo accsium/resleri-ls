@@ -5,9 +5,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "data": "node scripts/resolveAndSplit.cjs",
-    "prepare-data": "node scripts/translations.cjs",
-    "prebuild": "npm run prepare-data && npm run data"
+    "data": "node scripts/resolve.cjs",
+    "prepare-data": "node scripts/translate.cjs",
+    "selection": "node scripts/select.cjs",
+    "prebuild": "npm run selection && npm run prepare-data && npm run data"
   },
   "dependencies": {
     "marked": "^18.0.4",

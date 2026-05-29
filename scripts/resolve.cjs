@@ -2,14 +2,18 @@ const fs = require('fs');
 const path = require('path');
 const config = require('./resolveConfig.cjs');
 
-const dataRawDir = path.join(__dirname, '..', 'data_raw', 'jp');
-const dataDir = path.join(__dirname, '..', 'language');
-const publicDataDir = path.join(__dirname, '..', 'public', 'data');
+const pipelineConfig = JSON.parse(fs.readFileSync(
+  path.join(__dirname, '..', 'config', 'pipeline.json'), 'utf-8'
+));
+const rawDir = path.join(__dirname, '..', pipelineConfig.dataRawDir);
+const langDir = path.join(__dirname, '..', 'language');
+const untransDir = path.join(langDir, 'untranslated');
+const outDir = path.join(__dirname, '..', 'public', 'data');
 
 // ========== 1. 加载实体表 ==========
 const tables = {};
 for (const [entityName, entityConfig] of Object.entries(config.entities)) {
-  const filePath = path.join(dataRawDir, entityConfig.file);
+  const filePath = path.join(rawDir, entityConfig.file);
   if (!fs.existsSync(filePath)) {
     console.warn(`⚠️ 文件 ${entityConfig.file} 不存在，跳过实体 ${entityName}`);
     continue;
@@ -19,13 +23,9 @@ for (const [entityName, entityConfig] of Object.entries(config.entities)) {
 }
 
 // ========== 2. 加载翻译映射表 ==========
-const pipelineConfig = JSON.parse(fs.readFileSync(
-  path.join(__dirname, '..', 'config', 'pipeline.json'), 'utf-8'
-));
-
 function loadJpMap(name) {
   // JP name 从 data_raw 中读取
-  const filePath = path.join(dataRawDir, `${name}.json`);
+  const filePath = path.join(rawDir, `${name}.json`);
   if (fs.existsSync(filePath)) {
     const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     return new Map(raw.map(item => [item.id, item.name]));
@@ -35,7 +35,7 @@ function loadJpMap(name) {
 
 function loadCnMap(name) {
   // CN name 从 language/ 中读取
-  const filePath = path.join(dataDir, `${name}.json`);
+  const filePath = path.join(langDir, `${name}.json`);
   if (fs.existsSync(filePath)) {
     const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     return new Map(raw.map(item => [item.id, item.name_cn || '']));
@@ -637,7 +637,7 @@ console.log(`👥 列表显示角色数量：${visibleCharacters.length}`);
 
 // ========== 处理卡池结束时间 ==========
 const gachaEndMap = new Map(); // character_id → earliest end_at (YYYY-MM-DD)
-const gachaFile = path.join(dataRawDir, 'gacha.json');
+const gachaFile = path.join(rawDir, 'gacha.json');
 if (fs.existsSync(gachaFile)) {
   const gachaData = JSON.parse(fs.readFileSync(gachaFile, 'utf-8'));
   for (const g of gachaData) {
@@ -681,7 +681,6 @@ function getFesName(startAt) {
 }
 
 const updateTime = new Date().toISOString();
-const outDir = publicDataDir;
 if (fs.existsSync(outDir)) {
   fs.rmSync(outDir, { recursive: true, force: true });
 }
@@ -691,11 +690,11 @@ fs.mkdirSync(charOutDir, { recursive: true });
 
 // 输出词条数据到 public/data/（翻译由 translations.cjs 处理）
 function buildTraitOutput(name, buildValues) {
-  const rawFile = path.join(dataRawDir, `${name}.json`);
+  const rawFile = path.join(rawDir, `${name}.json`);
   if (!fs.existsSync(rawFile)) return;
   const traits = JSON.parse(fs.readFileSync(rawFile, 'utf-8'));
 
-  const langFile = path.join(dataDir, `${name}.json`);
+  const langFile = path.join(langDir, `${name}.json`);
   const langData = fs.existsSync(langFile) ? JSON.parse(fs.readFileSync(langFile, 'utf-8')) : [];
   const langMap = new Map(langData.map(t => [t.id, t]));
 

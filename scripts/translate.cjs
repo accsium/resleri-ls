@@ -6,14 +6,14 @@ const pipelineConfig = JSON.parse(fs.readFileSync(
 ));
 
 const rootDir = path.join(__dirname, '..');
-const dataRawDir = path.join(rootDir, pipelineConfig.dataRawDir);
+const rawDir = path.join(rootDir, pipelineConfig.dataRawDir);
 const langDir = path.join(rootDir, 'language');
 const untransDir = path.join(langDir, 'untranslated');
 
 // 加载 effect / ability 用于生成 trait 效果描述
-const effects = JSON.parse(fs.readFileSync(path.join(dataRawDir, 'effect.json'), 'utf-8'));
+const effects = JSON.parse(fs.readFileSync(path.join(rawDir, 'effect.json'), 'utf-8'));
 const effectMap = new Map(effects.map(e => [e.id, e]));
-const abilities = JSON.parse(fs.readFileSync(path.join(dataRawDir, 'ability.json'), 'utf-8'));
+const abilities = JSON.parse(fs.readFileSync(path.join(rawDir, 'ability.json'), 'utf-8'));
 const abilityMap = new Map(abilities.map(a => [a.id, a]));
 
 [langDir, untransDir].forEach(d => {
@@ -40,7 +40,7 @@ for (const [name, config] of Object.entries(pipelineConfig.translationFiles)) {
   const isTrait = TRAIT_FILES.has(config.file);
 
   // JP 源数据
-  const src = path.join(dataRawDir, config.file);
+  const src = path.join(rawDir, config.file);
   if (!fs.existsSync(src)) {
     console.log(`  ✓ ${config.file}: 静态文件，保持现有翻译`);
     continue;
