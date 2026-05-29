@@ -453,6 +453,7 @@ input:checked + .slider::before { transform: translateX(16px); }
   background: transparent; color: var(--text-light);
   border: 1px solid var(--text-light);
   border-radius: var(--radius);
+  white-space: nowrap;
 }
 .banner-title .level-tab.active { background: var(--text-light); color: var(--bg-banner); }
 
