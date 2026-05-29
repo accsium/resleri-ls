@@ -12,13 +12,13 @@ const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_M
 const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP)
 
 const columns = [
-  { key: 'id', label: 'ID', width: 72 },
-  { key: 'avatar', label: '角色头像', width: 88 },
-  { key: 'name', label: '角色名', minWidth: 100 },
-  { key: 'attr', label: '属性', width: 68, align: 'center' },
-  { key: 'role', label: '职业', width: 68, align: 'center' },
-  { key: 'skillName', label: '队长技能', minWidth: 100 },
-  { key: 'skillDesc', label: '效果', minWidth: 200 },
+  { key: 'id', label: 'ID', width: 72, minWidth: 72 },
+  { key: 'avatar', label: '角色头像', width: 88, minWidth: 88 },
+  { key: 'name', label: '角色名', width: 140, minWidth: 80 },
+  { key: 'attr', label: '属性', width: 68, minWidth: 48, align: 'center' },
+  { key: 'role', label: '职业', width: 68, minWidth: 48, align: 'center' },
+  { key: 'skillName', label: '队长技能', width: 120, minWidth: 80 },
+  { key: 'skillDesc', label: '效果', width: 260, minWidth: 150 },
 ]
 
 const leaderChars = computed(() =>

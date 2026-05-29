@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 
 const props = defineProps({
   columns: { type: Array, required: true },
@@ -21,20 +21,40 @@ function sortArrow(key) {
   return props.sortDir === 'desc' ? ' ▼' : ' ▲'
 }
 
-// 冻结列 left 偏移累积
+// 冻结列 left 偏移累积 + 总宽度
 const frozenLefts = computed(() => {
   const lefts = []
   let acc = 0
   for (let i = 0; i < props.columns.length; i++) {
     if (i < props.frozen) {
       lefts.push(acc)
-      acc += (props.columns[i].width || 100)
+      acc += (props.columns[i].width || 100) - 2
     } else {
       lefts.push(null)
     }
   }
   return lefts
 })
+const wrapRef = ref(null)
+let thObserver = null
+
+onMounted(() => {
+  const update = () => {
+    if (!wrapRef.value || !props.frozen) return
+    const thead = wrapRef.value.querySelector('thead')
+    if (thead) wrapRef.value.style.setProperty('--frozen-head-h', thead.offsetHeight + 'px')
+    const cells = wrapRef.value.querySelectorAll('thead th')
+    let w = 0
+    for (let i = 0; i < props.frozen && i < cells.length; i++) w += cells[i].offsetWidth
+    wrapRef.value.style.setProperty('--frozen-w', w + 'px')
+  }
+  update()
+  thObserver = new ResizeObserver(update)
+  const thead = wrapRef.value?.querySelector('thead')
+  if (thead) thObserver.observe(thead)
+  thObserver.observe(wrapRef.value)
+})
+onUnmounted(() => { thObserver?.disconnect() })
 
 function frozenStyle(i) {
   const w = props.columns[i].width
@@ -49,7 +69,13 @@ function frozenStyle(i) {
 }
 
 function frozenThStyle(i) {
-  return { ...frozenStyle(i), zIndex: 6 }
+  const w = props.columns[i].width
+  return {
+    position: 'sticky',
+    left: frozenLefts.value[i] + 'px',
+    zIndex: 6,
+    width: w ? w + 'px' : undefined,
+  }
 }
 
 function cellStyle(col) {
@@ -62,7 +88,8 @@ function cellStyle(col) {
 </script>
 
 <template>
-  <div class="st-wrap">
+  <div ref="wrapRef" class="st-wrap">
+    <div v-if="frozen > 0" class="st-frozen-bg"></div>
     <table class="st-table">
       <thead>
         <tr>
@@ -95,23 +122,52 @@ function cellStyle(col) {
 
 <style scoped>
 .st-wrap {
-  height: 100%;
+  height: calc(100% - 32px);
   width: 90%;
-  margin: 0 auto;
+  margin: 16px auto;
   overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  position: relative;
+  box-sizing: border-box;
+}
+.st-frozen-bg {
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
+  contain: layout;
+}
+.st-frozen-bg::before {
+  content: '';
+  display: block;
+  width: calc(100% + 6px);
+  height: var(--frozen-head-h, 42px);
+  background: #5a5a5a;
+  border-bottom: 1px solid var(--border);
+}
+.st-frozen-bg::after {
+  content: '';
+  display: block;
+  width: var(--frozen-w, 0px);
+  height: 100vh;
+  background: var(--bg-card);
 }
 .st-table {
   border-collapse: separate;
   border-spacing: 0;
   font-size: 14px;
-  table-layout: fixed;
-  width: max-content;
-  min-width: 100%;
+  table-layout: auto;
+  width: 100%;
 }
 .st-table th {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 4;
   background: #5a5a5a;
   color: #ddd;
   font-weight: 600;
@@ -127,10 +183,6 @@ function cellStyle(col) {
   border-bottom: 1px solid var(--border);
   padding: 8px 12px;
   vertical-align: middle;
-}
-.st-table th:first-child,
-.st-table td:first-child {
-  border-left: 1px solid var(--border);
 }
 .st-table th:last-child,
 .st-table td:last-child {

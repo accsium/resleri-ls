@@ -642,3 +642,33 @@ input:checked + .slider::before { transform: translateX(16px); }
 }
 
 
+
+/* 表格滚动条 */
+.st-wrap::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.st-wrap::-webkit-scrollbar-track:vertical {
+  background: #c8c8c8;
+  margin-top: var(--frozen-head-h, 42px);
+  margin-bottom: 6px;
+}
+.st-wrap::-webkit-scrollbar-track:horizontal {
+  background: #c8c8c8;
+  height: 6px;
+  margin-left: var(--frozen-w, 0px);
+  margin-right: 6px;
+}
+.st-wrap::-webkit-scrollbar-track:horizontal {
+  background: #c8c8c8;
+  height: 6px;
+  margin-left: var(--frozen-w, 0px);
+}
+.st-wrap::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.st-wrap::-webkit-scrollbar-corner {
+  background: transparent;
+}
