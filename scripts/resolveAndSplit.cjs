@@ -610,14 +610,11 @@ if (!tables.character) {
   process.exit(1);
 }
 
-const excludeFile = path.join(__dirname, '..', 'config', 'exclude.txt');
+const excludeFile = path.join(__dirname, '..', 'config', 'exclude.json');
 let excludeIds = new Set();
 if (fs.existsSync(excludeFile)) {
-  const content = fs.readFileSync(excludeFile, 'utf-8');
-  content.split(/\r?\n/).forEach(line => {
-    const id = parseInt(line.trim());
-    if (!isNaN(id)) excludeIds.add(id);
-  });
+  const ids = JSON.parse(fs.readFileSync(excludeFile, 'utf-8'));
+  ids.forEach(id => excludeIds.add(id));
   console.log(`📋 已加载排除角色 ID：${excludeIds.size} 个`);
 }
 
