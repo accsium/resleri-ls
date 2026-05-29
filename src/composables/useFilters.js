@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useI18n } from './useI18n'
 import { useCharacterData } from './useCharacterData'
 import { useCardState } from './useCardState'
@@ -179,6 +179,21 @@ export function useFilters() {
     return list
   })
 
+  const currentPage = ref(1)
+  const pageSize = ref(50)
+
+  const totalPages = computed(() => Math.ceil(filteredCharacters.value.length / pageSize.value) || 1)
+
+  const pagedCharacters = computed(() => {
+    const start = (currentPage.value - 1) * pageSize.value
+    return filteredCharacters.value.slice(start, start + pageSize.value)
+  })
+
+  // 筛选/搜索变化时回到第一页
+  watch([activeFilters, searchText], () => {
+    currentPage.value = 1
+  })
+
   function buildPriority(cat, field) {
     const category = SORT_CATEGORIES.find(c => c.key === cat)
     if (!category || !category.fields) {
@@ -225,7 +240,8 @@ export function useFilters() {
   return {
     sortCategory, sortField, sortSkillType, sortSkillStat, currentSortOrder,
     activeFilters, searchText,
-    filteredCharacters,
+    filteredCharacters, pagedCharacters,
+    currentPage, pageSize, totalPages,
     setSortCategory, setSortField, setSortSkillType, setSortSkillStat,
     toggleOrder, toggleFilter,
   }
