@@ -1,1 +1,0 @@
-import{_ as o,e as c,a as t,m as s}from"./index-BODf8F4r.js";const n={},a={class:"collection-container"};function l(r,e){return s(),c("div",a,[...e[0]||(e[0]=[t("div",{class:"collection-placeholder"},"施工中",-1)])])}const _=o(n,[["render",l]]);export{_ as default};
