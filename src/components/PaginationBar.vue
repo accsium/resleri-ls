@@ -77,7 +77,7 @@ function pageNumbers() {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 0;
+  padding: 0 0 8px;
   font-size: 13px;
   flex-wrap: wrap;
 }

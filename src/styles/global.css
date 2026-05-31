@@ -176,10 +176,14 @@ input[type="text"] {
 .nav-link.router-link-active { color: var(--text-light); border-bottom-color: var(--accent); }
 
 /* ========== 排序筛选面板 ========== */
-.sf-wrapper {
+.guide-sticky-head {
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 6;
+  background: var(--bg-page);
+  box-shadow: var(--shadow);
+}
+.sf-wrapper {
   padding: 12px 0;
 }
 .sort-filter-bar {
@@ -267,38 +271,16 @@ input[type="text"] {
 .guide-layout {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
-.card-panel {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  scrollbar-width: none;
-  width: 90%;
-  max-width: 840px;
-  margin: 0 auto 20px;
-  background: #e2ddd2;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  padding: 0;
-}
-.card-panel::-webkit-scrollbar {
-  display: none;
-}
-
 .card {
   background: var(--bg-card);
-  border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   overflow: clip;
 }
 .card-header {
   position: sticky;
-  top: 0;
-  z-index: 5;
+  top: var(--sticky-head-h, 0px);
+  z-index: 4;
   background: var(--bg-card);
   border-radius: var(--radius-lg);
   padding: 16px 20px;
@@ -472,7 +454,7 @@ input:checked + .slider::before { transform: translateX(16px); }
 
 .card-detail .section-title {
   position: sticky;
-  top: var(--card-head-h, 0px);
+  top: calc(var(--sticky-head-h, 0px) + var(--card-head-h, 0px));
   z-index: 1;
   background: var(--bg-card);
 }
@@ -612,7 +594,6 @@ input:checked + .slider::before { transform: translateX(16px); }
   .nav-bar { height: 40px; padding: 0 10px; }
   .nav-link { font-size: 13px; }
 
-  .card-panel { padding: 0 0 30px; gap: 12px; }
   .card-header { padding: 12px 14px; }
   .card-top { margin-bottom: 8px; }
   .card-attrs { display: none; }

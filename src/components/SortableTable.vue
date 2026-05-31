@@ -127,7 +127,6 @@ function cellStyle(col) {
   margin: 16px auto;
   overflow: auto;
   border: 1px solid var(--border);
-  border-radius: 12px;
   position: relative;
   box-sizing: border-box;
 }
