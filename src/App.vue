@@ -8,7 +8,7 @@ import { useCharacterData } from './composables/useCharacterData'
 import { useBuildInfo } from './composables/useBuildInfo'
 
 const { setLang } = useI18n()
-const { loadIndex } = useCharacterData()
+const { loadIndex, loadProgress } = useCharacterData()
 const { loadBuildTime } = useBuildInfo()
 
 onMounted(async () => {
@@ -22,6 +22,9 @@ onMounted(async () => {
   <div class="app-shell">
     <div class="app-top">
       <AppHeader />
+      <div class="load-bar">
+        <div class="load-bar-fill" :style="{ width: loadProgress + '%' }"></div>
+      </div>
       <NavBar />
     </div>
     <AnnouncementBar />

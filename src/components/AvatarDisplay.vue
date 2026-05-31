@@ -1,15 +1,17 @@
 <script setup>
 import { computed, ref, onMounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
+import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
+
+const { getTraitColorHex } = useI18n()
+const { trackImage, imageDone } = useCharacterData()
 
 const props = defineProps({
   indexEntry: Object,
   size: { type: Number, default: 100 },
 })
-
-const { getTraitColorHex } = useI18n()
 
 const traitHex = computed(() => getTraitColorHex(props.indexEntry.trait_color_id))
 const supportHex = computed(() => getTraitColorHex(props.indexEntry.support_color_id))
@@ -29,8 +31,9 @@ const showImage = ref(false)
 
 onMounted(() => {
   const img = new Image()
-  img.onload = () => { showImage.value = true }
-  img.onerror = () => {}
+  trackImage(0)
+  img.onload = () => { showImage.value = true; imageDone(0) }
+  img.onerror = () => { imageDone(0) }
   img.src = charImage.value
 })
 </script>
