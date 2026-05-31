@@ -15,8 +15,7 @@ function formatTime(isoStr) {
   return `最后更新： ${buildTime.toLocaleString()} (GMT${sign}${pad(hours)}:${pad(minutes)})`
 }
 
-const initTime = typeof __BUILD_TIME__ !== 'undefined' ? formatTime(__BUILD_TIME__) : null
-const updateTimeText = ref(initTime || '最后更新： — (GMT+08:00)')
+const updateTimeText = ref('最后更新：加载中...')
 
 export function useBuildInfo() {
   async function loadBuildTime() {

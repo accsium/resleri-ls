@@ -188,8 +188,8 @@ export function useFilters() {
     return filteredCharacters.value.slice(start, start + pageSize.value)
   })
 
-  // 筛选/搜索变化时回到第一页
-  watch([activeFilters, searchText], () => {
+  // 筛选/搜索/页大小变化时回到第一页
+  watch([activeFilters, searchText, pageSize], () => {
     currentPage.value = 1
   })
 
