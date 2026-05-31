@@ -10,6 +10,8 @@ const sortSkillStat = ref('dmg_power')
 const sortPriority = ref([]) // ordered list of { field, type } for multi-field sort
 const currentSortOrder = ref('desc')
 const searchText = ref('')
+const currentPage = ref(1)
+const pageSize = ref(50)
 
 const activeFilters = ref({
   attack_attributes: [],
@@ -178,9 +180,6 @@ export function useFilters() {
     }
     return list
   })
-
-  const currentPage = ref(1)
-  const pageSize = ref(50)
 
   const totalPages = computed(() => Math.ceil(filteredCharacters.value.length / pageSize.value) || 1)
 
