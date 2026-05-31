@@ -9,11 +9,9 @@ const imgBytesLoaded = ref(0)
 const imgBytesTotal = ref(0)
 
 const loadProgress = computed(() => {
-  const d = dataBytesTotal.value > 0 ? dataBytesLoaded.value / dataBytesTotal.value : 0
-  const i = imgBytesTotal.value > 0 ? imgBytesLoaded.value / imgBytesTotal.value : 1
   const total = dataBytesTotal.value + imgBytesTotal.value
   if (total === 0) return 0
-  return Math.round(((dataBytesLoaded.value + imgBytesLoaded.value) / total) * 100)
+  return Math.min(100, Math.round(((dataBytesLoaded.value + imgBytesLoaded.value) / total) * 100))
 })
 
 export function useCharacterData() {
@@ -29,6 +27,10 @@ export function useCharacterData() {
       if (done) break
       chunks.push(value)
       loaded += value.length
+      dataBytesLoaded.value = loaded
+    }
+    if (dataBytesTotal.value === 0 || dataBytesTotal.value < loaded) {
+      dataBytesTotal.value = loaded
       dataBytesLoaded.value = loaded
     }
     const text = new TextDecoder().decode(

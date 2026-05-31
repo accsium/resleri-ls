@@ -30,16 +30,25 @@ const charImage = computed(() => `image/character/${props.indexEntry.id}.png`)
 const showImage = ref(false)
 const wasLoaded = ref(false)
 const imageSize = props.indexEntry.image_size || 60000
+let cancelled = false
 
 onMounted(() => {
+  cancelled = false
   const img = new Image()
   trackImage(imageSize)
-  img.onload = () => { showImage.value = true; wasLoaded.value = true; imageDone(imageSize) }
-  img.onerror = () => { imageDone(imageSize) }
+  img.onload = () => {
+    if (cancelled) return
+    showImage.value = true; wasLoaded.value = true; imageDone(imageSize)
+  }
+  img.onerror = () => {
+    if (cancelled) return
+    imageDone(imageSize)
+  }
   img.src = charImage.value
 })
 
 onUnmounted(() => {
+  cancelled = true
   untrackImage(imageSize, wasLoaded.value)
 })
 </script>

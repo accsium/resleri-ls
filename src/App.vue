@@ -23,7 +23,7 @@ onMounted(async () => {
     <div class="app-top">
       <AppHeader />
       <div class="load-bar">
-        <div class="load-bar-fill" :class="{ complete: loadProgress === 100 }" :style="{ width: loadProgress + '%' }"></div>
+        <div class="load-bar-fill" :class="{ complete: loadProgress >= 100 }" :style="{ width: loadProgress + '%' }"></div>
       </div>
       <NavBar />
     </div>
