@@ -53,5 +53,12 @@ export function useCharacterData() {
     imgBytesLoaded.value += size
   }
 
-  return { characterIndex, loadedCharacters, loadIndex, loadCharacter, loadProgress, trackImage, imageDone }
+  function untrackImage(size, loaded) {
+    imgBytesTotal.value = Math.max(0, imgBytesTotal.value - size)
+    if (loaded) {
+      imgBytesLoaded.value = Math.max(0, imgBytesLoaded.value - size)
+    }
+  }
+
+  return { characterIndex, loadedCharacters, loadIndex, loadCharacter, loadProgress, trackImage, imageDone, untrackImage }
 }

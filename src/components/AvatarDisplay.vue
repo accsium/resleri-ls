@@ -1,12 +1,12 @@
 <script setup>
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
 const { getTraitColorHex } = useI18n()
-const { trackImage, imageDone } = useCharacterData()
+const { trackImage, imageDone, untrackImage } = useCharacterData()
 
 const props = defineProps({
   indexEntry: Object,
@@ -28,13 +28,19 @@ const starDisplayCount = computed(() => {
 
 const charImage = computed(() => `image/character/${props.indexEntry.id}.png`)
 const showImage = ref(false)
+const wasLoaded = ref(false)
+const imageSize = props.indexEntry.image_size || 60000
 
 onMounted(() => {
   const img = new Image()
-  trackImage(0)
-  img.onload = () => { showImage.value = true; imageDone(0) }
-  img.onerror = () => { imageDone(0) }
+  trackImage(imageSize)
+  img.onload = () => { showImage.value = true; wasLoaded.value = true; imageDone(imageSize) }
+  img.onerror = () => { imageDone(imageSize) }
   img.src = charImage.value
+})
+
+onUnmounted(() => {
+  untrackImage(imageSize, wasLoaded.value)
 })
 </script>
 

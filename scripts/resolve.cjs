@@ -511,6 +511,12 @@ function buildIndexEntry(character) {
     leader_skill_description: character.leader_skill?.description || null,
   };
 
+  // 预计算图片文件大小
+  const imgPath = path.join(__dirname, '..', 'image', 'character', `${character.id}.png`);
+  if (fs.existsSync(imgPath)) {
+    entry.image_size = fs.statSync(imgPath).size;
+  }
+
   // 技能范围（用于筛选）
   for (const prefix of ['normal1', 'normal2', 'burst']) {
     const target = getSkillStat(character, prefix, 'skill_target_type', true);
