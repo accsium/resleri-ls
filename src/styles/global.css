@@ -143,12 +143,15 @@ input[type="text"] {
 /* ========== 载入进度条 ========== */
 .load-bar {
   height: 3px;
-  background: var(--border);
+  background: #e0e0e0;
 }
 .load-bar-fill {
   height: 100%;
-  background: var(--accent);
+  background: #00bcd4;
   transition: width 0.3s;
+}
+.load-bar-fill.complete {
+  background: #2196f3;
 }
 
 /* ========== 导航栏 ========== */
