@@ -42,4 +42,22 @@ for (const [name, config] of Object.entries(pipelineConfig.translationFiles)) {
   }
 }
 
+// 复制 config 文件到 public/config/
+const publicConfigDir = path.join(__dirname, '..', 'public', 'config');
+if (!fs.existsSync(publicConfigDir)) fs.mkdirSync(publicConfigDir, { recursive: true });
+const configDir = path.join(__dirname, '..', 'config');
+for (const f of ['announcements.json', 'todo.md']) {
+  const src = path.join(configDir, f);
+  const dest = path.join(publicConfigDir, f);
+  if (fs.existsSync(src)) { fs.copyFileSync(src, dest); console.log(`  ✓ config/${f} → public/config/`); }
+}
+
+// 复制 image/ 到 public/image/
+const imageDir = path.join(__dirname, '..', 'image');
+const publicImageDir = path.join(__dirname, '..', 'public', 'image');
+if (fs.existsSync(imageDir) && !fs.existsSync(publicImageDir)) {
+  fs.cpSync(imageDir, publicImageDir, { recursive: true });
+  console.log('  ✓ image/ → public/image/');
+}
+
 console.log('✅ 完成');
