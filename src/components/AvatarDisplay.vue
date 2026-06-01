@@ -68,19 +68,20 @@ onUnmounted(() => {
             <feComposite in="blur" in2="SourceGraphic" operator="over"/>
           </filter>
           <linearGradient :id="'gt-' + indexEntry.id" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+            <stop offset="0%" stop-color="black"/><stop offset="50%" stop-color="black"/><stop offset="100%" stop-color="white"/>
           </linearGradient>
           <linearGradient :id="'gl-' + indexEntry.id" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+            <stop offset="0%" stop-color="black"/><stop offset="50%" stop-color="black"/><stop offset="100%" stop-color="white"/>
           </linearGradient>
           <linearGradient :id="'gr-' + indexEntry.id" x1="1" y1="0" x2="0" y2="0">
-            <stop offset="0%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+            <stop offset="0%" stop-color="black"/><stop offset="50%" stop-color="black"/><stop offset="100%" stop-color="white"/>
           </linearGradient>
           <mask :id="'mask-' + indexEntry.id">
-            <polygon points="55,40 265,40 265,190 160,295 55,190" fill="white"/>
-            <rect x="55" y="40" width="210" height="15" :fill="'url(#gt-' + indexEntry.id + ')'"/>
-            <rect x="55" y="40" width="15" height="150" :fill="'url(#gl-' + indexEntry.id + ')'"/>
-            <rect x="250" y="40" width="15" height="150" :fill="'url(#gr-' + indexEntry.id + ')'"/>
+            <rect x="40" y="25" width="240" height="275" fill="white"/>
+            <rect x="40" y="25" width="240" height="30" :fill="'url(#gt-' + indexEntry.id + ')'"/>
+            <rect x="40" y="25" width="30" height="280" :fill="'url(#gl-' + indexEntry.id + ')'"/>
+            <rect x="250" y="25" width="30" height="280" :fill="'url(#gr-' + indexEntry.id + ')'"/>
+            <polygon points="55,190 160,295 265,190 265,320 55,320" fill="black"/>
           </mask>
         </defs>
         <polygon points="160,10 10,160 160,310" :fill="traitHex" opacity="0.7" :filter="'url(#glow-' + indexEntry.id + ')'" style="overflow:visible;"/>
