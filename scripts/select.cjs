@@ -55,7 +55,8 @@ for (const f of ['announcements.json', 'todo.md']) {
 // 复制 image/ 到 public/image/
 const imageDir = path.join(__dirname, '..', 'image');
 const publicImageDir = path.join(__dirname, '..', 'public', 'image');
-if (fs.existsSync(imageDir) && !fs.existsSync(publicImageDir)) {
+if (fs.existsSync(imageDir)) {
+  if (fs.existsSync(publicImageDir)) fs.rmSync(publicImageDir, { recursive: true });
   fs.cpSync(imageDir, publicImageDir, { recursive: true });
   console.log('  ✓ image/ → public/image/');
 }
