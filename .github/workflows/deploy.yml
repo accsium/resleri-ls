@@ -3,17 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - 'data_raw/**'
-      - 'data/**'
-      - 'scripts/**'
-      - 'config/**'
-      - 'public/**'
-      - 'src/**'
-      - 'index.html'
-      - 'package.json'
-      - 'vite.config.js'
-      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:
