@@ -5,13 +5,15 @@ import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
+let uid = 0
 const { getTraitColorHex } = useI18n()
 const { trackImage, imageDone, untrackImage } = useCharacterData()
-
 const props = defineProps({
   indexEntry: Object,
   size: { type: Number, default: 100 },
 })
+
+const kid = ++uid + '-' + props.indexEntry.id
 
 const traitHex = computed(() => getTraitColorHex(props.indexEntry.trait_color_id))
 const supportHex = computed(() => getTraitColorHex(props.indexEntry.support_color_id))
@@ -63,35 +65,35 @@ onUnmounted(() => {
         style="overflow: visible;"
       >
         <defs>
-          <filter :id="'glow-' + indexEntry.id" x="-50%" y="-50%" width="200%" height="200%">
+          <filter :id="'glow-' + kid" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="25" result="blur"/>
             <feComposite in="blur" in2="SourceGraphic" operator="over"/>
           </filter>
-          <linearGradient :id="'gt-' + indexEntry.id" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient :id="'gt-' + kid" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="black"/><stop offset="50%" stop-color="black"/><stop offset="100%" stop-color="white"/>
           </linearGradient>
-          <linearGradient :id="'gl-' + indexEntry.id" x1="0" y1="0" x2="1" y2="0">
+          <linearGradient :id="'gl-' + kid" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="black"/><stop offset="50%" stop-color="black"/><stop offset="100%" stop-color="white"/>
           </linearGradient>
-          <linearGradient :id="'gr-' + indexEntry.id" x1="1" y1="0" x2="0" y2="0">
+          <linearGradient :id="'gr-' + kid" x1="1" y1="0" x2="0" y2="0">
             <stop offset="0%" stop-color="black"/><stop offset="50%" stop-color="black"/><stop offset="100%" stop-color="white"/>
           </linearGradient>
-          <mask :id="'mask-' + indexEntry.id">
+          <mask :id="'mask-' + kid">
             <rect x="40" y="25" width="240" height="275" fill="white"/>
-            <rect x="40" y="25" width="240" height="30" :fill="'url(#gt-' + indexEntry.id + ')'"/>
-            <rect x="40" y="25" width="30" height="280" :fill="'url(#gl-' + indexEntry.id + ')'"/>
-            <rect x="250" y="25" width="30" height="280" :fill="'url(#gr-' + indexEntry.id + ')'"/>
+            <rect x="40" y="25" width="240" height="30" :fill="'url(#gt-' + kid + ')'"/>
+            <rect x="40" y="25" width="30" height="280" :fill="'url(#gl-' + kid + ')'"/>
+            <rect x="250" y="25" width="30" height="280" :fill="'url(#gr-' + kid + ')'"/>
             <polygon points="55,190 160,295 265,190 265,320 55,320" fill="black"/>
           </mask>
         </defs>
-        <polygon points="160,10 10,160 160,310" :fill="traitHex" opacity="0.7" :filter="'url(#glow-' + indexEntry.id + ')'" style="overflow:visible;"/>
-        <polygon points="160,10 310,160 160,310" :fill="supportHex" opacity="0.7" :filter="'url(#glow-' + indexEntry.id + ')'" style="overflow:visible;"/>
+        <polygon points="160,10 10,160 160,310" :fill="traitHex" opacity="0.7" :filter="'url(#glow-' + kid + ')'" style="overflow:visible;"/>
+        <polygon points="160,10 310,160 160,310" :fill="supportHex" opacity="0.7" :filter="'url(#glow-' + kid + ')'" style="overflow:visible;"/>
         <polygon points="160,25 25,160 160,295" :fill="traitHex"/>
         <polygon points="160,25 295,160 160,295" :fill="supportHex"/>
         <image
           :href="showImage ? charImage : 'image/misc/00000.png'"
           x="32" y="39" width="256" height="256"
-          :mask="'url(#mask-' + indexEntry.id + ')'"
+          :mask="'url(#mask-' + kid + ')'"
           preserveAspectRatio="xMidYMax meet"
         />
       </svg>
