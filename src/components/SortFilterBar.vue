@@ -28,7 +28,8 @@ function updateCardOffset() {
   currentTarget = newTarget
   document.documentElement.style.setProperty('--card-offset', newTarget + 'px')
   if (delta !== 0) {
-    window.scrollBy({ top: delta, behavior: 'instant' })
+    const app = document.querySelector('.app-content')
+    if (app) app.scrollTop += delta
   }
 }
 

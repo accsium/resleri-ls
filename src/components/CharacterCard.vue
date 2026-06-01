@@ -102,13 +102,14 @@ function onToggle(val) {
 
 async function toggleExpand() {
   if (expanded.value) {
-    const card = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
-    const header = card?.querySelector('.card-header')
+    const header = document.querySelector(`.card[data-id="${props.indexEntry.id}"] .card-header`)
     const top = header?.getBoundingClientRect().top
     expanded.value = false
     if (header && top != null) {
       await nextTick()
-      window.scrollBy(0, header.getBoundingClientRect().top - top)
+      const app = document.querySelector('.app-content')
+      const delta = header.getBoundingClientRect().top - top
+      if (app) app.scrollTop += delta
     }
     return
   }
