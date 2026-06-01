@@ -54,11 +54,11 @@ function pageNumbers() {
       <button class="pg-btn" :disabled="currentPage === totalPages" @click="goTo(totalPages)">&#187;</button>
       <span class="pg-info">共 {{ totalPages }} 页</span>
       <span class="pg-jump">
-        跳到 <input v-model="jumpPage" class="pg-jump-inp" @keyup.enter="jump" placeholder="页"> 页
+        跳到 <input name="jump_page" v-model="jumpPage" class="pg-jump-inp" @keyup.enter="jump" placeholder="页"> 页
       </span>
       <span class="pg-size">
         每页
-        <select v-model="pageSize" class="pg-size-sel">
+        <select name="page_size" v-model="pageSize" class="pg-size-sel">
           <option v-for="s in PAGE_SIZES" :key="s" :value="s">{{ s }}</option>
         </select>
         条

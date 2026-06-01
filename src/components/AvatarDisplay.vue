@@ -62,7 +62,7 @@ onUnmounted(() => {
         :width="canvasSize" :height="canvasSize"
         viewBox="0 0 320 320"
         xmlns="http://www.w3.org/2000/svg"
-        style="overflow: visible;"
+        style="overflow: visible; transform: translateZ(0);"
       >
         <defs>
           <filter :id="'glow-' + kid" x="-50%" y="-50%" width="200%" height="200%">

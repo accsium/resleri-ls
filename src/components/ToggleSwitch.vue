@@ -16,7 +16,7 @@ function toggle() {
 
 <template>
   <label class="toggle-switch" :class="{ 'toggle-disabled': disabled }" :data-type="type" :title="disabled ? '' : title">
-    <input type="checkbox" :checked="modelValue" :disabled="disabled" @change="toggle">
+    <input type="checkbox" :name="type || 'toggle'" :checked="modelValue" :disabled="disabled" @change="toggle">
     <span class="slider"></span>
   </label>
 </template>

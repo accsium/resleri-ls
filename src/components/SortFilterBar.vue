@@ -215,7 +215,7 @@ const selectedEquipTraits = computed({
         <span class="sf-label">初始星级</span>
         <div class="sf-field-items">
         <label v-for="r in RARITIES" :key="'rar'+r" class="sf-check">
-          <input type="checkbox" :checked="selectedRarities.includes(r)" @change="toggleRarity(r)">
+          <input type="checkbox" :name="'rarity-'+r" :checked="selectedRarities.includes(r)" @change="toggleRarity(r)">
           <StarsDisplay :mode="1" :rarity="r" :max-rarity="8" :scale="0.25" />
         </label>
         </div>
@@ -280,7 +280,7 @@ const selectedEquipTraits = computed({
       <div class="sf-field">
         <span class="sf-label">恒常化状态</span>
         <div class="sf-field-items">
-          <select class="sf-select" :value="activeFilters.permanent_status" @change="(e) => toggleFilter('permanent_status', e.target.value)">
+          <select name="permanent_status" class="sf-select" :value="activeFilters.permanent_status" @change="(e) => toggleFilter('permanent_status', e.target.value)">
             <option value="">全部</option>
             <option value="已恒常化">已恒常化</option>
             <option value="ATELIER FES I">ATELIER FES I</option>
@@ -293,7 +293,7 @@ const selectedEquipTraits = computed({
       <div class="sf-right-group">
         <div class="sf-group">
           <span class="sf-label">词条语言</span>
-          <select class="sf-select" v-model="panelLang">
+          <select name="panel_lang" class="sf-select" v-model="panelLang">
             <option value="ja">日本語</option>
             <option value="cn">中文</option>
           </select>
@@ -306,7 +306,7 @@ const selectedEquipTraits = computed({
       <div class="sf-field">
         <span class="sf-label">道具词条</span>
         <div class="sf-field-items">
-        <select v-for="n in 2" :key="'bt'+n" class="sf-select"
+        <select :name="'battle_trait-'+n" v-for="n in 2" :key="'bt'+n" class="sf-select"
           :value="selectedBattleTraits[n-1] || ''"
           @change="(e) => { const v = [...selectedBattleTraits]; v[n-1] = Number(e.target.value) || ''; selectedBattleTraits = v }"
         >
@@ -321,7 +321,7 @@ const selectedEquipTraits = computed({
       <div class="sf-field">
         <span class="sf-label">装备词条</span>
         <div class="sf-field-items">
-        <select class="sf-select"
+        <select name="equip_trait" class="sf-select"
           :value="selectedEquipTraits[0] || ''"
           @change="(e) => { selectedEquipTraits = [Number(e.target.value) || ''] }"
         >
@@ -340,7 +340,7 @@ const selectedEquipTraits = computed({
       <div class="sf-field">
         <span class="sf-label">标签</span>
         <div class="sf-field-items">
-      <select v-for="n in 5" :key="'tag'+n" class="sf-select"
+      <select :name="'tag-'+n" v-for="n in 5" :key="'tag'+n" class="sf-select"
         :value="selectedTags[n-1] || ''"
         @change="(e) => { const v = [...selectedTags]; v[n-1] = e.target.value; selectedTags = v }"
       >
@@ -356,21 +356,21 @@ const selectedEquipTraits = computed({
       <span class="sf-label">技能范围</span>
       <div class="sf-field-items">
         <span class="sf-label">一技能</span>
-        <select class="sf-select" :value="activeFilters.skill_range_1" @change="(e) => toggleFilter('skill_range_1', e.target.value)">
+        <select name="skill_range_1" class="sf-select" :value="activeFilters.skill_range_1" @change="(e) => toggleFilter('skill_range_1', e.target.value)">
           <option value="">—</option>
           <option value="single">单体</option>
           <option value="aoe">群体</option>
           <option value="other">其他</option>
         </select>
         <span class="sf-label">二技能</span>
-        <select class="sf-select" :value="activeFilters.skill_range_2" @change="(e) => toggleFilter('skill_range_2', e.target.value)">
+        <select name="skill_range_2" class="sf-select" :value="activeFilters.skill_range_2" @change="(e) => toggleFilter('skill_range_2', e.target.value)">
           <option value="">—</option>
           <option value="single">单体</option>
           <option value="aoe">群体</option>
           <option value="other">其他</option>
         </select>
         <span class="sf-label">爆发技能</span>
-        <select class="sf-select" :value="activeFilters.skill_range_burst" @change="(e) => toggleFilter('skill_range_burst', e.target.value)">
+        <select name="skill_range_burst" class="sf-select" :value="activeFilters.skill_range_burst" @change="(e) => toggleFilter('skill_range_burst', e.target.value)">
           <option value="">—</option>
           <option value="single">单体</option>
           <option value="aoe">群体</option>
@@ -402,7 +402,7 @@ const selectedEquipTraits = computed({
       <div class="sort-control">
         <div class="sort-control-head">
           <span class="sf-label">排序</span>
-          <select :value="sortCategory" @change="onCategoryChange">
+          <select name="sort_category" :value="sortCategory" @change="onCategoryChange">
             <option v-for="cat in SORT_CATEGORIES" :key="cat.key" :value="cat.key">
               {{ currentLang === 'cn' ? cat.label_cn : cat.label_ja }}
             </option>
@@ -410,19 +410,19 @@ const selectedEquipTraits = computed({
         </div>
         <div class="sort-control-tail">
           <template v-if="sortCategory !== 'skill'">
-            <select v-model="sortField" @change="(e) => setSortField(e.target.value)">
+            <select name="sort_field" v-model="sortField" @change="(e) => setSortField(e.target.value)">
               <option v-for="f in activeCategory.fields" :key="f.field" :value="f.field">
                 {{ currentLang === 'cn' ? f.label_cn : f.label_ja }}
               </option>
             </select>
           </template>
           <template v-else>
-            <select class="sf-skill-sel" v-model="sortSkillType">
+            <select name="sort_skill_type" class="sf-skill-sel" v-model="sortSkillType">
               <option v-for="st in SKILL_TYPE_OPTS" :key="st.key" :value="st.key">
                 {{ currentLang === 'cn' ? st.label_cn : st.label_ja }}
               </option>
             </select>
-            <select class="sf-skill-sel" v-model="sortSkillStat">
+            <select name="sort_skill_stat" class="sf-skill-sel" v-model="sortSkillStat">
               <option v-for="ss in SKILL_STAT_OPTS" :key="ss.key" :value="ss.key">
                 {{ currentLang === 'cn' ? ss.label_cn : ss.label_ja }}
               </option>
@@ -436,7 +436,7 @@ const selectedEquipTraits = computed({
       <div class="sf-right-group">
         <div class="sf-group">
           <span class="sf-label">搜索</span>
-          <input type="text" v-model="searchText" :placeholder="t('searchPlaceholder')">
+          <input type="text" name="search" v-model="searchText" :placeholder="t('searchPlaceholder')">
         </div>
       </div>
     </div>
