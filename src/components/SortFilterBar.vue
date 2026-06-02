@@ -208,9 +208,9 @@ const selectedEquipTraits = computed({
 
 <template>
   <div class="sf-wrapper">
-    <div ref="panelEl" class="sort-filter-bar">
-    <!-- 行1：初始星级 + 职业/属性图标 + 展开 -->
-    <div class="sf-row">
+    <div ref="panelEl" class="sort-filter-bar" :class="{ 'sf-collapsed': collapsed }">
+    <!-- 行1：初始星级 + 职业/属性图标 -->
+    <div class="sf-row" :class="{ 'no-divider': collapsed }">
       <div class="sf-field">
         <span class="sf-label">初始星级</span>
         <div class="sf-field-items">
@@ -240,12 +240,6 @@ const selectedEquipTraits = computed({
           @click="toggleAttr(id)"
         >
           <IconDisplay type="attribute" :id="id" :size="24" :alt="attrMap[id]" />
-        </button>
-      </div>
-      <div class="sf-spacer"></div>
-      <div class="sf-right-group">
-        <button class="sf-collapse-btn" @click="collapsed = !collapsed">
-          {{ collapsed ? '展开 ▼' : '收起 ▲' }}
         </button>
       </div>
     </div>
@@ -380,7 +374,7 @@ const selectedEquipTraits = computed({
     </div>
 
     <!-- 行6：特殊机制 -->
-    <div class="sf-row" v-show="!collapsed">
+    <div class="sf-row no-divider" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">特殊机制</span>
         <div class="sf-field-items">
@@ -394,6 +388,12 @@ const selectedEquipTraits = computed({
           {{ label }}{{ activeFilters[key] === 1 ? ' ✓' : activeFilters[key] === 2 ? ' ✕' : '' }}
         </button>
         </div>
+      </div>
+    </div>
+
+    <div class="sf-toggle-bar" :class="{ expanded: !collapsed }" @click="collapsed = !collapsed">
+      <div class="sf-toggle-tab" :class="{ expanded: !collapsed }">
+        <span class="sf-toggle-arrow">{{ collapsed ? '▼' : '▲' }}</span>
       </div>
     </div>
 
