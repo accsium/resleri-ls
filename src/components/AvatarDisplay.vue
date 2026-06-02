@@ -71,28 +71,28 @@ onUnmounted(() => {
             <feComposite in="blur" in2="SourceGraphic" operator="over"/>
           </filter>
           <linearGradient :id="'gt-' + kid" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="black"/><stop offset="87.5%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+            <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
           </linearGradient>
           <linearGradient :id="'gl-' + kid" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="black"/><stop offset="87.5%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+            <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
           </linearGradient>
           <linearGradient :id="'gr-' + kid" x1="1" y1="0" x2="0" y2="0">
-            <stop offset="0%" stop-color="black"/><stop offset="87.5%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+            <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
           </linearGradient>
-          <radialGradient :id="'rg-' + kid" cx="70" cy="49" r="10" gradientUnits="userSpaceOnUse">
+          <radialGradient :id="'rg-' + kid" cx="75" cy="60" r="20" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stop-color="white"/><stop offset="50%" stop-color="white"/><stop offset="100%" stop-color="black"/>
           </radialGradient>
-          <radialGradient :id="'rg-r-' + kid" cx="250" cy="49" r="10" gradientUnits="userSpaceOnUse">
+          <radialGradient :id="'rg-r-' + kid" cx="245" cy="60" r="20" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stop-color="white"/><stop offset="50%" stop-color="white"/><stop offset="100%" stop-color="black"/>
           </radialGradient>
           <mask :id="'mask-' + kid">
             <rect x="40" y="25" width="240" height="275" fill="white"/>
-            <rect x="40" y="4" width="240" height="40" :fill="'url(#gt-' + kid + ')'"/>
+            <rect x="40" y="10" width="240" height="40" :fill="'url(#gt-' + kid + ')'"/>
             <rect x="25" y="30" width="40" height="280" :fill="'url(#gl-' + kid + ')'"/>
             <rect x="255" y="30" width="40" height="280" :fill="'url(#gr-' + kid + ')'"/>
-            <polygon points="50,185 160,295 270,185 280,315 50,315" fill="black"/>
-            <rect x="30" y="9" width="40" height="40" :fill="'url(#rg-' + kid + ')'"/>
-            <rect x="250" y="9" width="40" height="40" :fill="'url(#rg-r-' + kid + ')'"/>
+            <polygon points="45,180 160,295 275,180 275,315 45,315" fill="black"/>
+            <rect x="35" y="20" width="40" height="40" :fill="'url(#rg-' + kid + ')'"/>
+            <rect x="245" y="20" width="40" height="40" :fill="'url(#rg-r-' + kid + ')'"/>
           </mask>
         </defs>
         <polygon points="160,10 10,160 160,310" :fill="traitHex" opacity="0.7" :filter="'url(#glow-' + kid + ')'" style="overflow:visible;"/>
