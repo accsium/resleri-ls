@@ -12,10 +12,11 @@ const { trackImage, imageDone, untrackImage } = useCharacterData()
 const props = defineProps({
   indexEntry: Object,
   size: { type: Number, default: 100 },
+  kid: { type: String, default: '' },
 })
 
 const canvasSize = 320
-const kid = ++uid + '-' + props.indexEntry.id
+const kid = props.kid || (++uid + '-' + props.indexEntry.id)
 
 const traitHex = computed(() => getTraitColorHex(props.indexEntry.trait_color_id))
 const supportHex = computed(() => getTraitColorHex(props.indexEntry.support_color_id))
@@ -65,7 +66,7 @@ onUnmounted(() => {
         xmlns="http://www.w3.org/2000/svg"
         style="overflow: visible;"
       >
-        <defs>
+        <defs v-if="!props.kid">
           <filter :id="'glow-' + kid" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="25" result="blur"/>
             <feComposite in="blur" in2="SourceGraphic" operator="over"/>

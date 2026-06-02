@@ -8,9 +8,13 @@ import ToggleSwitch from './ToggleSwitch.vue'
 import CardDetail from './CardDetail.vue'
 import StarsDisplay from './StarsDisplay.vue'
 
+let cardUid = 0
+
 const props = defineProps({
   indexEntry: Object,
 })
+
+const kid = ++cardUid + '-' + props.indexEntry.id
 
 const { t, getField, currentLang, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 const { loadCharacter, loadedCharacters } = useCharacterData()
@@ -139,6 +143,36 @@ async function toggleExpand() {
 
 <template>
   <div class="card" :data-id="indexEntry.id">
+    <svg xmlns="http://www.w3.org/2000/svg" class="card-defs"><defs>
+      <filter :id="'glow-' + kid" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="25" result="blur"/>
+        <feComposite in="blur" in2="SourceGraphic" operator="over"/>
+      </filter>
+      <linearGradient :id="'gt-' + kid" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+      </linearGradient>
+      <linearGradient :id="'gl-' + kid" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+      </linearGradient>
+      <linearGradient :id="'gr-' + kid" x1="1" y1="0" x2="0" y2="0">
+        <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
+      </linearGradient>
+      <radialGradient :id="'rg-' + kid" cx="75" cy="60" r="20" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="white"/><stop offset="50%" stop-color="white"/><stop offset="100%" stop-color="black"/>
+      </radialGradient>
+      <radialGradient :id="'rg-r-' + kid" cx="245" cy="60" r="20" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="white"/><stop offset="50%" stop-color="white"/><stop offset="100%" stop-color="black"/>
+      </radialGradient>
+      <mask :id="'mask-' + kid">
+        <rect x="40" y="25" width="240" height="275" fill="white"/>
+        <rect x="40" y="10" width="240" height="40" :fill="'url(#gt-' + kid + ')'"/>
+        <rect x="25" y="30" width="40" height="280" :fill="'url(#gl-' + kid + ')'"/>
+        <rect x="255" y="30" width="40" height="280" :fill="'url(#gr-' + kid + ')'"/>
+        <polygon points="45,180 160,295 275,180 275,315 45,315" fill="black"/>
+        <rect x="35" y="20" width="40" height="40" :fill="'url(#rg-' + kid + ')'"/>
+        <rect x="245" y="20" width="40" height="40" :fill="'url(#rg-r-' + kid + ')'"/>
+      </mask>
+    </defs></svg>
     <div class="card-header">
       <!-- 第一行：名字 + 切换 -->
       <div class="card-top">
@@ -159,7 +193,7 @@ async function toggleExpand() {
         <!-- ====== 桌面：三列 flex ====== -->
         <div class="card-body-col-left desk-only">
           <div class="cb-avatar">
-            <AvatarDisplay :index-entry="indexEntry" :size="100" />
+            <AvatarDisplay :index-entry="indexEntry" :size="100" :kid="kid" />
           </div>
           <div class="cb-traits">
             <span v-for="(trait, i) in traits" :key="i" class="trait-tag">{{ trait }}</span>
@@ -215,7 +249,7 @@ async function toggleExpand() {
             <div v-if="permanentLabel" class="release-date">{{ permanentLabel }}: {{ permanentText }}</div>
           </div>
           <div class="cb-avatar-mob">
-            <AvatarDisplay :index-entry="indexEntry" :size="100" />
+            <AvatarDisplay :index-entry="indexEntry" :size="100" :kid="kid" />
           </div>
           <div class="cb-traits-mob">
             <span v-for="(trait, i) in traits" :key="i" class="trait-tag">{{ trait }}</span>

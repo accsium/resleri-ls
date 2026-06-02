@@ -272,6 +272,7 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
 }
+.card-defs { position: absolute; width: 1px; height: 1px; overflow: hidden; pointer-events: none; }
 .card {
   background: var(--bg-card);
   box-shadow: var(--shadow);
