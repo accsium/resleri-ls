@@ -57,12 +57,11 @@ onUnmounted(() => {
 
 <template>
   <div class="avatar-component" :style="{ width: size + 'px', height: size + 'px' }">
-    <div :style="{ position: 'absolute', top: 0, left: 0, width: canvasSize + 'px', height: canvasSize + 'px', transform: 'scale(' + (size / canvasSize) + ')', transformOrigin: '0 0' }">
-      <svg
-        :width="canvasSize" :height="canvasSize"
-        viewBox="0 0 320 320"
-        xmlns="http://www.w3.org/2000/svg"
-        style="overflow: visible; transform: translateZ(0);"
+    <svg
+      :width="size" :height="size"
+      viewBox="0 0 320 320"
+      xmlns="http://www.w3.org/2000/svg"
+      style="overflow: visible;"
       >
         <defs>
           <filter :id="'glow-' + kid" x="-50%" y="-50%" width="200%" height="200%">
@@ -97,23 +96,22 @@ onUnmounted(() => {
           preserveAspectRatio="xMidYMax meet"
         />
       </svg>
-      <!-- 图标容器：无缩放居中 -->
-      <div v-if="roleId" class="overlay-icon overlay-icon-left">
-        <IconDisplay type="role" :id="roleId" :size="100" />
+      <div :style="{ position: 'absolute', top: 0, left: 0, width: canvasSize + 'px', height: canvasSize + 'px', transform: 'scale(' + (size / canvasSize) + ')', transformOrigin: '0 0' }">
+        <div v-if="roleId" class="overlay-icon overlay-icon-left">
+          <IconDisplay type="role" :id="roleId" :size="100" />
+        </div>
+        <div v-if="attributeId" class="overlay-icon overlay-icon-right">
+          <IconDisplay type="attribute" :id="attributeId" :size="100" />
+        </div>
+        <div v-if="starDisplayCount > 0"
+          :style="{
+            position: 'absolute',
+            left: ((canvasSize - starDisplayCount * 45 * 1.25) / 2) + 'px',
+            top: (canvasSize - 45 * 1.25 - 10) + 'px',
+          }"
+        >
+          <StarsDisplay :mode="1" :rarity="indexEntry.initial_rarity" :max-rarity="indexEntry.max_rarity" :scale="1.25" />
+        </div>
       </div>
-      <div v-if="attributeId" class="overlay-icon overlay-icon-right">
-        <IconDisplay type="attribute" :id="attributeId" :size="100" />
-      </div>
-      <!-- 初始星星 -->
-      <div v-if="starDisplayCount > 0"
-        :style="{
-          position: 'absolute',
-          left: ((canvasSize - starDisplayCount * 45 * 1.25) / 2) + 'px',
-          top: (canvasSize - 45 * 1.25 - 10) + 'px',
-        }"
-      >
-        <StarsDisplay :mode="1" :rarity="indexEntry.initial_rarity" :max-rarity="indexEntry.max_rarity" :scale="1.25" />
-      </div>
-    </div>
   </div>
 </template>
