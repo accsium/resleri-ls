@@ -57,8 +57,9 @@ onUnmounted(() => {
 
 <template>
   <div class="avatar-component" :style="{ width: size + 'px', height: size + 'px' }">
+    <div :style="{ position: 'absolute', top: 0, left: 0, width: canvasSize + 'px', height: canvasSize + 'px', transform: 'scale(' + (size / canvasSize) + ')', transformOrigin: '0 0' }">
     <svg
-      :width="size" :height="size"
+      :width="canvasSize" :height="canvasSize"
       viewBox="0 0 320 320"
       xmlns="http://www.w3.org/2000/svg"
       style="overflow: visible;"
@@ -96,7 +97,6 @@ onUnmounted(() => {
           preserveAspectRatio="xMidYMax meet"
         />
       </svg>
-      <div :style="{ position: 'absolute', top: 0, left: 0, width: canvasSize + 'px', height: canvasSize + 'px', transform: 'scale(' + (size / canvasSize) + ')', transformOrigin: '0 0' }">
         <div v-if="roleId" class="overlay-icon overlay-icon-left">
           <IconDisplay type="role" :id="roleId" :size="100" />
         </div>
@@ -112,6 +112,6 @@ onUnmounted(() => {
         >
           <StarsDisplay :mode="1" :rarity="indexEntry.initial_rarity" :max-rarity="indexEntry.max_rarity" :scale="1.25" />
         </div>
-      </div>
+    </div>
   </div>
 </template>
