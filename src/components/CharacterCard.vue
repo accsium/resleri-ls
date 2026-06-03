@@ -58,7 +58,9 @@ const attrsText = computed(() => {
 })
 const initialWT = computed(() => {
   const cardState = getCardState(props.indexEntry.id)
-  return cardState.toggleActive ? props.indexEntry.alt_initial_wt ?? '—' : props.indexEntry.base_initial_wt ?? '—'
+  const alt = cardState.toggleActive
+  const useAlt = hasTransform.value ? !alt : alt
+  return useAlt ? props.indexEntry.alt_initial_wt ?? '—' : props.indexEntry.base_initial_wt ?? '—'
 })
 const status = computed(() => props.indexEntry.initial_status || {})
 

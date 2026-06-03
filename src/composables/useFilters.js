@@ -5,8 +5,6 @@ import { useCardState } from './useCardState'
 
 const sortCategory = ref('character')
 const sortField = ref('start_at')
-const sortSkillType = ref('normal1')
-const sortSkillStat = ref('dmg_power')
 const sortPriority = ref([]) // ordered list of { field, type } for multi-field sort
 const currentSortOrder = ref('desc')
 const searchText = ref('')
@@ -27,9 +25,7 @@ const activeFilters = ref({
   has_transform: 0,
   has_active: 0,
   has_ex: 0,
-  skill_range_1: '',
-  skill_range_2: '',
-  skill_range_burst: '',
+  original_title: '',
   permanent_status: '',
 })
 
@@ -65,14 +61,6 @@ export function useFilters() {
         return cardState.toggleActive ? c.alt_initial_wt : c.base_initial_wt
       }
       return c.initial_status?.[field]
-    }
-
-    if (cat === 'skill') {
-      const cardState = getCardState(c.id)
-      const prefix = cardState.toggleActive ? 'alt' : 'base'
-      const val = c[`${prefix}_${sortSkillType.value}_${sortSkillStat.value}`]
-      const stat = sortSkillStat.value
-      return (val == null && (stat === 'dmg_power' || stat === 'heal_power')) ? 0 : val
     }
 
     return null
@@ -142,15 +130,8 @@ export function useFilters() {
     if (f.has_active === 2 && char.has_active) return false
     if (f.has_ex === 1 && !char.has_ex) return false
     if (f.has_ex === 2 && char.has_ex) return false
-    // 技能范围
-    for (const [key, field] of [['skill_range_1', 'normal1_target_type'], ['skill_range_2', 'normal2_target_type'], ['skill_range_burst', 'burst_target_type']]) {
-      const v = f[key]
-      if (!v) continue
-      const t = char[field]
-      if (t == null) return false
-      if (v === 'single' && ![2,3].includes(t)) return false
-      if (v === 'aoe' && ![4,5].includes(t)) return false
-      if (v === 'other' && ![1,6].includes(t)) return false
+    if (f.original_title) {
+      if (char.original_title_name_ja !== f.original_title && char.original_title_name_cn !== f.original_title) return false
     }
     if (f.permanent_status) {
       if (f.permanent_status === 'ATELIER FES I') {
@@ -174,8 +155,7 @@ export function useFilters() {
         String(c.id).toLowerCase().includes(q) ||
         (c.another_name || '').toLowerCase().includes(q) ||
         (c.fullname || '').toLowerCase().includes(q) ||
-        (c.overlay_name || '').toLowerCase().includes(q) ||
-        (c._search_text || '').toLowerCase().includes(q)
+        (c.overlay_name || '').toLowerCase().includes(q)
       )
     }
     return list
@@ -211,25 +191,12 @@ export function useFilters() {
 
   function setSortCategory(key) {
     sortCategory.value = key
-    if (key === 'skill') {
-      sortPriority.value = [{ cat: 'skill', field: 'skill' }]
-    } else {
-      buildPriority(key, sortField.value)
-    }
+    buildPriority(key, sortField.value)
   }
 
   function setSortField(field) {
     sortField.value = field
-    const cat = sortCategory.value
-    if (cat !== 'skill') buildPriority(cat, field)
-  }
-
-  function setSortSkillType(type) {
-    sortSkillType.value = type
-  }
-
-  function setSortSkillStat(stat) {
-    sortSkillStat.value = stat
+    buildPriority(sortCategory.value, field)
   }
 
   function toggleOrder() {
@@ -237,11 +204,11 @@ export function useFilters() {
   }
 
   return {
-    sortCategory, sortField, sortSkillType, sortSkillStat, currentSortOrder,
+    sortCategory, sortField, currentSortOrder,
     activeFilters, searchText,
     filteredCharacters, pagedCharacters,
     currentPage, pageSize, totalPages,
-    setSortCategory, setSortField, setSortSkillType, setSortSkillStat,
+    setSortCategory, setSortField,
     toggleOrder, toggleFilter,
   }
 }

@@ -16,7 +16,10 @@ const { t } = useI18n()
 
 const toggleActive = computed(() => props.cardState.toggleActive)
 const activeChar = computed(() => {
-  if (toggleActive.value && props.characterData.switch_stat) {
+  const useSwitch = props.characterData.switch === 'change'
+    ? !toggleActive.value
+    : toggleActive.value
+  if (useSwitch && props.characterData.switch_stat) {
     return { ...props.characterData, ...props.characterData.switch_stat }
   }
   return props.characterData

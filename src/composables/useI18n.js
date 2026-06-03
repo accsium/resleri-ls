@@ -3,7 +3,7 @@ import { ref } from 'vue'
 const UI_TEXT = {
   ja: {
     pageTitle: 'レスレリ図鑑',
-    searchPlaceholder: 'キャラ・スキル・アビリティを検索...',
+    searchPlaceholder: 'キャラ名・ID・作品名を検索...',
     skillSection: 'スキル',
     abilityTitle: '能力',
     leaderSkillSection: 'リーダースキル',
@@ -32,7 +32,7 @@ const UI_TEXT = {
   },
   cn: {
     pageTitle: '蕾斯莱莉图鉴',
-    searchPlaceholder: '搜索角色、技能、能力...',
+    searchPlaceholder: '搜索角色名、ID、作品名...',
     skillSection: '技能',
     abilityTitle: '能力',
     leaderSkillSection: '队长技能',
@@ -99,24 +99,6 @@ const SORT_CATEGORIES = [
       { field: 'mental',          label_ja: '魔防',       label_cn: '魔防' },
     ]
   },
-  {
-    key: 'skill',
-    label_ja: 'スキル',
-    label_cn: '技能数值',
-  }
-]
-
-const SKILL_TYPE_OPTS = [
-  { key: 'normal1', label_ja: 'スキル1', label_cn: '一技能' },
-  { key: 'normal2', label_ja: 'スキル2', label_cn: '二技能' },
-  { key: 'burst',   label_ja: 'バースト', label_cn: '爆发技能' },
-]
-
-const SKILL_STAT_OPTS = [
-  { key: 'dmg_power',   label_ja: 'ダメージ倍率', label_cn: '伤害倍率' },
-  { key: 'break_power', label_ja: 'ブレイク倍率', label_cn: '破防倍率' },
-  { key: 'heal_power',  label_ja: '回復倍率',     label_cn: '治疗倍率' },
-  { key: 'wait',        label_ja: 'WT',            label_cn: 'WT' },
 ]
 
 const currentLang = ref('cn')
@@ -141,5 +123,5 @@ export function useI18n() {
     return TRAIT_COLOR_HEX[id] || '#CCCCCC'
   }
 
-  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_CATEGORIES, SKILL_TYPE_OPTS, SKILL_STAT_OPTS, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN }
+  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_CATEGORIES, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN }
 }

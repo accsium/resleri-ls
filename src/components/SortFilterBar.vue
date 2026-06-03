@@ -5,13 +5,36 @@ import { useFilters } from '../composables/useFilters'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
-const { t, currentLang, SORT_CATEGORIES, SKILL_TYPE_OPTS, SKILL_STAT_OPTS, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { t, currentLang, SORT_CATEGORIES, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 const {
-  sortCategory, sortField, sortSkillType, sortSkillStat, currentSortOrder,
+  sortCategory, sortField, currentSortOrder,
   activeFilters, searchText,
-  setSortCategory, setSortField, setSortSkillType, setSortSkillStat,
+  setSortCategory, setSortField,
   toggleOrder, toggleFilter,
 } = useFilters()
+
+function clearAll() {
+  const f = activeFilters.value
+  f.attack_attributes = []
+  f.role = []
+  f.initial_rarity = []
+  f.trait_color = []
+  f.support_color = []
+  f.tags = []
+  f.battle_tool_traits = []
+  f.equipment_tool_traits = []
+  f.has_evo = 0
+  f.has_range = 0
+  f.has_transform = 0
+  f.has_active = 0
+  f.has_ex = 0
+  f.original_title = ''
+  f.permanent_status = ''
+  searchText.value = ''
+  setSortCategory('character')
+  setSortField('start_at')
+  currentSortOrder.value = 'desc'
+}
 
 const panelLang = ref('ja')
 const collapsed = ref(true)
@@ -141,7 +164,18 @@ const { characterIndex } = useCharacterData()
 // 双语标签数据
 const tagsJa = ref([])
 const tagsCn = ref([])
-const allTags = computed(() => panelLang.value === 'cn' ? tagsCn.value : tagsJa.value)
+const allTags = computed(() => {
+  return panelLang.value === 'cn' ? tagsCn.value : tagsJa.value
+})
+const allTagsGrouped = computed(() => {
+  const list = allTags.value
+  let lastGroup = null
+  return list.map(t => {
+    const sep = lastGroup != null && lastGroup !== t.group
+    lastGroup = t.group
+    return { ...t, sep }
+  })
+})
 
 // 双语词条数据
 const battleTraitsJa = ref([])
@@ -150,6 +184,20 @@ const equipTraitsJa = ref([])
 const equipTraitsCn = ref([])
 const allBattleTraits = computed(() => panelLang.value === 'cn' ? battleTraitsCn.value : battleTraitsJa.value)
 const allEquipTraits = computed(() => panelLang.value === 'cn' ? equipTraitsCn.value : equipTraitsJa.value)
+const allTitles = computed(() => {
+  const seen = new Set()
+  const list = []
+  const field = currentLang.value === 'cn' ? 'original_title_name_cn' : 'original_title_name_ja'
+  for (const c of characterIndex.value) {
+    const id = c.original_title_id
+    const name = c[field]
+    if (!id || !name || seen.has(id)) continue
+    seen.add(id)
+    list.push({ id, name })
+  }
+  list.sort((a, b) => a.id - b.id)
+  return list.map(t => t.name)
+})
 
 function groupTraits(list, getName) {
   const cats = {}
@@ -160,34 +208,42 @@ function groupTraits(list, getName) {
   })
   const result = []
   for (const cid of Object.keys(cats).sort((a, b) => a - b)) {
+    cats[cid].sort((a, b) => a.id - b.id)
     result.push({ category: cid, items: cats[cid] })
   }
   return result
 }
 
 onMounted(async () => {
-  // 标签：从 character_index 分别收集 ja/cn
-  const tj = new Set()
-  const tc = new Set()
-  for (const c of characterIndex.value) {
-    const ja = c.tag_names_ja
-    const cn = c.tag_names_cn
-    if (Array.isArray(ja)) ja.forEach(t => tj.add(t))
-    if (Array.isArray(cn)) cn.forEach(t => tc.add(t))
-  }
-  tagsJa.value = [...tj].sort()
-  tagsCn.value = [...tc].sort()
-
-  // 词条数据
+  // 词条 + 标签数据
   try {
-    const [bt, et] = await Promise.all([
+    const [bt, et, tg] = await Promise.all([
       fetch('data/battle_tool_trait.json').then(r => r.json()),
       fetch('data/equipment_tool_trait.json').then(r => r.json()),
+      fetch('data/character_tag.json').then(r => r.json()),
     ])
     battleTraitsJa.value = groupTraits(bt, t => t.name)
     battleTraitsCn.value = groupTraits(bt, t => t.name_cn || t.name)
     equipTraitsJa.value = groupTraits(et, t => t.name)
     equipTraitsCn.value = groupTraits(et, t => t.name_cn || t.name)
+
+    // 标签：按 priority 千位分组，组内按 priority 排序
+    const tagCats = {}
+    tg.sort((a, b) => a.priority - b.priority).forEach(t => {
+      const g = Math.floor(t.priority / 1000)
+      if (!tagCats[g]) tagCats[g] = { ja: [], cn: [] }
+      tagCats[g].ja.push({ name: t.name, group: g })
+      tagCats[g].cn.push({ name: t.name_cn || t.name, group: g })
+    })
+    const buildTags = lang => {
+      const result = []
+      for (const g of Object.keys(tagCats).sort((a, b) => a - b)) {
+        result.push(...tagCats[g][lang])
+      }
+      return result
+    }
+    tagsJa.value = buildTags('ja')
+    tagsCn.value = buildTags('cn')
   } catch {}
 })
 
@@ -241,6 +297,10 @@ const selectedEquipTraits = computed({
         >
           <IconDisplay type="attribute" :id="id" :size="24" :alt="attrMap[id]" />
         </button>
+      </div>
+      <div class="sf-spacer"></div>
+      <div class="sf-right-group">
+        <button class="sf-collapse-btn" @click="clearAll">清除筛选</button>
       </div>
     </div>
     <!-- 行2：调和颜色 + 词条语言 -->
@@ -339,42 +399,27 @@ const selectedEquipTraits = computed({
         @change="(e) => { const v = [...selectedTags]; v[n-1] = e.target.value; selectedTags = v }"
       >
         <option value="">—</option>
-        <option v-for="t in allTags" :key="t" :value="t">{{ t }}</option>
+        <template v-for="(t, i) in allTagsGrouped" :key="i">
+          <option v-if="t.sep" disabled>──────────</option>
+          <option :value="t.name">{{ t.name }}</option>
+        </template>
       </select>
         </div>
       </div>
     </div>
 
-    <!-- 行5：技能范围 -->
-    <div class="sf-row" v-show="!collapsed">
-      <span class="sf-label">技能范围</span>
-      <div class="sf-field-items">
-        <span class="sf-label">一技能</span>
-        <select name="skill_range_1" class="sf-select" :value="activeFilters.skill_range_1" @change="(e) => toggleFilter('skill_range_1', e.target.value)">
-          <option value="">—</option>
-          <option value="single">单体</option>
-          <option value="aoe">群体</option>
-          <option value="other">其他</option>
-        </select>
-        <span class="sf-label">二技能</span>
-        <select name="skill_range_2" class="sf-select" :value="activeFilters.skill_range_2" @change="(e) => toggleFilter('skill_range_2', e.target.value)">
-          <option value="">—</option>
-          <option value="single">单体</option>
-          <option value="aoe">群体</option>
-          <option value="other">其他</option>
-        </select>
-        <span class="sf-label">爆发技能</span>
-        <select name="skill_range_burst" class="sf-select" :value="activeFilters.skill_range_burst" @change="(e) => toggleFilter('skill_range_burst', e.target.value)">
-          <option value="">—</option>
-          <option value="single">单体</option>
-          <option value="aoe">群体</option>
-          <option value="other">其他</option>
-        </select>
-      </div>
-    </div>
-
-    <!-- 行6：特殊机制 -->
+    <!-- 行5：作品出处 + 特殊机制 -->
     <div class="sf-row no-divider" v-show="!collapsed">
+      <div class="sf-field">
+        <span class="sf-label">作品出处</span>
+        <div class="sf-field-items">
+          <select class="sf-select" :value="activeFilters.original_title" @change="(e) => toggleFilter('original_title', e.target.value)">
+            <option value="">全部</option>
+            <option v-for="t in allTitles" :key="t" :value="t">{{ t }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="sf-divider"></div>
       <div class="sf-field">
         <span class="sf-label">特殊机制</span>
         <div class="sf-field-items">
@@ -409,25 +454,11 @@ const selectedEquipTraits = computed({
           </select>
         </div>
         <div class="sort-control-tail">
-          <template v-if="sortCategory !== 'skill'">
-            <select name="sort_field" v-model="sortField" @change="(e) => setSortField(e.target.value)">
-              <option v-for="f in activeCategory.fields" :key="f.field" :value="f.field">
-                {{ currentLang === 'cn' ? f.label_cn : f.label_ja }}
-              </option>
-            </select>
-          </template>
-          <template v-else>
-            <select name="sort_skill_type" class="sf-skill-sel" v-model="sortSkillType">
-              <option v-for="st in SKILL_TYPE_OPTS" :key="st.key" :value="st.key">
-                {{ currentLang === 'cn' ? st.label_cn : st.label_ja }}
-              </option>
-            </select>
-            <select name="sort_skill_stat" class="sf-skill-sel" v-model="sortSkillStat">
-              <option v-for="ss in SKILL_STAT_OPTS" :key="ss.key" :value="ss.key">
-                {{ currentLang === 'cn' ? ss.label_cn : ss.label_ja }}
-              </option>
-            </select>
-          </template>
+          <select name="sort_field" v-model="sortField" @change="(e) => setSortField(e.target.value)">
+            <option v-for="f in activeCategory.fields" :key="f.field" :value="f.field">
+              {{ currentLang === 'cn' ? f.label_cn : f.label_ja }}
+            </option>
+          </select>
           <button class="sf-order-btn" @click="toggleOrder()">
             {{ currentSortOrder === 'desc' ? '↓ 降序' : '↑ 升序' }}
           </button>

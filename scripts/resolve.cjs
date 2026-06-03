@@ -414,15 +414,6 @@ function finalizeOutput(char) {
 
 // ========== 8. 生成索引条目 ==========
 function buildIndexEntry(character) {
-  // 预计算搜索文本：技能名/描述 + 能力名/描述
-  const searchParts = [];
-  if (character._skillDetails) {
-    for (const detail of Object.values(character._skillDetails)) {
-      if (detail.name) searchParts.push(detail.name);
-      if (detail.description) searchParts.push(detail.description);
-      if (detail.summary) searchParts.push(detail.summary);
-    }
-  }
 
   // 恒常化 + FES
   const fesName = getFesName(character.start_at);
@@ -480,13 +471,15 @@ function buildIndexEntry(character) {
     trait_color_name_cn: cnMaps.trait_color?.get(character.trait_color_id) || null,
     support_color_name_ja: jpMaps.trait_color?.get(character.support_color_id) || null,
     support_color_name_cn: cnMaps.trait_color?.get(character.support_color_id) || null,
+    battle_tool_trait_ids: character.battle_tool_trait_ids || [],
     battle_tool_trait_names_ja: (character.battle_tool_trait_ids || []).map(id => jpMaps.battle_tool_trait?.get(id) || ''),
     battle_tool_trait_names_cn: (character.battle_tool_trait_ids || []).map(id => cnMaps.battle_tool_trait?.get(id) || ''),
+    equipment_tool_trait_ids: character.equipment_tool_trait_ids || [],
     equipment_tool_trait_names_ja: (character.equipment_tool_trait_ids || []).map(id => jpMaps.equipment_tool_trait?.get(id) || ''),
     equipment_tool_trait_names_cn: (character.equipment_tool_trait_ids || []).map(id => cnMaps.equipment_tool_trait?.get(id) || ''),
     base_character_name_ja: jpMaps.base_character?.get(character.base_character_id) || null,
     base_character_name_cn: cnMaps.base_character?.get(character.base_character_id) || null,
-	    original_title_name_ja: jpMaps.original_title?.get(character.original_title_id) || null,
+    original_title_id: character.original_title_id || null,	    original_title_name_ja: jpMaps.original_title?.get(character.original_title_id) || null,
 	    original_title_name_cn: cnMaps.original_title?.get(character.original_title_id) || null,
 	    has_evo: !!(
 	      (character.evolved_normal1_skill_ids && character.evolved_normal1_skill_ids.length > 0) ||
@@ -503,7 +496,6 @@ function buildIndexEntry(character) {
 	    has_transform: transformPairs.some(p => p[0] === character.id),
 	    has_active: !!(character.active1_skill_id || character.active2_skill_id || character.active3_skill_id),
 	    has_ex: (character.extra_skill_ids || []).length > 0,
-    _search_text: searchParts.join(' '),
     gacha_end_at: (fesName === 'ATELIER FES') ? null : (gachaEndMap.get(character.id) || null),
     permanent_status,
     permanent_date,
@@ -517,74 +509,7 @@ function buildIndexEntry(character) {
     entry.image_size = fs.statSync(imgPath).size;
   }
 
-  // 技能范围（用于筛选）
-  for (const prefix of ['normal1', 'normal2', 'burst']) {
-    const target = getSkillStat(character, prefix, 'skill_target_type', true);
-    entry[`${prefix}_target_type`] = target;
-  }
-
-  // 技能排序字段（进化后 / 进化前）
-  for (const prefix of ['normal1', 'normal2', 'burst']) {
-    for (const stat of ['power', 'break_power', 'wait']) {
-      const val = getSkillStat(character, prefix, stat, true);
-      entry[`alt_${prefix}_${stat}`] = val;
-      entry[`base_${prefix}_${stat}`] = getSkillStat(character, prefix, stat, false);
-    }
-    // 分离伤害/治疗倍率
-    for (const variant of ['alt', 'base']) {
-      const useEvo = variant === 'alt';
-      const powerType = getSkillPowerType(character, prefix, useEvo);
-      const pow = entry[`${variant}_${prefix}_power`];
-      const isDmg = powerType && [1,2,3,4].includes(powerType);
-      const isHeal = powerType && [5,6,7].includes(powerType);
-      entry[`${variant}_${prefix}_dmg_power`] = isDmg ? pow : null;
-      entry[`${variant}_${prefix}_heal_power`] = isHeal ? pow : null;
-    }
-  }
-
   return entry;
-}
-
-function getSkillPowerType(character, prefix, useEvolved) {
-  if (useEvolved && character._rangeSkills?.inrange) {
-    const rangeKey = prefix === 'normal1' ? 'skill1' : prefix === 'normal2' ? 'skill2' : null;
-    if (rangeKey) {
-      const skills = character._rangeSkills.inrange[rangeKey];
-      if (skills && skills.length > 0) {
-        const maxId = Math.max(...skills.map(s => s.id));
-        const skill = skills.find(s => s.id === maxId);
-        if (skill) return skill.skill_power_type;
-      }
-    }
-  }
-  const field = useEvolved ? `evolved_${prefix}_skill_ids` : `${prefix}_skill_ids`;
-  const ids = character[field];
-  if (!ids || ids.length === 0) return null;
-  const maxId = Math.max(...ids);
-  const skill = tables.skill?.get(maxId);
-  return skill?.skill_power_type;
-}
-
-function getSkillStat(character, prefix, stat, useEvolved) {
-  // 范围角色：切换后 normal1/2 来自 _rangeSkills
-  if (useEvolved && character._rangeSkills?.inrange) {
-    const rangeKey = prefix === 'normal1' ? 'skill1' : prefix === 'normal2' ? 'skill2' : null;
-    if (rangeKey) {
-      const skills = character._rangeSkills.inrange[rangeKey];
-      if (skills && skills.length > 0) {
-        const maxId = Math.max(...skills.map(s => s.id));
-        const skill = skills.find(s => s.id === maxId);
-        if (skill) return skill[stat] ?? null;
-      }
-    }
-  }
-  const field = useEvolved ? `evolved_${prefix}_skill_ids` : `${prefix}_skill_ids`;
-  const ids = character[field];
-  if (!ids || ids.length === 0) return null;
-  const maxId = Math.max(...ids);
-  const skill = tables.skill?.get(maxId);
-  if (!skill) return null;
-  return skill[stat] ?? null;
 }
 
 function computeWT(character, useEvolved) {
@@ -710,6 +635,7 @@ function buildTraitOutput(name, buildValues) {
     const lang = langMap.get(t.id) || {};
     output.push({
       id: t.id,
+      category_id: t.category_id || 0,
       name: lang.name || t.name,
       name_cn: lang.name_cn || '',
       effect_description: lang.effect_description || '',
@@ -745,6 +671,23 @@ function etValues(t) {
 buildTraitOutput('battle_tool_trait', btValues);
 buildTraitOutput('equipment_tool_trait', etValues);
 
+// 输出 character_tag（含 priority 用于排序）
+const tagRawFile = path.join(rawDir, 'character_tag.json')
+if (fs.existsSync(tagRawFile)) {
+  const tagRaw = JSON.parse(fs.readFileSync(tagRawFile, 'utf-8'))
+  const tagLangFile = path.join(langDir, 'character_tag.json')
+  const tagLang = fs.existsSync(tagLangFile) ? JSON.parse(fs.readFileSync(tagLangFile, 'utf-8')) : []
+  const tagLangMap = new Map(tagLang.map(t => [t.id, t]))
+  const tagOutput = tagRaw.map(t => ({
+    id: t.id,
+    priority: t.priority || 0,
+    name: tagLangMap.get(t.id)?.name || t.name,
+    name_cn: tagLangMap.get(t.id)?.name_cn || '',
+  }))
+  fs.writeFileSync(path.join(outDir, 'character_tag.json'), JSON.stringify(tagOutput, null, 2), 'utf-8')
+  console.log(`  ✓ character_tag.json (${tagOutput.length} 条)`)
+}
+
 const pairedIds = new Set();
 const index = [];
 
@@ -766,11 +709,6 @@ transformPairs.forEach(pair => {
   if (!excludeIds.has(firstId)) {
     const entry = buildIndexEntry(firstData);
     entry.alt_initial_wt = computeWT(secondData, false);
-    for (const prefix of ['normal1', 'normal2', 'burst']) {
-      for (const stat of ['power', 'break_power', 'wait']) {
-        entry[`alt_${prefix}_${stat}`] = getSkillStat(secondData, prefix, stat, false);
-      }
-    }
     index.push(entry);
   }
   const finalMerged = finalizeOutput(merged);
@@ -791,7 +729,7 @@ fs.writeFileSync(path.join(outDir, 'character_index.json'), JSON.stringify(index
 const STATE_LABEL = {
   evolve: ['进化前', '进化後'],
   range:  ['内圈', '外圈'],
-  change: ['变身前', '変身後'],
+  change: ['変身後', '变身前'],
 }
 
 function addSkillRow(charId, entry, type, state, skill) {
@@ -841,25 +779,27 @@ for (const entry of index) {
   if (!fs.existsSync(charFile)) continue
   const char = JSON.parse(fs.readFileSync(charFile, 'utf-8'))
 
+  // 计算本角色的基础/切换状态标签
+  const baseState = char.switch ? STATE_LABEL[char.switch]?.[0] || '—' : '—'
+  const altState = char.switch ? STATE_LABEL[char.switch]?.[1] || null : null
+
   // 基础技能
   if (char._skills) {
     for (const g of char._skills) {
       if (!g.skills || g.skills.length === 0) continue
-      const state = char.switch ? STATE_LABEL[char.switch]?.[0] || '—' : '—'
-      addSkillRow(entry.id, entry, g.type, state, g.skills[g.skills.length - 1])
+      addSkillRow(entry.id, entry, g.type, baseState, g.skills[g.skills.length - 1])
     }
   }
 
   // 切换后技能
-  if (char.switch_stat?._skills) {
+  if (altState && char.switch_stat?._skills) {
     for (const g of char.switch_stat._skills) {
       if (!g.skills || g.skills.length === 0) continue
-      const state = STATE_LABEL[char.switch]?.[1] || '—'
-      addSkillRow(entry.id, entry, g.type, state, g.skills[g.skills.length - 1])
+      addSkillRow(entry.id, entry, g.type, altState, g.skills[g.skills.length - 1])
     }
   }
 
-  // EX技能（取每类最高级）
+  // EX技能（取每类最高级）—— 基础状态
   if (char._exSkills) {
     const exArr = Array.isArray(char._exSkills) ? char._exSkills : Object.values(char._exSkills)
     const exMap = new Map()
@@ -869,7 +809,20 @@ for (const entry of index) {
       if (!cur || skill.id > cur.id) exMap.set(key, skill)
     }
     for (const skill of exMap.values()) {
-      addSkillRow(entry.id, entry, 'ex', 'EX', skill)
+      addSkillRow(entry.id, entry, 'ex', '—', skill)
+    }
+  }
+  // EX技能 —— 切换后状态（仅变身角色有独立的 EX 技能）
+  if (char.switch_stat?._exSkills) {
+    const exArr = Array.isArray(char.switch_stat._exSkills) ? char.switch_stat._exSkills : Object.values(char.switch_stat._exSkills)
+    const exMap = new Map()
+    for (const skill of exArr) {
+      const key = skill.name || '_'
+      const cur = exMap.get(key)
+      if (!cur || skill.id > cur.id) exMap.set(key, skill)
+    }
+    for (const skill of exMap.values()) {
+      addSkillRow(entry.id, entry, 'ex', altState || '—', skill)
     }
   }
 }
