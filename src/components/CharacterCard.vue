@@ -195,7 +195,7 @@ async function toggleExpand() {
         <!-- ====== 桌面：三列 flex ====== -->
         <div class="card-body-col-left desk-only">
           <div class="cb-avatar">
-            <AvatarDisplay :index-entry="indexEntry" :size="100" :kid="kid" />
+            <AvatarDisplay :index-entry="indexEntry" :size="84" :kid="kid" />
           </div>
           <div class="cb-traits">
             <span v-for="(trait, i) in traits" :key="i" class="trait-tag">{{ trait }}</span>
@@ -221,7 +221,7 @@ async function toggleExpand() {
           </div>
           <div class="cb-rarity">
             <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
-            <StarsDisplay :mode="1" :rarity="indexEntry.max_rarity" :max-rarity="indexEntry.max_rarity" :scale="0.5" />
+            <StarsDisplay :mode="1" :rarity="indexEntry.max_rarity" :max-rarity="indexEntry.max_rarity" :scale="0.35" />
           </div>
           <div class="cb-tags">
             <span class="cb-tags-label">标签：</span>
@@ -251,7 +251,7 @@ async function toggleExpand() {
             <div v-if="permanentLabel" class="release-date">{{ permanentLabel }}: {{ permanentText }}</div>
           </div>
           <div class="cb-avatar-mob">
-            <AvatarDisplay :index-entry="indexEntry" :size="100" :kid="kid" />
+            <AvatarDisplay :index-entry="indexEntry" :size="84" :kid="kid" />
           </div>
           <div class="cb-traits-mob">
             <span v-for="(trait, i) in traits" :key="i" class="trait-tag">{{ trait }}</span>
@@ -262,7 +262,7 @@ async function toggleExpand() {
           <div class="mob-rarity-tags">
             <div class="cb-rarity">
               <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
-              <StarsDisplay :mode="1" :rarity="indexEntry.max_rarity" :max-rarity="indexEntry.max_rarity" :scale="0.5" />
+              <StarsDisplay :mode="1" :rarity="indexEntry.max_rarity" :max-rarity="indexEntry.max_rarity" :scale="0.35" />
             </div>
             <div class="cb-tags">
               <span class="cb-tags-label">标签：</span>
