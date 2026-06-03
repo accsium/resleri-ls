@@ -14,10 +14,10 @@ const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_M
 const columns = [
   { key: 'id', label: 'ID', width: 72 },
   { key: 'avatar', label: '角色头像', width: 88 },
-  { key: 'name', label: '角色名', minWidth: 120 },
+  { key: 'name', label: '角色名', minWidth: 240 },
   { key: 'attr', label: '属性', width: 56, align: 'center' },
   { key: 'role', label: '职业', width: 56, align: 'center' },
-  { key: 'skillName', label: '队长技能', minWidth: 120 },
+  { key: 'skillName', label: '队长技能', minWidth: 240 },
   { key: 'skillDesc', label: '效果', minWidth: 300 },
 ]
 
@@ -127,7 +127,7 @@ function onSort(col) {
       </div>
     </template>
     <template #cell-name="{ row }">
-      {{ currentLang === 'cn' ? row.base_character_name_cn : row.base_character_name_ja }}<template v-if="row.another_name"> {{ row.another_name }}</template>
+      {{ currentLang === 'cn' ? row.base_character_name_cn : row.base_character_name_ja }}<template v-if="row.another_name"> <span style="font-size:11px;color:var(--text-muted)">{{ row.another_name }}</span></template>
     </template>
     <template #cell-attr="{ row }">
       {{ (row.attack_attributes || []).map(a => attrMap[a] || a).join(' ') }}

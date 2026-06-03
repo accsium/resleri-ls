@@ -274,7 +274,7 @@ const CHAR_KEEP = [
 
 const DETAIL_KEEP = [
   'name', 'id', 'target_name_ja', 'target_name_cn',
-  'skill_target_type', 'attack_attributes',
+  'skill_target_type', 'attack_attributes', 'skill_power_type',
   'description', 'effects', 'wait', 'power', 'break_power', 'limit_count',
 ]
 
@@ -431,7 +431,7 @@ function buildIndexEntry(character) {
   if (character.initial_rarity > 2) {
     if (permExcludeIds.has(character.id)) {
       permanent_status = '非恒常角色';
-      permanent_date = '-';
+      permanent_date = '—';
     } else {
       if (fesName === 'ATELIER FES') {
         // 初始角色，属于 ATELIER FES I，不需要卡池数据
@@ -786,6 +786,105 @@ visibleCharacters.forEach(char => {
 });
 
 fs.writeFileSync(path.join(outDir, 'character_index.json'), JSON.stringify(index, null, 2), 'utf-8');
+
+// ========== 10. 构建技能一览 ==========
+const STATE_LABEL = {
+  evolve: ['进化前', '进化後'],
+  range:  ['内圈', '外圈'],
+  change: ['变身前', '変身後'],
+}
+
+function addSkillRow(charId, entry, type, state, skill) {
+  const isHeal = skill.skill_power_type && [5,6,7].includes(skill.skill_power_type)
+  const isDmg  = skill.skill_power_type && [1,2,3,4].includes(skill.skill_power_type)
+  // 替换描述占位符
+  let desc = skill.description || ''
+  if (skill.effects && Array.isArray(skill.effects)) {
+    for (let i = 0; i < skill.effects.length; i++) {
+      const v = skill.effects[i]?.value
+      if (v != null) desc = desc.replace(new RegExp('\\{' + i + '\\}', 'g'), v)
+    }
+  }
+  const stt = skill.skill_target_type
+  skillsTable.push({
+    char_id: charId,
+    base_name_ja: entry.base_character_name_ja,
+    base_name_cn: entry.base_character_name_cn,
+    another_name: entry.another_name || '',
+    type,
+    state,
+    skill_target_type: stt ?? null,
+    target_name_ja: '',
+    target_name_cn: stt != null ? (cnMaps.skill_target_type?.get(stt) || `ID:${stt}`) : '',
+    attack_attributes: skill.attack_attributes || [],
+    dmg_power: isDmg ? (skill.power ?? null) : null,
+    break_power: skill.break_power ?? null,
+    heal_power: isHeal ? (skill.power ?? null) : null,
+    wait: skill.wait ?? null,
+    limit_count: skill.limit_count || null,
+    name: skill.name || '',
+    description: desc,
+  })
+}
+
+// 补全 skill_target_type 的 JP 名称（language/ 而非 data_raw/)
+const sttFile = path.join(langDir, 'skill_target_type.json')
+const sttPatch = new Map()
+if (fs.existsSync(sttFile)) {
+  JSON.parse(fs.readFileSync(sttFile, 'utf-8')).forEach(t => sttPatch.set(t.id, t.name))
+}
+
+const skillsTable = []
+
+for (const entry of index) {
+  const charFile = path.join(charOutDir, `${entry.id}.json`)
+  if (!fs.existsSync(charFile)) continue
+  const char = JSON.parse(fs.readFileSync(charFile, 'utf-8'))
+
+  // 基础技能
+  if (char._skills) {
+    for (const g of char._skills) {
+      if (!g.skills || g.skills.length === 0) continue
+      const state = char.switch ? STATE_LABEL[char.switch]?.[0] || '—' : '—'
+      addSkillRow(entry.id, entry, g.type, state, g.skills[g.skills.length - 1])
+    }
+  }
+
+  // 切换后技能
+  if (char.switch_stat?._skills) {
+    for (const g of char.switch_stat._skills) {
+      if (!g.skills || g.skills.length === 0) continue
+      const state = STATE_LABEL[char.switch]?.[1] || '—'
+      addSkillRow(entry.id, entry, g.type, state, g.skills[g.skills.length - 1])
+    }
+  }
+
+  // EX技能（取每类最高级）
+  if (char._exSkills) {
+    const exArr = Array.isArray(char._exSkills) ? char._exSkills : Object.values(char._exSkills)
+    const exMap = new Map()
+    for (const skill of exArr) {
+      const key = skill.name || '_'
+      const cur = exMap.get(key)
+      if (!cur || skill.id > cur.id) exMap.set(key, skill)
+    }
+    for (const skill of exMap.values()) {
+      addSkillRow(entry.id, entry, 'ex', 'EX', skill)
+    }
+  }
+}
+
+// 用 language/ 数据补全 target_name_ja
+for (const row of skillsTable) {
+  const stt = row.skill_target_type
+  if (stt != null) {
+    const name = sttPatch.get(stt)
+    if (name) row.target_name_ja = name
+  }
+}
+
+fs.writeFileSync(path.join(outDir, 'skills.json'), JSON.stringify(skillsTable, null, 2), 'utf-8')
+console.log(`📋 技能一览：${skillsTable.length} 条`)
 
 // 生成元数据（构建时间）
 const meta = { build_time: new Date().toISOString() };
