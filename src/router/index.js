@@ -22,6 +22,11 @@ const routes = [
     component: () => import('../views/LeaderSkillView.vue'),
   },
   {
+    path: '/contest-rotations',
+    name: 'contest-rotations',
+    component: () => import('../views/ContestRotationView.vue'),
+  },
+  {
     path: '/test',
     name: 'test',
     component: () => import('../views/TestView.vue'),

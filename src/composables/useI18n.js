@@ -27,6 +27,7 @@ const UI_TEXT = {
     navCollection: '所持キャラ',
     navSkills: 'スキル一覧',
     navLeaderSkills: '隊長スキル',
+    navContest: 'ダメコン履歴',
     collectionPlaceholder: 'コレクション機能は近日公開',
     applyFilter: '適用', clearFilter: 'クリア',
   },
@@ -59,6 +60,7 @@ const UI_TEXT = {
     navCollection: '角色收藏',
     navSkills: '技能一览',
     navLeaderSkills: '队长技能',
+    navContest: '竞技场信息',
     collectionPlaceholder: '收藏功能即将上线',
     applyFilter: '应用筛选', clearFilter: '清除',
   }
