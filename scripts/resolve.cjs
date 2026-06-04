@@ -839,19 +839,38 @@ for (const row of skillsTable) {
 fs.writeFileSync(path.join(outDir, 'skills.json'), JSON.stringify(skillsTable, null, 2), 'utf-8')
 console.log(`📋 技能一览：${skillsTable.length} 条`)
 
-// ========== 11. 竞技场周期 ==========
+// ========== 11. 活动 ==========
+const fmtDate2 = d => d ? d.substring(0, 10).replace(/-/g, '/') : ''
+const eventFile = path.join(rawDir, 'event.json')
+if (fs.existsSync(eventFile)) {
+  const events = JSON.parse(fs.readFileSync(eventFile, 'utf-8'))
+  const eventTable = events
+    .filter(e => e.event_type === 1)
+    .sort((a, b) => a.id - b.id)
+    .map(e => ({
+      id: e.id,
+      event_type: e.event_type,
+      start_at: fmtDate2(e.start_at),
+      end_at: fmtDate2(e.end_at),
+      name: e.name,
+      revival_start_at: fmtDate2(e.revival_start_at),
+    }))
+  fs.writeFileSync(path.join(outDir, 'events.json'), JSON.stringify(eventTable, null, 2), 'utf-8')
+  console.log(`📋 活动：${eventTable.length} 条`)
+}
+
+// ========== 12. 竞技场周期 ==========
 const contestFile = path.join(rawDir, 'damage_contest_rotation.json')
 const episodeFile = path.join(rawDir, 'episode.json')
 if (fs.existsSync(contestFile) && fs.existsSync(episodeFile)) {
   const contests = JSON.parse(fs.readFileSync(contestFile, 'utf-8'))
   const episodes = JSON.parse(fs.readFileSync(episodeFile, 'utf-8'))
   const epMap = new Map(episodes.map(e => [e.id, e.name]))
-  const fmtDate = d => d ? d.substring(0, 10).replace(/-/g, '/') : ''
   const contestTable = contests
     .sort((a, b) => a.id - b.id)
     .map(c => ({
       id: c.id,
-      start_at: fmtDate(c.start_at),
+      start_at: fmtDate2(c.start_at),
       episode_name: epMap.get(c.episode_id) || '',
     }))
   fs.writeFileSync(path.join(outDir, 'contest_rotations.json'), JSON.stringify(contestTable, null, 2), 'utf-8')
