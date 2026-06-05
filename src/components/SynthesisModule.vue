@@ -6,7 +6,7 @@ const props = defineProps({
   characterData: Object,
 })
 
-const { getField, getTraitColorHex } = useI18n()
+const { getField, getTraitColorHex, currentLang } = useI18n()
 
 const collapsed = ref(false)
 
@@ -34,24 +34,27 @@ onMounted(async () => {
 const allTraits = computed(() => {
   const list = []
   btIds.value.forEach((id, i) => {
+    const eff = traitEffects.value['bt_' + id] || {}
     list.push({
-      name: btNames.value[i] || `ID:${id}`,
-      ...(traitEffects.value['bt_' + id] || {}),
+      ...eff,
+      name: btNames.value[i] || eff.name || `ID:${id}`,
     })
   })
   etIds.value.forEach((id, i) => {
+    const eff = traitEffects.value['et_' + id] || {}
     list.push({
-      name: etNames.value[i] || `ID:${id}`,
-      ...(traitEffects.value['et_' + id] || {}),
+      ...eff,
+      name: etNames.value[i] || eff.name || `ID:${id}`,
     })
   })
   return list
 })
 
 function splitEffect(effect) {
-  if (!effect || !effect.effect_description) return []
+  const desc = currentLang.value === 'cn' ? (effect.effect_description_cn || effect.effect_description) : effect.effect_description
+  if (!effect || !desc) return []
   const parts = []
-  let rest = effect.effect_description
+  let rest = desc
   let i = 0
   while (rest.includes(`{${i}}`)) {
     const idx = rest.indexOf(`{${i}}`)

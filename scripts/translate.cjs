@@ -74,8 +74,12 @@ for (const [name, config] of Object.entries(pipelineConfig.translationFiles)) {
     lang.name = item.name;
     lang.name_cn = lang.name_cn || '';
     if (isTrait) {
-      const effDesc = name === 'battle_tool_trait' ? btEffect(item) : etEffect(item);
-      lang.effect_description = effDesc || '';
+      if (item.description) {
+        lang.effect_description = item.description;
+      } else {
+        const effDesc = name === 'battle_tool_trait' ? btEffect(item) : etEffect(item);
+        lang.effect_description = effDesc || '';
+      }
       lang.effect_description_cn = lang.effect_description_cn || '';
     }
 
