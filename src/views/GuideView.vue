@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import SortFilterBar from '../components/SortFilterBar.vue'
+import FilterBar from '../components/FilterBar.vue'
+import SortSearchBar from '../components/SortSearchBar.vue'
 import PaginationBar from '../components/PaginationBar.vue'
 import CharacterGrid from '../components/CharacterGrid.vue'
 
@@ -22,7 +23,8 @@ onMounted(() => {
 <template>
   <div class="guide-layout">
     <div ref="headRef" class="guide-sticky-head">
-      <SortFilterBar />
+      <FilterBar />
+      <SortSearchBar />
       <PaginationBar />
     </div>
     <CharacterGrid />

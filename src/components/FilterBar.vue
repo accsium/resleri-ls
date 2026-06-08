@@ -2,15 +2,16 @@
 import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useFilters } from '../composables/useFilters'
+import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
-const { t, currentLang, SORT_CATEGORIES, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { currentLang, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 const {
   sortCategory, sortField, currentSortOrder,
   activeFilters, searchText,
   setSortCategory, setSortField,
-  toggleOrder, toggleFilter,
+  toggleFilter,
 } = useFilters()
 
 function clearAll() {
@@ -66,20 +67,7 @@ onMounted(() => {
   onUnmounted(() => ro.disconnect())
 })
 
-// ── 排序 ──
-const activeCategory = computed(() =>
-  SORT_CATEGORIES.find(c => c.key === sortCategory.value) || SORT_CATEGORIES[0]
-)
-
-function onCategoryChange(e) {
-  const cat = SORT_CATEGORIES.find(c => c.key === e.target.value)
-  setSortCategory(cat.key)
-  if (cat.key !== 'skill') {
-    setSortField(cat.fields[0].field)
-  }
-}
-
-// ── 属性 (attack_attribute 按 id 顺序: 1=斩 2=打 3=突 5=火 6=冰 7=雷 8=风) ──
+// ── 属性 ──
 const ATTR_IDS = [1, 2, 3, 5, 6, 7, 8]
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
 const selectedAttrs = computed({
@@ -95,7 +83,7 @@ function toggleAttr(id) {
   selectedAttrs.value = cur
 }
 
-// ── 职业 (按 id 顺序: 1=攻 2=破 3=防 4=輔) ──
+// ── 职业 ──
 const ROLE_IDS = [1, 2, 3, 4]
 const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP)
 const selectedRoles = computed({
@@ -126,7 +114,7 @@ function toggleRarity(r) {
   selectedRarities.value = cur
 }
 
-// ── 调和色 (按 trait_color_id 排序: 1=青 2=紫 3=黄 4=赤 5=緑) ──
+// ── 调和色 ──
 const TRAIT_IDS = [1, 2, 3, 4, 5]
 function traitColorHex(id) { return TRAIT_COLOR_HEX[id] || '#ccc' }
 
@@ -157,16 +145,11 @@ function toggleTraitRight(id) {
 }
 
 // ── 标签/词条下拉数据 ──
-// Uses character_index data provided by useCharacterData prop injection
-import { useCharacterData } from '../composables/useCharacterData'
 const { characterIndex } = useCharacterData()
 
-// 双语标签数据
 const tagsJa = ref([])
 const tagsCn = ref([])
-const allTags = computed(() => {
-  return panelLang.value === 'cn' ? tagsCn.value : tagsJa.value
-})
+const allTags = computed(() => panelLang.value === 'cn' ? tagsCn.value : tagsJa.value)
 const allTagsGrouped = computed(() => {
   const list = allTags.value
   let lastGroup = null
@@ -177,7 +160,6 @@ const allTagsGrouped = computed(() => {
   })
 })
 
-// 双语词条数据
 const battleTraitsJa = ref([])
 const battleTraitsCn = ref([])
 const equipTraitsJa = ref([])
@@ -215,7 +197,6 @@ function groupTraits(list, getName) {
 }
 
 onMounted(async () => {
-  // 词条 + 标签数据
   try {
     const [bt, et, tg] = await Promise.all([
       fetch('data/battle_tool_trait.json').then(r => r.json()),
@@ -227,7 +208,6 @@ onMounted(async () => {
     equipTraitsJa.value = groupTraits(et, t => t.name)
     equipTraitsCn.value = groupTraits(et, t => t.name_cn || t.name)
 
-    // 标签：按 priority 千位分组，组内按 priority 排序
     const tagCats = {}
     tg.sort((a, b) => a.priority - b.priority).forEach(t => {
       const g = Math.floor(t.priority / 1000)
@@ -264,7 +244,7 @@ const selectedEquipTraits = computed({
 
 <template>
   <div class="sf-wrapper">
-    <div ref="panelEl" class="sort-filter-bar" :class="{ 'sf-collapsed': collapsed }">
+    <div ref="panelEl" class="sort-filter-bar filter-panel" :class="{ 'sf-collapsed': collapsed }">
     <!-- 行1：初始星级 + 职业/属性图标 -->
     <div class="sf-row" :class="{ 'no-divider': collapsed }">
       <div class="sf-field">
@@ -436,42 +416,9 @@ const selectedEquipTraits = computed({
       </div>
     </div>
 
-    <div class="sf-toggle-bar" :class="{ expanded: !collapsed }" @click="collapsed = !collapsed">
-      <div class="sf-toggle-tab" :class="{ expanded: !collapsed }">
-        <span class="sf-toggle-arrow">{{ collapsed ? '▼' : '▲' }}</span>
-      </div>
-    </div>
-
-    <!-- 行6：排序 + 搜索 -->
-    <div class="sf-row">
-      <div class="sort-control">
-        <div class="sort-control-head">
-          <span class="sf-label">排序</span>
-          <select name="sort_category" :value="sortCategory" @change="onCategoryChange">
-            <option v-for="cat in SORT_CATEGORIES" :key="cat.key" :value="cat.key">
-              {{ currentLang === 'cn' ? cat.label_cn : cat.label_ja }}
-            </option>
-          </select>
-        </div>
-        <div class="sort-control-tail">
-          <select name="sort_field" v-model="sortField" @change="(e) => setSortField(e.target.value)">
-            <option v-for="f in activeCategory.fields" :key="f.field" :value="f.field">
-              {{ currentLang === 'cn' ? f.label_cn : f.label_ja }}
-            </option>
-          </select>
-          <button class="sf-order-btn" @click="toggleOrder()">
-            {{ currentSortOrder === 'desc' ? '↓ 降序' : '↑ 升序' }}
-          </button>
-        </div>
-      </div>
-      <div class="sf-right-group">
-        <div class="sf-group">
-          <span class="sf-label">搜索</span>
-          <input type="text" name="search" v-model="searchText" :placeholder="t('searchPlaceholder')">
-        </div>
-      </div>
+    <div class="sf-toggle-bar" @click="collapsed = !collapsed">
+      <span class="sf-toggle-arrow">{{ collapsed ? '▼' : '▲' }}</span>
     </div>
     </div>
   </div>
 </template>
-

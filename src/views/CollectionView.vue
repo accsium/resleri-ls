@@ -5,50 +5,18 @@ import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useCollection } from '../composables/useCollection'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
-import IconDisplay from '../components/IconDisplay.vue'
-import StarsDisplay from '../components/StarsDisplay.vue'
 import CollectionMatrix from '../components/CollectionMatrix.vue'
+import FilterBar from '../components/FilterBar.vue'
+import { useFilters } from '../composables/useFilters'
 
 const { t } = useI18n()
 const { characterIndex } = useCharacterData()
 const { ownedIds, ownedCount, shareCode, isOwned, toggleOwned, saveToStorage, loadFromCode } = useCollection()
+const { activeFilters } = useFilters()
 const route = useRoute()
-
-const ATTR_IDS = [1, 2, 3, 5, 6, 7, 8]
-const ROLE_IDS = [1, 2, 3, 4]
-const RARITIES = [1, 2, 3]
 
 // ── 视图模式 ──
 const viewMode = ref('sequential')
-
-// ── 筛选 ──
-const filterRarity = ref([])
-const filterRole = ref([])
-const filterAttr = ref([])
-
-function toggleRarity(r) {
-  const i = filterRarity.value.indexOf(r)
-  if (i >= 0) filterRarity.value.splice(i, 1)
-  else filterRarity.value.push(r)
-}
-
-function toggleRole(r) {
-  const i = filterRole.value.indexOf(r)
-  if (i >= 0) filterRole.value.splice(i, 1)
-  else filterRole.value.push(r)
-}
-
-function toggleAttr(a) {
-  const i = filterAttr.value.indexOf(a)
-  if (i >= 0) filterAttr.value.splice(i, 1)
-  else filterAttr.value.push(a)
-}
-
-function clearFilters() {
-  filterRarity.value = []
-  filterRole.value = []
-  filterAttr.value = []
-}
 
 // ── 从 URL 分享码初始化 ──
 const codeFromUrl = computed(() => route.params.code || null)
@@ -65,14 +33,15 @@ watch([() => characterIndex.value.length, codeFromUrl], ([len, code]) => {
 const filteredSortedCharacters = computed(() => {
   let list = [...characterIndex.value]
 
-  if (filterRarity.value.length) {
-    list = list.filter(c => filterRarity.value.includes(c.initial_rarity))
+  const fa = activeFilters.value
+  if (fa.initial_rarity.length) {
+    list = list.filter(c => fa.initial_rarity.includes(c.initial_rarity))
   }
-  if (filterRole.value.length) {
-    list = list.filter(c => filterRole.value.includes(c.role))
+  if (fa.role.length) {
+    list = list.filter(c => fa.role.includes(c.role))
   }
-  if (filterAttr.value.length) {
-    list = list.filter(c => (c.attack_attributes || []).some(a => filterAttr.value.includes(a)))
+  if (fa.attack_attributes.length) {
+    list = list.filter(c => (c.attack_attributes || []).some(a => fa.attack_attributes.includes(a)))
   }
 
   // 规范排序：start_at desc → initial_rarity desc → id desc
@@ -133,47 +102,7 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
       </div>
 
       <!-- 筛选栏 -->
-      <div class="sf-wrapper">
-        <div class="sort-filter-bar">
-          <div class="sf-row">
-            <div class="sf-field">
-              <span class="sf-label">初始星级</span>
-              <div class="sf-field-items">
-                <label v-for="r in RARITIES" :key="'rar'+r" class="sf-check">
-                  <input type="checkbox" :checked="filterRarity.includes(r)" @change="toggleRarity(r)">
-                  <StarsDisplay :mode="1" :rarity="r" :max-rarity="8" :scale="0.25" />
-                </label>
-              </div>
-            </div>
-            <div class="sf-divider"></div>
-            <div class="sf-group sf-icons">
-              <button
-                v-for="id in ROLE_IDS" :key="'r'+id"
-                class="sf-icon-btn"
-                :class="{ active: filterRole.includes(id) }"
-                @click="toggleRole(id)"
-              >
-                <IconDisplay type="role" :id="id" :size="24" />
-              </button>
-            </div>
-            <div class="sf-divider"></div>
-            <div class="sf-group sf-icons">
-              <button
-                v-for="id in ATTR_IDS" :key="'a'+id"
-                class="sf-icon-btn"
-                :class="{ active: filterAttr.includes(id) }"
-                @click="toggleAttr(id)"
-              >
-                <IconDisplay type="attribute" :id="id" :size="24" />
-              </button>
-            </div>
-            <div class="sf-spacer"></div>
-            <div class="sf-right-group">
-              <button class="sf-collapse-btn" @click="clearFilters">{{ t('clearFilter') }}</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <FilterBar />
 
       <!-- 模式切换 -->
       <div class="collection-mode-bar">
