@@ -7,7 +7,7 @@ const routes = [
     component: () => import('../views/GuideView.vue'),
   },
   {
-    path: '/collection',
+    path: '/collection/:code?',
     name: 'collection',
     component: () => import('../views/CollectionView.vue'),
   },

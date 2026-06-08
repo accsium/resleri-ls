@@ -108,7 +108,7 @@ const filteredSkills = computed(() => {
   if (fa.state.length) list = list.filter(r => fa.state.includes(r.state))
   if (fa.target.length) list = list.filter(r => {
     const cats = targetCat(cn ? r.target_name_cn : r.target_name_ja)
-    return fa.target.some(t => cats.includes(t))
+    return fa.target.every(t => cats.includes(t))
   })
   if (fa.wt.length) list = list.filter(r => r.wait != null && fa.wt.includes(200 + r.wait))
 

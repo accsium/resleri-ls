@@ -598,7 +598,20 @@ input:checked + .slider::before { transform: translateX(16px); }
 .overlay-icon-right { position: absolute; top: 0; right: 0; justify-content: flex-end; }
 
 /* ========== 收藏 ========== */
-.collection-container { padding: 40px; text-align: center; color: var(--text-muted); }
+/* 头像灰度 — CollectionView 和 CollectionMatrix 共用 */
+.collection-avatar-item {
+  cursor: pointer;
+  filter: grayscale(1);
+  opacity: 0.55;
+  transition: filter 0.2s, opacity 0.2s;
+}
+.collection-avatar-item:hover {
+  opacity: 0.8;
+}
+.collection-avatar-item.owned {
+  filter: none;
+  opacity: 1;
+}
 
 /* ========== 支援能力特殊状态 ========== */
 .support-unreachable {
