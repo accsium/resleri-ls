@@ -173,7 +173,7 @@ input[type="text"] {
   transition: 0.15s;
 }
 .nav-link:hover { color: var(--accent); }
-.nav-link.router-link-active { color: var(--text-light); border-bottom-color: var(--accent); }
+.nav-link.router-link-active { color: var(--text-light); border-bottom-color: var(--accent); background: rgba(255,255,255,0.08); }
 
 /* ========== 排序筛选面板 ========== */
 .guide-sticky-head {
@@ -616,8 +616,9 @@ input:checked + .slider::before { transform: translateX(16px); }
   .btn-refresh { padding: 4px 10px; font-size: 12px; }
   .lang-btn { width: 30px; height: 30px; font-size: 12px; }
 
-  .nav-bar { height: 40px; padding: 0 10px; }
-  .nav-link { font-size: 13px; }
+  .nav-bar { height: auto; min-height: 36px; padding: 0; }
+  .nav-links { flex-wrap: wrap; height: auto; width: 100%; }
+  .nav-link { flex: 1 0 auto; height: 30px; padding: 0 4px; font-size: 11px; }
 
   .card-header { padding: 12px 14px; }
   .card-top { margin-bottom: 8px; }
