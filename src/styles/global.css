@@ -184,7 +184,10 @@ input[type="text"] {
   box-shadow: var(--shadow);
 }
 .sf-wrapper {
-  padding: 12px 0;
+  padding: 6px 0;
+}
+.sf-wrapper + .sf-wrapper {
+  padding-top: 0;
 }
 .sort-filter-bar {
   width: 90%;

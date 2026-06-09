@@ -65,4 +65,17 @@ function onCategoryChange(e) {
 .ss-bar {
   padding: 0 16px;
 }
+.ss-bar select {
+  font-size: 12px;
+  padding: 2px 6px;
+}
+.ss-bar .sf-order-btn {
+  font-size: 12px;
+  padding: 2px 8px;
+}
+.ss-bar input[type="text"] {
+  width: 160px;
+  font-size: 12px;
+  padding: 3px 8px;
+}
 </style>
