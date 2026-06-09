@@ -32,8 +32,10 @@ const columns = [
 ]
 
 const skills = ref([])
-const sortCol = ref('id')
-const sortDir = ref('asc')
+const sortPriority = ref(['id'])
+const sortDirs = ref({ id: 'asc' })
+const sortCol = computed(() => sortPriority.value[0] || 'id')
+const sortDir = computed(() => sortDirs.value[sortCol.value] || 'asc')
 
 const TYPE_LABEL = { normal1:'一技能', normal2:'二技能', burst:'爆发技能', active1:'发动技能', ex:'EX技能' }
 const TYPE_KEYS = ['normal1','normal2','burst','ex','active1']
@@ -78,27 +80,39 @@ const filteredSkills = computed(() => {
   const cn = currentLang.value === 'cn'
 
   // 排序
-  list.sort((a, b) => {
-    let va, vb
-    switch (sortCol.value) {
-      case 'id': va = a.char_id; vb = b.char_id; break
-      case 'name': va = (cn ? a.base_name_cn : a.base_name_ja) || ''; vb = (cn ? b.base_name_cn : b.base_name_ja) || ''; break
-      case 'type': va = a.type; vb = b.type; break
-      case 'state': va = a.state; vb = b.state; break
-      case 'target': va = (cn ? a.target_name_cn : a.target_name_ja) || ''; vb = (cn ? b.target_name_cn : b.target_name_ja) || ''; break
-      case 'attr': va = ATTR_IDS.indexOf(a.attack_attributes?.[0]); vb = ATTR_IDS.indexOf(b.attack_attributes?.[0]); break
-      case 'dmg': va = a.dmg_power ?? -1; vb = b.dmg_power ?? -1; break
-      case 'brk': va = a.break_power ?? -1; vb = b.break_power ?? -1; break
-      case 'heal': va = a.heal_power ?? -1; vb = b.heal_power ?? -1; break
-      case 'wait': va = a.wait != null ? (200 + a.wait) : 9999; vb = b.wait != null ? (200 + b.wait) : 9999; break
-      case 'limit': va = a.limit_count ?? 0; vb = b.limit_count ?? 0; break
-      case 'skillName': va = a.name || ''; vb = b.name || ''; break
-      case 'skillDesc': va = a.description || ''; vb = b.description || ''; break
-      default: va = a.char_id; vb = b.char_id
+  function getSortVal(row, field) {
+    switch (field) {
+      case 'avatar': return (charIndexMap.value[row.char_id] || {}).uid || ''
+      case 'id': return row.char_id
+      case 'name': return (cn ? row.base_name_cn : row.base_name_ja) || ''
+      case 'type': return row.type
+      case 'state': return row.state
+      case 'target': return (cn ? row.target_name_cn : row.target_name_ja) || ''
+      case 'attr': return ATTR_IDS.indexOf(row.attack_attributes?.[0])
+      case 'dmg': return row.dmg_power ?? -1
+      case 'brk': return row.break_power ?? -1
+      case 'heal': return row.heal_power ?? -1
+      case 'wait': return row.wait != null ? (200 + row.wait) : 9999
+      case 'limit': return row.limit_count ?? 0
+      case 'skillName': return row.name || ''
+      case 'skillDesc': return row.description || ''
+      default: return ''
     }
-    if (typeof va === 'string' && typeof vb === 'string') { const c = va.localeCompare(vb); if (c !== 0) return c * dir }
-    else { if (va < vb) return -1 * dir; if (va > vb) return 1 * dir }
-    return (a.char_id - b.char_id) * dir
+  }
+  list.sort((a, b) => {
+    for (const field of sortPriority.value) {
+      const va = getSortVal(a, field)
+      const vb = getSortVal(b, field)
+      const d = (sortDirs.value[field] || 'asc') === 'desc' ? -1 : 1
+      if (va == null && vb == null) continue
+      if (va == null) return 1
+      if (vb == null) return -1
+      let r = 0
+      if (typeof va === 'string') { r = va.localeCompare(vb) }
+      else { r = va < vb ? -1 : va > vb ? 1 : 0 }
+      if (r !== 0) return r * d
+    }
+    return 0
   })
 
   // 筛选
@@ -125,11 +139,16 @@ const filteredSkills = computed(() => {
 })
 
 function onSort(col) {
-  if (sortCol.value === col) {
-    sortDir.value = sortDir.value === 'desc' ? 'asc' : 'desc'
+  if (col === 'avatar') col = 'id'
+  const cur = [...sortPriority.value]
+  const idx = cur.indexOf(col)
+  if (idx === 0) {
+    sortDirs.value[col] = sortDirs.value[col] === 'asc' ? 'desc' : 'asc'
   } else {
-    sortCol.value = col
-    sortDir.value = 'asc'
+    if (idx > 0) cur.splice(idx, 1)
+    cur.unshift(col)
+    sortPriority.value = cur
+    if (!sortDirs.value[col]) sortDirs.value[col] = 'desc'
   }
 }
 

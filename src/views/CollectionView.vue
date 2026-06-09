@@ -44,14 +44,8 @@ const filteredSortedCharacters = computed(() => {
     list = list.filter(c => (c.attack_attributes || []).some(a => fa.attack_attributes.includes(a)))
   }
 
-  // 规范排序：start_at desc → initial_rarity desc → id desc
-  list.sort((a, b) => {
-    const sa = a.start_at || ''; const sb = b.start_at || ''
-    if (sa > sb) return -1; if (sa < sb) return 1
-    if (a.initial_rarity > b.initial_rarity) return -1
-    if (a.initial_rarity < b.initial_rarity) return 1
-    return b.id - a.id
-  })
+  // UID 倒序（最新在前）
+  list.sort((a, b) => (b.uid || '').localeCompare(a.uid || ''))
   return list
 })
 

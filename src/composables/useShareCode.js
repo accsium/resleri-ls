@@ -1,13 +1,7 @@
 export function useShareCode() {
-  // 规范排序：start_at desc → initial_rarity desc → id desc
+  // UID 排序：按 UID 升序，新角色永远追加在末尾
   function canonicalSort(a, b) {
-    const sa = a.start_at || ''
-    const sb = b.start_at || ''
-    if (sa > sb) return -1
-    if (sa < sb) return 1
-    if (a.initial_rarity > b.initial_rarity) return -1
-    if (a.initial_rarity < b.initial_rarity) return 1
-    return b.id - a.id
+    return (a.uid || '').localeCompare(b.uid || '')
   }
 
   function getCanonicalOrder(characterIndex) {

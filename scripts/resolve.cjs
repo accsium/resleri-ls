@@ -447,8 +447,13 @@ function buildIndexEntry(character) {
     }
   }
 
+  // UID: YYYYMMDD + initial_rarity(1位) + id(5位补零)
+  const dateStr = (character.start_at || '').replace(/-/g, '').substring(0, 8);
+  const uid = dateStr + String(character.initial_rarity) + String(character.id).padStart(5, '0');
+
   const entry = {
     id: character.id,
+    uid,
     name_ja: character.name,
     name_cn: character.name,
     another_name: character.another_name,

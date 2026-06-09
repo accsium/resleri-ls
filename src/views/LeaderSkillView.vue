@@ -25,88 +25,60 @@ const leaderChars = computed(() =>
   characterIndex.value.filter(c => c.leader_skill_name != null)
 )
 
-const DEFAULT_PRIORITY = [
-  { field: 'start_at' },
-  { field: 'initial_rarity' },
-  { field: 'id' },
-]
+const sortPriority = ref(['uid'])
+const sortDirs = ref({ uid: 'desc' })
+const sortCol = computed(() => sortPriority.value[0] || 'uid')
+const sortDir = computed(() => sortDirs.value[sortCol.value] || 'desc')
 
-const sortCol = ref('default')
-const sortDir = ref('desc')
+function getSortVal(row, field) {
+  const cn = currentLang.value === 'cn'
+  switch (field) {
+    case 'uid':
+    case 'avatar': return row.uid || ''
+    case 'id': return row.id
+    case 'name': return (cn ? row.base_character_name_cn : row.base_character_name_ja) || ''
+    case 'attr': return row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999
+    case 'role': return row.role || 999
+    case 'skillName': return row.leader_skill_name || ''
+    case 'skillDesc': return row.leader_skill_description || ''
+    default: return ''
+  }
+}
 
 function cmpVal(va, vb, dir) {
   if (va == null && vb == null) return 0
-  if (va == null) return 1 * dir
-  if (vb == null) return -1 * dir
-  if (typeof va === 'string') {
-    const c = va.localeCompare(vb)
-    return c ? c * dir : 0
-  }
+  if (va == null) return 1
+  if (vb == null) return -1
+  if (typeof va === 'string') { const c = va.localeCompare(vb); return c ? c * dir : 0 }
   if (va < vb) return -1 * dir
   if (va > vb) return 1 * dir
   return 0
 }
 
-function defaultCompare(a, b, dir) {
-  for (const { field } of DEFAULT_PRIORITY) {
-    const r = cmpVal(a[field], b[field], dir)
-    if (r !== 0) return r
-  }
-  return 0
-}
-
 const sortedChars = computed(() => {
   const list = [...leaderChars.value]
-  const dir = sortDir.value === 'desc' ? -1 : 1
-
-  if (sortCol.value === 'default' || sortCol.value === 'avatar') {
-    list.sort((a, b) => defaultCompare(a, b, dir))
-    return list
-  }
-
   list.sort((a, b) => {
-    let va, vb
-    switch (sortCol.value) {
-      case 'name':
-        va = currentLang.value === 'cn' ? a.base_character_name_cn : a.base_character_name_ja
-        vb = currentLang.value === 'cn' ? b.base_character_name_cn : b.base_character_name_ja
-        break
-      case 'attr':
-        va = ATTR_IDS.indexOf(a.attack_attributes?.[0])
-        vb = ATTR_IDS.indexOf(b.attack_attributes?.[0])
-        break
-      case 'role':
-        va = a.role || 0
-        vb = b.role || 0
-        break
-      case 'id':
-        va = a.id
-        vb = b.id
-        break
-      case 'skillName':
-        va = a.leader_skill_name || ''
-        vb = b.leader_skill_name || ''
-        break
-      case 'skillDesc':
-        va = a.leader_skill_description || ''
-        vb = b.leader_skill_description || ''
-        break
-      default:
-        return 0
+    for (const field of sortPriority.value) {
+      const d = (sortDirs.value[field] || 'desc') === 'desc' ? -1 : 1
+      const r = cmpVal(getSortVal(a, field), getSortVal(b, field), d)
+      if (r !== 0) return r
     }
-    const r = cmpVal(va, vb, dir)
-    if (r !== 0) return r
-    return defaultCompare(a, b, dir)
+    return 0
   })
   return list
 })
 
 function onSort(col) {
-  if (sortCol.value === col) {
-    sortDir.value = sortDir.value === 'desc' ? 'asc' : 'desc'
+  if (col === 'avatar') col = 'uid'
+  const cur = [...sortPriority.value]
+  const idx = cur.indexOf(col)
+  if (idx === 0) {
+    sortDirs.value[col] = sortDirs.value[col] === 'asc' ? 'desc' : 'asc'
   } else {
-    sortCol.value = col
-    sortDir.value = 'desc'
+    if (idx > 0) cur.splice(idx, 1)
+    cur.unshift(col)
+    sortPriority.value = cur
+    if (!sortDirs.value[col]) sortDirs.value[col] = 'desc'
   }
 }
 </script>
