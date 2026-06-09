@@ -7,7 +7,7 @@ import IconDisplay from '../components/IconDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 
 const { characterIndex } = useCharacterData()
-const { currentLang, ATTR_MAP, ATTR_MAP_CN } = useI18n()
+const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS } = useI18n()
 
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
 const charIndexMap = computed(() => {
@@ -38,9 +38,9 @@ const sortDir = ref('asc')
 const TYPE_LABEL = { normal1:'一技能', normal2:'二技能', burst:'爆发技能', active1:'发动技能', ex:'EX技能' }
 const TYPE_KEYS = ['normal1','normal2','burst','ex','active1']
 const STATE_KEYS = ['进化前','进化後','内圈','外圈','变身前','変身後','—']
-const ATTR_IDS = [1,2,3,5,6,7,8]
 const WT_OPTS = [0,75,100,175,200,275,300]
 const TARGET_KEYS = ['友方','敌方','单体','全体','其他']
+const searchText = ref('')
 
 const activeFilters = reactive({
   attr: [],
@@ -86,7 +86,7 @@ const filteredSkills = computed(() => {
       case 'type': va = a.type; vb = b.type; break
       case 'state': va = a.state; vb = b.state; break
       case 'target': va = (cn ? a.target_name_cn : a.target_name_ja) || ''; vb = (cn ? b.target_name_cn : b.target_name_ja) || ''; break
-      case 'attr': va = a.attack_attributes?.[0] || 0; vb = b.attack_attributes?.[0] || 0; break
+      case 'attr': va = ATTR_IDS.indexOf(a.attack_attributes?.[0]); vb = ATTR_IDS.indexOf(b.attack_attributes?.[0]); break
       case 'dmg': va = a.dmg_power ?? -1; vb = b.dmg_power ?? -1; break
       case 'brk': va = a.break_power ?? -1; vb = b.break_power ?? -1; break
       case 'heal': va = a.heal_power ?? -1; vb = b.heal_power ?? -1; break
@@ -111,6 +111,15 @@ const filteredSkills = computed(() => {
     return fa.target.every(t => cats.includes(t))
   })
   if (fa.wt.length) list = list.filter(r => r.wait != null && fa.wt.includes(200 + r.wait))
+
+  // 搜索
+  if (searchText.value) {
+    const q = searchText.value.toLowerCase()
+    list = list.filter(r =>
+      (r.name || '').toLowerCase().includes(q) ||
+      (r.description || '').toLowerCase().includes(q)
+    )
+  }
 
   return list
 })
@@ -164,6 +173,8 @@ onMounted(async () => {
     <label v-for="w in WT_OPTS" :key="'w'+w" class="skf-check">
       <input type="checkbox" :checked="activeFilters.wt.includes(w)" @change="toggleFilter('wt',w)">{{ w }}
     </label>
+    <span class="skf-sep"></span>
+    <input type="text" v-model="searchText" placeholder="搜索技能名或描述..." class="skf-search">
   </div>
   <SortableTable
     :columns="columns"
@@ -212,4 +223,11 @@ onMounted(async () => {
 .skf-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.15); margin: 0 4px; }
 .skf-check { display: flex; align-items: center; gap: 2px; cursor: pointer; font-size: 12px; color: #aaa; }
 .skf-check input { accent-color: var(--accent); }
+.skf-search {
+  width: 180px; font-size: 12px; padding: 4px 8px;
+  background: rgba(255,255,255,0.08); color: var(--text-light);
+  border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius);
+}
+.skf-search::placeholder { color: #888; }
+.skf-search:focus { border-color: var(--accent); }
 </style>

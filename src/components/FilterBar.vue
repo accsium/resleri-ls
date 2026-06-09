@@ -6,7 +6,7 @@ import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
-const { currentLang, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { currentLang, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 const {
   sortCategory, sortField, currentSortOrder,
   activeFilters, searchText,
@@ -68,7 +68,6 @@ onMounted(() => {
 })
 
 // ── 属性 ──
-const ATTR_IDS = [1, 2, 3, 5, 6, 7, 8]
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
 const selectedAttrs = computed({
   get: () => activeFilters.value.attack_attributes || [],

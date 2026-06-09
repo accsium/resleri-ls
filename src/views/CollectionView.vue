@@ -218,7 +218,18 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
   grid-template-columns: repeat(auto-fill, 84px);
   gap: 10px;
   justify-content: center;
-  padding: 16px 0;
+  padding: 16px;
+  background: #4a515e;
+  border-radius: var(--radius-lg);
+}
+
+/* 矩阵深色格子 */
+.collection-layout :deep(.matrix-cell) {
+  background: #4a515e;
+}
+.collection-layout :deep(.matrix-attr-label) {
+  background: #4a515e;
+  color: rgba(255,255,255,0.5);
 }
 
 .collection-empty {

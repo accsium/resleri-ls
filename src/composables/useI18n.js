@@ -27,6 +27,7 @@ const UI_TEXT = {
     navCollection: '所持キャラ',
     navSkills: 'スキル一覧',
     navLeaderSkills: '隊長スキル',
+    navSupportAbility: '支援能力',
     navEvents: 'イベント',
     navContest: 'ダメコン履歴',
     collectionPlaceholder: 'コレクション機能は近日公開',
@@ -70,6 +71,7 @@ const UI_TEXT = {
     navCollection: '角色收藏',
     navSkills: '技能一览',
     navLeaderSkills: '队长技能',
+    navSupportAbility: '支援能力',
     navEvents: '活动记录',
     navContest: '竞技场信息',
     collectionPlaceholder: '收藏功能即将上线',
@@ -88,6 +90,7 @@ const UI_TEXT = {
 
 const ATTR_MAP    = { 1: '斬', 2: '打', 3: '突', 5: '火', 6: '氷', 7: '雷', 8: '風' }
 const ATTR_MAP_CN = { 1: '斩', 2: '打', 3: '突', 5: '火', 6: '冰', 7: '雷', 8: '风' }
+const ATTR_IDS    = [5, 6, 7, 8, 1, 2, 3]  // 魔法优先，物理在后
 const ROLE_MAP    = { 1: '攻', 2: '破', 3: '防', 4: '輔' }
 const ROLE_MAP_CN = { 1: '攻', 2: '破', 3: '防', 4: '辅' }
 const TRAIT_COLOR_HEX = { 1: '#3498DB', 2: '#9B59B6', 3: '#F1C40F', 4: '#E74C3C', 5: '#2ECC71' }
@@ -145,5 +148,5 @@ export function useI18n() {
     return TRAIT_COLOR_HEX[id] || '#CCCCCC'
   }
 
-  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_CATEGORIES, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN }
+  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_CATEGORIES, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN }
 }

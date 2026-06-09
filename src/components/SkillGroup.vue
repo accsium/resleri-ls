@@ -8,7 +8,9 @@ const props = defineProps({
   skillType: Object,
 })
 
-const { t, getField } = useI18n()
+const { t, getField, ATTR_MAP, ATTR_MAP_CN, currentLang } = useI18n()
+
+const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
 
 const activeIndex = ref(props.skillType.levels.length - 1)
 
@@ -27,8 +29,7 @@ const skillStats = computed(() => {
   const skill = currentSkill.value
   const target = getField(skill, 'target_name') || skill.skill_target_type || '?'
   const attributeNames = (skill.attack_attributes || []).map(a => {
-    const map = { 1: '斬', 2: '打', 3: '突', 5: '火', 6: '氷', 7: '雷', 8: '風' }
-    return map[a] || a
+    return attrMap.value[a] || a
   })
   const attr = attributeNames.join('/')
   const desc = replaceEffects(skill.description, skill.effects)

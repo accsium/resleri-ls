@@ -11,13 +11,12 @@ const props = defineProps({
 
 const emit = defineEmits(['toggle'])
 
-const { currentLang, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
 const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP)
 
 const ROLE_IDS = [1, 2, 3, 4]
-const ATTR_IDS = [1, 2, 3, 5, 6, 7, 8]
 
 // 按 (role, attr) 预分组
 const cellMap = computed(() => {

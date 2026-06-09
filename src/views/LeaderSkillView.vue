@@ -6,7 +6,7 @@ import AvatarDisplay from '../components/AvatarDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 
 const { characterIndex } = useCharacterData()
-const { currentLang, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
 const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP)
@@ -72,8 +72,8 @@ const sortedChars = computed(() => {
         vb = currentLang.value === 'cn' ? b.base_character_name_cn : b.base_character_name_ja
         break
       case 'attr':
-        va = a.attack_attributes?.[0] || 0
-        vb = b.attack_attributes?.[0] || 0
+        va = ATTR_IDS.indexOf(a.attack_attributes?.[0])
+        vb = ATTR_IDS.indexOf(b.attack_attributes?.[0])
         break
       case 'role':
         va = a.role || 0

@@ -22,6 +22,11 @@ const routes = [
     component: () => import('../views/LeaderSkillView.vue'),
   },
   {
+    path: '/support-abilities',
+    name: 'support-abilities',
+    component: () => import('../views/SupportAbilityView.vue'),
+  },
+  {
     path: '/events',
     name: 'events',
     component: () => import('../views/EventView.vue'),

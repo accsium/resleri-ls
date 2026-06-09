@@ -503,6 +503,57 @@ function buildIndexEntry(character) {
     leader_skill_description: character.leader_skill?.description || null,
   };
 
+  // ── 亚空支援能力 ──
+  const saIdx = Math.min(character.max_rarity - 1, (character.support_ability_ids || []).length - 1);
+  const saId = saIdx >= 0 ? (character.support_ability_ids || [])[saIdx] : null;
+  const saDetail = saId != null ? (character._skillDetails || {})[saId] : null;
+  if (saDetail) {
+    // 解析描述中 {0} {1} 为具体数值
+    let saDesc = saDetail.description || '';
+    (saDetail.effects || []).forEach((eff, i) => {
+      saDesc = saDesc.replace(new RegExp(`\\{${i}\\}`, 'g'), (eff.value ?? 0) / 100);
+    });
+    entry.support_ability_description = saDesc;
+
+    // 解析条件：按 の時、 或 時、 拆分
+    const condMatch = saDetail.description.match(/^(.+?)(?:の)?時、(.+)$/);
+    if (condMatch) {
+      const cond = condMatch[1];
+      // 属性
+      const attrMatch = cond.match(/得意属性が(\S+)属性/);
+      const attrNameMap = { '火':5,'氷':6,'雷':7,'風':8,'斬':1,'打':2,'突':3 };
+      entry.support_ability_attr = attrMatch ? (attrNameMap[attrMatch[1]] || null) : null;
+      // 职业
+      const roleMatch = cond.match(/ブレイカー|ディフェンダー/);
+      const roleNameMap = { 'ブレイカー':2, 'ディフェンダー':3 };
+      entry.support_ability_role = roleMatch ? (roleNameMap[roleMatch[0]] || null) : null;
+      // 标签（构建 JP→CN 查找）
+      const tagNames = (cond.match(/「(.+?)」/g) || []).map(t => t.replace(/[「」]/g, ''));
+      if (tagNames.length > 0) {
+        const tagCnLookup = {};
+        for (const [id, nameJa] of jpMaps.character_tag || []) {
+          tagCnLookup[nameJa] = cnMaps.character_tag?.get(id) || nameJa;
+        }
+        entry.support_ability_tag_ja = tagNames.join('、');
+        entry.support_ability_tag_cn = tagNames.map(n => tagCnLookup[n] || n).join('、');
+      } else {
+        entry.support_ability_tag_ja = null;
+        entry.support_ability_tag_cn = null;
+      }
+    } else {
+      entry.support_ability_attr = null;
+      entry.support_ability_role = null;
+      entry.support_ability_tag_ja = null;
+      entry.support_ability_tag_cn = null;
+    }
+  } else {
+    entry.support_ability_description = null;
+    entry.support_ability_attr = null;
+    entry.support_ability_role = null;
+    entry.support_ability_tag_ja = null;
+    entry.support_ability_tag_cn = null;
+  }
+
   // 预计算图片文件大小
   const imgPath = path.join(__dirname, '..', 'image', 'character', `${character.id}.png`);
   if (fs.existsSync(imgPath)) {
