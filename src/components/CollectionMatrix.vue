@@ -8,6 +8,8 @@ const props = defineProps({
   characters: { type: Array, required: true },
   ownedSet: { type: Object, required: true },
   size: { type: Number, default: 56 },
+  onPointerDown: { type: Function, default: null },
+  onPointerEnter: { type: Function, default: null },
 })
 
 const emit = defineEmits(['toggle'])
@@ -44,7 +46,7 @@ function getCell(rid, aid) {
 </script>
 
 <template>
-  <table class="collection-matrix">
+  <table class="collection-matrix" @pointerup="emit('pointerup')" @pointerleave="emit('pointerup')">
     <thead>
       <tr>
         <th class="matrix-corner"></th>
@@ -68,6 +70,8 @@ function getCell(rid, aid) {
               class="collection-avatar-item"
               :class="{ owned: ownedSet.has(entry.id) }"
               @click="emit('toggle', entry.id)"
+              @pointerdown.prevent="onPointerDown?.(entry.id)"
+              @pointerenter="onPointerEnter?.(entry.id)"
             >
               <AvatarDisplay :index-entry="entry" :size="size" />
             </div>

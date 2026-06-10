@@ -107,6 +107,33 @@ function onLoadCode() {
   }
 }
 
+// ── 拖拽选择 ──
+const dragging = ref(false)
+const dragAction = ref(null)
+function onPointerDown(id) {
+  dragging.value = true
+  const owned = isOwned(id)
+  dragAction.value = owned ? 'remove' : 'add'
+  toggleOwned(id)
+}
+function onPointerEnter(id) {
+  if (!dragging.value) return
+  const owned = isOwned(id)
+  if (dragAction.value === 'add' && !owned) toggleOwned(id)
+  else if (dragAction.value === 'remove' && owned) toggleOwned(id)
+}
+function onPointerUp() {
+  dragging.value = false
+  dragAction.value = null
+}
+function selectAll() {
+  for (const c of characterIndex.value) {
+    if (!isOwned(c.id)) toggleOwned(c.id)
+  }
+}
+function invertSelect() {
+  for (const c of characterIndex.value) toggleOwned(c.id)
+}
 function onAvatarClick(id) {
   toggleOwned(id)
 }
@@ -164,8 +191,9 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
           >{{ t('collectionMatrix') }}</button>
           <label class="collection-check"><input type="checkbox" v-model="showOwned">已拥有</label>
           <label class="collection-check"><input type="checkbox" v-model="showUnowned">未拥有</label>
-          <span class="collection-size-label">色彩模式：</span>
           <button class="collection-color-btn" @click="colorMode = !colorMode">{{ colorMode ? '彩色' : '黑白' }}</button>
+          <button class="collection-color-btn" @click="selectAll">全选</button>
+          <button class="collection-color-btn" @click="invertSelect">反选</button>
         </span>
         <span class="collection-size-group" v-if="viewMode === 'sequential'">
           <span class="collection-size-label">头像尺寸</span>
@@ -182,13 +210,15 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
       </div>
 
       <!-- 列表模式 -->
-      <div v-if="viewMode === 'sequential'" class="collection-sequential" :style="seqGridStyle">
+      <div v-if="viewMode === 'sequential'" class="collection-sequential" :style="seqGridStyle" @pointerup="onPointerUp" @pointerleave="onPointerUp">
         <div
           v-for="entry in filteredSortedCharacters"
           :key="entry.id"
           class="collection-avatar-item"
           :class="{ owned: isOwned(entry.id) }"
           @click="onAvatarClick(entry.id)"
+          @pointerdown.prevent="onPointerDown(entry.id)"
+          @pointerenter="onPointerEnter(entry.id)"
         >
           <AvatarDisplay :index-entry="entry" :size="seqSize" />
         </div>
@@ -201,7 +231,10 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
         :characters="filteredSortedCharacters"
         :owned-set="ownedIds"
         :size="matSize"
+        :on-pointer-down="onPointerDown"
+        :on-pointer-enter="onPointerEnter"
         @toggle="onAvatarClick"
+        @pointerup="onPointerUp"
       />
     </template>
   </div>
