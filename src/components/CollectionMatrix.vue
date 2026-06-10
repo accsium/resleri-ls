@@ -12,7 +12,7 @@ const props = defineProps({
   onPointerEnter: { type: Function, default: null },
 })
 
-const emit = defineEmits(['toggle'])
+const emit = defineEmits(['pointerup'])
 
 const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 
@@ -69,7 +69,6 @@ function getCell(rid, aid) {
               :key="entry.id"
               class="collection-avatar-item"
               :class="{ owned: ownedSet.has(entry.id) }"
-              @click="emit('toggle', entry.id)"
               @pointerdown="onPointerDown?.(entry.id)"
               @pointerenter="onPointerEnter?.(entry.id)"
             >

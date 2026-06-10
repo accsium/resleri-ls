@@ -29,10 +29,9 @@ function saveUI() {
   }))
 }
 const viewMode = ref(loadUI('viewMode', 'sequential'))
-const seqSize = ref(loadUI('seqSize', 84))
+const seqSize = ref(loadUI('seqSize', 96))
 const matSize = ref(loadUI('matSize', 48))
 const colorMode = ref(loadUI('colorMode', false))
-const outlineWidth = computed(() => Math.max(1, Math.round((viewMode.value === 'sequential' ? seqSize.value : matSize.value) / 36)) + 'px')
 const sizeSteps = computed(() => {
   const min = viewMode.value === 'sequential' ? 48 : 24
   const max = viewMode.value === 'sequential' ? 160 : 80
@@ -134,10 +133,6 @@ function selectAll() {
 function invertSelect() {
   for (const c of characterIndex.value) toggleOwned(c.id)
 }
-function onAvatarClick(id) {
-  toggleOwned(id)
-}
-
 function onSave() {
   saveToStorage()
   savedFlash.value = true
@@ -158,7 +153,7 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
 </script>
 
 <template>
-  <div class="collection-layout" :class="{ 'color-mode': colorMode }" :style="{ '--outline-w': outlineWidth, '--outline-r': outlineRadius }">
+  <div class="collection-layout" :class="{ 'color-mode': colorMode }">
     <div v-if="!isLoaded" class="loading">{{ t('loading') }}</div>
 
     <template v-else>
@@ -210,13 +205,12 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
       </div>
 
       <!-- 列表模式 -->
-      <div v-if="viewMode === 'sequential'" class="collection-sequential" :style="seqGridStyle" @pointerup="onPointerUp" @pointerleave="onPointerUp">
+      <div v-if="viewMode === 'sequential'" class="collection-sequential" :style="seqGridStyle" @pointerup="onPointerUp" @pointerleave="onPointerUp" @dragstart.prevent>
         <div
           v-for="entry in filteredSortedCharacters"
           :key="entry.id"
           class="collection-avatar-item"
           :class="{ owned: isOwned(entry.id) }"
-          @click="onAvatarClick(entry.id)"
           @pointerdown="onPointerDown(entry.id)"
           @pointerenter="onPointerEnter(entry.id)"
         >
@@ -233,7 +227,6 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
         :size="matSize"
         :on-pointer-down="onPointerDown"
         :on-pointer-enter="onPointerEnter"
-        @toggle="onAvatarClick"
         @pointerup="onPointerUp"
       />
     </template>
@@ -243,7 +236,7 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
 <style scoped>
 .collection-layout {
   width: 90%;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 16px 0 20px;
 }
@@ -346,15 +339,6 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
   color: var(--text-muted);
   margin-left: 12px;
 }
-.collection-size-btn {
-  width: 20px; height: 20px;
-  font-size: 14px; line-height: 1;
-  padding: 0; border: none;
-  background: transparent;
-  color: var(--text-muted);
-  cursor: pointer;
-  flex-shrink: 0;
-}
 .collection-size-group {
   display: flex;
   align-items: center;
@@ -388,6 +372,8 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
   line-height: 0;
   width: var(--item-w);
   height: var(--item-w);
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 /* 矩阵深色格子 */

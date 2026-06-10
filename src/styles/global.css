@@ -589,6 +589,12 @@ input:checked + .slider::before { transform: translateX(16px); }
   filter: grayscale(1);
   opacity: 0.55;
   transition: filter 0.2s, opacity 0.2s;
+  user-select: none;
+  -webkit-user-drag: none;
+  touch-action: none;
+}
+.collection-avatar-item * {
+  pointer-events: none !important;
 }
 .collection-avatar-item:hover {
   opacity: 0.8;
