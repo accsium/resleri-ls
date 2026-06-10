@@ -9,7 +9,18 @@ const sortPriority = ref([]) // ordered list of { field, type } for multi-field 
 const currentSortOrder = ref('desc')
 const searchText = ref('')
 const currentPage = ref(1)
-const pageSize = ref(50)
+
+function loadPageSize() {
+  try {
+    const v = localStorage.getItem('resleri-pageSize')
+    if (v && [30, 50, 100, 300].includes(Number(v))) return Number(v)
+  } catch {}
+  return 50
+}
+const pageSize = ref(loadPageSize())
+watch(pageSize, (v) => {
+  try { localStorage.setItem('resleri-pageSize', String(v)) } catch {}
+})
 
 const activeFilters = ref({
   attack_attributes: [],

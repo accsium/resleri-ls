@@ -4,7 +4,7 @@ import { useFilters } from '../composables/useFilters'
 
 const { currentPage, pageSize, totalPages } = useFilters()
 const jumpPage = ref('')
-const PAGE_SIZES = [30, 50, 100, 300, 500]
+const PAGE_SIZES = [30, 50, 100, 300]
 
 function goTo(page) {
   const p = Math.max(1, Math.min(page, totalPages.value))

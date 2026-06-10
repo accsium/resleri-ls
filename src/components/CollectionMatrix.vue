@@ -7,6 +7,7 @@ import IconDisplay from './IconDisplay.vue'
 const props = defineProps({
   characters: { type: Array, required: true },
   ownedSet: { type: Object, required: true },
+  size: { type: Number, default: 56 },
 })
 
 const emit = defineEmits(['toggle'])
@@ -68,7 +69,7 @@ function getCell(rid, aid) {
               :class="{ owned: ownedSet.has(entry.id) }"
               @click="emit('toggle', entry.id)"
             >
-              <AvatarDisplay :index-entry="entry" :size="56" />
+              <AvatarDisplay :index-entry="entry" :size="size" />
             </div>
           </div>
         </td>
@@ -86,7 +87,7 @@ function getCell(rid, aid) {
 }
 
 .matrix-corner {
-  width: 56px;
+  width: 36px;
 }
 
 .matrix-role-hd {
@@ -99,15 +100,14 @@ function getCell(rid, aid) {
   white-space: nowrap;
 }
 .matrix-role-hd span {
-  display: block;
-  margin-top: 2px;
+  display: inline;
 }
 
 .matrix-attr-label {
   text-align: center;
   font-size: 12px;
   color: var(--text-muted);
-  padding: 4px 8px;
+  padding: 4px 2px;
   background: var(--bg-stat);
   border-radius: var(--radius);
   white-space: nowrap;
@@ -121,8 +121,8 @@ function getCell(rid, aid) {
   background: var(--bg-card);
   border-radius: var(--radius);
   padding: 4px;
-  min-width: 64px;
-  min-height: 64px;
+  min-width: v-bind(size + 'px');
+  min-height: v-bind(size + 'px');
   vertical-align: top;
 }
 .matrix-cell-inner {

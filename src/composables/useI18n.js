@@ -39,7 +39,6 @@ const UI_TEXT = {
     collectionMatrix: '分類',
     collectionOwnedCount: '所持 {n} / {total}',
     collectionNoMatch: '条件に一致するキャラクターがいません',
-    collectionSharedTitle: '共有コレクション',
     applyFilter: '適用', clearFilter: 'クリア',
   },
   cn: {
@@ -83,7 +82,6 @@ const UI_TEXT = {
     collectionMatrix: '分类',
     collectionOwnedCount: '已拥有 {n} / {total}',
     collectionNoMatch: '没有符合条件的角色',
-    collectionSharedTitle: '共享收藏',
     applyFilter: '应用筛选', clearFilter: '清除',
   }
 }

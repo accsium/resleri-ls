@@ -17,6 +17,8 @@ const route = useRoute()
 
 // ── 视图模式 ──
 const viewMode = ref('sequential')
+const seqSize = ref(84)
+const matSize = ref(56)
 
 // ── 从 URL 分享码初始化 ──
 const codeFromUrl = computed(() => route.params.code || null)
@@ -52,8 +54,15 @@ const filteredSortedCharacters = computed(() => {
 const noMatch = computed(() => filteredSortedCharacters.value.length === 0)
 
 // ── 操作 ──
+const shareInput = ref('')
 const savedFlash = ref(false)
 const copiedFlash = ref(false)
+
+function onLoadCode() {
+  if (shareInput.value) {
+    loadFromCode(shareInput.value, characterIndex.value)
+  }
+}
 
 function onAvatarClick(id) {
   toggleOwned(id)
@@ -89,7 +98,8 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
         <button class="collection-save-btn" @click="onSave">
           {{ savedFlash ? t('collectionSaved') : t('collectionSave') }}
         </button>
-        <code class="collection-share-code">{{ shareCode }}</code>
+        <input type="text" v-model="shareInput" class="collection-share-input" :placeholder="shareCode">
+        <button class="collection-load-btn" @click="onLoadCode">读取</button>
         <button class="collection-copy-btn" @click="onCopyLink">
           {{ copiedFlash ? t('collectionCopied') : t('collectionCopyLink') }}
         </button>
@@ -100,14 +110,26 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
 
       <!-- 模式切换 -->
       <div class="collection-mode-bar">
-        <button
-          :class="{ active: viewMode === 'sequential' }"
-          @click="viewMode = 'sequential'"
-        >{{ t('collectionSequential') }}</button>
-        <button
-          :class="{ active: viewMode === 'matrix' }"
-          @click="viewMode = 'matrix'"
-        >{{ t('collectionMatrix') }}</button>
+        <span>
+          <button
+            :class="{ active: viewMode === 'sequential' }"
+            @click="viewMode = 'sequential'"
+          >{{ t('collectionSequential') }}</button>
+          <button
+            :class="{ active: viewMode === 'matrix' }"
+            @click="viewMode = 'matrix'"
+          >{{ t('collectionMatrix') }}</button>
+        </span>
+        <span class="collection-size-group" v-if="viewMode === 'sequential'">
+          <span class="collection-size-label">头像尺寸</span>
+          <input type="range" v-model.number="seqSize" min="32" max="320" class="collection-size-slider">
+          <input type="number" v-model.number="seqSize" min="32" max="320" class="collection-size-num"><span class="collection-size-px">px</span>
+        </span>
+        <span class="collection-size-group" v-else>
+          <span class="collection-size-label">头像尺寸</span>
+          <input type="range" v-model.number="matSize" min="8" max="80" class="collection-size-slider">
+          <input type="number" v-model.number="matSize" min="8" max="80" class="collection-size-num"><span class="collection-size-px">px</span>
+        </span>
       </div>
 
       <!-- 列表模式 -->
@@ -119,7 +141,7 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
           :class="{ owned: isOwned(entry.id) }"
           @click="onAvatarClick(entry.id)"
         >
-          <AvatarDisplay :index-entry="entry" :size="84" />
+          <AvatarDisplay :index-entry="entry" :size="seqSize" />
         </div>
         <div v-if="noMatch" class="collection-empty">{{ t('collectionNoMatch') }}</div>
       </div>
@@ -129,6 +151,7 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
         v-else
         :characters="filteredSortedCharacters"
         :owned-set="ownedIds"
+        :size="matSize"
         @toggle="onAvatarClick"
       />
     </template>
@@ -173,21 +196,33 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
   background: var(--bg-stat);
 }
 
-.collection-share-code {
+.collection-share-input {
+  flex: 1;
+  min-width: 0;
   font-size: 12px;
-  background: var(--bg-stat);
-  padding: 4px 8px;
-  border-radius: var(--radius);
   font-family: monospace;
-  color: var(--text-secondary);
-  user-select: all;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-stat);
+  color: var(--text-primary);
+}
+.collection-load-btn {
+  font-size: 12px;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-radius: var(--radius);
+  cursor: pointer;
 }
 
 /* 模式切换 */
 .collection-mode-bar {
   display: flex;
   gap: 0;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 8px 0;
 }
 .collection-mode-bar button {
@@ -205,16 +240,54 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
   color: #fff;
   border-color: var(--accent);
 }
+.collection-size-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-left: 12px;
+}
+.collection-size-slider {
+  width: 120px;
+  margin-left: 12px;
+  accent-color: var(--accent);
+}
+.collection-size-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.collection-size-num {
+  width: 48px;
+  font-size: 12px;
+  padding: 2px 4px;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  -moz-appearance: textfield;
+}
+.collection-size-num::-webkit-inner-spin-button,
+.collection-size-num::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.collection-size-px {
+  font-size: 12px;
+  color: var(--text-muted);
+}
 
 /* 列表模式 */
 .collection-sequential {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 84px);
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, v-bind(seqSize + 'px'));
   justify-content: center;
+  gap: 4px;
   padding: 16px;
   background: #4a515e;
   border-radius: var(--radius-lg);
+}
+.collection-sequential .collection-avatar-item {
+  line-height: 0;
 }
 
 /* 矩阵深色格子 */

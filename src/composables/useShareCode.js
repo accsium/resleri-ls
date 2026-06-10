@@ -49,5 +49,5 @@ export function useShareCode() {
     }
   }
 
-  return { encodeShareCode, decodeShareCode, getCanonicalOrder, canonicalSort }
+  return { encodeShareCode, decodeShareCode }
 }

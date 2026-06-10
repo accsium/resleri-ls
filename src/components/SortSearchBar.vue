@@ -50,11 +50,10 @@ function onCategoryChange(e) {
           </button>
         </div>
       </div>
-      <div class="sf-right-group">
-        <div class="sf-group">
-          <span class="sf-label">搜索</span>
-          <input type="text" name="search" v-model="searchText" :placeholder="t('searchPlaceholder')">
-        </div>
+      <div class="sf-spacer"></div>
+      <div class="sf-group">
+        <span class="sf-label">搜索</span>
+        <input type="text" name="search" v-model="searchText" :placeholder="t('searchPlaceholder')">
       </div>
     </div>
     </div>
@@ -64,14 +63,6 @@ function onCategoryChange(e) {
 <style scoped>
 .ss-bar {
   padding: 0 16px;
-}
-.ss-bar select {
-  font-size: 12px;
-  padding: 2px 6px;
-}
-.ss-bar .sf-order-btn {
-  font-size: 12px;
-  padding: 2px 8px;
 }
 .ss-bar input[type="text"] {
   width: 160px;

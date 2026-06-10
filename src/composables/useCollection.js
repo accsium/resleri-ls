@@ -66,11 +66,6 @@ export function useCollection() {
     return false
   }
 
-  // 直接设置拥有的 ID 集合
-  function setOwnedIds(ids) {
-    ownedIds.value = new Set(ids)
-  }
-
   return {
     ownedIds,
     ownedCount,
@@ -78,9 +73,6 @@ export function useCollection() {
     isOwned,
     toggleOwned,
     saveToStorage,
-    loadFromStorage,
     loadFromCode,
-    setOwnedIds,
-    decodeShareCode,
   }
 }
