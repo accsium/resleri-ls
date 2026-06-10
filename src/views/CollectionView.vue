@@ -16,9 +16,37 @@ const { activeFilters } = useFilters()
 const route = useRoute()
 
 // ── 视图模式 ──
-const viewMode = ref('sequential')
-const seqSize = ref(84)
-const matSize = ref(56)
+// ── UI 状态持久化 ──
+const UI_KEY = 'resleri-collection-ui'
+function loadUI(key, def) {
+  try { const r = localStorage.getItem(UI_KEY); if (r) { const v = JSON.parse(r)[key]; if (v != null) return v } } catch {}
+  return def
+}
+function saveUI() {
+  localStorage.setItem(UI_KEY, JSON.stringify({
+    viewMode: viewMode.value, seqSize: seqSize.value, matSize: matSize.value,
+    colorMode: colorMode.value, showOwned: showOwned.value, showUnowned: showUnowned.value,
+  }))
+}
+const viewMode = ref(loadUI('viewMode', 'sequential'))
+const seqSize = ref(loadUI('seqSize', 84))
+const matSize = ref(loadUI('matSize', 48))
+const colorMode = ref(loadUI('colorMode', false))
+const outlineWidth = computed(() => Math.max(1, Math.round((viewMode.value === 'sequential' ? seqSize.value : matSize.value) / 36)) + 'px')
+const sizeSteps = computed(() => {
+  const min = viewMode.value === 'sequential' ? 48 : 24
+  const max = viewMode.value === 'sequential' ? 160 : 80
+  const step = viewMode.value === 'sequential' ? 16 : 8
+  const cur = viewMode.value === 'sequential' ? seqSize.value : matSize.value
+  const steps = []
+  for (let s = min; s <= max; s += step) steps.push({ val: s, active: s === cur, below: s < cur })
+  return steps
+})
+const seqGridStyle = computed(() => ({
+  gridTemplateColumns: `repeat(auto-fill, ${seqSize.value}px)`,
+  gridAutoRows: `${seqSize.value}px`,
+  '--item-w': `${seqSize.value}px`,
+}))
 
 // ── 从 URL 分享码初始化 ──
 const codeFromUrl = computed(() => route.params.code || null)
@@ -64,8 +92,9 @@ const filteredSortedCharacters = computed(() => {
 const noMatch = computed(() => filteredSortedCharacters.value.length === 0)
 
 // ── 拥有筛选 ──
-const showOwned = ref(true)
-const showUnowned = ref(true)
+const showOwned = ref(loadUI('showOwned', true))
+const showUnowned = ref(loadUI('showUnowned', true))
+watch([viewMode, seqSize, matSize, colorMode, showOwned, showUnowned], saveUI)
 
 // ── 操作 ──
 const shareInput = ref('')
@@ -102,7 +131,7 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
 </script>
 
 <template>
-  <div class="collection-layout">
+  <div class="collection-layout" :class="{ 'color-mode': colorMode }" :style="{ '--outline-w': outlineWidth, '--outline-r': outlineRadius }">
     <div v-if="!isLoaded" class="loading">{{ t('loading') }}</div>
 
     <template v-else>
@@ -124,7 +153,7 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
 
       <!-- 模式切换 -->
       <div class="collection-mode-bar">
-        <span>
+        <span class="collection-mode-btns">
           <button
             :class="{ active: viewMode === 'sequential' }"
             @click="viewMode = 'sequential'"
@@ -135,21 +164,25 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
           >{{ t('collectionMatrix') }}</button>
           <label class="collection-check"><input type="checkbox" v-model="showOwned">已拥有</label>
           <label class="collection-check"><input type="checkbox" v-model="showUnowned">未拥有</label>
+          <span class="collection-size-label">色彩模式：</span>
+          <button class="collection-color-btn" @click="colorMode = !colorMode">{{ colorMode ? '彩色' : '黑白' }}</button>
         </span>
         <span class="collection-size-group" v-if="viewMode === 'sequential'">
           <span class="collection-size-label">头像尺寸</span>
-          <input type="range" v-model.number="seqSize" min="32" max="320" class="collection-size-slider">
-          <input type="number" v-model.number="seqSize" min="32" max="320" class="collection-size-num"><span class="collection-size-px">px</span>
+          <span class="size-steps">
+            <span v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="seqSize = s.val"></span>
+          </span>
         </span>
         <span class="collection-size-group" v-else>
           <span class="collection-size-label">头像尺寸</span>
-          <input type="range" v-model.number="matSize" min="8" max="80" class="collection-size-slider">
-          <input type="number" v-model.number="matSize" min="8" max="80" class="collection-size-num"><span class="collection-size-px">px</span>
+          <span class="size-steps">
+            <span v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="matSize = s.val"></span>
+          </span>
         </span>
       </div>
 
       <!-- 列表模式 -->
-      <div v-if="viewMode === 'sequential'" class="collection-sequential">
+      <div v-if="viewMode === 'sequential'" class="collection-sequential" :style="seqGridStyle">
         <div
           v-for="entry in filteredSortedCharacters"
           :key="entry.id"
@@ -236,21 +269,28 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
 /* 模式切换 */
 .collection-mode-bar {
   display: flex;
-  gap: 0;
+  gap: 8px;
   justify-content: space-between;
   align-items: center;
   padding: 8px 0;
 }
+.collection-mode-btns {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 .collection-mode-bar button {
-  padding: 5px 20px;
+  padding: 0 8px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--border);
   background: var(--bg-card);
   color: var(--text-muted);
-  font-size: 13px;
+  font-size: 12px;
   cursor: pointer;
 }
-.collection-mode-bar button:first-child { border-radius: var(--radius) 0 0 var(--radius); }
-.collection-mode-bar button:last-child  { border-radius: 0 var(--radius) var(--radius) 0; }
 .collection-mode-bar button.active {
   background: var(--accent);
   color: #fff;
@@ -273,49 +313,48 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
   color: var(--text-muted);
   margin-left: 12px;
 }
-.collection-size-slider {
-  width: 120px;
-  margin-left: 12px;
-  accent-color: var(--accent);
+.collection-size-btn {
+  width: 20px; height: 20px;
+  font-size: 14px; line-height: 1;
+  padding: 0; border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
 }
 .collection-size-group {
   display: flex;
   align-items: center;
   gap: 2px;
 }
-.collection-size-num {
-  width: 48px;
-  font-size: 12px;
-  padding: 2px 4px;
-  text-align: center;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-card);
-  color: var(--text-primary);
-  -moz-appearance: textfield;
+.size-steps {
+  display: flex;
+  align-items: center;
 }
-.collection-size-num::-webkit-inner-spin-button,
-.collection-size-num::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.size-step {
+  width: 10px; height: 10px;
+  background: #5a6a7e;
+  border: 0.2px solid #000;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-left: -1px;
 }
-.collection-size-px {
-  font-size: 12px;
-  color: var(--text-muted);
-}
+.size-step:first-child { margin-left: 0; }
+.size-step.below { background: #42a5f5; }
+.size-step.active { background: #fdd835; }
 
 /* 列表模式 */
 .collection-sequential {
   display: grid;
-  grid-template-columns: repeat(auto-fill, v-bind(seqSize + 'px'));
   justify-content: center;
-  gap: 4px;
   padding: 16px;
   background: #4a515e;
   border-radius: var(--radius-lg);
 }
 .collection-sequential .collection-avatar-item {
   line-height: 0;
+  width: var(--item-w);
+  height: var(--item-w);
 }
 
 /* 矩阵深色格子 */

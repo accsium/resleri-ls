@@ -597,6 +597,14 @@ input:checked + .slider::before { transform: translateX(16px); }
   filter: none;
   opacity: 1;
 }
+/* 彩色模式 */
+.color-mode .collection-avatar-item {
+  filter: none;
+  opacity: 1;
+}
+.color-mode .collection-avatar-item.owned {
+  background: #fff;
+}
 
 /* ========== 支援能力特殊状态 ========== */
 .support-unreachable {
