@@ -217,7 +217,7 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
           class="collection-avatar-item"
           :class="{ owned: isOwned(entry.id) }"
           @click="onAvatarClick(entry.id)"
-          @pointerdown.prevent="onPointerDown(entry.id)"
+          @pointerdown="onPointerDown(entry.id)"
           @pointerenter="onPointerEnter(entry.id)"
         >
           <AvatarDisplay :index-entry="entry" :size="seqSize" />

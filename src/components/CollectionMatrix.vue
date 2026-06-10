@@ -70,7 +70,7 @@ function getCell(rid, aid) {
               class="collection-avatar-item"
               :class="{ owned: ownedSet.has(entry.id) }"
               @click="emit('toggle', entry.id)"
-              @pointerdown.prevent="onPointerDown?.(entry.id)"
+              @pointerdown="onPointerDown?.(entry.id)"
               @pointerenter="onPointerEnter?.(entry.id)"
             >
               <AvatarDisplay :index-entry="entry" :size="size" />
