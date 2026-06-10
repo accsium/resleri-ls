@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
@@ -110,10 +110,11 @@ function onLoadCode() {
 const dragging = ref(false)
 const dragAction = ref(null)
 function onPointerDown(id) {
-  dragging.value = true
   const owned = isOwned(id)
-  dragAction.value = owned ? 'remove' : 'add'
   toggleOwned(id)
+  if (!showOwned.value || !showUnowned.value) return
+  dragging.value = true
+  dragAction.value = owned ? 'remove' : 'add'
 }
 function onPointerEnter(id) {
   if (!dragging.value) return
@@ -150,10 +151,19 @@ async function onCopyLink() {
 
 // ── 加载状态 ──
 const isLoaded = computed(() => characterIndex.value.length > 0)
+
+// 防止拖拽/选中
+const layoutRef = ref(null)
+onMounted(() => {
+  if (layoutRef.value) {
+    layoutRef.value.addEventListener('selectstart', e => e.preventDefault())
+    layoutRef.value.addEventListener('dragstart', e => e.preventDefault())
+  }
+})
 </script>
 
 <template>
-  <div class="collection-layout" :class="{ 'color-mode': colorMode }">
+  <div ref="layoutRef" class="collection-layout" :class="{ 'color-mode': colorMode }" @selectstart.prevent>
     <div v-if="!isLoaded" class="loading">{{ t('loading') }}</div>
 
     <template v-else>
@@ -239,6 +249,7 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 0 20px;
+  user-select: none;
 }
 
 .collection-controls {

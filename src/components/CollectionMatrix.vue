@@ -46,7 +46,7 @@ function getCell(rid, aid) {
 </script>
 
 <template>
-  <table class="collection-matrix" @pointerup="emit('pointerup')" @pointerleave="emit('pointerup')">
+  <table class="collection-matrix" @pointerup="emit('pointerup')" @pointerleave="emit('pointerup')" @dragstart.prevent>
     <thead>
       <tr>
         <th class="matrix-corner"></th>

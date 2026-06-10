@@ -609,7 +609,9 @@ input:checked + .slider::before { transform: translateX(16px); }
   opacity: 1;
 }
 .color-mode .collection-avatar-item.owned {
-  background: #fff;
+  background: rgba(8, 22, 30, 0.75);
+  outline: 3px solid #b8382e;
+  outline-offset: -1.5px;
 }
 
 /* ========== 支援能力特殊状态 ========== */
