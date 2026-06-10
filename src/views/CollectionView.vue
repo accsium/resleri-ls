@@ -46,12 +46,26 @@ const filteredSortedCharacters = computed(() => {
     list = list.filter(c => (c.attack_attributes || []).some(a => fa.attack_attributes.includes(a)))
   }
 
+  // 拥有筛选
+  if (!showOwned.value || !showUnowned.value) {
+    list = list.filter(c => {
+      const owned = isOwned(c.id)
+      if (owned && !showOwned.value) return false
+      if (!owned && !showUnowned.value) return false
+      return true
+    })
+  }
+
   // UID 倒序（最新在前）
   list.sort((a, b) => (b.uid || '').localeCompare(a.uid || ''))
   return list
 })
 
 const noMatch = computed(() => filteredSortedCharacters.value.length === 0)
+
+// ── 拥有筛选 ──
+const showOwned = ref(true)
+const showUnowned = ref(true)
 
 // ── 操作 ──
 const shareInput = ref('')
@@ -119,6 +133,8 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
             :class="{ active: viewMode === 'matrix' }"
             @click="viewMode = 'matrix'"
           >{{ t('collectionMatrix') }}</button>
+          <label class="collection-check"><input type="checkbox" v-model="showOwned">已拥有</label>
+          <label class="collection-check"><input type="checkbox" v-model="showUnowned">未拥有</label>
         </span>
         <span class="collection-size-group" v-if="viewMode === 'sequential'">
           <span class="collection-size-label">头像尺寸</span>
@@ -239,6 +255,18 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
   background: var(--accent);
   color: #fff;
   border-color: var(--accent);
+}
+.collection-check {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.collection-check input {
+  accent-color: var(--accent);
 }
 .collection-size-label {
   font-size: 12px;
