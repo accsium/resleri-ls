@@ -88,13 +88,6 @@ function pageNumbers() {
   color: var(--text-muted);
 }
 .pg-btn {
-  padding: 4px 10px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-card);
-  color: var(--text-primary);
-  cursor: pointer;
-  font-size: 12px;
 }
 .pg-btn:disabled {
   opacity: 0.4;

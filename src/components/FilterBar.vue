@@ -147,29 +147,19 @@ function toggleTraitRight(id) {
 // ── 标签/词条下拉数据 ──
 const { characterIndex } = useCharacterData()
 
-const tagsJa = ref([])
-const tagsCn = ref([])
-const allTags = computed(() => panelLang.value === 'cn' ? tagsCn.value : tagsJa.value)
-const allTagsGrouped = computed(() => {
-  const list = allTags.value
-  let lastGroup = null
-  return list.map(t => {
-    const sep = lastGroup != null && lastGroup !== t.group
-    lastGroup = t.group
-    return { ...t, sep }
-  })
-})
-
 const battleTraitsJa = ref([])
 const battleTraitsCn = ref([])
 const equipTraitsJa = ref([])
 const equipTraitsCn = ref([])
+const charTagsJa = ref([])
+const charTagsCn = ref([])
 const allBattleTraits = computed(() => panelLang.value === 'cn' ? battleTraitsCn.value : battleTraitsJa.value)
 const allEquipTraits = computed(() => panelLang.value === 'cn' ? equipTraitsCn.value : equipTraitsJa.value)
+const allCharTags = computed(() => panelLang.value === 'cn' ? charTagsCn.value : charTagsJa.value)
 const allTitles = computed(() => {
   const seen = new Set()
   const list = []
-  const field = currentLang.value === 'cn' ? 'original_title_name_cn' : 'original_title_name_ja'
+  const field = panelLang.value === 'cn' ? 'original_title_name_cn' : 'original_title_name_ja'
   for (const c of characterIndex.value) {
     const id = c.original_title_id
     const name = c[field]
@@ -178,7 +168,7 @@ const allTitles = computed(() => {
     list.push({ id, name })
   }
   list.sort((a, b) => a.id - b.id)
-  return list.map(t => t.name)
+  return list
 })
 
 function groupTraits(list, getName) {
@@ -207,31 +197,14 @@ onMounted(async () => {
     battleTraitsCn.value = groupTraits(bt, t => t.name_cn || t.name)
     equipTraitsJa.value = groupTraits(et, t => t.name)
     equipTraitsCn.value = groupTraits(et, t => t.name_cn || t.name)
-
-    const tagCats = {}
     tg.sort((a, b) => a.priority - b.priority).forEach(t => {
-      const g = Math.floor(t.priority / 1000)
-      if (!tagCats[g]) tagCats[g] = { ja: [], cn: [] }
-      tagCats[g].ja.push({ name: t.name, group: g })
-      tagCats[g].cn.push({ name: t.name_cn || t.name, group: g })
+      charTagsJa.value.push({ id: t.id, name: t.name })
+      charTagsCn.value.push({ id: t.id, name: t.name_cn || t.name })
     })
-    const buildTags = lang => {
-      const result = []
-      for (const g of Object.keys(tagCats).sort((a, b) => a - b)) {
-        result.push(...tagCats[g][lang])
-      }
-      return result
-    }
-    tagsJa.value = buildTags('ja')
-    tagsCn.value = buildTags('cn')
   } catch {}
 })
 
 // 选中的标签/词条
-const selectedTags = computed({
-  get: () => activeFilters.value.tags || [],
-  set: (v) => toggleFilter('tags', v),
-})
 const selectedBattleTraits = computed({
   get: () => activeFilters.value.battle_tool_traits || [],
   set: (v) => toggleFilter('battle_tool_traits', v),
@@ -239,6 +212,10 @@ const selectedBattleTraits = computed({
 const selectedEquipTraits = computed({
   get: () => activeFilters.value.equipment_tool_traits || [],
   set: (v) => toggleFilter('equipment_tool_traits', v),
+})
+const selectedTags = computed({
+  get: () => activeFilters.value.tags || [],
+  set: (v) => toggleFilter('tags', v),
 })
 const permStatus = computed({
   get: () => activeFilters.value.permanent_status || [],
@@ -266,7 +243,7 @@ function toggleAtelierFes(s) {
   <div class="sf-wrapper">
     <div ref="panelEl" class="sort-filter-bar filter-panel" :class="{ 'sf-collapsed': collapsed }">
     <!-- 行1：初始星级 + 职业/属性图标 -->
-    <div class="sf-row" :class="{ 'no-divider': collapsed }">
+    <div class="sf-row">
       <div class="sf-field">
         <span class="sf-label">初始星级</span>
         <div class="sf-field-items">
@@ -303,7 +280,7 @@ function toggleAtelierFes(s) {
         <button class="sf-collapse-btn" @click="clearAll">清除筛选</button>
       </div>
     </div>
-    <!-- 行2：调和颜色 + 词条语言 -->
+    <!-- 行2：调和颜色 + 特殊机制 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-group sf-icons">
         <span class="sf-label">调和颜色</span>
@@ -314,8 +291,7 @@ function toggleAtelierFes(s) {
           @click="toggleTraitLeft(id)"
         >
           <svg width="12" height="24" viewBox="0 0 8 16">
-            <polygon points="8,0 8,16 0,8" :fill="traitColorHex(id)"
-              :opacity="selectedTraitLeft.includes(id) ? 1 : 0.3" />
+            <polygon points="8,0 8,16 0,8" :fill="traitColorHex(id)" />
           </svg>
         </button>
         <button
@@ -325,12 +301,29 @@ function toggleAtelierFes(s) {
           @click="toggleTraitRight(id)"
         >
           <svg width="12" height="24" viewBox="8 0 8 16">
-            <polygon points="8,0 8,16 16,8" :fill="traitColorHex(id)"
-              :opacity="selectedTraitRight.includes(id) ? 1 : 0.3" />
+            <polygon points="8,0 8,16 16,8" :fill="traitColorHex(id)" />
           </svg>
         </button>
       </div>
       <div class="sf-divider"></div>
+      <div class="sf-field">
+        <span class="sf-label">特殊机制</span>
+        <div class="sf-field-items">
+        <button
+          v-for="(label, key) in { has_evo: '进化', has_range: '范围变化', has_transform: '变身', has_active: '发动技能', has_ex: 'EX技能' }"
+          :key="key"
+          class="sf-tri-btn"
+          :class="{ active: activeFilters[key] === 1, exclude: activeFilters[key] === 2 }"
+          @click="toggleFilter(key, (activeFilters[key] || 0) < 2 ? (activeFilters[key] || 0) + 1 : 0)"
+        >
+          {{ label }}{{ activeFilters[key] === 1 ? ' ✓' : activeFilters[key] === 2 ? ' ✕' : '' }}
+        </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 行5：恒常化状态 + ATELIER FES -->
+    <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">恒常化状态</span>
         <div class="sf-field-items">
@@ -348,17 +341,7 @@ function toggleAtelierFes(s) {
           </label>
         </div>
       </div>
-      <div class="sf-right-group">
-        <div class="sf-group">
-          <span class="sf-label">词条语言</span>
-          <select name="panel_lang" class="sf-select" v-model="panelLang">
-            <option value="ja">日本語</option>
-            <option value="cn">中文</option>
-          </select>
-        </div>
-      </div>
     </div>
-
     <!-- 行3：道具词条 + 装备词条 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
@@ -376,6 +359,7 @@ function toggleAtelierFes(s) {
         </select>
         </div>
       </div>
+      <div class="sf-divider"></div>
       <div class="sf-field">
         <span class="sf-label">装备词条</span>
         <div class="sf-field-items">
@@ -395,50 +379,43 @@ function toggleAtelierFes(s) {
 
     <!-- 行4：标签 -->
     <div class="sf-row" v-show="!collapsed">
-      <div class="sf-field">
+      <div class="sf-field tag-field">
         <span class="sf-label">标签</span>
         <div class="sf-field-items">
-      <select :name="'tag-'+n" v-for="n in 5" :key="'tag'+n" class="sf-select"
-        :value="selectedTags[n-1] || ''"
-        @change="(e) => { const v = [...selectedTags]; v[n-1] = e.target.value; selectedTags = v }"
-      >
-        <option value="">—</option>
-        <template v-for="(t, i) in allTagsGrouped" :key="i">
-          <option v-if="t.sep" disabled>──────────</option>
-          <option :value="t.name">{{ t.name }}</option>
-        </template>
-      </select>
+        <select :name="'char_tag-'+n" v-for="n in 5" :key="'ct'+n" class="sf-select"
+          :value="selectedTags[n-1] || ''"
+          @change="(e) => { const v = [...selectedTags]; v[n-1] = Number(e.target.value) || ''; selectedTags = v }"
+        >
+          <option value="">—</option>
+          <option v-for="t in allCharTags" :key="t.id" :value="t.id">{{ t.name }}</option>
+        </select>
         </div>
       </div>
     </div>
 
-    <!-- 行5：作品出处 + 特殊机制 -->
-    <div class="sf-row no-divider" v-show="!collapsed">
+    <!-- 行6：作品出处 -->
+    <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">作品出处</span>
         <div class="sf-field-items">
-          <select class="sf-select" :value="activeFilters.original_title" @change="(e) => toggleFilter('original_title', e.target.value)">
+          <select class="sf-select" :value="activeFilters.original_title" @change="(e) => toggleFilter('original_title', Number(e.target.value) || '')">
             <option value="">全部</option>
-            <option v-for="t in allTitles" :key="t" :value="t">{{ t }}</option>
+            <option v-for="t in allTitles" :key="t.id" :value="t.id">{{ t.name }}</option>
           </select>
         </div>
       </div>
-      <div class="sf-divider"></div>
-      <div class="sf-field">
-        <span class="sf-label">特殊机制</span>
-        <div class="sf-field-items">
-        <button
-          v-for="(label, key) in { has_evo: '进化', has_range: '范围变化', has_transform: '变身', has_active: '发动技能', has_ex: 'EX技能' }"
-          :key="key"
-          class="sf-tri-btn"
-          :class="{ active: activeFilters[key] === 1, exclude: activeFilters[key] === 2 }"
-          @click="toggleFilter(key, (activeFilters[key] || 0) < 2 ? (activeFilters[key] || 0) + 1 : 0)"
-        >
-          {{ label }}{{ activeFilters[key] === 1 ? ' ✓' : activeFilters[key] === 2 ? ' ✕' : '' }}
-        </button>
+      <div class="sf-right-group">
+        <div class="sf-group">
+          <span class="sf-label">词条语言</span>
+          <select name="panel_lang" class="sf-select" v-model="panelLang">
+            <option value="ja">日本語</option>
+            <option value="cn">中文</option>
+          </select>
         </div>
       </div>
     </div>
+
+
 
     <div class="sf-toggle-bar" @click="collapsed = !collapsed">
       <span class="sf-toggle-arrow">{{ collapsed ? '▼' : '▲' }}</span>

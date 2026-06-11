@@ -463,6 +463,7 @@ function buildIndexEntry(character) {
     max_rarity: character.max_rarity,
     role: character.role,
     tag_count: (character.tag_ids || []).length,
+    tag_ids: character.tag_ids || [],
     attack_attributes: character.attack_attributes,
     tag_names_ja: (character.tag_ids || []).map(id => jpMaps.character_tag?.get(id) || `ID:${id}`),
     tag_names_cn: (character.tag_ids || []).map(id => cnMaps.character_tag?.get(id) || jpMaps.character_tag?.get(id) || `ID:${id}`),

@@ -68,7 +68,7 @@ const filteredSortedCharacters = computed(() => {
   if (fa.attack_attributes.length) list = list.filter(c => (c.attack_attributes || []).some(a => fa.attack_attributes.includes(a)))
   if (fa.trait_color.length) list = list.filter(c => fa.trait_color.includes(c.trait_color_id))
   if (fa.support_color.length) list = list.filter(c => fa.support_color.includes(c.support_color_id))
-  if (fa.tags.length) list = list.filter(c => fa.tags.every(t => (c.tag_names_ja || []).includes(t) || (c.tag_names_cn || []).includes(t)))
+  if (fa.tags.length) list = list.filter(c => fa.tags.filter(t => t).every(t => (c.tag_ids || []).includes(t)))
   if (fa.battle_tool_traits.length) list = list.filter(c => fa.battle_tool_traits.every(t => (c.battle_tool_trait_ids || []).includes(t)))
   if (fa.equipment_tool_traits.length) list = list.filter(c => fa.equipment_tool_traits.every(t => (c.equipment_tool_trait_ids || []).includes(t)))
   if (fa.permanent_status.length) list = list.filter(c => fa.permanent_status.includes(c.permanent_status || ''))
@@ -77,7 +77,7 @@ const filteredSortedCharacters = computed(() => {
     if (fa.atelier_fes.includes('ATELIER FES I') && pd === 'ATELIER FES') return true
     return fa.atelier_fes.includes(pd)
   })
-  if (fa.original_title) list = list.filter(c => (c.original_title_name_ja || '') === fa.original_title || (c.original_title_name_cn || '') === fa.original_title)
+  if (fa.original_title) list = list.filter(c => c.original_title_id === fa.original_title)
   if (fa.has_evo === 1) list = list.filter(c => c.has_evo)
   if (fa.has_evo === 2) list = list.filter(c => !c.has_evo)
   if (fa.has_range === 1) list = list.filter(c => c.has_range)
@@ -187,12 +187,12 @@ onMounted(() => {
       <!-- 控栏：保存 + 计数 + 分享码 -->
       <div class="collection-controls">
         <span class="collection-count">{{ t('collectionOwnedCount').replace('{n}', ownedCount).replace('{total}', characterIndex.length) }}</span>
-        <button class="collection-save-btn" @click="onSave">
+        <button class="collection-ctrl-btn" @click="onSave">
           {{ savedFlash ? t('collectionSaved') : t('collectionSave') }}
         </button>
         <input type="text" v-model="shareInput" class="collection-share-input" :placeholder="shareCode">
-        <button class="collection-load-btn" @click="onLoadCode">读取</button>
-        <button class="collection-copy-btn" @click="onCopyLink">
+        <button class="collection-ctrl-btn" @click="onLoadCode">读取</button>
+        <button class="collection-ctrl-btn" @click="onCopyLink">
           {{ copiedFlash ? t('collectionCopied') : t('collectionCopyLink') }}
         </button>
       </div>
@@ -283,19 +283,10 @@ onMounted(() => {
   white-space: nowrap;
 }
 
-.collection-save-btn,
-.collection-copy-btn {
-  font-size: 12px;
-  padding: 4px 12px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text-primary);
-  border-radius: var(--radius);
-  cursor: pointer;
+.collection-ctrl-btn {
   white-space: nowrap;
 }
-.collection-save-btn:hover,
-.collection-copy-btn:hover {
+.collection-ctrl-btn:hover {
   background: var(--bg-stat);
 }
 
@@ -309,15 +300,6 @@ onMounted(() => {
   border-radius: var(--radius);
   background: var(--bg-stat);
   color: var(--text-primary);
-}
-.collection-load-btn {
-  font-size: 12px;
-  padding: 4px 12px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text-primary);
-  border-radius: var(--radius);
-  cursor: pointer;
 }
 
 /* 模式切换 */
@@ -334,16 +316,10 @@ onMounted(() => {
   gap: 4px;
 }
 .collection-mode-bar button {
-  padding: 0 8px;
-  height: 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
   color: var(--text-muted);
-  font-size: 12px;
-  cursor: pointer;
 }
 .collection-mode-bar button.active {
   background: var(--accent);

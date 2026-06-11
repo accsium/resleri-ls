@@ -118,8 +118,8 @@ export function useFilters() {
     if (f.support_color.length && !f.support_color.includes(char.support_color_id))
       return false
     if (f.tags.length) {
-      const charTags = char.tag_names_ja || []
-      if (!f.tags.filter(t => t).every(t => charTags.includes(t)))
+      const charTagIds = char.tag_ids || []
+      if (!f.tags.filter(t => t).every(t => charTagIds.includes(t)))
         return false
     }
     if (f.battle_tool_traits.length) {
@@ -143,7 +143,7 @@ export function useFilters() {
     if (f.has_ex === 1 && !char.has_ex) return false
     if (f.has_ex === 2 && char.has_ex) return false
     if (f.original_title) {
-      if (char.original_title_name_ja !== f.original_title && char.original_title_name_cn !== f.original_title) return false
+      if (char.original_title_id !== f.original_title) return false
     }
     if (f.permanent_status.length) {
       if (!f.permanent_status.includes(char.permanent_status || '')) return false
