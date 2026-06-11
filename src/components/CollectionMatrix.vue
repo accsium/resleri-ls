@@ -136,6 +136,5 @@ function getCell(rid, aid) {
 .matrix-cell-inner > * {
   width: v-bind(avatarSize + 'px');
   height: v-bind(avatarSize + 'px');
-  line-height: 0;
 }
 </style>

@@ -579,6 +579,15 @@ input:checked + .slider::before { transform: translateX(16px); }
 .overlay-icon-right { position: absolute; top: 0; right: 0; justify-content: flex-end; }
 
 /* ========== 收藏 ========== */
+/* 头像网格 — 一览和分类共用 */
+.avatar-grid {
+  display: grid;
+  justify-content: center;
+  padding: 8px;
+  background: #4a515e;
+  border-radius: var(--radius-lg);
+}
+
 /* 头像灰度 — CollectionView 和 CollectionMatrix 共用 */
 .collection-avatar-item {
   cursor: pointer;
@@ -588,6 +597,7 @@ input:checked + .slider::before { transform: translateX(16px); }
   user-select: none;
   -webkit-user-drag: none;
   touch-action: none;
+  line-height: 0;
 }
 .collection-avatar-item * {
   pointer-events: none !important;

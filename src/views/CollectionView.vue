@@ -232,7 +232,7 @@ onMounted(() => {
       </div>
 
       <!-- 列表模式 -->
-      <div v-if="viewMode === 'sequential'" class="collection-sequential" :style="seqGridStyle" @pointerup="onPointerUp" @pointerleave="onPointerUp" @dragstart.prevent>
+      <div v-if="viewMode === 'sequential'" class="avatar-grid" :style="seqGridStyle" @pointerup="onPointerUp" @pointerleave="onPointerUp" @dragstart.prevent>
         <div
           v-for="entry in filteredSortedCharacters"
           :key="entry.id"
@@ -365,19 +365,9 @@ onMounted(() => {
 .size-step.active { background: #fdd835; }
 
 /* 列表模式 */
-.collection-sequential {
-  display: grid;
-  justify-content: center;
-  padding: 8px;
-  background: #4a515e;
-  border-radius: var(--radius-lg);
-}
 .collection-sequential .collection-avatar-item {
-  line-height: 0;
   width: var(--item-w);
   height: var(--item-w);
-  user-select: none;
-  -webkit-user-drag: none;
 }
 
 /* 矩阵深色格子 */
