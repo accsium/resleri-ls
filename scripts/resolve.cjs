@@ -425,9 +425,9 @@ function buildIndexEntry(character) {
       permanent_date = '—';
     } else {
       if (fesName === 'ATELIER FES') {
-        // 初始角色，属于 ATELIER FES I，不需要卡池数据
+        // 初始角色
         permanent_status = '已恒常化';
-        permanent_date = 'ATELIER FES I';
+        permanent_date = 'ATELIER FES';
       } else {
         const gachaEnd = gachaEndMap.get(character.id);
         if (!gachaEnd) {

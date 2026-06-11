@@ -12,7 +12,7 @@ import { useFilters } from '../composables/useFilters'
 const { t } = useI18n()
 const { characterIndex } = useCharacterData()
 const { ownedIds, ownedCount, shareCode, isOwned, toggleOwned, saveToStorage, loadFromCode } = useCollection()
-const { activeFilters } = useFilters()
+const { activeFilters, resetFilters } = useFilters()
 const route = useRoute()
 
 // ── 视图模式 ──
@@ -63,15 +63,31 @@ const filteredSortedCharacters = computed(() => {
   let list = [...characterIndex.value]
 
   const fa = activeFilters.value
-  if (fa.initial_rarity.length) {
-    list = list.filter(c => fa.initial_rarity.includes(c.initial_rarity))
-  }
-  if (fa.role.length) {
-    list = list.filter(c => fa.role.includes(c.role))
-  }
-  if (fa.attack_attributes.length) {
-    list = list.filter(c => (c.attack_attributes || []).some(a => fa.attack_attributes.includes(a)))
-  }
+  if (fa.initial_rarity.length) list = list.filter(c => fa.initial_rarity.includes(c.initial_rarity))
+  if (fa.role.length) list = list.filter(c => fa.role.includes(c.role))
+  if (fa.attack_attributes.length) list = list.filter(c => (c.attack_attributes || []).some(a => fa.attack_attributes.includes(a)))
+  if (fa.trait_color.length) list = list.filter(c => fa.trait_color.includes(c.trait_color_id))
+  if (fa.support_color.length) list = list.filter(c => fa.support_color.includes(c.support_color_id))
+  if (fa.tags.length) list = list.filter(c => fa.tags.every(t => (c.tag_names_ja || []).includes(t) || (c.tag_names_cn || []).includes(t)))
+  if (fa.battle_tool_traits.length) list = list.filter(c => fa.battle_tool_traits.every(t => (c.battle_tool_trait_ids || []).includes(t)))
+  if (fa.equipment_tool_traits.length) list = list.filter(c => fa.equipment_tool_traits.every(t => (c.equipment_tool_trait_ids || []).includes(t)))
+  if (fa.permanent_status.length) list = list.filter(c => fa.permanent_status.includes(c.permanent_status || ''))
+  if (fa.atelier_fes.length) list = list.filter(c => {
+    const pd = c.permanent_date || ''
+    if (fa.atelier_fes.includes('ATELIER FES I') && pd === 'ATELIER FES') return true
+    return fa.atelier_fes.includes(pd)
+  })
+  if (fa.original_title) list = list.filter(c => (c.original_title_name_ja || '') === fa.original_title || (c.original_title_name_cn || '') === fa.original_title)
+  if (fa.has_evo === 1) list = list.filter(c => c.has_evo)
+  if (fa.has_evo === 2) list = list.filter(c => !c.has_evo)
+  if (fa.has_range === 1) list = list.filter(c => c.has_range)
+  if (fa.has_range === 2) list = list.filter(c => !c.has_range)
+  if (fa.has_transform === 1) list = list.filter(c => c.has_transform)
+  if (fa.has_transform === 2) list = list.filter(c => !c.has_transform)
+  if (fa.has_active === 1) list = list.filter(c => c.has_active)
+  if (fa.has_active === 2) list = list.filter(c => !c.has_active)
+  if (fa.has_ex === 1) list = list.filter(c => c.has_ex)
+  if (fa.has_ex === 2) list = list.filter(c => !c.has_ex)
 
   // 拥有筛选
   if (!showOwned.value || !showUnowned.value) {
@@ -155,6 +171,7 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
 // 防止拖拽/选中
 const layoutRef = ref(null)
 onMounted(() => {
+  resetFilters()
   if (layoutRef.value) {
     layoutRef.value.addEventListener('selectstart', e => e.preventDefault())
     layoutRef.value.addEventListener('dragstart', e => e.preventDefault())

@@ -37,7 +37,8 @@ const activeFilters = ref({
   has_active: 0,
   has_ex: 0,
   original_title: '',
-  permanent_status: '',
+  permanent_status: [],
+  atelier_fes: [],
 })
 
 export function useFilters() {
@@ -144,12 +145,13 @@ export function useFilters() {
     if (f.original_title) {
       if (char.original_title_name_ja !== f.original_title && char.original_title_name_cn !== f.original_title) return false
     }
-    if (f.permanent_status) {
-      if (f.permanent_status === 'ATELIER FES I') {
-        if (char.permanent_date !== 'ATELIER FES I') return false
-      } else if (f.permanent_status === 'ATELIER FES II') {
-        if (char.permanent_date !== 'ATELIER FES II') return false
-      } else if (char.permanent_status !== f.permanent_status) return false
+    if (f.permanent_status.length) {
+      if (!f.permanent_status.includes(char.permanent_status || '')) return false
+    }
+    if (f.atelier_fes.length) {
+      const pd = char.permanent_date || ''
+      if (f.atelier_fes.includes('ATELIER FES I') && pd === 'ATELIER FES') return true
+      if (!f.atelier_fes.includes(pd)) return false
     }
 
     return true
@@ -214,6 +216,17 @@ export function useFilters() {
     currentSortOrder.value = currentSortOrder.value === 'desc' ? 'asc' : 'desc'
   }
 
+  function resetFilters() {
+    activeFilters.value = {
+      attack_attributes: [], role: [], initial_rarity: [],
+      trait_color: [], support_color: [], tags: [],
+      battle_tool_traits: [], equipment_tool_traits: [],
+      has_evo: 0, has_range: 0, has_transform: 0, has_active: 0, has_ex: 0,
+      original_title: '', permanent_status: [], atelier_fes: [],
+    }
+    searchText.value = ''
+  }
+
   return {
     sortCategory, sortField, currentSortOrder,
     activeFilters, searchText,
@@ -221,5 +234,6 @@ export function useFilters() {
     currentPage, pageSize, totalPages,
     setSortCategory, setSortField,
     toggleOrder, toggleFilter,
+    resetFilters,
   }
 }

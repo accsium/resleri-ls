@@ -30,7 +30,8 @@ function clearAll() {
   f.has_active = 0
   f.has_ex = 0
   f.original_title = ''
-  f.permanent_status = ''
+  f.permanent_status = []
+  f.atelier_fes = []
   searchText.value = ''
   setSortCategory('character')
   setSortField('start_at')
@@ -239,6 +240,26 @@ const selectedEquipTraits = computed({
   get: () => activeFilters.value.equipment_tool_traits || [],
   set: (v) => toggleFilter('equipment_tool_traits', v),
 })
+const permStatus = computed({
+  get: () => activeFilters.value.permanent_status || [],
+  set: (v) => toggleFilter('permanent_status', v),
+})
+function togglePermStatus(s) {
+  const cur = [...permStatus.value]
+  const idx = cur.indexOf(s)
+  if (idx >= 0) cur.splice(idx, 1); else cur.push(s)
+  permStatus.value = cur
+}
+const atelierFes = computed({
+  get: () => activeFilters.value.atelier_fes || [],
+  set: (v) => toggleFilter('atelier_fes', v),
+})
+function toggleAtelierFes(s) {
+  const cur = [...atelierFes.value]
+  const idx = cur.indexOf(s)
+  if (idx >= 0) cur.splice(idx, 1); else cur.push(s)
+  atelierFes.value = cur
+}
 </script>
 
 <template>
@@ -313,14 +334,18 @@ const selectedEquipTraits = computed({
       <div class="sf-field">
         <span class="sf-label">恒常化状态</span>
         <div class="sf-field-items">
-          <select name="permanent_status" class="sf-select" :value="activeFilters.permanent_status" @change="(e) => toggleFilter('permanent_status', e.target.value)">
-            <option value="">全部</option>
-            <option value="已恒常化">已恒常化</option>
-            <option value="ATELIER FES I">ATELIER FES I</option>
-            <option value="ATELIER FES II">ATELIER FES II</option>
-            <option value="未恒常化">未恒常化</option>
-            <option value="非恒常角色">非恒常角色</option>
-          </select>
+          <label v-for="s in ['已恒常化','未恒常化','非恒常角色']" :key="s" class="sf-check">
+            <input type="checkbox" :checked="permStatus.includes(s)" @change="togglePermStatus(s)">{{ s }}
+          </label>
+        </div>
+      </div>
+      <div class="sf-divider"></div>
+      <div class="sf-field">
+        <span class="sf-label">ATELIER FES</span>
+        <div class="sf-field-items">
+          <label v-for="s in ['ATELIER FES','ATELIER FES I','ATELIER FES II']" :key="s" class="sf-check">
+            <input type="checkbox" :checked="atelierFes.includes(s)" @change="toggleAtelierFes(s)">{{ s === 'ATELIER FES' ? '初始' : s === 'ATELIER FES I' ? 'I' : 'II' }}
+          </label>
         </div>
       </div>
       <div class="sf-right-group">
