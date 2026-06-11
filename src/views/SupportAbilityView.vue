@@ -1,7 +1,8 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useI18n } from '../composables/useI18n'
+import { useSortTable } from '../composables/useSortTable'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import IconDisplay from '../components/IconDisplay.vue'
 import StarsDisplay from '../components/StarsDisplay.vue'
@@ -33,65 +34,30 @@ const chars = computed(() =>
   characterIndex.value.filter(c => c.support_ability_description != null)
 )
 
-const sortPriority = ref(['uid'])
-const sortDirs = ref({ uid: 'desc' })
-const sortCol = computed(() => sortPriority.value[0] || 'uid')
-const sortDir = computed(() => sortDirs.value[sortCol.value] || 'desc')
+const { sortCol, sortDir, onSort, sortItems } = useSortTable({
+  defaultCol: 'uid',
+  defaultDir: 'desc',
+  avatarAlias: 'uid',
+})
 
 function getSortVal(row, field) {
-  const cn = currentLang.value === 'cn'
   switch (field) {
     case 'uid':
     case 'avatar': return row.uid || ''
     case 'id': return row.id
-    case 'name': return (cn ? row.base_character_name_cn : row.base_character_name_ja) || ''
+    case 'name': return getField(row, 'base_character_name')
     case 'attr': return row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999
     case 'role': return row.role || 999
     case 'maxRarity': return row.max_rarity || 0
     case 'saAttr': return row.support_ability_attr != null ? ATTR_IDS.indexOf(row.support_ability_attr) : 999
     case 'saRole': return row.support_ability_role || 999
-    case 'saTag': return (cn ? row.support_ability_tag_cn : row.support_ability_tag_ja) || '￿'
+    case 'saTag': return getField(row, 'support_ability_tag') || '￿'
     case 'saDesc': return row.support_ability_description || ''
     default: return ''
   }
 }
 
-function cmpVal(va, vb, dir) {
-  if (va == null && vb == null) return 0
-  if (va == null) return 1
-  if (vb == null) return -1
-  if (typeof va === 'string') { const c = va.localeCompare(vb); return c ? c * dir : 0 }
-  if (va < vb) return -1 * dir
-  if (va > vb) return 1 * dir
-  return 0
-}
-
-const sortedChars = computed(() => {
-  const list = [...chars.value]
-  list.sort((a, b) => {
-    for (const field of sortPriority.value) {
-      const d = (sortDirs.value[field] || 'desc') === 'desc' ? -1 : 1
-      const r = cmpVal(getSortVal(a, field), getSortVal(b, field), d)
-      if (r !== 0) return r
-    }
-    return 0
-  })
-  return list
-})
-
-function onSort(col) {
-  if (col === 'avatar') col = 'uid'
-  const cur = [...sortPriority.value]
-  const idx = cur.indexOf(col)
-  if (idx === 0) {
-    sortDirs.value[col] = sortDirs.value[col] === 'asc' ? 'desc' : 'asc'
-  } else {
-    if (idx > 0) cur.splice(idx, 1)
-    cur.unshift(col)
-    sortPriority.value = cur
-    if (!sortDirs.value[col]) sortDirs.value[col] = 'desc'
-  }
-}
+const sortedChars = computed(() => sortItems(chars.value, getSortVal))
 
 function attrName(id) {
   return attrMap.value[id] || ''

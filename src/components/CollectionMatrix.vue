@@ -8,11 +8,9 @@ const props = defineProps({
   characters: { type: Array, required: true },
   ownedSet: { type: Object, required: true },
   size: { type: Number, default: 56 },
-  onPointerDown: { type: Function, default: null },
-  onPointerEnter: { type: Function, default: null },
 })
 
-const emit = defineEmits(['pointerup'])
+const emit = defineEmits(['pointerdown', 'pointerenter', 'pointerup'])
 const avatarSize = computed(() => props.size)
 
 const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
@@ -70,8 +68,8 @@ function getCell(rid, aid) {
               :key="entry.id"
               class="collection-avatar-item"
               :class="{ owned: ownedSet.has(entry.id) }"
-              @pointerdown="onPointerDown?.(entry.id)"
-              @pointerenter="onPointerEnter?.(entry.id)"
+              @pointerdown="emit('pointerdown', entry.id)"
+              @pointerenter="emit('pointerenter', entry.id)"
             >
               <AvatarDisplay :index-entry="entry" :size="size" />
             </div>

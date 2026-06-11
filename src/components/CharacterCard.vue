@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, nextTick } from 'vue'
+import { ref, computed, nextTick, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useCardState } from '../composables/useCardState'
@@ -141,6 +141,15 @@ async function toggleExpand() {
     detailError.value = e.message || String(e)
   }
 }
+
+// 组件销毁时断开该卡片关联的 ResizeObserver
+onUnmounted(() => {
+  const card = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
+  if (card?._headerObserver) {
+    card._headerObserver.disconnect()
+    delete card._headerObserver
+  }
+})
 
 </script>
 

@@ -1,13 +1,14 @@
 <script setup>
-import { ref, reactive, computed, onMounted } from 'vue'
+import { ref, reactive, computed, watch, onMounted } from 'vue'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useI18n } from '../composables/useI18n'
+import { useSortTable } from '../composables/useSortTable'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import IconDisplay from '../components/IconDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 
 const { characterIndex } = useCharacterData()
-const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS } = useI18n()
+const { currentLang, getField, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS } = useI18n()
 
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
 const charIndexMap = computed(() => {
@@ -32,10 +33,11 @@ const columns = [
 ]
 
 const skills = ref([])
-const sortPriority = ref(['id'])
-const sortDirs = ref({ id: 'asc' })
-const sortCol = computed(() => sortPriority.value[0] || 'id')
-const sortDir = computed(() => sortDirs.value[sortCol.value] || 'asc')
+const { sortCol, sortDir, onSort: onTableSort, sortItems } = useSortTable({
+  defaultCol: 'id',
+  defaultDir: 'asc',
+  avatarAlias: 'id',
+})
 
 const TYPE_LABEL = { normal1:'一技能', normal2:'二技能', burst:'爆发技能', active1:'发动技能', ex:'EX技能' }
 const TYPE_KEYS = ['normal1','normal2','burst','ex','active1']
@@ -74,46 +76,28 @@ function targetCat(name) {
   return cats
 }
 
-const filteredSkills = computed(() => {
-  let list = [...skills.value]
-  const dir = sortDir.value === 'desc' ? -1 : 1
-  const cn = currentLang.value === 'cn'
-
-  // 排序
-  function getSortVal(row, field) {
-    switch (field) {
-      case 'avatar': return (charIndexMap.value[row.char_id] || {}).uid || ''
-      case 'id': return row.char_id
-      case 'name': return (cn ? row.base_name_cn : row.base_name_ja) || ''
-      case 'type': return row.type
-      case 'state': return row.state
-      case 'target': return (cn ? row.target_name_cn : row.target_name_ja) || ''
-      case 'attr': return ATTR_IDS.indexOf(row.attack_attributes?.[0])
-      case 'dmg': return row.dmg_power ?? -1
-      case 'brk': return row.break_power ?? -1
-      case 'heal': return row.heal_power ?? -1
-      case 'wait': return row.wait != null ? (200 + row.wait) : 9999
-      case 'limit': return row.limit_count ?? 0
-      case 'skillName': return row.name || ''
-      case 'skillDesc': return row.description || ''
-      default: return ''
-    }
+function getSkillSortVal(row, field) {
+  switch (field) {
+    case 'avatar': return (charIndexMap.value[row.char_id] || {}).uid || ''
+    case 'id': return row.char_id
+    case 'name': return getField(row, 'base_name')
+    case 'type': return row.type
+    case 'state': return row.state
+    case 'target': return getField(row, 'target_name')
+    case 'attr': return ATTR_IDS.indexOf(row.attack_attributes?.[0])
+    case 'dmg': return row.dmg_power ?? -1
+    case 'brk': return row.break_power ?? -1
+    case 'heal': return row.heal_power ?? -1
+    case 'wait': return row.wait != null ? (200 + row.wait) : 9999
+    case 'limit': return row.limit_count ?? 0
+    case 'skillName': return row.name || ''
+    case 'skillDesc': return row.description || ''
+    default: return ''
   }
-  list.sort((a, b) => {
-    for (const field of sortPriority.value) {
-      const va = getSortVal(a, field)
-      const vb = getSortVal(b, field)
-      const d = (sortDirs.value[field] || 'asc') === 'desc' ? -1 : 1
-      if (va == null && vb == null) continue
-      if (va == null) return 1
-      if (vb == null) return -1
-      let r = 0
-      if (typeof va === 'string') { r = va.localeCompare(vb) }
-      else { r = va < vb ? -1 : va > vb ? 1 : 0 }
-      if (r !== 0) return r * d
-    }
-    return 0
-  })
+}
+
+const filteredSkills = computed(() => {
+  let list = sortItems(skills.value, getSkillSortVal)
 
   // 筛选
   const fa = activeFilters
@@ -121,7 +105,7 @@ const filteredSkills = computed(() => {
   if (fa.type.length) list = list.filter(r => fa.type.includes(r.type))
   if (fa.state.length) list = list.filter(r => fa.state.includes(r.state))
   if (fa.target.length) list = list.filter(r => {
-    const cats = targetCat(cn ? r.target_name_cn : r.target_name_ja)
+    const cats = targetCat(getField(r, 'target_name'))
     return fa.target.every(t => cats.includes(t))
   })
   if (fa.wt.length) list = list.filter(r => r.wait != null && fa.wt.includes(200 + r.wait))
@@ -138,18 +122,22 @@ const filteredSkills = computed(() => {
   return list
 })
 
+// ── 分页 ──
+const slPage = ref(1)
+const slPageSize = ref(50)
+const slTotalPages = computed(() => Math.ceil(filteredSkills.value.length / slPageSize.value) || 1)
+const pagedSkills = computed(() => {
+  const start = (slPage.value - 1) * slPageSize.value
+  return filteredSkills.value.slice(start, start + slPageSize.value)
+})
+
+// 筛选/搜索变化回到第一页
+watch([activeFilters, searchText], () => {
+  slPage.value = 1
+})
+
 function onSort(col) {
-  if (col === 'avatar') col = 'id'
-  const cur = [...sortPriority.value]
-  const idx = cur.indexOf(col)
-  if (idx === 0) {
-    sortDirs.value[col] = sortDirs.value[col] === 'asc' ? 'desc' : 'asc'
-  } else {
-    if (idx > 0) cur.splice(idx, 1)
-    cur.unshift(col)
-    sortPriority.value = cur
-    if (!sortDirs.value[col]) sortDirs.value[col] = 'desc'
-  }
+  onTableSort(col)
 }
 
 onMounted(async () => {
@@ -195,9 +183,25 @@ onMounted(async () => {
     <span class="skf-sep"></span>
     <input type="text" v-model="searchText" placeholder="搜索技能名或描述..." class="skf-search">
   </div>
+  <!-- 分页（上） -->
+  <div v-if="slTotalPages > 0" class="sk-pg-bar">
+    <button class="pg-btn" :disabled="slPage === 1" @click="slPage = 1">«</button>
+    <button class="pg-btn" :disabled="slPage === 1" @click="slPage = slPage - 1">‹</button>
+    <span class="pg-info">{{ slPage }} / {{ slTotalPages }}</span>
+    <button class="pg-btn" :disabled="slPage === slTotalPages" @click="slPage = slPage + 1">›</button>
+    <button class="pg-btn" :disabled="slPage === slTotalPages" @click="slPage = slTotalPages">»</button>
+    <span class="pg-size">
+      每页
+      <select class="pg-size-sel" v-model="slPageSize">
+        <option v-for="s in [30, 50, 100, 300, 500, 1000]" :key="s" :value="s">{{ s }}</option>
+      </select>
+      条（共 {{ filteredSkills.length }} 条）
+    </span>
+  </div>
+
   <SortableTable
     :columns="columns"
-    :rows="filteredSkills"
+    :rows="pagedSkills"
     rowKey="_idx"
     :frozen="2"
     :sortCol="sortCol"
@@ -229,6 +233,22 @@ onMounted(async () => {
     <template #cell-skillName="{ row }">{{ row.name }}</template>
     <template #cell-skillDesc="{ row }"><span v-html="row.description"></span></template>
   </SortableTable>
+
+  <!-- 分页（下） -->
+  <div v-if="slTotalPages > 0" class="sk-pg-bar">
+    <button class="pg-btn" :disabled="slPage === 1" @click="slPage = 1">«</button>
+    <button class="pg-btn" :disabled="slPage === 1" @click="slPage = slPage - 1">‹</button>
+    <span class="pg-info">{{ slPage }} / {{ slTotalPages }}</span>
+    <button class="pg-btn" :disabled="slPage === slTotalPages" @click="slPage = slPage + 1">›</button>
+    <button class="pg-btn" :disabled="slPage === slTotalPages" @click="slPage = slTotalPages">»</button>
+    <span class="pg-size">
+      每页
+      <select class="pg-size-sel" v-model="slPageSize">
+        <option v-for="s in [30, 50, 100, 300, 500, 1000]" :key="s" :value="s">{{ s }}</option>
+      </select>
+      条（共 {{ filteredSkills.length }} 条）
+    </span>
+  </div>
 </template>
 
 <style scoped>
@@ -249,4 +269,15 @@ onMounted(async () => {
 }
 .skf-search::placeholder { color: #888; }
 .skf-search:focus { border-color: var(--accent); }
+
+.sk-pg-bar {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 0; font-size: 13px;
+  width: 90%; max-width: 840px; margin: 0 auto;
+}
+.sk-pg-bar .pg-btn { width: auto; padding: 2px 8px; }
+.sk-pg-bar .pg-btn:disabled { opacity: 0.4; cursor: default; }
+.sk-pg-bar .pg-info { color: var(--text-muted); }
+.sk-pg-bar .pg-size { color: var(--text-muted); margin-left: auto; }
+.sk-pg-bar .pg-size-sel { padding: 2px 6px; font-size: 12px; }
 </style>

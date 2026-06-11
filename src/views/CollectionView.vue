@@ -7,7 +7,8 @@ import { useCollection } from '../composables/useCollection'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import CollectionMatrix from '../components/CollectionMatrix.vue'
 import FilterBar from '../components/FilterBar.vue'
-import { useFilters } from '../composables/useFilters'
+import { useFilters, filterCharacter } from '../composables/useFilters'
+import { useLocalStorage } from '../composables/useLocalStorage'
 
 const { t } = useI18n()
 const { characterIndex } = useCharacterData()
@@ -17,21 +18,10 @@ const route = useRoute()
 
 // ── 视图模式 ──
 // ── UI 状态持久化 ──
-const UI_KEY = 'resleri-collection-ui'
-function loadUI(key, def) {
-  try { const r = localStorage.getItem(UI_KEY); if (r) { const v = JSON.parse(r)[key]; if (v != null) return v } } catch {}
-  return def
-}
-function saveUI() {
-  localStorage.setItem(UI_KEY, JSON.stringify({
-    viewMode: viewMode.value, seqSize: seqSize.value, matSize: matSize.value,
-    colorMode: colorMode.value, showOwned: showOwned.value, showUnowned: showUnowned.value,
-  }))
-}
-const viewMode = ref(loadUI('viewMode', 'sequential'))
-const seqSize = ref(loadUI('seqSize', 96))
-const matSize = ref(loadUI('matSize', 48))
-const colorMode = ref(loadUI('colorMode', false))
+const viewMode = useLocalStorage('resleri-ui-viewMode', 'sequential')
+const seqSize = useLocalStorage('resleri-ui-seqSize', 96)
+const matSize = useLocalStorage('resleri-ui-matSize', 48)
+const colorMode = useLocalStorage('resleri-ui-colorMode', false)
 const sizeSteps = computed(() => {
   const min = viewMode.value === 'sequential' ? 48 : 24
   const max = viewMode.value === 'sequential' ? 160 : 80
@@ -60,36 +50,10 @@ watch([() => characterIndex.value.length, codeFromUrl], ([len, code]) => {
 
 // ── 筛选 + 排序 ──
 const filteredSortedCharacters = computed(() => {
-  let list = [...characterIndex.value]
+  // 使用共享的 filterCharacter 纯函数
+  let list = characterIndex.value.filter(c => filterCharacter(c, activeFilters))
 
-  const fa = activeFilters.value
-  if (fa.initial_rarity.length) list = list.filter(c => fa.initial_rarity.includes(c.initial_rarity))
-  if (fa.role.length) list = list.filter(c => fa.role.includes(c.role))
-  if (fa.attack_attributes.length) list = list.filter(c => (c.attack_attributes || []).some(a => fa.attack_attributes.includes(a)))
-  if (fa.trait_color.length) list = list.filter(c => fa.trait_color.includes(c.trait_color_id))
-  if (fa.support_color.length) list = list.filter(c => fa.support_color.includes(c.support_color_id))
-  if (fa.tags.length) list = list.filter(c => fa.tags.filter(t => t).every(t => (c.tag_ids || []).includes(t)))
-  if (fa.battle_tool_traits.length) list = list.filter(c => fa.battle_tool_traits.every(t => (c.battle_tool_trait_ids || []).includes(t)))
-  if (fa.equipment_tool_traits.length) list = list.filter(c => fa.equipment_tool_traits.every(t => (c.equipment_tool_trait_ids || []).includes(t)))
-  if (fa.permanent_status.length) list = list.filter(c => fa.permanent_status.includes(c.permanent_status || ''))
-  if (fa.atelier_fes.length) list = list.filter(c => {
-    const pd = c.permanent_date || ''
-    if (fa.atelier_fes.includes('ATELIER FES I') && pd === 'ATELIER FES') return true
-    return fa.atelier_fes.includes(pd)
-  })
-  if (fa.original_title) list = list.filter(c => c.original_title_id === fa.original_title)
-  if (fa.has_evo === 1) list = list.filter(c => c.has_evo)
-  if (fa.has_evo === 2) list = list.filter(c => !c.has_evo)
-  if (fa.has_range === 1) list = list.filter(c => c.has_range)
-  if (fa.has_range === 2) list = list.filter(c => !c.has_range)
-  if (fa.has_transform === 1) list = list.filter(c => c.has_transform)
-  if (fa.has_transform === 2) list = list.filter(c => !c.has_transform)
-  if (fa.has_active === 1) list = list.filter(c => c.has_active)
-  if (fa.has_active === 2) list = list.filter(c => !c.has_active)
-  if (fa.has_ex === 1) list = list.filter(c => c.has_ex)
-  if (fa.has_ex === 2) list = list.filter(c => !c.has_ex)
-
-  // 拥有筛选
+  // 拥有筛选（CollectionView 独有）
   if (!showOwned.value || !showUnowned.value) {
     list = list.filter(c => {
       const owned = isOwned(c.id)
@@ -107,9 +71,8 @@ const filteredSortedCharacters = computed(() => {
 const noMatch = computed(() => filteredSortedCharacters.value.length === 0)
 
 // ── 拥有筛选 ──
-const showOwned = ref(loadUI('showOwned', true))
-const showUnowned = ref(loadUI('showUnowned', true))
-watch([viewMode, seqSize, matSize, colorMode, showOwned, showUnowned], saveUI)
+const showOwned = useLocalStorage('resleri-ui-showOwned', true)
+const showUnowned = useLocalStorage('resleri-ui-showUnowned', true)
 
 // ── 操作 ──
 const shareInput = ref('')
@@ -252,8 +215,8 @@ onMounted(() => {
         :characters="filteredSortedCharacters"
         :owned-set="ownedIds"
         :size="matSize"
-        :on-pointer-down="onPointerDown"
-        :on-pointer-enter="onPointerEnter"
+        @pointerdown="onPointerDown"
+        @pointerenter="onPointerEnter"
         @pointerup="onPointerUp"
       />
     </template>

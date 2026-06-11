@@ -15,7 +15,7 @@ const {
 } = useFilters()
 
 function clearAll() {
-  const f = activeFilters.value
+  const f = activeFilters
   f.attack_attributes = []
   f.role = []
   f.initial_rarity = []
@@ -71,7 +71,7 @@ onMounted(() => {
 // ── 属性 ──
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
 const selectedAttrs = computed({
-  get: () => activeFilters.value.attack_attributes || [],
+  get: () => activeFilters.attack_attributes || [],
   set: (v) => toggleFilter('attack_attributes', v),
 })
 
@@ -87,7 +87,7 @@ function toggleAttr(id) {
 const ROLE_IDS = [1, 2, 3, 4]
 const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP)
 const selectedRoles = computed({
-  get: () => activeFilters.value.role || [],
+  get: () => activeFilters.role || [],
   set: (v) => toggleFilter('role', v),
 })
 
@@ -102,7 +102,7 @@ function toggleRole(id) {
 // ── 初始星级 ──
 const RARITIES = [1, 2, 3]
 const selectedRarities = computed({
-  get: () => activeFilters.value.initial_rarity || [],
+  get: () => activeFilters.initial_rarity || [],
   set: (v) => toggleFilter('initial_rarity', v),
 })
 
@@ -119,7 +119,7 @@ const TRAIT_IDS = [1, 2, 3, 4, 5]
 function traitColorHex(id) { return TRAIT_COLOR_HEX[id] || '#ccc' }
 
 const selectedTraitLeft = computed({
-  get: () => activeFilters.value.trait_color || [],
+  get: () => activeFilters.trait_color || [],
   set: (v) => toggleFilter('trait_color', v),
 })
 
@@ -132,7 +132,7 @@ function toggleTraitLeft(id) {
 }
 
 const selectedTraitRight = computed({
-  get: () => activeFilters.value.support_color || [],
+  get: () => activeFilters.support_color || [],
   set: (v) => toggleFilter('support_color', v),
 })
 
@@ -206,19 +206,19 @@ onMounted(async () => {
 
 // 选中的标签/词条
 const selectedBattleTraits = computed({
-  get: () => activeFilters.value.battle_tool_traits || [],
+  get: () => activeFilters.battle_tool_traits || [],
   set: (v) => toggleFilter('battle_tool_traits', v),
 })
 const selectedEquipTraits = computed({
-  get: () => activeFilters.value.equipment_tool_traits || [],
+  get: () => activeFilters.equipment_tool_traits || [],
   set: (v) => toggleFilter('equipment_tool_traits', v),
 })
 const selectedTags = computed({
-  get: () => activeFilters.value.tags || [],
+  get: () => activeFilters.tags || [],
   set: (v) => toggleFilter('tags', v),
 })
 const permStatus = computed({
-  get: () => activeFilters.value.permanent_status || [],
+  get: () => activeFilters.permanent_status || [],
   set: (v) => toggleFilter('permanent_status', v),
 })
 function togglePermStatus(s) {
@@ -228,7 +228,7 @@ function togglePermStatus(s) {
   permStatus.value = cur
 }
 const atelierFes = computed({
-  get: () => activeFilters.value.atelier_fes || [],
+  get: () => activeFilters.atelier_fes || [],
   set: (v) => toggleFilter('atelier_fes', v),
 })
 function toggleAtelierFes(s) {

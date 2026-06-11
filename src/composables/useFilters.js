@@ -1,7 +1,8 @@
-import { ref, computed, watch } from 'vue'
+import { ref, reactive, computed, watch } from 'vue'
 import { useI18n } from './useI18n'
 import { useCharacterData } from './useCharacterData'
 import { useCardState } from './useCardState'
+import { useLocalStorage } from './useLocalStorage'
 
 const sortCategory = ref('character')
 const sortField = ref('start_at')
@@ -10,19 +11,9 @@ const currentSortOrder = ref('desc')
 const searchText = ref('')
 const currentPage = ref(1)
 
-function loadPageSize() {
-  try {
-    const v = localStorage.getItem('resleri-pageSize')
-    if (v && [30, 50, 100, 300].includes(Number(v))) return Number(v)
-  } catch {}
-  return 50
-}
-const pageSize = ref(loadPageSize())
-watch(pageSize, (v) => {
-  try { localStorage.setItem('resleri-pageSize', String(v)) } catch {}
-})
+const pageSize = useLocalStorage('resleri-pageSize', 50)
 
-const activeFilters = ref({
+const activeFilters = reactive({
   attack_attributes: [],
   role: [],
   initial_rarity: [],
@@ -41,6 +32,62 @@ const activeFilters = ref({
   atelier_fes: [],
 })
 
+/**
+ * 纯函数：判断角色是否通过所有筛选条件
+ * @param {Object} char 角色对象
+ * @param {Object} f 筛选条件对象（activeFilters 的值）
+ * @returns {boolean}
+ */
+export function filterCharacter(char, f) {
+  if (f.attack_attributes.length && !f.attack_attributes.some(a => (char.attack_attributes || []).includes(a)))
+    return false
+  if (f.role.length && !f.role.includes(char.role))
+    return false
+  if (f.initial_rarity.length && !f.initial_rarity.includes(char.initial_rarity))
+    return false
+  if (f.trait_color.length && !f.trait_color.includes(char.trait_color_id))
+    return false
+  if (f.support_color.length && !f.support_color.includes(char.support_color_id))
+    return false
+  if (f.tags.length) {
+    const charTagIds = char.tag_ids || []
+    if (!f.tags.filter(t => t).every(t => charTagIds.includes(t)))
+      return false
+  }
+  if (f.battle_tool_traits.length) {
+    const charTraits = char.battle_tool_trait_ids || []
+    if (!f.battle_tool_traits.filter(t => t).every(t => charTraits.includes(t)))
+      return false
+  }
+  if (f.equipment_tool_traits.length) {
+    const charTraits = char.equipment_tool_trait_ids || []
+    if (!f.equipment_tool_traits.filter(t => t).every(t => charTraits.includes(t)))
+      return false
+  }
+  if (f.has_evo === 1 && !char.has_evo) return false
+  if (f.has_evo === 2 && char.has_evo) return false
+  if (f.has_range === 1 && !char.has_range) return false
+  if (f.has_range === 2 && char.has_range) return false
+  if (f.has_transform === 1 && !char.has_transform) return false
+  if (f.has_transform === 2 && char.has_transform) return false
+  if (f.has_active === 1 && !char.has_active) return false
+  if (f.has_active === 2 && char.has_active) return false
+  if (f.has_ex === 1 && !char.has_ex) return false
+  if (f.has_ex === 2 && char.has_ex) return false
+  if (f.original_title) {
+    if (char.original_title_id !== f.original_title) return false
+  }
+  if (f.permanent_status.length) {
+    if (!f.permanent_status.includes(char.permanent_status || '')) return false
+  }
+  if (f.atelier_fes.length) {
+    const pd = char.permanent_date || ''
+    if (f.atelier_fes.includes('ATELIER FES I') && pd === 'ATELIER FES') return true
+    if (!f.atelier_fes.includes(pd)) return false
+  }
+  return true
+}
+
 export function useFilters() {
   const { currentLang, SORT_CATEGORIES } = useI18n()
   const { characterIndex } = useCharacterData()
@@ -55,7 +102,7 @@ export function useFilters() {
   }
 
   function toggleFilter(key, value) {
-    activeFilters.value = { ...activeFilters.value, [key]: value }
+    activeFilters[key] = value
   }
 
   function getSortValue(c, cat, field) {
@@ -105,56 +152,7 @@ export function useFilters() {
   }
 
   function applyFilter(char) {
-    const f = activeFilters.value
-
-    if (f.attack_attributes.length && !f.attack_attributes.some(a => (char.attack_attributes || []).includes(a)))
-      return false
-    if (f.role.length && !f.role.includes(char.role))
-      return false
-    if (f.initial_rarity.length && !f.initial_rarity.includes(char.initial_rarity))
-      return false
-    if (f.trait_color.length && !f.trait_color.includes(char.trait_color_id))
-      return false
-    if (f.support_color.length && !f.support_color.includes(char.support_color_id))
-      return false
-    if (f.tags.length) {
-      const charTagIds = char.tag_ids || []
-      if (!f.tags.filter(t => t).every(t => charTagIds.includes(t)))
-        return false
-    }
-    if (f.battle_tool_traits.length) {
-      const charTraits = char.battle_tool_trait_ids || []
-      if (!f.battle_tool_traits.filter(t => t).every(t => charTraits.includes(t)))
-        return false
-    }
-    if (f.equipment_tool_traits.length) {
-      const charTraits = char.equipment_tool_trait_ids || []
-      if (!f.equipment_tool_traits.filter(t => t).every(t => charTraits.includes(t)))
-        return false
-    }
-    if (f.has_evo === 1 && !char.has_evo) return false
-    if (f.has_evo === 2 && char.has_evo) return false
-    if (f.has_range === 1 && !char.has_range) return false
-    if (f.has_range === 2 && char.has_range) return false
-    if (f.has_transform === 1 && !char.has_transform) return false
-    if (f.has_transform === 2 && char.has_transform) return false
-    if (f.has_active === 1 && !char.has_active) return false
-    if (f.has_active === 2 && char.has_active) return false
-    if (f.has_ex === 1 && !char.has_ex) return false
-    if (f.has_ex === 2 && char.has_ex) return false
-    if (f.original_title) {
-      if (char.original_title_id !== f.original_title) return false
-    }
-    if (f.permanent_status.length) {
-      if (!f.permanent_status.includes(char.permanent_status || '')) return false
-    }
-    if (f.atelier_fes.length) {
-      const pd = char.permanent_date || ''
-      if (f.atelier_fes.includes('ATELIER FES I') && pd === 'ATELIER FES') return true
-      if (!f.atelier_fes.includes(pd)) return false
-    }
-
-    return true
+    return filterCharacter(char, activeFilters)
   }
 
   const filteredCharacters = computed(() => {
@@ -217,13 +215,13 @@ export function useFilters() {
   }
 
   function resetFilters() {
-    activeFilters.value = {
+    Object.assign(activeFilters, {
       attack_attributes: [], role: [], initial_rarity: [],
       trait_color: [], support_color: [], tags: [],
       battle_tool_traits: [], equipment_tool_traits: [],
       has_evo: 0, has_range: 0, has_transform: 0, has_active: 0, has_ex: 0,
       original_title: '', permanent_status: [], atelier_fes: [],
-    }
+    })
     searchText.value = ''
   }
 

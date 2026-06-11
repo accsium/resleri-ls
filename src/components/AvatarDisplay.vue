@@ -34,31 +34,42 @@ const charImage = computed(() => `image/character/${props.indexEntry.id}.png`)
 const showImage = ref(false)
 const wasLoaded = ref(false)
 const imageSize = props.indexEntry.image_size || 60000
+const containerRef = ref(null)
 let cancelled = false
+let tracked = false
+let observer = null
 
 onMounted(() => {
   cancelled = false
-  const img = new Image()
-  trackImage(imageSize)
-  img.onload = () => {
-    if (cancelled) return
-    showImage.value = true; wasLoaded.value = true; imageDone(imageSize)
-  }
-  img.onerror = () => {
-    if (cancelled) return
-    imageDone(imageSize)
-  }
-  img.src = charImage.value
+  observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      observer.disconnect()
+      tracked = true
+      trackImage(imageSize)
+      const img = new Image()
+      img.onload = () => {
+        if (cancelled) return
+        showImage.value = true; wasLoaded.value = true; imageDone(imageSize)
+      }
+      img.onerror = () => {
+        if (cancelled) return
+        imageDone(imageSize)
+      }
+      img.src = charImage.value
+    }
+  }, { rootMargin: '200px' })
+  if (containerRef.value) observer.observe(containerRef.value)
 })
 
 onUnmounted(() => {
   cancelled = true
-  untrackImage(imageSize, wasLoaded.value)
+  observer?.disconnect()
+  if (tracked) untrackImage(imageSize, wasLoaded.value)
 })
 </script>
 
 <template>
-  <div class="avatar-component" :style="{ width: size + 'px', height: size + 'px' }">
+  <div ref="containerRef" class="avatar-component" :style="{ width: size + 'px', height: size + 'px' }">
     <div :style="{ position: 'absolute', top: 0, left: 0, width: canvasSize + 'px', height: canvasSize + 'px', transform: 'scale(' + (size / canvasSize) + ')', transformOrigin: '0 0' }">
       <svg
         :width="canvasSize" :height="canvasSize"

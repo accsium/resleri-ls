@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
+import { useSortTable } from '../composables/useSortTable'
 
 const columns = [
   { key: 'id', label: 'ID', width: 72 },
@@ -9,37 +10,40 @@ const columns = [
 ]
 
 const rows = ref([])
-const sortCol = ref('start_at')
-const sortDir = ref('desc')
-
-const sorted = computed(() => {
-  const list = [...rows.value]
-  const dir = sortDir.value === 'desc' ? -1 : 1
-  list.sort((a, b) => {
-    let va, vb
-    if (sortCol.value === 'id') { va = a.id; vb = b.id }
-    else if (sortCol.value === 'start_at') { va = a.start_at; vb = b.start_at }
-    else { va = a.episode_name || ''; vb = b.episode_name || '' }
-    if (typeof va === 'string') { const c = va.localeCompare(vb); if (c) return c * dir }
-    else { if (va < vb) return -1 * dir; if (va > vb) return 1 * dir }
-    return (a.id - b.id) * dir
-  })
-  return list
+const loading = ref(true)
+const error = ref('')
+const isEmpty = computed(() => !loading.value && !error.value && rows.value.length === 0)
+const { sortCol, sortDir, onSort, sortItems } = useSortTable({
+  defaultCol: 'start_at',
+  defaultDir: 'desc',
 })
 
-function onSort(col) {
-  if (sortCol.value === col) sortDir.value = sortDir.value === 'desc' ? 'asc' : 'desc'
-  else { sortCol.value = col; sortDir.value = 'asc' }
+function getSortVal(row, field) {
+  if (field === 'id') return row.id
+  if (field === 'start_at') return row.start_at
+  return row.episode_name || ''
 }
 
+const sorted = computed(() => sortItems(rows.value, getSortVal))
+
 onMounted(async () => {
-  const resp = await fetch('data/contest_rotations.json')
-  rows.value = await resp.json()
+  try {
+    const resp = await fetch('data/contest_rotations.json')
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
+    rows.value = await resp.json()
+  } catch (e) {
+    error.value = e.message || String(e)
+  } finally {
+    loading.value = false
+  }
 })
 </script>
 
 <template>
   <div class="contest-wrap">
+    <div v-if="loading" class="loading">{{ '加载中...' }}</div>
+    <div v-else-if="error" class="load-error">{{ error }}</div>
+    <div v-else-if="isEmpty" class="empty">暂无数据</div>
   <SortableTable
     :columns="columns"
     :rows="sorted"

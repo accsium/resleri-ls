@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
+import { useSortTable } from '../composables/useSortTable'
 
 const columns = [
   { key: 'id', label: 'ID', width: 72 },
@@ -18,26 +19,32 @@ const groups = [
 ]
 
 const allRows = ref([])
+const loading = ref(true)
+const error = ref('')
+const isEmpty = computed(() => !loading.value && !error.value && allRows.value.length === 0)
 
 const getGroupRows = (g) => computed(() => allRows.value.filter(r => r.id >= g.min && r.id <= g.max))
 
 // Per-group sort state
 const sorts = ref(groups.map(() => ({ col: 'id', dir: 'desc' })))
+const { cmpVal } = useSortTable({})
+
+function getSortVal(row, col) {
+  if (col === 'id') return row.id
+  if (col === 'start_at') return row.start_at
+  if (col === 'end_at') return row.end_at
+  if (col === 'name') return row.name || ''
+  if (col === 'revival_start_at') return row.revival_start_at
+  return row.id
+}
 
 function sorted(g, gi) {
   const s = sorts.value[gi]
   const list = [...getGroupRows(g).value]
   const dir = s.dir === 'desc' ? -1 : 1
   list.sort((a, b) => {
-    let va, vb
-    if (s.col === 'id') { va = a.id; vb = b.id }
-    else if (s.col === 'start_at'){ va = a.start_at; vb = b.start_at }
-    else if (s.col === 'end_at') { va = a.end_at; vb = b.end_at }
-    else if (s.col === 'name') { va = a.name || ''; vb = b.name || '' }
-    else if (s.col === 'revival_start_at') { va = a.revival_start_at; vb = b.revival_start_at }
-    else { va = a.id; vb = b.id }
-    if (typeof va === 'string') { const c = va.localeCompare(vb); if (c) return c * dir }
-    else { if (va < vb) return -1 * dir; if (va > vb) return 1 * dir }
+    const r = cmpVal(getSortVal(a, s.col), getSortVal(b, s.col), dir)
+    if (r !== 0) return r
     return (a.id - b.id) * dir
   })
   return list
@@ -50,13 +57,23 @@ function onSort(gi, col) {
 }
 
 onMounted(async () => {
-  const resp = await fetch('data/events.json')
-  allRows.value = await resp.json()
+  try {
+    const resp = await fetch('data/events.json')
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
+    allRows.value = await resp.json()
+  } catch (e) {
+    error.value = e.message || String(e)
+  } finally {
+    loading.value = false
+  }
 })
 </script>
 
 <template>
   <div class="contest-wrap">
+    <div v-if="loading" class="loading">{{ '加载中...' }}</div>
+    <div v-else-if="error" class="load-error">{{ error }}</div>
+    <div v-else-if="isEmpty" class="empty">暂无数据</div>
     <div v-for="(g, gi) in groups" :key="g.label">
       <h3 class="group-title">{{ g.label }}</h3>
       <SortableTable
