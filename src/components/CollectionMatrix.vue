@@ -13,6 +13,7 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['pointerup'])
+const avatarSize = computed(() => props.size)
 
 const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 
@@ -123,16 +124,18 @@ function getCell(rid, aid) {
 .matrix-cell {
   background: var(--bg-card);
   border-radius: var(--radius);
-  padding: 4px;
-  min-width: v-bind(size + 'px');
-  min-height: v-bind(size + 'px');
+  padding: 8px;
   vertical-align: top;
 }
 .matrix-cell-inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  align-items: flex-start;
-  align-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, v-bind(avatarSize + 'px'));
+  grid-auto-rows: v-bind(avatarSize + 'px');
+  justify-content: center;
+}
+.matrix-cell-inner > * {
+  width: v-bind(avatarSize + 'px');
+  height: v-bind(avatarSize + 'px');
+  line-height: 0;
 }
 </style>

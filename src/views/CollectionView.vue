@@ -368,7 +368,7 @@ onMounted(() => {
 .collection-sequential {
   display: grid;
   justify-content: center;
-  padding: 16px;
+  padding: 8px;
   background: #4a515e;
   border-radius: var(--radius-lg);
 }
