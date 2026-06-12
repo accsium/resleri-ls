@@ -48,24 +48,24 @@ function jump() {
   }
 }
 
-// 生成显示的页码
+// 生成显示的页码（对象数组，避免省略号重复 key）
 const pageNumbers = computed(() => {
   const pages = []
   const total = tp.value
   const cur = cp.value
   if (total <= 7) {
-    for (let i = 1; i <= total; i++) pages.push(i)
+    for (let i = 1; i <= total; i++) pages.push({ type: 'page', value: i })
     return pages
   }
   const maxShow = 5
   let start = Math.max(1, cur - Math.floor(maxShow / 2))
   let end = Math.min(total, start + maxShow - 1)
   start = Math.max(1, end - maxShow + 1)
-  if (start > 1) pages.push(1)
-  if (start > 2) pages.push('...')
-  for (let i = start; i <= end; i++) pages.push(i)
-  if (end < total - 1) pages.push('...')
-  if (end < total) pages.push(total)
+  if (start > 1) pages.push({ type: 'page', value: 1 })
+  if (start > 2) pages.push({ type: 'ellipsis', pos: 'start' })
+  for (let i = start; i <= end; i++) pages.push({ type: 'page', value: i })
+  if (end < total - 1) pages.push({ type: 'ellipsis', pos: 'end' })
+  if (end < total) pages.push({ type: 'page', value: total })
   return pages
 })
 </script>
@@ -75,9 +75,9 @@ const pageNumbers = computed(() => {
     <div class="pg-bar">
       <button class="pg-btn" :disabled="cp === 1" @click="goTo(1)">&#171;</button>
       <button class="pg-btn" :disabled="cp === 1" @click="goTo(cp - 1)">&#8249;</button>
-      <template v-for="p in pageNumbers" :key="p">
-        <span v-if="p === '...'" class="pg-ellipsis">...</span>
-        <button v-else class="pg-btn" :class="{ active: cp === p }" @click="goTo(p)">{{ p }}</button>
+      <template v-for="p in pageNumbers" :key="p.type === 'ellipsis' ? 'e-' + p.pos : p.value">
+        <span v-if="p.type === 'ellipsis'" class="pg-ellipsis">...</span>
+        <button v-else class="pg-btn" :class="{ active: cp === p.value }" @click="goTo(p.value)">{{ p.value }}</button>
       </template>
       <button class="pg-btn" :disabled="cp === tp" @click="goTo(cp + 1)">&#8250;</button>
       <button class="pg-btn" :disabled="cp === tp" @click="goTo(tp)">&#187;</button>
@@ -118,8 +118,6 @@ const pageNumbers = computed(() => {
 .pg-info, .pg-jump, .pg-size {
   color: var(--text-muted);
 }
-.pg-btn {
-}
 .pg-btn:disabled {
   opacity: 0.4;
   cursor: default;
@@ -135,12 +133,12 @@ const pageNumbers = computed(() => {
 }
 .pg-jump-inp {
   width: 48px;
-  padding: 2px 4px;
+  padding: var(--inp-padding);
   font-size: 12px;
   text-align: center;
 }
 .pg-size-sel {
-  padding: 2px 6px;
+  padding: var(--sel-padding);
   font-size: 12px;
 }
 </style>

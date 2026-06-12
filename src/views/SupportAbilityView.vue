@@ -103,7 +103,7 @@ function roleName(id) {
     </template>
     <template #cell-saTag="{ row }">
       <template v-if="getField(row, 'support_ability_tag')">
-        <span v-for="(t, i) in getField(row, 'support_ability_tag').split('、')" :key="i" class="tag">{{ t }}</span>
+        <span v-for="(t, i) in getField(row, 'support_ability_tag').split('、')" :key="`${row.id}-tag-${i}`" class="tag">{{ t }}</span>
       </template>
     </template>
     <template #cell-saDesc="{ row }">{{ row.support_ability_description }}</template>
@@ -119,4 +119,5 @@ function roleName(id) {
   background: var(--bg-trait);
   color: var(--text-primary);
 }
+:deep(.st-wrap) { height: auto; }
 </style>

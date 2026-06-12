@@ -18,9 +18,6 @@ function onKeydown(id, e) {
     emit('pointerdown', id)
   }
 }
-
-const avatarSize = computed(() => props.size)
-
 const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
@@ -137,12 +134,12 @@ function getCell(rid, aid) {
 }
 .matrix-cell-inner {
   display: grid;
-  grid-template-columns: repeat(auto-fill, v-bind(avatarSize + 'px'));
-  grid-auto-rows: v-bind(avatarSize + 'px');
+  grid-template-columns: repeat(auto-fill, v-bind(size + 'px'));
+  grid-auto-rows: v-bind(size + 'px');
   justify-content: center;
 }
 .matrix-cell-inner > * {
-  width: v-bind(avatarSize + 'px');
-  height: v-bind(avatarSize + 'px');
+  width: v-bind(size + 'px');
+  height: v-bind(size + 'px');
 }
 </style>

@@ -167,7 +167,7 @@ export function useFilters() {
   })
 
   // 筛选/搜索/页大小变化时回到第一页
-  watch([activeFilters, searchText, pageSize], () => {
+  watch([() => ({ ...activeFilters }), searchText, pageSize], () => {
     currentPage.value = 1
   })
 

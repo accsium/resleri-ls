@@ -1,4 +1,7 @@
 export function useShareCode() {
+  // 注意：String.fromCharCode + btoa 编码方式对 128-255 字节值依赖 Latin-1 字符集。
+  // 现代浏览器均支持此行为，若未来需要跨环境兼容可迁移至 TextEncoder + 标准 Base64。
+
   // UID 排序：按 UID 升序，新角色永远追加在末尾
   function canonicalSort(a, b) {
     return (a.uid || '').localeCompare(b.uid || '')

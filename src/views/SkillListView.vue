@@ -34,6 +34,8 @@ const columns = [
 ]
 
 const skills = ref([])
+const loading = ref(true)
+const error = ref('')
 const { sortCol, sortDir, onSort: onTableSort, sortItems } = useSortTable({
   defaultCol: 'id',
   defaultDir: 'asc',
@@ -85,7 +87,7 @@ function getSkillSortVal(row, field) {
     case 'type': return row.type
     case 'state': return row.state
     case 'target': return getField(row, 'target_name')
-    case 'attr': return ATTR_IDS.indexOf(row.attack_attributes?.[0])
+    case 'attr': { const idx = ATTR_IDS.indexOf(row.attack_attributes?.[0]); return idx === -1 ? 999 : idx }
     case 'dmg': return row.dmg_power ?? -1
     case 'brk': return row.break_power ?? -1
     case 'heal': return row.heal_power ?? -1
@@ -142,14 +144,24 @@ function onSort(col) {
 }
 
 onMounted(async () => {
-  const resp = await fetch('data/skills.json')
-  const data = await resp.json()
-  data.forEach((r, i) => r._idx = i)
-  skills.value = data
+  try {
+    const resp = await fetch('data/skills.json')
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
+    const data = await resp.json()
+    data.forEach((r, i) => r._idx = i)
+    skills.value = data
+  } catch (e) {
+    error.value = e.message || String(e)
+  } finally {
+    loading.value = false
+  }
 })
 </script>
 
 <template>
+  <div v-if="loading" class="loading">加载中...</div>
+  <div v-else-if="error" class="load-error">{{ error }}</div>
+  <template v-else>
   <div class="skf-bar">
     <!-- 属性 -->
     <span class="skf-label">属性</span>
@@ -237,6 +249,7 @@ onMounted(async () => {
     @update:pageSize="slPageSize = $event"
   />
 </template>
+</template>
 
 <style scoped>
 .skf-bar {
@@ -266,5 +279,6 @@ onMounted(async () => {
 .sk-pg-bar .pg-btn:disabled { opacity: 0.4; cursor: default; }
 .sk-pg-bar .pg-info { color: var(--text-muted); }
 .sk-pg-bar .pg-size { color: var(--text-muted); margin-left: auto; }
-.sk-pg-bar .pg-size-sel { padding: 2px 6px; font-size: 12px; }
+.sk-pg-bar .pg-size-sel { padding: var(--sel-padding); font-size: 12px; }
+:deep(.st-wrap) { height: auto; }
 </style>

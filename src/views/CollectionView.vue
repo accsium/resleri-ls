@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, watch, onMounted } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
@@ -78,6 +78,8 @@ const showUnowned = useLocalStorage('resleri-ui-showUnowned', true)
 const shareInput = ref('')
 const savedFlash = ref(false)
 const copiedFlash = ref(false)
+let saveTimer = null
+let copyTimer = null
 
 function onLoadCode() {
   if (shareInput.value) {
@@ -122,7 +124,8 @@ function invertSelect() {
 function onSave() {
   saveToStorage()
   savedFlash.value = true
-  setTimeout(() => { savedFlash.value = false }, 1500)
+  clearTimeout(saveTimer)
+  saveTimer = setTimeout(() => { savedFlash.value = false }, 1500)
 }
 
 async function onCopyLink() {
@@ -130,7 +133,8 @@ async function onCopyLink() {
   try {
     await navigator.clipboard.writeText(url)
     copiedFlash.value = true
-    setTimeout(() => { copiedFlash.value = false }, 1500)
+    clearTimeout(copyTimer)
+    copyTimer = setTimeout(() => { copiedFlash.value = false }, 1500)
   } catch { /* clipboard not available */ }
 }
 
@@ -142,6 +146,10 @@ const layoutRef = ref(null)
 onMounted(() => {
   resetFilters()
   // selectstart/dragstart 已通过模板 @selectstart.prevent @dragstart.prevent 处理
+})
+onUnmounted(() => {
+  clearTimeout(saveTimer)
+  clearTimeout(copyTimer)
 })
 </script>
 

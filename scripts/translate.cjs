@@ -54,14 +54,14 @@ for (const [name, config] of Object.entries(pipelineConfig.translationFiles)) {
     console.log(`  ✓ ${config.file}: 静态文件，保持现有翻译`);
     continue;
   }
-  const jpData = JSON.parse(fs.readFileSync(src, 'utf-8'));
+  const jpData = safeReadJSON(src);
 
   // 已有翻译
-  const langData = fs.existsSync(langPath) ? JSON.parse(fs.readFileSync(langPath, 'utf-8')) : [];
+  const langData = fs.existsSync(langPath) ? safeReadJSON(langPath) : [];
   const langMap = new Map(langData.map(e => [e.id, e]));
 
   // 待翻译
-  const untransData = fs.existsSync(untransPath) ? JSON.parse(fs.readFileSync(untransPath, 'utf-8')) : [];
+  const untransData = fs.existsSync(untransPath) ? safeReadJSON(untransPath) : [];
   const untransMap = new Map();
   untransData.forEach(e => {
     const cur = untransMap.get(e.id) || {};

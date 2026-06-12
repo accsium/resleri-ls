@@ -46,15 +46,13 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
-  scrollBehavior() {
-    return { top: 0 }
-  },
 })
 
 // 记录每个路由的滚动位置，返回时还原
 const scrollPositions = {}
 router.beforeEach((to, from) => {
-  if (from.name && scrollPositions[from.name] == null) {
+  if (from.name) {
+    // 每次离开路由时更新滚动位置，覆盖旧值防止无限增长
     scrollPositions[from.name] = window.scrollY || document.querySelector('.app-content')?.scrollTop || 0
   }
 })

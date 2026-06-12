@@ -58,6 +58,11 @@ const selectedAttrs = computed({
   set: (v) => toggleFilter('attack_attributes', v),
 })
 
+function cycleTriState(key) {
+  const cur = activeFilters[key] ?? 0
+  toggleFilter(key, cur < 2 ? cur + 1 : 0)
+}
+
 function toggleAttr(id) {
   const cur = [...selectedAttrs.value]
   const idx = cur.indexOf(id)
@@ -304,7 +309,7 @@ function toggleAtelierFes(s) {
           :key="key"
           class="sf-tri-btn"
           :class="{ active: activeFilters[key] === 1, exclude: activeFilters[key] === 2 }"
-          @click="toggleFilter(key, (activeFilters[key] || 0) < 2 ? (activeFilters[key] || 0) + 1 : 0)"
+          @click="cycleTriState(key)"
         >
           {{ label }}{{ activeFilters[key] === 1 ? ' ✓' : activeFilters[key] === 2 ? ' ✕' : '' }}
         </button>

@@ -34,6 +34,7 @@ export function useTraitData() {
       loaded.value = true
     } catch (e) {
       error.value = e
+      cachePromise = null
       console.error('加载词条数据失败', e)
     }
   }

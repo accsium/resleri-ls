@@ -87,4 +87,5 @@ const sortedChars = computed(() => sortItems(leaderChars.value, getSortVal))
   text-align: center;
   line-height: 0;
 }
+:deep(.st-wrap) { height: auto; }
 </style>

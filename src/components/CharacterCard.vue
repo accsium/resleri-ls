@@ -9,6 +9,7 @@ import CardDetail from './CardDetail.vue'
 import StarsDisplay from './StarsDisplay.vue'
 
 let cardUid = 0
+const headerObservers = new Map()
 
 const props = defineProps({
   indexEntry: Object,
@@ -130,11 +131,12 @@ async function toggleExpand() {
     // ResizeObserver 跟踪 header 高度
     const card = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
     const header = card?.querySelector('.card-header')
-    if (card && header && !card._headerObserver) {
+    if (card && header && !headerObservers.has(props.indexEntry.id)) {
       const update = () => card.style.setProperty('--card-head-h', (header.offsetHeight - 1) + 'px')
       update()
-      card._headerObserver = new ResizeObserver(update)
-      card._headerObserver.observe(header)
+      const observer = new ResizeObserver(update)
+      observer.observe(header)
+      headerObservers.set(props.indexEntry.id, observer)
     }
   } catch (e) {
     detailLoading.value = false
@@ -144,10 +146,10 @@ async function toggleExpand() {
 
 // 组件销毁时断开该卡片关联的 ResizeObserver
 onUnmounted(() => {
-  const card = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
-  if (card?._headerObserver) {
-    card._headerObserver.disconnect()
-    delete card._headerObserver
+  const observer = headerObservers.get(props.indexEntry.id)
+  if (observer) {
+    observer.disconnect()
+    headerObservers.delete(props.indexEntry.id)
   }
 })
 
@@ -208,7 +210,7 @@ onUnmounted(() => {
             <AvatarDisplay :index-entry="indexEntry" :size="84" :kid="kid" />
           </div>
           <div class="cb-traits">
-            <span v-for="(trait, i) in traits" :key="i" class="trait-tag">{{ trait }}</span>
+            <span v-for="trait in traits" :key="trait" class="trait-tag">{{ trait }}</span>
           </div>
         </div>
 
@@ -235,7 +237,7 @@ onUnmounted(() => {
           </div>
           <div class="cb-tags">
             <span class="cb-tags-label">标签：</span>
-            <span class="cb-tags-items"><span v-for="(tag, i) in tags" :key="i" class="tag">{{ tag }}</span></span>
+            <span class="cb-tags-items"><span v-for="tag in tags" :key="tag" class="tag">{{ tag }}</span></span>
           </div>
           <div class="cb-stats">
             <div v-for="stat in statCards" :key="stat.label" class="stat-card">
@@ -264,7 +266,7 @@ onUnmounted(() => {
             <AvatarDisplay :index-entry="indexEntry" :size="84" :kid="kid" />
           </div>
           <div class="cb-traits-mob">
-            <span v-for="(trait, i) in traits" :key="i" class="trait-tag">{{ trait }}</span>
+            <span v-for="trait in traits" :key="trait" class="trait-tag">{{ trait }}</span>
           </div>
         </div>
 
@@ -276,7 +278,7 @@ onUnmounted(() => {
             </div>
             <div class="cb-tags">
               <span class="cb-tags-label">标签：</span>
-              <span class="cb-tags-items"><span v-for="(tag, i) in tags" :key="i" class="tag">{{ tag }}</span></span>
+              <span class="cb-tags-items"><span v-for="tag in tags" :key="tag" class="tag">{{ tag }}</span></span>
             </div>
           </div>
           <button class="cb-expand-mob" @click="toggleExpand">

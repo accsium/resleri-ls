@@ -19,7 +19,7 @@ for (const [entityName, entityConfig] of Object.entries(config.entities)) {
     console.warn(`⚠️ 文件 ${entityConfig.file} 不存在，跳过实体 ${entityName}`);
     continue;
   }
-  const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  const raw = safeReadJSON(filePath);
   tables[entityName] = new Map(raw.map(item => [item[entityConfig.idField], item]));
 }
 
@@ -28,7 +28,7 @@ function loadJpMap(name) {
   // JP name 从 data_raw 中读取
   const filePath = path.join(rawDir, `${name}.json`);
   if (fs.existsSync(filePath)) {
-    const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    const raw = safeReadJSON(filePath);
     return new Map(raw.map(item => [item.id, item.name]));
   }
   return new Map();
@@ -38,7 +38,7 @@ function loadCnMap(name) {
   // CN name 从 language/ 中读取
   const filePath = path.join(langDir, `${name}.json`);
   if (fs.existsSync(filePath)) {
-    const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    const raw = safeReadJSON(filePath);
     return new Map(raw.map(item => [item.id, item.name_cn || '']));
   }
   return new Map();
@@ -57,7 +57,7 @@ const rulesFile = path.join(__dirname, '..', 'config', 'ex_skill_rules.json');
 let exRules = [];
 if (fs.existsSync(rulesFile)) {
   try {
-    exRules = JSON.parse(fs.readFileSync(rulesFile, 'utf-8'));
+    exRules = safeReadJSON(rulesFile);
     console.log(`📋 已加载 EX 技能规则：${exRules.length} 条`);
   } catch (e) {
     console.warn('⚠️ EX 技能规则文件格式错误，将使用默认显示');
@@ -308,6 +308,15 @@ function slimSkillDetails(details) {
   return out
 }
 
+// HTML 转义：防止技能描述中的 HTML 标签在 v-html 中被渲染
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
 function pickKeys(obj, keys) {
   const out = {}
   for (const k of keys) {
@@ -328,7 +337,7 @@ function diffObjects(base, alt) {
   for (const k of keys) {
     if (DIFF_SKIP_KEYS.has(k)) continue
     if (base[k] === alt[k]) continue
-    diff[k] = k in alt ? alt[k] : base[k]
+    diff[k] = Object.hasOwn(alt, k) ? alt[k] : base[k]
   }
   return diff
 }
@@ -470,7 +479,7 @@ function buildIndexEntry(character) {
   }
 
   // UID: YYYYMMDD + initial_rarity(1位) + id(5位补零)
-  const dateStr = (character.start_at || '').replace(/-/g, '').substring(0, 8);
+  const dateStr = (character.start_at || '2049-12-31').replace(/-/g, '').substring(0, 8);
   const uid = dateStr + String(character.initial_rarity) + String(character.id).padStart(5, '0');
 
   const entry = {
@@ -625,7 +634,7 @@ if (!tables.character) {
 const excludeFile = path.join(__dirname, '..', 'config', 'exclude.json');
 let excludeIds = new Set();
 if (fs.existsSync(excludeFile)) {
-  const ids = JSON.parse(fs.readFileSync(excludeFile, 'utf-8'));
+  const ids = safeReadJSON(excludeFile);
   ids.forEach(id => excludeIds.add(id));
   console.log(`📋 已加载排除角色 ID：${excludeIds.size} 个`);
 }
@@ -634,7 +643,7 @@ const transformFile = path.join(__dirname, '..', 'config', 'transform.json');
 let transformPairs = [];
 let hiddenTransformIds = new Set();
 if (fs.existsSync(transformFile)) {
-  const pairs = JSON.parse(fs.readFileSync(transformFile, 'utf-8'));
+  const pairs = safeReadJSON(transformFile);
   transformPairs = pairs;
   pairs.forEach(pair => {
     hiddenTransformIds.add(pair[1]);
@@ -651,7 +660,7 @@ console.log(`👥 列表显示角色数量：${visibleCharacters.length}`);
 const gachaEndMap = new Map(); // character_id → earliest end_at (YYYY-MM-DD)
 const gachaFile = path.join(rawDir, 'gacha.json');
 if (fs.existsSync(gachaFile)) {
-  const gachaData = JSON.parse(fs.readFileSync(gachaFile, 'utf-8'));
+  const gachaData = safeReadJSON(gachaFile);
   for (const g of gachaData) {
     if (!g.additional_pieces || !g.end_at) continue;
     const dateStr = g.end_at.substring(0, 10); // YYYY-MM-DD
@@ -670,7 +679,7 @@ if (fs.existsSync(gachaFile)) {
 const permExcludeFile = path.join(__dirname, '..', 'config', 'permanent_exclude.json');
 const permExcludeIds = new Set();
 if (fs.existsSync(permExcludeFile)) {
-  const excludeList = JSON.parse(fs.readFileSync(permExcludeFile, 'utf-8'));
+  const excludeList = safeReadJSON(permExcludeFile);
   for (const id of excludeList) permExcludeIds.add(id);
   console.log(`📋 已加载非恒常角色：${permExcludeIds.size} 个`);
 }
@@ -679,7 +688,7 @@ if (fs.existsSync(permExcludeFile)) {
 let fesConfig = [];
 const fesFile = path.join(__dirname, '..', 'config', 'atelier_fes.json');
 if (fs.existsSync(fesFile)) {
-  fesConfig = JSON.parse(fs.readFileSync(fesFile, 'utf-8'));
+  fesConfig = safeReadJSON(fesFile);
   console.log(`🎪 已加载 ATELIER FES：${fesConfig.length} 个`);
 }
 
@@ -704,10 +713,10 @@ fs.mkdirSync(charOutDir, { recursive: true });
 function buildTraitOutput(name, buildValues) {
   const rawFile = path.join(rawDir, `${name}.json`);
   if (!fs.existsSync(rawFile)) return;
-  const traits = JSON.parse(fs.readFileSync(rawFile, 'utf-8'));
+  const traits = safeReadJSON(rawFile);
 
   const langFile = path.join(langDir, `${name}.json`);
-  const langData = fs.existsSync(langFile) ? JSON.parse(fs.readFileSync(langFile, 'utf-8')) : [];
+  const langData = fs.existsSync(langFile) ? safeReadJSON(langFile, false) : [];
   const langMap = new Map(langData.map(t => [t.id, t]));
 
   const output = [];
@@ -754,9 +763,9 @@ buildTraitOutput('equipment_tool_trait', etValues);
 // 输出 character_tag（含 priority 用于排序）
 const tagRawFile = path.join(rawDir, 'character_tag.json')
 if (fs.existsSync(tagRawFile)) {
-  const tagRaw = JSON.parse(fs.readFileSync(tagRawFile, 'utf-8'))
+  const tagRaw = safeReadJSON(tagRawFile)
   const tagLangFile = path.join(langDir, 'character_tag.json')
-  const tagLang = fs.existsSync(tagLangFile) ? JSON.parse(fs.readFileSync(tagLangFile, 'utf-8')) : []
+  const tagLang = fs.existsSync(tagLangFile) ? safeReadJSON(tagLangFile, false) : []
   const tagLangMap = new Map(tagLang.map(t => [t.id, t]))
   const tagOutput = tagRaw.map(t => ({
     id: t.id,
@@ -823,6 +832,8 @@ function addSkillRow(charId, entry, type, state, skill) {
       if (v != null) desc = desc.replace(new RegExp('\\{' + i + '\\}', 'g'), v)
     }
   }
+  // 转义 HTML 防止 v-html 渲染原始标签
+  desc = escapeHtml(desc)
   const stt = skill.skill_target_type
   skillsTable.push({
     char_id: charId,
@@ -849,7 +860,7 @@ function addSkillRow(charId, entry, type, state, skill) {
 const sttFile = path.join(langDir, 'skill_target_type.json')
 const sttPatch = new Map()
 if (fs.existsSync(sttFile)) {
-  JSON.parse(fs.readFileSync(sttFile, 'utf-8')).forEach(t => sttPatch.set(t.id, t.name))
+  safeReadJSON(sttFile).forEach(t => sttPatch.set(t.id, t.name))
 }
 
 const skillsTable = []
@@ -857,7 +868,7 @@ const skillsTable = []
 for (const entry of index) {
   const charFile = path.join(charOutDir, `${entry.id}.json`)
   if (!fs.existsSync(charFile)) continue
-  const char = JSON.parse(fs.readFileSync(charFile, 'utf-8'))
+  const char = safeReadJSON(charFile)
 
   // 计算本角色的基础/切换状态标签
   const baseState = char.switch ? STATE_LABEL[char.switch]?.[0] || '—' : '—'
@@ -923,7 +934,7 @@ console.log(`📋 技能一览：${skillsTable.length} 条`)
 const fmtDate2 = d => d ? d.substring(0, 10).replace(/-/g, '/') : ''
 const eventFile = path.join(rawDir, 'event.json')
 if (fs.existsSync(eventFile)) {
-  const events = JSON.parse(fs.readFileSync(eventFile, 'utf-8'))
+  const events = safeReadJSON(eventFile)
   const eventTable = events
     .filter(e => e.event_type === 1)
     .sort((a, b) => a.id - b.id)
@@ -943,8 +954,8 @@ if (fs.existsSync(eventFile)) {
 const contestFile = path.join(rawDir, 'damage_contest_rotation.json')
 const episodeFile = path.join(rawDir, 'episode.json')
 if (fs.existsSync(contestFile) && fs.existsSync(episodeFile)) {
-  const contests = JSON.parse(fs.readFileSync(contestFile, 'utf-8'))
-  const episodes = JSON.parse(fs.readFileSync(episodeFile, 'utf-8'))
+  const contests = safeReadJSON(contestFile)
+  const episodes = safeReadJSON(episodeFile)
   const epMap = new Map(episodes.map(e => [e.id, e.name]))
   const contestTable = contests
     .sort((a, b) => a.id - b.id)

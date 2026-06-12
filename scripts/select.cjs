@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
+const { safeReadJSON } = require('./safeReadJSON.cjs');
 
-const pipelineConfig = JSON.parse(fs.readFileSync(
-  path.join(__dirname, '..', 'config', 'pipeline.json'), 'utf-8'
-));
+const pipelineConfig = safeReadJSON(
+  path.join(__dirname, '..', 'config', 'pipeline.json')
+);
 
 const srcDir = path.join(__dirname, '..', 'data_raw', 'jp');
 const destDir = path.join(__dirname, '..', 'data_raw', 'selection');

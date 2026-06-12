@@ -25,7 +25,7 @@ export function useBuildInfo() {
       const text = formatTime(meta.build_time)
       if (text) updateTimeText.value = text
     } catch {
-      // keep current value
+      updateTimeText.value = '最后更新：未知'
     }
   }
 
