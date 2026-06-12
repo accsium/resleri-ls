@@ -22,7 +22,7 @@ onMounted(async () => {
   try {
     const res = await fetch('config/announcements.json')
     announcements.value = await res.json()
-  } catch {}
+  } catch (e) { console.error('加载公告数据失败', e) }
 })
 </script>
 

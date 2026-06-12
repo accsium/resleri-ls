@@ -61,13 +61,15 @@ router.beforeEach((to, from) => {
 
 router.afterEach((to) => {
   const saved = scrollPositions[to.name]
+  const el = document.querySelector('.app-content')
   if (saved != null) {
     setTimeout(() => {
-      const el = document.querySelector('.app-content')
       if (el) el.scrollTop = saved
       else window.scrollTo(0, saved)
     }, 0)
     delete scrollPositions[to.name]
+  } else if (el) {
+    setTimeout(() => { el.scrollTop = 0 }, 0)
   }
 })
 

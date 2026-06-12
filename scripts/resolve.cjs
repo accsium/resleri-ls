@@ -1,10 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const config = require('./resolveConfig.cjs');
+const { safeReadJSON } = require('./safeReadJSON.cjs');
 
-const pipelineConfig = JSON.parse(fs.readFileSync(
-  path.join(__dirname, '..', 'config', 'pipeline.json'), 'utf-8'
-));
+const pipelineConfig = safeReadJSON(
+  path.join(__dirname, '..', 'config', 'pipeline.json')
+);
 const rawDir = path.join(__dirname, '..', pipelineConfig.dataRawDir);
 const langDir = path.join(__dirname, '..', 'language');
 const untransDir = path.join(langDir, 'untranslated');
@@ -64,7 +65,14 @@ if (fs.existsSync(rulesFile)) {
 }
 
 // ========== 4. 递归补全效果引用 ==========
-function resolveEffects(obj, entityName) {
+// 递归深度上限，防止配置错误导致无限递归
+const MAX_RESOLVE_DEPTH = 10
+
+function resolveEffects(obj, entityName, depth = 0) {
+  if (depth > MAX_RESOLVE_DEPTH) {
+    console.warn(`⚠ resolveEffects: 达到最大递归深度 ${MAX_RESOLVE_DEPTH} (entity=${entityName})`)
+    return obj
+  }
   const entityConfig = config.entities[entityName];
   if (!entityConfig) return obj;
   const resolved = JSON.parse(JSON.stringify(obj));
@@ -82,7 +90,7 @@ function resolveEffects(obj, entityName) {
           const refId = item[refConfig.refField];
           const detail = tables[refConfig.target]?.get(refId);
           if (detail) {
-            targetArray[index] = { ...item, _detail: resolveEffects(detail, refConfig.target) };
+            targetArray[index] = { ...item, _detail: resolveEffects(detail, refConfig.target, depth + 1) };
           }
         });
       }
@@ -309,10 +317,18 @@ function pickKeys(obj, keys) {
   return out
 }
 
+// 逐字段比较两个对象的差异（用于 switch_stat）
+// alt 中与 base 不同的字段（含 base 有但 alt 无的字段）写入结果
+// 显式排除 switch / switch_stat 以避免循环引用
+const DIFF_SKIP_KEYS = new Set(['switch', 'switch_stat', '_skills', '_skillDetails'])
+
 function diffObjects(base, alt) {
   const diff = {}
-  for (const k of Object.keys(alt)) {
-    if (JSON.stringify(base[k]) !== JSON.stringify(alt[k])) diff[k] = alt[k]
+  const keys = new Set([...Object.keys(base), ...Object.keys(alt)])
+  for (const k of keys) {
+    if (DIFF_SKIP_KEYS.has(k)) continue
+    if (base[k] === alt[k]) continue
+    diff[k] = k in alt ? alt[k] : base[k]
   }
   return diff
 }
@@ -352,8 +368,6 @@ function finalizeOutput(char) {
   let switchStat = null
   if (sw === 'change') {
     const trans = finalizeOutput(char._transform)
-    trans.switch = undefined
-    trans.switch_stat = undefined
     switchStat = diffObjects(char, trans)
     if (char._skillDetails || trans._skillDetails) {
       switchStat._skillDetails = { ...(char._skillDetails || {}), ...(trans._skillDetails || {}) }
@@ -399,7 +413,11 @@ function finalizeOutput(char) {
   }
 
   function clean(obj) {
-    if (Array.isArray(obj)) return obj
+    if (Array.isArray(obj)) {
+      return obj
+        .filter(item => item !== null && item !== undefined)
+        .map(item => (item && typeof item === 'object' && !Array.isArray(item)) ? clean(item) : item)
+    }
     if (obj && typeof obj === 'object') {
       const result = {}
       for (const [k, v] of Object.entries(obj)) {
@@ -489,7 +507,8 @@ function buildIndexEntry(character) {
     equipment_tool_trait_names_cn: (character.equipment_tool_trait_ids || []).map(id => cnMaps.equipment_tool_trait?.get(id) || ''),
     base_character_name_ja: jpMaps.base_character?.get(character.base_character_id) || null,
     base_character_name_cn: cnMaps.base_character?.get(character.base_character_id) || null,
-    original_title_id: character.original_title_id || null,	    original_title_name_ja: jpMaps.original_title?.get(character.original_title_id) || null,
+    original_title_id: character.original_title_id || null,
+    original_title_name_ja: jpMaps.original_title?.get(character.original_title_id) || null,
 	    original_title_name_cn: cnMaps.original_title?.get(character.original_title_id) || null,
 	    has_evo: !!(
 	      (character.evolved_normal1_skill_ids && character.evolved_normal1_skill_ids.length > 0) ||
@@ -587,7 +606,7 @@ function computeWT(character, useEvolved) {
     }
   } else {
     const field = useEvolved ? 'evolved_normal2_skill_ids' : 'normal2_skill_ids';
-    const ids = character[field];
+    const ids = character[field] || [];
     if (ids && ids.length > 0) {
       const maxId = Math.max(...ids);
       const skill = tables.skill?.get(maxId);

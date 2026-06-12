@@ -14,7 +14,7 @@ const { t } = useI18n()
       <router-link to="/support-abilities" class="nav-link">{{ t('navSupportAbility') }}</router-link>
       <router-link to="/events" class="nav-link">{{ t('navEvents') }}</router-link>
       <router-link to="/contest-rotations" class="nav-link">{{ t('navContest') }}</router-link>
-      <router-link to="/test" class="nav-link">Test</router-link>
+      <router-link to="/test" class="nav-link">{{ t('navTest') }}</router-link>
     </nav>
   </div>
 </template>

@@ -3,6 +3,7 @@ import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useFilters } from '../composables/useFilters'
 import { useCharacterData } from '../composables/useCharacterData'
+import { useTraitData } from '../composables/useTraitData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
@@ -11,31 +12,13 @@ const {
   sortCategory, sortField, currentSortOrder,
   activeFilters, searchText,
   setSortCategory, setSortField,
-  toggleFilter,
+  toggleFilter, resetFilters,
 } = useFilters()
 
+const { battleTraits: traitBT, equipTraits: traitET, load: loadSharedTraits } = useTraitData()
+
 function clearAll() {
-  const f = activeFilters
-  f.attack_attributes = []
-  f.role = []
-  f.initial_rarity = []
-  f.trait_color = []
-  f.support_color = []
-  f.tags = []
-  f.battle_tool_traits = []
-  f.equipment_tool_traits = []
-  f.has_evo = 0
-  f.has_range = 0
-  f.has_transform = 0
-  f.has_active = 0
-  f.has_ex = 0
-  f.original_title = ''
-  f.permanent_status = []
-  f.atelier_fes = []
-  searchText.value = ''
-  setSortCategory('character')
-  setSortField('start_at')
-  currentSortOrder.value = 'desc'
+  resetFilters()
 }
 
 const panelLang = ref('ja')
@@ -191,21 +174,19 @@ const traitsLoaded = ref(false)
 async function loadTraitData() {
   if (traitsLoaded.value) return
   try {
-    const [bt, et, tg] = await Promise.all([
-      fetch('data/battle_tool_trait.json').then(r => r.json()),
-      fetch('data/equipment_tool_trait.json').then(r => r.json()),
-      fetch('data/character_tag.json').then(r => r.json()),
-    ])
+    await loadSharedTraits()
+    const [bt, et] = [traitBT.value, traitET.value]
     battleTraitsJa.value = groupTraits(bt, t => t.name)
     battleTraitsCn.value = groupTraits(bt, t => t.name_cn || t.name)
     equipTraitsJa.value = groupTraits(et, t => t.name)
     equipTraitsCn.value = groupTraits(et, t => t.name_cn || t.name)
+    const tg = await fetch('data/character_tag.json').then(r => r.json())
     tg.sort((a, b) => a.priority - b.priority).forEach(t => {
       charTagsJa.value.push({ id: t.id, name: t.name })
       charTagsCn.value.push({ id: t.id, name: t.name_cn || t.name })
     })
     traitsLoaded.value = true
-  } catch {}
+  } catch (e) { console.error('加载词条数据失败', e) }
 }
 
 // 首次展开筛选面板时加载词条/标签数据（延迟加载）

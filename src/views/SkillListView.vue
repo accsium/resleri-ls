@@ -6,6 +6,7 @@ import { useSortTable } from '../composables/useSortTable'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import IconDisplay from '../components/IconDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
+import PaginationBar from '../components/PaginationBar.vue'
 
 const { characterIndex } = useCharacterData()
 const { currentLang, getField, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS } = useI18n()
@@ -132,7 +133,7 @@ const pagedSkills = computed(() => {
 })
 
 // 筛选/搜索变化回到第一页
-watch([activeFilters, searchText], () => {
+watch([() => filteredSkills.value.length, searchText], () => {
   slPage.value = 1
 })
 
@@ -184,20 +185,13 @@ onMounted(async () => {
     <input type="text" v-model="searchText" placeholder="搜索技能名或描述..." class="skf-search">
   </div>
   <!-- 分页（上） -->
-  <div v-if="slTotalPages > 0" class="sk-pg-bar">
-    <button class="pg-btn" :disabled="slPage === 1" @click="slPage = 1">«</button>
-    <button class="pg-btn" :disabled="slPage === 1" @click="slPage = slPage - 1">‹</button>
-    <span class="pg-info">{{ slPage }} / {{ slTotalPages }}</span>
-    <button class="pg-btn" :disabled="slPage === slTotalPages" @click="slPage = slPage + 1">›</button>
-    <button class="pg-btn" :disabled="slPage === slTotalPages" @click="slPage = slTotalPages">»</button>
-    <span class="pg-size">
-      每页
-      <select class="pg-size-sel" v-model="slPageSize">
-        <option v-for="s in [30, 50, 100, 300, 500, 1000]" :key="s" :value="s">{{ s }}</option>
-      </select>
-      条（共 {{ filteredSkills.length }} 条）
-    </span>
-  </div>
+  <PaginationBar
+    :currentPage="slPage" :pageSize="slPageSize"
+    :totalPages="slTotalPages" :totalItems="filteredSkills.length"
+    :pageSizes="[30, 50, 100, 300, 500, 1000]"
+    @update:currentPage="slPage = $event"
+    @update:pageSize="slPageSize = $event"
+  />
 
   <SortableTable
     :columns="columns"
@@ -235,20 +229,13 @@ onMounted(async () => {
   </SortableTable>
 
   <!-- 分页（下） -->
-  <div v-if="slTotalPages > 0" class="sk-pg-bar">
-    <button class="pg-btn" :disabled="slPage === 1" @click="slPage = 1">«</button>
-    <button class="pg-btn" :disabled="slPage === 1" @click="slPage = slPage - 1">‹</button>
-    <span class="pg-info">{{ slPage }} / {{ slTotalPages }}</span>
-    <button class="pg-btn" :disabled="slPage === slTotalPages" @click="slPage = slPage + 1">›</button>
-    <button class="pg-btn" :disabled="slPage === slTotalPages" @click="slPage = slTotalPages">»</button>
-    <span class="pg-size">
-      每页
-      <select class="pg-size-sel" v-model="slPageSize">
-        <option v-for="s in [30, 50, 100, 300, 500, 1000]" :key="s" :value="s">{{ s }}</option>
-      </select>
-      条（共 {{ filteredSkills.length }} 条）
-    </span>
-  </div>
+  <PaginationBar
+    :currentPage="slPage" :pageSize="slPageSize"
+    :totalPages="slTotalPages" :totalItems="filteredSkills.length"
+    :pageSizes="[30, 50, 100, 300, 500, 1000]"
+    @update:currentPage="slPage = $event"
+    @update:pageSize="slPageSize = $event"
+  />
 </template>
 
 <style scoped>

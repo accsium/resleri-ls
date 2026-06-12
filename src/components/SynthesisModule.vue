@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref, onMounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
+import { useTraitData } from '../composables/useTraitData'
 
 const props = defineProps({
   characterData: Object,
@@ -18,18 +19,16 @@ const etIds = computed(() => props.characterData.equipment_tool_trait_ids || [])
 const btNames = computed(() => getField(props.characterData, 'battle_tool_trait_names') || [])
 const etNames = computed(() => getField(props.characterData, 'equipment_tool_trait_names') || [])
 
-const traitEffects = ref({})
+const { battleTraits, equipTraits, load: loadTraits } = useTraitData()
 
-onMounted(async () => {
-  try {
-    const [bt, et] = await Promise.all([
-      fetch('data/battle_tool_trait.json').then(r => r.json()),
-      fetch('data/equipment_tool_trait.json').then(r => r.json()),
-    ])
-    for (const t of bt) traitEffects.value['bt_' + t.id] = t
-    for (const t of et) traitEffects.value['et_' + t.id] = t
-  } catch {}
+const traitEffects = computed(() => {
+  const map = {}
+  for (const t of battleTraits.value) map['bt_' + t.id] = t
+  for (const t of equipTraits.value) map['et_' + t.id] = t
+  return map
 })
+
+onMounted(() => { loadTraits() })
 
 const allTraits = computed(() => {
   const list = []

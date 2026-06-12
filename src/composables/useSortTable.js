@@ -1,4 +1,5 @@
 import { ref, computed } from 'vue'
+import { cmpVal } from '../utils/sort'
 
 /**
  * 通用表格排序 composable
@@ -14,22 +15,6 @@ export function useSortTable({ defaultCol = 'id', defaultDir = 'asc', avatarAlia
   const sortDirs = ref({ [defaultCol]: defaultDir })
   const sortCol = computed(() => sortPriority.value[0] || defaultCol)
   const sortDir = computed(() => sortDirs.value[sortCol.value] || defaultDir)
-
-  /**
-   * null 安全比较两个值
-   */
-  function cmpVal(va, vb, dir) {
-    if (va == null && vb == null) return 0
-    if (va == null) return 1
-    if (vb == null) return -1
-    if (typeof va === 'string') {
-      const c = va.localeCompare(vb)
-      return c ? c * dir : 0
-    }
-    if (va < vb) return -1 * dir
-    if (va > vb) return 1 * dir
-    return 0
-  }
 
   /**
    * 表头点击：切换方向或将新列推到优先级头部

@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
+const { safeReadJSON } = require('./safeReadJSON.cjs');
 
-const pipelineConfig = JSON.parse(fs.readFileSync(
-  path.join(__dirname, '..', 'config', 'pipeline.json'), 'utf-8'
-));
+const pipelineConfig = safeReadJSON(
+  path.join(__dirname, '..', 'config', 'pipeline.json')
+);
 
 const rootDir = path.join(__dirname, '..');
 const rawDir = path.join(rootDir, pipelineConfig.dataRawDir);
@@ -11,10 +12,18 @@ const langDir = path.join(rootDir, 'language');
 const untransDir = path.join(langDir, 'untranslated');
 
 // 加载 effect / ability 用于生成 trait 效果描述
-const effects = JSON.parse(fs.readFileSync(path.join(rawDir, 'effect.json'), 'utf-8'));
-const effectMap = new Map(effects.map(e => [e.id, e]));
-const abilities = JSON.parse(fs.readFileSync(path.join(rawDir, 'ability.json'), 'utf-8'));
-const abilityMap = new Map(abilities.map(a => [a.id, a]));
+const effectPath = path.join(rawDir, 'effect.json');
+const abilityPath = path.join(rawDir, 'ability.json');
+let effectMap = new Map();
+let abilityMap = new Map();
+if (fs.existsSync(effectPath) && fs.existsSync(abilityPath)) {
+  const effects = safeReadJSON(effectPath, false);
+  effectMap = new Map(effects.map(e => [e.id, e]));
+  const abilities = safeReadJSON(abilityPath, false);
+  abilityMap = new Map(abilities.map(a => [a.id, a]));
+} else {
+  console.warn('⚠ effect.json 或 ability.json 缺失，跳过 trait 效果描述生成');
+}
 
 [langDir, untransDir].forEach(d => {
   if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
@@ -77,7 +86,7 @@ for (const [name, config] of Object.entries(pipelineConfig.translationFiles)) {
       if (item.description) {
         lang.effect_description = item.description;
       } else {
-        const effDesc = name === 'battle_tool_trait' ? btEffect(item) : etEffect(item);
+        const effDesc = config.file === 'battle_tool_trait.json' ? btEffect(item) : etEffect(item);
         lang.effect_description = effDesc || '';
       }
       lang.effect_description_cn = lang.effect_description_cn || '';

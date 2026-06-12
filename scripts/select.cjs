@@ -46,7 +46,8 @@ for (const [name, config] of Object.entries(pipelineConfig.translationFiles)) {
 const publicConfigDir = path.join(__dirname, '..', 'public', 'config');
 if (!fs.existsSync(publicConfigDir)) fs.mkdirSync(publicConfigDir, { recursive: true });
 const configDir = path.join(__dirname, '..', 'config');
-for (const f of ['announcements.json', 'todo.md']) {
+const configFiles = fs.readdirSync(configDir).filter(f => f.endsWith('.json') || f.endsWith('.md'))
+for (const f of configFiles) {
   const src = path.join(configDir, f);
   const dest = path.join(publicConfigDir, f);
   if (fs.existsSync(src)) { fs.copyFileSync(src, dest); console.log(`  ✓ config/${f} → public/config/`); }

@@ -1,4 +1,4 @@
-import { ref, shallowRef, computed } from 'vue'
+import { ref, shallowRef, triggerRef, computed } from 'vue'
 
 const characterIndex = ref([])
 const loadedCharacters = shallowRef({})
@@ -51,7 +51,8 @@ export function useCharacterData() {
     const resp = await fetch(`data/character/${id}.json`)
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
     const data = await resp.json()
-    loadedCharacters.value = { ...loadedCharacters.value, [id]: data }
+    loadedCharacters.value[id] = data
+    triggerRef(loadedCharacters)
     return data
   }
 

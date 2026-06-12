@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, reactive, computed, watch, onMounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useSortTable } from '../composables/useSortTable'
 
@@ -38,8 +38,12 @@ function getSortVal(row, col) {
   return row.id
 }
 
+const sortedCache = reactive({})
+
 function sorted(g, gi) {
   const s = sorts.value[gi]
+  const key = `${g.label}-${gi}-${s.col}-${s.dir}`
+  if (sortedCache[key]) return sortedCache[key]
   const list = [...getGroupRows(g).value]
   const dir = s.dir === 'desc' ? -1 : 1
   list.sort((a, b) => {
@@ -47,8 +51,11 @@ function sorted(g, gi) {
     if (r !== 0) return r
     return (a.id - b.id) * dir
   })
+  sortedCache[key] = list
   return list
 }
+
+watch(sorts, () => Object.keys(sortedCache).forEach(k => delete sortedCache[k]), { deep: true })
 
 function onSort(gi, col) {
   const s = sorts.value[gi]

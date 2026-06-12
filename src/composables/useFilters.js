@@ -3,6 +3,7 @@ import { useI18n } from './useI18n'
 import { useCharacterData } from './useCharacterData'
 import { useCardState } from './useCardState'
 import { useLocalStorage } from './useLocalStorage'
+import { cmpVal } from '../utils/sort'
 
 const sortCategory = ref('character')
 const sortField = ref('start_at')
@@ -126,21 +127,6 @@ export function useFilters() {
     return null
   }
 
-  function cmpVal(va, vb, order) {
-    if (Array.isArray(va)) va = va[0]
-    if (Array.isArray(vb)) vb = vb[0]
-    if (va == null && vb == null) return 0
-    if (va == null) return 1 * order
-    if (vb == null) return -1 * order
-    if (typeof va === 'string') {
-      const c = va.localeCompare(vb)
-      return c ? c * order : 0
-    }
-    if (va < vb) return -1 * order
-    if (va > vb) return 1 * order
-    return 0
-  }
-
   function compareCharacters(a, b) {
     const order = currentSortOrder.value === 'desc' ? -1 : 1
     for (const item of sortPriority.value) {
@@ -224,6 +210,9 @@ export function useFilters() {
       original_title: '', permanent_status: [], atelier_fes: [],
     })
     searchText.value = ''
+    setSortCategory('character')
+    setSortField('start_at')
+    currentSortOrder.value = 'desc'
   }
 
   return {

@@ -19,9 +19,7 @@ const activeCategory = computed(() =>
 function onCategoryChange(e) {
   const cat = SORT_CATEGORIES.find(c => c.key === e.target.value)
   setSortCategory(cat.key)
-  if (cat.key !== 'skill') {
-    setSortField(cat.fields[0].field)
-  }
+  setSortField(cat.fields[0].field)
 }
 </script>
 
