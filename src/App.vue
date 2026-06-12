@@ -13,8 +13,7 @@ const { loadBuildTime } = useBuildInfo()
 
 onMounted(async () => {
   setLang('cn')
-  await loadIndex()
-  await loadBuildTime()
+  await Promise.all([loadIndex(), loadBuildTime()])
 })
 </script>
 
