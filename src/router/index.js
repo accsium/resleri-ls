@@ -43,13 +43,22 @@ const routes = [
   },
 ]
 
+// 记录每个路由的滚动位置，返回时还原
+const scrollPositions = {}
+
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // 浏览器前进后退
+    if (savedPosition) return savedPosition
+    // 自定义路由滚动位置恢复（由 afterEach 异步处理，等组件渲染完成）
+    if (scrollPositions[to.name] != null) return false
+    // 新导航同步置顶，避免异步滚动造成的视觉闪烁
+    return { top: 0 }
+  },
 })
 
-// 记录每个路由的滚动位置，返回时还原
-const scrollPositions = {}
 router.beforeEach((to, from) => {
   if (from.name) {
     // 每次离开路由时更新滚动位置，覆盖旧值防止无限增长
@@ -59,15 +68,13 @@ router.beforeEach((to, from) => {
 
 router.afterEach((to) => {
   const saved = scrollPositions[to.name]
-  const el = document.querySelector('.app-content')
   if (saved != null) {
+    const el = document.querySelector('.app-content')
     setTimeout(() => {
       if (el) el.scrollTop = saved
       else window.scrollTo(0, saved)
     }, 0)
     delete scrollPositions[to.name]
-  } else if (el) {
-    setTimeout(() => { el.scrollTop = 0 }, 0)
   }
 })
 

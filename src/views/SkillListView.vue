@@ -9,7 +9,7 @@ import SortableTable from '../components/SortableTable.vue'
 import PaginationBar from '../components/PaginationBar.vue'
 
 const { characterIndex } = useCharacterData()
-const { currentLang, getField, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS } = useI18n()
+const { t, currentLang, getField, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS } = useI18n()
 
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
 const charIndexMap = computed(() => {
@@ -159,7 +159,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div v-if="loading" class="loading">加载中...</div>
+  <div v-if="loading" class="loading">{{ t('loading') }}</div>
   <div v-else-if="error" class="load-error">{{ error }}</div>
   <template v-else>
   <div class="skf-bar">
@@ -280,5 +280,6 @@ onMounted(async () => {
 .sk-pg-bar .pg-info { color: var(--text-muted); }
 .sk-pg-bar .pg-size { color: var(--text-muted); margin-left: auto; }
 .sk-pg-bar .pg-size-sel { padding: var(--sel-padding); font-size: 12px; }
+.load-error { text-align: center; padding: 30px; color: var(--text-muted); }
 :deep(.st-wrap) { height: auto; }
 </style>
