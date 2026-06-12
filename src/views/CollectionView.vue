@@ -105,6 +105,12 @@ function onPointerUp() {
   dragging.value = false
   dragAction.value = null
 }
+function onKeydown(id, e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault()
+    onPointerDown(id)
+  }
+}
 function selectAll() {
   for (const c of characterIndex.value) {
     if (!isOwned(c.id)) toggleOwned(c.id)
@@ -135,10 +141,7 @@ const isLoaded = computed(() => characterIndex.value.length > 0)
 const layoutRef = ref(null)
 onMounted(() => {
   resetFilters()
-  if (layoutRef.value) {
-    layoutRef.value.addEventListener('selectstart', e => e.preventDefault())
-    layoutRef.value.addEventListener('dragstart', e => e.preventDefault())
-  }
+  // selectstart/dragstart 已通过模板 @selectstart.prevent @dragstart.prevent 处理
 })
 </script>
 
@@ -201,8 +204,10 @@ onMounted(() => {
           :key="entry.id"
           class="collection-avatar-item"
           :class="{ owned: isOwned(entry.id) }"
+          role="button" tabindex="0"
           @pointerdown="onPointerDown(entry.id)"
           @pointerenter="onPointerEnter(entry.id)"
+          @keydown="onKeydown(entry.id, $event)"
         >
           <AvatarDisplay :index-entry="entry" :size="seqSize" />
         </div>

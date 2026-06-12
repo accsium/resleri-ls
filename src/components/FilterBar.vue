@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useFilters } from '../composables/useFilters'
 import { useCharacterData } from '../composables/useCharacterData'
@@ -186,7 +186,10 @@ function groupTraits(list, getName) {
   return result
 }
 
-onMounted(async () => {
+const traitsLoaded = ref(false)
+
+async function loadTraitData() {
+  if (traitsLoaded.value) return
   try {
     const [bt, et, tg] = await Promise.all([
       fetch('data/battle_tool_trait.json').then(r => r.json()),
@@ -201,7 +204,13 @@ onMounted(async () => {
       charTagsJa.value.push({ id: t.id, name: t.name })
       charTagsCn.value.push({ id: t.id, name: t.name_cn || t.name })
     })
+    traitsLoaded.value = true
   } catch {}
+}
+
+// 首次展开筛选面板时加载词条/标签数据（延迟加载）
+watch(collapsed, (now) => {
+  if (!now) loadTraitData()
 })
 
 // 选中的标签/词条

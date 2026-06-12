@@ -116,7 +116,7 @@ function roleName(id) {
   height: auto;
 }
 .tag {
-  background: #c8c0b0;
+  background: var(--bg-trait);
   color: var(--text-primary);
 }
 </style>

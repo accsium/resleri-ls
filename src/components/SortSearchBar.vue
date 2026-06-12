@@ -40,7 +40,7 @@ function onCategoryChange(e) {
           </select>
         </div>
         <div class="sort-control-tail">
-          <select name="sort_field" v-model="sortField" @change="(e) => setSortField(e.target.value)">
+          <select name="sort_field" :value="sortField" @change="(e) => setSortField(e.target.value)">
             <option v-for="f in activeCategory.fields" :key="f.field" :value="f.field">
               {{ currentLang === 'cn' ? f.label_cn : f.label_ja }}
             </option>

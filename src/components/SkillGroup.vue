@@ -65,6 +65,7 @@ const skillStats = computed(() => {
         <div class="skill-stats">
           <span class="skill-stat">{{ t('target') }}: {{ skillStats.target }}</span>
           <span v-if="skillStats.attr" class="skill-stat">{{ t('attribute') }}: {{ skillStats.attr }}</span>
+          <!-- power=0 在游戏中不存在，|| 将 0 视为无值显示「—」是有意设计 -->
           <span class="skill-stat">{{ t('dmgPower') }}: {{ [1,2,3,4].includes(currentSkill.skill_power_type) && currentSkill.power ? currentSkill.power : '—' }}{{ [1,2,3,4].includes(currentSkill.skill_power_type) && currentSkill.power ? '%' : '' }}</span>
           <span class="skill-stat">{{ t('breakPower') }}: {{ currentSkill.break_power || '—' }}{{ currentSkill.break_power ? '%' : '' }}</span>
           <span class="skill-stat">{{ t('healPower') }}: {{ [5,6,7].includes(currentSkill.skill_power_type) && currentSkill.power ? currentSkill.power : '—' }}{{ [5,6,7].includes(currentSkill.skill_power_type) && currentSkill.power ? '%' : '' }}</span>

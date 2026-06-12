@@ -11,6 +11,14 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['pointerdown', 'pointerenter', 'pointerup'])
+
+function onKeydown(id, e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault()
+    emit('pointerdown', id)
+  }
+}
+
 const avatarSize = computed(() => props.size)
 
 const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
@@ -68,8 +76,10 @@ function getCell(rid, aid) {
               :key="entry.id"
               class="collection-avatar-item"
               :class="{ owned: ownedSet.has(entry.id) }"
+              role="button" tabindex="0"
               @pointerdown="emit('pointerdown', entry.id)"
               @pointerenter="emit('pointerenter', entry.id)"
+              @keydown="onKeydown(entry.id, $event)"
             >
               <AvatarDisplay :index-entry="entry" :size="size" />
             </div>

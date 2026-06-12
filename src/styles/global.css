@@ -21,6 +21,13 @@
   --radius:         4px;
   --radius-lg:      8px;
   --max-width:      900px;
+  --update-time:    #ffd700;
+  --load-bar-bg:    #e0e0e0;
+  --load-bar-fill:  #00bcd4;
+  --load-bar-done:  #2196f3;
+  --sf-toggle:      #2196f3;
+  --sf-toggle-hov:  #42a5f5;
+  --owned-bg:       rgba(8, 22, 30, 0.75);
 }
 
 /* ========== 基础重置 ========== */
@@ -128,7 +135,7 @@ input[type="text"] {
 .btn-refresh:hover { background: rgba(255,255,255,0.12); }
 
 .update-time {
-  color: #ffd700;
+  color: var(--update-time);
   font-size: 12px;
   white-space: nowrap;
   text-align: right;
@@ -139,15 +146,15 @@ input[type="text"] {
 /* ========== 载入进度条 ========== */
 .load-bar {
   height: 3px;
-  background: #e0e0e0;
+  background: var(--load-bar-bg);
 }
 .load-bar-fill {
   height: 100%;
-  background: #00bcd4;
+  background: var(--load-bar-fill);
   transition: width 0.3s;
 }
 .load-bar-fill.complete {
-  background: #2196f3;
+  background: var(--load-bar-done);
 }
 
 /* ========== 导航栏 ========== */
@@ -162,7 +169,7 @@ input[type="text"] {
 .nav-link {
   width: 100px;
   justify-content: center;
-  color: #8888;
+  color: #888;
   text-decoration: none;
   font-size: 14px;
   border-bottom: 2px solid transparent;
@@ -223,16 +230,17 @@ input[type="text"] {
 .sf-toggle-bar {
   cursor: pointer;
   display: flex; justify-content: center; align-items: center;
-  background: #2196f3;
+  background: var(--sf-toggle);
   padding: 0;
   height: 8px;
   margin: 0 -16px -8px -16px;
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
 .sf-toggle-bar:hover {
-  background: #42a5f5;
+  background: var(--sf-toggle-hov);
 }
 .sf-toggle-arrow { font-size: 9px; color: rgba(255,255,255,0.8); line-height: 1; display: flex; align-items: center; }
+.sf-select { font-size: 12px; padding: 4px 8px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-content); color: var(--text-primary); }
 @media (max-width: 768px) {
   .sf-collapsed .sf-row { display: none; }
 }
@@ -615,7 +623,7 @@ input:checked + .slider::before { transform: translateX(16px); }
   opacity: 1;
 }
 .color-mode .collection-avatar-item.owned {
-  background: rgba(8, 22, 30, 0.75);
+  background: var(--owned-bg);
   outline: 3px solid #b8382e;
   outline-offset: -1.5px;
 }

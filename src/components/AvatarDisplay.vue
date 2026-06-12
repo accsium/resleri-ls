@@ -33,7 +33,7 @@ const starDisplayCount = computed(() => {
 const charImage = computed(() => `image/character/${props.indexEntry.id}.png`)
 const showImage = ref(false)
 const wasLoaded = ref(false)
-const imageSize = props.indexEntry.image_size || 60000
+const imageSize = props.indexEntry.image_size ?? 60000
 const containerRef = ref(null)
 let cancelled = false
 let tracked = false

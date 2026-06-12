@@ -8,7 +8,7 @@ import { useCharacterData } from './composables/useCharacterData'
 import { useBuildInfo } from './composables/useBuildInfo'
 
 const { setLang } = useI18n()
-const { loadIndex, loadProgress } = useCharacterData()
+const { loadIndex, loadProgress, indexLoadError } = useCharacterData()
 const { loadBuildTime } = useBuildInfo()
 
 onMounted(async () => {
@@ -29,7 +29,16 @@ onMounted(async () => {
     </div>
     <AnnouncementBar />
     <div class="app-content">
-      <router-view />
+      <div v-if="indexLoadError" class="load-error">{{ indexLoadError }}</div>
+      <router-view v-else />
     </div>
   </div>
 </template>
+
+<style scoped>
+.load-error {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+}
+</style>

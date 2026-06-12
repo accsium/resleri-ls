@@ -51,17 +51,17 @@ export function filterCharacter(char, f) {
     return false
   if (f.tags.length) {
     const charTagIds = char.tag_ids || []
-    if (!f.tags.filter(t => t).every(t => charTagIds.includes(t)))
+    if (!f.tags.filter(t => t != null && t !== '').every(t => charTagIds.includes(t)))
       return false
   }
   if (f.battle_tool_traits.length) {
     const charTraits = char.battle_tool_trait_ids || []
-    if (!f.battle_tool_traits.filter(t => t).every(t => charTraits.includes(t)))
+    if (!f.battle_tool_traits.filter(t => t != null && t !== '').every(t => charTraits.includes(t)))
       return false
   }
   if (f.equipment_tool_traits.length) {
     const charTraits = char.equipment_tool_trait_ids || []
-    if (!f.equipment_tool_traits.filter(t => t).every(t => charTraits.includes(t)))
+    if (!f.equipment_tool_traits.filter(t => t != null && t !== '').every(t => charTraits.includes(t)))
       return false
   }
   if (f.has_evo === 1 && !char.has_evo) return false
@@ -82,6 +82,7 @@ export function filterCharacter(char, f) {
   }
   if (f.atelier_fes.length) {
     const pd = char.permanent_date || ''
+    // ATELIER FES I 包含基础 ATELIER FES 角色（pd='ATELIER FES'），ATELIER FES II 不包含
     if (f.atelier_fes.includes('ATELIER FES I') && pd === 'ATELIER FES') return true
     if (!f.atelier_fes.includes(pd)) return false
   }

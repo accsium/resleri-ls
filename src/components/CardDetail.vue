@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import SkillGroup from './SkillGroup.vue'
 import AbilityCard from './AbilityCard.vue'
@@ -82,10 +82,17 @@ const boardAbilities = computed(() => {
 })
 
 const boardActiveIndex = ref({})
+
+// 初始化光玉板能力默认选中最高级
+onMounted(() => {
+  boardAbilities.value.forEach(ba => {
+    if (!(ba.key in boardActiveIndex.value)) {
+      boardActiveIndex.value[ba.key] = ba.levels.length - 1
+    }
+  })
+})
+
 function boardActiveLevel(ba) {
-  if (!(ba.key in boardActiveIndex.value)) {
-    boardActiveIndex.value[ba.key] = ba.levels.length - 1
-  }
   return ba.levels[boardActiveIndex.value[ba.key]]
 }
 

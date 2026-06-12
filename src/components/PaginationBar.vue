@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useFilters } from '../composables/useFilters'
 
 const { currentPage, pageSize, totalPages } = useFilters()
@@ -20,7 +20,7 @@ function jump() {
 }
 
 // 生成显示的页码
-function pageNumbers() {
+const pageNumbers = computed(() => {
   const pages = []
   const total = totalPages.value
   const cur = currentPage.value
@@ -38,7 +38,7 @@ function pageNumbers() {
   if (end < total - 1) pages.push('...')
   if (end < total) pages.push(total)
   return pages
-}
+})
 </script>
 
 <template>

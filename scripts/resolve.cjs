@@ -176,6 +176,10 @@ function buildSkillsArray(character, skillDetails) {
 function buildLocalizedChar(character) {
   const char = JSON.parse(JSON.stringify(character));
 
+  // CN 翻译 fallback 链：cn → jp → 'ID:...'
+  const cnFallback = (id, mapName) =>
+    cnMaps[mapName]?.get(id) || jpMaps[mapName]?.get(id) || `ID:${id}`;
+
   char.tag_names_ja = (char.tag_ids || []).map(id => jpMaps.character_tag?.get(id) || `ID:${id}`);
   char.base_character_name_ja = jpMaps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
   char.original_title_name_ja = jpMaps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
@@ -188,17 +192,17 @@ function buildLocalizedChar(character) {
   if (char.battle_tool_trait_ids)
     char.battle_tool_trait_names_ja = char.battle_tool_trait_ids.map(id => jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
 
-  char.tag_names_cn = (char.tag_ids || []).map(id => cnMaps.character_tag?.get(id) || jpMaps.character_tag?.get(id) || `ID:${id}`);
-  char.base_character_name_cn = cnMaps.base_character?.get(char.base_character_id) || jpMaps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
-  char.original_title_name_cn = cnMaps.original_title?.get(char.original_title_id) || jpMaps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
+  char.tag_names_cn = (char.tag_ids || []).map(id => cnFallback(id, 'character_tag'));
+  char.base_character_name_cn = cnFallback(char.base_character_id, 'base_character');
+  char.original_title_name_cn = cnFallback(char.original_title_id, 'original_title');
   if (char.equipment_tool_trait_ids)
-    char.equipment_tool_trait_names_cn = char.equipment_tool_trait_ids.map(id => cnMaps.equipment_tool_trait?.get(id) || jpMaps.equipment_tool_trait?.get(id) || `ID:${id}`);
+    char.equipment_tool_trait_names_cn = char.equipment_tool_trait_ids.map(id => cnFallback(id, 'equipment_tool_trait'));
   if (char.trait_color_id != null)
-    char.trait_color_name_cn = cnMaps.trait_color?.get(char.trait_color_id) || jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
+    char.trait_color_name_cn = cnFallback(char.trait_color_id, 'trait_color');
   if (char.support_color_id != null)
-    char.support_color_name_cn = cnMaps.trait_color?.get(char.support_color_id) || jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
+    char.support_color_name_cn = cnFallback(char.support_color_id, 'trait_color');
   if (char.battle_tool_trait_ids)
-    char.battle_tool_trait_names_cn = char.battle_tool_trait_ids.map(id => cnMaps.battle_tool_trait?.get(id) || jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
+    char.battle_tool_trait_names_cn = char.battle_tool_trait_ids.map(id => cnFallback(id, 'battle_tool_trait'));
 
   char._skillDetails = buildSkillDetails(character);
   const targetMapJa = jpMaps.skill_target_type;
