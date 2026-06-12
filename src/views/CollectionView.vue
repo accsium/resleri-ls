@@ -198,13 +198,13 @@ onUnmounted(() => {
         <span class="collection-size-group" v-if="viewMode === 'sequential'">
           <span class="collection-size-label">头像尺寸</span>
           <span class="size-steps">
-            <button v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" :aria-label="'设置头像尺寸为 ' + s.val + 'px'" @click="seqSize = s.val"></button>
+            <span v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="seqSize = s.val"></span>
           </span>
         </span>
         <span class="collection-size-group" v-else>
           <span class="collection-size-label">头像尺寸</span>
           <span class="size-steps">
-            <button v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" :aria-label="'设置头像尺寸为 ' + s.val + 'px'" @click="matSize = s.val"></button>
+            <span v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="matSize = s.val"></span>
           </span>
         </span>
       </div>
@@ -334,7 +334,6 @@ onUnmounted(() => {
 }
 .size-step {
   width: 10px; height: 10px;
-  padding: 0;
   background: #5a6a7e;
   border: 0.2px solid #000;
   cursor: pointer;
