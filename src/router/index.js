@@ -1,5 +1,25 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
+// ── 数据预取缓存 ──
+// beforeEnter 在路由切换时立即触发 fetch，与懒加载 chunk 并行，
+// 等视图 onMounted 时数据通常已就绪，消除加载态白屏。
+const _cache = {}
+
+function _prefetch(key, url, parser = 'json') {
+  if (!_cache[key]) {
+    _cache[key] = fetch(url).then(async r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`)
+      return parser === 'text' ? r.text() : r.json()
+    })
+  }
+  return _cache[key]
+}
+
+/** 视图通过此访问预取数据：await preFetch[key]，若 beforeEnter 未触发则 fallback 自行 fetch */
+export const preFetch = new Proxy({}, {
+  get(_, key) { return _cache[key] || null },
+})
+
 const routes = [
   {
     path: '/',
@@ -15,6 +35,7 @@ const routes = [
     path: '/skills',
     name: 'skills',
     component: () => import('../views/SkillListView.vue'),
+    beforeEnter: () => { _prefetch('skills', 'data/skills.json') },
   },
   {
     path: '/leader-skills',
@@ -30,16 +51,19 @@ const routes = [
     path: '/events',
     name: 'events',
     component: () => import('../views/EventView.vue'),
+    beforeEnter: () => { _prefetch('events', 'data/events.json') },
   },
   {
     path: '/contest-rotations',
     name: 'contest-rotations',
     component: () => import('../views/ContestRotationView.vue'),
+    beforeEnter: () => { _prefetch('contestRotations', 'data/contest_rotations.json') },
   },
   {
     path: '/test',
     name: 'test',
     component: () => import('../views/TestView.vue'),
+    beforeEnter: () => { _prefetch('todo', 'config/todo.md', 'text') },
   },
 ]
 
@@ -69,11 +93,12 @@ router.beforeEach((to, from) => {
 router.afterEach((to) => {
   const saved = scrollPositions[to.name]
   if (saved != null) {
-    const el = document.querySelector('.app-content')
-    setTimeout(() => {
+    // 使用 rAF 在浏览器绘制前恢复滚动，避免 setTimeout(0) 的顶部闪烁
+    requestAnimationFrame(() => {
+      const el = document.querySelector('.app-content')
       if (el) el.scrollTop = saved
       else window.scrollTo(0, saved)
-    }, 0)
+    })
     delete scrollPositions[to.name]
   }
 })

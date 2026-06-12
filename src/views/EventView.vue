@@ -1,8 +1,9 @@
 <script setup>
-import { ref, reactive, computed, watch, onMounted } from 'vue'
+import { ref, reactive, computed, watch, onMounted, getCurrentInstance } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useSortTable } from '../composables/useSortTable'
 import { useI18n } from '../composables/useI18n'
+import { preFetch } from '../router'
 
 const columns = [
   { key: 'id', label: 'ID', width: 72 },
@@ -66,14 +67,21 @@ function onSort(gi, col) {
 }
 
 onMounted(async () => {
+  const vm = getCurrentInstance()
   try {
-    const resp = await fetch('data/events.json')
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
-    allRows.value = await resp.json()
+    let data = await preFetch.events
+    if (!data) {
+      const resp = await fetch('data/events.json')
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
+      data = await resp.json()
+    }
+    if (!vm.isMounted) return
+    allRows.value = data
   } catch (e) {
+    if (!vm.isMounted) return
     error.value = e.message || String(e)
   } finally {
-    loading.value = false
+    if (vm.isMounted) loading.value = false
   }
 })
 </script>

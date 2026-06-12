@@ -1,16 +1,23 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, getCurrentInstance } from 'vue'
 import { marked } from 'marked'
+import { preFetch } from '../router'
 
 const todoHtml = ref('')
 
 onMounted(async () => {
+  const vm = getCurrentInstance()
   try {
-    const res = await fetch('config/todo.md')
-    if (!res.ok) throw new Error(`HTTP ${res.status}`)
-    const md = await res.text()
+    let md = await preFetch.todo
+    if (!md) {
+      const res = await fetch('config/todo.md')
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      md = await res.text()
+    }
+    if (!vm.isMounted) return
     todoHtml.value = marked.parse(md)
   } catch {
+    if (!vm.isMounted) return
     todoHtml.value = '加载失败'
   }
 })

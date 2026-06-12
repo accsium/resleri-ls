@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted, onActivated } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
@@ -10,9 +10,11 @@ import FilterBar from '../components/FilterBar.vue'
 import { useFilters, filterCharacter } from '../composables/useFilters'
 import { useLocalStorage } from '../composables/useLocalStorage'
 
+defineOptions({ name: 'CollectionView' })
+
 const { t } = useI18n()
 const { characterIndex, indexLoaded } = useCharacterData()
-const { ownedIds, ownedCount, shareCode, isOwned, toggleOwned, saveToStorage, loadFromCode } = useCollection()
+const { ownedIds, ownedCount, shareCode, isOwned, toggleOwned, batchToggle, saveToStorage, loadFromCode } = useCollection()
 const { activeFilters, resetFilters } = useFilters()
 const route = useRoute()
 
@@ -114,12 +116,17 @@ function onKeydown(id, e) {
   }
 }
 function selectAll() {
-  for (const c of characterIndex.value) {
-    if (!isOwned(c.id)) toggleOwned(c.id)
-  }
+  const unowned = characterIndex.value.filter(c => !isOwned(c.id)).map(c => c.id)
+  if (unowned.length) batchToggle(unowned, true)
 }
 function invertSelect() {
-  for (const c of characterIndex.value) toggleOwned(c.id)
+  const toAdd = []; const toRemove = []
+  for (const c of characterIndex.value) {
+    if (isOwned(c.id)) toRemove.push(c.id)
+    else toAdd.push(c.id)
+  }
+  if (toAdd.length) batchToggle(toAdd, true)
+  if (toRemove.length) batchToggle(toRemove, false)
 }
 function onSave() {
   const ok = saveToStorage()
@@ -148,8 +155,10 @@ const isLoaded = computed(() => indexLoaded.value)
 // 防止拖拽/选中
 const layoutRef = ref(null)
 onMounted(() => {
+  // 首次挂载时不在此重置筛选（由 onActivated 统一处理）
+})
+onActivated(() => {
   resetFilters()
-  // selectstart/dragstart 已通过模板 @selectstart.prevent @dragstart.prevent 处理
 })
 onUnmounted(() => {
   clearTimeout(saveTimer)

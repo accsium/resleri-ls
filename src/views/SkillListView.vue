@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, computed, watch, onMounted } from 'vue'
+import { ref, reactive, computed, watch, onMounted, getCurrentInstance } from 'vue'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useI18n } from '../composables/useI18n'
 import { useSortTable } from '../composables/useSortTable'
@@ -7,6 +7,7 @@ import AvatarDisplay from '../components/AvatarDisplay.vue'
 import IconDisplay from '../components/IconDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 import PaginationBar from '../components/PaginationBar.vue'
+import { preFetch } from '../router'
 
 const { characterIndex } = useCharacterData()
 const { t, currentLang, getField, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS } = useI18n()
@@ -146,16 +147,24 @@ function onSort(col) {
 }
 
 onMounted(async () => {
+  const vm = getCurrentInstance()
   try {
-    const resp = await fetch('data/skills.json')
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
-    const data = await resp.json()
+    // 优先使用路由 beforeEnter 预取的数据
+    let data = await preFetch.skills
+    if (!data) {
+      const resp = await fetch('data/skills.json')
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
+      data = await resp.json()
+    }
+    // 避免在快速导航时更新已卸载组件
+    if (!vm.isMounted) return
     data.forEach((r, i) => r._idx = i)
     skills.value = data
   } catch (e) {
+    if (!vm.isMounted) return
     error.value = e.message || String(e)
   } finally {
-    loading.value = false
+    if (vm.isMounted) loading.value = false
   }
 })
 </script>

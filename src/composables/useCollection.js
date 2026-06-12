@@ -48,6 +48,16 @@ export function useCollection() {
     ownedIds.value = next
   }
 
+  /** 批量切换拥有状态，单次分配 Set，避免 selectAll/invertSelect 的 O(n) 分配 */
+  function batchToggle(ids, owned) {
+    const next = new Set(ownedIds.value)
+    for (const id of ids) {
+      if (owned) next.add(id)
+      else next.delete(id)
+    }
+    ownedIds.value = next
+  }
+
   function saveToStorage() {
     try {
       const data = {
@@ -77,6 +87,7 @@ export function useCollection() {
     shareCode,
     isOwned,
     toggleOwned,
+    batchToggle,
     saveToStorage,
     loadFromCode,
   }

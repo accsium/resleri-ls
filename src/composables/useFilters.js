@@ -167,7 +167,8 @@ export function useFilters() {
   })
 
   // 筛选/搜索/页大小变化时回到第一页
-  watch([() => ({ ...activeFilters }), searchText, pageSize], () => {
+  // 直接 watch reactive 对象（Vue 3 默认深度监听），避免每次创建浅拷贝
+  watch([activeFilters, searchText, pageSize], () => {
     currentPage.value = 1
   })
 

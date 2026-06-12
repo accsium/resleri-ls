@@ -1,8 +1,9 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, getCurrentInstance } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useSortTable } from '../composables/useSortTable'
 import { useI18n } from '../composables/useI18n'
+import { preFetch } from '../router'
 
 const { t } = useI18n()
 
@@ -30,14 +31,21 @@ function getSortVal(row, field) {
 const sorted = computed(() => sortItems(rows.value, getSortVal))
 
 onMounted(async () => {
+  const vm = getCurrentInstance()
   try {
-    const resp = await fetch('data/contest_rotations.json')
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
-    rows.value = await resp.json()
+    let data = await preFetch.contestRotations
+    if (!data) {
+      const resp = await fetch('data/contest_rotations.json')
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
+      data = await resp.json()
+    }
+    if (!vm.isMounted) return
+    rows.value = data
   } catch (e) {
+    if (!vm.isMounted) return
     error.value = e.message || String(e)
   } finally {
-    loading.value = false
+    if (vm.isMounted) loading.value = false
   }
 })
 </script>
