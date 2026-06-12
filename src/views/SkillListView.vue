@@ -100,7 +100,7 @@ function getSkillSortVal(row, field) {
 }
 
 const filteredSkills = computed(() => {
-  let list = sortItems(skills.value, getSkillSortVal)
+  let list = skills.value
 
   // 筛选
   const fa = activeFilters
@@ -122,6 +122,8 @@ const filteredSkills = computed(() => {
     )
   }
 
+  // 排序（在筛选之后，减少排序数据量）
+  list = sortItems(list, getSkillSortVal)
   return list
 })
 

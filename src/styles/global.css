@@ -32,7 +32,6 @@
   --btn-padding-md: 1px 6px;
   --btn-padding-lg: 4px 10px;
   --sel-padding:    1px 6px;
-  --sel-padding-lg: 4px 8px;
   --inp-padding:    4px 8px;
 }
 
@@ -247,7 +246,7 @@ input[type="text"] {
   background: var(--sf-toggle-hov);
 }
 .sf-toggle-arrow { font-size: 9px; color: rgba(255,255,255,0.8); line-height: 1; display: flex; align-items: center; }
-.sf-select { font-size: 12px; padding: var(--sel-padding-lg); border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-content); color: var(--text-primary); }
+.sf-select { font-size: 12px; padding: var(--sel-padding); border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-content); color: var(--text-primary); }
 @media (max-width: 768px) {
   .sf-collapsed .sf-row { display: none; }
 }

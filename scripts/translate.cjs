@@ -17,10 +17,18 @@ const abilityPath = path.join(rawDir, 'ability.json');
 let effectMap = new Map();
 let abilityMap = new Map();
 if (fs.existsSync(effectPath) && fs.existsSync(abilityPath)) {
-  const effects = safeReadJSON(effectPath, false);
-  effectMap = new Map(effects.map(e => [e.id, e]));
-  const abilities = safeReadJSON(abilityPath, false);
-  abilityMap = new Map(abilities.map(a => [a.id, a]));
+  try {
+    const effects = safeReadJSON(effectPath, false);
+    effectMap = new Map(effects.map(e => [e.id, e]));
+  } catch (e) {
+    console.warn('⚠ effect.json 解析失败，跳过 trait 效果描述生成:', e.message);
+  }
+  try {
+    const abilities = safeReadJSON(abilityPath, false);
+    abilityMap = new Map(abilities.map(a => [a.id, a]));
+  } catch (e) {
+    console.warn('⚠ ability.json 解析失败，跳过 trait 效果描述生成:', e.message);
+  }
 } else {
   console.warn('⚠ effect.json 或 ability.json 缺失，跳过 trait 效果描述生成');
 }

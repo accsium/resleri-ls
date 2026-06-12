@@ -44,7 +44,7 @@ onMounted(async () => {
     <div v-if="loading" class="loading">{{ '加载中...' }}</div>
     <div v-else-if="error" class="load-error">{{ error }}</div>
     <div v-else-if="isEmpty" class="empty">暂无数据</div>
-  <SortableTable
+  <SortableTable v-else
     :columns="columns"
     :rows="sorted"
     rowKey="id"

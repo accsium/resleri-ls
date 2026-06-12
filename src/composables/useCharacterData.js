@@ -3,6 +3,7 @@ import { ref, shallowRef, triggerRef, computed } from 'vue'
 const characterIndex = ref([])
 const loadedCharacters = shallowRef({})
 const indexLoadError = ref(null)
+const indexLoaded = ref(false)
 
 const dataBytesLoaded = ref(0)
 const dataBytesTotal = ref(1)
@@ -35,14 +36,21 @@ export function useCharacterData() {
         dataBytesTotal.value = loaded
         dataBytesLoaded.value = loaded
       }
-      const text = new TextDecoder().decode(
-        chunks.reduce((acc, c) => { const a = new Uint8Array(acc.length + c.length); a.set(acc, 0); a.set(c, acc.length); return a }, new Uint8Array(0))
-      )
+      const totalLen = chunks.reduce((sum, c) => sum + c.length, 0)
+      const merged = new Uint8Array(totalLen)
+      let offset = 0
+      for (const c of chunks) {
+        merged.set(c, offset)
+        offset += c.length
+      }
+      const text = new TextDecoder().decode(merged)
       characterIndex.value = JSON.parse(text)
       indexLoadError.value = null
+      indexLoaded.value = true
     } catch (e) {
       indexLoadError.value = e.message || String(e)
       characterIndex.value = []
+      indexLoaded.value = true
     }
   }
 
@@ -71,5 +79,5 @@ export function useCharacterData() {
     }
   }
 
-  return { characterIndex, loadedCharacters, indexLoadError, loadIndex, loadCharacter, loadProgress, trackImage, imageDone, untrackImage }
+  return { characterIndex, loadedCharacters, indexLoadError, indexLoaded, loadIndex, loadCharacter, loadProgress, trackImage, imageDone, untrackImage }
 }

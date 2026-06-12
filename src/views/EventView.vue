@@ -43,7 +43,7 @@ const sortedCache = reactive({})
 function sorted(g, gi) {
   const s = sorts.value[gi]
   const key = `${g.label}-${gi}-${s.col}-${s.dir}`
-  if (sortedCache[key]) return sortedCache[key]
+  if (key in sortedCache) return sortedCache[key]
   const list = [...getGroupRows(g).value]
   const dir = s.dir === 'desc' ? -1 : 1
   list.sort((a, b) => {
@@ -81,6 +81,7 @@ onMounted(async () => {
     <div v-if="loading" class="loading">{{ '加载中...' }}</div>
     <div v-else-if="error" class="load-error">{{ error }}</div>
     <div v-else-if="isEmpty" class="empty">暂无数据</div>
+    <template v-else>
     <div v-for="(g, gi) in groups" :key="g.label">
       <h3 class="group-title">{{ g.label }}</h3>
       <SortableTable
@@ -99,6 +100,7 @@ onMounted(async () => {
         <template #cell-revival_start_at="{ row }">{{ row.revival_start_at }}</template>
       </SortableTable>
     </div>
+    </template>
   </div>
 </template>
 

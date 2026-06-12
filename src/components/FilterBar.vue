@@ -48,7 +48,7 @@ onMounted(() => {
   }
   const ro = new ResizeObserver(() => updateCardOffset())
   ro.observe(panelEl.value)
-  onUnmounted(() => ro.disconnect())
+  onUnmounted(() => { ro.disconnect(); document.documentElement.style.removeProperty('--card-offset') })
 })
 
 // ── 属性 ──

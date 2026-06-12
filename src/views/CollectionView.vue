@@ -11,7 +11,7 @@ import { useFilters, filterCharacter } from '../composables/useFilters'
 import { useLocalStorage } from '../composables/useLocalStorage'
 
 const { t } = useI18n()
-const { characterIndex } = useCharacterData()
+const { characterIndex, indexLoaded } = useCharacterData()
 const { ownedIds, ownedCount, shareCode, isOwned, toggleOwned, saveToStorage, loadFromCode } = useCollection()
 const { activeFilters, resetFilters } = useFilters()
 const route = useRoute()
@@ -139,7 +139,7 @@ async function onCopyLink() {
 }
 
 // ── 加载状态 ──
-const isLoaded = computed(() => characterIndex.value.length > 0)
+const isLoaded = computed(() => indexLoaded.value)
 
 // 防止拖拽/选中
 const layoutRef = ref(null)
