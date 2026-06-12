@@ -49,11 +49,16 @@ export function useCollection() {
   }
 
   function saveToStorage() {
-    const data = {
-      version: 1,
-      owned: [...ownedIds.value],
+    try {
+      const data = {
+        version: 1,
+        owned: [...ownedIds.value],
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
+      return true
+    } catch {
+      return false
     }
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
   }
 
   // 用分享码覆盖当前内存状态（不写入 localStorage）

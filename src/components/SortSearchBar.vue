@@ -30,15 +30,16 @@ function onCategoryChange(e) {
     <div class="sf-row">
       <div class="sort-control">
         <div class="sort-control-head">
-          <span class="sf-label">排序</span>
-          <select name="sort_category" :value="sortCategory" @change="onCategoryChange">
+          <label class="sf-label" for="sort-category">排序</label>
+          <select id="sort-category" name="sort_category" :value="sortCategory" @change="onCategoryChange">
             <option v-for="cat in SORT_CATEGORIES" :key="cat.key" :value="cat.key">
               {{ currentLang === 'cn' ? cat.label_cn : cat.label_ja }}
             </option>
           </select>
         </div>
         <div class="sort-control-tail">
-          <select name="sort_field" :value="sortField" @change="(e) => setSortField(e.target.value)">
+          <label class="sf-label" for="sort-field">排序字段</label>
+          <select id="sort-field" name="sort_field" :value="sortField" @change="(e) => setSortField(e.target.value)">
             <option v-for="f in activeCategory.fields" :key="f.field" :value="f.field">
               {{ currentLang === 'cn' ? f.label_cn : f.label_ja }}
             </option>
@@ -50,8 +51,8 @@ function onCategoryChange(e) {
       </div>
       <div class="sf-spacer"></div>
       <div class="sf-group">
-        <span class="sf-label">搜索</span>
-        <input type="text" name="search" v-model="searchText" :placeholder="t('searchPlaceholder')">
+        <label class="sf-label" for="search-input">搜索</label>
+        <input id="search-input" type="text" name="search" v-model="searchText" :placeholder="t('searchPlaceholder')">
       </div>
     </div>
     </div>

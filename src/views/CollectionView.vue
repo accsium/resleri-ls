@@ -122,7 +122,11 @@ function invertSelect() {
   for (const c of characterIndex.value) toggleOwned(c.id)
 }
 function onSave() {
-  saveToStorage()
+  const ok = saveToStorage()
+  if (!ok) {
+    alert('保存失败，请检查浏览器存储空间或隐私设置。')
+    return
+  }
   savedFlash.value = true
   clearTimeout(saveTimer)
   saveTimer = setTimeout(() => { savedFlash.value = false }, 1500)
@@ -194,13 +198,13 @@ onUnmounted(() => {
         <span class="collection-size-group" v-if="viewMode === 'sequential'">
           <span class="collection-size-label">头像尺寸</span>
           <span class="size-steps">
-            <span v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="seqSize = s.val"></span>
+            <button v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" :aria-label="'设置头像尺寸为 ' + s.val + 'px'" @click="seqSize = s.val"></button>
           </span>
         </span>
         <span class="collection-size-group" v-else>
           <span class="collection-size-label">头像尺寸</span>
           <span class="size-steps">
-            <span v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="matSize = s.val"></span>
+            <button v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" :aria-label="'设置头像尺寸为 ' + s.val + 'px'" @click="matSize = s.val"></button>
           </span>
         </span>
       </div>
@@ -330,6 +334,7 @@ onUnmounted(() => {
 }
 .size-step {
   width: 10px; height: 10px;
+  padding: 0;
   background: #5a6a7e;
   border: 0.2px solid #000;
   cursor: pointer;

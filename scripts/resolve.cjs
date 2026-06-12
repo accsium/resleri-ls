@@ -20,6 +20,10 @@ for (const [entityName, entityConfig] of Object.entries(config.entities)) {
     continue;
   }
   const raw = safeReadJSON(filePath);
+  if (!Array.isArray(raw)) {
+    console.error(`❌ 文件 ${entityConfig.file} 格式错误：期望数组，实际为 ${typeof raw}`);
+    process.exit(1);
+  }
   tables[entityName] = new Map(raw.map(item => [item[entityConfig.idField], item]));
 }
 
@@ -56,12 +60,10 @@ mapKeys.forEach(key => {
 const rulesFile = path.join(__dirname, '..', 'config', 'ex_skill_rules.json');
 let exRules = [];
 if (fs.existsSync(rulesFile)) {
-  try {
-    exRules = safeReadJSON(rulesFile);
-    console.log(`📋 已加载 EX 技能规则：${exRules.length} 条`);
-  } catch (e) {
-    console.warn('⚠️ EX 技能规则文件格式错误，将使用默认显示');
-  }
+  exRules = safeReadJSON(rulesFile, false);
+  console.log(`📋 已加载 EX 技能规则：${exRules.length} 条`);
+} else {
+  console.warn('⚠️ EX 技能规则文件缺失，将使用默认显示');
 }
 
 // ========== 4. 递归补全效果引用 ==========

@@ -2,6 +2,7 @@
 import { ref, reactive, computed, watch, onMounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useSortTable } from '../composables/useSortTable'
+import { useI18n } from '../composables/useI18n'
 
 const columns = [
   { key: 'id', label: 'ID', width: 72 },
@@ -23,10 +24,11 @@ const loading = ref(true)
 const error = ref('')
 const isEmpty = computed(() => !loading.value && !error.value && allRows.value.length === 0)
 
-const getGroupRows = (g) => computed(() => allRows.value.filter(r => r.id >= g.min && r.id <= g.max))
+const getGroupRows = (g) => allRows.value.filter(r => r.id >= g.min && r.id <= g.max)
 
 // Per-group sort state
 const sorts = ref(groups.map(() => ({ col: 'id', dir: 'desc' })))
+const { t } = useI18n()
 const { cmpVal } = useSortTable({})
 
 function getSortVal(row, col) {
@@ -44,7 +46,7 @@ function sorted(g, gi) {
   const s = sorts.value[gi]
   const key = `${g.label}-${gi}-${s.col}-${s.dir}`
   if (key in sortedCache) return sortedCache[key]
-  const list = [...getGroupRows(g).value]
+  const list = [...getGroupRows(g)]
   const dir = s.dir === 'desc' ? -1 : 1
   list.sort((a, b) => {
     const r = cmpVal(getSortVal(a, s.col), getSortVal(b, s.col), dir)
@@ -78,9 +80,9 @@ onMounted(async () => {
 
 <template>
   <div class="contest-wrap">
-    <div v-if="loading" class="loading">{{ '加载中...' }}</div>
+    <div v-if="loading" class="loading">{{ t('loading') }}</div>
     <div v-else-if="error" class="load-error">{{ error }}</div>
-    <div v-else-if="isEmpty" class="empty">暂无数据</div>
+    <div v-else-if="isEmpty" class="empty">{{ t('none') }}</div>
     <template v-else>
     <div v-for="(g, gi) in groups" :key="g.label">
       <h3 class="group-title">{{ g.label }}</h3>

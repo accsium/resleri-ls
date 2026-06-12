@@ -2,6 +2,9 @@
 import { ref, computed, onMounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useSortTable } from '../composables/useSortTable'
+import { useI18n } from '../composables/useI18n'
+
+const { t } = useI18n()
 
 const columns = [
   { key: 'id', label: 'ID', width: 72 },
@@ -41,9 +44,9 @@ onMounted(async () => {
 
 <template>
   <div class="contest-wrap">
-    <div v-if="loading" class="loading">{{ '加载中...' }}</div>
+    <div v-if="loading" class="loading">{{ t('loading') }}</div>
     <div v-else-if="error" class="load-error">{{ error }}</div>
-    <div v-else-if="isEmpty" class="empty">暂无数据</div>
+    <div v-else-if="isEmpty" class="empty">{{ t('none') }}</div>
   <SortableTable v-else
     :columns="columns"
     :rows="sorted"

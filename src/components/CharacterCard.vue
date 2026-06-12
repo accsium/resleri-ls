@@ -49,7 +49,7 @@ const permanentText = computed(() => {
   if (!s) return ''
   if (s === '未恒常化') return d ? fmtDate(d) : '—'
   if (s === '非恒常角色') return '非恒常角色'
-  if (s === '已恒常化') return d === 'ATELIER FES' ? '初始' : d.startsWith('ATELIER FES') ? d : '已恒常化'
+  if (s === '已恒常化') return d === 'ATELIER FES' ? '初始' : (d && d.startsWith('ATELIER FES')) ? d : '已恒常化'
   if (d) return d
   return s
 })

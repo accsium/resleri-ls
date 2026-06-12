@@ -102,7 +102,7 @@ const abilitiesCollapsed = ref(false)
 
 <template>
   <template v-if="allSkillTypes.length > 0">
-    <div class="section-title section-collapsible" @click="skillsCollapsed = !skillsCollapsed">
+    <div class="section-title section-collapsible" role="button" tabindex="0" @click="skillsCollapsed = !skillsCollapsed" @keydown.enter.prevent="skillsCollapsed = !skillsCollapsed" @keydown.space.prevent="skillsCollapsed = !skillsCollapsed">
       {{ t('skillSection') }}
       <span class="collapse-arrow">{{ skillsCollapsed ? '▶' : '▼' }}</span>
     </div>
@@ -115,7 +115,7 @@ const abilitiesCollapsed = ref(false)
     </div>
   </template>
 
-  <div class="section-title section-collapsible" @click="abilitiesCollapsed = !abilitiesCollapsed">
+  <div class="section-title section-collapsible" role="button" tabindex="0" @click="abilitiesCollapsed = !abilitiesCollapsed" @keydown.enter.prevent="abilitiesCollapsed = !abilitiesCollapsed" @keydown.space.prevent="abilitiesCollapsed = !abilitiesCollapsed">
     {{ t('abilityTitle') }}
     <span class="collapse-arrow">{{ abilitiesCollapsed ? '▶' : '▼' }}</span>
   </div>

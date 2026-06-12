@@ -19,7 +19,10 @@ onMounted(() => {
   update()
   const ro = new ResizeObserver(update)
   ro.observe(el)
-  onUnmounted(() => ro.disconnect())
+  onUnmounted(() => {
+    ro.disconnect()
+    document.documentElement.style.removeProperty('--sticky-head-h')
+  })
 })
 </script>
 

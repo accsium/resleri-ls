@@ -34,7 +34,6 @@ function updateCardOffset() {
   const newTarget = panelEl.value.offsetHeight + 2 * GAP
   const delta = newTarget - currentTarget
   currentTarget = newTarget
-  document.documentElement.style.setProperty('--card-offset', newTarget + 'px')
   if (delta !== 0) {
     const app = document.querySelector('.app-content')
     if (app) app.scrollTop += delta
@@ -44,11 +43,10 @@ function updateCardOffset() {
 onMounted(() => {
   if (panelEl.value) {
     currentTarget = panelEl.value.offsetHeight + 2 * GAP
-    document.documentElement.style.setProperty('--card-offset', currentTarget + 'px')
   }
   const ro = new ResizeObserver(() => updateCardOffset())
   ro.observe(panelEl.value)
-  onUnmounted(() => { ro.disconnect(); document.documentElement.style.removeProperty('--card-offset') })
+  onUnmounted(() => { ro.disconnect() })
 })
 
 // ── 属性 ──
@@ -175,6 +173,7 @@ function groupTraits(list, getName) {
 }
 
 const traitsLoaded = ref(false)
+const traitLoadError = ref(false)
 
 async function loadTraitData() {
   if (traitsLoaded.value) return
@@ -191,7 +190,10 @@ async function loadTraitData() {
       charTagsCn.value.push({ id: t.id, name: t.name_cn || t.name })
     })
     traitsLoaded.value = true
-  } catch (e) { console.error('加载词条数据失败', e) }
+  } catch (e) {
+    console.error('加载词条数据失败', e)
+    traitLoadError.value = true
+  }
 }
 
 // 首次展开筛选面板时加载词条/标签数据（延迟加载）
@@ -254,6 +256,7 @@ function toggleAtelierFes(s) {
           v-for="id in ROLE_IDS" :key="'r'+id"
           class="sf-icon-btn"
           :class="{ active: selectedRoles.includes(id) }"
+          :aria-label="'筛选职业：' + roleMap[id]"
           @click="toggleRole(id)"
         >
           <IconDisplay type="role" :id="id" :size="24" :alt="roleMap[id]" />
@@ -265,6 +268,7 @@ function toggleAtelierFes(s) {
           v-for="id in ATTR_IDS" :key="'a'+id"
           class="sf-icon-btn"
           :class="{ active: selectedAttrs.includes(id) }"
+          :aria-label="'筛选属性：' + attrMap[id]"
           @click="toggleAttr(id)"
         >
           <IconDisplay type="attribute" :id="id" :size="24" :alt="attrMap[id]" />
@@ -338,6 +342,7 @@ function toggleAtelierFes(s) {
       </div>
     </div>
     <!-- 行3：道具词条 + 装备词条 -->
+    <div class="sf-row" v-if="traitLoadError" v-show="!collapsed" style="color:#e74c3c;font-size:12px;justify-content:center">⚠ 词条/标签数据加载失败，请刷新页面重试</div>
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">道具词条</span>

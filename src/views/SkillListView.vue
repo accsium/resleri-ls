@@ -169,6 +169,7 @@ onMounted(async () => {
     <span class="skf-label">属性</span>
     <button v-for="id in ATTR_IDS" :key="'a'+id"
       class="sf-icon-btn" :class="{ active: activeFilters.attr.includes(id) }"
+      :aria-label="'筛选属性：' + attrMap[id]"
       @click="toggleFilter('attr', id)"
     ><IconDisplay type="attribute" :id="id" :size="24" /></button>
     <span class="skf-sep"></span>

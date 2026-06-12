@@ -7,6 +7,7 @@ const todoHtml = ref('')
 onMounted(async () => {
   try {
     const res = await fetch('config/todo.md')
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
     const md = await res.text()
     todoHtml.value = marked.parse(md)
   } catch {

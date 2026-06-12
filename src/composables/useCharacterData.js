@@ -75,17 +75,22 @@ export function useCharacterData() {
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
 
     // 流式读取，字节临时计入全局进度
+    // try-finally 保证异常时也回退进度计数，防止进度条卡死
     const total = parseInt(resp.headers.get('Content-Length') || '0')
-    if (total > 0) dataBytesTotal.value += total
     const reader = resp.body.getReader()
     let loaded = 0
-    const merged = await _readAllChunks(reader, (chunkLen) => {
-      loaded += chunkLen
-      dataBytesLoaded.value += chunkLen
-    })
-    // 读取完成后回退临时字节，避免重复计数
-    if (total > 0) dataBytesTotal.value -= total
-    dataBytesLoaded.value -= loaded
+    let merged
+    try {
+      if (total > 0) dataBytesTotal.value += total
+      merged = await _readAllChunks(reader, (chunkLen) => {
+        loaded += chunkLen
+        dataBytesLoaded.value += chunkLen
+      })
+    } finally {
+      // 无论成功或异常，回退临时字节避免进度计数污染
+      if (total > 0) dataBytesTotal.value -= total
+      dataBytesLoaded.value -= loaded
+    }
 
     const text = new TextDecoder().decode(merged)
     const data = JSON.parse(text)
