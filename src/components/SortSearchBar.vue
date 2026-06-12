@@ -66,6 +66,6 @@ function onCategoryChange(e) {
 .ss-bar input[type="text"] {
   width: 160px;
   font-size: 12px;
-  padding: 3px 8px;
+  padding: var(--inp-padding);
 }
 </style>

@@ -19,7 +19,7 @@ const etIds = computed(() => props.characterData.equipment_tool_trait_ids || [])
 const btNames = computed(() => getField(props.characterData, 'battle_tool_trait_names') || [])
 const etNames = computed(() => getField(props.characterData, 'equipment_tool_trait_names') || [])
 
-const { battleTraits, equipTraits, load: loadTraits } = useTraitData()
+const { battleTraits, equipTraits, error: traitError, load: loadTraits } = useTraitData()
 
 const traitEffects = computed(() => {
   const map = {}
@@ -68,7 +68,11 @@ function splitEffect(effect) {
 </script>
 
 <template>
-  <template v-if="allTraits.length > 0">
+  <div v-if="traitError" class="syn-error">
+    调和数据加载失败
+    <button class="syn-retry-btn" @click="loadTraits().catch(() => {})">重试</button>
+  </div>
+  <template v-else-if="allTraits.length > 0">
     <div class="section-title section-collapsible" role="button" tabindex="0" @click="collapsed = !collapsed" @keydown.enter.prevent="collapsed = !collapsed" @keydown.space.prevent="collapsed = !collapsed">
       调和
       <span class="synthesis-color-row">
@@ -98,3 +102,30 @@ function splitEffect(effect) {
     </div>
   </template>
 </template>
+
+<style scoped>
+.syn-error {
+  padding: 12px 16px;
+  margin: 8px 0;
+  background: var(--bg-stat);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 12px;
+  color: var(--text-muted, #888);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.syn-retry-btn {
+  font-size: 12px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-button);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.syn-retry-btn:hover {
+  border-color: var(--accent);
+}
+</style>

@@ -234,6 +234,11 @@ function toggleAtelierFes(s) {
   if (idx >= 0) cur.splice(idx, 1); else cur.push(s)
   atelierFes.value = cur
 }
+
+/** 解析下拉选择器的 ID 值，空字符串返回 '' 避免 Number('')=0 的陷阱 */
+function _parseSelectId(val) {
+  return val !== '' ? Number(val) : ''
+}
 </script>
 
 <template>
@@ -342,14 +347,14 @@ function toggleAtelierFes(s) {
       </div>
     </div>
     <!-- 行3：道具词条 + 装备词条 -->
-    <div class="sf-row" v-if="traitLoadError" v-show="!collapsed" style="color:#e74c3c;font-size:12px;justify-content:center">⚠ 词条/标签数据加载失败，请刷新页面重试</div>
+    <div class="sf-row sf-trait-error" v-if="traitLoadError" v-show="!collapsed">⚠ 词条/标签数据加载失败，请刷新页面重试</div>
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">道具词条</span>
         <div class="sf-field-items">
         <select :name="'battle_trait-'+n" v-for="n in 2" :key="'bt'+n" class="sf-select"
           :value="selectedBattleTraits[n-1] || ''"
-          @change="(e) => { const v = [...selectedBattleTraits]; v[n-1] = Number(e.target.value) || ''; selectedBattleTraits = v }"
+          @change="(e) => { const v = [...selectedBattleTraits]; v[n-1] = _parseSelectId(e.target.value); selectedBattleTraits = v }"
         >
           <option value="">—</option>
           <template v-for="(cat, ci) in allBattleTraits" :key="'btc'+cat.category">
@@ -365,7 +370,7 @@ function toggleAtelierFes(s) {
         <div class="sf-field-items">
         <select name="equip_trait" class="sf-select"
           :value="selectedEquipTraits[0] || ''"
-          @change="(e) => { selectedEquipTraits = [Number(e.target.value) || ''] }"
+          @change="(e) => { selectedEquipTraits = [_parseSelectId(e.target.value)] }"
         >
           <option value="">—</option>
           <template v-for="(cat, ci) in allEquipTraits" :key="'etc'+cat.category">
@@ -384,7 +389,7 @@ function toggleAtelierFes(s) {
         <div class="sf-field-items">
         <select :name="'char_tag-'+n" v-for="n in 5" :key="'ct'+n" class="sf-select"
           :value="selectedTags[n-1] || ''"
-          @change="(e) => { const v = [...selectedTags]; v[n-1] = Number(e.target.value) || ''; selectedTags = v }"
+          @change="(e) => { const v = [...selectedTags]; v[n-1] = _parseSelectId(e.target.value); selectedTags = v }"
         >
           <option value="">—</option>
           <option v-for="t in allCharTags" :key="t.id" :value="t.id">{{ t.name }}</option>
@@ -398,7 +403,7 @@ function toggleAtelierFes(s) {
       <div class="sf-field">
         <span class="sf-label">作品出处</span>
         <div class="sf-field-items">
-          <select class="sf-select" :value="activeFilters.original_title" @change="(e) => toggleFilter('original_title', Number(e.target.value) || '')">
+          <select class="sf-select" :value="activeFilters.original_title" @change="(e) => toggleFilter('original_title', _parseSelectId(e.target.value))">
             <option value="">全部</option>
             <option v-for="t in allTitles" :key="t.id" :value="t.id">{{ t.name }}</option>
           </select>
@@ -417,9 +422,17 @@ function toggleAtelierFes(s) {
 
 
 
-    <div class="sf-toggle-bar" @click="collapsed = !collapsed">
+    <div class="sf-toggle-bar" role="button" tabindex="0" @click="collapsed = !collapsed" @keydown.enter.prevent="collapsed = !collapsed" @keydown.space.prevent="collapsed = !collapsed">
       <span class="sf-toggle-arrow">{{ collapsed ? '▼' : '▲' }}</span>
     </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.sf-trait-error {
+  color: var(--danger);
+  font-size: 12px;
+  justify-content: center;
+}
+</style>

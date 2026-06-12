@@ -47,7 +47,13 @@ for (const [name, config] of Object.entries(pipelineConfig.translationFiles)) {
 const publicConfigDir = path.join(__dirname, '..', 'public', 'config');
 if (!fs.existsSync(publicConfigDir)) fs.mkdirSync(publicConfigDir, { recursive: true });
 const configDir = path.join(__dirname, '..', 'config');
-const configFiles = fs.readdirSync(configDir).filter(f => f.endsWith('.json') || f.endsWith('.md'))
+// 白名单：仅复制明确列出的配置文件，防止意外泄露敏感配置
+const PUBLIC_CONFIG_WHITELIST = new Set([
+  'announcements.json', 'atelier_fes.json', 'ex_skill_rules.json',
+  'exclude.json', 'permanent_exclude.json', 'pipeline.json',
+  'todo.md', 'transform.json',
+])
+const configFiles = fs.readdirSync(configDir).filter(f => PUBLIC_CONFIG_WHITELIST.has(f))
 for (const f of configFiles) {
   const src = path.join(configDir, f);
   const dest = path.join(publicConfigDir, f);

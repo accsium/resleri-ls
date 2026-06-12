@@ -93,7 +93,7 @@ onMounted(() => {
 })
 
 function boardActiveLevel(ba) {
-  return ba.levels[boardActiveIndex.value[ba.key]]
+  return ba.levels[boardActiveIndex.value[ba.key]] || null
 }
 
 const skillsCollapsed = ref(false)
@@ -130,21 +130,23 @@ const abilitiesCollapsed = ref(false)
       </div>
     </template>
     <template v-for="ba in boardAbilities" :key="ba.key">
-      <div class="subsection-title">光玉板能力</div>
-      <div class="banner-title">
-        <span>{{ (boardActiveLevel(ba) || {}).name || '光玉板能力' }}</span>
-        <div v-if="ba.levels.length > 1" class="level-tabs">
-          <button
-            v-for="(lv, li) in ba.levels" :key="li"
-            class="level-tab"
-            :class="{ active: boardActiveIndex[ba.key] === li }"
-            @click="boardActiveIndex[ba.key] = li"
-          >Lv.{{ li + 1 }}</button>
+      <template v-if="boardActiveLevel(ba)">
+        <div class="subsection-title">光玉板能力</div>
+        <div class="banner-title">
+          <span>{{ boardActiveLevel(ba).name || '光玉板能力' }}</span>
+          <div v-if="ba.levels.length > 1" class="level-tabs">
+            <button
+              v-for="(lv, li) in ba.levels" :key="li"
+              class="level-tab"
+              :class="{ active: boardActiveIndex[ba.key] === li }"
+              @click="boardActiveIndex[ba.key] = li"
+            >Lv.{{ li + 1 }}</button>
+          </div>
         </div>
-      </div>
-      <div class="content-block">
-        <AbilityCard :ability="boardActiveLevel(ba)" />
-      </div>
+        <div class="content-block">
+          <AbilityCard :ability="boardActiveLevel(ba)" />
+        </div>
+      </template>
     </template>
     <SupportAbilitySection
       v-if="supportIds.length > 0"

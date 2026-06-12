@@ -4,6 +4,15 @@ import { marked } from 'marked'
 import { preFetch } from '../router'
 
 const todoHtml = ref('')
+const isProd = import.meta.env.PROD
+
+/** 移除 marked 输出中的危险 HTML（script/iframe/事件处理器） */
+function _sanitize(html) {
+  return String(html)
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+    .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+    .replace(/\s(on\w+)=/gi, ' data-x-$1=')
+}
 
 onMounted(async () => {
   const vm = getCurrentInstance()
@@ -15,7 +24,8 @@ onMounted(async () => {
       md = await res.text()
     }
     if (!vm.isMounted) return
-    todoHtml.value = marked.parse(md)
+    // marked v18 无内置 sanitize，对输出做 HTML 标签剥离
+    todoHtml.value = _sanitize(marked.parse(md))
   } catch {
     if (!vm.isMounted) return
     todoHtml.value = '加载失败'
@@ -25,7 +35,10 @@ onMounted(async () => {
 
 <template>
   <div class="todo-container">
-    <div v-if="todoHtml" class="todo-content" v-html="todoHtml"></div>
+    <template v-if="todoHtml">
+      <div v-if="!isProd" class="todo-content" v-html="todoHtml"></div>
+      <div v-else class="todo-content">该页面仅在开发模式下可用</div>
+    </template>
     <div v-else class="todo-content">加载中...</div>
   </div>
 </template>

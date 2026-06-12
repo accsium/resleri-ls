@@ -8,6 +8,7 @@ import IconDisplay from '../components/IconDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 import PaginationBar from '../components/PaginationBar.vue'
 import { preFetch } from '../router'
+import { replaceEffects } from '../utils/effects.js'
 
 const { characterIndex } = useCharacterData()
 const { t, currentLang, getField, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS } = useI18n()
@@ -206,7 +207,7 @@ onMounted(async () => {
       <input type="checkbox" :checked="activeFilters.wt.includes(w)" @change="toggleFilter('wt',w)">{{ w }}
     </label>
     <span class="skf-sep"></span>
-    <input type="text" v-model="searchText" placeholder="搜索技能名或描述..." class="skf-search">
+    <input type="text" v-model="searchText" placeholder="搜索技能名或描述..." class="skf-search" aria-label="搜索技能">
   </div>
   <!-- 分页（上） -->
   <PaginationBar
@@ -249,7 +250,7 @@ onMounted(async () => {
     <template #cell-wait="{ row }">{{ row.wait != null ? (200 + row.wait) : '—' }}</template>
     <template #cell-limit="{ row }">{{ row.limit_count || '—' }}</template>
     <template #cell-skillName="{ row }">{{ row.name }}</template>
-    <template #cell-skillDesc="{ row }"><span v-html="row.description"></span></template>
+    <template #cell-skillDesc="{ row }"><span v-html="replaceEffects(row.description, null)"></span></template>
   </SortableTable>
 
   <!-- 分页（下） -->
@@ -270,16 +271,16 @@ onMounted(async () => {
   background: var(--bg-banner); border-radius: var(--radius-lg);
   margin: 8px auto 0; width: 90%; max-width: 840px;
 }
-.skf-label { font-size: 12px; color: #aaa; white-space: nowrap; }
+.skf-label { font-size: 12px; color: var(--text-muted); white-space: nowrap; }
 .skf-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.15); margin: 0 4px; }
-.skf-check { display: flex; align-items: center; gap: 2px; cursor: pointer; font-size: 12px; color: #aaa; }
+.skf-check { display: flex; align-items: center; gap: 2px; cursor: pointer; font-size: 12px; color: var(--text-muted); }
 .skf-check input { accent-color: var(--accent); }
 .skf-search {
   width: 180px; font-size: 12px; padding: 4px 8px;
   background: rgba(255,255,255,0.08); color: var(--text-light);
   border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius);
 }
-.skf-search::placeholder { color: #888; }
+.skf-search::placeholder { color: var(--text-muted); }
 .skf-search:focus { border-color: var(--accent); }
 
 .sk-pg-bar {

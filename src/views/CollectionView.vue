@@ -155,7 +155,7 @@ const isLoaded = computed(() => indexLoaded.value)
 // 防止拖拽/选中
 const layoutRef = ref(null)
 onMounted(() => {
-  // 首次挂载时不在此重置筛选（由 onActivated 统一处理）
+  resetFilters()
 })
 onActivated(() => {
   resetFilters()
@@ -177,7 +177,7 @@ onUnmounted(() => {
         <button class="collection-ctrl-btn" @click="onSave">
           {{ savedFlash ? t('collectionSaved') : t('collectionSave') }}
         </button>
-        <input type="text" v-model="shareInput" class="collection-share-input" :placeholder="shareCode">
+        <input type="text" v-model="shareInput" class="collection-share-input" :placeholder="shareCode" aria-label="分享码">
         <button class="collection-ctrl-btn" @click="onLoadCode">读取</button>
         <button class="collection-ctrl-btn" @click="onCopyLink">
           {{ copiedFlash ? t('collectionCopied') : t('collectionCopyLink') }}
@@ -207,13 +207,13 @@ onUnmounted(() => {
         <span class="collection-size-group" v-if="viewMode === 'sequential'">
           <span class="collection-size-label">头像尺寸</span>
           <span class="size-steps">
-            <span v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="seqSize = s.val"></span>
+            <span v-for="(s, si) in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" role="button" tabindex="0" :aria-label="'尺寸 ' + (si + 1)" @click="seqSize = s.val" @keydown.enter.prevent="seqSize = s.val" @keydown.space.prevent="seqSize = s.val"></span>
           </span>
         </span>
         <span class="collection-size-group" v-else>
           <span class="collection-size-label">头像尺寸</span>
           <span class="size-steps">
-            <span v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="matSize = s.val"></span>
+            <span v-for="(s, si) in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" role="button" tabindex="0" :aria-label="'尺寸 ' + (si + 1)" @click="matSize = s.val" @keydown.enter.prevent="matSize = s.val" @keydown.space.prevent="matSize = s.val"></span>
           </span>
         </span>
       </div>
@@ -312,7 +312,7 @@ onUnmounted(() => {
 }
 .collection-mode-bar button.active {
   background: var(--accent);
-  color: #fff;
+  color: var(--sf-active-text);
   border-color: var(--accent);
 }
 .collection-check {
@@ -343,15 +343,15 @@ onUnmounted(() => {
 }
 .size-step {
   width: 10px; height: 10px;
-  background: #5a6a7e;
-  border: 0.2px solid #000;
+  background: var(--size-step-bg);
+  border: 0.2px solid var(--size-step-border);
   cursor: pointer;
   box-sizing: border-box;
   margin-left: -1px;
 }
 .size-step:first-child { margin-left: 0; }
-.size-step.below { background: #42a5f5; }
-.size-step.active { background: #fdd835; }
+.size-step.below { background: var(--sf-toggle-hov); }
+.size-step.active { background: var(--size-step-active); }
 
 /* 列表模式 */
 .collection-sequential .collection-avatar-item {
@@ -361,10 +361,10 @@ onUnmounted(() => {
 
 /* 矩阵深色格子 */
 .collection-layout :deep(.matrix-cell) {
-  background: #4a515e;
+  background: var(--avatar-grid-bg);
 }
 .collection-layout :deep(.matrix-attr-label) {
-  background: #4a515e;
+  background: var(--avatar-grid-bg);
   color: rgba(255,255,255,0.5);
 }
 

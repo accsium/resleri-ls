@@ -149,7 +149,7 @@ function cellStyle(col) {
   display: block;
   width: calc(100% + 6px);
   height: var(--frozen-head-h, 42px);
-  background: #5a5a5a;
+  background: var(--st-header-bg);
   border-bottom: 1px solid var(--border);
 }
 .st-frozen-bg::after {
@@ -170,8 +170,8 @@ function cellStyle(col) {
   position: sticky;
   top: 0;
   z-index: 4;
-  background: #5a5a5a;
-  color: #ddd;
+  background: var(--st-header-bg);
+  color: var(--st-header-text);
   font-weight: 600;
   padding: 10px 12px;
   text-align: left;

@@ -36,6 +36,12 @@ const skillStats = computed(() => {
   const wt = 200 + (skill.wait ?? 0)
   return { target, attr, desc, wt }
 })
+
+// 队长技能描述同样需要 replaceEffects HTML 转义
+const leaderSkillDesc = computed(() => {
+  const skill = currentSkill.value
+  return replaceEffects(skill.description, skill.effects)
+})
 </script>
 
 <template>
@@ -58,7 +64,7 @@ const skillStats = computed(() => {
     </div>
     <div class="content-block">
       <template v-if="skillType.type === 'leader'">
-        <div class="skill-desc" v-html="currentSkill.description || ''"></div>
+        <div class="skill-desc" v-html="leaderSkillDesc"></div>
       </template>
       <template v-else>
         <div class="skill-desc" v-html="skillStats.desc"></div>

@@ -125,7 +125,7 @@ const pageNumbers = computed(() => {
 .pg-btn.active {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--text-light);
 }
 .pg-ellipsis {
   padding: 0 4px;

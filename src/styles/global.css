@@ -33,6 +33,20 @@
   --btn-padding-lg: 4px 10px;
   --sel-padding:    1px 6px;
   --inp-padding:    4px 8px;
+  --sf-btn-muted:    #aaa;
+  --sf-divider:      #7a8290;
+  --sf-active-text:  #fff;
+  --danger:          #e74c3c;
+  --slider-bg:       #c8c0b8;
+  --avatar-grid-bg:  #4a515e;
+  --owned-outline:   #b8382e;
+  --scrollbar-track: #c8c8c8;
+  --scrollbar-thumb: #fff;
+  --st-header-bg:    #5a5a5a;
+  --st-header-text:  #ddd;
+  --size-step-bg:    #5a6a7e;
+  --size-step-border: #000;
+  --size-step-active: #fdd835;
 }
 
 /* ========== 基础重置 ========== */
@@ -230,7 +244,7 @@ input[type="text"] {
 .sort-filter-bar input[type="text"]:focus { border-color: var(--accent); }
 .sf-collapse-btn {
   border-color: rgba(255,255,255,0.15);
-  background: transparent; color: #aaa;
+  background: transparent; color: var(--sf-btn-muted);
   white-space: nowrap; flex-shrink: 0;
 }
 .sf-toggle-bar {
@@ -253,8 +267,8 @@ input[type="text"] {
 .sf-row { display: flex; align-items: center; gap: 0 6px; flex-wrap: wrap; }
 .sf-row > * { height: 32px; display: flex; align-items: center; }
 .sf-row > .sf-spacer { height: auto; }
-.sf-row + .sf-row { border-top: 1px solid #7a8290; }
-.sf-divider { width: 1px; height: 24px; background: #7a8290; flex-shrink: 0; align-self: center; }
+.sf-row + .sf-row { border-top: 1px solid var(--sf-divider); }
+.sf-divider { width: 1px; height: 24px; background: var(--sf-divider); flex-shrink: 0; align-self: center; }
 .sf-group { display: flex; align-items: center; gap: 3px; }
 .sf-field { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 4px; }
 .sf-field-items { display: flex; gap: 4px; align-items: center; }
@@ -289,17 +303,17 @@ input[type="text"] {
 .sf-check { display: flex; align-items: center; gap: 2px; cursor: pointer; }
 .sf-tri-btn {
   border-color: rgba(255,255,255,0.15);
-  background: transparent; color: #aaa;
+  background: transparent; color: var(--sf-btn-muted);
   transition: 0.15s;
 }
-.sf-tri-btn.active { border-color: var(--accent-green); background: var(--accent); color: #fff; }
-.sf-tri-btn.exclude { border-color: #e74c3c; color: #e74c3c; }
+.sf-tri-btn.active { border-color: var(--accent-green); background: var(--accent); color: var(--sf-active-text); }
+.sf-tri-btn.exclude { border-color: var(--danger); color: var(--danger); }
 .sort-control { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .sort-control-head { display: flex; align-items: center; gap: 8px; }
 .sort-control-tail { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .sf-order-btn {
   border-color: rgba(255,255,255,0.15);
-  background: transparent; color: #aaa;
+  background: transparent; color: var(--sf-btn-muted);
   white-space: nowrap;
 }
 
@@ -425,7 +439,7 @@ input[type="text"] {
 .toggle-switch input { opacity: 0; width: 0; height: 0; }
 .slider {
   position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
-  background: #c8c0b8; transition: 0.2s; border-radius: 20px;
+  background: var(--slider-bg); transition: 0.2s; border-radius: 20px;
 }
 .slider::before {
   position: absolute; content: "";
@@ -598,7 +612,7 @@ input:checked + .slider::before { transform: translateX(16px); }
   display: grid;
   justify-content: center;
   padding: 8px;
-  background: #4a515e;
+  background: var(--avatar-grid-bg);
   border-radius: var(--radius-lg);
 }
 
@@ -630,7 +644,7 @@ input:checked + .slider::before { transform: translateX(16px); }
 }
 .color-mode .collection-avatar-item.owned {
   background: var(--owned-bg);
-  outline: 3px solid #b8382e;
+  outline: 3px solid var(--owned-outline);
   outline-offset: -1.5px;
 }
 
@@ -710,18 +724,18 @@ input:checked + .slider::before { transform: translateX(16px); }
   height: 6px;
 }
 .st-wrap::-webkit-scrollbar-track:vertical {
-  background: #c8c8c8;
+  background: var(--scrollbar-track);
   margin-top: var(--frozen-head-h, 42px);
   margin-bottom: 6px;
 }
 .st-wrap::-webkit-scrollbar-track:horizontal {
-  background: #c8c8c8;
+  background: var(--scrollbar-track);
   height: 6px;
   margin-left: var(--frozen-w, 0px);
   margin-right: 6px;
 }
 .st-wrap::-webkit-scrollbar-thumb {
-  background: #fff;
+  background: var(--scrollbar-thumb);
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
