@@ -193,6 +193,6 @@ function cellStyle(col) {
   border-right: none;
 }
 .st-table tbody tr:nth-child(even) {
-  background: rgba(0,0,0,0.06);
+  background: var(--overlay-black-06);
 }
 </style>

@@ -34,7 +34,7 @@ const roleName = computed(() => {
 const tags = computed(() => getField(props.indexEntry, 'tag_names') || [])
 const fmtDate = (d) => {
   if (!d) return '—'
-  return d.substring(0, 10).replace(/-/g, '/')
+  return d.substring(0, 4) + '/' + d.substring(4, 6) + '/' + d.substring(6, 8)
 }
 const releaseDate = computed(() => fmtDate(props.indexEntry.start_at))
 

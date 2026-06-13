@@ -60,8 +60,12 @@ mapKeys.forEach(key => {
 const rulesFile = path.join(__dirname, '..', 'config', 'ex_skill_rules.json');
 let exRules = [];
 if (fs.existsSync(rulesFile)) {
-  exRules = safeReadJSON(rulesFile, false);
-  console.log(`📋 已加载 EX 技能规则：${exRules.length} 条`);
+  try {
+    exRules = safeReadJSON(rulesFile, false);
+    console.log(`📋 已加载 EX 技能规则：${exRules.length} 条`);
+  } catch {
+    console.warn('⚠️ EX 技能规则文件解析失败，将使用默认显示');
+  }
 } else {
   console.warn('⚠️ EX 技能规则文件缺失，将使用默认显示');
 }
@@ -472,7 +476,9 @@ function buildIndexEntry(character) {
         } else {
           const permDate = new Date(gachaEnd);
           permDate.setDate(permDate.getDate() + 56);
-          const permStr = permDate.toISOString().substring(0, 10);
+          const permStr = permDate.getFullYear().toString() +
+            String(permDate.getMonth() + 1).padStart(2, '0') +
+            String(permDate.getDate()).padStart(2, '0');
           permanent_date = permStr;
           permanent_status = (updateTime && updateTime >= permStr) ? '已恒常化' : '未恒常化';
         }
@@ -502,7 +508,7 @@ function buildIndexEntry(character) {
     tag_names_cn: (character.tag_ids || []).map(id => cnMaps.character_tag?.get(id) || jpMaps.character_tag?.get(id) || `ID:${id}`),
     trait_color_id: character.trait_color_id || null,
     support_color_id: character.support_color_id || null,
-    start_at: character.start_at || null,
+    start_at: character.start_at ? character.start_at.replace(/-/g, '').substring(0, 8) : null,
     initial_status: character.initial_status,
     alt_initial_wt: computeWT(character, true),
     base_initial_wt: computeWT(character, false),
@@ -536,7 +542,7 @@ function buildIndexEntry(character) {
 	    has_transform: transformPairs.some(p => p[0] === character.id),
 	    has_active: !!(character.active1_skill_id || character.active2_skill_id || character.active3_skill_id),
 	    has_ex: (character.extra_skill_ids || []).length > 0,
-    gacha_end_at: (fesName === 'ATELIER FES') ? null : (gachaEndMap.get(character.id) || null),
+    gacha_end_at: (fesName === 'ATELIER FES') ? null : ((gachaEndMap.get(character.id) || '').replace(/-/g, '') || null),
     permanent_status,
     permanent_date,
     leader_skill_name: character.leader_skill?.name || null,
@@ -703,7 +709,10 @@ function getFesName(startAt) {
   return null;
 }
 
-const updateTime = new Date().toISOString();
+const now = new Date();
+const updateTime = now.getFullYear().toString() +
+  String(now.getMonth() + 1).padStart(2, '0') +
+  String(now.getDate()).padStart(2, '0');
 if (fs.existsSync(outDir)) {
   fs.rmSync(outDir, { recursive: true, force: true });
 }

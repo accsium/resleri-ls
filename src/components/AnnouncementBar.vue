@@ -53,7 +53,7 @@ onMounted(async () => {
   background: var(--bg-banner);
   color: var(--text-light);
   font-size: 13px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid var(--overlay-white-08);
 }
 .ab-text {
   flex: 1;

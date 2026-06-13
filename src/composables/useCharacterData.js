@@ -77,6 +77,7 @@ export function useCharacterData() {
     // 流式读取，字节临时计入全局进度
     // try-finally 保证异常时也回退进度计数，防止进度条卡死
     const total = parseInt(resp.headers.get('Content-Length') || '0')
+    if (!resp.body) return resp.json()
     const reader = resp.body.getReader()
     let loaded = 0
     let merged

@@ -10,6 +10,9 @@ function _prefetch(key, url, parser = 'json') {
     _cache[key] = fetch(url).then(async r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`)
       return parser === 'text' ? r.text() : r.json()
+    }).catch(err => {
+      delete _cache[key]
+      throw err
     })
   }
   return _cache[key]

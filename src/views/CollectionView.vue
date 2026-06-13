@@ -365,7 +365,7 @@ onUnmounted(() => {
 }
 .collection-layout :deep(.matrix-attr-label) {
   background: var(--avatar-grid-bg);
-  color: rgba(255,255,255,0.5);
+  color: var(--overlay-white-50);
 }
 
 .collection-empty {

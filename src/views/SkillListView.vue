@@ -272,27 +272,17 @@ onMounted(async () => {
   margin: 8px auto 0; width: 90%; max-width: 840px;
 }
 .skf-label { font-size: 12px; color: var(--text-muted); white-space: nowrap; }
-.skf-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.15); margin: 0 4px; }
+.skf-sep { width: 1px; height: 20px; background: var(--overlay-white-15); margin: 0 4px; }
 .skf-check { display: flex; align-items: center; gap: 2px; cursor: pointer; font-size: 12px; color: var(--text-muted); }
 .skf-check input { accent-color: var(--accent); }
 .skf-search {
   width: 180px; font-size: 12px; padding: 4px 8px;
-  background: rgba(255,255,255,0.08); color: var(--text-light);
-  border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius);
+  background: var(--overlay-white-08); color: var(--text-light);
+  border: 1px solid var(--overlay-white-15); border-radius: var(--radius);
 }
 .skf-search::placeholder { color: var(--text-muted); }
 .skf-search:focus { border-color: var(--accent); }
 
-.sk-pg-bar {
-  display: flex; align-items: center; gap: 6px;
-  padding: 8px 0; font-size: 13px;
-  width: 90%; max-width: 840px; margin: 0 auto;
-}
-.sk-pg-bar .pg-btn { width: auto; padding: 2px 8px; }
-.sk-pg-bar .pg-btn:disabled { opacity: 0.4; cursor: default; }
-.sk-pg-bar .pg-info { color: var(--text-muted); }
-.sk-pg-bar .pg-size { color: var(--text-muted); margin-left: auto; }
-.sk-pg-bar .pg-size-sel { padding: var(--sel-padding); font-size: 12px; }
 .load-error { text-align: center; padding: 30px; color: var(--text-muted); }
 :deep(.st-wrap) { height: auto; }
 </style>

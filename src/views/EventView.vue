@@ -117,7 +117,6 @@ onMounted(async () => {
 <style scoped>
 .contest-wrap { padding: 16px; }
 .group-title { font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 16px 0 8px; padding-left: 8px; border-left: 3px solid var(--accent); }
-.contest-wrap :deep(.st-wrap) { height: auto; width: auto; }
 .contest-wrap :deep(.st-wrap) { height: auto; width: max-content; max-width: 100%; margin-left: 0; margin-right: auto; }
 .contest-wrap :deep(.st-table) { width: auto; }
 .contest-wrap :deep(.st-table th) { white-space: nowrap; }

@@ -121,7 +121,7 @@ function splitEffect(effect) {
   padding: 2px 8px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--bg-button);
+  background: var(--bg-card);
   color: var(--text-primary);
   cursor: pointer;
 }
