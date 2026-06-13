@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, computed, watch, onMounted, getCurrentInstance } from 'vue'
+import { ref, reactive, computed, watch, onMounted, onUnmounted, getCurrentInstance } from 'vue'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useI18n } from '../composables/useI18n'
 import { useSortTable } from '../composables/useSortTable'
@@ -147,26 +147,31 @@ function onSort(col) {
   onTableSort(col)
 }
 
+let abortController = null
+
 onMounted(async () => {
-  const vm = getCurrentInstance()
+  abortController = new AbortController()
+  const { signal } = abortController
   try {
-    // 优先使用路由 beforeEnter 预取的数据
     let data = await preFetch.skills
     if (!data) {
-      const resp = await fetch('data/skills.json')
+      const resp = await fetch('data/skills.json', { signal })
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
       data = await resp.json()
     }
-    // 避免在快速导航时更新已卸载组件
-    if (!vm.isMounted) return
+    if (signal.aborted) return
     data.forEach((r, i) => r._idx = i)
     skills.value = data
   } catch (e) {
-    if (!vm.isMounted) return
+    if (e.name === 'AbortError') return
     error.value = e.message || String(e)
   } finally {
-    if (vm.isMounted) loading.value = false
+    loading.value = false
   }
+})
+
+onUnmounted(() => {
+  abortController?.abort()
 })
 </script>
 

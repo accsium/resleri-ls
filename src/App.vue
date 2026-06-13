@@ -17,6 +17,18 @@ const keepAliveViews = ['GuideView', 'CollectionView']
 onMounted(async () => {
   setLang('cn')
   await Promise.all([loadIndex(), loadBuildTime()])
+
+  // 首屏渲染后预加载所有路由 chunk，消除后续导航的网络延迟
+  setTimeout(() => {
+    import('./views/GuideView.vue')
+    import('./views/CollectionView.vue')
+    import('./views/SkillListView.vue')
+    import('./views/LeaderSkillView.vue')
+    import('./views/SupportAbilityView.vue')
+    import('./views/EventView.vue')
+    import('./views/ContestRotationView.vue')
+    import('./views/TestView.vue')
+  }, 100)
 })
 </script>
 
@@ -64,11 +76,9 @@ onMounted(async () => {
     <div class="app-content">
       <div v-if="indexLoadError" class="load-error">{{ indexLoadError }}</div>
       <router-view v-else v-slot="{ Component }">
-        <Transition name="page-fade">
-          <KeepAlive :include="keepAliveViews">
-            <component :is="Component" />
-          </KeepAlive>
-        </Transition>
+        <KeepAlive :include="keepAliveViews">
+          <component :is="Component" />
+        </KeepAlive>
       </router-view>
     </div>
   </div>
@@ -79,15 +89,5 @@ onMounted(async () => {
   text-align: center;
   padding: 40px;
   color: var(--text-muted);
-}
-
-/* 页面切换过渡：轻量 fade 缓解感知延迟 */
-.page-fade-enter-active,
-.page-fade-leave-active {
-  transition: opacity 0.12s ease;
-}
-.page-fade-enter-from,
-.page-fade-leave-to {
-  opacity: 0;
 }
 </style>

@@ -69,9 +69,9 @@ export function useCharacterData() {
     await _indexPromise
   }
 
-  async function loadCharacter(id) {
+  async function loadCharacter(id, signal) {
     if (loadedCharacters.value[id]) return loadedCharacters.value[id]
-    const resp = await fetch(`data/character/${id}.json`)
+    const resp = await fetch(`data/character/${id}.json`, { signal })
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
 
     // 流式读取，字节临时计入全局进度

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, getCurrentInstance } from 'vue'
+import { ref, onMounted, onUnmounted, getCurrentInstance } from 'vue'
 import { marked } from 'marked'
 import { preFetch } from '../router'
 
@@ -14,22 +14,28 @@ function _sanitize(html) {
     .replace(/\s(on\w+)=/gi, ' data-x-$1=')
 }
 
+let abortController = null
+
 onMounted(async () => {
-  const vm = getCurrentInstance()
+  abortController = new AbortController()
+  const { signal } = abortController
   try {
     let md = await preFetch.todo
     if (!md) {
-      const res = await fetch('config/todo.md')
+      const res = await fetch('config/todo.md', { signal })
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       md = await res.text()
     }
-    if (!vm.isMounted) return
-    // marked v18 无内置 sanitize，对输出做 HTML 标签剥离
+    if (signal.aborted) return
     todoHtml.value = _sanitize(marked.parse(md))
   } catch {
-    if (!vm.isMounted) return
+    if (signal.aborted) return
     todoHtml.value = '加载失败'
   }
+})
+
+onUnmounted(() => {
+  abortController?.abort()
 })
 </script>
 

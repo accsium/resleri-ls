@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { computed, ref, onMounted, onUnmounted, onDeactivated, onActivated } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
@@ -38,34 +38,50 @@ const containerRef = ref(null)
 let cancelled = false
 let tracked = false
 let observer = null
+let activeImg = null
 
-onMounted(() => {
+function setupObserver() {
   cancelled = false
   observer = new IntersectionObserver(([entry]) => {
     if (entry.isIntersecting) {
       observer.disconnect()
+      // 已加载过的图片不再重复下载
+      if (showImage.value) return
       tracked = true
       trackImage(imageSize)
-      const img = new Image()
-      img.onload = () => {
+      activeImg = new Image()
+      activeImg.onload = () => {
         if (cancelled) return
         showImage.value = true; wasLoaded.value = true; imageDone(imageSize)
+        activeImg = null
       }
-      img.onerror = () => {
+      activeImg.onerror = () => {
         if (cancelled) return
         imageDone(imageSize)
+        activeImg = null
       }
-      img.src = charImage.value
+      activeImg.src = charImage.value
     }
   }, { rootMargin: '200px' })
   if (containerRef.value) observer.observe(containerRef.value)
-})
+}
 
-onUnmounted(() => {
+onMounted(setupObserver)
+onActivated(setupObserver)
+
+function cleanup() {
   cancelled = true
   observer?.disconnect()
+  // 中止正在进行的图片下载，释放带宽
+  if (activeImg) {
+    activeImg.src = ''
+    activeImg = null
+  }
   if (tracked) untrackImage(imageSize, wasLoaded.value)
-})
+}
+
+onUnmounted(cleanup)
+onDeactivated(cleanup)
 </script>
 
 <template>

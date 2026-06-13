@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, computed, watch, onMounted, getCurrentInstance } from 'vue'
+import { ref, reactive, computed, watch, onMounted, onUnmounted, getCurrentInstance } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useSortTable } from '../composables/useSortTable'
 import { useI18n } from '../composables/useI18n'
@@ -66,23 +66,30 @@ function onSort(gi, col) {
   else { s.col = col; s.dir = 'asc' }
 }
 
+let abortController = null
+
 onMounted(async () => {
-  const vm = getCurrentInstance()
+  abortController = new AbortController()
+  const { signal } = abortController
   try {
     let data = await preFetch.events
     if (!data) {
-      const resp = await fetch('data/events.json')
+      const resp = await fetch('data/events.json', { signal })
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
       data = await resp.json()
     }
-    if (!vm.isMounted) return
+    if (signal.aborted) return
     allRows.value = data
   } catch (e) {
-    if (!vm.isMounted) return
+    if (e.name === 'AbortError') return
     error.value = e.message || String(e)
   } finally {
-    if (vm.isMounted) loading.value = false
+    loading.value = false
   }
+})
+
+onUnmounted(() => {
+  abortController?.abort()
 })
 </script>
 
