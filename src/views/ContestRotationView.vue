@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted, getCurrentInstance } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useSortTable } from '../composables/useSortTable'
 import { useI18n } from '../composables/useI18n'

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted, getCurrentInstance } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { marked } from 'marked'
 import { preFetch } from '../router'
 

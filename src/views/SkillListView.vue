@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, computed, watch, onMounted, onUnmounted, getCurrentInstance } from 'vue'
+import { ref, reactive, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useI18n } from '../composables/useI18n'
 import { useSortTable } from '../composables/useSortTable'
