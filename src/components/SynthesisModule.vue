@@ -111,7 +111,7 @@ function splitEffect(effect) {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   font-size: 12px;
-  color: var(--text-muted, #888);
+  color: var(--text-muted);
   display: flex;
   align-items: center;
   gap: 8px;

@@ -79,9 +79,14 @@ const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     // 浏览器前进后退
     if (savedPosition) return savedPosition
-    // 自定义路由滚动位置恢复（由 afterEach 异步处理，等组件渲染完成）
-    if (scrollPositions[to.name] != null) return false
-    // 新导航同步置顶，避免异步滚动造成的视觉闪烁
+    // 自定义路由滚动位置恢复：同步返回保存位置，Vue Router 在组件渲染后立即执行
+    const saved = scrollPositions[to.name]
+    if (saved != null) {
+      delete scrollPositions[to.name]
+      const el = document.querySelector('.app-content')
+      return { top: saved, el: el || undefined, behavior: 'instant' }
+    }
+    // 新导航同步置顶
     return { top: 0 }
   },
 })
@@ -93,17 +98,8 @@ router.beforeEach((to, from) => {
   }
 })
 
-router.afterEach((to) => {
-  const saved = scrollPositions[to.name]
-  if (saved != null) {
-    // 使用 rAF 在浏览器绘制前恢复滚动，避免 setTimeout(0) 的顶部闪烁
-    requestAnimationFrame(() => {
-      const el = document.querySelector('.app-content')
-      if (el) el.scrollTop = saved
-      else window.scrollTo(0, saved)
-    })
-    delete scrollPositions[to.name]
-  }
+router.afterEach(() => {
+  // 滚动恢复已由 scrollBehavior 同步处理，此处不再异步恢复
 })
 
 export default router

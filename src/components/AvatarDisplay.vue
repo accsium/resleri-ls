@@ -77,44 +77,14 @@ onUnmounted(() => {
         xmlns="http://www.w3.org/2000/svg"
         style="overflow: visible;"
       >
-        <defs v-if="!props.kid">
-          <filter :id="'glow-' + kid" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="25" result="blur"/>
-            <feComposite in="blur" in2="SourceGraphic" operator="over"/>
-          </filter>
-          <linearGradient :id="'gt-' + kid" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
-          </linearGradient>
-          <linearGradient :id="'gl-' + kid" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
-          </linearGradient>
-          <linearGradient :id="'gr-' + kid" x1="1" y1="0" x2="0" y2="0">
-            <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
-          </linearGradient>
-          <radialGradient :id="'rg-' + kid" cx="75" cy="60" r="20" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="white"/><stop offset="50%" stop-color="white"/><stop offset="100%" stop-color="black"/>
-          </radialGradient>
-          <radialGradient :id="'rg-r-' + kid" cx="245" cy="60" r="20" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="white"/><stop offset="50%" stop-color="white"/><stop offset="100%" stop-color="black"/>
-          </radialGradient>
-          <mask :id="'mask-' + kid">
-            <rect x="40" y="25" width="240" height="275" fill="white"/>
-            <rect x="40" y="10" width="240" height="40" :fill="'url(#gt-' + kid + ')'"/>
-            <rect x="25" y="30" width="40" height="280" :fill="'url(#gl-' + kid + ')'"/>
-            <rect x="255" y="30" width="40" height="280" :fill="'url(#gr-' + kid + ')'"/>
-            <polygon points="45,180 160,295 275,180 275,315 45,315" fill="black"/>
-            <rect x="35" y="20" width="40" height="40" :fill="'url(#rg-' + kid + ')'"/>
-            <rect x="245" y="20" width="40" height="40" :fill="'url(#rg-r-' + kid + ')'"/>
-          </mask>
-        </defs>
-        <polygon points="160,10 10,160 160,310" :fill="traitHex" opacity="0.7" :filter="'url(#glow-' + kid + ')'" style="overflow:visible;"/>
-        <polygon points="160,10 310,160 160,310" :fill="supportHex" opacity="0.7" :filter="'url(#glow-' + kid + ')'" style="overflow:visible;"/>
+        <polygon points="160,10 10,160 160,310" :fill="traitHex" opacity="0.7" filter="url(#glow-g)" style="overflow:visible;"/>
+        <polygon points="160,10 310,160 160,310" :fill="supportHex" opacity="0.7" filter="url(#glow-g)" style="overflow:visible;"/>
         <polygon points="160,25 25,160 160,295" :fill="traitHex"/>
         <polygon points="160,25 295,160 160,295" :fill="supportHex"/>
         <image
           :href="showImage ? charImage : 'image/misc/00000.png'"
           x="32" y="39" width="256" height="256"
-          :mask="'url(#mask-' + kid + ')'"
+          mask="url(#mask-g)"
           preserveAspectRatio="xMidYMax meet"
         />
       </svg>

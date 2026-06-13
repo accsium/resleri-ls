@@ -124,8 +124,11 @@ async function toggleExpand() {
   expanded.value = true
   detailLoading.value = true
   detailError.value = ''
+  const loadingId = props.indexEntry.id
   try {
     await loadCharacter(props.indexEntry.id)
+    // 防止竞态：用户可能在 await 期间收起卡片或切换到其他卡片
+    if (!expanded.value || props.indexEntry.id !== loadingId) return
     detailLoading.value = false
     await nextTick()
     // ResizeObserver 跟踪 header 高度
@@ -139,6 +142,7 @@ async function toggleExpand() {
       headerObservers.set(props.indexEntry.id, observer)
     }
   } catch (e) {
+    if (!expanded.value || props.indexEntry.id !== loadingId) return
     detailLoading.value = false
     detailError.value = e.message || String(e)
   }
@@ -157,36 +161,6 @@ onUnmounted(() => {
 
 <template>
   <div class="card" :data-id="indexEntry.id">
-    <svg xmlns="http://www.w3.org/2000/svg" class="card-defs"><defs>
-      <filter :id="'glow-' + kid" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="25" result="blur"/>
-        <feComposite in="blur" in2="SourceGraphic" operator="over"/>
-      </filter>
-      <linearGradient :id="'gt-' + kid" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
-      </linearGradient>
-      <linearGradient :id="'gl-' + kid" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
-      </linearGradient>
-      <linearGradient :id="'gr-' + kid" x1="1" y1="0" x2="0" y2="0">
-        <stop offset="0%" stop-color="black"/><stop offset="75%" stop-color="black"/><stop offset="100%" stop-color="white"/>
-      </linearGradient>
-      <radialGradient :id="'rg-' + kid" cx="75" cy="60" r="20" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="white"/><stop offset="50%" stop-color="white"/><stop offset="100%" stop-color="black"/>
-      </radialGradient>
-      <radialGradient :id="'rg-r-' + kid" cx="245" cy="60" r="20" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="white"/><stop offset="50%" stop-color="white"/><stop offset="100%" stop-color="black"/>
-      </radialGradient>
-      <mask :id="'mask-' + kid">
-        <rect x="40" y="25" width="240" height="275" fill="white"/>
-        <rect x="40" y="10" width="240" height="40" :fill="'url(#gt-' + kid + ')'"/>
-        <rect x="25" y="30" width="40" height="280" :fill="'url(#gl-' + kid + ')'"/>
-        <rect x="255" y="30" width="40" height="280" :fill="'url(#gr-' + kid + ')'"/>
-        <polygon points="45,180 160,295 275,180 275,315 45,315" fill="black"/>
-        <rect x="35" y="20" width="40" height="40" :fill="'url(#rg-' + kid + ')'"/>
-        <rect x="245" y="20" width="40" height="40" :fill="'url(#rg-r-' + kid + ')'"/>
-      </mask>
-    </defs></svg>
     <div class="card-header">
       <!-- 第一行：名字 + 切换 -->
       <div class="card-top">

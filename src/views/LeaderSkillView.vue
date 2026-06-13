@@ -6,7 +6,7 @@ import { useSortTable } from '../composables/useSortTable'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 
-const { characterIndex } = useCharacterData()
+const { characterIndex, indexLoaded } = useCharacterData()
 const { currentLang, getField, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
@@ -50,7 +50,8 @@ const sortedChars = computed(() => sortItems(leaderChars.value, getSortVal))
 </script>
 
 <template>
-  <SortableTable
+  <div v-if="!indexLoaded" class="loading">加载角色数据中...</div>
+  <SortableTable v-else
     :columns="columns"
     :rows="sortedChars"
     rowKey="id"

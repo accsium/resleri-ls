@@ -239,7 +239,7 @@ input[type="text"] {
 .sort-filter-bar select { background: var(--bg-nav); color: var(--text-light); border-color: rgba(255,255,255,0.15); }
 .sort-filter-bar select option { background: var(--bg-header); color: var(--text-light); }
 .sort-filter-bar input[type="text"] {
-  width: 200px; font-size: 13px; padding: 5px 10px;
+  width: 200px; font-size: 12px; padding: var(--inp-padding);
   background: rgba(255,255,255,0.08); color: var(--text-light);
   border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius);
   outline: none;

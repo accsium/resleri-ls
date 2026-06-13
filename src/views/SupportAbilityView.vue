@@ -8,7 +8,7 @@ import IconDisplay from '../components/IconDisplay.vue'
 import StarsDisplay from '../components/StarsDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 
-const { characterIndex } = useCharacterData()
+const { characterIndex, indexLoaded } = useCharacterData()
 const { currentLang, getField, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 
 const columns = [
@@ -68,7 +68,8 @@ function roleName(id) {
 </script>
 
 <template>
-  <SortableTable
+  <div v-if="!indexLoaded" class="loading">加载角色数据中...</div>
+  <SortableTable v-else
     :columns="columns"
     :rows="sortedChars"
     rowKey="id"
