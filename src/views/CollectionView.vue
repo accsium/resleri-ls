@@ -92,6 +92,8 @@ function onLoadCode() {
 // ── 拖拽选择 ──
 const dragging = ref(false)
 const dragAction = ref(null)
+let processedIds = new Set()
+
 function onPointerDown(id) {
   const owned = isOwned(id)
   toggleOwned(id)
@@ -99,15 +101,27 @@ function onPointerDown(id) {
   dragging.value = true
   dragAction.value = owned ? 'remove' : 'add'
 }
-function onPointerEnter(id) {
-  if (!dragging.value) return
+
+function onPointerOver(id) {
+  if (!dragging.value || processedIds.has(id)) return
   const owned = isOwned(id)
   if (dragAction.value === 'add' && !owned) toggleOwned(id)
   else if (dragAction.value === 'remove' && owned) toggleOwned(id)
+  else return
+  processedIds.add(id)
 }
+
+function onPointerMove(e) {
+  if (!dragging.value) return
+  const el = document.elementFromPoint(e.clientX, e.clientY)
+  const item = el?.closest('.collection-avatar-item')
+  if (item?.dataset.id) onPointerOver(Number(item.dataset.id))
+}
+
 function onPointerUp() {
   dragging.value = false
   dragAction.value = null
+  processedIds = new Set()
 }
 function onKeydown(id, e) {
   if (e.key === 'Enter' || e.key === ' ') {
@@ -219,15 +233,15 @@ onUnmounted(() => {
       </div>
 
       <!-- 列表模式 -->
-      <div v-if="viewMode === 'sequential'" class="avatar-grid" :style="seqGridStyle" @pointerup="onPointerUp" @pointerleave="onPointerUp" @dragstart.prevent>
+      <div v-if="viewMode === 'sequential'" class="avatar-grid" :style="seqGridStyle" @pointerup="onPointerUp" @pointerleave="onPointerUp" @pointermove="onPointerMove" @dragstart.prevent>
         <div
           v-for="entry in filteredSortedCharacters"
           :key="entry.id"
           class="collection-avatar-item"
           :class="{ owned: isOwned(entry.id) }"
+          :data-id="entry.id"
           role="button" tabindex="0"
           @pointerdown="onPointerDown(entry.id)"
-          @pointerenter="onPointerEnter(entry.id)"
           @keydown="onKeydown(entry.id, $event)"
         >
           <AvatarDisplay :index-entry="entry" :size="seqSize" />
@@ -242,7 +256,7 @@ onUnmounted(() => {
         :owned-set="ownedIds"
         :size="matSize"
         @pointerdown="onPointerDown"
-        @pointerenter="onPointerEnter"
+        @pointermove="onPointerOver"
         @pointerup="onPointerUp"
       />
     </template>

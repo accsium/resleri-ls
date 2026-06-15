@@ -10,7 +10,13 @@ const props = defineProps({
   size: { type: Number, default: 56 },
 })
 
-const emit = defineEmits(['pointerdown', 'pointerenter', 'pointerup'])
+const emit = defineEmits(['pointerdown', 'pointermove', 'pointerup'])
+
+function onPointerMove(e) {
+  const el = document.elementFromPoint(e.clientX, e.clientY)
+  const item = el?.closest('.collection-avatar-item')
+  if (item?.dataset.id) emit('pointermove', Number(item.dataset.id))
+}
 
 function onKeydown(id, e) {
   if (e.key === 'Enter' || e.key === ' ') {
@@ -50,7 +56,7 @@ function getCell(rid, aid) {
 </script>
 
 <template>
-  <table class="collection-matrix" @pointerup="emit('pointerup')" @pointerleave="emit('pointerup')" @dragstart.prevent>
+  <table class="collection-matrix" @pointerup="emit('pointerup')" @pointerleave="emit('pointerup')" @pointermove="onPointerMove" @dragstart.prevent>
     <thead>
       <tr>
         <th class="matrix-corner"></th>
@@ -73,9 +79,9 @@ function getCell(rid, aid) {
               :key="entry.id"
               class="collection-avatar-item"
               :class="{ owned: ownedSet.has(entry.id) }"
+              :data-id="entry.id"
               role="button" tabindex="0"
               @pointerdown="emit('pointerdown', entry.id)"
-              @pointerenter="emit('pointerenter', entry.id)"
               @keydown="onKeydown(entry.id, $event)"
             >
               <AvatarDisplay :index-entry="entry" :size="size" />
