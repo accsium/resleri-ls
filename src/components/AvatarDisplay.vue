@@ -164,13 +164,6 @@ onDeactivated(cleanup)
 </template>
 
 <style scoped>
-/* DEBUG: 可视化 320 区域、容器边界 */
-.avatar-component {
-  outline: 2px dashed red;
-}
-.avatar-component > div:first-child {
-  outline: 2px dashed blue;
-}
 .fallback-text {
   text-shadow: 0 0 6px rgba(0,0,0,0.8);
   user-select: none;
