@@ -31,6 +31,7 @@ export function useTraitData() {
       const [bt, et] = await cachePromise
       battleTraits.value = bt
       equipTraits.value = et
+      error.value = null
       loaded.value = true
     } catch (e) {
       error.value = e

@@ -184,7 +184,6 @@ onUnmounted(() => {
     <span class="skf-label">属性</span>
     <button v-for="id in ATTR_IDS" :key="'a'+id"
       class="sf-icon-btn" :class="{ active: activeFilters.attr.includes(id) }"
-      :aria-label="'筛选属性：' + attrMap[id]"
       @click="toggleFilter('attr', id)"
     ><IconDisplay type="attribute" :id="id" :size="24" /></button>
     <span class="skf-sep"></span>
@@ -212,7 +211,7 @@ onUnmounted(() => {
       <input type="checkbox" :checked="activeFilters.wt.includes(w)" @change="toggleFilter('wt',w)">{{ w }}
     </label>
     <span class="skf-sep"></span>
-    <input type="text" v-model="searchText" placeholder="搜索技能名或描述..." class="skf-search" aria-label="搜索技能">
+    <input type="text" v-model="searchText" placeholder="搜索技能名或描述..." class="skf-search">
   </div>
   <!-- 分页（上） -->
   <PaginationBar

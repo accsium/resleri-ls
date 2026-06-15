@@ -123,12 +123,6 @@ function onPointerUp() {
   dragAction.value = null
   processedIds = new Set()
 }
-function onKeydown(id, e) {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault()
-    onPointerDown(id)
-  }
-}
 function selectAll() {
   const unowned = characterIndex.value.filter(c => !isOwned(c.id)).map(c => c.id)
   if (unowned.length) batchToggle(unowned, true)
@@ -191,7 +185,7 @@ onUnmounted(() => {
         <button class="collection-ctrl-btn" @click="onSave">
           {{ savedFlash ? t('collectionSaved') : t('collectionSave') }}
         </button>
-        <input type="text" v-model="shareInput" class="collection-share-input" :placeholder="shareCode" aria-label="分享码">
+        <input type="text" v-model="shareInput" class="collection-share-input" :placeholder="shareCode">
         <button class="collection-ctrl-btn" @click="onLoadCode">读取</button>
         <button class="collection-ctrl-btn" @click="onCopyLink">
           {{ copiedFlash ? t('collectionCopied') : t('collectionCopyLink') }}
@@ -221,13 +215,13 @@ onUnmounted(() => {
         <span class="collection-size-group" v-if="viewMode === 'sequential'">
           <span class="collection-size-label">头像尺寸</span>
           <span class="size-steps">
-            <span v-for="(s, si) in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" role="button" tabindex="0" :aria-label="'尺寸 ' + (si + 1)" @click="seqSize = s.val" @keydown.enter.prevent="seqSize = s.val" @keydown.space.prevent="seqSize = s.val"></span>
+            <span v-for="(s, si) in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="seqSize = s.val"></span>
           </span>
         </span>
         <span class="collection-size-group" v-else>
           <span class="collection-size-label">头像尺寸</span>
           <span class="size-steps">
-            <span v-for="(s, si) in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" role="button" tabindex="0" :aria-label="'尺寸 ' + (si + 1)" @click="matSize = s.val" @keydown.enter.prevent="matSize = s.val" @keydown.space.prevent="matSize = s.val"></span>
+            <span v-for="(s, si) in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="matSize = s.val"></span>
           </span>
         </span>
       </div>
@@ -240,9 +234,7 @@ onUnmounted(() => {
           class="collection-avatar-item"
           :class="{ owned: isOwned(entry.id) }"
           :data-id="entry.id"
-          role="button" tabindex="0"
           @pointerdown="onPointerDown(entry.id)"
-          @keydown="onKeydown(entry.id, $event)"
         >
           <AvatarDisplay :index-entry="entry" :size="seqSize" />
         </div>

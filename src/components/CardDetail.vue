@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import SkillGroup from './SkillGroup.vue'
 import AbilityCard from './AbilityCard.vue'
@@ -83,14 +83,12 @@ const boardAbilities = computed(() => {
 
 const boardActiveIndex = ref({})
 
-// 初始化光玉板能力默认选中最高级
-onMounted(() => {
-  boardAbilities.value.forEach(ba => {
-    if (!(ba.key in boardActiveIndex.value)) {
-      boardActiveIndex.value[ba.key] = ba.levels.length - 1
-    }
-  })
-})
+// 光玉板能力默认选中最高级；boardAbilities 变化（切换形态）时重置
+watch(boardAbilities, (baList) => {
+  const next = {}
+  baList.forEach(ba => { next[ba.key] = ba.levels.length - 1 })
+  boardActiveIndex.value = next
+}, { immediate: true })
 
 function boardActiveLevel(ba) {
   return ba.levels[boardActiveIndex.value[ba.key]] || null
@@ -102,7 +100,7 @@ const abilitiesCollapsed = ref(false)
 
 <template>
   <template v-if="allSkillTypes.length > 0">
-    <div class="section-title section-collapsible" role="button" tabindex="0" @click="skillsCollapsed = !skillsCollapsed" @keydown.enter.prevent="skillsCollapsed = !skillsCollapsed" @keydown.space.prevent="skillsCollapsed = !skillsCollapsed">
+    <div class="section-title section-collapsible" @click="skillsCollapsed = !skillsCollapsed">
       {{ t('skillSection') }}
       <span class="collapse-arrow">{{ skillsCollapsed ? '▶' : '▼' }}</span>
     </div>
@@ -115,7 +113,7 @@ const abilitiesCollapsed = ref(false)
     </div>
   </template>
 
-  <div class="section-title section-collapsible" role="button" tabindex="0" @click="abilitiesCollapsed = !abilitiesCollapsed" @keydown.enter.prevent="abilitiesCollapsed = !abilitiesCollapsed" @keydown.space.prevent="abilitiesCollapsed = !abilitiesCollapsed">
+  <div class="section-title section-collapsible" @click="abilitiesCollapsed = !abilitiesCollapsed">
     {{ t('abilityTitle') }}
     <span class="collapse-arrow">{{ abilitiesCollapsed ? '▶' : '▼' }}</span>
   </div>

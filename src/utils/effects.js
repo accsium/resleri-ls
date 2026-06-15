@@ -9,7 +9,7 @@ function escapeHtml(str) {
 }
 
 export function replaceEffects(description, effects) {
-  if (!effects) return escapeHtml(description || '')
+  if (!effects) return description || ''
   let desc = escapeHtml(description || '')
   effects.forEach((eff, i) => {
     desc = desc.replace(new RegExp(`\\{${i}\\}`, 'g'), (eff.value ?? 0) / 100)

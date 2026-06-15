@@ -343,6 +343,8 @@ function diffObjects(base, alt) {
   for (const k of keys) {
     if (DIFF_SKIP_KEYS.has(k)) continue
     if (base[k] === alt[k]) continue
+    // 数组深度比较，内容相同则跳过
+    if (Array.isArray(base[k]) && Array.isArray(alt[k]) && JSON.stringify(base[k]) === JSON.stringify(alt[k])) continue
     diff[k] = Object.hasOwn(alt, k) ? alt[k] : base[k]
   }
   return diff

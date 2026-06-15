@@ -18,12 +18,6 @@ function onPointerMove(e) {
   if (item?.dataset.id) emit('pointermove', Number(item.dataset.id))
 }
 
-function onKeydown(id, e) {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault()
-    emit('pointerdown', id)
-  }
-}
 const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
@@ -80,9 +74,7 @@ function getCell(rid, aid) {
               class="collection-avatar-item"
               :class="{ owned: ownedSet.has(entry.id) }"
               :data-id="entry.id"
-              role="button" tabindex="0"
               @pointerdown="emit('pointerdown', entry.id)"
-              @keydown="onKeydown(entry.id, $event)"
             >
               <AvatarDisplay :index-entry="entry" :size="size" />
             </div>

@@ -34,7 +34,7 @@ onMounted(async () => {
       class="ab-row"
     >
       <span class="ab-text">{{ a.text }}</span>
-      <button v-if="a.dismissible !== false" class="ab-close" aria-label="关闭公告" @click="dismiss(a.id)">&#10005;</button>
+      <button v-if="a.dismissible !== false" class="ab-close" @click="dismiss(a.id)">&#10005;</button>
     </div>
   </div>
 </template>

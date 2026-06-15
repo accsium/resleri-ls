@@ -21,15 +21,11 @@ function handleRefresh() {
         <button
           class="lang-btn"
           :class="{ active: currentLang === 'ja' }"
-          :aria-pressed="currentLang === 'ja'"
-          :aria-label="currentLang === 'ja' ? '当前日语' : '切换到日语'"
           @click="setLang('ja')"
         >日</button>
         <button
           class="lang-btn"
           :class="{ active: currentLang === 'cn' }"
-          :aria-pressed="currentLang === 'cn'"
-          :aria-label="currentLang === 'cn' ? '当前中文' : '切换到中文'"
           @click="setLang('cn')"
         >中</button>
         <button class="btn-refresh" @click="handleRefresh">强制刷新</button>

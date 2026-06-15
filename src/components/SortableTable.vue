@@ -97,10 +97,7 @@ function cellStyle(col) {
             v-for="(col, i) in columns"
             :key="col.key"
             :style="i < frozen ? frozenThStyle(i) : cellStyle(col)"
-            tabindex="0"
             @click="onSort(col.key)"
-            @keydown.enter.prevent="onSort(col.key)"
-            @keydown.space.prevent="onSort(col.key)"
           >
             {{ col.label }}{{ sortArrow(col.key) }}
           </th>

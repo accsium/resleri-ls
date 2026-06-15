@@ -250,7 +250,7 @@ function _parseSelectId(val) {
         <span class="sf-label">初始星级</span>
         <div class="sf-field-items">
         <label v-for="r in RARITIES" :key="'rar'+r" class="sf-check">
-          <input type="checkbox" :name="'rarity-'+r" :checked="selectedRarities.includes(r)" @change="toggleRarity(r)" :aria-label="r + '星'">
+          <input type="checkbox" :name="'rarity-'+r" :checked="selectedRarities.includes(r)" @change="toggleRarity(r)">
           <StarsDisplay :mode="1" :rarity="r" :max-rarity="8" :scale="0.25" />
         </label>
         </div>
@@ -261,7 +261,6 @@ function _parseSelectId(val) {
           v-for="id in ROLE_IDS" :key="'r'+id"
           class="sf-icon-btn"
           :class="{ active: selectedRoles.includes(id) }"
-          :aria-label="'筛选职业：' + roleMap[id]"
           @click="toggleRole(id)"
         >
           <IconDisplay type="role" :id="id" :size="24" :alt="roleMap[id]" />
@@ -273,7 +272,6 @@ function _parseSelectId(val) {
           v-for="id in ATTR_IDS" :key="'a'+id"
           class="sf-icon-btn"
           :class="{ active: selectedAttrs.includes(id) }"
-          :aria-label="'筛选属性：' + attrMap[id]"
           @click="toggleAttr(id)"
         >
           <IconDisplay type="attribute" :id="id" :size="24" :alt="attrMap[id]" />
@@ -352,7 +350,7 @@ function _parseSelectId(val) {
       <div class="sf-field">
         <span class="sf-label">道具词条</span>
         <div class="sf-field-items">
-        <select :name="'battle_trait-'+n" v-for="n in 2" :key="'bt'+n" class="sf-select" :aria-label="'道具词条 ' + n"
+        <select :name="'battle_trait-'+n" v-for="n in 2" :key="'bt'+n" class="sf-select"
           :value="selectedBattleTraits[n-1] || ''"
           @change="(e) => { const v = [...selectedBattleTraits]; v[n-1] = _parseSelectId(e.target.value); selectedBattleTraits = v }"
         >
@@ -368,7 +366,7 @@ function _parseSelectId(val) {
       <div class="sf-field">
         <span class="sf-label">装备词条</span>
         <div class="sf-field-items">
-        <select name="equip_trait" class="sf-select" aria-label="装备词条"
+        <select name="equip_trait" class="sf-select"
           :value="selectedEquipTraits[0] || ''"
           @change="(e) => { selectedEquipTraits = [_parseSelectId(e.target.value)] }"
         >
@@ -387,7 +385,7 @@ function _parseSelectId(val) {
       <div class="sf-field tag-field">
         <span class="sf-label">标签</span>
         <div class="sf-field-items">
-        <select :name="'char_tag-'+n" v-for="n in 5" :key="'ct'+n" class="sf-select" :aria-label="'标签 ' + n"
+        <select :name="'char_tag-'+n" v-for="n in 5" :key="'ct'+n" class="sf-select"
           :value="selectedTags[n-1] || ''"
           @change="(e) => { const v = [...selectedTags]; v[n-1] = _parseSelectId(e.target.value); selectedTags = v }"
         >
@@ -403,7 +401,7 @@ function _parseSelectId(val) {
       <div class="sf-field">
         <span class="sf-label">作品出处</span>
         <div class="sf-field-items">
-          <select class="sf-select" :value="activeFilters.original_title" @change="(e) => toggleFilter('original_title', _parseSelectId(e.target.value))" aria-label="作品出处">
+          <select class="sf-select" :value="activeFilters.original_title" @change="(e) => toggleFilter('original_title', _parseSelectId(e.target.value))">
             <option value="">全部</option>
             <option v-for="t in allTitles" :key="t.id" :value="t.id">{{ t.name }}</option>
           </select>
@@ -422,7 +420,7 @@ function _parseSelectId(val) {
 
 
 
-    <div class="sf-toggle-bar" role="button" tabindex="0" @click="collapsed = !collapsed" @keydown.enter.prevent="collapsed = !collapsed" @keydown.space.prevent="collapsed = !collapsed">
+    <div class="sf-toggle-bar" @click="collapsed = !collapsed">
       <span class="sf-toggle-arrow">{{ collapsed ? '▼' : '▲' }}</span>
     </div>
     </div>

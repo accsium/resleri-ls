@@ -447,7 +447,7 @@ input[type="text"] {
 .slider::before {
   position: absolute; content: "";
   height: 14px; width: 14px; left: 2px; bottom: 3px;
-  background: white; border-radius: 50%;
+  background: var(--bg-content); border-radius: 50%;
 }
 input:checked + .slider { background-color: var(--accent-green); }
 input:checked + .slider::before { transform: translateX(16px); }

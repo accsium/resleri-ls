@@ -73,7 +73,7 @@ function splitEffect(effect) {
     <button class="syn-retry-btn" @click="loadTraits().catch(() => {})">重试</button>
   </div>
   <template v-else-if="allTraits.length > 0">
-    <div class="section-title section-collapsible" role="button" tabindex="0" @click="collapsed = !collapsed" @keydown.enter.prevent="collapsed = !collapsed" @keydown.space.prevent="collapsed = !collapsed">
+    <div class="section-title section-collapsible" @click="collapsed = !collapsed">
       调和
       <span class="synthesis-color-row">
         <span :style="{ color: traitHex }">{{ getField(characterData, 'trait_color_name') }}</span>

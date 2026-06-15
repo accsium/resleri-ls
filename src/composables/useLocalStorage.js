@@ -1,4 +1,4 @@
-import { ref, watch } from 'vue'
+import { ref, watch, getCurrentInstance, onUnmounted } from 'vue'
 
 const keyRefs = new Map()
 
@@ -36,6 +36,12 @@ export function useLocalStorage(key, defaultValue) {
       localStorage.setItem(key, JSON.stringify(v))
     } catch {}
   }, { deep: true })
+
+  // 组件卸载时移除 keyRefs 条目，防止 Map 无限增长
+  const instance = getCurrentInstance()
+  if (instance) {
+    onUnmounted(() => { keyRefs.delete(key) })
+  }
 
   return val
 }
