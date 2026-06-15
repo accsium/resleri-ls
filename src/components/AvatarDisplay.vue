@@ -6,7 +6,7 @@ import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
 let uid = 0
-const { getTraitColorHex } = useI18n()
+const { getTraitColorHex, getField } = useI18n()
 const { trackImage, imageDone, untrackImage } = useCharacterData()
 
 const props = defineProps({
@@ -34,6 +34,32 @@ const charImage = computed(() => `image/character/${props.indexEntry.id}.png`)
 const showImage = ref(false)
 const wasLoaded = ref(false)
 const imageSize = props.indexEntry.image_size ?? 60000
+
+const baseName = computed(() =>
+  getField(props.indexEntry, 'base_character_name') || ''
+)
+const aliasName = computed(() =>
+  props.indexEntry.another_name || ''
+)
+
+const BASE_FONT = 32
+
+function _weightedLen(str) {
+  let w = 0
+  for (const ch of str) {
+    w += /[一-鿿　-〿＀-￯]/.test(ch) ? 1 : 0.55
+  }
+  return Math.max(w, 1)
+}
+
+const textScale = computed(() => {
+  const nw = _weightedLen(baseName.value)
+  const aw = aliasName.value ? _weightedLen(aliasName.value) : 0
+  const maxW = Math.max(nw, aw)
+  if (maxW === 0) return 1
+  return Math.min(1, 320 / (BASE_FONT * maxW))
+})
+
 const containerRef = ref(null)
 let cancelled = false
 let tracked = false
@@ -103,6 +129,20 @@ onDeactivated(cleanup)
           mask="url(#mask-g)"
           preserveAspectRatio="xMidYMax meet"
         />
+        <text
+          v-if="!showImage"
+          class="fallback-text"
+          :transform="'translate(160,160) scale(' + textScale + ')'"
+          x="0" y="0"
+          text-anchor="middle"
+          dominant-baseline="central"
+          fill="white"
+          font-weight="600"
+          :font-size="BASE_FONT"
+        >
+          <tspan x="0">{{ baseName }}</tspan>
+          <tspan v-if="aliasName" x="0" dy="1.2em">{{ aliasName }}</tspan>
+        </text>
       </svg>
       <div v-if="roleId" class="overlay-icon overlay-icon-left">
         <IconDisplay type="role" :id="roleId" :size="100" />
@@ -122,3 +162,18 @@ onDeactivated(cleanup)
     </div>
   </div>
 </template>
+
+<style scoped>
+/* DEBUG: 可视化 320 区域、容器边界 */
+.avatar-component {
+  outline: 2px dashed red;
+}
+.avatar-component > div:first-child {
+  outline: 2px dashed blue;
+}
+.fallback-text {
+  text-shadow: 0 0 6px rgba(0,0,0,0.8);
+  user-select: none;
+  -webkit-user-select: none;
+}
+</style>
