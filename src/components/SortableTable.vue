@@ -28,7 +28,7 @@ const frozenLefts = computed(() => {
   for (let i = 0; i < props.columns.length; i++) {
     if (i < props.frozen) {
       lefts.push(acc)
-      acc += (props.columns[i].width || 100) - 2
+      acc += props.columns[i].width || 100
     } else {
       lefts.push(null)
     }
@@ -161,7 +161,8 @@ function cellStyle(col) {
   border-spacing: 0;
   font-size: 14px;
   table-layout: auto;
-  width: 100%;
+  width: max-content;
+  min-width: 100%;
 }
 .st-table th {
   position: sticky;

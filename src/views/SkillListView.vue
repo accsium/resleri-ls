@@ -41,7 +41,7 @@ const error = ref('')
 const { sortCol, sortDir, onSort: onTableSort, sortItems } = useSortTable({
   defaultCol: 'id',
   defaultDir: 'asc',
-  avatarAlias: 'id',
+  avatarAlias: 'uid',
 })
 
 const TYPE_LABEL = { normal1:'一技能', normal2:'二技能', burst:'爆发技能', active1:'发动技能', ex:'EX技能' }
@@ -83,6 +83,7 @@ function targetCat(name) {
 
 function getSkillSortVal(row, field) {
   switch (field) {
+    case 'uid':
     case 'avatar': return (charIndexMap.value[row.char_id] || {}).uid || ''
     case 'id': return row.char_id
     case 'name': return getField(row, 'base_name')
@@ -233,7 +234,7 @@ onUnmounted(() => {
   >
     <template #cell-id="{ row }">{{ row.char_id }}</template>
     <template #cell-avatar="{ row }">
-      <div style="text-align:center;line-height:0">
+      <div class="ls-avatar-cell">
         <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :size="72" />
       </div>
     </template>
@@ -288,5 +289,6 @@ onUnmounted(() => {
 .skf-search:focus { border-color: var(--accent); }
 
 .load-error { text-align: center; padding: 30px; color: var(--text-muted); }
+.ls-avatar-cell { text-align: center; line-height: 0; }
 :deep(.st-wrap) { height: auto; }
 </style>
