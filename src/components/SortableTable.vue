@@ -8,6 +8,7 @@ const props = defineProps({
   frozen: { type: Number, default: 0 },
   sortCol: { type: String, default: '' },
   sortDir: { type: String, default: 'desc' },
+  autoHeight: { type: Boolean, default: false },
 })
 
 const emit = defineEmits(['sort'])
@@ -88,7 +89,7 @@ function cellStyle(col) {
 </script>
 
 <template>
-  <div ref="wrapRef" class="st-wrap">
+  <div ref="wrapRef" class="st-wrap" :style="autoHeight ? { height: 'auto' } : {}">
     <div v-if="frozen > 0" class="st-frozen-bg"></div>
     <table class="st-table">
       <thead>

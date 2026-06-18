@@ -136,7 +136,6 @@ onDeactivated(cleanup)
           x="0" y="0"
           text-anchor="middle"
           dominant-baseline="central"
-          fill="white"
           font-weight="600"
           :font-size="BASE_FONT"
         >
@@ -165,6 +164,7 @@ onDeactivated(cleanup)
 
 <style scoped>
 .fallback-text {
+  fill: white;
   text-shadow: 0 0 6px rgba(0,0,0,0.8);
   user-select: none;
   -webkit-user-select: none;

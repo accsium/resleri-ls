@@ -314,14 +314,6 @@ function slimSkillDetails(details) {
   return out
 }
 
-// HTML 转义：防止技能描述中的 HTML 标签在 v-html 中被渲染
-function escapeHtml(str) {
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-}
 
 function pickKeys(obj, keys) {
   const out = {}
@@ -395,6 +387,8 @@ function finalizeOutput(char) {
     if (skills) switchStat._skills = skills
     const evoAbiIds = char.all_skill_evolved_ability_ids || []
     if (evoAbiIds.length > 0) {
+      // 此处 char.ability_ids 赋值给 switchStat 后立即被 filter 原地修改；
+      // switchStat.ability_ids 持有同一数组引用，依赖此执行顺序保持"过滤前"快照
       switchStat.ability_ids = char.ability_ids
       char.ability_ids = (char.ability_ids || []).filter(id => !evoAbiIds.includes(id))
     }
@@ -490,7 +484,7 @@ function buildIndexEntry(character) {
 
   // UID: YYYYMMDD + initial_rarity(1位) + id(5位补零)
   const dateStr = (character.start_at || '2049-12-31').replace(/-/g, '').substring(0, 8);
-  const uid = dateStr + String(character.initial_rarity) + String(character.id).padStart(5, '0');
+  const uid = dateStr + String(character.initial_rarity ?? 0) + String(character.id).padStart(5, '0');
 
   const entry = {
     id: character.id,
@@ -845,8 +839,6 @@ function addSkillRow(charId, entry, type, state, skill) {
       if (v != null) desc = desc.replace(new RegExp('\\{' + i + '\\}', 'g'), v)
     }
   }
-  // 转义 HTML 防止 v-html 渲染原始标签
-  desc = escapeHtml(desc)
   const stt = skill.skill_target_type
   skillsTable.push({
     char_id: charId,

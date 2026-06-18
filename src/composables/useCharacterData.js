@@ -79,18 +79,15 @@ export function useCharacterData() {
     const total = parseInt(resp.headers.get('Content-Length') || '0')
     if (!resp.body) return resp.json()
     const reader = resp.body.getReader()
-    let loaded = 0
     let merged
     try {
       if (total > 0) dataBytesTotal.value += total
       merged = await _readAllChunks(reader, (chunkLen) => {
-        loaded += chunkLen
         dataBytesLoaded.value += chunkLen
       })
     } finally {
-      // 无论成功或异常，回退临时字节避免进度计数污染
-      if (total > 0) dataBytesTotal.value -= total
-      dataBytesLoaded.value -= loaded
+      dataBytesTotal.value = 0
+      dataBytesLoaded.value = 0
     }
 
     const text = new TextDecoder().decode(merged)

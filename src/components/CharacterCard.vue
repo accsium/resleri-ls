@@ -3,12 +3,14 @@ import { ref, computed, nextTick, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useCardState } from '../composables/useCardState'
+import { fmtDate } from '../utils/date.js'
 import AvatarDisplay from './AvatarDisplay.vue'
 import ToggleSwitch from './ToggleSwitch.vue'
 import CardDetail from './CardDetail.vue'
 import StarsDisplay from './StarsDisplay.vue'
 
 let cardUid = 0
+let detailAbort = null
 const headerObservers = new Map()
 
 const props = defineProps({
@@ -32,10 +34,7 @@ const roleName = computed(() => {
   return map[props.indexEntry.role] || ''
 })
 const tags = computed(() => getField(props.indexEntry, 'tag_names') || [])
-const fmtDate = (d) => {
-  if (!d) return '—'
-  return d.substring(0, 4) + '/' + d.substring(4, 6) + '/' + d.substring(6, 8)
-}
+
 const releaseDate = computed(() => fmtDate(props.indexEntry.start_at))
 
 const permanentLabel = computed(() => {
@@ -124,9 +123,11 @@ async function toggleExpand() {
   expanded.value = true
   detailLoading.value = true
   detailError.value = ''
+  detailAbort?.abort()
+  detailAbort = new AbortController()
   const loadingId = props.indexEntry.id
   try {
-    await loadCharacter(props.indexEntry.id)
+    await loadCharacter(props.indexEntry.id, detailAbort.signal)
     // 防止竞态：用户可能在 await 期间收起卡片或切换到其他卡片
     if (!expanded.value || props.indexEntry.id !== loadingId) return
     detailLoading.value = false
@@ -142,6 +143,7 @@ async function toggleExpand() {
       headerObservers.set(props.indexEntry.id, observer)
     }
   } catch (e) {
+    if (e.name === 'AbortError') return
     if (!expanded.value || props.indexEntry.id !== loadingId) return
     detailLoading.value = false
     detailError.value = e.message || String(e)
@@ -150,6 +152,7 @@ async function toggleExpand() {
 
 // 组件销毁时断开该卡片关联的 ResizeObserver
 onUnmounted(() => {
+  detailAbort?.abort()
   const observer = headerObservers.get(props.indexEntry.id)
   if (observer) {
     observer.disconnect()

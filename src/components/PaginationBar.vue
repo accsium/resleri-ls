@@ -85,7 +85,7 @@ const pageNumbers = computed(() => {
         共 {{ tp }} 页<template v-if="ti != null">（{{ ti }} 条）</template>
       </span>
       <span class="pg-jump">
-        跳到 <input name="jump_page" v-model="jumpPage" class="pg-jump-inp" @keyup.enter="jump" placeholder="页"> 页
+        跳到 <input type="text" name="jump_page" v-model="jumpPage" class="pg-jump-inp" @keyup.enter="jump" placeholder="页"> 页
       </span>
       <span class="pg-size">
         每页

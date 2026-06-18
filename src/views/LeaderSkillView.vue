@@ -56,6 +56,7 @@ const sortedChars = computed(() => sortItems(leaderChars.value, getSortVal))
     :rows="sortedChars"
     rowKey="id"
     :frozen="2"
+    :autoHeight="true"
     :sortCol="sortCol"
     :sortDir="sortDir"
     @sort="onSort"
@@ -84,9 +85,4 @@ const sortedChars = computed(() => sortItems(leaderChars.value, getSortVal))
 </template>
 
 <style scoped>
-.ls-avatar-cell {
-  text-align: center;
-  line-height: 0;
-}
-:deep(.st-wrap) { height: auto; }
 </style>

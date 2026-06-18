@@ -37,7 +37,6 @@ const skillStats = computed(() => {
   return { target, attr, desc, wt }
 })
 
-// 队长技能描述同样需要 replaceEffects HTML 转义
 const leaderSkillDesc = computed(() => {
   const skill = currentSkill.value
   return replaceEffects(skill.description, skill.effects)

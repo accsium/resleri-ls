@@ -28,7 +28,7 @@ const traitEffects = computed(() => {
   return map
 })
 
-onMounted(() => { loadTraits().catch(() => {}) })
+onMounted(() => { loadTraits() })
 
 const allTraits = computed(() => {
   const list = []
@@ -51,7 +51,7 @@ const allTraits = computed(() => {
 
 function splitEffect(effect) {
   const desc = currentLang.value === 'cn' ? (effect.effect_description_cn || effect.effect_description) : effect.effect_description
-  if (!effect || !desc) return []
+  if (!desc) return []
   const parts = []
   let rest = desc
   let i = 0

@@ -3,6 +3,7 @@ import { ref, reactive, computed, watch, onMounted, onUnmounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useSortTable } from '../composables/useSortTable'
 import { useI18n } from '../composables/useI18n'
+import { fmtDate } from '../utils/date.js'
 import { preFetch } from '../router'
 
 const columns = [
@@ -111,10 +112,10 @@ onUnmounted(() => {
         @sort="(col) => onSort(gi, col)"
       >
         <template #cell-id="{ row }">{{ row.id }}</template>
-        <template #cell-start_at="{ row }">{{ row.start_at }}</template>
-        <template #cell-end_at="{ row }">{{ row.end_at }}</template>
+        <template #cell-start_at="{ row }">{{ fmtDate(row.start_at) }}</template>
+        <template #cell-end_at="{ row }">{{ fmtDate(row.end_at) }}</template>
         <template #cell-name="{ row }">{{ row.name }}</template>
-        <template #cell-revival_start_at="{ row }">{{ row.revival_start_at }}</template>
+        <template #cell-revival_start_at="{ row }">{{ fmtDate(row.revival_start_at) }}</template>
       </SortableTable>
     </div>
     </template>

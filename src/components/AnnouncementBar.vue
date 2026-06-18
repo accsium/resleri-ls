@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
@@ -18,12 +18,23 @@ function dismiss(id) {
   dismissed.value = [...dismissed.value, id]
 }
 
+let abortController = null
+
 onMounted(async () => {
+  abortController = new AbortController()
+  const { signal } = abortController
   try {
-    const res = await fetch('config/announcements.json')
+    const res = await fetch('config/announcements.json', { signal })
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    if (signal.aborted) return
     announcements.value = await res.json()
-  } catch (e) { console.error('加载公告数据失败', e) }
+  } catch (e) {
+    if (e.name === 'AbortError') return
+  }
+})
+
+onUnmounted(() => {
+  abortController?.abort()
 })
 </script>
 

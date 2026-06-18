@@ -325,7 +325,7 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
 }
-.card-defs { position: absolute; width: 1px; height: 1px; overflow: hidden; pointer-events: none; }
+
 .card {
   background: var(--bg-card);
   box-shadow: var(--shadow);
@@ -588,6 +588,9 @@ input:checked + .slider::before { transform: translateX(16px); }
 .no-data { color: var(--text-muted); font-style: italic; }
 .loading { text-align: center; padding: 30px; color: var(--text-muted); }
 
+/* 技能表格头像列居中 */
+.ls-avatar-cell { text-align: center; line-height: 0; }
+
 /* avatar 相关 — 不修改 */
 .avatar-component {
   position: relative; display: flex;
@@ -624,7 +627,7 @@ input:checked + .slider::before { transform: translateX(16px); }
   cursor: pointer;
   filter: grayscale(1);
   opacity: 0.55;
-  transition: filter 0.2s, opacity 0.2s;
+  transition: filter 0.15s, opacity 0.15s;
   user-select: none;
   -webkit-user-drag: none;
   touch-action: none;

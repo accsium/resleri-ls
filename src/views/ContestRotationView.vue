@@ -3,6 +3,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useSortTable } from '../composables/useSortTable'
 import { useI18n } from '../composables/useI18n'
+import { fmtDate } from '../utils/date.js'
 import { preFetch } from '../router'
 
 const { t } = useI18n()
@@ -72,7 +73,7 @@ onUnmounted(() => {
     @sort="onSort"
   >
     <template #cell-id="{ row }">{{ row.id }}</template>
-    <template #cell-start_at="{ row }">{{ row.start_at }}</template>
+    <template #cell-start_at="{ row }">{{ fmtDate(row.start_at) }}</template>
     <template #cell-episode_name="{ row }">{{ row.episode_name }}</template>
   </SortableTable>
   </div>

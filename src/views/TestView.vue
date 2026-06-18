@@ -18,7 +18,8 @@ onMounted(async () => {
       md = await res.text()
     }
     if (signal.aborted) return
-    todoHtml.value = marked.parse(md)
+    // 剥离原始 HTML 标签后再送入 marked 解析，防止 XSS
+    todoHtml.value = marked.parse(md.replace(/<[^>]*>/g, ''))
   } catch {
     if (signal.aborted) return
     todoHtml.value = '加载失败'

@@ -228,6 +228,7 @@ onUnmounted(() => {
     :rows="pagedSkills"
     rowKey="_idx"
     :frozen="2"
+    :autoHeight="true"
     :sortCol="sortCol"
     :sortDir="sortDir"
     @sort="onSort"
@@ -255,7 +256,7 @@ onUnmounted(() => {
     <template #cell-wait="{ row }">{{ row.wait != null ? (200 + row.wait) : '—' }}</template>
     <template #cell-limit="{ row }">{{ row.limit_count || '—' }}</template>
     <template #cell-skillName="{ row }">{{ row.name }}</template>
-    <template #cell-skillDesc="{ row }"><span v-html="replaceEffects(row.description, null)"></span></template>
+    <template #cell-skillDesc="{ row }"><span v-html="replaceEffects(row.description, row.effects)"></span></template>
   </SortableTable>
 
   <!-- 分页（下） -->
@@ -289,6 +290,4 @@ onUnmounted(() => {
 .skf-search:focus { border-color: var(--accent); }
 
 .load-error { text-align: center; padding: 30px; color: var(--text-muted); }
-.ls-avatar-cell { text-align: center; line-height: 0; }
-:deep(.st-wrap) { height: auto; }
 </style>

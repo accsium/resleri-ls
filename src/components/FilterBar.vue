@@ -7,7 +7,7 @@ import { useTraitData } from '../composables/useTraitData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
-const { currentLang, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { currentLang, getTraitColorHex, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 const {
   sortCategory, sortField, currentSortOrder,
   activeFilters, searchText,
@@ -102,7 +102,6 @@ function toggleRarity(r) {
 
 // ── 调和色 ──
 const TRAIT_IDS = [1, 2, 3, 4, 5]
-function traitColorHex(id) { return TRAIT_COLOR_HEX[id] || '#ccc' }
 
 const selectedTraitLeft = computed({
   get: () => activeFilters.trait_color || [],
@@ -173,10 +172,13 @@ function groupTraits(list, getName) {
 }
 
 const traitsLoaded = ref(false)
-const traitLoadError = ref(false)
+let tagAbort = null
 
 async function loadTraitData() {
   if (traitsLoaded.value) return
+  tagAbort?.abort()
+  tagAbort = new AbortController()
+  const { signal } = tagAbort
   try {
     await loadSharedTraits()
     const [bt, et] = [traitBT.value, traitET.value]
@@ -184,21 +186,25 @@ async function loadTraitData() {
     battleTraitsCn.value = groupTraits(bt, t => t.name_cn || t.name)
     equipTraitsJa.value = groupTraits(et, t => t.name)
     equipTraitsCn.value = groupTraits(et, t => t.name_cn || t.name)
-    const tg = await fetch('data/character_tag.json').then(r => r.json())
+    const tg = await fetch('data/character_tag.json', { signal }).then(r => r.json())
     tg.sort((a, b) => a.priority - b.priority).forEach(t => {
       charTagsJa.value.push({ id: t.id, name: t.name })
       charTagsCn.value.push({ id: t.id, name: t.name_cn || t.name })
     })
     traitsLoaded.value = true
   } catch (e) {
+    if (e.name === 'AbortError') return
     console.error('加载词条数据失败', e)
-    traitLoadError.value = true
   }
 }
 
 // 首次展开筛选面板时加载词条/标签数据（延迟加载）
 watch(collapsed, (now) => {
   if (!now) loadTraitData()
+})
+
+onUnmounted(() => {
+  tagAbort?.abort()
 })
 
 // 选中的标签/词条
@@ -293,7 +299,7 @@ function _parseSelectId(val) {
           @click="toggleTraitLeft(id)"
         >
           <svg width="12" height="24" viewBox="0 0 8 16">
-            <polygon points="8,0 8,16 0,8" :fill="traitColorHex(id)" />
+            <polygon points="8,0 8,16 0,8" :fill="getTraitColorHex(id)" />
           </svg>
         </button>
         <button
@@ -303,7 +309,7 @@ function _parseSelectId(val) {
           @click="toggleTraitRight(id)"
         >
           <svg width="12" height="24" viewBox="8 0 8 16">
-            <polygon points="8,0 8,16 16,8" :fill="traitColorHex(id)" />
+            <polygon points="8,0 8,16 16,8" :fill="getTraitColorHex(id)" />
           </svg>
         </button>
       </div>
@@ -345,7 +351,6 @@ function _parseSelectId(val) {
       </div>
     </div>
     <!-- 行3：道具词条 + 装备词条 -->
-    <div class="sf-row sf-trait-error" v-if="traitLoadError">⚠ 词条/标签数据加载失败，请刷新页面重试</div>
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">道具词条</span>
@@ -428,9 +433,5 @@ function _parseSelectId(val) {
 </template>
 
 <style scoped>
-.sf-trait-error {
-  color: var(--danger);
-  font-size: 12px;
-  justify-content: center;
-}
+
 </style>

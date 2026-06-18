@@ -74,6 +74,7 @@ function roleName(id) {
     :rows="sortedChars"
     rowKey="id"
     :frozen="2"
+    :autoHeight="true"
     :sortCol="sortCol"
     :sortDir="sortDir"
     @sort="onSort"
@@ -120,5 +121,4 @@ function roleName(id) {
   background: var(--bg-trait);
   color: var(--text-primary);
 }
-:deep(.st-wrap) { height: auto; }
 </style>

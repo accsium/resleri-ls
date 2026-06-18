@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted, onActivated, onDeactivated } from 'vue'
+import { ref, computed, onMounted, onUnmounted, onActivated, onDeactivated } from 'vue'
 import FilterBar from '../components/FilterBar.vue'
 import SortSearchBar from '../components/SortSearchBar.vue'
 import PaginationBar from '../components/PaginationBar.vue'
@@ -9,7 +9,9 @@ import { useFilters } from '../composables/useFilters'
 defineOptions({ name: 'GuideView' })
 
 const headRef = ref(null)
-const { resetFilters } = useFilters()
+const { resetFilters, pagedCharacters } = useFilters()
+
+const isEmpty = computed(() => pagedCharacters.value.length === 0)
 
 let ro = null
 
@@ -63,5 +65,6 @@ onUnmounted(() => {
       <PaginationBar />
     </div>
     <CharacterGrid />
+    <div v-if="isEmpty" class="no-data">没有匹配的角色</div>
   </div>
 </template>
