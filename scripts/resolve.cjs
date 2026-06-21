@@ -936,7 +936,7 @@ fs.writeFileSync(path.join(outDir, 'skills.json'), JSON.stringify(skillsTable, n
 console.log(`📋 技能一览：${skillsTable.length} 条`)
 
 // ========== 11. 活动 ==========
-const fmtDate2 = d => d ? d.substring(0, 10).replace(/-/g, '/') : ''
+const fmtDate2 = d => d ? d.substring(0, 10).replace(/-/g, '') : ''
 const eventFile = path.join(rawDir, 'event.json')
 if (fs.existsSync(eventFile)) {
   const events = safeReadJSON(eventFile)
