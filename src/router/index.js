@@ -3,11 +3,17 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 // ── 数据预取缓存 ──
 // beforeEnter 在路由切换时立即触发 fetch，与懒加载 chunk 并行，
 // 等视图 onMounted 时数据通常已就绪，消除加载态白屏。
+// 每次 _prefetch 调用 abort 前一次，确保旧页面的数据请求不占用连接。
 const _cache = {}
+let _activeAbort = null
 
 function _prefetch(key, url, parser = 'json') {
+  if (_activeAbort) _activeAbort.abort()
+  _activeAbort = new AbortController()
+  const { signal } = _activeAbort
+
   if (!_cache[key]) {
-    _cache[key] = fetch(url).then(async r => {
+    _cache[key] = fetch(url, { signal }).then(async r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`)
       return parser === 'text' ? r.text() : r.json()
     }).catch(err => {

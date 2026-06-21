@@ -13,7 +13,7 @@ export function useTraitData() {
   const loaded = ref(false)
   const error = ref(null)
 
-  async function load() {
+  async function load(signal) {
     if (loaded.value) return
     if (cachePromise) {
       // 已有进行中的请求，等待结果
@@ -25,8 +25,8 @@ export function useTraitData() {
     }
     try {
       cachePromise = Promise.all([
-        fetch('data/battle_tool_trait.json').then(r => r.json()),
-        fetch('data/equipment_tool_trait.json').then(r => r.json()),
+        fetch('data/battle_tool_trait.json', { signal }).then(r => r.json()),
+        fetch('data/equipment_tool_trait.json', { signal }).then(r => r.json()),
       ])
       const [bt, et] = await cachePromise
       battleTraits.value = bt
@@ -34,6 +34,7 @@ export function useTraitData() {
       error.value = null
       loaded.value = true
     } catch (e) {
+      if (e.name === 'AbortError') { cachePromise = null; return }
       error.value = e
       cachePromise = null
       console.error('加载词条数据失败', e)

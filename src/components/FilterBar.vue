@@ -180,7 +180,7 @@ async function loadTraitData() {
   tagAbort = new AbortController()
   const { signal } = tagAbort
   try {
-    await loadSharedTraits()
+    await loadSharedTraits(signal)
     const [bt, et] = [traitBT.value, traitET.value]
     battleTraitsJa.value = groupTraits(bt, t => t.name)
     battleTraitsCn.value = groupTraits(bt, t => t.name_cn || t.name)

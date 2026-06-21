@@ -5,11 +5,13 @@ import SortSearchBar from '../components/SortSearchBar.vue'
 import PaginationBar from '../components/PaginationBar.vue'
 import CharacterGrid from '../components/CharacterGrid.vue'
 import { useFilters } from '../composables/useFilters'
+import { useCharacterData } from '../composables/useCharacterData'
 
 defineOptions({ name: 'GuideView' })
 
 const headRef = ref(null)
 const { resetFilters, pagedCharacters } = useFilters()
+const { indexLoaded } = useCharacterData()
 
 const isEmpty = computed(() => pagedCharacters.value.length === 0)
 
@@ -64,7 +66,10 @@ onUnmounted(() => {
       <SortSearchBar />
       <PaginationBar />
     </div>
-    <CharacterGrid />
-    <div v-if="isEmpty" class="no-data">没有匹配的角色</div>
+    <div v-if="!indexLoaded" class="loading">加载中...</div>
+    <template v-else>
+      <CharacterGrid />
+      <div v-if="isEmpty" class="no-data">没有匹配的角色</div>
+    </template>
   </div>
 </template>

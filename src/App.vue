@@ -17,18 +17,6 @@ const keepAliveViews = ['GuideView', 'CollectionView']
 onMounted(async () => {
   setLang('cn')
   await Promise.all([loadIndex(), loadBuildTime()])
-
-  // 首屏渲染后预加载所有路由 chunk，消除后续导航的网络延迟
-  setTimeout(() => {
-    import('./views/GuideView.vue')
-    import('./views/CollectionView.vue')
-    import('./views/SkillListView.vue')
-    import('./views/LeaderSkillView.vue')
-    import('./views/SupportAbilityView.vue')
-    import('./views/EventView.vue')
-    import('./views/ContestRotationView.vue')
-    import('./views/TestView.vue')
-  }, 100)
 })
 </script>
 
