@@ -1,4 +1,5 @@
 import { ref } from 'vue'
+import { getNavigationSignal } from '../router'
 
 // 模块级缓存：同源数据只请求一次
 let cachePromise = null
@@ -13,10 +14,9 @@ export function useTraitData() {
   const loaded = ref(false)
   const error = ref(null)
 
-  async function load(signal) {
+  async function load() {
     if (loaded.value) return
     if (cachePromise) {
-      // 已有进行中的请求，等待结果
       const result = await cachePromise
       battleTraits.value = result[0]
       equipTraits.value = result[1]
@@ -24,6 +24,7 @@ export function useTraitData() {
       return
     }
     try {
+      const signal = getNavigationSignal()
       cachePromise = Promise.all([
         fetch('data/battle_tool_trait.json', { signal }).then(r => r.json()),
         fetch('data/equipment_tool_trait.json', { signal }).then(r => r.json()),

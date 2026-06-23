@@ -1,32 +1,32 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-// ── 数据预取缓存 ──
-// beforeEnter 在路由切换时立即触发 fetch，与懒加载 chunk 并行，
-// 等视图 onMounted 时数据通常已就绪，消除加载态白屏。
-// 每次 _prefetch 调用 abort 前一次，确保旧页面的数据请求不占用连接。
-const _cache = {}
-let _activeAbort = null
+// ── 导航作用域 ──
+// 每次路由切换 abort 所有旧请求，新请求绑定新 scope。
+// 数据缓存独立于请求——回到旧页数据立即可用，不保留请求。
+// 覆盖所有离开方式：router-link、router.push、浏览器前进后退。
+const _dataCache = {}
+let _navigationScope = null
 
-function _prefetch(key, url, parser = 'json') {
-  if (_activeAbort) _activeAbort.abort()
-  _activeAbort = new AbortController()
-  const { signal } = _activeAbort
-
-  if (!_cache[key]) {
-    _cache[key] = fetch(url, { signal }).then(async r => {
-      if (!r.ok) throw new Error(`HTTP ${r.status}`)
-      return parser === 'text' ? r.text() : r.json()
-    }).catch(err => {
-      delete _cache[key]
-      throw err
-    })
-  }
-  return _cache[key]
+export function getNavigationSignal() {
+  return _navigationScope?.signal || null
 }
 
-/** 视图通过此访问预取数据：await preFetch[key]，若 beforeEnter 未触发则 fallback 自行 fetch */
+// ── 数据预取 ──
+// 缓存数据而非 Promise。beforeEnter 触发 fetch 与懒加载 chunk 并行，
+// 视图 onMounted 时 await preFetch[key] 已就绪或自行 fetch。
+function _prefetch(key, url, parser = 'json') {
+  const signal = getNavigationSignal()
+  if (!_dataCache[key]) {
+    _dataCache[key] = fetch(url, { signal }).then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`)
+      return parser === 'text' ? r.text() : r.json()
+    })
+  }
+  return _dataCache[key]
+}
+
 export const preFetch = new Proxy({}, {
-  get(_, key) { return _cache[key] || null },
+  get(_, key) { return _dataCache[key] || null },
 })
 
 const routes = [
@@ -98,8 +98,11 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from) => {
+  // 切换路由时 abort 所有旧请求，创建新 scope
+  if (_navigationScope) _navigationScope.abort()
+  _navigationScope = new AbortController()
+
   if (from.name) {
-    // 每次离开路由时更新滚动位置，覆盖旧值防止无限增长
     scrollPositions[from.name] = window.scrollY || document.querySelector('.app-content')?.scrollTop || 0
   }
 })

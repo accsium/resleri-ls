@@ -172,21 +172,17 @@ function groupTraits(list, getName) {
 }
 
 const traitsLoaded = ref(false)
-let tagAbort = null
 
 async function loadTraitData() {
   if (traitsLoaded.value) return
-  tagAbort?.abort()
-  tagAbort = new AbortController()
-  const { signal } = tagAbort
   try {
-    await loadSharedTraits(signal)
+    await loadSharedTraits()
     const [bt, et] = [traitBT.value, traitET.value]
     battleTraitsJa.value = groupTraits(bt, t => t.name)
     battleTraitsCn.value = groupTraits(bt, t => t.name_cn || t.name)
     equipTraitsJa.value = groupTraits(et, t => t.name)
     equipTraitsCn.value = groupTraits(et, t => t.name_cn || t.name)
-    const tg = await fetch('data/character_tag.json', { signal }).then(r => r.json())
+    const tg = await fetch('data/character_tag.json').then(r => r.json())
     tg.sort((a, b) => a.priority - b.priority).forEach(t => {
       charTagsJa.value.push({ id: t.id, name: t.name })
       charTagsCn.value.push({ id: t.id, name: t.name_cn || t.name })
@@ -201,10 +197,6 @@ async function loadTraitData() {
 // 首次展开筛选面板时加载词条/标签数据（延迟加载）
 watch(collapsed, (now) => {
   if (!now) loadTraitData()
-})
-
-onUnmounted(() => {
-  tagAbort?.abort()
 })
 
 // 选中的标签/词条

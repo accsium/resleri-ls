@@ -10,7 +10,6 @@ import CardDetail from './CardDetail.vue'
 import StarsDisplay from './StarsDisplay.vue'
 
 let cardUid = 0
-let detailAbort = null
 const headerObservers = new Map()
 
 const props = defineProps({
@@ -123,11 +122,9 @@ async function toggleExpand() {
   expanded.value = true
   detailLoading.value = true
   detailError.value = ''
-  detailAbort?.abort()
-  detailAbort = new AbortController()
   const loadingId = props.indexEntry.id
   try {
-    await loadCharacter(props.indexEntry.id, detailAbort.signal)
+    await loadCharacter(props.indexEntry.id)
     // 防止竞态：用户可能在 await 期间收起卡片或切换到其他卡片
     if (!expanded.value || props.indexEntry.id !== loadingId) return
     detailLoading.value = false
@@ -152,7 +149,6 @@ async function toggleExpand() {
 
 // 组件销毁时断开该卡片关联的 ResizeObserver
 onUnmounted(() => {
-  detailAbort?.abort()
   const observer = headerObservers.get(props.indexEntry.id)
   if (observer) {
     observer.disconnect()

@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useTraitData } from '../composables/useTraitData'
 
@@ -28,15 +28,8 @@ const traitEffects = computed(() => {
   return map
 })
 
-let traitAbort = null
-
 onMounted(() => {
-  traitAbort = new AbortController()
-  loadTraits(traitAbort.signal)
-})
-
-onUnmounted(() => {
-  traitAbort?.abort()
+  loadTraits()
 })
 
 const allTraits = computed(() => {
@@ -79,7 +72,7 @@ function splitEffect(effect) {
 <template>
   <div v-if="traitError" class="syn-error">
     调和数据加载失败
-    <button class="syn-retry-btn" @click="traitAbort = new AbortController(); loadTraits(traitAbort.signal).catch(() => {})">重试</button>
+    <button class="syn-retry-btn" @click="loadTraits().catch(() => {})">重试</button>
   </div>
   <template v-else-if="allTraits.length > 0">
     <div class="section-title section-collapsible" @click="collapsed = !collapsed">

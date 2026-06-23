@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, computed, watch, onMounted, onUnmounted } from 'vue'
+import { ref, reactive, computed, watch, onMounted } from 'vue'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useI18n } from '../composables/useI18n'
 import { useSortTable } from '../composables/useSortTable'
@@ -148,19 +148,14 @@ function onSort(col) {
   onTableSort(col)
 }
 
-let abortController = null
-
 onMounted(async () => {
-  abortController = new AbortController()
-  const { signal } = abortController
   try {
     let data = await preFetch.skills
     if (!data) {
-      const resp = await fetch('data/skills.json', { signal })
+      const resp = await fetch('data/skills.json')
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
       data = await resp.json()
     }
-    if (signal.aborted) return
     data.forEach((r, i) => r._idx = i)
     skills.value = data
   } catch (e) {
@@ -169,10 +164,6 @@ onMounted(async () => {
   } finally {
     loading.value = false
   }
-})
-
-onUnmounted(() => {
-  abortController?.abort()
 })
 </script>
 

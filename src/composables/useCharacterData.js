@@ -1,4 +1,5 @@
 import { ref, shallowRef, triggerRef, computed } from 'vue'
+import { getNavigationSignal } from '../router'
 
 const characterIndex = ref([])
 const loadedCharacters = shallowRef({})
@@ -38,7 +39,7 @@ async function _readAllChunks(reader, onChunk) {
 // 模块级立即发起索引抓取，不等 onMounted
 async function _doLoadIndex() {
   try {
-    const resp = await fetch('data/character_index.json')
+    const resp = await fetch('data/character_index.json', { signal: getNavigationSignal() })
     const total = parseInt(resp.headers.get('Content-Length') || '0')
     dataBytesTotal.value = total
     const reader = resp.body.getReader()
@@ -56,6 +57,7 @@ async function _doLoadIndex() {
     indexLoadError.value = null
     indexLoaded.value = true
   } catch (e) {
+    if (e.name === 'AbortError') return
     indexLoadError.value = e.message || String(e)
     characterIndex.value = []
     indexLoaded.value = true
@@ -69,9 +71,9 @@ export function useCharacterData() {
     await _indexPromise
   }
 
-  async function loadCharacter(id, signal) {
+  async function loadCharacter(id) {
     if (loadedCharacters.value[id]) return loadedCharacters.value[id]
-    const resp = await fetch(`data/character/${id}.json`, { signal })
+    const resp = await fetch(`data/character/${id}.json`, { signal: getNavigationSignal() })
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
 
     // 流式读取，字节临时计入全局进度

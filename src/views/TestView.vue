@@ -1,33 +1,23 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { marked } from 'marked'
 import { preFetch } from '../router'
 
 const todoHtml = ref('')
 
-let abortController = null
-
 onMounted(async () => {
-  abortController = new AbortController()
-  const { signal } = abortController
   try {
     let md = await preFetch.todo
     if (!md) {
-      const res = await fetch('config/todo.md', { signal })
+      const res = await fetch('config/todo.md')
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       md = await res.text()
     }
-    if (signal.aborted) return
-    // 剥离原始 HTML 标签后再送入 marked 解析，防止 XSS
     todoHtml.value = marked.parse(md.replace(/<[^>]*>/g, ''))
-  } catch {
-    if (signal.aborted) return
+  } catch (e) {
+    if (e.name === 'AbortError') return
     todoHtml.value = '加载失败'
   }
-})
-
-onUnmounted(() => {
-  abortController?.abort()
 })
 </script>
 

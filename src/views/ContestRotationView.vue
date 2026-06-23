@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useSortTable } from '../composables/useSortTable'
 import { useI18n } from '../composables/useI18n'
@@ -31,19 +31,14 @@ function getSortVal(row, field) {
 
 const sorted = computed(() => sortItems(rows.value, getSortVal))
 
-let abortController = null
-
 onMounted(async () => {
-  abortController = new AbortController()
-  const { signal } = abortController
   try {
     let data = await preFetch.contestRotations
     if (!data) {
-      const resp = await fetch('data/contest_rotations.json', { signal })
+      const resp = await fetch('data/contest_rotations.json')
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
       data = await resp.json()
     }
-    if (signal.aborted) return
     rows.value = data
   } catch (e) {
     if (e.name === 'AbortError') return
@@ -51,10 +46,6 @@ onMounted(async () => {
   } finally {
     loading.value = false
   }
-})
-
-onUnmounted(() => {
-  abortController?.abort()
 })
 </script>
 
