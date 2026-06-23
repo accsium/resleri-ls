@@ -134,7 +134,7 @@ const abilitiesCollapsed = ref(false)
           <span>{{ boardActiveLevel(ba).name || '光玉板能力' }}</span>
           <div v-if="ba.levels.length > 1" class="level-tabs">
             <button
-              v-for="(lv, li) in ba.levels" :key="li"
+              v-for="(lv, li) in ba.levels" :key="lv.id || li"
               class="level-tab"
               :class="{ active: boardActiveIndex[ba.key] === li }"
               @click="boardActiveIndex[ba.key] = li"

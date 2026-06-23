@@ -164,7 +164,7 @@ onDeactivated(cleanup)
 
 <style scoped>
 .fallback-text {
-  fill: white;
+  fill: var(--text-light);
   text-shadow: 0 0 6px rgba(0,0,0,0.8);
   user-select: none;
   -webkit-user-select: none;

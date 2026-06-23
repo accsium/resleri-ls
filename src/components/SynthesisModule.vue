@@ -88,7 +88,7 @@ function splitEffect(effect) {
       <span class="collapse-arrow">{{ collapsed ? '▶' : '▼' }}</span>
     </div>
     <div v-show="!collapsed" class="synthesis-body">
-      <div v-for="(t, i) in allTraits" :key="i" class="syn-box">
+      <div v-for="(t, i) in allTraits" :key="t.id || i" class="syn-box">
         <div class="syn-box-name">{{ t.name }}</div>
         <div class="syn-box-desc">
           <template v-if="t.effect_description">

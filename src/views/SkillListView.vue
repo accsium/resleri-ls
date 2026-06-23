@@ -273,7 +273,7 @@ onMounted(async () => {
 .skf-check { display: flex; align-items: center; gap: 2px; cursor: pointer; font-size: 12px; color: var(--text-muted); }
 .skf-check input { accent-color: var(--accent); }
 .skf-search {
-  width: 180px; font-size: 12px; padding: 4px 8px;
+  width: 180px; font-size: 12px; padding: var(--inp-padding);
   background: var(--overlay-white-08); color: var(--text-light);
   border: 1px solid var(--overlay-white-15); border-radius: var(--radius);
 }

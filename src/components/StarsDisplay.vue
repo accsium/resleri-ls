@@ -50,7 +50,7 @@ const rowStyle = computed(() => ({
     <div :style="rowStyle">
       <StarIcon
         v-for="(type, i) in starList"
-        :key="i"
+        :key="type + '-' + i"
         :src="'image/misc/' + type + '.png'"
       />
     </div>

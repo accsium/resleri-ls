@@ -60,11 +60,10 @@ async function _doLoadIndex() {
     if (e.name === 'AbortError') return
     indexLoadError.value = e.message || String(e)
     characterIndex.value = []
-    indexLoaded.value = true
   }
 }
 
-const _indexPromise = _doLoadIndex()
+let _indexPromise = _doLoadIndex()
 
 export function useCharacterData() {
   async function loadIndex() {
@@ -76,21 +75,9 @@ export function useCharacterData() {
     const resp = await fetch(`data/character/${id}.json`, { signal: getNavigationSignal() })
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
 
-    // 流式读取，字节临时计入全局进度
-    // try-finally 保证异常时也回退进度计数，防止进度条卡死
-    const total = parseInt(resp.headers.get('Content-Length') || '0')
     if (!resp.body) return resp.json()
     const reader = resp.body.getReader()
-    let merged
-    try {
-      if (total > 0) dataBytesTotal.value += total
-      merged = await _readAllChunks(reader, (chunkLen) => {
-        dataBytesLoaded.value += chunkLen
-      })
-    } finally {
-      dataBytesTotal.value = 0
-      dataBytesLoaded.value = 0
-    }
+    const merged = await _readAllChunks(reader)
 
     const text = new TextDecoder().decode(merged)
     const data = JSON.parse(text)

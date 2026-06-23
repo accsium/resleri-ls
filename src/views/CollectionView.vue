@@ -290,7 +290,7 @@ onUnmounted(() => {
   min-width: 0;
   font-size: 12px;
   font-family: monospace;
-  padding: 4px 8px;
+  padding: var(--inp-padding);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-stat);
@@ -359,11 +359,6 @@ onUnmounted(() => {
 .size-step.below { background: var(--sf-toggle-hov); }
 .size-step.active { background: var(--size-step-active); }
 
-/* 列表模式 */
-.collection-sequential .collection-avatar-item {
-  width: var(--item-w);
-  height: var(--item-w);
-}
 
 /* 矩阵深色格子 */
 .collection-layout :deep(.matrix-cell) {

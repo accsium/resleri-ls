@@ -54,7 +54,7 @@ const leaderSkillDesc = computed(() => {
       <div v-if="hasLevels" class="level-tabs">
         <button
           v-for="(s, i) in skillType.levels"
-          :key="i"
+          :key="s.id || i"
           class="level-tab"
           :class="{ active: i === activeIndex }"
           @click="activeIndex = i"

@@ -62,9 +62,11 @@ function sorted(g, gi) {
 watch(sorts, () => Object.keys(sortedCache).forEach(k => delete sortedCache[k]), { deep: true })
 
 function onSort(gi, col) {
-  const s = sorts.value[gi]
-  if (s.col === col) s.dir = s.dir === 'desc' ? 'asc' : 'desc'
-  else { s.col = col; s.dir = 'asc' }
+  sorts.value = sorts.value.map((s, i) => {
+    if (i !== gi) return s
+    if (s.col === col) return { col: s.col, dir: s.dir === 'desc' ? 'asc' : 'desc' }
+    return { col, dir: 'asc' }
+  })
 }
 
 onMounted(async () => {
@@ -86,7 +88,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="contest-wrap">
+  <div class="event-wrap">
     <div v-if="loading" class="loading">{{ t('loading') }}</div>
     <div v-else-if="error" class="load-error">{{ error }}</div>
     <div v-else-if="isEmpty" class="empty">{{ t('none') }}</div>
@@ -114,10 +116,12 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.contest-wrap { padding: 16px; }
+.event-wrap { padding: 16px; }
 .group-title { font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 16px 0 8px; padding-left: 8px; border-left: 3px solid var(--accent); }
-.contest-wrap :deep(.st-wrap) { height: auto; width: max-content; max-width: 100%; margin-left: 0; margin-right: auto; }
-.contest-wrap :deep(.st-table) { width: auto; }
-.contest-wrap :deep(.st-table th) { white-space: nowrap; }
-.contest-wrap :deep(.st-table td) { height: auto; white-space: nowrap; }
+.event-wrap :deep(.st-wrap) { height: auto; width: max-content; max-width: 100%; margin-left: 0; margin-right: auto; }
+.event-wrap :deep(.st-table) { width: auto; }
+.event-wrap :deep(.st-table th) { white-space: nowrap; }
+.event-wrap :deep(.st-table td) { height: auto; white-space: nowrap; }
+.load-error { text-align: center; padding: 30px; color: var(--text-muted); }
+.empty { text-align: center; padding: 30px; color: var(--text-muted); }
 </style>

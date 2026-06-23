@@ -75,4 +75,6 @@ onMounted(async () => {
 .contest-wrap :deep(.st-wrap) { height: auto; width: auto; }
 .contest-wrap :deep(.st-table) { width: auto; }
 .contest-wrap :deep(.st-table td) { height: auto; }
+.load-error { text-align: center; padding: 30px; color: var(--text-muted); }
+.empty { text-align: center; padding: 30px; color: var(--text-muted); }
 </style>
