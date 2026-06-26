@@ -39,7 +39,7 @@ async function _readAllChunks(reader, onChunk) {
 // 模块级立即发起索引抓取，不等 onMounted
 async function _doLoadIndex() {
   try {
-    const resp = await fetch('data/character_index.json', { signal: getNavigationSignal() })
+    const resp = await fetch('data/character_index.json', { signal: getNavigationSignal(), cache: 'no-cache' })
     const total = parseInt(resp.headers.get('Content-Length') || '0')
     dataBytesTotal.value = total
     const reader = resp.body.getReader()

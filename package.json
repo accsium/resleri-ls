@@ -3,12 +3,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "rm -rf public/ && npm run copy-public && vite build",
     "preview": "vite preview",
     "data": "node scripts/resolve.cjs",
     "prepare-data": "node scripts/translate.cjs",
     "selection": "node scripts/select.cjs",
-    "prebuild": "npm run selection && npm run prepare-data && npm run data"
+    "data-conversion": "rm -rf data/output/ data/selection/ && npm run selection && npm run prepare-data && npm run data",
+    "copy-public": "node scripts/copy-public.cjs"
   },
   "dependencies": {
     "marked": "^18.0.4",

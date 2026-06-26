@@ -8,7 +8,7 @@ const pipelineConfig = safeReadJSON(
 
 const rootDir = path.join(__dirname, '..');
 const rawDir = path.join(rootDir, pipelineConfig.dataRawDir);
-const langDir = path.join(rootDir, 'language');
+const langDir = path.join(rootDir, 'data', 'language');
 const untransDir = path.join(langDir, 'untranslated');
 
 // 加载 effect / ability 用于生成 trait 效果描述
@@ -121,7 +121,11 @@ for (const [name, config] of Object.entries(pipelineConfig.translationFiles)) {
     }
   }
 
-  fs.writeFileSync(untransPath, JSON.stringify(newUntrans, null, 2), 'utf-8');
+  if (newUntrans.length > 0) {
+    fs.writeFileSync(untransPath, JSON.stringify(newUntrans, null, 2), 'utf-8');
+  } else if (fs.existsSync(untransPath)) {
+    fs.unlinkSync(untransPath);
+  }
   console.log(`  ✓ ${config.file}: ${langMap.size} 条, ${newUntrans.length} 待翻译`);
 }
 

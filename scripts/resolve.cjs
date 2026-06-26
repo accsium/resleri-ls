@@ -7,9 +7,9 @@ const pipelineConfig = safeReadJSON(
   path.join(__dirname, '..', 'config', 'pipeline.json')
 );
 const rawDir = path.join(__dirname, '..', pipelineConfig.dataRawDir);
-const langDir = path.join(__dirname, '..', 'language');
+const langDir = path.join(__dirname, '..', 'data', 'language');
 const untransDir = path.join(langDir, 'untranslated');
-const outDir = path.join(__dirname, '..', 'public', 'data');
+const outDir = path.join(__dirname, '..', 'data', 'output');
 
 // ========== 1. 加载实体表 ==========
 const tables = {};
@@ -29,7 +29,7 @@ for (const [entityName, entityConfig] of Object.entries(config.entities)) {
 
 // ========== 2. 加载翻译映射表 ==========
 function loadJpMap(name) {
-  // JP name 从 data_raw 中读取
+  // JP name 从 data/selection 中读取
   const filePath = path.join(rawDir, `${name}.json`);
   if (fs.existsSync(filePath)) {
     const raw = safeReadJSON(filePath);
@@ -716,7 +716,7 @@ fs.mkdirSync(outDir, { recursive: true });
 const charOutDir = path.join(outDir, 'character');
 fs.mkdirSync(charOutDir, { recursive: true });
 
-// 输出词条数据到 public/data/（翻译由 translations.cjs 处理）
+// 输出词条数据到 data/output/（翻译由 translations.cjs 处理）
 function buildTraitOutput(name, buildValues) {
   const rawFile = path.join(rawDir, `${name}.json`);
   if (!fs.existsSync(rawFile)) return;
@@ -861,7 +861,7 @@ function addSkillRow(charId, entry, type, state, skill) {
   })
 }
 
-// 补全 skill_target_type 的 JP 名称（language/ 而非 data_raw/)
+// 补全 skill_target_type 的 JP 名称（data/language/ 而非 data/raw/)
 const sttFile = path.join(langDir, 'skill_target_type.json')
 const sttPatch = new Map()
 if (fs.existsSync(sttFile)) {
