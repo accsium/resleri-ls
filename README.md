@@ -21,58 +21,106 @@
 
 | 类别 | 技术 |
 |------|------|
-| 框架 | Vue 3 + Composition API (`<script setup>`) |
+| 框架 | Vue 3 + Composition API（`<script setup>`） |
 | 构建 | Vite 5 |
 | 路由 | Vue Router 4（Hash 模式） |
 | 样式 | CSS 变量 + 单文件组件 `<style scoped>` |
 | 国际化 | 中日双语（`useI18n.js`） |
+| Markdown | marked |
 | 部署 | GitHub Pages（`base: './'`） |
 
 ## 本地运行
 
 ```bash
 npm install
-npm run dev        # 开发服务器（HMR）
-npm run data-conversion   # 数据流水线
-npm run build      # 生产构建 → dist/
+npm run dev              # 开发服务器（HMR，需要先跑一次 build 生成 public/）
+
+npm run data-conversion  # 数据流水线 → data/output/
+npm run build            # copy-public → vite build → dist/
+npm run preview          # 预览构建结果
 ```
 
 ## 数据流水线
 
-原始数据在项目外 `/data_raw/`。通过三级流水线生成最终数据：
+原始 masterdata 存放于 `data/raw/jp/`（已提交到仓库）。通过三级流水线生成最终数据：
 
 ```
 npm run data-conversion
-  ├── npm run selection  → scripts/select.cjs  （文件筛选 → data/selection/）
-  ├── npm run prepare-data → scripts/translate.cjs （翻译处理，输入 data/language/）
-  └── npm run data       → scripts/resolve.cjs  （关系解析 + 输出生成 → data/output/）
+  ├── npm run selection     → scripts/select.cjs     （文件筛选 → data/selection/）
+  ├── npm run prepare-data  → scripts/translate.cjs  （翻译处理，读取 data/language/）
+  └── npm run data          → scripts/resolve.cjs    （关系解析 + 输出 → data/output/）
 ```
 
-辅助脚本：`resolveConfig.cjs`（配置解析）、`safeReadJSON.cjs`（安全读取）
+- `data/selection/` — 中间产物，不提交（`.gitignore` 排除）
+- `data/language/` — 翻译文件（JSON），含 `untranslated/` 子目录存放新增未翻译词条
+- `data/output/` — 最终数据，提交到仓库
+
+辅助脚本：`resolveConfig.cjs`（配置解析）、`safeReadJSON.cjs`（安全 JSON 读取）。
+
+## 构建流程
+
+```bash
+npm run build
+  ├── rm -rf public/              # 清理上次临时目录
+  ├── npm run copy-public         # scripts/copy-public.cjs：
+  │   ├── config/ → public/config/（白名单复制）
+  │   ├── image/   → public/image/
+  │   └── data/output/ → public/data/
+  └── vite build                  # Vite 构建，public/ 自动合并到 dist/
+```
+
+`public/` 为构建临时目录，由 `.gitignore` 排除，每次构建开始时清理。
 
 ## 数据更新
 
-1. 使用解包工具获取 masterdata 及角色头像（参考 [NGA 教程](https://bbs.nga.cn/read.php?tid=39869227)）
-2. 将 masterdata 的 `/jp` 文件夹复制到 `/data/raw/jp/`，覆盖已有文件
-3. 角色头像（`*_FACE_M.png`）改名为角色 ID，放入 `/image/character/`
-4. 运行 `npm run data-conversion && npm run build`
-5. 确认 `data/output/` 变更已提交到 git
-6. 部署 `dist/` 到 GitHub Pages
+1. 使用解包工具获取最新 masterdata 及角色头像（参考 [NGA 教程](https://bbs.nga.cn/read.php?tid=39869227)）
+2. 将 masterdata 的 `jp/` 文件夹内容复制到 `data/raw/jp/`，覆盖已有文件
+3. 角色头像（`*_FACE_M.png`）改名为角色 ID（如 `10101.png`），放入 `image/character/`
+4. 检查 `config/` 下配置文件是否需要更新（新增角色类型、变身角色等）
+5. 运行 `npm run data-conversion && npm run build`
+6. 确认 `data/output/` 变更已提交，推送到 main 分支
+
+> 推送后 GitHub Actions 自动构建并部署 `dist/` 到 GitHub Pages。
 
 ## 配置文件
 
-`config/` 下的文件手动维护（构建时由 `copy-public` 复制到 `public/config/`，`public/` 为临时目录，构建结束后自动清理）：
+`config/` 下的文件手动维护，构建时复制到 `public/config/` 供前端访问：
 
 | 文件 | 用途 |
 |------|------|
 | `announcements.json` | 公告，按需添加 |
-| `atelier_fes.json` | 白票/星祈石的卡池范围，通过最早的角色加入日期和最后一个角色的加入日期控制 |
-| `ex_skill_rules.json` | 各种 EX 技能的例外处理，由于 EX 技能实际被用于实现多种不同的机制，如果有新的机制出现需要手动加入 |
+| `atelier_fes.json` | 白票/星祈石卡池范围（最早和最后角色加入日期） |
+| `ex_skill_rules.json` | EX 技能例外处理规则，新机制出现时手动添加 |
 | `exclude.json` | 不显示的模板角色 ID |
-| `permanent_exclude.json` | 非恒常角色 ID（联动角色、追忆角色），新非恒常角色出现时添加 |
-| `pipeline.json` | data-conversion 流水线配置，无新增数据源时无需改动 |
-| `transform.json` | 变身角色，格式 `[[变身前ID, 变身后ID], ...]`，如 `[[43106, 43107]]` |
+| `permanent_exclude.json` | 非恒常角色 ID（联动、追忆角色），新非恒常角色出现时添加 |
+| `pipeline.json` | 数据流水线配置（定义筛选文件、翻译映射），无新增数据源时无需改动 |
+| `transform.json` | 变身角色映射，格式 `[[变身前ID, 变身后ID], ...]` |
 | `todo.md` | 试验页 TODO 清单 |
+
+## 目录结构
+
+```
+resleri-ls/
+├── config/                # 配置文件（手动维护）
+├── data/
+│   ├── raw/jp/            # 原始 masterdata（已提交）
+│   ├── language/          # 翻译文件 + untranslated/
+│   ├── selection/         # 中间产物（不提交）
+│   └── output/            # 处理后数据（已提交）
+├── image/
+│   ├── character/         # 角色头像（以角色 ID 命名的 PNG）
+│   └── misc/              # 杂项图标（属性、星标等）
+├── scripts/               # 数据流水线脚本（CJS）
+├── src/                   # Vue 源码
+│   ├── views/             # 页面组件
+│   ├── components/        # 通用组件
+│   ├── composables/       # 状态共享
+│   ├── utils/             # 工具函数
+│   └── router/            # 路由定义
+├── public/                # 构建临时目录（不提交）
+├── dist/                  # 构建输出（不提交，CI 部署）
+└── .github/workflows/     # CI 配置（push main 自动部署）
+```
 
 ## 灵感来源
 
