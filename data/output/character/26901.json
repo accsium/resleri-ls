@@ -1,0 +1,2491 @@
+{
+  "id": 26901,
+  "attack_attributes": [
+    6
+  ],
+  "initial_rarity": 2,
+  "max_rarity": 8,
+  "trait_color_id": 2,
+  "support_color_id": 5,
+  "trait_color_name_ja": "紫",
+  "trait_color_name_cn": "紫",
+  "support_color_name_ja": "緑",
+  "support_color_name_cn": "绿",
+  "battle_tool_trait_names_ja": [
+    "大きな回復量",
+    "魔防の祝福"
+  ],
+  "battle_tool_trait_names_cn": [
+    "强大的恢复量",
+    "魔防之祝福"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "回復量上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "恢复量提升"
+  ],
+  "battle_tool_trait_ids": [
+    44,
+    11
+  ],
+  "equipment_tool_trait_ids": [
+    39
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980035,
+        "combat_power_coefficient": 1500,
+        "condition_ids": [
+          49
+        ]
+      }
+    ],
+    "description": "「アーランド」は「物防・魔防+25%」",
+    "name": "最強の冒険者の面影"
+  },
+  "ability_ids": [
+    1990022,
+    1990023
+  ],
+  "support_ability_ids": [
+    500648,
+    500642,
+    500636,
+    500630,
+    500624,
+    500618,
+    500612,
+    500606
+  ],
+  "board_ability1_ids": [
+    1990442,
+    1990417,
+    1990392
+  ],
+  "_skillDetails": {
+    "500606": {
+      "id": 500606,
+      "description": "「ハルフェン復興隊」の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "id": 500080,
+          "value": 2300,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、与えるHP回復量UPを付与",
+            "id": 500080
+          }
+        }
+      ]
+    },
+    "500612": {
+      "id": 500612,
+      "description": "「ハルフェン復興隊」の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "id": 500080,
+          "value": 2000,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、与えるHP回復量UPを付与",
+            "id": 500080
+          }
+        }
+      ]
+    },
+    "500618": {
+      "id": 500618,
+      "description": "「ハルフェン復興隊」の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "id": 500080,
+          "value": 1700,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、与えるHP回復量UPを付与",
+            "id": 500080
+          }
+        }
+      ]
+    },
+    "500624": {
+      "id": 500624,
+      "description": "「ハルフェン復興隊」の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "id": 500080,
+          "value": 1400,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、与えるHP回復量UPを付与",
+            "id": 500080
+          }
+        }
+      ]
+    },
+    "500630": {
+      "id": 500630,
+      "description": "「ハルフェン復興隊」の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "id": 500080,
+          "value": 1300,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、与えるHP回復量UPを付与",
+            "id": 500080
+          }
+        }
+      ]
+    },
+    "500636": {
+      "id": 500636,
+      "description": "「ハルフェン復興隊」の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "id": 500080,
+          "value": 1200,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、与えるHP回復量UPを付与",
+            "id": 500080
+          }
+        }
+      ]
+    },
+    "500642": {
+      "id": 500642,
+      "description": "「ハルフェン復興隊」の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "id": 500080,
+          "value": 1100,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、与えるHP回復量UPを付与",
+            "id": 500080
+          }
+        }
+      ]
+    },
+    "500648": {
+      "id": 500648,
+      "description": "「ハルフェン復興隊」の時、与えるHP回復量+{0}％",
+      "effects": [
+        {
+          "id": 500080,
+          "value": 1000,
+          "_detail": {
+            "description": "自身が「ハルフェン復興隊」の時、与えるHP回復量UPを付与",
+            "id": 500080
+          }
+        }
+      ]
+    },
+    "1980035": {
+      "name": "最強の冒険者の面影",
+      "id": 1980035,
+      "description": "物防・魔防+{0}%",
+      "effects": [
+        {
+          "id": 72500004,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "id": 72500004
+          }
+        },
+        {
+          "id": 72500005,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "id": 72500005
+          }
+        }
+      ]
+    },
+    "1990022": {
+      "name": "アドバンスオール魔攻Ⅰ",
+      "id": 1990022,
+      "description": "味方全員の魔攻+{0}%",
+      "effects": [
+        {
+          "id": 72000908,
+          "value": 500,
+          "_detail": {
+            "description": "[味方全体/常時/魔攻上昇]",
+            "id": 72000908
+          }
+        }
+      ]
+    },
+    "1990023": {
+      "name": "レジストアップ暗闇",
+      "id": 1990023,
+      "description": "暗闇耐性+{0}%",
+      "effects": [
+        {
+          "id": 72001064,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/暗闇耐性上昇付与]",
+            "id": 72001064
+          }
+        }
+      ]
+    },
+    "1990392": {
+      "name": "ダメージアップオールⅢ",
+      "id": 1990392,
+      "description": "味方全員のスキルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 713001409,
+          "value": 2000,
+          "_detail": {
+            "description": "味方全員のスキルダメージ+{0}％",
+            "id": 713001409
+          }
+        }
+      ]
+    },
+    "1990417": {
+      "name": "ダメージアップオールⅡ",
+      "id": 1990417,
+      "description": "味方全員のスキルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 713001409,
+          "value": 1300,
+          "_detail": {
+            "description": "味方全員のスキルダメージ+{0}％",
+            "id": 713001409
+          }
+        }
+      ]
+    },
+    "1990442": {
+      "name": "ダメージアップオールⅠ",
+      "id": 1990442,
+      "description": "味方全員のスキルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 713001409,
+          "value": 600,
+          "_detail": {
+            "description": "味方全員のスキルダメージ+{0}％",
+            "id": 713001409
+          }
+        }
+      ]
+    },
+    "1990505": {
+      "name": "みんなで力を合わせよう！",
+      "id": 1990505,
+      "description": "味方全員は「ハルフェン復興隊」タグを持つキャラ数に応じ「クリティカルダメージ+10～50％」と「戦闘アイテムクリティカルダメージ+10～50%」(1～5人で多いほど増加)<br><br>スキル発動後、アイテムゲージを{0}%回復し、味方全員のHPを{1}%回復",
+      "effects": [
+        {
+          "id": 72001085,
+          "value": 1000,
+          "_detail": {
+            "description": "[アイテムゲージ回復]",
+            "id": 72001085
+          }
+        },
+        {
+          "id": 72001131,
+          "value": 1500,
+          "_detail": {
+            "id": 72001131
+          }
+        },
+        {
+          "id": 72001584,
+          "value": 5000,
+          "_detail": {
+            "id": 72001584
+          }
+        },
+        {
+          "id": 72001606,
+          "value": 5000,
+          "_detail": {
+            "id": 72001606
+          }
+        }
+      ]
+    },
+    "11000031": {
+      "name": "杖インパクト",
+      "id": 11000031,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000991,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "id": 91000991
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 60,
+      "break_power": 6
+    },
+    "11000032": {
+      "name": "杖インパクト",
+      "id": 11000032,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000991,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "id": 91000991
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 63,
+      "break_power": 6
+    },
+    "11000033": {
+      "name": "杖インパクト",
+      "id": 11000033,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000991,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "id": 91000991
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 67,
+      "break_power": 6
+    },
+    "11000034": {
+      "name": "杖インパクト",
+      "id": 11000034,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000991,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "id": 91000991
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 71,
+      "break_power": 6
+    },
+    "11000035": {
+      "name": "杖インパクト",
+      "id": 11000035,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000991,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "id": 91000991
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 75,
+      "break_power": 7
+    },
+    "12000036": {
+      "name": "デュプリケイト",
+      "id": 12000036,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 5,
+      "description": "回復後、対象の状態異常を回復し、<br>対象に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000992,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "id": 91000992
+          }
+        },
+        {
+          "id": 91000939,
+          "value": 10000,
+          "_detail": {
+            "id": 91000939
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 300,
+      "break_power": 0
+    },
+    "12000037": {
+      "name": "デュプリケイト",
+      "id": 12000037,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 5,
+      "description": "回復後、対象の状態異常を回復し、<br>対象に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000992,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "id": 91000992
+          }
+        },
+        {
+          "id": 91000939,
+          "value": 10000,
+          "_detail": {
+            "id": 91000939
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 307,
+      "break_power": 0
+    },
+    "12000038": {
+      "name": "デュプリケイト",
+      "id": 12000038,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 5,
+      "description": "回復後、対象の状態異常を回復し、<br>対象に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000992,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "id": 91000992
+          }
+        },
+        {
+          "id": 91000939,
+          "value": 10000,
+          "_detail": {
+            "id": 91000939
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 315,
+      "break_power": 0
+    },
+    "12000039": {
+      "name": "デュプリケイト",
+      "id": 12000039,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 5,
+      "description": "回復後、対象の状態異常を回復し、<br>対象に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000992,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "id": 91000992
+          }
+        },
+        {
+          "id": 91000939,
+          "value": 10000,
+          "_detail": {
+            "id": 91000939
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 322,
+      "break_power": 0
+    },
+    "12000040": {
+      "name": "デュプリケイト",
+      "id": 12000040,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 5,
+      "description": "回復後、対象の状態異常を回復し、<br>対象に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000992,
+          "value": 1500,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-15%",
+            "id": 91000992
+          }
+        },
+        {
+          "id": 91000939,
+          "value": 10000,
+          "_detail": {
+            "id": 91000939
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 330,
+      "break_power": 0
+    },
+    "14000041": {
+      "name": "ラケーテレヘルン",
+      "id": 14000041,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000993,
+          "value": 5000,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-50%",
+            "id": 91000993
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 240,
+      "break_power": 26
+    },
+    "14000042": {
+      "name": "ラケーテレヘルン",
+      "id": 14000042,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000993,
+          "value": 5000,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-50%",
+            "id": 91000993
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 255,
+      "break_power": 27
+    },
+    "14000043": {
+      "name": "ラケーテレヘルン",
+      "id": 14000043,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000993,
+          "value": 5000,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-50%",
+            "id": 91000993
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 270,
+      "break_power": 29
+    },
+    "14000044": {
+      "name": "ラケーテレヘルン",
+      "id": 14000044,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000993,
+          "value": 5000,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-50%",
+            "id": 91000993
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 285,
+      "break_power": 30
+    },
+    "14000045": {
+      "name": "ラケーテレヘルン",
+      "id": 14000045,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000993,
+          "value": 5000,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-50%",
+            "id": 91000993
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 300,
+      "break_power": 32
+    },
+    "14003499": {
+      "name": "杖インパクト",
+      "id": 14003499,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>味方全員に「物攻・魔攻+{1}％」を付与(上限30％)",
+      "effects": [
+        {
+          "id": 91000997,
+          "value": 2000,
+          "_detail": {
+            "id": 91000997
+          }
+        },
+        {
+          "id": 91002068,
+          "value": 1000,
+          "_detail": {
+            "id": 91002068
+          }
+        },
+        {
+          "id": 91002069,
+          "value": 1000,
+          "_detail": {
+            "id": 91002069
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 73,
+      "break_power": 8
+    },
+    "14003500": {
+      "name": "杖インパクト",
+      "id": 14003500,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>味方全員に「物攻・魔攻+{1}％」を付与(上限30％)",
+      "effects": [
+        {
+          "id": 91000997,
+          "value": 2000,
+          "_detail": {
+            "id": 91000997
+          }
+        },
+        {
+          "id": 91002068,
+          "value": 1000,
+          "_detail": {
+            "id": 91002068
+          }
+        },
+        {
+          "id": 91002069,
+          "value": 1000,
+          "_detail": {
+            "id": 91002069
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 77,
+      "break_power": 8
+    },
+    "14003501": {
+      "name": "杖インパクト",
+      "id": 14003501,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>味方全員に「物攻・魔攻+{1}％」を付与(上限30％)",
+      "effects": [
+        {
+          "id": 91000997,
+          "value": 2000,
+          "_detail": {
+            "id": 91000997
+          }
+        },
+        {
+          "id": 91002068,
+          "value": 1000,
+          "_detail": {
+            "id": 91002068
+          }
+        },
+        {
+          "id": 91002069,
+          "value": 1000,
+          "_detail": {
+            "id": 91002069
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 82,
+      "break_power": 9
+    },
+    "14003502": {
+      "name": "杖インパクト",
+      "id": 14003502,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>味方全員に「物攻・魔攻+{1}％」を付与(上限30％)",
+      "effects": [
+        {
+          "id": 91000997,
+          "value": 2000,
+          "_detail": {
+            "id": 91000997
+          }
+        },
+        {
+          "id": 91002068,
+          "value": 1000,
+          "_detail": {
+            "id": 91002068
+          }
+        },
+        {
+          "id": 91002069,
+          "value": 1000,
+          "_detail": {
+            "id": 91002069
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 87,
+      "break_power": 10
+    },
+    "14003503": {
+      "name": "杖インパクト",
+      "id": 14003503,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>味方全員に「物攻・魔攻+{1}％」を付与(上限30％)",
+      "effects": [
+        {
+          "id": 91000997,
+          "value": 2000,
+          "_detail": {
+            "id": 91000997
+          }
+        },
+        {
+          "id": 91002068,
+          "value": 1000,
+          "_detail": {
+            "id": 91002068
+          }
+        },
+        {
+          "id": 91002069,
+          "value": 1000,
+          "_detail": {
+            "id": 91002069
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 92,
+      "break_power": 11
+    },
+    "14003504": {
+      "name": "デュプリケイト",
+      "id": 14003504,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 5,
+      "description": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{1}％」と「スキルダメージ+{2}％」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001201,
+          "value": 2000,
+          "_detail": {
+            "id": 91001201
+          }
+        },
+        {
+          "id": 91002070,
+          "value": 4000,
+          "_detail": {
+            "id": 91002070
+          }
+        },
+        {
+          "id": 91002072,
+          "value": 4000,
+          "_detail": {
+            "id": 91002072
+          }
+        },
+        {
+          "id": 91002071,
+          "value": 4000,
+          "_detail": {
+            "id": 91002071
+          }
+        },
+        {
+          "id": 91000939,
+          "value": 10000,
+          "_detail": {
+            "id": 91000939
+          }
+        },
+        {
+          "id": 91002073,
+          "value": 10000,
+          "_detail": {
+            "id": 91002073
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 336,
+      "break_power": 0
+    },
+    "14003505": {
+      "name": "デュプリケイト",
+      "id": 14003505,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 5,
+      "description": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{1}％」と「スキルダメージ+{2}％」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001201,
+          "value": 2000,
+          "_detail": {
+            "id": 91001201
+          }
+        },
+        {
+          "id": 91002070,
+          "value": 4000,
+          "_detail": {
+            "id": 91002070
+          }
+        },
+        {
+          "id": 91002072,
+          "value": 4000,
+          "_detail": {
+            "id": 91002072
+          }
+        },
+        {
+          "id": 91002071,
+          "value": 4000,
+          "_detail": {
+            "id": 91002071
+          }
+        },
+        {
+          "id": 91000939,
+          "value": 10000,
+          "_detail": {
+            "id": 91000939
+          }
+        },
+        {
+          "id": 91002073,
+          "value": 10000,
+          "_detail": {
+            "id": 91002073
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 357,
+      "break_power": 0
+    },
+    "14003506": {
+      "name": "デュプリケイト",
+      "id": 14003506,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 5,
+      "description": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{1}％」と「スキルダメージ+{2}％」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001201,
+          "value": 2000,
+          "_detail": {
+            "id": 91001201
+          }
+        },
+        {
+          "id": 91002070,
+          "value": 4000,
+          "_detail": {
+            "id": 91002070
+          }
+        },
+        {
+          "id": 91002072,
+          "value": 4000,
+          "_detail": {
+            "id": 91002072
+          }
+        },
+        {
+          "id": 91002071,
+          "value": 4000,
+          "_detail": {
+            "id": 91002071
+          }
+        },
+        {
+          "id": 91000939,
+          "value": 10000,
+          "_detail": {
+            "id": 91000939
+          }
+        },
+        {
+          "id": 91002073,
+          "value": 10000,
+          "_detail": {
+            "id": 91002073
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 378,
+      "break_power": 0
+    },
+    "14003507": {
+      "name": "デュプリケイト",
+      "id": 14003507,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 5,
+      "description": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{1}％」と「スキルダメージ+{2}％」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001201,
+          "value": 2000,
+          "_detail": {
+            "id": 91001201
+          }
+        },
+        {
+          "id": 91002070,
+          "value": 4000,
+          "_detail": {
+            "id": 91002070
+          }
+        },
+        {
+          "id": 91002072,
+          "value": 4000,
+          "_detail": {
+            "id": 91002072
+          }
+        },
+        {
+          "id": 91002071,
+          "value": 4000,
+          "_detail": {
+            "id": 91002071
+          }
+        },
+        {
+          "id": 91000939,
+          "value": 10000,
+          "_detail": {
+            "id": 91000939
+          }
+        },
+        {
+          "id": 91002073,
+          "value": 10000,
+          "_detail": {
+            "id": 91002073
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 399,
+      "break_power": 0
+    },
+    "14003508": {
+      "name": "デュプリケイト",
+      "id": 14003508,
+      "target_name_ja": "ID:2",
+      "target_name_cn": "友方单体",
+      "skill_target_type": 2,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 5,
+      "description": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{1}％」と「スキルダメージ+{2}％」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001201,
+          "value": 2000,
+          "_detail": {
+            "id": 91001201
+          }
+        },
+        {
+          "id": 91002070,
+          "value": 4000,
+          "_detail": {
+            "id": 91002070
+          }
+        },
+        {
+          "id": 91002072,
+          "value": 4000,
+          "_detail": {
+            "id": 91002072
+          }
+        },
+        {
+          "id": 91002071,
+          "value": 4000,
+          "_detail": {
+            "id": 91002071
+          }
+        },
+        {
+          "id": 91000939,
+          "value": 10000,
+          "_detail": {
+            "id": 91000939
+          }
+        },
+        {
+          "id": 91002073,
+          "value": 10000,
+          "_detail": {
+            "id": 91002073
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 420,
+      "break_power": 0
+    },
+    "14003509": {
+      "name": "ラケーテレヘルン",
+      "id": 14003509,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、味方全員のHPを{0}％回復し、<br>「受けるダメージ-{1}%」を1回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{2}％」と「スキルダメージ+{3}％」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000925,
+          "value": 2000,
+          "_detail": {
+            "id": 91000925
+          }
+        },
+        {
+          "id": 91001069,
+          "value": 5000,
+          "_detail": {
+            "id": 91001069
+          }
+        },
+        {
+          "id": 91002070,
+          "value": 7000,
+          "_detail": {
+            "id": 91002070
+          }
+        },
+        {
+          "id": 91002072,
+          "value": 7000,
+          "_detail": {
+            "id": 91002072
+          }
+        },
+        {
+          "id": 91002071,
+          "value": 7000,
+          "_detail": {
+            "id": 91002071
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 360,
+      "break_power": 37
+    },
+    "14003510": {
+      "name": "ラケーテレヘルン",
+      "id": 14003510,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000993,
+          "value": 5000,
+          "_detail": {
+            "description": "受ける物理攻撃ダメージ-50%",
+            "id": 91000993
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 312,
+      "break_power": 33
+    }
+  },
+  "initial_wt": 240,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000991,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "id": 91000991
+              }
+            }
+          ],
+          "id": 11000031,
+          "max_lamp": 0,
+          "name": "杖インパクト",
+          "power": 60,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身に受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1139139205411298473",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000991,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "id": 91000991
+              }
+            }
+          ],
+          "id": 11000032,
+          "max_lamp": 0,
+          "name": "杖インパクト",
+          "power": 63,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身に受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1139139205411298473",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000991,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "id": 91000991
+              }
+            }
+          ],
+          "id": 11000033,
+          "max_lamp": 0,
+          "name": "杖インパクト",
+          "power": 67,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身に受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1139139205411298473",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000991,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "id": 91000991
+              }
+            }
+          ],
+          "id": 11000034,
+          "max_lamp": 0,
+          "name": "杖インパクト",
+          "power": 71,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身に受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1139139205411298473",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000991,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "id": 91000991
+              }
+            }
+          ],
+          "id": 11000035,
+          "max_lamp": 0,
+          "name": "杖インパクト",
+          "power": 75,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身に受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1139139205411298473",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象の状態異常を回復し、<br>対象に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000992,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "id": 91000992
+              }
+            },
+            {
+              "id": 91000939,
+              "value": 10000,
+              "_detail": {
+                "id": 91000939
+              }
+            }
+          ],
+          "id": 12000036,
+          "max_lamp": 0,
+          "name": "デュプリケイト",
+          "power": 300,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 2,
+          "still_path_hash": "6649912226322360223",
+          "summary": "回復後、対象の状態異常を回復し、対象の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "6341055484500765499",
+          "wait": 0,
+          "target_name_ja": "ID:2",
+          "target_name_cn": "友方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象の状態異常を回復し、<br>対象に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000992,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "id": 91000992
+              }
+            },
+            {
+              "id": 91000939,
+              "value": 10000,
+              "_detail": {
+                "id": 91000939
+              }
+            }
+          ],
+          "id": 12000037,
+          "max_lamp": 0,
+          "name": "デュプリケイト",
+          "power": 307,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 2,
+          "still_path_hash": "6649912226322360223",
+          "summary": "回復後、対象の状態異常を回復し、対象の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "6341055484500765499",
+          "wait": 0,
+          "target_name_ja": "ID:2",
+          "target_name_cn": "友方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象の状態異常を回復し、<br>対象に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000992,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "id": 91000992
+              }
+            },
+            {
+              "id": 91000939,
+              "value": 10000,
+              "_detail": {
+                "id": 91000939
+              }
+            }
+          ],
+          "id": 12000038,
+          "max_lamp": 0,
+          "name": "デュプリケイト",
+          "power": 315,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 2,
+          "still_path_hash": "6649912226322360223",
+          "summary": "回復後、対象の状態異常を回復し、対象の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "6341055484500765499",
+          "wait": 0,
+          "target_name_ja": "ID:2",
+          "target_name_cn": "友方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象の状態異常を回復し、<br>対象に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000992,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "id": 91000992
+              }
+            },
+            {
+              "id": 91000939,
+              "value": 10000,
+              "_detail": {
+                "id": 91000939
+              }
+            }
+          ],
+          "id": 12000039,
+          "max_lamp": 0,
+          "name": "デュプリケイト",
+          "power": 322,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 2,
+          "still_path_hash": "6649912226322360223",
+          "summary": "回復後、対象の状態異常を回復し、対象の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "6341055484500765499",
+          "wait": 0,
+          "target_name_ja": "ID:2",
+          "target_name_cn": "友方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 0,
+          "break_power_type": 1,
+          "description": "回復後、対象の状態異常を回復し、<br>対象に「受ける物理攻撃ダメージ-{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000992,
+              "value": 1500,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-15%",
+                "id": 91000992
+              }
+            },
+            {
+              "id": 91000939,
+              "value": 10000,
+              "_detail": {
+                "id": 91000939
+              }
+            }
+          ],
+          "id": 12000040,
+          "max_lamp": 0,
+          "name": "デュプリケイト",
+          "power": 330,
+          "skill_effect_type": 2,
+          "skill_power_type": 5,
+          "skill_target_type": 2,
+          "still_path_hash": "6649912226322360223",
+          "summary": "回復後、対象の状態異常を回復し、対象の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "6341055484500765499",
+          "wait": 0,
+          "target_name_ja": "ID:2",
+          "target_name_cn": "友方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 26,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000993,
+              "value": 5000,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-50%",
+                "id": 91000993
+              }
+            }
+          ],
+          "id": 14000041,
+          "max_lamp": 0,
+          "name": "ラケーテレヘルン",
+          "power": 240,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "4308411368870880595",
+          "summary": "攻撃後、味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1302822801081863550",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 27,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000993,
+              "value": 5000,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-50%",
+                "id": 91000993
+              }
+            }
+          ],
+          "id": 14000042,
+          "max_lamp": 0,
+          "name": "ラケーテレヘルン",
+          "power": 255,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "4308411368870880595",
+          "summary": "攻撃後、味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1302822801081863550",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 29,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000993,
+              "value": 5000,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-50%",
+                "id": 91000993
+              }
+            }
+          ],
+          "id": 14000043,
+          "max_lamp": 0,
+          "name": "ラケーテレヘルン",
+          "power": 270,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "4308411368870880595",
+          "summary": "攻撃後、味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1302822801081863550",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000993,
+              "value": 5000,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-50%",
+                "id": 91000993
+              }
+            }
+          ],
+          "id": 14000044,
+          "max_lamp": 0,
+          "name": "ラケーテレヘルン",
+          "power": 285,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "4308411368870880595",
+          "summary": "攻撃後、味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1302822801081863550",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 32,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000993,
+              "value": 5000,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-50%",
+                "id": 91000993
+              }
+            }
+          ],
+          "id": 14000045,
+          "max_lamp": 0,
+          "name": "ラケーテレヘルン",
+          "power": 300,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "4308411368870880595",
+          "summary": "攻撃後、味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1302822801081863550",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃後、味方全員に「受ける物理攻撃ダメージ-{0}%」を1回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000993,
+              "value": 5000,
+              "_detail": {
+                "description": "受ける物理攻撃ダメージ-50%",
+                "id": 91000993
+              }
+            }
+          ],
+          "id": 14003510,
+          "max_lamp": 0,
+          "name": "ラケーテレヘルン",
+          "power": 312,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "4308411368870880595",
+          "summary": "攻撃後、味方全員の受ける物理攻撃ダメージダウン",
+          "timeline_hash": "1302822801081863550",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        }
+      ]
+    }
+  ],
+  "switch": "evolve",
+  "switch_stat": {
+    "_skills": [
+      {
+        "type": "normal1",
+        "skills": [
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              6
+            ],
+            "break_power": 8,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>味方全員に「物攻・魔攻+{1}％」を付与(上限30％)",
+            "effects": [
+              {
+                "id": 91000997,
+                "value": 2000,
+                "_detail": {
+                  "id": 91000997
+                }
+              },
+              {
+                "id": 91002068,
+                "value": 1000,
+                "_detail": {
+                  "id": 91002068
+                }
+              },
+              {
+                "id": 91002069,
+                "value": 1000,
+                "_detail": {
+                  "id": 91002069
+                }
+              }
+            ],
+            "id": 14003499,
+            "max_lamp": 0,
+            "name": "杖インパクト",
+            "power": 73,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身の受けるダメージダウン<br>味方全員の物攻と魔攻アップ",
+            "timeline_hash": "1139139205411298473",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              6
+            ],
+            "break_power": 8,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>味方全員に「物攻・魔攻+{1}％」を付与(上限30％)",
+            "effects": [
+              {
+                "id": 91000997,
+                "value": 2000,
+                "_detail": {
+                  "id": 91000997
+                }
+              },
+              {
+                "id": 91002068,
+                "value": 1000,
+                "_detail": {
+                  "id": 91002068
+                }
+              },
+              {
+                "id": 91002069,
+                "value": 1000,
+                "_detail": {
+                  "id": 91002069
+                }
+              }
+            ],
+            "id": 14003500,
+            "max_lamp": 0,
+            "name": "杖インパクト",
+            "power": 77,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身の受けるダメージダウン<br>味方全員の物攻と魔攻アップ",
+            "timeline_hash": "1139139205411298473",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              6
+            ],
+            "break_power": 9,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>味方全員に「物攻・魔攻+{1}％」を付与(上限30％)",
+            "effects": [
+              {
+                "id": 91000997,
+                "value": 2000,
+                "_detail": {
+                  "id": 91000997
+                }
+              },
+              {
+                "id": 91002068,
+                "value": 1000,
+                "_detail": {
+                  "id": 91002068
+                }
+              },
+              {
+                "id": 91002069,
+                "value": 1000,
+                "_detail": {
+                  "id": 91002069
+                }
+              }
+            ],
+            "id": 14003501,
+            "max_lamp": 0,
+            "name": "杖インパクト",
+            "power": 82,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身の受けるダメージダウン<br>味方全員の物攻と魔攻アップ",
+            "timeline_hash": "1139139205411298473",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              6
+            ],
+            "break_power": 10,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>味方全員に「物攻・魔攻+{1}％」を付与(上限30％)",
+            "effects": [
+              {
+                "id": 91000997,
+                "value": 2000,
+                "_detail": {
+                  "id": 91000997
+                }
+              },
+              {
+                "id": 91002068,
+                "value": 1000,
+                "_detail": {
+                  "id": 91002068
+                }
+              },
+              {
+                "id": 91002069,
+                "value": 1000,
+                "_detail": {
+                  "id": 91002069
+                }
+              }
+            ],
+            "id": 14003502,
+            "max_lamp": 0,
+            "name": "杖インパクト",
+            "power": 87,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身の受けるダメージダウン<br>味方全員の物攻と魔攻アップ",
+            "timeline_hash": "1139139205411298473",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              6
+            ],
+            "break_power": 11,
+            "break_power_type": 2,
+            "description": "攻撃後、自身に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与し、<br>味方全員に「物攻・魔攻+{1}％」を付与(上限30％)",
+            "effects": [
+              {
+                "id": 91000997,
+                "value": 2000,
+                "_detail": {
+                  "id": 91000997
+                }
+              },
+              {
+                "id": 91002068,
+                "value": 1000,
+                "_detail": {
+                  "id": 91002068
+                }
+              },
+              {
+                "id": 91002069,
+                "value": 1000,
+                "_detail": {
+                  "id": 91002069
+                }
+              }
+            ],
+            "id": 14003503,
+            "max_lamp": 0,
+            "name": "杖インパクト",
+            "power": 92,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 3,
+            "still_path_hash": "6523615492000077891",
+            "summary": "攻撃後、自身の受けるダメージダウン<br>味方全員の物攻と魔攻アップ",
+            "timeline_hash": "1139139205411298473",
+            "wait": -100,
+            "target_name_ja": "ID:3",
+            "target_name_cn": "敌方单体"
+          }
+        ]
+      },
+      {
+        "type": "normal2",
+        "skills": [
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              6
+            ],
+            "break_power": 0,
+            "break_power_type": 1,
+            "description": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{1}％」と「スキルダメージ+{2}％」を2回行動終了するまで付与",
+            "effects": [
+              {
+                "id": 91001201,
+                "value": 2000,
+                "_detail": {
+                  "id": 91001201
+                }
+              },
+              {
+                "id": 91002070,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002070
+                }
+              },
+              {
+                "id": 91002072,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002072
+                }
+              },
+              {
+                "id": 91002071,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002071
+                }
+              },
+              {
+                "id": 91000939,
+                "value": 10000,
+                "_detail": {
+                  "id": 91000939
+                }
+              },
+              {
+                "id": 91002073,
+                "value": 10000,
+                "_detail": {
+                  "id": 91002073
+                }
+              }
+            ],
+            "id": 14003504,
+            "max_lamp": 0,
+            "name": "デュプリケイト",
+            "power": 336,
+            "skill_effect_type": 2,
+            "skill_power_type": 5,
+            "skill_target_type": 2,
+            "still_path_hash": "6649912226322360223",
+            "summary": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象の受けるダメージダウン<br>「ハルフェン復興隊」の味方全員の物攻と魔攻とスキルダメージアップ",
+            "timeline_hash": "6341055484500765499",
+            "wait": 0,
+            "target_name_ja": "ID:2",
+            "target_name_cn": "友方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              6
+            ],
+            "break_power": 0,
+            "break_power_type": 1,
+            "description": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{1}％」と「スキルダメージ+{2}％」を2回行動終了するまで付与",
+            "effects": [
+              {
+                "id": 91001201,
+                "value": 2000,
+                "_detail": {
+                  "id": 91001201
+                }
+              },
+              {
+                "id": 91002070,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002070
+                }
+              },
+              {
+                "id": 91002072,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002072
+                }
+              },
+              {
+                "id": 91002071,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002071
+                }
+              },
+              {
+                "id": 91000939,
+                "value": 10000,
+                "_detail": {
+                  "id": 91000939
+                }
+              },
+              {
+                "id": 91002073,
+                "value": 10000,
+                "_detail": {
+                  "id": 91002073
+                }
+              }
+            ],
+            "id": 14003505,
+            "max_lamp": 0,
+            "name": "デュプリケイト",
+            "power": 357,
+            "skill_effect_type": 2,
+            "skill_power_type": 5,
+            "skill_target_type": 2,
+            "still_path_hash": "6649912226322360223",
+            "summary": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象の受けるダメージダウン<br>「ハルフェン復興隊」の味方全員の物攻と魔攻とスキルダメージアップ",
+            "timeline_hash": "6341055484500765499",
+            "wait": 0,
+            "target_name_ja": "ID:2",
+            "target_name_cn": "友方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              6
+            ],
+            "break_power": 0,
+            "break_power_type": 1,
+            "description": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{1}％」と「スキルダメージ+{2}％」を2回行動終了するまで付与",
+            "effects": [
+              {
+                "id": 91001201,
+                "value": 2000,
+                "_detail": {
+                  "id": 91001201
+                }
+              },
+              {
+                "id": 91002070,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002070
+                }
+              },
+              {
+                "id": 91002072,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002072
+                }
+              },
+              {
+                "id": 91002071,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002071
+                }
+              },
+              {
+                "id": 91000939,
+                "value": 10000,
+                "_detail": {
+                  "id": 91000939
+                }
+              },
+              {
+                "id": 91002073,
+                "value": 10000,
+                "_detail": {
+                  "id": 91002073
+                }
+              }
+            ],
+            "id": 14003506,
+            "max_lamp": 0,
+            "name": "デュプリケイト",
+            "power": 378,
+            "skill_effect_type": 2,
+            "skill_power_type": 5,
+            "skill_target_type": 2,
+            "still_path_hash": "6649912226322360223",
+            "summary": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象の受けるダメージダウン<br>「ハルフェン復興隊」の味方全員の物攻と魔攻とスキルダメージアップ",
+            "timeline_hash": "6341055484500765499",
+            "wait": 0,
+            "target_name_ja": "ID:2",
+            "target_name_cn": "友方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              6
+            ],
+            "break_power": 0,
+            "break_power_type": 1,
+            "description": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{1}％」と「スキルダメージ+{2}％」を2回行動終了するまで付与",
+            "effects": [
+              {
+                "id": 91001201,
+                "value": 2000,
+                "_detail": {
+                  "id": 91001201
+                }
+              },
+              {
+                "id": 91002070,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002070
+                }
+              },
+              {
+                "id": 91002072,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002072
+                }
+              },
+              {
+                "id": 91002071,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002071
+                }
+              },
+              {
+                "id": 91000939,
+                "value": 10000,
+                "_detail": {
+                  "id": 91000939
+                }
+              },
+              {
+                "id": 91002073,
+                "value": 10000,
+                "_detail": {
+                  "id": 91002073
+                }
+              }
+            ],
+            "id": 14003507,
+            "max_lamp": 0,
+            "name": "デュプリケイト",
+            "power": 399,
+            "skill_effect_type": 2,
+            "skill_power_type": 5,
+            "skill_target_type": 2,
+            "still_path_hash": "6649912226322360223",
+            "summary": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象の受けるダメージダウン<br>「ハルフェン復興隊」の味方全員の物攻と魔攻とスキルダメージアップ",
+            "timeline_hash": "6341055484500765499",
+            "wait": 0,
+            "target_name_ja": "ID:2",
+            "target_name_cn": "友方单体"
+          },
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              6
+            ],
+            "break_power": 0,
+            "break_power_type": 1,
+            "description": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象に「受けるダメージ-{0}%」を2回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{1}％」と「スキルダメージ+{2}％」を2回行動終了するまで付与",
+            "effects": [
+              {
+                "id": 91001201,
+                "value": 2000,
+                "_detail": {
+                  "id": 91001201
+                }
+              },
+              {
+                "id": 91002070,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002070
+                }
+              },
+              {
+                "id": 91002072,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002072
+                }
+              },
+              {
+                "id": 91002071,
+                "value": 4000,
+                "_detail": {
+                  "id": 91002071
+                }
+              },
+              {
+                "id": 91000939,
+                "value": 10000,
+                "_detail": {
+                  "id": 91000939
+                }
+              },
+              {
+                "id": 91002073,
+                "value": 10000,
+                "_detail": {
+                  "id": 91002073
+                }
+              }
+            ],
+            "id": 14003508,
+            "max_lamp": 0,
+            "name": "デュプリケイト",
+            "power": 420,
+            "skill_effect_type": 2,
+            "skill_power_type": 5,
+            "skill_target_type": 2,
+            "still_path_hash": "6649912226322360223",
+            "summary": "回復前、対象のマイナス効果と状態異常を回復<br>回復後、対象の受けるダメージダウン<br>「ハルフェン復興隊」の味方全員の物攻と魔攻とスキルダメージアップ",
+            "timeline_hash": "6341055484500765499",
+            "wait": 0,
+            "target_name_ja": "ID:2",
+            "target_name_cn": "友方单体"
+          }
+        ]
+      },
+      {
+        "type": "burst",
+        "skills": [
+          {
+            "attack_attribute_category": 2,
+            "attack_attributes": [
+              6
+            ],
+            "break_power": 37,
+            "break_power_type": 2,
+            "description": "攻撃後、味方全員のHPを{0}％回復し、<br>「受けるダメージ-{1}%」を1回攻撃を受けるまで付与<br>「ハルフェン復興隊」の味方全員に「物攻・魔攻+{2}％」と「スキルダメージ+{3}％」を2回行動終了するまで付与",
+            "effects": [
+              {
+                "id": 91000925,
+                "value": 2000,
+                "_detail": {
+                  "id": 91000925
+                }
+              },
+              {
+                "id": 91001069,
+                "value": 5000,
+                "_detail": {
+                  "id": 91001069
+                }
+              },
+              {
+                "id": 91002070,
+                "value": 7000,
+                "_detail": {
+                  "id": 91002070
+                }
+              },
+              {
+                "id": 91002072,
+                "value": 7000,
+                "_detail": {
+                  "id": 91002072
+                }
+              },
+              {
+                "id": 91002071,
+                "value": 7000,
+                "_detail": {
+                  "id": 91002071
+                }
+              }
+            ],
+            "id": 14003509,
+            "max_lamp": 0,
+            "name": "ラケーテレヘルン",
+            "power": 360,
+            "skill_effect_type": 1,
+            "skill_power_type": 2,
+            "skill_target_type": 5,
+            "still_path_hash": "4308411368870880595",
+            "summary": "攻撃後、味方全員を回復<br>味方全員の受けるダメージダウン<br>「ハルフェン復興隊」の味方全員の物攻と魔攻とスキルダメージアップ",
+            "timeline_hash": "1302822801081863550",
+            "wait": 0,
+            "target_name_ja": "ID:5",
+            "target_name_cn": "敌方全体"
+          }
+        ]
+      }
+    ],
+    "ability_ids": [
+      1990022,
+      1990023,
+      1990505
+    ]
+  }
+}

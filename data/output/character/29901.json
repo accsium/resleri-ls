@@ -1,0 +1,1324 @@
+{
+  "id": 29901,
+  "attack_attributes": [
+    5
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 2,
+  "support_color_id": 4,
+  "trait_color_name_ja": "紫",
+  "trait_color_name_cn": "紫",
+  "support_color_name_ja": "赤",
+  "support_color_name_cn": "红",
+  "battle_tool_trait_names_ja": [
+    "会心の出来",
+    "魔力の呪詛"
+  ],
+  "battle_tool_trait_names_cn": [
+    "暴击成品",
+    "魔力之诅咒"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "風耐性上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "风耐性提升"
+  ],
+  "battle_tool_trait_ids": [
+    50,
+    17
+  ],
+  "equipment_tool_trait_ids": [
+    23
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980108,
+        "combat_power_coefficient": 1500,
+        "condition_ids": [
+          46
+        ]
+      }
+    ],
+    "description": "「寡黙」は「攻撃対象がブレイク状態の時、スキルダメージ+35%」",
+    "name": "真理は自ら求め掴み取るものだ"
+  },
+  "ability_ids": [
+    1990092,
+    1990093
+  ],
+  "support_ability_ids": [
+    500393,
+    500337,
+    500281,
+    500225,
+    500169,
+    500113,
+    500057,
+    500001
+  ],
+  "board_ability1_ids": [
+    1990452,
+    1990427,
+    1990402
+  ],
+  "_skillDetails": {
+    "500001": {
+      "id": 500001,
+      "description": "得意属性が火属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 50001,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、スキルダメージUPを付与",
+            "id": 50001
+          }
+        }
+      ]
+    },
+    "500057": {
+      "id": 500057,
+      "description": "得意属性が火属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 50001,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、スキルダメージUPを付与",
+            "id": 50001
+          }
+        }
+      ]
+    },
+    "500113": {
+      "id": 500113,
+      "description": "得意属性が火属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 50001,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、スキルダメージUPを付与",
+            "id": 50001
+          }
+        }
+      ]
+    },
+    "500169": {
+      "id": 500169,
+      "description": "得意属性が火属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 50001,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、スキルダメージUPを付与",
+            "id": 50001
+          }
+        }
+      ]
+    },
+    "500225": {
+      "id": 500225,
+      "description": "得意属性が火属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 50001,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、スキルダメージUPを付与",
+            "id": 50001
+          }
+        }
+      ]
+    },
+    "500281": {
+      "id": 500281,
+      "description": "得意属性が火属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 50001,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、スキルダメージUPを付与",
+            "id": 50001
+          }
+        }
+      ]
+    },
+    "500337": {
+      "id": 500337,
+      "description": "得意属性が火属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 50001,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、スキルダメージUPを付与",
+            "id": 50001
+          }
+        }
+      ]
+    },
+    "500393": {
+      "id": 500393,
+      "description": "得意属性が火属性の時、スキルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 50001,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、スキルダメージUPを付与",
+            "id": 50001
+          }
+        }
+      ]
+    },
+    "1980108": {
+      "name": "真理は自ら求め掴み取るものだ",
+      "id": 1980108,
+      "description": "攻撃対象がブレイク状態の時、スキルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 72500122,
+          "value": 3500,
+          "_detail": {
+            "description": "[自身/攻撃対象がブレイク中/与ダメージアップ]",
+            "id": 72500122
+          }
+        }
+      ]
+    },
+    "1990092": {
+      "name": "アドバンスオール魔防Ⅰ",
+      "id": 1990092,
+      "description": "味方全員の魔防+{0}%",
+      "effects": [
+        {
+          "id": 72000910,
+          "value": 500,
+          "_detail": {
+            "description": "[味方全体/常時/魔防上昇]",
+            "id": 72000910
+          }
+        }
+      ]
+    },
+    "1990093": {
+      "name": "レジストアップ毒",
+      "id": 1990093,
+      "description": "毒耐性+{0}%",
+      "effects": [
+        {
+          "id": 72001062,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/毒耐性上昇付与]",
+            "id": 72001062
+          }
+        }
+      ]
+    },
+    "1990402": {
+      "name": "ブレイクアップⅢ",
+      "id": 1990402,
+      "description": "ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001419,
+          "value": 2500,
+          "_detail": {
+            "description": "ブレイクダメージ+{0}%",
+            "id": 713001419
+          }
+        }
+      ]
+    },
+    "1990427": {
+      "name": "ブレイクアップⅡ",
+      "id": 1990427,
+      "description": "ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001419,
+          "value": 1600,
+          "_detail": {
+            "description": "ブレイクダメージ+{0}%",
+            "id": 713001419
+          }
+        }
+      ]
+    },
+    "1990452": {
+      "name": "ブレイクアップⅠ",
+      "id": 1990452,
+      "description": "ブレイクダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001419,
+          "value": 800,
+          "_detail": {
+            "description": "ブレイクダメージ+{0}%",
+            "id": 713001419
+          }
+        }
+      ]
+    },
+    "11000436": {
+      "name": "クールハンド",
+      "id": 11000436,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000971,
+          "value": 500,
+          "_detail": {
+            "id": 91000971
+          }
+        },
+        {
+          "id": 91000936,
+          "value": 500,
+          "_detail": {
+            "id": 91000936
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 67,
+      "break_power": 18
+    },
+    "11000437": {
+      "name": "クールハンド",
+      "id": 11000437,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000971,
+          "value": 500,
+          "_detail": {
+            "id": 91000971
+          }
+        },
+        {
+          "id": 91000936,
+          "value": 500,
+          "_detail": {
+            "id": 91000936
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 71,
+      "break_power": 19
+    },
+    "11000438": {
+      "name": "クールハンド",
+      "id": 11000438,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000971,
+          "value": 500,
+          "_detail": {
+            "id": 91000971
+          }
+        },
+        {
+          "id": 91000936,
+          "value": 500,
+          "_detail": {
+            "id": 91000936
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 75,
+      "break_power": 20
+    },
+    "11000439": {
+      "name": "クールハンド",
+      "id": 11000439,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000971,
+          "value": 500,
+          "_detail": {
+            "id": 91000971
+          }
+        },
+        {
+          "id": 91000936,
+          "value": 500,
+          "_detail": {
+            "id": 91000936
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 79,
+      "break_power": 21
+    },
+    "11000440": {
+      "name": "クールハンド",
+      "id": 11000440,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000971,
+          "value": 500,
+          "_detail": {
+            "id": 91000971
+          }
+        },
+        {
+          "id": 91000936,
+          "value": 500,
+          "_detail": {
+            "id": 91000936
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 83,
+      "break_power": 22
+    },
+    "12000441": {
+      "name": "クールフット",
+      "id": 12000441,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 4000,
+          "_detail": {
+            "id": 91000907
+          }
+        },
+        {
+          "id": 91000935,
+          "value": 2000,
+          "_detail": {
+            "id": 91000935
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 182,
+      "break_power": 125
+    },
+    "12000442": {
+      "name": "クールフット",
+      "id": 12000442,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 4000,
+          "_detail": {
+            "id": 91000907
+          }
+        },
+        {
+          "id": 91000935,
+          "value": 2000,
+          "_detail": {
+            "id": 91000935
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 193,
+      "break_power": 132
+    },
+    "12000443": {
+      "name": "クールフット",
+      "id": 12000443,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 4000,
+          "_detail": {
+            "id": 91000907
+          }
+        },
+        {
+          "id": 91000935,
+          "value": 2000,
+          "_detail": {
+            "id": 91000935
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 204,
+      "break_power": 140
+    },
+    "12000444": {
+      "name": "クールフット",
+      "id": 12000444,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 4000,
+          "_detail": {
+            "id": 91000907
+          }
+        },
+        {
+          "id": 91000935,
+          "value": 2000,
+          "_detail": {
+            "id": 91000935
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 215,
+      "break_power": 148
+    },
+    "12000445": {
+      "name": "クールフット",
+      "id": 12000445,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000907,
+          "value": 4000,
+          "_detail": {
+            "id": 91000907
+          }
+        },
+        {
+          "id": 91000935,
+          "value": 2000,
+          "_detail": {
+            "id": 91000935
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 227,
+      "break_power": 156
+    },
+    "14000446": {
+      "name": "エンシェントワン",
+      "id": 14000446,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000971,
+          "value": 1500,
+          "_detail": {
+            "id": 91000971
+          }
+        },
+        {
+          "id": 91000936,
+          "value": 1500,
+          "_detail": {
+            "id": 91000936
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 320,
+      "break_power": 300
+    },
+    "14000447": {
+      "name": "エンシェントワン",
+      "id": 14000447,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000971,
+          "value": 1500,
+          "_detail": {
+            "id": 91000971
+          }
+        },
+        {
+          "id": 91000936,
+          "value": 1500,
+          "_detail": {
+            "id": 91000936
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 340,
+      "break_power": 318
+    },
+    "14000448": {
+      "name": "エンシェントワン",
+      "id": 14000448,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000971,
+          "value": 1500,
+          "_detail": {
+            "id": 91000971
+          }
+        },
+        {
+          "id": 91000936,
+          "value": 1500,
+          "_detail": {
+            "id": 91000936
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 360,
+      "break_power": 337
+    },
+    "14000449": {
+      "name": "エンシェントワン",
+      "id": 14000449,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000971,
+          "value": 1500,
+          "_detail": {
+            "id": 91000971
+          }
+        },
+        {
+          "id": 91000936,
+          "value": 1500,
+          "_detail": {
+            "id": 91000936
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 380,
+      "break_power": 356
+    },
+    "14000450": {
+      "name": "エンシェントワン",
+      "id": 14000450,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91000971,
+          "value": 1500,
+          "_detail": {
+            "id": 91000971
+          }
+        },
+        {
+          "id": 91000936,
+          "value": 1500,
+          "_detail": {
+            "id": 91000936
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 400,
+      "break_power": 375
+    }
+  },
+  "initial_wt": 259,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 18,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000971,
+              "value": 500,
+              "_detail": {
+                "id": 91000971
+              }
+            },
+            {
+              "id": 91000936,
+              "value": 500,
+              "_detail": {
+                "id": 91000936
+              }
+            }
+          ],
+          "id": 11000436,
+          "max_lamp": 0,
+          "name": "クールハンド",
+          "power": 67,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の火・氷属性耐性ダウン",
+          "timeline_hash": "4279609845966260158",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 19,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000971,
+              "value": 500,
+              "_detail": {
+                "id": 91000971
+              }
+            },
+            {
+              "id": 91000936,
+              "value": 500,
+              "_detail": {
+                "id": 91000936
+              }
+            }
+          ],
+          "id": 11000437,
+          "max_lamp": 0,
+          "name": "クールハンド",
+          "power": 71,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の火・氷属性耐性ダウン",
+          "timeline_hash": "4279609845966260158",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 20,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000971,
+              "value": 500,
+              "_detail": {
+                "id": 91000971
+              }
+            },
+            {
+              "id": 91000936,
+              "value": 500,
+              "_detail": {
+                "id": 91000936
+              }
+            }
+          ],
+          "id": 11000438,
+          "max_lamp": 0,
+          "name": "クールハンド",
+          "power": 75,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の火・氷属性耐性ダウン",
+          "timeline_hash": "4279609845966260158",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 21,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000971,
+              "value": 500,
+              "_detail": {
+                "id": 91000971
+              }
+            },
+            {
+              "id": 91000936,
+              "value": 500,
+              "_detail": {
+                "id": 91000936
+              }
+            }
+          ],
+          "id": 11000439,
+          "max_lamp": 0,
+          "name": "クールハンド",
+          "power": 79,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の火・氷属性耐性ダウン",
+          "timeline_hash": "4279609845966260158",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 22,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000971,
+              "value": 500,
+              "_detail": {
+                "id": 91000971
+              }
+            },
+            {
+              "id": 91000936,
+              "value": 500,
+              "_detail": {
+                "id": 91000936
+              }
+            }
+          ],
+          "id": 11000440,
+          "max_lamp": 0,
+          "name": "クールハンド",
+          "power": 83,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の火・氷属性耐性ダウン",
+          "timeline_hash": "4279609845966260158",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 125,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 4000,
+              "_detail": {
+                "id": 91000907
+              }
+            },
+            {
+              "id": 91000935,
+              "value": 2000,
+              "_detail": {
+                "id": 91000935
+              }
+            }
+          ],
+          "id": 12000441,
+          "max_lamp": 0,
+          "name": "クールフット",
+          "power": 182,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、対象の氷属性耐性ダウン",
+          "timeline_hash": "7157564736247328814",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 132,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 4000,
+              "_detail": {
+                "id": 91000907
+              }
+            },
+            {
+              "id": 91000935,
+              "value": 2000,
+              "_detail": {
+                "id": 91000935
+              }
+            }
+          ],
+          "id": 12000442,
+          "max_lamp": 0,
+          "name": "クールフット",
+          "power": 193,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、対象の氷属性耐性ダウン",
+          "timeline_hash": "7157564736247328814",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 140,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 4000,
+              "_detail": {
+                "id": 91000907
+              }
+            },
+            {
+              "id": 91000935,
+              "value": 2000,
+              "_detail": {
+                "id": 91000935
+              }
+            }
+          ],
+          "id": 12000443,
+          "max_lamp": 0,
+          "name": "クールフット",
+          "power": 204,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、対象の氷属性耐性ダウン",
+          "timeline_hash": "7157564736247328814",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 148,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 4000,
+              "_detail": {
+                "id": 91000907
+              }
+            },
+            {
+              "id": 91000935,
+              "value": 2000,
+              "_detail": {
+                "id": 91000935
+              }
+            }
+          ],
+          "id": 12000444,
+          "max_lamp": 0,
+          "name": "クールフット",
+          "power": 215,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、対象の氷属性耐性ダウン",
+          "timeline_hash": "7157564736247328814",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 156,
+          "break_power_type": 2,
+          "description": "WEAK攻撃時、ブレイクダメージ+{0}%<br>攻撃後、対象に「氷属性耐性-{1}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000907,
+              "value": 4000,
+              "_detail": {
+                "id": 91000907
+              }
+            },
+            {
+              "id": 91000935,
+              "value": 2000,
+              "_detail": {
+                "id": 91000935
+              }
+            }
+          ],
+          "id": 12000445,
+          "max_lamp": 0,
+          "name": "クールフット",
+          "power": 227,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "WEAK攻撃時、ブレイクダメージアップ<br>攻撃後、対象の氷属性耐性ダウン",
+          "timeline_hash": "7157564736247328814",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 300,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000971,
+              "value": 1500,
+              "_detail": {
+                "id": 91000971
+              }
+            },
+            {
+              "id": 91000936,
+              "value": 1500,
+              "_detail": {
+                "id": 91000936
+              }
+            }
+          ],
+          "id": 14000446,
+          "max_lamp": 0,
+          "name": "エンシェントワン",
+          "power": 320,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "593611883959818177",
+          "summary": "攻撃後、対象の火・氷属性耐性ダウン",
+          "timeline_hash": "6251963198506178843",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 318,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000971,
+              "value": 1500,
+              "_detail": {
+                "id": 91000971
+              }
+            },
+            {
+              "id": 91000936,
+              "value": 1500,
+              "_detail": {
+                "id": 91000936
+              }
+            }
+          ],
+          "id": 14000447,
+          "max_lamp": 0,
+          "name": "エンシェントワン",
+          "power": 340,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "593611883959818177",
+          "summary": "攻撃後、対象の火・氷属性耐性ダウン",
+          "timeline_hash": "6251963198506178843",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 337,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000971,
+              "value": 1500,
+              "_detail": {
+                "id": 91000971
+              }
+            },
+            {
+              "id": 91000936,
+              "value": 1500,
+              "_detail": {
+                "id": 91000936
+              }
+            }
+          ],
+          "id": 14000448,
+          "max_lamp": 0,
+          "name": "エンシェントワン",
+          "power": 360,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "593611883959818177",
+          "summary": "攻撃後、対象の火・氷属性耐性ダウン",
+          "timeline_hash": "6251963198506178843",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 356,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000971,
+              "value": 1500,
+              "_detail": {
+                "id": 91000971
+              }
+            },
+            {
+              "id": 91000936,
+              "value": 1500,
+              "_detail": {
+                "id": 91000936
+              }
+            }
+          ],
+          "id": 14000449,
+          "max_lamp": 0,
+          "name": "エンシェントワン",
+          "power": 380,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "593611883959818177",
+          "summary": "攻撃後、対象の火・氷属性耐性ダウン",
+          "timeline_hash": "6251963198506178843",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 375,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「火・氷属性耐性-{0}%」を5回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91000971,
+              "value": 1500,
+              "_detail": {
+                "id": 91000971
+              }
+            },
+            {
+              "id": 91000936,
+              "value": 1500,
+              "_detail": {
+                "id": 91000936
+              }
+            }
+          ],
+          "id": 14000450,
+          "max_lamp": 0,
+          "name": "エンシェントワン",
+          "power": 400,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "593611883959818177",
+          "summary": "攻撃後、対象の火・氷属性耐性ダウン",
+          "timeline_hash": "6251963198506178843",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ]
+}

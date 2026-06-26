@@ -1,0 +1,1232 @@
+{
+  "id": 16501,
+  "attack_attributes": [
+    6
+  ],
+  "initial_rarity": 2,
+  "max_rarity": 7,
+  "trait_color_id": 3,
+  "support_color_id": 2,
+  "trait_color_name_ja": "黄",
+  "trait_color_name_cn": "黄",
+  "support_color_name_ja": "紫",
+  "support_color_name_cn": "紫",
+  "battle_tool_trait_names_ja": [
+    "雷の祝福",
+    "火の呪詛"
+  ],
+  "battle_tool_trait_names_cn": [
+    "雷之祝福",
+    "火之诅咒"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "雷ダメージ上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "雷伤害提升"
+  ],
+  "battle_tool_trait_ids": [
+    9,
+    18
+  ],
+  "equipment_tool_trait_ids": [
+    9
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980020,
+        "combat_power_coefficient": 1000,
+        "condition_ids": [
+          32
+        ]
+      }
+    ],
+    "description": "「料理」は「物攻・魔攻+25%」",
+    "name": "にんじん大好き！"
+  },
+  "ability_ids": [
+    1990076,
+    1990077
+  ],
+  "support_ability_ids": [
+    500415,
+    500359,
+    500303,
+    500247,
+    500191,
+    500135,
+    500079,
+    500023
+  ],
+  "board_ability1_ids": [
+    1990462,
+    1990437,
+    1990412
+  ],
+  "_skillDetails": {
+    "500023": {
+      "id": 500023,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500079": {
+      "id": 500079,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500135": {
+      "id": 500135,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500191": {
+      "id": 500191,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500247": {
+      "id": 500247,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500303": {
+      "id": 500303,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500359": {
+      "id": 500359,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500415": {
+      "id": 500415,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "1980020": {
+      "name": "にんじん大好き！",
+      "id": 1980020,
+      "description": "物攻・魔攻+{0}%",
+      "effects": [
+        {
+          "id": 72500002,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/常時/物攻上昇]",
+            "id": 72500002
+          }
+        },
+        {
+          "id": 72500003,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/常時/魔攻上昇]",
+            "id": 72500003
+          }
+        }
+      ]
+    },
+    "1990076": {
+      "name": "アドバンスオール魔防Ⅰ",
+      "id": 1990076,
+      "description": "味方全員の魔防+{0}%",
+      "effects": [
+        {
+          "id": 72000910,
+          "value": 500,
+          "_detail": {
+            "description": "[味方全体/常時/魔防上昇]",
+            "id": 72000910
+          }
+        }
+      ]
+    },
+    "1990077": {
+      "name": "レジストアップ毒",
+      "id": 1990077,
+      "description": "毒耐性+{0}%",
+      "effects": [
+        {
+          "id": 72001062,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/毒耐性上昇付与]",
+            "id": 72001062
+          }
+        }
+      ]
+    },
+    "1990412": {
+      "name": "スキルパワーアップⅢ",
+      "id": 1990412,
+      "description": "スキル威力+{0}%",
+      "effects": [
+        {
+          "id": 713001429,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/スキル威力UP][ボードアビリティA1]",
+            "id": 713001429
+          }
+        }
+      ]
+    },
+    "1990437": {
+      "name": "スキルパワーアップⅡ",
+      "id": 1990437,
+      "description": "スキル威力+{0}%",
+      "effects": [
+        {
+          "id": 713001429,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/スキル威力UP][ボードアビリティA1]",
+            "id": 713001429
+          }
+        }
+      ]
+    },
+    "1990462": {
+      "name": "スキルパワーアップⅠ",
+      "id": 1990462,
+      "description": "スキル威力+{0}%",
+      "effects": [
+        {
+          "id": 713001429,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/スキル威力UP][ボードアビリティA1]",
+            "id": 713001429
+          }
+        }
+      ]
+    },
+    "11000316": {
+      "name": "エンゲルスピリット",
+      "id": 11000316,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000975,
+          "value": 2000,
+          "_detail": {
+            "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+            "id": 91000975
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 72,
+      "break_power": 7
+    },
+    "11000317": {
+      "name": "エンゲルスピリット",
+      "id": 11000317,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000975,
+          "value": 2000,
+          "_detail": {
+            "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+            "id": 91000975
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 76,
+      "break_power": 7
+    },
+    "11000318": {
+      "name": "エンゲルスピリット",
+      "id": 11000318,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000975,
+          "value": 2000,
+          "_detail": {
+            "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+            "id": 91000975
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 81,
+      "break_power": 7
+    },
+    "11000319": {
+      "name": "エンゲルスピリット",
+      "id": 11000319,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000975,
+          "value": 2000,
+          "_detail": {
+            "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+            "id": 91000975
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 85,
+      "break_power": 7
+    },
+    "11000320": {
+      "name": "エンゲルスピリット",
+      "id": 11000320,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000975,
+          "value": 2000,
+          "_detail": {
+            "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+            "id": 91000975
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 90,
+      "break_power": 8
+    },
+    "12000321": {
+      "name": "ココンシュッス",
+      "id": 12000321,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000979,
+          "value": 1000,
+          "_detail": {
+            "description": "スキルダメージ+10%",
+            "id": 91000979
+          }
+        },
+        {
+          "id": 91000928,
+          "value": 500,
+          "_detail": {
+            "description": "スキルダメージ+5%",
+            "id": 91000928
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 240,
+      "break_power": 30
+    },
+    "12000322": {
+      "name": "ココンシュッス",
+      "id": 12000322,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000979,
+          "value": 1000,
+          "_detail": {
+            "description": "スキルダメージ+10%",
+            "id": 91000979
+          }
+        },
+        {
+          "id": 91000928,
+          "value": 500,
+          "_detail": {
+            "description": "スキルダメージ+5%",
+            "id": 91000928
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 255,
+      "break_power": 31
+    },
+    "12000323": {
+      "name": "ココンシュッス",
+      "id": 12000323,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000979,
+          "value": 1000,
+          "_detail": {
+            "description": "スキルダメージ+10%",
+            "id": 91000979
+          }
+        },
+        {
+          "id": 91000928,
+          "value": 500,
+          "_detail": {
+            "description": "スキルダメージ+5%",
+            "id": 91000928
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 270,
+      "break_power": 33
+    },
+    "12000324": {
+      "name": "ココンシュッス",
+      "id": 12000324,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000979,
+          "value": 1000,
+          "_detail": {
+            "description": "スキルダメージ+10%",
+            "id": 91000979
+          }
+        },
+        {
+          "id": 91000928,
+          "value": 500,
+          "_detail": {
+            "description": "スキルダメージ+5%",
+            "id": 91000928
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 285,
+      "break_power": 35
+    },
+    "12000325": {
+      "name": "ココンシュッス",
+      "id": 12000325,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000979,
+          "value": 1000,
+          "_detail": {
+            "description": "スキルダメージ+10%",
+            "id": 91000979
+          }
+        },
+        {
+          "id": 91000928,
+          "value": 500,
+          "_detail": {
+            "description": "スキルダメージ+5%",
+            "id": 91000928
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 300,
+      "break_power": 37
+    },
+    "14000326": {
+      "name": "ニンジンフエール",
+      "id": 14000326,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000975,
+          "value": 5000,
+          "_detail": {
+            "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+            "id": 91000975
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 400,
+      "break_power": 75
+    },
+    "14000327": {
+      "name": "ニンジンフエール",
+      "id": 14000327,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000975,
+          "value": 5000,
+          "_detail": {
+            "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+            "id": 91000975
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 425,
+      "break_power": 79
+    },
+    "14000328": {
+      "name": "ニンジンフエール",
+      "id": 14000328,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000975,
+          "value": 5000,
+          "_detail": {
+            "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+            "id": 91000975
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 450,
+      "break_power": 84
+    },
+    "14000329": {
+      "name": "ニンジンフエール",
+      "id": 14000329,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000975,
+          "value": 5000,
+          "_detail": {
+            "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+            "id": 91000975
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 475,
+      "break_power": 88
+    },
+    "14000330": {
+      "name": "ニンジンフエール",
+      "id": 14000330,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+      "effects": [
+        {
+          "id": 91000975,
+          "value": 5000,
+          "_detail": {
+            "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+            "id": 91000975
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 500,
+      "break_power": 93
+    }
+  },
+  "initial_wt": 240,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+          "effects": [
+            {
+              "id": 91000975,
+              "value": 2000,
+              "_detail": {
+                "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+                "id": 91000975
+              }
+            }
+          ],
+          "id": 11000316,
+          "max_lamp": 0,
+          "name": "エンゲルスピリット",
+          "power": 72,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "5187188467304351512",
+          "summary": "対象のHPが50%以下の時、ダメージアップ",
+          "timeline_hash": "2656882526542116975",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+          "effects": [
+            {
+              "id": 91000975,
+              "value": 2000,
+              "_detail": {
+                "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+                "id": 91000975
+              }
+            }
+          ],
+          "id": 11000317,
+          "max_lamp": 0,
+          "name": "エンゲルスピリット",
+          "power": 76,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "5187188467304351512",
+          "summary": "対象のHPが50%以下の時、ダメージアップ",
+          "timeline_hash": "2656882526542116975",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+          "effects": [
+            {
+              "id": 91000975,
+              "value": 2000,
+              "_detail": {
+                "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+                "id": 91000975
+              }
+            }
+          ],
+          "id": 11000318,
+          "max_lamp": 0,
+          "name": "エンゲルスピリット",
+          "power": 81,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "5187188467304351512",
+          "summary": "対象のHPが50%以下の時、ダメージアップ",
+          "timeline_hash": "2656882526542116975",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+          "effects": [
+            {
+              "id": 91000975,
+              "value": 2000,
+              "_detail": {
+                "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+                "id": 91000975
+              }
+            }
+          ],
+          "id": 11000319,
+          "max_lamp": 0,
+          "name": "エンゲルスピリット",
+          "power": 85,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "5187188467304351512",
+          "summary": "対象のHPが50%以下の時、ダメージアップ",
+          "timeline_hash": "2656882526542116975",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 8,
+          "break_power_type": 2,
+          "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+          "effects": [
+            {
+              "id": 91000975,
+              "value": 2000,
+              "_detail": {
+                "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+                "id": 91000975
+              }
+            }
+          ],
+          "id": 11000320,
+          "max_lamp": 0,
+          "name": "エンゲルスピリット",
+          "power": 90,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "5187188467304351512",
+          "summary": "対象のHPが50%以下の時、ダメージアップ",
+          "timeline_hash": "2656882526542116975",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000979,
+              "value": 1000,
+              "_detail": {
+                "description": "スキルダメージ+10%",
+                "id": 91000979
+              }
+            },
+            {
+              "id": 91000928,
+              "value": 500,
+              "_detail": {
+                "description": "スキルダメージ+5%",
+                "id": 91000928
+              }
+            }
+          ],
+          "id": 12000321,
+          "max_lamp": 0,
+          "name": "ココンシュッス",
+          "power": 240,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身にスキルダメージアップ<br>味方全員のスキルダメージアップ",
+          "timeline_hash": "9002653716008603645",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000979,
+              "value": 1000,
+              "_detail": {
+                "description": "スキルダメージ+10%",
+                "id": 91000979
+              }
+            },
+            {
+              "id": 91000928,
+              "value": 500,
+              "_detail": {
+                "description": "スキルダメージ+5%",
+                "id": 91000928
+              }
+            }
+          ],
+          "id": 12000322,
+          "max_lamp": 0,
+          "name": "ココンシュッス",
+          "power": 255,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身にスキルダメージアップ<br>味方全員のスキルダメージアップ",
+          "timeline_hash": "9002653716008603645",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000979,
+              "value": 1000,
+              "_detail": {
+                "description": "スキルダメージ+10%",
+                "id": 91000979
+              }
+            },
+            {
+              "id": 91000928,
+              "value": 500,
+              "_detail": {
+                "description": "スキルダメージ+5%",
+                "id": 91000928
+              }
+            }
+          ],
+          "id": 12000323,
+          "max_lamp": 0,
+          "name": "ココンシュッス",
+          "power": 270,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身にスキルダメージアップ<br>味方全員のスキルダメージアップ",
+          "timeline_hash": "9002653716008603645",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000979,
+              "value": 1000,
+              "_detail": {
+                "description": "スキルダメージ+10%",
+                "id": 91000979
+              }
+            },
+            {
+              "id": 91000928,
+              "value": 500,
+              "_detail": {
+                "description": "スキルダメージ+5%",
+                "id": 91000928
+              }
+            }
+          ],
+          "id": 12000324,
+          "max_lamp": 0,
+          "name": "ココンシュッス",
+          "power": 285,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身にスキルダメージアップ<br>味方全員のスキルダメージアップ",
+          "timeline_hash": "9002653716008603645",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "攻撃後、自身に「スキルダメージ+{0}%」を1回行動終了するまで付与し、<br>味方全員に「スキルダメージ+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000979,
+              "value": 1000,
+              "_detail": {
+                "description": "スキルダメージ+10%",
+                "id": 91000979
+              }
+            },
+            {
+              "id": 91000928,
+              "value": 500,
+              "_detail": {
+                "description": "スキルダメージ+5%",
+                "id": 91000928
+              }
+            }
+          ],
+          "id": 12000325,
+          "max_lamp": 0,
+          "name": "ココンシュッス",
+          "power": 300,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、自身にスキルダメージアップ<br>味方全員のスキルダメージアップ",
+          "timeline_hash": "9002653716008603645",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+          "effects": [
+            {
+              "id": 91000975,
+              "value": 5000,
+              "_detail": {
+                "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+                "id": 91000975
+              }
+            }
+          ],
+          "id": 14000326,
+          "max_lamp": 0,
+          "name": "ニンジンフエール",
+          "power": 400,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "383247707667157028",
+          "summary": "対象のHPが50%以下の時、ダメージアップ",
+          "timeline_hash": "5112614204697837577",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+          "effects": [
+            {
+              "id": 91000975,
+              "value": 5000,
+              "_detail": {
+                "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+                "id": 91000975
+              }
+            }
+          ],
+          "id": 14000327,
+          "max_lamp": 0,
+          "name": "ニンジンフエール",
+          "power": 425,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "383247707667157028",
+          "summary": "対象のHPが50%以下の時、ダメージアップ",
+          "timeline_hash": "5112614204697837577",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+          "effects": [
+            {
+              "id": 91000975,
+              "value": 5000,
+              "_detail": {
+                "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+                "id": 91000975
+              }
+            }
+          ],
+          "id": 14000328,
+          "max_lamp": 0,
+          "name": "ニンジンフエール",
+          "power": 450,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "383247707667157028",
+          "summary": "対象のHPが50%以下の時、ダメージアップ",
+          "timeline_hash": "5112614204697837577",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+          "effects": [
+            {
+              "id": 91000975,
+              "value": 5000,
+              "_detail": {
+                "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+                "id": 91000975
+              }
+            }
+          ],
+          "id": 14000329,
+          "max_lamp": 0,
+          "name": "ニンジンフエール",
+          "power": 475,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "383247707667157028",
+          "summary": "対象のHPが50%以下の時、ダメージアップ",
+          "timeline_hash": "5112614204697837577",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "対象のHPが50%以下の時、ダメージ+{0}%",
+          "effects": [
+            {
+              "id": 91000975,
+              "value": 5000,
+              "_detail": {
+                "description": "HPが50%以下の敵を攻撃する場合、ダメージアップ",
+                "id": 91000975
+              }
+            }
+          ],
+          "id": 14000330,
+          "max_lamp": 0,
+          "name": "ニンジンフエール",
+          "power": 500,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "383247707667157028",
+          "summary": "対象のHPが50%以下の時、ダメージアップ",
+          "timeline_hash": "5112614204697837577",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1482 @@
+{
+  "id": 39904,
+  "attack_attributes": [
+    6
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 5,
+  "support_color_id": 2,
+  "trait_color_name_ja": "緑",
+  "trait_color_name_cn": "绿",
+  "support_color_name_ja": "紫",
+  "support_color_name_cn": "紫",
+  "battle_tool_trait_names_ja": [
+    "氷の祝福",
+    "会心の出来"
+  ],
+  "battle_tool_trait_names_cn": [
+    "冰之祝福",
+    "暴击成品"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "氷ダメージ上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "冰伤害提升"
+  ],
+  "battle_tool_trait_ids": [
+    7,
+    50
+  ],
+  "equipment_tool_trait_ids": [
+    7
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980141,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          52
+        ]
+      }
+    ],
+    "description": "「クーケン島」は「攻撃対象がブレイク状態の時、スキルダメージ+75%」",
+    "name": "波打ち際での大冒険"
+  },
+  "ability_ids": [
+    1990220,
+    1990221
+  ],
+  "support_ability_ids": [
+    500415,
+    500359,
+    500303,
+    500247,
+    500191,
+    500135,
+    500079,
+    500023
+  ],
+  "board_ability1_ids": [
+    1990464,
+    1990439,
+    1990414
+  ],
+  "_skillDetails": {
+    "500023": {
+      "id": 500023,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500079": {
+      "id": 500079,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500135": {
+      "id": 500135,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500191": {
+      "id": 500191,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500247": {
+      "id": 500247,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500303": {
+      "id": 500303,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500359": {
+      "id": 500359,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "500415": {
+      "id": 500415,
+      "description": "得意属性が氷属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500023,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が氷属性の時、ブレイクダメージUPを付与",
+            "id": 500023
+          }
+        }
+      ]
+    },
+    "1980141": {
+      "name": "波打ち際での大冒険",
+      "id": 1980141,
+      "description": "攻撃対象がブレイク状態の時、スキルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 72500122,
+          "value": 7500,
+          "_detail": {
+            "description": "[自身/攻撃対象がブレイク中/与ダメージアップ]",
+            "id": 72500122
+          }
+        }
+      ]
+    },
+    "1990220": {
+      "name": "ひと夏のハイジャンプ",
+      "id": 1990220,
+      "description": "バトル開始時、「トリプルスピア」のスキルランプを2個点灯する<br>パーティの誰かが戦闘アイテム使用後、「トリプルスピア」のスキルランプを1個点灯する<br>※アイテムを複数同時に使用しても点灯は1個",
+      "effects": [
+        {
+          "id": 72001094,
+          "value": 200,
+          "_detail": {
+            "description": "[スキルランプ点灯]",
+            "id": 72001094
+          }
+        },
+        {
+          "id": 72001094,
+          "value": 100,
+          "_detail": {
+            "description": "[スキルランプ点灯]",
+            "id": 72001094
+          }
+        }
+      ]
+    },
+    "1990221": {
+      "name": "トドメのサーブ",
+      "id": 1990221,
+      "description": "攻撃対象がブレイク状態の時、スキルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 72000954,
+          "value": 5000,
+          "_detail": {
+            "description": "[自身/攻撃対象がブレイク中/与ダメージアップ]",
+            "id": 72000954
+          }
+        }
+      ]
+    },
+    "1990414": {
+      "name": "クリティカルダメージアップⅢ",
+      "id": 1990414,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001431,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "id": 713001431
+          }
+        }
+      ]
+    },
+    "1990439": {
+      "name": "クリティカルダメージアップⅡ",
+      "id": 1990439,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001431,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "id": 713001431
+          }
+        }
+      ]
+    },
+    "1990464": {
+      "name": "クリティカルダメージアップⅠ",
+      "id": 1990464,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001431,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "id": 713001431
+          }
+        }
+      ]
+    },
+    "11001534": {
+      "name": "サマーソルト",
+      "id": 11001534,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「魔攻+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1000,
+          "_detail": {
+            "id": 91002004
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 1500,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "id": 91001020
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 69,
+      "break_power": 6
+    },
+    "11001535": {
+      "name": "サマーソルト",
+      "id": 11001535,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「魔攻+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1000,
+          "_detail": {
+            "id": 91002004
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 1500,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "id": 91001020
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 73,
+      "break_power": 6
+    },
+    "11001536": {
+      "name": "サマーソルト",
+      "id": 11001536,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「魔攻+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1000,
+          "_detail": {
+            "id": 91002004
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 1500,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "id": 91001020
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 77,
+      "break_power": 6
+    },
+    "11001537": {
+      "name": "サマーソルト",
+      "id": 11001537,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「魔攻+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1000,
+          "_detail": {
+            "id": 91002004
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 1500,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "id": 91001020
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 81,
+      "break_power": 6
+    },
+    "11001538": {
+      "name": "サマーソルト",
+      "id": 11001538,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「魔攻+{1}%」を1回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91002004,
+          "value": 1000,
+          "_detail": {
+            "id": 91002004
+          }
+        },
+        {
+          "id": 91001020,
+          "value": 1500,
+          "_detail": {
+            "description": "魔攻アップ(1回)",
+            "id": 91001020
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 86,
+      "break_power": 7
+    },
+    "12001539": {
+      "name": "トリプルスピア",
+      "id": 12001539,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、対象に「氷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>「トリプルスピア」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時、<br>この攻撃の貫通力+{1}し、<br>攻撃後、スキルランプを全て消灯する",
+      "effects": [
+        {
+          "id": 91000935,
+          "value": 3500,
+          "_detail": {
+            "id": 91000935
+          }
+        },
+        {
+          "id": 91001328,
+          "value": 10000,
+          "_detail": {
+            "id": 91001328
+          }
+        },
+        {
+          "id": 91001329,
+          "value": 100,
+          "_detail": {
+            "id": 91001329
+          }
+        },
+        {
+          "id": 91001330,
+          "value": 200,
+          "_detail": {
+            "id": 91001330
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 141,
+      "break_power": 11
+    },
+    "12001540": {
+      "name": "トリプルスピア",
+      "id": 12001540,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、対象に「氷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>「トリプルスピア」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時、<br>この攻撃の貫通力+{1}し、<br>攻撃後、スキルランプを全て消灯する",
+      "effects": [
+        {
+          "id": 91000935,
+          "value": 3500,
+          "_detail": {
+            "id": 91000935
+          }
+        },
+        {
+          "id": 91001328,
+          "value": 10000,
+          "_detail": {
+            "id": 91001328
+          }
+        },
+        {
+          "id": 91001329,
+          "value": 100,
+          "_detail": {
+            "id": 91001329
+          }
+        },
+        {
+          "id": 91001330,
+          "value": 200,
+          "_detail": {
+            "id": 91001330
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 149,
+      "break_power": 11
+    },
+    "12001541": {
+      "name": "トリプルスピア",
+      "id": 12001541,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、対象に「氷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>「トリプルスピア」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時、<br>この攻撃の貫通力+{1}し、<br>攻撃後、スキルランプを全て消灯する",
+      "effects": [
+        {
+          "id": 91000935,
+          "value": 3500,
+          "_detail": {
+            "id": 91000935
+          }
+        },
+        {
+          "id": 91001328,
+          "value": 10000,
+          "_detail": {
+            "id": 91001328
+          }
+        },
+        {
+          "id": 91001329,
+          "value": 100,
+          "_detail": {
+            "id": 91001329
+          }
+        },
+        {
+          "id": 91001330,
+          "value": 200,
+          "_detail": {
+            "id": 91001330
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 158,
+      "break_power": 12
+    },
+    "12001542": {
+      "name": "トリプルスピア",
+      "id": 12001542,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、対象に「氷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>「トリプルスピア」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時、<br>この攻撃の貫通力+{1}し、<br>攻撃後、スキルランプを全て消灯する",
+      "effects": [
+        {
+          "id": 91000935,
+          "value": 3500,
+          "_detail": {
+            "id": 91000935
+          }
+        },
+        {
+          "id": 91001328,
+          "value": 10000,
+          "_detail": {
+            "id": 91001328
+          }
+        },
+        {
+          "id": 91001329,
+          "value": 100,
+          "_detail": {
+            "id": 91001329
+          }
+        },
+        {
+          "id": 91001330,
+          "value": 200,
+          "_detail": {
+            "id": 91001330
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 167,
+      "break_power": 12
+    },
+    "12001543": {
+      "name": "トリプルスピア",
+      "id": 12001543,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、対象に「氷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>「トリプルスピア」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時、<br>この攻撃の貫通力+{1}し、<br>攻撃後、スキルランプを全て消灯する",
+      "effects": [
+        {
+          "id": 91000935,
+          "value": 3500,
+          "_detail": {
+            "id": 91000935
+          }
+        },
+        {
+          "id": 91001328,
+          "value": 10000,
+          "_detail": {
+            "id": 91001328
+          }
+        },
+        {
+          "id": 91001329,
+          "value": 100,
+          "_detail": {
+            "id": 91001329
+          }
+        },
+        {
+          "id": 91001330,
+          "value": 200,
+          "_detail": {
+            "id": 91001330
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 176,
+      "break_power": 13
+    },
+    "14001544": {
+      "name": "サンシャインスプラッシュ",
+      "id": 14001544,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 20000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91001331,
+          "value": 5000,
+          "_detail": {
+            "id": 91001331
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 240,
+      "break_power": 30
+    },
+    "14001545": {
+      "name": "サンシャインスプラッシュ",
+      "id": 14001545,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 20000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91001331,
+          "value": 5000,
+          "_detail": {
+            "id": 91001331
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 255,
+      "break_power": 31
+    },
+    "14001546": {
+      "name": "サンシャインスプラッシュ",
+      "id": 14001546,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 20000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91001331,
+          "value": 5000,
+          "_detail": {
+            "id": 91001331
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 270,
+      "break_power": 33
+    },
+    "14001547": {
+      "name": "サンシャインスプラッシュ",
+      "id": 14001547,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 20000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91001331,
+          "value": 5000,
+          "_detail": {
+            "id": 91001331
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 285,
+      "break_power": 35
+    },
+    "14001548": {
+      "name": "サンシャインスプラッシュ",
+      "id": 14001548,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        6
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 20000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91001331,
+          "value": 5000,
+          "_detail": {
+            "id": 91001331
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 300,
+      "break_power": 37
+    }
+  },
+  "initial_wt": 237,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「魔攻+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "id": 91002004
+              }
+            },
+            {
+              "id": 91001020,
+              "value": 1500,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "id": 91001020
+              }
+            }
+          ],
+          "id": 11001534,
+          "max_lamp": 0,
+          "name": "サマーソルト",
+          "power": 69,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アイテムゲージを回復<br>自身の魔攻アップ",
+          "timeline_hash": "6830283326227204120",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「魔攻+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "id": 91002004
+              }
+            },
+            {
+              "id": 91001020,
+              "value": 1500,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "id": 91001020
+              }
+            }
+          ],
+          "id": 11001535,
+          "max_lamp": 0,
+          "name": "サマーソルト",
+          "power": 73,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アイテムゲージを回復<br>自身の魔攻アップ",
+          "timeline_hash": "6830283326227204120",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「魔攻+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "id": 91002004
+              }
+            },
+            {
+              "id": 91001020,
+              "value": 1500,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "id": 91001020
+              }
+            }
+          ],
+          "id": 11001536,
+          "max_lamp": 0,
+          "name": "サマーソルト",
+          "power": 77,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アイテムゲージを回復<br>自身の魔攻アップ",
+          "timeline_hash": "6830283326227204120",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「魔攻+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "id": 91002004
+              }
+            },
+            {
+              "id": 91001020,
+              "value": 1500,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "id": 91001020
+              }
+            }
+          ],
+          "id": 11001537,
+          "max_lamp": 0,
+          "name": "サマーソルト",
+          "power": 81,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アイテムゲージを回復<br>自身の魔攻アップ",
+          "timeline_hash": "6830283326227204120",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、アイテムゲージを{0}%回復し、<br>自身に「魔攻+{1}%」を1回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91002004,
+              "value": 1000,
+              "_detail": {
+                "id": 91002004
+              }
+            },
+            {
+              "id": 91001020,
+              "value": 1500,
+              "_detail": {
+                "description": "魔攻アップ(1回)",
+                "id": 91001020
+              }
+            }
+          ],
+          "id": 11001538,
+          "max_lamp": 0,
+          "name": "サマーソルト",
+          "power": 86,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アイテムゲージを回復<br>自身の魔攻アップ",
+          "timeline_hash": "6830283326227204120",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 11,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「氷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>「トリプルスピア」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時、<br>この攻撃の貫通力+{1}し、<br>攻撃後、スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91000935,
+              "value": 3500,
+              "_detail": {
+                "id": 91000935
+              }
+            },
+            {
+              "id": 91001328,
+              "value": 10000,
+              "_detail": {
+                "id": 91001328
+              }
+            },
+            {
+              "id": 91001329,
+              "value": 100,
+              "_detail": {
+                "id": 91001329
+              }
+            },
+            {
+              "id": 91001330,
+              "value": 200,
+              "_detail": {
+                "id": 91001330
+              }
+            }
+          ],
+          "id": 12001539,
+          "max_lamp": 2,
+          "name": "トリプルスピア",
+          "power": 141,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "2186025754385462788",
+          "summary": "攻撃前、対象の氷属性耐性ダウン<br>スキルランプの点灯数が2個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が2個の時、この攻撃の貫通力アップし、攻撃後、スキルランプを全て消灯する",
+          "timeline_hash": "502986096653434756",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 11,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「氷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>「トリプルスピア」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時、<br>この攻撃の貫通力+{1}し、<br>攻撃後、スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91000935,
+              "value": 3500,
+              "_detail": {
+                "id": 91000935
+              }
+            },
+            {
+              "id": 91001328,
+              "value": 10000,
+              "_detail": {
+                "id": 91001328
+              }
+            },
+            {
+              "id": 91001329,
+              "value": 100,
+              "_detail": {
+                "id": 91001329
+              }
+            },
+            {
+              "id": 91001330,
+              "value": 200,
+              "_detail": {
+                "id": 91001330
+              }
+            }
+          ],
+          "id": 12001540,
+          "max_lamp": 2,
+          "name": "トリプルスピア",
+          "power": 149,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "2186025754385462788",
+          "summary": "攻撃前、対象の氷属性耐性ダウン<br>スキルランプの点灯数が2個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が2個の時、この攻撃の貫通力アップし、攻撃後、スキルランプを全て消灯する",
+          "timeline_hash": "502986096653434756",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 12,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「氷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>「トリプルスピア」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時、<br>この攻撃の貫通力+{1}し、<br>攻撃後、スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91000935,
+              "value": 3500,
+              "_detail": {
+                "id": 91000935
+              }
+            },
+            {
+              "id": 91001328,
+              "value": 10000,
+              "_detail": {
+                "id": 91001328
+              }
+            },
+            {
+              "id": 91001329,
+              "value": 100,
+              "_detail": {
+                "id": 91001329
+              }
+            },
+            {
+              "id": 91001330,
+              "value": 200,
+              "_detail": {
+                "id": 91001330
+              }
+            }
+          ],
+          "id": 12001541,
+          "max_lamp": 2,
+          "name": "トリプルスピア",
+          "power": 158,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "2186025754385462788",
+          "summary": "攻撃前、対象の氷属性耐性ダウン<br>スキルランプの点灯数が2個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が2個の時、この攻撃の貫通力アップし、攻撃後、スキルランプを全て消灯する",
+          "timeline_hash": "502986096653434756",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 12,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「氷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>「トリプルスピア」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時、<br>この攻撃の貫通力+{1}し、<br>攻撃後、スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91000935,
+              "value": 3500,
+              "_detail": {
+                "id": 91000935
+              }
+            },
+            {
+              "id": 91001328,
+              "value": 10000,
+              "_detail": {
+                "id": 91001328
+              }
+            },
+            {
+              "id": 91001329,
+              "value": 100,
+              "_detail": {
+                "id": 91001329
+              }
+            },
+            {
+              "id": 91001330,
+              "value": 200,
+              "_detail": {
+                "id": 91001330
+              }
+            }
+          ],
+          "id": 12001542,
+          "max_lamp": 2,
+          "name": "トリプルスピア",
+          "power": 167,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "2186025754385462788",
+          "summary": "攻撃前、対象の氷属性耐性ダウン<br>スキルランプの点灯数が2個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が2個の時、この攻撃の貫通力アップし、攻撃後、スキルランプを全て消灯する",
+          "timeline_hash": "502986096653434756",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 13,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「氷属性耐性-{0}%」を2回攻撃を受けるまで付与<br>「トリプルスピア」はスキルランプを持ち、点灯数が2個の時、効果内容が変化する<br>スキルランプは最大2個点灯できる<br><br>スキルランプの点灯数が2個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が2個の時、<br>この攻撃の貫通力+{1}し、<br>攻撃後、スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91000935,
+              "value": 3500,
+              "_detail": {
+                "id": 91000935
+              }
+            },
+            {
+              "id": 91001328,
+              "value": 10000,
+              "_detail": {
+                "id": 91001328
+              }
+            },
+            {
+              "id": 91001329,
+              "value": 100,
+              "_detail": {
+                "id": 91001329
+              }
+            },
+            {
+              "id": 91001330,
+              "value": 200,
+              "_detail": {
+                "id": 91001330
+              }
+            }
+          ],
+          "id": 12001543,
+          "max_lamp": 2,
+          "name": "トリプルスピア",
+          "power": 176,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "2186025754385462788",
+          "summary": "攻撃前、対象の氷属性耐性ダウン<br>スキルランプの点灯数が2個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が2個の時、この攻撃の貫通力アップし、攻撃後、スキルランプを全て消灯する",
+          "timeline_hash": "502986096653434756",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 20000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91001331,
+              "value": 5000,
+              "_detail": {
+                "id": 91001331
+              }
+            }
+          ],
+          "id": 14001544,
+          "max_lamp": 0,
+          "name": "サンシャインスプラッシュ",
+          "power": 240,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "9003840466985274741",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、自身のスキルダメージアップ",
+          "timeline_hash": "2340892630830054079",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 20000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91001331,
+              "value": 5000,
+              "_detail": {
+                "id": 91001331
+              }
+            }
+          ],
+          "id": 14001545,
+          "max_lamp": 0,
+          "name": "サンシャインスプラッシュ",
+          "power": 255,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "9003840466985274741",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、自身のスキルダメージアップ",
+          "timeline_hash": "2340892630830054079",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 20000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91001331,
+              "value": 5000,
+              "_detail": {
+                "id": 91001331
+              }
+            }
+          ],
+          "id": 14001546,
+          "max_lamp": 0,
+          "name": "サンシャインスプラッシュ",
+          "power": 270,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "9003840466985274741",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、自身のスキルダメージアップ",
+          "timeline_hash": "2340892630830054079",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 20000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91001331,
+              "value": 5000,
+              "_detail": {
+                "id": 91001331
+              }
+            }
+          ],
+          "id": 14001547,
+          "max_lamp": 0,
+          "name": "サンシャインスプラッシュ",
+          "power": 285,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "9003840466985274741",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、自身のスキルダメージアップ",
+          "timeline_hash": "2340892630830054079",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            6
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、自身に「スキルダメージ+{1}%」を付与(上限100%)",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 20000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91001331,
+              "value": 5000,
+              "_detail": {
+                "id": 91001331
+              }
+            }
+          ],
+          "id": 14001548,
+          "max_lamp": 0,
+          "name": "サンシャインスプラッシュ",
+          "power": 300,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "9003840466985274741",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、自身のスキルダメージアップ",
+          "timeline_hash": "2340892630830054079",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        }
+      ]
+    }
+  ]
+}

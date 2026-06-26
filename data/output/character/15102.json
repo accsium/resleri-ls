@@ -1,0 +1,1254 @@
+{
+  "id": 15102,
+  "attack_attributes": [
+    5
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 3,
+  "support_color_id": 5,
+  "trait_color_name_ja": "黄",
+  "trait_color_name_cn": "黄",
+  "support_color_name_ja": "緑",
+  "support_color_name_cn": "绿",
+  "battle_tool_trait_names_ja": [
+    "破壊力上昇",
+    "魔力の祝福"
+  ],
+  "battle_tool_trait_names_cn": [
+    "破坏力提升",
+    "魔力之祝福"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "単体攻撃威力上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "单体攻击威力提升"
+  ],
+  "battle_tool_trait_ids": [
+    51,
+    5
+  ],
+  "equipment_tool_trait_ids": [
+    27
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980157,
+        "combat_power_coefficient": 2500,
+        "condition_ids": [
+          8
+        ]
+      }
+    ],
+    "description": "得意属性が火属性のキャラは「クリティカルダメージ+25%」",
+    "name": "火傷させちゃうんだから！"
+  },
+  "ability_ids": [
+    1990256,
+    1990257
+  ],
+  "support_ability_ids": [
+    500414,
+    500358,
+    500302,
+    500246,
+    500190,
+    500134,
+    500078,
+    500022
+  ],
+  "board_ability1_ids": [
+    1990463,
+    1990438,
+    1990413
+  ],
+  "_skillDetails": {
+    "500022": {
+      "id": 500022,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500022,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "id": 500022
+          }
+        }
+      ]
+    },
+    "500078": {
+      "id": 500078,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500022,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "id": 500022
+          }
+        }
+      ]
+    },
+    "500134": {
+      "id": 500134,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500022,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "id": 500022
+          }
+        }
+      ]
+    },
+    "500190": {
+      "id": 500190,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500022,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "id": 500022
+          }
+        }
+      ]
+    },
+    "500246": {
+      "id": 500246,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500022,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "id": 500022
+          }
+        }
+      ]
+    },
+    "500302": {
+      "id": 500302,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500022,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "id": 500022
+          }
+        }
+      ]
+    },
+    "500358": {
+      "id": 500358,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500022,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "id": 500022
+          }
+        }
+      ]
+    },
+    "500414": {
+      "id": 500414,
+      "description": "得意属性が火属性の時、ブレイクダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500022,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が火属性の時、ブレイクダメージUPを付与",
+            "id": 500022
+          }
+        }
+      ]
+    },
+    "1980157": {
+      "name": "火傷させちゃうんだから！",
+      "id": 1980157,
+      "description": "得意属性が火属性のキャラは「クリティカルダメージ+{0}%」",
+      "effects": [
+        {
+          "id": 72500008,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/常時/クリティカルダメージアップ]",
+            "id": 72500008
+          }
+        }
+      ]
+    },
+    "1990256": {
+      "name": "前のめりおてんば娘",
+      "id": 1990256,
+      "description": "自身が受ける、与えるダメージ強化の効果量+{0}%",
+      "effects": [
+        {
+          "id": 72001058,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/受けるダメージ強化の効果量アップ]",
+            "id": 72001058
+          }
+        }
+      ]
+    },
+    "1990257": {
+      "name": "一矢報いてやるわ！",
+      "id": 1990257,
+      "description": "スキル発動後、自身に「魔攻+{0}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 72001127,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/魔攻上昇(上限50%)]",
+            "id": 72001127
+          }
+        }
+      ]
+    },
+    "1990413": {
+      "name": "ダメージアップⅢ",
+      "id": 1990413,
+      "description": "スキルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001430,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/スキルダメージUP][ボードアビリティA2]",
+            "id": 713001430
+          }
+        }
+      ]
+    },
+    "1990438": {
+      "name": "ダメージアップⅡ",
+      "id": 1990438,
+      "description": "スキルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001430,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/スキルダメージUP][ボードアビリティA2]",
+            "id": 713001430
+          }
+        }
+      ]
+    },
+    "1990463": {
+      "name": "ダメージアップⅠ",
+      "id": 1990463,
+      "description": "スキルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001430,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/スキルダメージUP][ボードアビリティA2]",
+            "id": 713001430
+          }
+        }
+      ]
+    },
+    "11001919": {
+      "name": "スフィアファイア",
+      "id": 11001919,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001311,
+          "value": 2000,
+          "_detail": {
+            "id": 91001311
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 72,
+      "break_power": 6
+    },
+    "11001920": {
+      "name": "スフィアファイア",
+      "id": 11001920,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001311,
+          "value": 2000,
+          "_detail": {
+            "id": 91001311
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 76,
+      "break_power": 6
+    },
+    "11001921": {
+      "name": "スフィアファイア",
+      "id": 11001921,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001311,
+          "value": 2000,
+          "_detail": {
+            "id": 91001311
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 81,
+      "break_power": 6
+    },
+    "11001922": {
+      "name": "スフィアファイア",
+      "id": 11001922,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001311,
+          "value": 2000,
+          "_detail": {
+            "id": 91001311
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 85,
+      "break_power": 6
+    },
+    "11001923": {
+      "name": "スフィアファイア",
+      "id": 11001923,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与",
+      "effects": [
+        {
+          "id": 91001311,
+          "value": 2000,
+          "_detail": {
+            "id": 91001311
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 90,
+      "break_power": 7
+    },
+    "12001924": {
+      "name": "フェスターリーシュ",
+      "id": 12001924,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、アタッカーの味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>アタッカーの味方全員に「クリティカルダメージ+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001402,
+          "value": 2000,
+          "_detail": {
+            "id": 91001402
+          }
+        },
+        {
+          "id": 91001403,
+          "value": 1000,
+          "_detail": {
+            "id": 91001403
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 265,
+      "break_power": 27
+    },
+    "12001925": {
+      "name": "フェスターリーシュ",
+      "id": 12001925,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、アタッカーの味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>アタッカーの味方全員に「クリティカルダメージ+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001402,
+          "value": 2000,
+          "_detail": {
+            "id": 91001402
+          }
+        },
+        {
+          "id": 91001403,
+          "value": 1000,
+          "_detail": {
+            "id": 91001403
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 281,
+      "break_power": 28
+    },
+    "12001926": {
+      "name": "フェスターリーシュ",
+      "id": 12001926,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、アタッカーの味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>アタッカーの味方全員に「クリティカルダメージ+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001402,
+          "value": 2000,
+          "_detail": {
+            "id": 91001402
+          }
+        },
+        {
+          "id": 91001403,
+          "value": 1000,
+          "_detail": {
+            "id": 91001403
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 298,
+      "break_power": 30
+    },
+    "12001927": {
+      "name": "フェスターリーシュ",
+      "id": 12001927,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、アタッカーの味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>アタッカーの味方全員に「クリティカルダメージ+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001402,
+          "value": 2000,
+          "_detail": {
+            "id": 91001402
+          }
+        },
+        {
+          "id": 91001403,
+          "value": 1000,
+          "_detail": {
+            "id": 91001403
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 314,
+      "break_power": 31
+    },
+    "12001928": {
+      "name": "フェスターリーシュ",
+      "id": 12001928,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、アタッカーの味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>アタッカーの味方全員に「クリティカルダメージ+{1}%」を付与(上限50%)",
+      "effects": [
+        {
+          "id": 91001402,
+          "value": 2000,
+          "_detail": {
+            "id": 91001402
+          }
+        },
+        {
+          "id": 91001403,
+          "value": 1000,
+          "_detail": {
+            "id": 91001403
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 331,
+      "break_power": 33
+    },
+    "14001929": {
+      "name": "秘策・ハイパーメテオール",
+      "id": 14001929,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与<br>クリティカル攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001311,
+          "value": 3000,
+          "_detail": {
+            "id": 91001311
+          }
+        },
+        {
+          "id": 91001283,
+          "value": 100,
+          "_detail": {
+            "id": 91001283
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 252,
+      "break_power": 30
+    },
+    "14001930": {
+      "name": "秘策・ハイパーメテオール",
+      "id": 14001930,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与<br>クリティカル攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001311,
+          "value": 3000,
+          "_detail": {
+            "id": 91001311
+          }
+        },
+        {
+          "id": 91001283,
+          "value": 100,
+          "_detail": {
+            "id": 91001283
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 267,
+      "break_power": 31
+    },
+    "14001931": {
+      "name": "秘策・ハイパーメテオール",
+      "id": 14001931,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与<br>クリティカル攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001311,
+          "value": 3000,
+          "_detail": {
+            "id": 91001311
+          }
+        },
+        {
+          "id": 91001283,
+          "value": 100,
+          "_detail": {
+            "id": 91001283
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 283,
+      "break_power": 33
+    },
+    "14001932": {
+      "name": "秘策・ハイパーメテオール",
+      "id": 14001932,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与<br>クリティカル攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001311,
+          "value": 3000,
+          "_detail": {
+            "id": 91001311
+          }
+        },
+        {
+          "id": 91001283,
+          "value": 100,
+          "_detail": {
+            "id": 91001283
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 299,
+      "break_power": 35
+    },
+    "14001933": {
+      "name": "秘策・ハイパーメテオール",
+      "id": 14001933,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        5
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与<br>クリティカル攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+      "effects": [
+        {
+          "id": 91001311,
+          "value": 3000,
+          "_detail": {
+            "id": 91001311
+          }
+        },
+        {
+          "id": 91001283,
+          "value": 100,
+          "_detail": {
+            "id": 91001283
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 315,
+      "break_power": 37
+    }
+  },
+  "initial_wt": 231,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001311,
+              "value": 2000,
+              "_detail": {
+                "id": 91001311
+              }
+            }
+          ],
+          "id": 11001919,
+          "max_lamp": 0,
+          "name": "スフィアファイア",
+          "power": 72,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ",
+          "timeline_hash": "7504289318276187895",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001311,
+              "value": 2000,
+              "_detail": {
+                "id": 91001311
+              }
+            }
+          ],
+          "id": 11001920,
+          "max_lamp": 0,
+          "name": "スフィアファイア",
+          "power": 76,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ",
+          "timeline_hash": "7504289318276187895",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001311,
+              "value": 2000,
+              "_detail": {
+                "id": 91001311
+              }
+            }
+          ],
+          "id": 11001921,
+          "max_lamp": 0,
+          "name": "スフィアファイア",
+          "power": 81,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ",
+          "timeline_hash": "7504289318276187895",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001311,
+              "value": 2000,
+              "_detail": {
+                "id": 91001311
+              }
+            }
+          ],
+          "id": 11001922,
+          "max_lamp": 0,
+          "name": "スフィアファイア",
+          "power": 85,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ",
+          "timeline_hash": "7504289318276187895",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与",
+          "effects": [
+            {
+              "id": 91001311,
+              "value": 2000,
+              "_detail": {
+                "id": 91001311
+              }
+            }
+          ],
+          "id": 11001923,
+          "max_lamp": 0,
+          "name": "スフィアファイア",
+          "power": 90,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ",
+          "timeline_hash": "7504289318276187895",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 27,
+          "break_power_type": 2,
+          "description": "攻撃後、アタッカーの味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>アタッカーの味方全員に「クリティカルダメージ+{1}%」を付与(上限50%)",
+          "effects": [
+            {
+              "id": 91001402,
+              "value": 2000,
+              "_detail": {
+                "id": 91001402
+              }
+            },
+            {
+              "id": 91001403,
+              "value": 1000,
+              "_detail": {
+                "id": 91001403
+              }
+            }
+          ],
+          "id": 12001924,
+          "max_lamp": 0,
+          "name": "フェスターリーシュ",
+          "power": 265,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アタッカーの味方全員のクリティカル確率アップとクリティカルダメージアップ",
+          "timeline_hash": "3464510766360260965",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 28,
+          "break_power_type": 2,
+          "description": "攻撃後、アタッカーの味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>アタッカーの味方全員に「クリティカルダメージ+{1}%」を付与(上限50%)",
+          "effects": [
+            {
+              "id": 91001402,
+              "value": 2000,
+              "_detail": {
+                "id": 91001402
+              }
+            },
+            {
+              "id": 91001403,
+              "value": 1000,
+              "_detail": {
+                "id": 91001403
+              }
+            }
+          ],
+          "id": 12001925,
+          "max_lamp": 0,
+          "name": "フェスターリーシュ",
+          "power": 281,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アタッカーの味方全員のクリティカル確率アップとクリティカルダメージアップ",
+          "timeline_hash": "3464510766360260965",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、アタッカーの味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>アタッカーの味方全員に「クリティカルダメージ+{1}%」を付与(上限50%)",
+          "effects": [
+            {
+              "id": 91001402,
+              "value": 2000,
+              "_detail": {
+                "id": 91001402
+              }
+            },
+            {
+              "id": 91001403,
+              "value": 1000,
+              "_detail": {
+                "id": 91001403
+              }
+            }
+          ],
+          "id": 12001926,
+          "max_lamp": 0,
+          "name": "フェスターリーシュ",
+          "power": 298,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アタッカーの味方全員のクリティカル確率アップとクリティカルダメージアップ",
+          "timeline_hash": "3464510766360260965",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃後、アタッカーの味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>アタッカーの味方全員に「クリティカルダメージ+{1}%」を付与(上限50%)",
+          "effects": [
+            {
+              "id": 91001402,
+              "value": 2000,
+              "_detail": {
+                "id": 91001402
+              }
+            },
+            {
+              "id": 91001403,
+              "value": 1000,
+              "_detail": {
+                "id": 91001403
+              }
+            }
+          ],
+          "id": 12001927,
+          "max_lamp": 0,
+          "name": "フェスターリーシュ",
+          "power": 314,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アタッカーの味方全員のクリティカル確率アップとクリティカルダメージアップ",
+          "timeline_hash": "3464510766360260965",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃後、アタッカーの味方全員に「クリティカル確率+{0}%」を付与(上限100%)し、<br>アタッカーの味方全員に「クリティカルダメージ+{1}%」を付与(上限50%)",
+          "effects": [
+            {
+              "id": 91001402,
+              "value": 2000,
+              "_detail": {
+                "id": 91001402
+              }
+            },
+            {
+              "id": 91001403,
+              "value": 1000,
+              "_detail": {
+                "id": 91001403
+              }
+            }
+          ],
+          "id": 12001928,
+          "max_lamp": 0,
+          "name": "フェスターリーシュ",
+          "power": 331,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "6523615492000077891",
+          "summary": "攻撃後、アタッカーの味方全員のクリティカル確率アップとクリティカルダメージアップ",
+          "timeline_hash": "3464510766360260965",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与<br>クリティカル攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001311,
+              "value": 3000,
+              "_detail": {
+                "id": 91001311
+              }
+            },
+            {
+              "id": 91001283,
+              "value": 100,
+              "_detail": {
+                "id": 91001283
+              }
+            }
+          ],
+          "id": 14001929,
+          "max_lamp": 0,
+          "name": "秘策・ハイパーメテオール",
+          "power": 252,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "4390774953375191165",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ<br>クリティカル攻撃時、次の味方のパネルをバーストパネルに変換",
+          "timeline_hash": "3035855463987944934",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与<br>クリティカル攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001311,
+              "value": 3000,
+              "_detail": {
+                "id": 91001311
+              }
+            },
+            {
+              "id": 91001283,
+              "value": 100,
+              "_detail": {
+                "id": 91001283
+              }
+            }
+          ],
+          "id": 14001930,
+          "max_lamp": 0,
+          "name": "秘策・ハイパーメテオール",
+          "power": 267,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "4390774953375191165",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ<br>クリティカル攻撃時、次の味方のパネルをバーストパネルに変換",
+          "timeline_hash": "3035855463987944934",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与<br>クリティカル攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001311,
+              "value": 3000,
+              "_detail": {
+                "id": 91001311
+              }
+            },
+            {
+              "id": 91001283,
+              "value": 100,
+              "_detail": {
+                "id": 91001283
+              }
+            }
+          ],
+          "id": 14001931,
+          "max_lamp": 0,
+          "name": "秘策・ハイパーメテオール",
+          "power": 283,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "4390774953375191165",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ<br>クリティカル攻撃時、次の味方のパネルをバーストパネルに変換",
+          "timeline_hash": "3035855463987944934",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 35,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与<br>クリティカル攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001311,
+              "value": 3000,
+              "_detail": {
+                "id": 91001311
+              }
+            },
+            {
+              "id": 91001283,
+              "value": 100,
+              "_detail": {
+                "id": 91001283
+              }
+            }
+          ],
+          "id": 14001932,
+          "max_lamp": 0,
+          "name": "秘策・ハイパーメテオール",
+          "power": 299,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "4390774953375191165",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ<br>クリティカル攻撃時、次の味方のパネルをバーストパネルに変換",
+          "timeline_hash": "3035855463987944934",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            5
+          ],
+          "break_power": 37,
+          "break_power_type": 2,
+          "description": "攻撃後、対象に「受けるクリティカルダメージ+{0}%」を2回攻撃を受けるまで付与<br>クリティカル攻撃時、このスキル使用前にタイムラインに並んでいる、次の味方のパネル1つをバーストパネルに変換(空パネルの時は生成)",
+          "effects": [
+            {
+              "id": 91001311,
+              "value": 3000,
+              "_detail": {
+                "id": 91001311
+              }
+            },
+            {
+              "id": 91001283,
+              "value": 100,
+              "_detail": {
+                "id": 91001283
+              }
+            }
+          ],
+          "id": 14001933,
+          "max_lamp": 0,
+          "name": "秘策・ハイパーメテオール",
+          "power": 315,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "4390774953375191165",
+          "summary": "攻撃後、対象の受けるクリティカルダメージアップ<br>クリティカル攻撃時、次の味方のパネルをバーストパネルに変換",
+          "timeline_hash": "3035855463987944934",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        }
+      ]
+    }
+  ]
+}

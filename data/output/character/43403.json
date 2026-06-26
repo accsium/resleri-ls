@@ -1,0 +1,1784 @@
+{
+  "id": 43403,
+  "attack_attributes": [
+    7
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 5,
+  "support_color_id": 1,
+  "trait_color_name_ja": "緑",
+  "trait_color_name_cn": "绿",
+  "support_color_name_ja": "青",
+  "support_color_name_cn": "蓝",
+  "battle_tool_trait_names_ja": [
+    "雷の呪詛",
+    "守護の祝福"
+  ],
+  "battle_tool_trait_names_cn": [
+    "雷之诅咒",
+    "守护之祝福"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "雷スキル威力上昇"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "雷技能威力提升"
+  ],
+  "battle_tool_trait_ids": [
+    21,
+    10
+  ],
+  "equipment_tool_trait_ids": [
+    71
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980167,
+        "combat_power_coefficient": 2500,
+        "condition_ids": [
+          27
+        ]
+      }
+    ],
+    "description": "「騎士」は「物防・魔防+35%」",
+    "name": "星夜彩る優艶な騎士"
+  },
+  "ability_ids": [
+    1990278,
+    1990279
+  ],
+  "support_ability_ids": [
+    500402,
+    500346,
+    500290,
+    500234,
+    500178,
+    500122,
+    500066,
+    500010
+  ],
+  "board_ability1_ids": [
+    1990448,
+    1990423,
+    1990398
+  ],
+  "_skillDetails": {
+    "500010": {
+      "id": 500010,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500010,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "id": 500010
+          }
+        }
+      ]
+    },
+    "500066": {
+      "id": 500066,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500010,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "id": 500010
+          }
+        }
+      ]
+    },
+    "500122": {
+      "id": 500122,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500010,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "id": 500010
+          }
+        }
+      ]
+    },
+    "500178": {
+      "id": 500178,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500010,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "id": 500010
+          }
+        }
+      ]
+    },
+    "500234": {
+      "id": 500234,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500010,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "id": 500010
+          }
+        }
+      ]
+    },
+    "500290": {
+      "id": 500290,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500010,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "id": 500010
+          }
+        }
+      ]
+    },
+    "500346": {
+      "id": 500346,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500010,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "id": 500010
+          }
+        }
+      ]
+    },
+    "500402": {
+      "id": 500402,
+      "description": "得意属性が雷属性の時、クリティカルダメージ+{0}％",
+      "effects": [
+        {
+          "id": 500010,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が雷属性の時、クリティカルダメージUPを付与",
+            "id": 500010
+          }
+        }
+      ]
+    },
+    "1980167": {
+      "name": "星夜彩る優艶な騎士",
+      "id": 1980167,
+      "description": "「騎士」は「物防・魔防+{0}%」",
+      "effects": [
+        {
+          "id": 72500004,
+          "value": 3500,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "id": 72500004
+          }
+        },
+        {
+          "id": 72500005,
+          "value": 3500,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "id": 72500005
+          }
+        }
+      ]
+    },
+    "1990278": {
+      "name": "魅惑の曲線美",
+      "id": 1990278,
+      "description": "敵にとても狙われやすくなる<br>自身の物防・魔防+{0}%",
+      "effects": [
+        {
+          "id": 72001113,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "id": 72001113
+          }
+        },
+        {
+          "id": 72001114,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "id": 72001114
+          }
+        },
+        {
+          "id": 72000914,
+          "value": 10000,
+          "_detail": {
+            "description": "狙われやすさ+100％",
+            "id": 72000914
+          }
+        }
+      ]
+    },
+    "1990279": {
+      "name": "星の輝きをこの手に",
+      "id": 1990279,
+      "description": "バトル開始時、「エレクトリカルワルツ」のスキルランプを3個点灯する<br>自身がパネル獲得時または攻撃を受けた時、「エレクトリカルワルツ」のスキルランプを1個点灯する",
+      "effects": [
+        {
+          "id": 72001094,
+          "value": 300,
+          "_detail": {
+            "description": "[スキルランプ点灯]",
+            "id": 72001094
+          }
+        },
+        {
+          "id": 72001094,
+          "value": 100,
+          "_detail": {
+            "description": "[スキルランプ点灯]",
+            "id": 72001094
+          }
+        },
+        {
+          "id": 72001094,
+          "value": 100,
+          "_detail": {
+            "description": "[スキルランプ点灯]",
+            "id": 72001094
+          }
+        }
+      ]
+    },
+    "1990398": {
+      "name": "ガードアップⅢ",
+      "id": 1990398,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "id": 713001415,
+          "value": 1000,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "id": 713001415
+          }
+        }
+      ]
+    },
+    "1990423": {
+      "name": "ガードアップⅡ",
+      "id": 1990423,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "id": 713001415,
+          "value": 600,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "id": 713001415
+          }
+        }
+      ]
+    },
+    "1990448": {
+      "name": "ガードアップⅠ",
+      "id": 1990448,
+      "description": "受けるダメージ-{0}%",
+      "effects": [
+        {
+          "id": 713001415,
+          "value": 300,
+          "_detail": {
+            "description": "受けるダメージ-{0}%",
+            "id": 713001415
+          }
+        }
+      ]
+    },
+    "11002089": {
+      "name": "スイングスター",
+      "id": 11002089,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを{0}%回復し、<br>対象に「ダメージ-{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000926,
+          "value": 1000,
+          "_detail": {
+            "id": 91000926
+          }
+        },
+        {
+          "id": 91000916,
+          "value": 1000,
+          "_detail": {
+            "id": 91000916
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "id": 91001007
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 57,
+      "break_power": 6
+    },
+    "11002090": {
+      "name": "スイングスター",
+      "id": 11002090,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを{0}%回復し、<br>対象に「ダメージ-{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000926,
+          "value": 1000,
+          "_detail": {
+            "id": 91000926
+          }
+        },
+        {
+          "id": 91000916,
+          "value": 1000,
+          "_detail": {
+            "id": 91000916
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "id": 91001007
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 60,
+      "break_power": 6
+    },
+    "11002091": {
+      "name": "スイングスター",
+      "id": 11002091,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを{0}%回復し、<br>対象に「ダメージ-{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000926,
+          "value": 1000,
+          "_detail": {
+            "id": 91000926
+          }
+        },
+        {
+          "id": 91000916,
+          "value": 1000,
+          "_detail": {
+            "id": 91000916
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "id": 91001007
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 64,
+      "break_power": 6
+    },
+    "11002092": {
+      "name": "スイングスター",
+      "id": 11002092,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを{0}%回復し、<br>対象に「ダメージ-{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000926,
+          "value": 1000,
+          "_detail": {
+            "id": 91000926
+          }
+        },
+        {
+          "id": 91000916,
+          "value": 1000,
+          "_detail": {
+            "id": 91000916
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "id": 91001007
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 67,
+      "break_power": 6
+    },
+    "11002093": {
+      "name": "スイングスター",
+      "id": 11002093,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを{0}%回復し、<br>対象に「ダメージ-{1}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91000926,
+          "value": 1000,
+          "_detail": {
+            "id": 91000926
+          }
+        },
+        {
+          "id": 91000916,
+          "value": 1000,
+          "_detail": {
+            "id": 91000916
+          }
+        },
+        {
+          "id": 91001007,
+          "value": 10000,
+          "_detail": {
+            "id": 91001007
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 71,
+      "break_power": 7
+    },
+    "12002094": {
+      "name": "エレクトリカルワルツ",
+      "id": 12002094,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身のHPを{0}%回復<br>「エレクトリカルワルツ」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃後、味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与し、<br>味方全員に「スキルダメージ+{2}%」と「雷属性ダメージ+{3}%」を2回行動終了するまで付与<br>スキルランプを全て消灯する",
+      "effects": [
+        {
+          "id": 91000948,
+          "value": 2000,
+          "_detail": {
+            "id": 91000948
+          }
+        },
+        {
+          "id": 91001465,
+          "value": 7000,
+          "_detail": {
+            "id": 91001465
+          }
+        },
+        {
+          "id": 91001466,
+          "value": 2000,
+          "_detail": {
+            "id": 91001466
+          }
+        },
+        {
+          "id": 91001467,
+          "value": 3000,
+          "_detail": {
+            "id": 91001467
+          }
+        },
+        {
+          "id": 91001340,
+          "value": 100,
+          "_detail": {
+            "id": 91001340
+          }
+        },
+        {
+          "id": 91001341,
+          "value": 300,
+          "_detail": {
+            "id": 91001341
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 206,
+      "break_power": 27
+    },
+    "12002095": {
+      "name": "エレクトリカルワルツ",
+      "id": 12002095,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身のHPを{0}%回復<br>「エレクトリカルワルツ」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃後、味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与し、<br>味方全員に「スキルダメージ+{2}%」と「雷属性ダメージ+{3}%」を2回行動終了するまで付与<br>スキルランプを全て消灯する",
+      "effects": [
+        {
+          "id": 91000948,
+          "value": 2000,
+          "_detail": {
+            "id": 91000948
+          }
+        },
+        {
+          "id": 91001465,
+          "value": 7000,
+          "_detail": {
+            "id": 91001465
+          }
+        },
+        {
+          "id": 91001466,
+          "value": 2000,
+          "_detail": {
+            "id": 91001466
+          }
+        },
+        {
+          "id": 91001467,
+          "value": 3000,
+          "_detail": {
+            "id": 91001467
+          }
+        },
+        {
+          "id": 91001340,
+          "value": 100,
+          "_detail": {
+            "id": 91001340
+          }
+        },
+        {
+          "id": 91001341,
+          "value": 300,
+          "_detail": {
+            "id": 91001341
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 218,
+      "break_power": 28
+    },
+    "12002096": {
+      "name": "エレクトリカルワルツ",
+      "id": 12002096,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身のHPを{0}%回復<br>「エレクトリカルワルツ」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃後、味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与し、<br>味方全員に「スキルダメージ+{2}%」と「雷属性ダメージ+{3}%」を2回行動終了するまで付与<br>スキルランプを全て消灯する",
+      "effects": [
+        {
+          "id": 91000948,
+          "value": 2000,
+          "_detail": {
+            "id": 91000948
+          }
+        },
+        {
+          "id": 91001465,
+          "value": 7000,
+          "_detail": {
+            "id": 91001465
+          }
+        },
+        {
+          "id": 91001466,
+          "value": 2000,
+          "_detail": {
+            "id": 91001466
+          }
+        },
+        {
+          "id": 91001467,
+          "value": 3000,
+          "_detail": {
+            "id": 91001467
+          }
+        },
+        {
+          "id": 91001340,
+          "value": 100,
+          "_detail": {
+            "id": 91001340
+          }
+        },
+        {
+          "id": 91001341,
+          "value": 300,
+          "_detail": {
+            "id": 91001341
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 231,
+      "break_power": 30
+    },
+    "12002097": {
+      "name": "エレクトリカルワルツ",
+      "id": 12002097,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身のHPを{0}%回復<br>「エレクトリカルワルツ」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃後、味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与し、<br>味方全員に「スキルダメージ+{2}%」と「雷属性ダメージ+{3}%」を2回行動終了するまで付与<br>スキルランプを全て消灯する",
+      "effects": [
+        {
+          "id": 91000948,
+          "value": 2000,
+          "_detail": {
+            "id": 91000948
+          }
+        },
+        {
+          "id": 91001465,
+          "value": 7000,
+          "_detail": {
+            "id": 91001465
+          }
+        },
+        {
+          "id": 91001466,
+          "value": 2000,
+          "_detail": {
+            "id": 91001466
+          }
+        },
+        {
+          "id": 91001467,
+          "value": 3000,
+          "_detail": {
+            "id": 91001467
+          }
+        },
+        {
+          "id": 91001340,
+          "value": 100,
+          "_detail": {
+            "id": 91001340
+          }
+        },
+        {
+          "id": 91001341,
+          "value": 300,
+          "_detail": {
+            "id": 91001341
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 244,
+      "break_power": 31
+    },
+    "12002098": {
+      "name": "エレクトリカルワルツ",
+      "id": 12002098,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃後、自身のHPを{0}%回復<br>「エレクトリカルワルツ」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃後、味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与し、<br>味方全員に「スキルダメージ+{2}%」と「雷属性ダメージ+{3}%」を2回行動終了するまで付与<br>スキルランプを全て消灯する",
+      "effects": [
+        {
+          "id": 91000948,
+          "value": 2000,
+          "_detail": {
+            "id": 91000948
+          }
+        },
+        {
+          "id": 91001465,
+          "value": 7000,
+          "_detail": {
+            "id": 91001465
+          }
+        },
+        {
+          "id": 91001466,
+          "value": 2000,
+          "_detail": {
+            "id": 91001466
+          }
+        },
+        {
+          "id": 91001467,
+          "value": 3000,
+          "_detail": {
+            "id": 91001467
+          }
+        },
+        {
+          "id": 91001340,
+          "value": 100,
+          "_detail": {
+            "id": 91001340
+          }
+        },
+        {
+          "id": 91001341,
+          "value": 300,
+          "_detail": {
+            "id": 91001341
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 257,
+      "break_power": 33
+    },
+    "14002099": {
+      "name": "ヴァリアントイルミネート",
+      "id": 14002099,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000925,
+          "value": 1500,
+          "_detail": {
+            "id": 91000925
+          }
+        },
+        {
+          "id": 91001474,
+          "value": 10000,
+          "_detail": {
+            "id": 91001474
+          }
+        },
+        {
+          "id": 91001469,
+          "value": 10000,
+          "_detail": {
+            "id": 91001469
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 420,
+      "break_power": 75
+    },
+    "14002100": {
+      "name": "ヴァリアントイルミネート",
+      "id": 14002100,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000925,
+          "value": 1500,
+          "_detail": {
+            "id": 91000925
+          }
+        },
+        {
+          "id": 91001474,
+          "value": 10000,
+          "_detail": {
+            "id": 91001474
+          }
+        },
+        {
+          "id": 91001469,
+          "value": 10000,
+          "_detail": {
+            "id": 91001469
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 446,
+      "break_power": 79
+    },
+    "14002101": {
+      "name": "ヴァリアントイルミネート",
+      "id": 14002101,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000925,
+          "value": 1500,
+          "_detail": {
+            "id": 91000925
+          }
+        },
+        {
+          "id": 91001474,
+          "value": 10000,
+          "_detail": {
+            "id": 91001474
+          }
+        },
+        {
+          "id": 91001469,
+          "value": 10000,
+          "_detail": {
+            "id": 91001469
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 472,
+      "break_power": 84
+    },
+    "14002102": {
+      "name": "ヴァリアントイルミネート",
+      "id": 14002102,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000925,
+          "value": 1500,
+          "_detail": {
+            "id": 91000925
+          }
+        },
+        {
+          "id": 91001474,
+          "value": 10000,
+          "_detail": {
+            "id": 91001474
+          }
+        },
+        {
+          "id": 91001469,
+          "value": 10000,
+          "_detail": {
+            "id": 91001469
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 498,
+      "break_power": 88
+    },
+    "14002103": {
+      "name": "ヴァリアントイルミネート",
+      "id": 14002103,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        7
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与",
+      "effects": [
+        {
+          "id": 91000925,
+          "value": 1500,
+          "_detail": {
+            "id": 91000925
+          }
+        },
+        {
+          "id": 91001474,
+          "value": 10000,
+          "_detail": {
+            "id": 91001474
+          }
+        },
+        {
+          "id": 91001469,
+          "value": 10000,
+          "_detail": {
+            "id": 91001469
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 525,
+      "break_power": 93
+    }
+  },
+  "initial_wt": 230,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを{0}%回復し、<br>対象に「ダメージ-{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 1000,
+              "_detail": {
+                "id": 91000926
+              }
+            },
+            {
+              "id": 91000916,
+              "value": 1000,
+              "_detail": {
+                "id": 91000916
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "id": 91001007
+              }
+            }
+          ],
+          "id": 11002089,
+          "max_lamp": 0,
+          "name": "スイングスター",
+          "power": 57,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを回復<br>対象のダメージダウン",
+          "timeline_hash": "5784802074874340441",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを{0}%回復し、<br>対象に「ダメージ-{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 1000,
+              "_detail": {
+                "id": 91000926
+              }
+            },
+            {
+              "id": 91000916,
+              "value": 1000,
+              "_detail": {
+                "id": 91000916
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "id": 91001007
+              }
+            }
+          ],
+          "id": 11002090,
+          "max_lamp": 0,
+          "name": "スイングスター",
+          "power": 60,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを回復<br>対象のダメージダウン",
+          "timeline_hash": "5784802074874340441",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを{0}%回復し、<br>対象に「ダメージ-{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 1000,
+              "_detail": {
+                "id": 91000926
+              }
+            },
+            {
+              "id": 91000916,
+              "value": 1000,
+              "_detail": {
+                "id": 91000916
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "id": 91001007
+              }
+            }
+          ],
+          "id": 11002091,
+          "max_lamp": 0,
+          "name": "スイングスター",
+          "power": 64,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを回復<br>対象のダメージダウン",
+          "timeline_hash": "5784802074874340441",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを{0}%回復し、<br>対象に「ダメージ-{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 1000,
+              "_detail": {
+                "id": 91000926
+              }
+            },
+            {
+              "id": 91000916,
+              "value": 1000,
+              "_detail": {
+                "id": 91000916
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "id": 91001007
+              }
+            }
+          ],
+          "id": 11002092,
+          "max_lamp": 0,
+          "name": "スイングスター",
+          "power": 67,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを回復<br>対象のダメージダウン",
+          "timeline_hash": "5784802074874340441",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを{0}%回復し、<br>対象に「ダメージ-{1}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91000926,
+              "value": 1000,
+              "_detail": {
+                "id": 91000926
+              }
+            },
+            {
+              "id": 91000916,
+              "value": 1000,
+              "_detail": {
+                "id": 91000916
+              }
+            },
+            {
+              "id": 91001007,
+              "value": 10000,
+              "_detail": {
+                "id": 91001007
+              }
+            }
+          ],
+          "id": 11002093,
+          "max_lamp": 0,
+          "name": "スイングスター",
+          "power": 71,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、自身のHPを回復<br>対象のダメージダウン",
+          "timeline_hash": "5784802074874340441",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 27,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復<br>「エレクトリカルワルツ」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃後、味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与し、<br>味方全員に「スキルダメージ+{2}%」と「雷属性ダメージ+{3}%」を2回行動終了するまで付与<br>スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91000948,
+              "value": 2000,
+              "_detail": {
+                "id": 91000948
+              }
+            },
+            {
+              "id": 91001465,
+              "value": 7000,
+              "_detail": {
+                "id": 91001465
+              }
+            },
+            {
+              "id": 91001466,
+              "value": 2000,
+              "_detail": {
+                "id": 91001466
+              }
+            },
+            {
+              "id": 91001467,
+              "value": 3000,
+              "_detail": {
+                "id": 91001467
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "id": 91001340
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "id": 91001341
+              }
+            }
+          ],
+          "id": 12002094,
+          "max_lamp": 3,
+          "name": "エレクトリカルワルツ",
+          "power": 206,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復<br>スキルランプの点灯数が3個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、攻撃後、味方全員に回避を付与し、スキルダメージアップと雷属性ダメージアップし、スキルランプを全て消灯する",
+          "timeline_hash": "610030599178343371",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 28,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復<br>「エレクトリカルワルツ」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃後、味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与し、<br>味方全員に「スキルダメージ+{2}%」と「雷属性ダメージ+{3}%」を2回行動終了するまで付与<br>スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91000948,
+              "value": 2000,
+              "_detail": {
+                "id": 91000948
+              }
+            },
+            {
+              "id": 91001465,
+              "value": 7000,
+              "_detail": {
+                "id": 91001465
+              }
+            },
+            {
+              "id": 91001466,
+              "value": 2000,
+              "_detail": {
+                "id": 91001466
+              }
+            },
+            {
+              "id": 91001467,
+              "value": 3000,
+              "_detail": {
+                "id": 91001467
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "id": 91001340
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "id": 91001341
+              }
+            }
+          ],
+          "id": 12002095,
+          "max_lamp": 3,
+          "name": "エレクトリカルワルツ",
+          "power": 218,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復<br>スキルランプの点灯数が3個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、攻撃後、味方全員に回避を付与し、スキルダメージアップと雷属性ダメージアップし、スキルランプを全て消灯する",
+          "timeline_hash": "610030599178343371",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 30,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復<br>「エレクトリカルワルツ」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃後、味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与し、<br>味方全員に「スキルダメージ+{2}%」と「雷属性ダメージ+{3}%」を2回行動終了するまで付与<br>スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91000948,
+              "value": 2000,
+              "_detail": {
+                "id": 91000948
+              }
+            },
+            {
+              "id": 91001465,
+              "value": 7000,
+              "_detail": {
+                "id": 91001465
+              }
+            },
+            {
+              "id": 91001466,
+              "value": 2000,
+              "_detail": {
+                "id": 91001466
+              }
+            },
+            {
+              "id": 91001467,
+              "value": 3000,
+              "_detail": {
+                "id": 91001467
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "id": 91001340
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "id": 91001341
+              }
+            }
+          ],
+          "id": 12002096,
+          "max_lamp": 3,
+          "name": "エレクトリカルワルツ",
+          "power": 231,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復<br>スキルランプの点灯数が3個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、攻撃後、味方全員に回避を付与し、スキルダメージアップと雷属性ダメージアップし、スキルランプを全て消灯する",
+          "timeline_hash": "610030599178343371",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 31,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復<br>「エレクトリカルワルツ」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃後、味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与し、<br>味方全員に「スキルダメージ+{2}%」と「雷属性ダメージ+{3}%」を2回行動終了するまで付与<br>スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91000948,
+              "value": 2000,
+              "_detail": {
+                "id": 91000948
+              }
+            },
+            {
+              "id": 91001465,
+              "value": 7000,
+              "_detail": {
+                "id": 91001465
+              }
+            },
+            {
+              "id": 91001466,
+              "value": 2000,
+              "_detail": {
+                "id": 91001466
+              }
+            },
+            {
+              "id": 91001467,
+              "value": 3000,
+              "_detail": {
+                "id": 91001467
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "id": 91001340
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "id": 91001341
+              }
+            }
+          ],
+          "id": 12002097,
+          "max_lamp": 3,
+          "name": "エレクトリカルワルツ",
+          "power": 244,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復<br>スキルランプの点灯数が3個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、攻撃後、味方全員に回避を付与し、スキルダメージアップと雷属性ダメージアップし、スキルランプを全て消灯する",
+          "timeline_hash": "610030599178343371",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 33,
+          "break_power_type": 2,
+          "description": "攻撃後、自身のHPを{0}%回復<br>「エレクトリカルワルツ」はスキルランプを持ち、点灯数が3個の時、効果内容が変化する<br>スキルランプは最大3個点灯できる<br><br>スキルランプの点灯数が3個未満の時、<br>攻撃後、スキルランプを1個点灯する<br><br>スキルランプの点灯数が3個の時、<br>攻撃後、味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与し、<br>味方全員に「スキルダメージ+{2}%」と「雷属性ダメージ+{3}%」を2回行動終了するまで付与<br>スキルランプを全て消灯する",
+          "effects": [
+            {
+              "id": 91000948,
+              "value": 2000,
+              "_detail": {
+                "id": 91000948
+              }
+            },
+            {
+              "id": 91001465,
+              "value": 7000,
+              "_detail": {
+                "id": 91001465
+              }
+            },
+            {
+              "id": 91001466,
+              "value": 2000,
+              "_detail": {
+                "id": 91001466
+              }
+            },
+            {
+              "id": 91001467,
+              "value": 3000,
+              "_detail": {
+                "id": 91001467
+              }
+            },
+            {
+              "id": 91001340,
+              "value": 100,
+              "_detail": {
+                "id": 91001340
+              }
+            },
+            {
+              "id": 91001341,
+              "value": 300,
+              "_detail": {
+                "id": 91001341
+              }
+            }
+          ],
+          "id": 12002098,
+          "max_lamp": 3,
+          "name": "エレクトリカルワルツ",
+          "power": 257,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "4759387600736343502",
+          "summary": "攻撃後、自身のHPを回復<br>スキルランプの点灯数が3個未満の時、攻撃後、スキルランプを1個点灯する<br>スキルランプの点灯数が3個の時、攻撃後、味方全員に回避を付与し、スキルダメージアップと雷属性ダメージアップし、スキルランプを全て消灯する",
+          "timeline_hash": "610030599178343371",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "id": 91000925
+              }
+            },
+            {
+              "id": 91001474,
+              "value": 10000,
+              "_detail": {
+                "id": 91001474
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "id": 91001469
+              }
+            }
+          ],
+          "id": 14002099,
+          "max_lamp": 0,
+          "name": "ヴァリアントイルミネート",
+          "power": 420,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "127170421423824323",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>味方全員に回避を付与",
+          "timeline_hash": "1909081432900688938",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "id": 91000925
+              }
+            },
+            {
+              "id": 91001474,
+              "value": 10000,
+              "_detail": {
+                "id": 91001474
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "id": 91001469
+              }
+            }
+          ],
+          "id": 14002100,
+          "max_lamp": 0,
+          "name": "ヴァリアントイルミネート",
+          "power": 446,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "127170421423824323",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>味方全員に回避を付与",
+          "timeline_hash": "1909081432900688938",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "id": 91000925
+              }
+            },
+            {
+              "id": 91001474,
+              "value": 10000,
+              "_detail": {
+                "id": 91001474
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "id": 91001469
+              }
+            }
+          ],
+          "id": 14002101,
+          "max_lamp": 0,
+          "name": "ヴァリアントイルミネート",
+          "power": 472,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "127170421423824323",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>味方全員に回避を付与",
+          "timeline_hash": "1909081432900688938",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "id": 91000925
+              }
+            },
+            {
+              "id": 91001474,
+              "value": 10000,
+              "_detail": {
+                "id": 91001474
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "id": 91001469
+              }
+            }
+          ],
+          "id": 14002102,
+          "max_lamp": 0,
+          "name": "ヴァリアントイルミネート",
+          "power": 498,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "127170421423824323",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>味方全員に回避を付与",
+          "timeline_hash": "1909081432900688938",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            7
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "攻撃前、味方全員のマイナス効果を解除<br>攻撃後、味方全員のHPを{0}%回復し、<br>味方全員に「回避(確率{1}%固定)」を1回攻撃されるまで付与",
+          "effects": [
+            {
+              "id": 91000925,
+              "value": 1500,
+              "_detail": {
+                "id": 91000925
+              }
+            },
+            {
+              "id": 91001474,
+              "value": 10000,
+              "_detail": {
+                "id": 91001474
+              }
+            },
+            {
+              "id": 91001469,
+              "value": 10000,
+              "_detail": {
+                "id": 91001469
+              }
+            }
+          ],
+          "id": 14002103,
+          "max_lamp": 0,
+          "name": "ヴァリアントイルミネート",
+          "power": 525,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "127170421423824323",
+          "summary": "攻撃前、自身のマイナス効果を解除<br>攻撃後、味方全員のHPを回復<br>味方全員に回避を付与",
+          "timeline_hash": "1909081432900688938",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ]
+}

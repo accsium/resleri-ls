@@ -1,0 +1,2075 @@
+{
+  "id": 43110,
+  "attack_attributes": [
+    8
+  ],
+  "initial_rarity": 3,
+  "max_rarity": 7,
+  "trait_color_id": 1,
+  "support_color_id": 2,
+  "trait_color_name_ja": "青",
+  "trait_color_name_cn": "蓝",
+  "support_color_name_ja": "紫",
+  "support_color_name_cn": "紫",
+  "battle_tool_trait_names_ja": [
+    "風の祝福",
+    "破壊力上昇"
+  ],
+  "battle_tool_trait_names_cn": [
+    "风之祝福",
+    "破坏力提升"
+  ],
+  "equipment_tool_trait_names_ja": [
+    "属性耐性ダウン強化【風】"
+  ],
+  "equipment_tool_trait_names_cn": [
+    "属性耐性下降强化【风】"
+  ],
+  "battle_tool_trait_ids": [
+    8,
+    51
+  ],
+  "equipment_tool_trait_ids": [
+    80
+  ],
+  "leader_skill": {
+    "abilities": [
+      {
+        "ability_id": 1980222,
+        "combat_power_coefficient": 3500,
+        "condition_ids": [
+          11
+        ]
+      }
+    ],
+    "description": "得意属性が風属性のキャラは「物攻・魔攻・物防・魔防+25%」",
+    "name": "追風に帆を上げましょう！"
+  },
+  "ability_ids": [
+    1990495,
+    1990496
+  ],
+  "support_ability_ids": [
+    500424,
+    500368,
+    500312,
+    500256,
+    500200,
+    500144,
+    500088,
+    500032
+  ],
+  "board_ability1_ids": [
+    1990464,
+    1990439,
+    1990414
+  ],
+  "_skillDetails": {
+    "500032": {
+      "id": 500032,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1725,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "id": 500032
+          }
+        }
+      ]
+    },
+    "500088": {
+      "id": 500088,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1500,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "id": 500032
+          }
+        }
+      ]
+    },
+    "500144": {
+      "id": 500144,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1275,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "id": 500032
+          }
+        }
+      ]
+    },
+    "500200": {
+      "id": 500200,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "id": 500032,
+          "limit_count": 1,
+          "value": 1050,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "id": 500032
+          }
+        }
+      ]
+    },
+    "500256": {
+      "id": 500256,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "id": 500032,
+          "limit_count": 1,
+          "value": 975,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "id": 500032
+          }
+        }
+      ]
+    },
+    "500312": {
+      "id": 500312,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "id": 500032,
+          "limit_count": 1,
+          "value": 900,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "id": 500032
+          }
+        }
+      ]
+    },
+    "500368": {
+      "id": 500368,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "id": 500032,
+          "limit_count": 1,
+          "value": 825,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "id": 500032
+          }
+        }
+      ]
+    },
+    "500424": {
+      "id": 500424,
+      "description": "得意属性が風属性かつブレイカーの時、攻撃前、対象に「風属性耐性-{0}％」を1回攻撃を受けるまで付与(発動上限1回)",
+      "effects": [
+        {
+          "id": 500032,
+          "limit_count": 1,
+          "value": 750,
+          "_detail": {
+            "description": "自身の得意属性が風属性かつブレイカーの時、攻撃前、対象に風属性耐性DOWNを付与",
+            "id": 500032
+          }
+        }
+      ]
+    },
+    "1980222": {
+      "name": "追風に帆を上げましょう！",
+      "id": 1980222,
+      "description": "得意属性が風属性のキャラは「物攻・魔攻・物防・魔防+25%」",
+      "effects": [
+        {
+          "id": 72500002,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/常時/物攻上昇]",
+            "id": 72500002
+          }
+        },
+        {
+          "id": 72500003,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/常時/魔攻上昇]",
+            "id": 72500003
+          }
+        },
+        {
+          "id": 72500004,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/常時/物防上昇]",
+            "id": 72500004
+          }
+        },
+        {
+          "id": 72500005,
+          "value": 2500,
+          "_detail": {
+            "description": "[自身/常時/魔防上昇]",
+            "id": 72500005
+          }
+        }
+      ]
+    },
+    "1990414": {
+      "name": "クリティカルダメージアップⅢ",
+      "id": 1990414,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001431,
+          "value": 3000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "id": 713001431
+          }
+        }
+      ]
+    },
+    "1990439": {
+      "name": "クリティカルダメージアップⅡ",
+      "id": 1990439,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001431,
+          "value": 2000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "id": 713001431
+          }
+        }
+      ]
+    },
+    "1990464": {
+      "name": "クリティカルダメージアップⅠ",
+      "id": 1990464,
+      "description": "クリティカルダメージ+{0}%",
+      "effects": [
+        {
+          "id": 713001431,
+          "value": 1000,
+          "_detail": {
+            "description": "[自身/クリティカルダメージUP][ボードアビリティA3]",
+            "id": 713001431
+          }
+        }
+      ]
+    },
+    "1990495": {
+      "name": "お祭りへご招待",
+      "id": 1990495,
+      "description": "自身のバーストスキルをゲージ化<br>※バーストゲージは2周分ストック可能<br><br>WEAK攻撃時、自身のバーストゲージを{0}%増加<br>自身を除くパーティの誰かがバーストスキル発動後、自身のバーストゲージを{1}%増加<br><br>プラスパネルから受ける効果量+{2}%",
+      "effects": [
+        {
+          "id": 72001548,
+          "value": 1500,
+          "_detail": {
+            "id": 72001548
+          }
+        },
+        {
+          "id": 72001460,
+          "value": 2000,
+          "_detail": {
+            "id": 72001460
+          }
+        },
+        {
+          "id": 72001045,
+          "value": 5000,
+          "_detail": {
+            "description": "state_change用",
+            "id": 72001045
+          }
+        },
+        {
+          "id": 72001452,
+          "value": 20000,
+          "_detail": {
+            "id": 72001452
+          }
+        }
+      ]
+    },
+    "1990496": {
+      "name": "福よ、来たれ！",
+      "id": 1990496,
+      "description": "WEAK攻撃時、自身に「万福招来！」が付与されていない時、「万福招来！(Lv1)」を付与<br>既に付与されている時、「万福招来！」のLv+1(上限Lv5)<br>※スキル発動前に「万福招来！」のLvが5の場合、以上の効果は発動しない<br>強化系パネルまたはバーストパネル獲得時、自身に「万福招来！」が付与されていない時、「万福招来！(Lv2)」を付与<br>既に付与されている時、「万福招来！」のLv+2(上限Lv5)<br>「万福招来！」のLvに応じて以下のボーナスをそれぞれ獲得する<br>1LvにつきWEAK攻撃ダメージ+{0}%<br>Lv3以上：スキルダメージ+{1}%<br>Lv5：スキルダメージ+{2}%",
+      "effects": [
+        {
+          "id": 72001540,
+          "value": 2000,
+          "_detail": {
+            "id": 72001540
+          }
+        },
+        {
+          "id": 72001542,
+          "value": 5000,
+          "_detail": {
+            "id": 72001542
+          }
+        },
+        {
+          "id": 72001544,
+          "value": 5000,
+          "_detail": {
+            "id": 72001544
+          }
+        },
+        {
+          "id": 72001546,
+          "value": 0,
+          "_detail": {
+            "id": 72001546
+          }
+        },
+        {
+          "id": 72001547,
+          "value": 0,
+          "_detail": {
+            "id": 72001547
+          }
+        },
+        {
+          "id": 72001558,
+          "value": 0,
+          "_detail": {
+            "id": 72001558
+          }
+        },
+        {
+          "id": 72001567,
+          "value": 0,
+          "_detail": {
+            "id": 72001567
+          }
+        },
+        {
+          "id": 72001566,
+          "value": 10000,
+          "_detail": {
+            "id": 72001566
+          }
+        }
+      ]
+    },
+    "11003353": {
+      "name": "はごいたパンチ",
+      "id": 11003353,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91000937,
+          "value": 2000,
+          "_detail": {
+            "id": 91000937
+          }
+        },
+        {
+          "id": 91001991,
+          "value": 1500,
+          "_detail": {
+            "id": 91001991
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 101,
+      "break_power": 6
+    },
+    "11003354": {
+      "name": "はごいたパンチ",
+      "id": 11003354,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91000937,
+          "value": 2000,
+          "_detail": {
+            "id": 91000937
+          }
+        },
+        {
+          "id": 91001991,
+          "value": 1500,
+          "_detail": {
+            "id": 91001991
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 107,
+      "break_power": 6
+    },
+    "11003355": {
+      "name": "はごいたパンチ",
+      "id": 11003355,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91000937,
+          "value": 2000,
+          "_detail": {
+            "id": 91000937
+          }
+        },
+        {
+          "id": 91001991,
+          "value": 1500,
+          "_detail": {
+            "id": 91001991
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 113,
+      "break_power": 6
+    },
+    "11003356": {
+      "name": "はごいたパンチ",
+      "id": 11003356,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91000937,
+          "value": 2000,
+          "_detail": {
+            "id": 91000937
+          }
+        },
+        {
+          "id": 91001991,
+          "value": 1500,
+          "_detail": {
+            "id": 91001991
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 119,
+      "break_power": 6
+    },
+    "11003357": {
+      "name": "はごいたパンチ",
+      "id": 11003357,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+      "effects": [
+        {
+          "id": 91000937,
+          "value": 2000,
+          "_detail": {
+            "id": 91000937
+          }
+        },
+        {
+          "id": 91001991,
+          "value": 1500,
+          "_detail": {
+            "id": 91001991
+          }
+        }
+      ],
+      "wait": -100,
+      "power": 126,
+      "break_power": 7
+    },
+    "12003358": {
+      "name": "巨大ゴマ大旋風",
+      "id": 12003358,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91001990,
+          "value": 3500,
+          "_detail": {
+            "id": 91001990
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "id": 91001376
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "id": 91001378
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 196,
+      "break_power": 14
+    },
+    "12003359": {
+      "name": "巨大ゴマ大旋風",
+      "id": 12003359,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91001990,
+          "value": 3500,
+          "_detail": {
+            "id": 91001990
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "id": 91001376
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "id": 91001378
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 208,
+      "break_power": 14
+    },
+    "12003360": {
+      "name": "巨大ゴマ大旋風",
+      "id": 12003360,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91001990,
+          "value": 3500,
+          "_detail": {
+            "id": 91001990
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "id": 91001376
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "id": 91001378
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 220,
+      "break_power": 15
+    },
+    "12003361": {
+      "name": "巨大ゴマ大旋風",
+      "id": 12003361,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91001990,
+          "value": 3500,
+          "_detail": {
+            "id": 91001990
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "id": 91001376
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "id": 91001378
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 232,
+      "break_power": 16
+    },
+    "12003362": {
+      "name": "巨大ゴマ大旋風",
+      "id": 12003362,
+      "target_name_ja": "ID:5",
+      "target_name_cn": "敌方全体",
+      "skill_target_type": 5,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 10000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91001990,
+          "value": 3500,
+          "_detail": {
+            "id": 91001990
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 5000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "id": 91001376
+          }
+        },
+        {
+          "id": 91001378,
+          "value": 4000,
+          "_detail": {
+            "id": 91001378
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 245,
+      "break_power": 17
+    },
+    "14003363": {
+      "name": "賀正・はねつきフェスティバル",
+      "id": 14003363,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "id": 91000937
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "id": 91001376
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "id": 91001992
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "id": 91001993
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "id": 91001994
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "id": 91001995
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "id": 91001996
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "id": 91002042
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 504,
+      "break_power": 75
+    },
+    "14003364": {
+      "name": "賀正・はねつきフェスティバル",
+      "id": 14003364,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "id": 91000937
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "id": 91001376
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "id": 91001992
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "id": 91001993
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "id": 91001994
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "id": 91001995
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "id": 91001996
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "id": 91002042
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 535,
+      "break_power": 79
+    },
+    "14003365": {
+      "name": "賀正・はねつきフェスティバル",
+      "id": 14003365,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "id": 91000937
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "id": 91001376
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "id": 91001992
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "id": 91001993
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "id": 91001994
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "id": 91001995
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "id": 91001996
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "id": 91002042
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 567,
+      "break_power": 84
+    },
+    "14003366": {
+      "name": "賀正・はねつきフェスティバル",
+      "id": 14003366,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "id": 91000937
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "id": 91001376
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "id": 91001992
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "id": 91001993
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "id": 91001994
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "id": 91001995
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "id": 91001996
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "id": 91002042
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 598,
+      "break_power": 88
+    },
+    "14003367": {
+      "name": "賀正・はねつきフェスティバル",
+      "id": 14003367,
+      "target_name_ja": "ID:3",
+      "target_name_cn": "敌方单体",
+      "skill_target_type": 3,
+      "attack_attributes": [
+        8
+      ],
+      "skill_power_type": 2,
+      "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+      "effects": [
+        {
+          "id": 91001337,
+          "value": 15000,
+          "_detail": {
+            "id": 91001337
+          }
+        },
+        {
+          "id": 91000937,
+          "value": 4000,
+          "_detail": {
+            "id": 91000937
+          }
+        },
+        {
+          "id": 91001376,
+          "value": 6000,
+          "_detail": {
+            "description": "魔攻アップ(2回)",
+            "id": 91001376
+          }
+        },
+        {
+          "id": 91001992,
+          "value": 5000,
+          "_detail": {
+            "id": 91001992
+          }
+        },
+        {
+          "id": 91001993,
+          "value": 10000,
+          "_detail": {
+            "id": 91001993
+          }
+        },
+        {
+          "id": 91001994,
+          "value": 5000,
+          "_detail": {
+            "id": 91001994
+          }
+        },
+        {
+          "id": 91001995,
+          "value": 5000,
+          "_detail": {
+            "id": 91001995
+          }
+        },
+        {
+          "id": 91001996,
+          "value": 10000,
+          "_detail": {
+            "id": 91001996
+          }
+        },
+        {
+          "id": 91002042,
+          "value": 0,
+          "_detail": {
+            "id": 91002042
+          }
+        }
+      ],
+      "wait": 0,
+      "power": 630,
+      "break_power": 93
+    }
+  },
+  "initial_wt": 238,
+  "_skills": [
+    {
+      "type": "normal1",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 2000,
+              "_detail": {
+                "id": 91000937
+              }
+            },
+            {
+              "id": 91001991,
+              "value": 1500,
+              "_detail": {
+                "id": 91001991
+              }
+            }
+          ],
+          "id": 11003353,
+          "max_lamp": 0,
+          "name": "はごいたパンチ",
+          "power": 101,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+          "timeline_hash": "8808769667774043633",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 2000,
+              "_detail": {
+                "id": 91000937
+              }
+            },
+            {
+              "id": 91001991,
+              "value": 1500,
+              "_detail": {
+                "id": 91001991
+              }
+            }
+          ],
+          "id": 11003354,
+          "max_lamp": 0,
+          "name": "はごいたパンチ",
+          "power": 107,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+          "timeline_hash": "8808769667774043633",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 2000,
+              "_detail": {
+                "id": 91000937
+              }
+            },
+            {
+              "id": 91001991,
+              "value": 1500,
+              "_detail": {
+                "id": 91001991
+              }
+            }
+          ],
+          "id": 11003355,
+          "max_lamp": 0,
+          "name": "はごいたパンチ",
+          "power": 113,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+          "timeline_hash": "8808769667774043633",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 6,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 2000,
+              "_detail": {
+                "id": 91000937
+              }
+            },
+            {
+              "id": 91001991,
+              "value": 1500,
+              "_detail": {
+                "id": 91001991
+              }
+            }
+          ],
+          "id": 11003356,
+          "max_lamp": 0,
+          "name": "はごいたパンチ",
+          "power": 119,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+          "timeline_hash": "8808769667774043633",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 7,
+          "break_power_type": 2,
+          "description": "攻撃前、対象に「風属性耐性-{0}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{1}%」を付与(上限30%)",
+          "effects": [
+            {
+              "id": 91000937,
+              "value": 2000,
+              "_detail": {
+                "id": 91000937
+              }
+            },
+            {
+              "id": 91001991,
+              "value": 1500,
+              "_detail": {
+                "id": 91001991
+              }
+            }
+          ],
+          "id": 11003357,
+          "max_lamp": 0,
+          "name": "はごいたパンチ",
+          "power": 126,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "9019439288131687315",
+          "summary": "攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻アップ",
+          "timeline_hash": "8808769667774043633",
+          "wait": -100,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    },
+    {
+      "type": "normal2",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 14,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 10000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91001990,
+              "value": 3500,
+              "_detail": {
+                "id": 91001990
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 5000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "id": 91001376
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 4000,
+              "_detail": {
+                "id": 91001378
+              }
+            }
+          ],
+          "id": 12003358,
+          "max_lamp": 0,
+          "name": "巨大ゴマ大旋風",
+          "power": 196,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "2186025754385462788",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "2454448705942544995",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 14,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 10000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91001990,
+              "value": 3500,
+              "_detail": {
+                "id": 91001990
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 5000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "id": 91001376
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 4000,
+              "_detail": {
+                "id": 91001378
+              }
+            }
+          ],
+          "id": 12003359,
+          "max_lamp": 0,
+          "name": "巨大ゴマ大旋風",
+          "power": 208,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "2186025754385462788",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "2454448705942544995",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 15,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 10000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91001990,
+              "value": 3500,
+              "_detail": {
+                "id": 91001990
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 5000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "id": 91001376
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 4000,
+              "_detail": {
+                "id": 91001378
+              }
+            }
+          ],
+          "id": 12003360,
+          "max_lamp": 0,
+          "name": "巨大ゴマ大旋風",
+          "power": 220,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "2186025754385462788",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "2454448705942544995",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 16,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 10000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91001990,
+              "value": 3500,
+              "_detail": {
+                "id": 91001990
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 5000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "id": 91001376
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 4000,
+              "_detail": {
+                "id": 91001378
+              }
+            }
+          ],
+          "id": 12003361,
+          "max_lamp": 0,
+          "name": "巨大ゴマ大旋風",
+          "power": 232,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "2186025754385462788",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "2454448705942544995",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 17,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を3回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」と「スキルダメージ+{3}%」を2回行動終了するまで付与",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 10000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91001990,
+              "value": 3500,
+              "_detail": {
+                "id": 91001990
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 5000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "id": 91001376
+              }
+            },
+            {
+              "id": 91001378,
+              "value": 4000,
+              "_detail": {
+                "id": 91001378
+              }
+            }
+          ],
+          "id": 12003362,
+          "max_lamp": 0,
+          "name": "巨大ゴマ大旋風",
+          "power": 245,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 5,
+          "still_path_hash": "2186025754385462788",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とスキルダメージアップ",
+          "timeline_hash": "2454448705942544995",
+          "wait": 0,
+          "target_name_ja": "ID:5",
+          "target_name_cn": "敌方全体"
+        }
+      ]
+    },
+    {
+      "type": "burst",
+      "skills": [
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 75,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 15000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91000937,
+              "value": 4000,
+              "_detail": {
+                "id": 91000937
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 6000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "id": 91001376
+              }
+            },
+            {
+              "id": 91001992,
+              "value": 5000,
+              "_detail": {
+                "id": 91001992
+              }
+            },
+            {
+              "id": 91001993,
+              "value": 10000,
+              "_detail": {
+                "id": 91001993
+              }
+            },
+            {
+              "id": 91001994,
+              "value": 5000,
+              "_detail": {
+                "id": 91001994
+              }
+            },
+            {
+              "id": 91001995,
+              "value": 5000,
+              "_detail": {
+                "id": 91001995
+              }
+            },
+            {
+              "id": 91001996,
+              "value": 10000,
+              "_detail": {
+                "id": 91001996
+              }
+            },
+            {
+              "id": 91002042,
+              "value": 0,
+              "_detail": {
+                "id": 91002042
+              }
+            }
+          ],
+          "id": 14003363,
+          "max_lamp": 0,
+          "name": "賀正・はねつきフェスティバル",
+          "power": 504,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "5952608830648103292",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+          "timeline_hash": "4133887983679817706",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 79,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 15000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91000937,
+              "value": 4000,
+              "_detail": {
+                "id": 91000937
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 6000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "id": 91001376
+              }
+            },
+            {
+              "id": 91001992,
+              "value": 5000,
+              "_detail": {
+                "id": 91001992
+              }
+            },
+            {
+              "id": 91001993,
+              "value": 10000,
+              "_detail": {
+                "id": 91001993
+              }
+            },
+            {
+              "id": 91001994,
+              "value": 5000,
+              "_detail": {
+                "id": 91001994
+              }
+            },
+            {
+              "id": 91001995,
+              "value": 5000,
+              "_detail": {
+                "id": 91001995
+              }
+            },
+            {
+              "id": 91001996,
+              "value": 10000,
+              "_detail": {
+                "id": 91001996
+              }
+            },
+            {
+              "id": 91002042,
+              "value": 0,
+              "_detail": {
+                "id": 91002042
+              }
+            }
+          ],
+          "id": 14003364,
+          "max_lamp": 0,
+          "name": "賀正・はねつきフェスティバル",
+          "power": 535,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "5952608830648103292",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+          "timeline_hash": "4133887983679817706",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 84,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 15000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91000937,
+              "value": 4000,
+              "_detail": {
+                "id": 91000937
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 6000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "id": 91001376
+              }
+            },
+            {
+              "id": 91001992,
+              "value": 5000,
+              "_detail": {
+                "id": 91001992
+              }
+            },
+            {
+              "id": 91001993,
+              "value": 10000,
+              "_detail": {
+                "id": 91001993
+              }
+            },
+            {
+              "id": 91001994,
+              "value": 5000,
+              "_detail": {
+                "id": 91001994
+              }
+            },
+            {
+              "id": 91001995,
+              "value": 5000,
+              "_detail": {
+                "id": 91001995
+              }
+            },
+            {
+              "id": 91001996,
+              "value": 10000,
+              "_detail": {
+                "id": 91001996
+              }
+            },
+            {
+              "id": 91002042,
+              "value": 0,
+              "_detail": {
+                "id": 91002042
+              }
+            }
+          ],
+          "id": 14003365,
+          "max_lamp": 0,
+          "name": "賀正・はねつきフェスティバル",
+          "power": 567,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "5952608830648103292",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+          "timeline_hash": "4133887983679817706",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 88,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 15000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91000937,
+              "value": 4000,
+              "_detail": {
+                "id": 91000937
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 6000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "id": 91001376
+              }
+            },
+            {
+              "id": 91001992,
+              "value": 5000,
+              "_detail": {
+                "id": 91001992
+              }
+            },
+            {
+              "id": 91001993,
+              "value": 10000,
+              "_detail": {
+                "id": 91001993
+              }
+            },
+            {
+              "id": 91001994,
+              "value": 5000,
+              "_detail": {
+                "id": 91001994
+              }
+            },
+            {
+              "id": 91001995,
+              "value": 5000,
+              "_detail": {
+                "id": 91001995
+              }
+            },
+            {
+              "id": 91001996,
+              "value": 10000,
+              "_detail": {
+                "id": 91001996
+              }
+            },
+            {
+              "id": 91002042,
+              "value": 0,
+              "_detail": {
+                "id": 91002042
+              }
+            }
+          ],
+          "id": 14003366,
+          "max_lamp": 0,
+          "name": "賀正・はねつきフェスティバル",
+          "power": 598,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "5952608830648103292",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+          "timeline_hash": "4133887983679817706",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        },
+        {
+          "attack_attribute_category": 2,
+          "attack_attributes": [
+            8
+          ],
+          "break_power": 93,
+          "break_power_type": 2,
+          "description": "この攻撃の貫通力+{0}<br>攻撃前、対象に「風属性耐性-{1}%」を2回攻撃を受けるまで付与<br>攻撃後、自身に「魔攻+{2}%」を2回行動終了するまで付与し、<br>「WEAK攻撃ダメージ+{3}%」を付与(上限150%)<br>「万福招来！」がLv5の場合、攻撃後、「万福招来！」を解除し、<br>自身に「スキルダメージ+{5}%」(上限100%)と「貫通力+{6}」(上限100)と「万福招来！(Lv2)」を付与し、<br>自身のバーストゲージを{7}%増加",
+          "effects": [
+            {
+              "id": 91001337,
+              "value": 15000,
+              "_detail": {
+                "id": 91001337
+              }
+            },
+            {
+              "id": 91000937,
+              "value": 4000,
+              "_detail": {
+                "id": 91000937
+              }
+            },
+            {
+              "id": 91001376,
+              "value": 6000,
+              "_detail": {
+                "description": "魔攻アップ(2回)",
+                "id": 91001376
+              }
+            },
+            {
+              "id": 91001992,
+              "value": 5000,
+              "_detail": {
+                "id": 91001992
+              }
+            },
+            {
+              "id": 91001993,
+              "value": 10000,
+              "_detail": {
+                "id": 91001993
+              }
+            },
+            {
+              "id": 91001994,
+              "value": 5000,
+              "_detail": {
+                "id": 91001994
+              }
+            },
+            {
+              "id": 91001995,
+              "value": 5000,
+              "_detail": {
+                "id": 91001995
+              }
+            },
+            {
+              "id": 91001996,
+              "value": 10000,
+              "_detail": {
+                "id": 91001996
+              }
+            },
+            {
+              "id": 91002042,
+              "value": 0,
+              "_detail": {
+                "id": 91002042
+              }
+            }
+          ],
+          "id": 14003367,
+          "max_lamp": 0,
+          "name": "賀正・はねつきフェスティバル",
+          "power": 630,
+          "skill_effect_type": 1,
+          "skill_power_type": 2,
+          "skill_target_type": 3,
+          "still_path_hash": "5952608830648103292",
+          "summary": "この攻撃の貫通力アップ<br>攻撃前、対象の風属性耐性ダウン<br>攻撃後、自身の魔攻とWEAK攻撃ダメージアップ<br>「万福招来！」がLv5の時、「万福招来！」を解除し、自身のスキルダメージと貫通力アップ<br>攻撃後、自身に「万福招来！」Lv2を付与し、自身のバーストゲージを回復",
+          "timeline_hash": "4133887983679817706",
+          "wait": 0,
+          "target_name_ja": "ID:3",
+          "target_name_cn": "敌方单体"
+        }
+      ]
+    }
+  ]
+}
