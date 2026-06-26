@@ -486,6 +486,10 @@ function buildIndexEntry(character) {
   const dateStr = (character.start_at || '2049-12-31').replace(/-/g, '').substring(0, 8);
   const uid = dateStr + String(character.initial_rarity ?? 0) + String(character.id).padStart(5, '0');
 
+  // CN 翻译 fallback 链：cn → jp → 'ID:...'
+  const cnFallback = (id, mapName) =>
+    cnMaps[mapName]?.get(id) || jpMaps[mapName]?.get(id) || `ID:${id}`;
+
   const entry = {
     id: character.id,
     uid,
@@ -509,20 +513,20 @@ function buildIndexEntry(character) {
     alt_initial_wt: computeWT(character, true),
     base_initial_wt: computeWT(character, false),
     trait_color_name_ja: jpMaps.trait_color?.get(character.trait_color_id) || null,
-    trait_color_name_cn: cnMaps.trait_color?.get(character.trait_color_id) || null,
+    trait_color_name_cn: character.trait_color_id != null ? cnFallback(character.trait_color_id, 'trait_color') : null,
     support_color_name_ja: jpMaps.trait_color?.get(character.support_color_id) || null,
-    support_color_name_cn: cnMaps.trait_color?.get(character.support_color_id) || null,
+    support_color_name_cn: character.support_color_id != null ? cnFallback(character.support_color_id, 'trait_color') : null,
     battle_tool_trait_ids: character.battle_tool_trait_ids || [],
     battle_tool_trait_names_ja: (character.battle_tool_trait_ids || []).map(id => jpMaps.battle_tool_trait?.get(id) || ''),
-    battle_tool_trait_names_cn: (character.battle_tool_trait_ids || []).map(id => cnMaps.battle_tool_trait?.get(id) || ''),
+    battle_tool_trait_names_cn: (character.battle_tool_trait_ids || []).map(id => cnFallback(id, 'battle_tool_trait')),
     equipment_tool_trait_ids: character.equipment_tool_trait_ids || [],
     equipment_tool_trait_names_ja: (character.equipment_tool_trait_ids || []).map(id => jpMaps.equipment_tool_trait?.get(id) || ''),
-    equipment_tool_trait_names_cn: (character.equipment_tool_trait_ids || []).map(id => cnMaps.equipment_tool_trait?.get(id) || ''),
+    equipment_tool_trait_names_cn: (character.equipment_tool_trait_ids || []).map(id => cnFallback(id, 'equipment_tool_trait')),
     base_character_name_ja: jpMaps.base_character?.get(character.base_character_id) || null,
-    base_character_name_cn: cnMaps.base_character?.get(character.base_character_id) || null,
+    base_character_name_cn: cnFallback(character.base_character_id, 'base_character'),
     original_title_id: character.original_title_id || null,
     original_title_name_ja: jpMaps.original_title?.get(character.original_title_id) || null,
-	    original_title_name_cn: cnMaps.original_title?.get(character.original_title_id) || null,
+	    original_title_name_cn: character.original_title_id != null ? cnFallback(character.original_title_id, 'original_title') : null,
 	    has_evo: !!(
 	      (character.evolved_normal1_skill_ids && character.evolved_normal1_skill_ids.length > 0) ||
 	      (character.evolved_normal2_skill_ids && character.evolved_normal2_skill_ids.length > 0) ||

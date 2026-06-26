@@ -57,7 +57,10 @@ async function _doLoadIndex() {
     indexLoadError.value = null
     indexLoaded.value = true
   } catch (e) {
-    if (e.name === 'AbortError') return
+    if (e.name === 'AbortError') {
+      _indexPromise = null
+      return
+    }
     indexLoadError.value = e.message || String(e)
     characterIndex.value = []
   }
@@ -67,6 +70,7 @@ let _indexPromise = _doLoadIndex()
 
 export function useCharacterData() {
   async function loadIndex() {
+    if (!_indexPromise) _indexPromise = _doLoadIndex()
     await _indexPromise
   }
 

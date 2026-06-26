@@ -12,7 +12,7 @@ export function getNavigationSignal() {
 }
 
 // ── 数据预取 ──
-// 缓存数据而非 Promise。beforeEnter 触发 fetch 与懒加载 chunk 并行，
+// 缓存 fetch Promise（resolve 后为已解析 JSON）。beforeEnter 触发 fetch 与懒加载 chunk 并行，
 // 视图 onMounted 时 await preFetch[key] 已就绪或自行 fetch。
 function _prefetch(key, url, parser = 'json') {
   const signal = getNavigationSignal()

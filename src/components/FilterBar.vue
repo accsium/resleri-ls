@@ -424,6 +424,3 @@ function _parseSelectId(val) {
   </div>
 </template>
 
-<style scoped>
-
-</style>

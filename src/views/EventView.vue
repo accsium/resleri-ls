@@ -90,8 +90,8 @@ onMounted(async () => {
 <template>
   <div class="event-wrap">
     <div v-if="loading" class="loading">{{ t('loading') }}</div>
-    <div v-else-if="error" class="load-error">{{ error }}</div>
-    <div v-else-if="isEmpty" class="empty">{{ t('none') }}</div>
+    <div v-else-if="error" class="loading">{{ error }}</div>
+    <div v-else-if="isEmpty" class="loading">{{ t('none') }}</div>
     <template v-else>
     <div v-for="(g, gi) in groups" :key="g.label">
       <h3 class="group-title">{{ g.label }}</h3>
@@ -122,6 +122,4 @@ onMounted(async () => {
 .event-wrap :deep(.st-table) { width: auto; }
 .event-wrap :deep(.st-table th) { white-space: nowrap; }
 .event-wrap :deep(.st-table td) { height: auto; white-space: nowrap; }
-.load-error { text-align: center; padding: 30px; color: var(--text-muted); }
-.empty { text-align: center; padding: 30px; color: var(--text-muted); }
 </style>

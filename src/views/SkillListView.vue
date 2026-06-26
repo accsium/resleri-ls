@@ -169,7 +169,7 @@ onMounted(async () => {
 
 <template>
   <div v-if="loading" class="loading">{{ t('loading') }}</div>
-  <div v-else-if="error" class="load-error">{{ error }}</div>
+  <div v-else-if="error" class="loading">{{ error }}</div>
   <template v-else>
   <div class="skf-bar">
     <!-- 属性 -->
@@ -279,6 +279,4 @@ onMounted(async () => {
 }
 .skf-search::placeholder { color: var(--text-muted); }
 .skf-search:focus { border-color: var(--accent); }
-
-.load-error { text-align: center; padding: 30px; color: var(--text-muted); }
 </style>

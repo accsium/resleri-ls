@@ -1,0 +1,3 @@
+- [执行类技能脚本化](execution-skills-as-scripts.md) — type:execution 技能转为 shell 脚本 + 薄 SKILL.md 包装
+- [README 公开 .claude 内部](readme-public-claude-internal.md) — README.md 是公开文档，不交叉引用 .claude/ 内部工具
+- [通用降级辅助函数](generic-fallback-helper.md) — 多处字段需要降级链时用辅助函数统一定义

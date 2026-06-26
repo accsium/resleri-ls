@@ -68,6 +68,7 @@ let activeImg = null
 
 function setupObserver() {
   cancelled = false
+  observer?.disconnect()
   observer = new IntersectionObserver(([entry]) => {
     if (entry.isIntersecting) {
       observer.disconnect()
@@ -104,6 +105,7 @@ function cleanup() {
     activeImg = null
   }
   if (tracked) untrackImage(imageSize, wasLoaded.value)
+  tracked = false
 }
 
 onUnmounted(cleanup)

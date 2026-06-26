@@ -52,8 +52,8 @@ onMounted(async () => {
 <template>
   <div class="contest-wrap">
     <div v-if="loading" class="loading">{{ t('loading') }}</div>
-    <div v-else-if="error" class="load-error">{{ error }}</div>
-    <div v-else-if="isEmpty" class="empty">{{ t('none') }}</div>
+    <div v-else-if="error" class="loading">{{ error }}</div>
+    <div v-else-if="isEmpty" class="loading">{{ t('none') }}</div>
   <SortableTable v-else
     :columns="columns"
     :rows="sorted"
@@ -75,6 +75,4 @@ onMounted(async () => {
 .contest-wrap :deep(.st-wrap) { height: auto; width: auto; }
 .contest-wrap :deep(.st-table) { width: auto; }
 .contest-wrap :deep(.st-table td) { height: auto; }
-.load-error { text-align: center; padding: 30px; color: var(--text-muted); }
-.empty { text-align: center; padding: 30px; color: var(--text-muted); }
 </style>
