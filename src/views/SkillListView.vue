@@ -272,7 +272,7 @@ function onSort(col) { onTableSort(col) }
       </div>
     </template>
     <template #cell-name="{ row }">
-      {{ currentLang === 'cn' ? row.base_name_cn : row.base_name_ja }}<template v-if="row.another_name"> <span style="font-size:11px;color:var(--text-muted)">{{ row.another_name }}</span></template>
+      {{ currentLang === 'cn' ? row.base_name_cn : row.base_name_ja }}<template v-if="row.another_name"> <span class="alias-text">{{ row.another_name }}</span></template>
     </template>
     <template #cell-type="{ row }">{{ TYPE_LABEL[row.type] || row.type }}</template>
     <template #cell-state="{ row }">{{ row.state }}</template>

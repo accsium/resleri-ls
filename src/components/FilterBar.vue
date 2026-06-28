@@ -185,6 +185,8 @@ async function loadTraitData() {
     equipTraitsCn.value = groupTraits(et, t => t.name_cn || t.name)
     // 标签从 characterTagMap 获取（已由 useCharacterData 加载）
     const tagEntries = Object.values(characterTagMap.value)
+    charTagsJa.value = []
+    charTagsCn.value = []
     tagEntries.sort((a, b) => (a.priority || 0) - (b.priority || 0)).forEach(t => {
       charTagsJa.value.push({ id: t.id, name: t.name })
       charTagsCn.value.push({ id: t.id, name: t.name_cn || t.name })

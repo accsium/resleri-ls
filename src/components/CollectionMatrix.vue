@@ -10,6 +10,8 @@ const props = defineProps({
   size: { type: Number, default: 56 },
 })
 
+const sizePx = computed(() => props.size + 'px')
+
 const emit = defineEmits(['pointerdown', 'pointermove', 'pointerup'])
 
 function onPointerMove(e) {
@@ -132,12 +134,12 @@ function getCell(rid, aid) {
 }
 .matrix-cell-inner {
   display: grid;
-  grid-template-columns: repeat(auto-fill, v-bind(size + 'px'));
-  grid-auto-rows: v-bind(size + 'px');
+  grid-template-columns: repeat(auto-fill, v-bind(sizePx));
+  grid-auto-rows: v-bind(sizePx);
   justify-content: center;
 }
 .matrix-cell-inner > * {
-  width: v-bind(size + 'px');
-  height: v-bind(size + 'px');
+  width: v-bind(sizePx);
+  height: v-bind(sizePx);
 }
 </style>

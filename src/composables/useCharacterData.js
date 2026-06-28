@@ -58,11 +58,14 @@ const _entityCache = {}
 
 async function _loadEntity(file) {
   if (_entityCache[file]) return _entityCache[file]
-  _entityCache[file] = _fetchJSON(`data/${file}`).catch(e => {
+  try {
+    const data = await _fetchJSON(`data/${file}`)
+    _entityCache[file] = data
+    return data
+  } catch (e) {
     delete _entityCache[file]
     throw e
-  })
-  return _entityCache[file]
+  }
 }
 
 // 模块级：加载 character_index + 小实体文件
@@ -85,7 +88,8 @@ async function _doLoadIndex() {
     indexLoadError.value = null
     indexLoaded.value = true
   } catch (e) {
-    if (e.name === 'AbortError') { _loadPromise = null; return }
+    _loadPromise = null
+    if (e.name === 'AbortError') return
     indexLoadError.value = e.message || String(e)
     characterIndex.value = []
   }

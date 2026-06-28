@@ -40,8 +40,9 @@ const wrapRef = ref(null)
 let thObserver = null
 
 onMounted(() => {
+  if (!props.frozen) return
   const update = () => {
-    if (!wrapRef.value || !props.frozen) return
+    if (!wrapRef.value) return
     const thead = wrapRef.value.querySelector('thead')
     if (thead) wrapRef.value.style.setProperty('--frozen-head-h', thead.offsetHeight + 'px')
     const cells = wrapRef.value.querySelectorAll('thead th')

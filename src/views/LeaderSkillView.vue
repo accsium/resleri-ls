@@ -70,7 +70,7 @@ onMounted(() => { loadIndex() })
       <AvatarDisplay :index-entry="row" :size="60" feature="full" />
     </template>
     <template #cell-name="{ row }">
-      {{ baseName(row) }}<template v-if="row.another_name"> <span style="font-size:11px;color:var(--text-muted)">{{ row.another_name }}</span></template>
+      {{ baseName(row) }}<template v-if="row.another_name"> <span class="alias-text">{{ row.another_name }}</span></template>
     </template>
     <template #cell-attr="{ row }">
       <span v-if="row.attack_attributes?.[0]">{{ attrMap[row.attack_attributes[0]] || row.attack_attributes[0] }}</span>

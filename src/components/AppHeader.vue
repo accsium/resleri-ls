@@ -6,7 +6,7 @@ const { currentLang, t, setLang } = useI18n()
 const { updateTimeText } = useBuildInfo()
 
 function handleRefresh() {
-  if (!confirm('确定要清除缓存并刷新数据？')) return
+  if (!confirm(t('confirmRefresh'))) return
   const url = new URL(window.location.href)
   url.searchParams.set('_t', Date.now())
   window.location.href = url.toString()

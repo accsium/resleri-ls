@@ -90,7 +90,7 @@ onMounted(() => { loadIndex() })
       </div>
     </template>
     <template #cell-name="{ row }">
-      {{ baseName(row, currentLang) }}<template v-if="row.another_name"> <span style="font-size:11px;color:var(--text-muted)">{{ row.another_name }}</span></template>
+      {{ baseName(row, currentLang) }}<template v-if="row.another_name"> <span class="alias-text">{{ row.another_name }}</span></template>
     </template>
     <template #cell-attr="{ row }">
       <IconDisplay v-if="(row.attack_attributes || [])[0]" type="attribute" :id="(row.attack_attributes || [])[0]" :size="24" />

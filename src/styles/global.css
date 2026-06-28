@@ -46,6 +46,10 @@
   --owned-outline:   #b8382e;
   --scrollbar-track: #c8c8c8;
   --scrollbar-thumb: #fff;
+  --hl-skill: #00B4C9;
+  --hl-paren: #f0335b;
+  --sf-toggle-arrow-color: rgba(255,255,255,0.8);
+  --scrollbar-thumb-shadow: 0 1px 3px rgba(0,0,0,0.2);
   --st-header-bg:    #5a5a5a;
   --st-header-text:  #ddd;
   --size-step-bg:    #5a6a7e;
@@ -262,7 +266,7 @@ input[type="text"] {
 .sf-toggle-bar:hover {
   background: var(--sf-toggle-hov);
 }
-.sf-toggle-arrow { font-size: 9px; color: rgba(255,255,255,0.8); line-height: 1; display: flex; align-items: center; }
+.sf-toggle-arrow { font-size: 9px; color: var(--sf-toggle-arrow-color); line-height: 1; display: flex; align-items: center; }
 .sf-select { font-size: 12px; padding: var(--sel-padding); border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-content); color: var(--text-primary); }
 .sf-row { display: flex; align-items: center; gap: 0 6px; flex-wrap: wrap; }
 .sf-row > * { height: 32px; display: flex; align-items: center; }
@@ -741,13 +745,16 @@ input:checked + .slider::before { transform: translateX(16px); }
 .st-wrap::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  box-shadow: var(--scrollbar-thumb-shadow);
 }
 .st-wrap::-webkit-scrollbar-corner {
   background: transparent;
 }
 
 /* ── 描述文本重点色 ── */
-.hl-skill { color: #00B4C9; }
-.hl-quote { color: #00B4C9; }
-.hl-paren { color: #f0335b; }
+.hl-skill { color: var(--hl-skill); }
+.hl-quote { color: var(--hl-skill); }
+.hl-paren { color: var(--hl-paren); }
+
+/* ========== 别名文本 ========== */
+.alias-text { font-size: 11px; color: var(--text-muted); }

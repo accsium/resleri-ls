@@ -39,6 +39,7 @@ const UI_TEXT = {
     collectionMatrix: '分類',
     collectionOwnedCount: '所持 {n} / {total}',
     collectionNoMatch: '条件に一致するキャラクターがいません',
+    confirmRefresh: 'キャッシュをクリアしてデータを再読み込みしますか？',
     applyFilter: '適用', clearFilter: 'クリア',
   },
   cn: {
@@ -79,6 +80,7 @@ const UI_TEXT = {
     collectionMatrix: '分类',
     collectionOwnedCount: '已拥有 {n} / {total}',
     collectionNoMatch: '没有符合条件的角色',
+    confirmRefresh: '确定要清除缓存并刷新数据？',
     applyFilter: '应用筛选', clearFilter: '清除',
   }
 }
