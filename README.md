@@ -8,7 +8,7 @@
 
 | 页面 | 路由 | 说明 |
 |------|------|------|
-| 角色图鉴 | `/` | 角色卡片网格、分页、排序、多维筛选（属性/类型/词条/标签/卡池）、角色详情 |
+| 角色图鉴 | `/dex` | 角色卡片网格、分页、排序、多维筛选（属性/类型/词条/标签/卡池）、角色详情 |
 | 角色收藏 | `/collection` | 拥有/未拥有标记、矩阵/顺序双视图、分享码导入导出 |
 | 技能一览 | `/skills` | 全技能可排序表格，按属性/种类/状态/对象筛选 |
 | 队长技能 | `/leader-skills` | 队长技能可排序表格 |
@@ -42,7 +42,7 @@ npm run preview          # 预览构建结果
 
 ## 数据流水线
 
-原始 masterdata 存放于 `data/raw/jp/`（已提交到仓库）。通过三级流水线生成最终数据：
+原始 masterdata 存放于 `data/raw/jp/`（已提交到仓库）。`hyperlink.json` 用于解析技能描述中的 `{hyperlink_id N}` 引用。通过三级流水线生成最终数据：
 
 ```
 npm run data-conversion
@@ -53,7 +53,22 @@ npm run data-conversion
 
 - `data/selection/` — 中间产物，不提交（`.gitignore` 排除）
 - `data/language/` — 翻译文件（JSON），含 `untranslated/` 子目录存放新增未翻译词条
-- `data/output/` — 最终数据，提交到仓库
+- `data/output/` — 最终数据，提交到仓库：
+
+| 文件 | 说明 |
+|------|------|
+| `character_index.json` | 角色列表 + 详情（纯 ID 引用，无 `_ja/_cn` 名称对） |
+| `skills.json` | 技能规范表（按 skill_id 索引，description 已 bake） |
+| `abilities.json` | 能力规范表（按 ability_id 索引） |
+| `trait_color.json` | 特性/辅助色名称 |
+| `base_character.json` | 基础角色名称 |
+| `original_title.json` | 作品出处名称 |
+| `character_tag.json` | 标签 |
+| `battle_tool_trait.json` | 战斗道具词条 |
+| `equipment_tool_trait.json` | 装备词条 |
+| `events.json` | 活动列表 |
+| `contest_rotations.json` | 竞技场周期 |
+| `meta.json` | 构建时间 |
 
 辅助脚本：`resolveConfig.cjs`（配置解析）、`safeReadJSON.cjs`（安全 JSON 读取）。
 
@@ -93,7 +108,7 @@ npm run build
 | `ex_skill_rules.json` | EX 技能例外处理规则，新机制出现时手动添加 |
 | `exclude.json` | 不显示的模板角色 ID |
 | `permanent_exclude.json` | 非恒常角色 ID（联动、追忆角色），新非恒常角色出现时添加 |
-| `pipeline.json` | 数据流水线配置（定义筛选文件、翻译映射），无新增数据源时无需改动 |
+| `pipeline.json` | 数据流水线配置（定义筛选文件含 hyperlink.json、翻译映射），无新增数据源时无需改动 |
 | `transform.json` | 变身角色映射，格式 `[[变身前ID, 变身后ID], ...]` |
 | `todo.md` | 试验页 TODO 清单 |
 
@@ -115,7 +130,7 @@ resleri-ls/
 │   ├── views/             # 页面组件
 │   ├── components/        # 通用组件
 │   ├── composables/       # 状态共享
-│   ├── utils/             # 工具函数
+│   ├── utils/             # 工具函数（date、sort）
 │   └── router/            # 路由定义
 ├── public/                # 构建临时目录（不提交）
 ├── dist/                  # 构建输出（不提交，CI 部署）
