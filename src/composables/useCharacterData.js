@@ -2,7 +2,6 @@ import { ref, shallowRef, triggerRef, computed } from 'vue'
 import { getNavigationSignal } from '../router'
 
 const characterIndex = ref([])
-const indexLoadError = ref(null)
 const indexLoaded = ref(false)
 
 // 实体 Map — 按需加载，初始为空
@@ -85,13 +84,10 @@ async function _doLoadIndex() {
     const tagMap = {}
     for (const t of tagData) tagMap[t.id] = t
     characterTagMap.value = tagMap
-    indexLoadError.value = null
     indexLoaded.value = true
   } catch (e) {
     _loadPromise = null
     if (e.name === 'AbortError') return
-    indexLoadError.value = e.message || String(e)
-    characterIndex.value = []
   }
 }
 
@@ -144,7 +140,7 @@ export function useCharacterData() {
   function getAbilityById(id) { return abilitiesMap.value[id] || null }
 
   return {
-    characterIndex, indexLoadError, indexLoaded, loadIndex,
+    characterIndex, indexLoaded, loadIndex,
     skillsMap, abilitiesMap, traitColorMap, baseCharacterMap, originalTitleMap, characterTagMap, buildTime,
     getCharacterById, getSkillById, getAbilityById,
     loadSkills, loadAbilities, loadEntityMap,

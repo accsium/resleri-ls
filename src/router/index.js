@@ -20,7 +20,7 @@ function _prefetch(key, url, parser = 'json') {
     _dataCache[key] = fetch(url, { signal }).then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`)
       return parser === 'text' ? r.text() : r.json()
-    }).catch(err => { delete _dataCache[key]; throw err })
+    }).catch(() => { delete _dataCache[key] })
   }
   return _dataCache[key]
 }
@@ -31,9 +31,13 @@ export const preFetch = new Proxy({}, {
 
 const routes = [
   {
-    path: '/',
+    path: '/dex',
     name: 'guide',
     component: () => import('../views/GuideView.vue'),
+  },
+  {
+    path: '/',
+    redirect: '/dex',
   },
   {
     path: '/collection/:code?',

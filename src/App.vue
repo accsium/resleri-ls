@@ -8,7 +8,7 @@ import { useCharacterData } from './composables/useCharacterData'
 import { useBuildInfo } from './composables/useBuildInfo'
 
 const { setLang } = useI18n()
-const { loadProgress, indexLoadError, indexLoaded } = useCharacterData()
+const { loadProgress, indexLoaded } = useCharacterData()
 const { loadBuildTime } = useBuildInfo()
 
 // KeepAlive 缓存 GuideView + CollectionView，避免导航时全量重建 DOM
@@ -62,8 +62,7 @@ onMounted(async () => {
     </div>
     <AnnouncementBar />
     <div class="app-content">
-      <div v-if="indexLoadError" class="load-error">{{ indexLoadError }}</div>
-      <router-view v-else v-slot="{ Component }">
+      <router-view v-slot="{ Component }">
         <KeepAlive :include="keepAliveViews">
           <component :is="Component" />
         </KeepAlive>
@@ -72,10 +71,3 @@ onMounted(async () => {
   </div>
 </template>
 
-<style scoped>
-.load-error {
-  text-align: center;
-  padding: 40px;
-  color: var(--text-muted);
-}
-</style>
