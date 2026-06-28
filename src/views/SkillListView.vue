@@ -7,10 +7,8 @@ import AvatarDisplay from '../components/AvatarDisplay.vue'
 import IconDisplay from '../components/IconDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 import PaginationBar from '../components/PaginationBar.vue'
-import { preFetch } from '../router'
-import { replaceEffects } from '../utils/effects.js'
 
-const { characterIndex } = useCharacterData()
+const { characterIndex, indexLoaded, skillsMap, baseCharacterMap, loadIndex, loadSkills } = useCharacterData()
 const { t, currentLang, getField, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS } = useI18n()
 
 const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
@@ -35,28 +33,21 @@ const columns = [
   { key: 'skillDesc', label: '描述', minWidth: 1200 },
 ]
 
-const skills = ref([])
-const loading = ref(true)
-const error = ref('')
-const { sortCol, sortDir, onSort: onTableSort, sortItems } = useSortTable({
-  defaultCol: 'id',
-  defaultDir: 'asc',
-  avatarAlias: 'uid',
-})
+const STATE_LABEL = {
+  evolve: ['进化前', '进化後'],
+  range:  ['内圈', '外圈'],
+  change: ['変身後', '变身前'],
+}
 
-const TYPE_LABEL = { normal1:'一技能', normal2:'二技能', burst:'爆发技能', active1:'发动技能', ex:'EX技能' }
-const TYPE_KEYS = ['normal1','normal2','burst','ex','active1']
+const TYPE_LABEL = { normal1:'一技能', normal2:'二技能', burst:'爆发技能', ex:'EX技能' }
+const TYPE_KEYS = ['normal1','normal2','burst','ex']
 const STATE_KEYS = ['进化前','进化後','内圈','外圈','变身前','変身後','—']
 const WT_OPTS = [0,75,100,175,200,275,300]
 const TARGET_KEYS = ['友方','敌方','单体','全体','其他']
 const searchText = ref('')
 
 const activeFilters = reactive({
-  attr: [],
-  type: [],
-  state: [],
-  target: [],
-  wt: [],
+  attr: [], type: [], state: [], target: [], wt: [],
 })
 
 function toggleFilter(key, val) {
@@ -66,10 +57,7 @@ function toggleFilter(key, val) {
   else arr.push(val)
 }
 
-function formatPower(v) {
-  if (v == null || v === 0) return '—'
-  return v + '%'
-}
+function formatPower(v) { return v != null ? v + '%' : '—' }
 
 function targetCat(name) {
   const cats = []
@@ -80,6 +68,98 @@ function targetCat(name) {
   if (cats.length === 0) cats.push('其他')
   return cats
 }
+
+// 从 character_index + skillsMap 构建平铺技能行
+function buildSkillRows() {
+  const rows = []
+  for (const char of characterIndex.value) {
+    const sk = char.skills || {}
+    const sw = char.switch
+    const baseState = sw ? (STATE_LABEL[sw]?.[0] || '—') : '—'
+    const altState = sw ? (STATE_LABEL[sw]?.[1] || null) : null
+
+    // 基础形态技能
+    for (const type of ['normal1', 'normal2', 'burst']) {
+      const ids = sk[type]?.pre || []
+      if (ids.length > 0) {
+        const skill = skillsMap.value[ids[ids.length - 1]]
+        if (skill) rows.push(buildRow(char, type, baseState, skill))
+      }
+    }
+    // EX 技能
+    const exIds = sk.ex || []
+    if (exIds.length > 0) {
+      const lastId = exIds[exIds.length - 1]
+      const skill = skillsMap.value[lastId]
+      if (skill) rows.push(buildRow(char, 'ex', '—', skill))
+    }
+
+    // 切换形态技能
+    if (altState) {
+      if (sw === 'evolve') {
+        for (const type of ['normal1', 'normal2', 'burst']) {
+          const ids = sk[type]?.post || []
+          if (ids.length > 0) {
+            const skill = skillsMap.value[ids[ids.length - 1]]
+            if (skill) rows.push(buildRow(char, type, altState, skill))
+          }
+        }
+      } else if (sw === 'change' && char.switch_stat?.skills) {
+        const stSk = char.switch_stat.skills
+        for (const type of ['normal1', 'normal2', 'burst']) {
+          const ids = stSk[type]?.pre || []
+          if (ids.length > 0) {
+            const skill = skillsMap.value[ids[ids.length - 1]]
+            if (skill) rows.push(buildRow(char, type, altState, skill))
+          }
+        }
+        const stExIds = stSk.ex || []
+        if (stExIds.length > 0) {
+          const skill = skillsMap.value[stExIds[stExIds.length - 1]]
+          if (skill) rows.push(buildRow(char, 'ex', altState, skill))
+        }
+      }
+    }
+  }
+  rows.forEach((r, i) => r._idx = i)
+  return rows
+}
+
+function buildRow(char, type, state, skill) {
+  const isHeal = skill.skill_power_type && [5,6,7].includes(skill.skill_power_type)
+  const isDmg  = skill.skill_power_type && [1,2,3,4].includes(skill.skill_power_type)
+  const bc = baseCharacterMap.value[char.base_character_id]
+  return {
+    _idx: 0,
+    char_id: char.id,
+    base_name_ja: bc?.name_ja || '',
+    base_name_cn: (bc?.name_cn || bc?.name_ja) || '',
+    another_name: char.another_name || '',
+    type,
+    state,
+    skill_target_type: skill.skill_target_type ?? null,
+    target_name_ja: skill.target_name_ja || '',
+    target_name_cn: skill.target_name_cn || '',
+    attack_attributes: skill.attack_attributes || [],
+    dmg_power: isDmg ? (skill.power ?? null) : null,
+    break_power: skill.break_power ?? null,
+    heal_power: isHeal ? (skill.power ?? null) : null,
+    wt: skill.wt ?? null,
+    limit_count: skill.limit_count || null,
+    name: skill.name || '',
+    description: skill.description || '',
+  }
+}
+
+const skillsReady = ref(false)
+
+onMounted(async () => {
+  await loadIndex()
+  await loadSkills()
+  skillsReady.value = true
+})
+
+const skills = computed(() => (indexLoaded.value && skillsReady.value) ? buildSkillRows() : [])
 
 function getSkillSortVal(row, field) {
   switch (field) {
@@ -94,7 +174,7 @@ function getSkillSortVal(row, field) {
     case 'dmg': return row.dmg_power ?? -1
     case 'brk': return row.break_power ?? -1
     case 'heal': return row.heal_power ?? -1
-    case 'wait': return row.wait != null ? (200 + row.wait) : 9999
+    case 'wait': return row.wt ?? 9999
     case 'limit': return row.limit_count ?? 0
     case 'skillName': return row.name || ''
     case 'skillDesc': return row.description || ''
@@ -102,10 +182,12 @@ function getSkillSortVal(row, field) {
   }
 }
 
+const { sortCol, sortDir, onSort: onTableSort, sortItems } = useSortTable({
+  defaultCol: 'id', defaultDir: 'asc', avatarAlias: 'uid',
+})
+
 const filteredSkills = computed(() => {
   let list = skills.value
-
-  // 筛选
   const fa = activeFilters
   if (fa.attr.length) list = list.filter(r => fa.attr.some(a => r.attack_attributes?.includes(a)))
   if (fa.type.length) list = list.filter(r => fa.type.includes(r.type))
@@ -114,9 +196,7 @@ const filteredSkills = computed(() => {
     const cats = targetCat(getField(r, 'target_name'))
     return fa.target.every(t => cats.includes(t))
   })
-  if (fa.wt.length) list = list.filter(r => r.wait != null && fa.wt.includes(200 + r.wait))
-
-  // 搜索
+  if (fa.wt.length) list = list.filter(r => r.wt != null && fa.wt.includes(r.wt))
   if (searchText.value) {
     const q = searchText.value.toLowerCase()
     list = list.filter(r =>
@@ -124,13 +204,10 @@ const filteredSkills = computed(() => {
       (r.description || '').toLowerCase().includes(q)
     )
   }
-
-  // 排序（在筛选之后，减少排序数据量）
   list = sortItems(list, getSkillSortVal)
   return list
 })
 
-// ── 分页 ──
 const slPage = ref(1)
 const slPageSize = ref(50)
 const slTotalPages = computed(() => Math.ceil(filteredSkills.value.length / slPageSize.value) || 1)
@@ -139,65 +216,36 @@ const pagedSkills = computed(() => {
   return filteredSkills.value.slice(start, start + slPageSize.value)
 })
 
-// 筛选/搜索变化回到第一页
-watch([() => filteredSkills.value.length, searchText], () => {
-  slPage.value = 1
-})
+watch([() => filteredSkills.value.length, searchText], () => { slPage.value = 1 })
 
-function onSort(col) {
-  onTableSort(col)
-}
-
-onMounted(async () => {
-  try {
-    let data = await preFetch.skills
-    if (!data) {
-      const resp = await fetch('data/skills.json')
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
-      data = await resp.json()
-    }
-    data.forEach((r, i) => r._idx = i)
-    skills.value = data
-  } catch (e) {
-    if (e.name === 'AbortError') return
-    error.value = e.message || String(e)
-  } finally {
-    loading.value = false
-  }
-})
+function onSort(col) { onTableSort(col) }
 </script>
 
 <template>
-  <div v-if="loading" class="loading">{{ t('loading') }}</div>
-  <div v-else-if="error" class="loading">{{ error }}</div>
+  <div v-if="!indexLoaded" class="loading">{{ t('loading') }}</div>
   <template v-else>
   <div class="skf-bar">
-    <!-- 属性 -->
     <span class="skf-label">属性</span>
     <button v-for="id in ATTR_IDS" :key="'a'+id"
       class="sf-icon-btn" :class="{ active: activeFilters.attr.includes(id) }"
       @click="toggleFilter('attr', id)"
     ><IconDisplay type="attribute" :id="id" :size="24" /></button>
     <span class="skf-sep"></span>
-    <!-- 种类 -->
     <span class="skf-label">种类</span>
     <label v-for="t in TYPE_KEYS" :key="'t'+t" class="skf-check">
       <input type="checkbox" :checked="activeFilters.type.includes(t)" @change="toggleFilter('type',t)">{{ TYPE_LABEL[t] }}
     </label>
     <span class="skf-sep"></span>
-    <!-- 状态 -->
     <span class="skf-label">状态</span>
     <label v-for="s in STATE_KEYS" :key="'s'+s" class="skf-check">
       <input type="checkbox" :checked="activeFilters.state.includes(s)" @change="toggleFilter('state',s)">{{ s === '—' ? '其他' : s }}
     </label>
     <span class="skf-sep"></span>
-    <!-- 对象 -->
     <span class="skf-label">对象</span>
     <label v-for="t in TARGET_KEYS" :key="'tg'+t" class="skf-check">
       <input type="checkbox" :checked="activeFilters.target.includes(t)" @change="toggleFilter('target',t)">{{ t }}
     </label>
     <span class="skf-sep"></span>
-    <!-- WT -->
     <span class="skf-label">WT</span>
     <label v-for="w in WT_OPTS" :key="'w'+w" class="skf-check">
       <input type="checkbox" :checked="activeFilters.wt.includes(w)" @change="toggleFilter('wt',w)">{{ w }}
@@ -205,7 +253,6 @@ onMounted(async () => {
     <span class="skf-sep"></span>
     <input type="text" v-model="searchText" placeholder="搜索技能名或描述..." class="skf-search">
   </div>
-  <!-- 分页（上） -->
   <PaginationBar
     :currentPage="slPage" :pageSize="slPageSize"
     :totalPages="slTotalPages" :totalItems="filteredSkills.length"
@@ -213,16 +260,10 @@ onMounted(async () => {
     @update:currentPage="slPage = $event"
     @update:pageSize="slPageSize = $event"
   />
-
   <SortableTable
-    :columns="columns"
-    :rows="pagedSkills"
-    rowKey="_idx"
-    :frozen="2"
-    :autoHeight="true"
-    :sortCol="sortCol"
-    :sortDir="sortDir"
-    @sort="onSort"
+    :columns="columns" :rows="pagedSkills" rowKey="_idx"
+    :frozen="2" :autoHeight="true"
+    :sortCol="sortCol" :sortDir="sortDir" @sort="onSort"
   >
     <template #cell-id="{ row }">{{ row.char_id }}</template>
     <template #cell-avatar="{ row }">
@@ -244,13 +285,11 @@ onMounted(async () => {
     <template #cell-dmg="{ row }">{{ formatPower(row.dmg_power) }}</template>
     <template #cell-brk="{ row }">{{ formatPower(row.break_power) }}</template>
     <template #cell-heal="{ row }">{{ formatPower(row.heal_power) }}</template>
-    <template #cell-wait="{ row }">{{ row.wait != null ? (200 + row.wait) : '—' }}</template>
+    <template #cell-wait="{ row }">{{ row.wt ?? '—' }}</template>
     <template #cell-limit="{ row }">{{ row.limit_count || '—' }}</template>
     <template #cell-skillName="{ row }">{{ row.name }}</template>
-    <template #cell-skillDesc="{ row }"><span v-html="replaceEffects(row.description, row.effects)"></span></template>
+    <template #cell-skillDesc="{ row }"><span v-html="row.description"></span></template>
   </SortableTable>
-
-  <!-- 分页（下） -->
   <PaginationBar
     :currentPage="slPage" :pageSize="slPageSize"
     :totalPages="slTotalPages" :totalItems="filteredSkills.length"

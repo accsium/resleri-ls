@@ -3,6 +3,7 @@ import { ref } from 'vue'
 const pad = (n) => String(n).padStart(2, '0')
 
 function formatTime(isoStr) {
+  if (!isoStr) return null
   const buildTime = new Date(isoStr)
   if (isNaN(buildTime.getTime())) return null
   const gmt8 = new Date(buildTime.getTime() + 8 * 60 * 60 * 1000)

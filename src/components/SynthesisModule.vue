@@ -1,23 +1,44 @@
 <script setup>
 import { computed, ref, onMounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
+import { useCharacterData } from '../composables/useCharacterData'
 import { useTraitData } from '../composables/useTraitData'
 
 const props = defineProps({
   characterData: Object,
 })
 
-const { getField, getTraitColorHex, currentLang } = useI18n()
+const { getTraitColorHex, currentLang } = useI18n()
+const { traitColorMap } = useCharacterData()
 
 const collapsed = ref(false)
 
 const traitHex = computed(() => getTraitColorHex(props.characterData.trait_color_id))
 const supportHex = computed(() => getTraitColorHex(props.characterData.support_color_id))
 
+const traitColorName = computed(() => {
+  const tc = traitColorMap.value[props.characterData.trait_color_id]
+  if (!tc) return ''
+  return currentLang.value === 'cn' ? (tc.name_cn || tc.name_ja) : tc.name_ja
+})
+const supportColorName = computed(() => {
+  const tc = traitColorMap.value[props.characterData.support_color_id]
+  if (!tc) return ''
+  return currentLang.value === 'cn' ? (tc.name_cn || tc.name_ja) : tc.name_ja
+})
+
 const btIds = computed(() => props.characterData.battle_tool_trait_ids || [])
 const etIds = computed(() => props.characterData.equipment_tool_trait_ids || [])
-const btNames = computed(() => getField(props.characterData, 'battle_tool_trait_names') || [])
-const etNames = computed(() => getField(props.characterData, 'equipment_tool_trait_names') || [])
+const btNames = computed(() => btIds.value.map(id => {
+  const t = battleTraits.value.find(t2 => t2.id === id)
+  if (!t) return ''
+  return currentLang.value === 'cn' ? (t.name_cn || t.name) : t.name
+}).filter(Boolean))
+const etNames = computed(() => etIds.value.map(id => {
+  const t = equipTraits.value.find(t2 => t2.id === id)
+  if (!t) return ''
+  return currentLang.value === 'cn' ? (t.name_cn || t.name) : t.name
+}).filter(Boolean))
 
 const { battleTraits, equipTraits, error: traitError, load: loadTraits } = useTraitData()
 
@@ -78,12 +99,12 @@ function splitEffect(effect) {
     <div class="section-title section-collapsible" @click="collapsed = !collapsed">
       调和
       <span class="synthesis-color-row">
-        <span :style="{ color: traitHex }">{{ getField(characterData, 'trait_color_name') }}</span>
+        <span :style="{ color: traitHex }">{{ traitColorName }}</span>
         <svg width="20" height="20" viewBox="0 0 30 30">
           <polygon points="15,0 0,15 15,30" :fill="traitHex"/>
           <polygon points="15,0 30,15 15,30" :fill="supportHex"/>
         </svg>
-        <span :style="{ color: supportHex }">{{ getField(characterData, 'support_color_name') }}</span>
+        <span :style="{ color: supportHex }">{{ supportColorName }}</span>
       </span>
       <span class="collapse-arrow">{{ collapsed ? '▶' : '▼' }}</span>
     </div>

@@ -8,7 +8,6 @@ const pipelineConfig = safeReadJSON(
 );
 const rawDir = path.join(__dirname, '..', pipelineConfig.dataRawDir);
 const langDir = path.join(__dirname, '..', 'data', 'language');
-const untransDir = path.join(langDir, 'untranslated');
 const outDir = path.join(__dirname, '..', 'data', 'output');
 
 // ========== 1. 加载实体表 ==========
@@ -27,9 +26,58 @@ for (const [entityName, entityConfig] of Object.entries(config.entities)) {
   tables[entityName] = new Map(raw.map(item => [item[entityConfig.idField], item]));
 }
 
-// ========== 2. 加载翻译映射表 ==========
+// ========== 2. hyperlink 映射 ==========
+const hyperlinkMap = new Map()
+const hyperlinkFile = path.join(rawDir, 'hyperlink.json')
+if (fs.existsSync(hyperlinkFile)) {
+  const hyperlinkRaw = safeReadJSON(hyperlinkFile)
+  hyperlinkRaw.forEach(h => {
+    const skill = tables.skill?.get(h.skill_id)
+    if (skill) hyperlinkMap.set(h.id, skill.name)
+  })
+}
+
+function replaceHyperlinks(text) {
+  if (!text) return text
+  let result = text.replace(/\{?\{hyperlink_id (\d+)\}?\}/g, (match, idStr) => {
+    const id = parseInt(idStr, 10)
+    const name = hyperlinkMap.get(id)
+    if (name) return `<span class="hl-skill">${name}</span>`
+    return match
+  })
+  result = result.replace(/「([^」]+)」/g, '<span class="hl-quote">「$1」</span>')
+  // () 内容标色
+  result = result.replace(/\(([^)]+)\)/g, '<span class="hl-paren">($1)</span>')
+  return result
+}
+
+// ========== 3. 数值处理 / 文本处理 / 合并 ==========
+function processEffects(effects) {
+  return (effects || []).map(e => e.value != null ? e.value / 100 : 0)
+}
+
+function processText(description) {
+  return replaceHyperlinks(description)
+}
+
+function mergeValues(description, values) {
+  let result = description
+  values.forEach((v, i) => {
+    result = result.replace(new RegExp('\\{' + i + '\\}', 'g'), v)
+  })
+  return result
+}
+
+function bakeDescription(obj) {
+  if (!obj.description) return
+  const values = processEffects(obj.effects)
+  let desc = processText(obj.description)
+  obj.description = mergeValues(desc, values)
+  delete obj.effects
+}
+
+// ========== 4. 加载翻译映射表 ==========
 function loadJpMap(name) {
-  // JP name 从 data/selection 中读取
   const filePath = path.join(rawDir, `${name}.json`);
   if (fs.existsSync(filePath)) {
     const raw = safeReadJSON(filePath);
@@ -39,7 +87,6 @@ function loadJpMap(name) {
 }
 
 function loadCnMap(name) {
-  // CN name 从 language/ 中读取
   const filePath = path.join(langDir, `${name}.json`);
   if (fs.existsSync(filePath)) {
     const raw = safeReadJSON(filePath);
@@ -56,29 +103,30 @@ mapKeys.forEach(key => {
   cnMaps[key] = loadCnMap(key);
 });
 
-// ========== 3. 加载 EX 技能规则 ==========
+// skill_target_type 是 static 文件，不复制到 selection，直接从 language/ 加载
+const sttLangFile = path.join(langDir, 'skill_target_type.json');
+const sttMapJa = new Map();
+const sttMapCn = new Map();
+if (fs.existsSync(sttLangFile)) {
+  safeReadJSON(sttLangFile).forEach(t => {
+    sttMapJa.set(t.id, t.name);
+    sttMapCn.set(t.id, t.name_cn || t.name);
+  });
+}
+
+// ========== 5. EX 技能规则 ==========
 const rulesFile = path.join(__dirname, '..', 'config', 'ex_skill_rules.json');
 let exRules = [];
 if (fs.existsSync(rulesFile)) {
-  try {
-    exRules = safeReadJSON(rulesFile, false);
-    console.log(`📋 已加载 EX 技能规则：${exRules.length} 条`);
-  } catch {
-    console.warn('⚠️ EX 技能规则文件解析失败，将使用默认显示');
-  }
-} else {
-  console.warn('⚠️ EX 技能规则文件缺失，将使用默认显示');
-}
+  try { exRules = safeReadJSON(rulesFile, false); console.log(`📋 已加载 EX 技能规则：${exRules.length} 条`); }
+  catch { console.warn('⚠️ EX 技能规则文件解析失败'); }
+} else { console.warn('⚠️ EX 技能规则文件缺失'); }
 
-// ========== 4. 递归补全效果引用 ==========
-// 递归深度上限，防止配置错误导致无限递归
+// ========== 6. 递归补全效果引用 ==========
 const MAX_RESOLVE_DEPTH = 10
 
 function resolveEffects(obj, entityName, depth = 0) {
-  if (depth > MAX_RESOLVE_DEPTH) {
-    console.warn(`⚠ resolveEffects: 达到最大递归深度 ${MAX_RESOLVE_DEPTH} (entity=${entityName})`)
-    return obj
-  }
+  if (depth > MAX_RESOLVE_DEPTH) return obj
   const entityConfig = config.entities[entityName];
   if (!entityConfig) return obj;
   const resolved = JSON.parse(JSON.stringify(obj));
@@ -86,18 +134,13 @@ function resolveEffects(obj, entityName, depth = 0) {
     for (const [pathStr, refConfig] of Object.entries(entityConfig.nestedReferences)) {
       const parts = pathStr.split('.');
       let targetArray = resolved;
-      for (const part of parts) {
-        if (targetArray == null) break;
-        targetArray = targetArray[part];
-      }
+      for (const part of parts) { if (targetArray == null) break; targetArray = targetArray[part]; }
       if (targetArray && Array.isArray(targetArray)) {
         targetArray.forEach((item, index) => {
           if (!item) return;
           const refId = item[refConfig.refField];
           const detail = tables[refConfig.target]?.get(refId);
-          if (detail) {
-            targetArray[index] = { ...item, _detail: resolveEffects(detail, refConfig.target, depth + 1) };
-          }
+          if (detail) targetArray[index] = { ...item, _detail: resolveEffects(detail, refConfig.target, depth + 1) };
         });
       }
     }
@@ -105,7 +148,7 @@ function resolveEffects(obj, entityName, depth = 0) {
   return resolved;
 }
 
-// ========== 5. 收集角色的技能/能力 ID ==========
+// ========== 7. 收集技能/能力 ID ==========
 function collectSkillIds(character) {
   const ids = new Set();
   const add = (arr) => { if (arr) arr.forEach(id => ids.add(id)); };
@@ -125,117 +168,127 @@ function collectSkillIds(character) {
   if (character.active1_skill_id) ids.add(character.active1_skill_id);
   if (character.active2_skill_id) ids.add(character.active2_skill_id);
   if (character.active3_skill_id) ids.add(character.active3_skill_id);
-  if (character.leader_skill?.abilities) {
-    character.leader_skill.abilities.forEach(a => ids.add(a.ability_id));
-  }
   return ids;
 }
 
-// ========== 6. 构建技能/能力详情对象 ==========
-function buildSkillDetails(character) {
+// ========== 8. 构建技能/能力详情（分离 skill 和 ability）==========
+const SKILL_KEEP = ['name', 'id', 'attack_attributes', 'skill_target_type',
+  'target_name_ja', 'target_name_cn', 'skill_power_type',
+  'power', 'break_power', 'wt', 'limit_count', 'description']
+const ABILITY_KEEP = ['name', 'description']
+
+function buildSkillAndAbilityDetails(character) {
   const skillIds = collectSkillIds(character);
-  const details = {};
+  const targetMapJa = sttMapJa;
+  const targetMapCn = sttMapCn;
+  const skills = {};
+  const abilities = {};
+
   skillIds.forEach(id => {
-    let obj = tables.skill?.get(id) || tables.ability?.get(id);
-    if (obj) {
-      obj = resolveEffects(obj, tables.skill?.has(id) ? 'skill' : 'ability');
-      details[id] = obj;
+    const isSkill = tables.skill?.has(id);
+    const table = isSkill ? tables.skill : tables.ability;
+    const entityName = isSkill ? 'skill' : 'ability';
+    let obj = table?.get(id);
+    if (!obj) return;
+
+    obj = resolveEffects(obj, entityName);
+    bakeDescription(obj);
+
+    if (isSkill) {
+      // 数值处理
+      obj.wt = 200 + (obj.wait ?? 0);
+      delete obj.wait;
+      // 添加目标名称
+      if (obj.skill_target_type !== undefined) {
+        obj.target_name_ja = targetMapJa?.get(obj.skill_target_type) || '';
+        obj.target_name_cn = targetMapCn?.get(obj.skill_target_type) || targetMapJa?.get(obj.skill_target_type) || '';
+      }
+      const slim = {};
+      for (const k of SKILL_KEEP) { if (obj[k] !== undefined && obj[k] !== null) slim[k] = obj[k]; }
+      skills[id] = slim;
+    } else {
+      const slim = {};
+      for (const k of ABILITY_KEEP) { if (obj[k] !== undefined && obj[k] !== null) slim[k] = obj[k]; }
+      abilities[id] = slim;
     }
   });
-  return details;
+
+  return { skills, abilities };
 }
 
+// ========== 9. 构建技能 ID 分组（替代旧 _skills 数组）==========
 const SKILL_TYPE_MAP = {
   normal1: { idsField: 'normal1_skill_ids', evolvedField: 'evolved_normal1_skill_ids' },
   normal2: { idsField: 'normal2_skill_ids', evolvedField: 'evolved_normal2_skill_ids' },
   burst:   { idsField: 'burst_skill_ids',      evolvedField: 'evolved_burst_skill_ids' },
-  active1: { idsField: 'active1_skill_id',     evolvedField: null },
-  active2: { idsField: 'active2_skill_id',     evolvedField: null },
-  active3: { idsField: 'active3_skill_id',     evolvedField: null },
 };
 
-function buildSkillsArray(character, skillDetails) {
-  const skillsArray = [];
+function buildSkillIdGroups(character) {
+  const groups = {};
   for (const [type, fields] of Object.entries(SKILL_TYPE_MAP)) {
-    let preIds = [];
-    if (fields.idsField.endsWith('_id')) {
-      const val = character[fields.idsField];
-      if (val != null) preIds = [val];
-    } else {
-      preIds = character[fields.idsField] || [];
-    }
-    let postIds = [];
-    if (fields.evolvedField) {
-      postIds = character[fields.evolvedField] || [];
-    }
-    preIds = [...new Set(preIds)];
-    postIds = [...new Set(postIds)];
-    if (preIds.length === 0 && postIds.length === 0) continue;
-
-    const preSkills = preIds.map(id => skillDetails[id]).filter(Boolean);
-    const postSkills = postIds.map(id => skillDetails[id]).filter(Boolean);
-    preSkills.sort((a, b) => a.id - b.id);
-    postSkills.sort((a, b) => a.id - b.id);
-
-    skillsArray.push({
-      type: type,
-      pre_evolution: preSkills,
-      post_evolution: postSkills,
-    });
+    const pre = [...new Set(character[fields.idsField] || [])].sort((a,b) => a-b);
+    const post = [...new Set(character[fields.evolvedField] || [])].sort((a,b) => a-b);
+    if (pre.length === 0 && post.length === 0) continue;
+    groups[type] = {};
+    if (pre.length > 0) groups[type].pre = pre;
+    if (post.length > 0) groups[type].post = post;
   }
-  return skillsArray;
+  return groups;
 }
 
-// ========== 7. 生成带有双语字段的角色对象 ==========
-function buildLocalizedChar(character) {
-  const char = JSON.parse(JSON.stringify(character));
+// ========== 10. 构建角色条目（合并 buildIndexEntry + finalizeOutput）==========
 
-  // CN 翻译 fallback 链：cn → jp → 'ID:...'
+function hasEvolvedSkills(char) {
+  return ['normal1','normal2','burst'].some(p =>
+    char[`evolved_${p}_skill_ids`] && char[`evolved_${p}_skill_ids`].length > 0)
+}
+
+function computeWT(character, useEvolved) {
+  const speed = character.initial_status?.speed;
+  if (speed == null || speed <= 0) return null;
+  let wait = 0;
+  const field = useEvolved ? 'evolved_normal2_skill_ids' : 'normal2_skill_ids';
+  const ids = character[field] || [];
+  if (ids && ids.length > 0) {
+    const maxId = Math.max(...ids);
+    const skill = tables.skill?.get(maxId);
+    if (skill && typeof skill.wait === 'number') wait = skill.wait;
+  }
+  return Math.floor(57600 / speed + wait);
+}
+
+function diffObjects(base, alt) {
+  const skip = new Set(['switch', 'switch_stat', '_transform']);
+  const diff = {};
+  const keys = new Set([...Object.keys(base), ...Object.keys(alt)]);
+  for (const k of keys) {
+    if (skip.has(k)) continue;
+    if (base[k] === alt[k]) continue;
+    if (Array.isArray(base[k]) && Array.isArray(alt[k]) && JSON.stringify(base[k]) === JSON.stringify(alt[k])) continue;
+    diff[k] = Object.hasOwn(alt, k) ? alt[k] : base[k];
+  }
+  return diff;
+}
+
+function buildCharacterEntry(character) {
+  const char = JSON.parse(JSON.stringify(character));
   const cnFallback = (id, mapName) =>
     cnMaps[mapName]?.get(id) || jpMaps[mapName]?.get(id) || `ID:${id}`;
 
-  char.tag_names_ja = (char.tag_ids || []).map(id => jpMaps.character_tag?.get(id) || `ID:${id}`);
-  char.base_character_name_ja = jpMaps.base_character?.get(char.base_character_id) || `ID:${char.base_character_id}`;
-  char.original_title_name_ja = jpMaps.original_title?.get(char.original_title_id) || `ID:${char.original_title_id}`;
-  if (char.equipment_tool_trait_ids)
-    char.equipment_tool_trait_names_ja = char.equipment_tool_trait_ids.map(id => jpMaps.equipment_tool_trait?.get(id) || `ID:${id}`);
-  if (char.trait_color_id != null)
-    char.trait_color_name_ja = jpMaps.trait_color?.get(char.trait_color_id) || `ID:${char.trait_color_id}`;
-  if (char.support_color_id != null)
-    char.support_color_name_ja = jpMaps.trait_color?.get(char.support_color_id) || `ID:${char.support_color_id}`;
-  if (char.battle_tool_trait_ids)
-    char.battle_tool_trait_names_ja = char.battle_tool_trait_ids.map(id => jpMaps.battle_tool_trait?.get(id) || `ID:${id}`);
+  // 名称解析（仅 buildLocalizedChar 需要的内部字段）
+  char._tag_names_ja = (char.tag_ids || []).map(id => jpMaps.character_tag?.get(id) || `ID:${id}`);
+  char._base_character_name_ja = jpMaps.base_character?.get(char.base_character_id) || '';
+  char._base_character_name_cn = cnFallback(char.base_character_id, 'base_character');
 
-  char.tag_names_cn = (char.tag_ids || []).map(id => cnFallback(id, 'character_tag'));
-  char.base_character_name_cn = cnFallback(char.base_character_id, 'base_character');
-  char.original_title_name_cn = cnFallback(char.original_title_id, 'original_title');
-  if (char.equipment_tool_trait_ids)
-    char.equipment_tool_trait_names_cn = char.equipment_tool_trait_ids.map(id => cnFallback(id, 'equipment_tool_trait'));
-  if (char.trait_color_id != null)
-    char.trait_color_name_cn = cnFallback(char.trait_color_id, 'trait_color');
-  if (char.support_color_id != null)
-    char.support_color_name_cn = cnFallback(char.support_color_id, 'trait_color');
-  if (char.battle_tool_trait_ids)
-    char.battle_tool_trait_names_cn = char.battle_tool_trait_ids.map(id => cnFallback(id, 'battle_tool_trait'));
+  // 构建技能/能力详情
+  const { skills: skillDetails, abilities: abilityDetails } = buildSkillAndAbilityDetails(character);
 
-  char._skillDetails = buildSkillDetails(character);
-  const targetMapJa = jpMaps.skill_target_type;
-  const targetMapCn = cnMaps.skill_target_type;
-  if (char._skillDetails) {
-    for (const id in char._skillDetails) {
-      const skill = char._skillDetails[id];
-      if (skill && skill.skill_target_type !== undefined) {
-        skill.target_name_ja = targetMapJa?.get(skill.skill_target_type) || `ID:${skill.skill_target_type}`;
-        skill.target_name_cn = targetMapCn?.get(skill.skill_target_type) || targetMapJa?.get(skill.skill_target_type) || `ID:${skill.skill_target_type}`;
-      }
-    }
-  }
+  // 技能 ID 分组
+  const skillGroups = buildSkillIdGroups(character);
 
-  char._skills = buildSkillsArray(char, char._skillDetails);
-
+  // EX 技能 ID
   const extraIds = char.extra_skill_ids || [];
   const normalEx = [];
-  const rangeGroups = {};
   const charRules = exRules.filter(r => {
     if (!r.character_ids) return false;
     if (r.character_ids === '*') return true;
@@ -249,224 +302,24 @@ function buildLocalizedChar(character) {
       if (Array.isArray(r.pattern)) return r.pattern.includes(index);
       return false;
     });
-    const action = matchedRule ? matchedRule.action : 'normal';
-    const group = matchedRule ? matchedRule.group : null;
-    if (action === 'hide') {
-      // skip
-    } else if (action === 'skill1_inrange') {
-      if (!rangeGroups[group]) rangeGroups[group] = { skill1: [], skill2: [] };
-      rangeGroups[group].skill1.push(skillId);
-    } else if (action === 'skill2_inrange') {
-      if (!rangeGroups[group]) rangeGroups[group] = { skill1: [], skill2: [] };
-      rangeGroups[group].skill2.push(skillId);
-    } else {
-      normalEx.push(skillId);
-    }
+    if (matchedRule?.action !== 'hide') normalEx.push(skillId);
   });
-  char._exSkills = normalEx.map(id => char._skillDetails[id]).filter(Boolean);
-  char._rangeSkills = {};
-  for (const [group, data] of Object.entries(rangeGroups)) {
-    const skill1Levels = data.skill1.map(id => char._skillDetails[id]).filter(Boolean);
-    const skill2Levels = data.skill2.map(id => char._skillDetails[id]).filter(Boolean);
-    if (skill1Levels.length > 0 || skill2Levels.length > 0) {
-      char._rangeSkills[group] = { skill1: skill1Levels, skill2: skill2Levels };
-    }
-  }
 
-  return char;
-}
-
-// ========== 8. 精简输出 + switch/switch_stat ==========
-const CHAR_KEEP = [
-  'id', 'attack_attributes', 'initial_rarity', 'max_rarity',
-  'trait_color_id', 'support_color_id',
-  'trait_color_name_ja', 'trait_color_name_cn',
-  'support_color_name_ja', 'support_color_name_cn',
-  'battle_tool_trait_names_ja', 'battle_tool_trait_names_cn',
-  'equipment_tool_trait_names_ja', 'equipment_tool_trait_names_cn',
-  'battle_tool_trait_ids', 'equipment_tool_trait_ids',
-  'leader_skill', 'ability_ids', 'support_ability_ids',
-  'board_ability1_ids', 'board_ability2_ids', 'board_ability3_ids',
-  '_exSkills',
-]
-
-const DETAIL_KEEP = [
-  'name', 'id', 'target_name_ja', 'target_name_cn',
-  'skill_target_type', 'attack_attributes', 'skill_power_type',
-  'description', 'effects', 'wait', 'power', 'break_power', 'limit_count',
-]
-
-function hasEvolvedSkills(char) {
-  return ['normal1','normal2','burst'].some(p =>
-    char[`evolved_${p}_skill_ids`] && char[`evolved_${p}_skill_ids`].length > 0)
-}
-
-function slimSkillDetails(details) {
-  if (!details) return details
-  const out = {}
-  for (const [id, obj] of Object.entries(details)) {
-    const slim = {}
-    for (const k of DETAIL_KEEP) {
-      if (obj[k] !== undefined && obj[k] !== null) slim[k] = obj[k]
-    }
-    out[id] = slim
-  }
-  return out
-}
-
-
-function pickKeys(obj, keys) {
-  const out = {}
-  for (const k of keys) {
-    if (obj[k] !== undefined && obj[k] !== null && !(Array.isArray(obj[k]) && obj[k].length === 0))
-      out[k] = obj[k]
-  }
-  return out
-}
-
-// 逐字段比较两个对象的差异（用于 switch_stat）
-// alt 中与 base 不同的字段（含 base 有但 alt 无的字段）写入结果
-// 显式排除 switch / switch_stat 以避免循环引用
-const DIFF_SKIP_KEYS = new Set(['switch', 'switch_stat', '_skills', '_skillDetails'])
-
-function diffObjects(base, alt) {
-  const diff = {}
-  const keys = new Set([...Object.keys(base), ...Object.keys(alt)])
-  for (const k of keys) {
-    if (DIFF_SKIP_KEYS.has(k)) continue
-    if (base[k] === alt[k]) continue
-    // 数组深度比较，内容相同则跳过
-    if (Array.isArray(base[k]) && Array.isArray(alt[k]) && JSON.stringify(base[k]) === JSON.stringify(alt[k])) continue
-    diff[k] = Object.hasOwn(alt, k) ? alt[k] : base[k]
-  }
-  return diff
-}
-
-function buildSwitchSkills(char, type) {
-  if (type === 'evolve') {
-    const skills = []
-    if (char._skills) {
-      for (const group of char._skills) {
-        if (group.post_evolution && group.post_evolution.length > 0) {
-          skills.push({ type: group.type, skills: group.post_evolution })
-        }
-      }
-    }
-    return skills.length > 0 ? skills : null
-  }
-  if (type === 'range') {
-    const skills = []
-    const inrange = char._rangeSkills?.inrange
-    if (inrange?.skill1?.length > 0) skills.push({ type: 'normal1', skills: inrange.skill1 })
-    if (inrange?.skill2?.length > 0) skills.push({ type: 'normal2', skills: inrange.skill2 })
-    return skills.length > 0 ? skills : null
-  }
-  return null
-}
-
-function finalizeOutput(char) {
-  let sw = null
-  if (char._transform) {
-    sw = 'change'
-  } else if (char._rangeSkills?.inrange) {
-    sw = 'range'
-  } else if (hasEvolvedSkills(char)) {
-    sw = 'evolve'
-  }
-
-  let switchStat = null
-  if (sw === 'change') {
-    const trans = finalizeOutput(char._transform)
-    switchStat = diffObjects(char, trans)
-    if (char._skillDetails || trans._skillDetails) {
-      switchStat._skillDetails = { ...(char._skillDetails || {}), ...(trans._skillDetails || {}) }
-    }
-  } else if (sw === 'evolve') {
-    switchStat = {}
-    const skills = buildSwitchSkills(char, 'evolve')
-    if (skills) switchStat._skills = skills
-    const evoAbiIds = char.all_skill_evolved_ability_ids || []
-    if (evoAbiIds.length > 0) {
-      // 此处 char.ability_ids 赋值给 switchStat 后立即被 filter 原地修改；
-      // switchStat.ability_ids 持有同一数组引用，依赖此执行顺序保持"过滤前"快照
-      switchStat.ability_ids = char.ability_ids
-      char.ability_ids = (char.ability_ids || []).filter(id => !evoAbiIds.includes(id))
-    }
-    const evoWT = computeWT(char, true)
-    const baseWT = computeWT(char, false)
-    if (evoWT !== baseWT) switchStat.initial_wt = evoWT
-  } else if (sw === 'range') {
-    switchStat = {}
-    const skills = buildSwitchSkills(char, 'range')
-    if (skills) switchStat._skills = skills
-    const evoWT = computeWT(char, true)
-    const baseWT = computeWT(char, false)
-    if (evoWT !== baseWT) switchStat.initial_wt = evoWT
-  }
-
-  const slimDetails = slimSkillDetails(char._skillDetails)
-  if (switchStat?._skillDetails) {
-    switchStat._skillDetails = slimSkillDetails(switchStat._skillDetails)
-  }
-
-  const out = pickKeys(char, CHAR_KEEP)
-  out._skillDetails = slimDetails
-  out.initial_wt = computeWT(char, true)
-  // 基表 _skills：pre_evolution → { type, skills }
-  if (char._skills) {
-    out._skills = char._skills
-      .map(g => ({ type: g.type, skills: g.pre_evolution }))
-      .filter(g => g.skills && g.skills.length > 0)
-  }
-  if (sw) {
-    out.switch = sw
-    out.switch_stat = switchStat
-  }
-
-  function clean(obj) {
-    if (Array.isArray(obj)) {
-      return obj
-        .filter(item => item !== null && item !== undefined)
-        .map(item => (item && typeof item === 'object' && !Array.isArray(item)) ? clean(item) : item)
-    }
-    if (obj && typeof obj === 'object') {
-      const result = {}
-      for (const [k, v] of Object.entries(obj)) {
-        if (v === null || v === undefined || v === '' || v === false) continue
-        if (Array.isArray(v) && v.length === 0) continue
-        if (typeof v === 'object' && !Array.isArray(v) && Object.keys(clean(v)).length === 0) continue
-        result[k] = typeof v === 'object' ? clean(v) : v
-      }
-      return result
-    }
-    return obj
-  }
-
-  return clean(out)
-}
-
-// ========== 8. 生成索引条目 ==========
-function buildIndexEntry(character) {
-
-  // 恒常化 + FES
-  const fesName = getFesName(character.start_at);
+  // 恒常化 / FES
+  const fesName = getFesName(char.start_at);
   let permanent_status = null;
   let permanent_date = null;
-  if (character.initial_rarity > 2) {
-    if (permExcludeIds.has(character.id)) {
+  if (char.initial_rarity > 2) {
+    if (permExcludeIds.has(char.id)) {
       permanent_status = '非恒常角色';
       permanent_date = '—';
+    } else if (fesName === 'ATELIER FES') {
+      permanent_status = '已恒常化';
+      permanent_date = 'ATELIER FES';
     } else {
-      if (fesName === 'ATELIER FES') {
-        // 初始角色
-        permanent_status = '已恒常化';
-        permanent_date = 'ATELIER FES';
-      } else {
-        const gachaEnd = gachaEndMap.get(character.id);
-        if (!gachaEnd) {
-          permanent_status = null;
-          permanent_date = null;
-        } else if (fesName) {
+      const gachaEnd = gachaEndMap.get(char.id);
+      if (gachaEnd) {
+        if (fesName) {
           permanent_status = '已恒常化';
           permanent_date = fesName;
         } else {
@@ -482,162 +335,126 @@ function buildIndexEntry(character) {
     }
   }
 
-  // UID: YYYYMMDD + initial_rarity(1位) + id(5位补零)
-  const dateStr = (character.start_at || '2049-12-31').replace(/-/g, '').substring(0, 8);
-  const uid = dateStr + String(character.initial_rarity ?? 0) + String(character.id).padStart(5, '0');
+  // UID
+  const dateStr = (char.start_at || '2049-12-31').replace(/-/g, '').substring(0, 8);
+  const uid = dateStr + String(char.initial_rarity ?? 0) + String(char.id).padStart(5, '0');
 
-  // CN 翻译 fallback 链：cn → jp → 'ID:...'
-  const cnFallback = (id, mapName) =>
-    cnMaps[mapName]?.get(id) || jpMaps[mapName]?.get(id) || `ID:${id}`;
-
-  const entry = {
-    id: character.id,
-    uid,
-    name_ja: character.name,
-    name_cn: character.name,
-    another_name: character.another_name,
-    fullname: character.fullname || null,
-    overlay_name: character.overlay_name || null,
-    initial_rarity: character.initial_rarity,
-    max_rarity: character.max_rarity,
-    role: character.role,
-    tag_count: (character.tag_ids || []).length,
-    tag_ids: character.tag_ids || [],
-    attack_attributes: character.attack_attributes,
-    tag_names_ja: (character.tag_ids || []).map(id => jpMaps.character_tag?.get(id) || `ID:${id}`),
-    tag_names_cn: (character.tag_ids || []).map(id => cnMaps.character_tag?.get(id) || jpMaps.character_tag?.get(id) || `ID:${id}`),
-    trait_color_id: character.trait_color_id || null,
-    support_color_id: character.support_color_id || null,
-    start_at: character.start_at ? character.start_at.replace(/-/g, '').substring(0, 8) : null,
-    initial_status: character.initial_status,
-    alt_initial_wt: computeWT(character, true),
-    base_initial_wt: computeWT(character, false),
-    trait_color_name_ja: jpMaps.trait_color?.get(character.trait_color_id) || null,
-    trait_color_name_cn: character.trait_color_id != null ? cnFallback(character.trait_color_id, 'trait_color') : null,
-    support_color_name_ja: jpMaps.trait_color?.get(character.support_color_id) || null,
-    support_color_name_cn: character.support_color_id != null ? cnFallback(character.support_color_id, 'trait_color') : null,
-    battle_tool_trait_ids: character.battle_tool_trait_ids || [],
-    battle_tool_trait_names_ja: (character.battle_tool_trait_ids || []).map(id => jpMaps.battle_tool_trait?.get(id) || ''),
-    battle_tool_trait_names_cn: (character.battle_tool_trait_ids || []).map(id => cnFallback(id, 'battle_tool_trait')),
-    equipment_tool_trait_ids: character.equipment_tool_trait_ids || [],
-    equipment_tool_trait_names_ja: (character.equipment_tool_trait_ids || []).map(id => jpMaps.equipment_tool_trait?.get(id) || ''),
-    equipment_tool_trait_names_cn: (character.equipment_tool_trait_ids || []).map(id => cnFallback(id, 'equipment_tool_trait')),
-    base_character_name_ja: jpMaps.base_character?.get(character.base_character_id) || null,
-    base_character_name_cn: cnFallback(character.base_character_id, 'base_character'),
-    original_title_id: character.original_title_id || null,
-    original_title_name_ja: jpMaps.original_title?.get(character.original_title_id) || null,
-	    original_title_name_cn: character.original_title_id != null ? cnFallback(character.original_title_id, 'original_title') : null,
-	    has_evo: !!(
-	      (character.evolved_normal1_skill_ids && character.evolved_normal1_skill_ids.length > 0) ||
-	      (character.evolved_normal2_skill_ids && character.evolved_normal2_skill_ids.length > 0) ||
-	      (character.evolved_burst_skill_ids && character.evolved_burst_skill_ids.length > 0)
-	    ),
-	    has_range: (character.extra_skill_ids || []).length > 0 &&
-	      exRules.some(r => {
-	        if (!r.character_ids) return false
-	        if (r.character_ids === '*') return true
-	        if (Array.isArray(r.character_ids)) return r.character_ids.includes(character.id)
-	        return false
-	      }),
-	    has_transform: transformPairs.some(p => p[0] === character.id),
-	    has_active: !!(character.active1_skill_id || character.active2_skill_id || character.active3_skill_id),
-	    has_ex: (character.extra_skill_ids || []).length > 0,
-    gacha_end_at: (fesName === 'ATELIER FES') ? null : ((gachaEndMap.get(character.id) || '').replace(/-/g, '') || null),
-    permanent_status,
-    permanent_date,
-    leader_skill_name: character.leader_skill?.name || null,
-    leader_skill_description: character.leader_skill?.description || null,
-  };
-
-  // ── 亚空支援能力 ──
-  const saIdx = Math.min(character.max_rarity - 1, (character.support_ability_ids || []).length - 1);
-  const saId = saIdx >= 0 ? (character.support_ability_ids || [])[saIdx] : null;
-  const saDetail = saId != null ? (character._skillDetails || {})[saId] : null;
-  if (saDetail) {
-    // 解析描述中 {0} {1} 为具体数值
-    let saDesc = saDetail.description || '';
-    (saDetail.effects || []).forEach((eff, i) => {
-      saDesc = saDesc.replace(new RegExp(`\\{${i}\\}`, 'g'), (eff.value ?? 0) / 100);
-    });
-    entry.support_ability_description = saDesc;
-
-    // 解析条件：按 の時、 或 時、 拆分
-    const condMatch = saDetail.description.match(/^(.+?)(?:の)?時、(.+)$/);
+  // 支援能力
+  const saIdx = Math.min(char.max_rarity - 1, (char.support_ability_ids || []).length - 1);
+  const saId = saIdx >= 0 ? (char.support_ability_ids || [])[saIdx] : null;
+  let supportAbility = null;
+  if (saId != null && abilityDetails[saId]) {
+    const sa = abilityDetails[saId];
+    supportAbility = { description: sa.description };
+    const condMatch = sa.description.match(/^(.+?)(?:の)?時、(.+)$/);
     if (condMatch) {
       const cond = condMatch[1];
-      // 属性
       const attrMatch = cond.match(/得意属性が(\S+)属性/);
       const attrNameMap = { '火':5,'氷':6,'雷':7,'風':8,'斬':1,'打':2,'突':3 };
-      entry.support_ability_attr = attrMatch ? (attrNameMap[attrMatch[1]] || null) : null;
-      // 职业
+      if (attrMatch) supportAbility.attr = attrNameMap[attrMatch[1]] || null;
       const roleMatch = cond.match(/ブレイカー|ディフェンダー/);
       const roleNameMap = { 'ブレイカー':2, 'ディフェンダー':3 };
-      entry.support_ability_role = roleMatch ? (roleNameMap[roleMatch[0]] || null) : null;
-      // 标签（构建 JP→CN 查找）
+      if (roleMatch) supportAbility.role = roleNameMap[roleMatch[0]] || null;
       const tagNames = (cond.match(/「(.+?)」/g) || []).map(t => t.replace(/[「」]/g, ''));
-      if (tagNames.length > 0) {
-        const tagCnLookup = {};
-        for (const [id, nameJa] of jpMaps.character_tag || []) {
-          tagCnLookup[nameJa] = cnMaps.character_tag?.get(id) || nameJa;
-        }
-        entry.support_ability_tag_ja = tagNames.join('、');
-        entry.support_ability_tag_cn = tagNames.map(n => tagCnLookup[n] || n).join('、');
-      } else {
-        entry.support_ability_tag_ja = null;
-        entry.support_ability_tag_cn = null;
-      }
-    } else {
-      entry.support_ability_attr = null;
-      entry.support_ability_role = null;
-      entry.support_ability_tag_ja = null;
-      entry.support_ability_tag_cn = null;
+      if (tagNames.length > 0) supportAbility.tag = tagNames.join('、');
     }
-  } else {
-    entry.support_ability_description = null;
-    entry.support_ability_attr = null;
-    entry.support_ability_role = null;
-    entry.support_ability_tag_ja = null;
-    entry.support_ability_tag_cn = null;
   }
 
-  // 预计算图片文件大小
-  const imgPath = path.join(__dirname, '..', 'image', 'character', `${character.id}.png`);
-  if (fs.existsSync(imgPath)) {
-    entry.image_size = fs.statSync(imgPath).size;
+  // leader_skill description 处理
+  let leaderSkill = null;
+  if (char.leader_skill?.description) {
+    const lsObj = JSON.parse(JSON.stringify(char.leader_skill));
+    bakeDescription(lsObj);
+    leaderSkill = { name: lsObj.name || null, description: lsObj.description };
   }
+
+  // 确定 switch 类型
+  let sw = null;
+  if (char._transform) sw = 'change';
+  else if (hasEvolvedSkills(char)) sw = 'evolve';
+
+  // 构建条目
+  const entry = {
+    id: char.id,
+    uid,
+    another_name: char.another_name || null,
+    fullname: char.fullname || null,
+    overlay_name: char.overlay_name || null,
+    initial_rarity: char.initial_rarity,
+    max_rarity: char.max_rarity,
+    role: char.role,
+    attack_attributes: char.attack_attributes,
+
+    trait_color_id: char.trait_color_id || null,
+    support_color_id: char.support_color_id || null,
+    tag_ids: char.tag_ids || [],
+    base_character_id: char.base_character_id || null,
+    original_title_id: char.original_title_id || null,
+    battle_tool_trait_ids: char.battle_tool_trait_ids || [],
+    equipment_tool_trait_ids: char.equipment_tool_trait_ids || [],
+
+    start_at: char.start_at ? char.start_at.replace(/-/g, '').substring(0, 8) : null,
+    initial_status: char.initial_status,
+    has_evo: hasEvolvedSkills(char),
+    has_range: (char.extra_skill_ids || []).length > 0 &&
+      exRules.some(r => {
+        if (!r.character_ids) return false;
+        if (r.character_ids === '*') return true;
+        if (Array.isArray(r.character_ids)) return r.character_ids.includes(char.id);
+        return false;
+      }),
+    has_transform: transformPairs.some(p => p[0] === char.id),
+    has_active: !!(char.active1_skill_id || char.active2_skill_id || char.active3_skill_id),
+    has_ex: (char.extra_skill_ids || []).length > 0,
+    gacha_end_at: (fesName === 'ATELIER FES') ? null : ((gachaEndMap.get(char.id) || '').replace(/-/g, '') || null),
+    permanent_status,
+    permanent_date,
+
+    leader_skill: leaderSkill,
+    support_ability: supportAbility,
+
+    skills: skillGroups,
+    abilities: {
+      character: char.ability_ids || [],
+      board1: char.board_ability1_ids || [],
+      board2: char.board_ability2_ids || [],
+      board3: char.board_ability3_ids || [],
+      support: char.support_ability_ids || [],
+    },
+  };
+
+  if (normalEx.length > 0) entry.skills.ex = normalEx;
+
+  // 切换形态
+  if (sw) {
+    entry.switch = sw;
+    if (sw === 'change') {
+      const trans = buildCharacterEntry(char._transform);
+      const switchStat = diffObjects(entry, trans);
+      entry.switch_stat = switchStat;
+    } else if (sw === 'evolve') {
+      const switchStat = {};
+      const evoAbiIds = char.all_skill_evolved_ability_ids || [];
+      if (evoAbiIds.length > 0) {
+        switchStat.abilities = { ...entry.abilities };
+        entry.abilities = { ...entry.abilities };
+        entry.abilities.character = (entry.abilities.character || []).filter(id => !evoAbiIds.includes(id));
+      }
+      entry.switch_stat = switchStat;
+    }
+  }
+
+  // 清理
+  delete char._transform;
+  delete char._tag_names_ja;
+  delete char._base_character_name_ja;
+  delete char._base_character_name_cn;
 
   return entry;
 }
 
-function computeWT(character, useEvolved) {
-  const speed = character.initial_status?.speed;
-  if (speed == null || speed <= 0) return null;
-  let wait = 0;
-  // 范围角色：切换后 normal2 来自 _rangeSkills
-  if (useEvolved && character._rangeSkills?.inrange?.skill2) {
-    const skills = character._rangeSkills.inrange.skill2;
-    if (skills.length > 0) {
-      const maxId = Math.max(...skills.map(s => s.id));
-      const skill = skills.find(s => s.id === maxId);
-      if (skill && typeof skill.wait === 'number') wait = skill.wait;
-    }
-  } else {
-    const field = useEvolved ? 'evolved_normal2_skill_ids' : 'normal2_skill_ids';
-    const ids = character[field] || [];
-    if (ids && ids.length > 0) {
-      const maxId = Math.max(...ids);
-      const skill = tables.skill?.get(maxId);
-      if (skill && typeof skill.wait === 'number') wait = skill.wait;
-    }
-  }
-  return Math.floor(57600 / speed + wait);
-}
-
-// ========== 9. 主流程 ==========
-if (!tables.character) {
-  console.error('❌ character.json 未找到');
-  process.exit(1);
-}
+// ========== 11. 主流程 ==========
+if (!tables.character) { console.error('❌ character.json 未找到'); process.exit(1); }
 
 const excludeFile = path.join(__dirname, '..', 'config', 'exclude.json');
 let excludeIds = new Set();
@@ -651,12 +468,9 @@ const transformFile = path.join(__dirname, '..', 'config', 'transform.json');
 let transformPairs = [];
 let hiddenTransformIds = new Set();
 if (fs.existsSync(transformFile)) {
-  const pairs = safeReadJSON(transformFile);
-  transformPairs = pairs;
-  pairs.forEach(pair => {
-    hiddenTransformIds.add(pair[1]);
-  });
-  console.log(`🔄 已加载变身配对：${pairs.length} 组`);
+  transformPairs = safeReadJSON(transformFile);
+  transformPairs.forEach(p => hiddenTransformIds.add(p[1]));
+  console.log(`🔄 已加载变身配对：${transformPairs.length} 组`);
 }
 
 let visibleCharacters = Array.from(tables.character.values()).filter(c =>
@@ -664,14 +478,14 @@ let visibleCharacters = Array.from(tables.character.values()).filter(c =>
 );
 console.log(`👥 列表显示角色数量：${visibleCharacters.length}`);
 
-// ========== 处理卡池结束时间 ==========
-const gachaEndMap = new Map(); // character_id → earliest end_at (YYYY-MM-DD)
+// 卡池结束时间
+const gachaEndMap = new Map();
 const gachaFile = path.join(rawDir, 'gacha.json');
 if (fs.existsSync(gachaFile)) {
   const gachaData = safeReadJSON(gachaFile);
   for (const g of gachaData) {
     if (!g.additional_pieces || !g.end_at) continue;
-    const dateStr = g.end_at.substring(0, 10); // YYYY-MM-DD
+    const dateStr = g.end_at.substring(0, 10);
     for (const piece of g.additional_pieces) {
       if (!piece.character_ids) continue;
       for (const cid of piece.character_ids) {
@@ -683,7 +497,6 @@ if (fs.existsSync(gachaFile)) {
   console.log(`🎫 已加载卡池数据：${gachaEndMap.size} 个角色有卡池结束时间`);
 }
 
-// ========== 加载非恒常角色配置 ==========
 const permExcludeFile = path.join(__dirname, '..', 'config', 'permanent_exclude.json');
 const permExcludeIds = new Set();
 if (fs.existsSync(permExcludeFile)) {
@@ -692,20 +505,14 @@ if (fs.existsSync(permExcludeFile)) {
   console.log(`📋 已加载非恒常角色：${permExcludeIds.size} 个`);
 }
 
-// ========== 加载 ATELIER FES 配置 ==========
 let fesConfig = [];
 const fesFile = path.join(__dirname, '..', 'config', 'atelier_fes.json');
-if (fs.existsSync(fesFile)) {
-  fesConfig = safeReadJSON(fesFile);
-  console.log(`🎪 已加载 ATELIER FES：${fesConfig.length} 个`);
-}
+if (fs.existsSync(fesFile)) { fesConfig = safeReadJSON(fesFile); console.log(`🎪 已加载 ATELIER FES：${fesConfig.length} 个`); }
 
 function getFesName(startAt) {
   if (!startAt) return null;
   const d = startAt.substring(0, 10).replace(/-/g, '/');
-  for (const f of fesConfig) {
-    if (d >= f.start_date && d <= f.end_date) return f.name;
-  }
+  for (const f of fesConfig) { if (d >= f.start_date && d <= f.end_date) return f.name; }
   return null;
 }
 
@@ -713,31 +520,41 @@ const now = new Date();
 const updateTime = now.getFullYear().toString() +
   String(now.getMonth() + 1).padStart(2, '0') +
   String(now.getDate()).padStart(2, '0');
-if (fs.existsSync(outDir)) {
-  fs.rmSync(outDir, { recursive: true, force: true });
-}
-fs.mkdirSync(outDir, { recursive: true });
-const charOutDir = path.join(outDir, 'character');
-fs.mkdirSync(charOutDir, { recursive: true });
 
-// 输出词条数据到 data/output/（翻译由 translations.cjs 处理）
+// 清空输出
+if (fs.existsSync(outDir)) fs.rmSync(outDir, { recursive: true, force: true });
+fs.mkdirSync(outDir, { recursive: true });
+
+// ========== 实体文件输出 ==========
+function writeEntityFile(name) {
+  const langFile = path.join(langDir, `${name}.json`);
+  if (!fs.existsSync(langFile)) return;
+  const langData = safeReadJSON(langFile, false);
+  const output = {};
+  for (const t of langData) {
+    output[t.id] = { name_ja: t.name, name_cn: t.name_cn || '' };
+  }
+  fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(output, null, 2), 'utf-8');
+  console.log(`  ✓ ${name}.json (${Object.keys(output).length} 条)`);
+}
+writeEntityFile('trait_color');
+writeEntityFile('base_character');
+writeEntityFile('original_title');
+
+// trait 数据（保持现有格式）
 function buildTraitOutput(name, buildValues) {
   const rawFile = path.join(rawDir, `${name}.json`);
   if (!fs.existsSync(rawFile)) return;
   const traits = safeReadJSON(rawFile);
-
   const langFile = path.join(langDir, `${name}.json`);
   const langData = fs.existsSync(langFile) ? safeReadJSON(langFile, false) : [];
   const langMap = new Map(langData.map(t => [t.id, t]));
-
   const output = [];
   for (const t of traits) {
     const lang = langMap.get(t.id) || {};
     output.push({
-      id: t.id,
-      category_id: t.category_id || 0,
-      name: lang.name || t.name,
-      name_cn: lang.name_cn || '',
+      id: t.id, category_id: t.category_id || 0,
+      name: lang.name || t.name, name_cn: lang.name_cn || '',
       effect_description: lang.effect_description || '',
       effect_description_cn: lang.effect_description_cn || '',
       values: buildValues(t),
@@ -746,10 +563,7 @@ function buildTraitOutput(name, buildValues) {
   fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(output, null, 2), 'utf-8');
   console.log(`  ✓ ${name}.json (${output.length} 条)`);
 }
-
-function btValues(t) {
-  return (t.effects || []).map(e => (e.values || []).map(v => v / 100));
-}
+function btValues(t) { return (t.effects || []).map(e => (e.values || []).map(v => v / 100)); }
 function etValues(t) {
   if (!t.ability_ids || t.ability_ids.length === 0) return [];
   const firstAbi = tables.ability?.get(t.ability_ids[0]);
@@ -758,228 +572,105 @@ function etValues(t) {
   const vals = [];
   for (let b = 0; b < blockCount; b++) {
     const r = [];
-    for (const aid of t.ability_ids) {
-      const abi = tables.ability?.get(aid);
-      const v = abi?.effects?.[b]?.value;
-      if (v != null) r.push(v / 100);
-    }
+    for (const aid of t.ability_ids) { const abi = tables.ability?.get(aid); const v = abi?.effects?.[b]?.value; if (v != null) r.push(v / 100); }
     if (r.length > 0) vals.push(r);
   }
   return vals;
 }
-
 buildTraitOutput('battle_tool_trait', btValues);
 buildTraitOutput('equipment_tool_trait', etValues);
 
-// 输出 character_tag（含 priority 用于排序）
-const tagRawFile = path.join(rawDir, 'character_tag.json')
+// character_tag
+const tagRawFile = path.join(rawDir, 'character_tag.json');
 if (fs.existsSync(tagRawFile)) {
-  const tagRaw = safeReadJSON(tagRawFile)
-  const tagLangFile = path.join(langDir, 'character_tag.json')
-  const tagLang = fs.existsSync(tagLangFile) ? safeReadJSON(tagLangFile, false) : []
-  const tagLangMap = new Map(tagLang.map(t => [t.id, t]))
+  const tagRaw = safeReadJSON(tagRawFile);
+  const tagLangFile = path.join(langDir, 'character_tag.json');
+  const tagLang = fs.existsSync(tagLangFile) ? safeReadJSON(tagLangFile, false) : [];
+  const tagLangMap = new Map(tagLang.map(t => [t.id, t]));
   const tagOutput = tagRaw.map(t => ({
-    id: t.id,
-    priority: t.priority || 0,
+    id: t.id, priority: t.priority || 0,
     name: tagLangMap.get(t.id)?.name || t.name,
     name_cn: tagLangMap.get(t.id)?.name_cn || '',
-  }))
-  fs.writeFileSync(path.join(outDir, 'character_tag.json'), JSON.stringify(tagOutput, null, 2), 'utf-8')
-  console.log(`  ✓ character_tag.json (${tagOutput.length} 条)`)
+  }));
+  fs.writeFileSync(path.join(outDir, 'character_tag.json'), JSON.stringify(tagOutput, null, 2), 'utf-8');
+  console.log(`  ✓ character_tag.json (${tagOutput.length} 条)`);
 }
 
+// ========== 构建角色索引 + 收集全局技能/能力 ==========
+const globalSkills = {};
+const globalAbilities = {};
 const pairedIds = new Set();
 const index = [];
 
 transformPairs.forEach(pair => {
   const [firstId, secondId] = pair;
-  pairedIds.add(firstId);
-  pairedIds.add(secondId);
-
+  pairedIds.add(firstId); pairedIds.add(secondId);
   const firstChar = tables.character.get(firstId);
   const secondChar = tables.character.get(secondId);
-  if (!firstChar || !secondChar) {
-    console.warn(`⚠️ 变身配对 ${firstId}-${secondId} 中有角色不存在`);
-    return;
-  }
+  if (!firstChar || !secondChar) { console.warn(`⚠️ 变身配对 ${firstId}-${secondId} 中有角色不存在`); return; }
 
-  const firstData = buildLocalizedChar(firstChar);
-  const secondData = buildLocalizedChar(secondChar);
-  const merged = { ...firstData, _transform: secondData };
+  const firstData = JSON.parse(JSON.stringify(firstChar));
+  const secondData = JSON.parse(JSON.stringify(secondChar));
+  firstData._transform = secondChar; // 保留原始引用用于 buildCharacterEntry
+
   if (!excludeIds.has(firstId)) {
-    const entry = buildIndexEntry(firstData);
-    entry.alt_initial_wt = computeWT(secondData, false);
+    const entry = buildCharacterEntry(firstData);
     index.push(entry);
+    Object.assign(globalSkills, buildSkillAndAbilityDetails(firstChar).skills);
+    Object.assign(globalAbilities, buildSkillAndAbilityDetails(firstChar).abilities);
+    // switch_stat 中的技能/能力也收集
+    if (entry.switch === 'change') {
+      const transDetails = buildSkillAndAbilityDetails(secondChar);
+      Object.assign(globalSkills, transDetails.skills);
+      Object.assign(globalAbilities, transDetails.abilities);
+    }
   }
-  const finalMerged = finalizeOutput(merged);
-  fs.writeFileSync(path.join(charOutDir, `${firstId}.json`), JSON.stringify(finalMerged, null, 2), 'utf-8');
 });
 
 visibleCharacters.forEach(char => {
   if (pairedIds.has(char.id)) return;
-  const localizedChar = buildLocalizedChar(char);
-  index.push(buildIndexEntry(localizedChar));
-  const finalChar = finalizeOutput(localizedChar);
-  fs.writeFileSync(path.join(charOutDir, `${char.id}.json`), JSON.stringify(finalChar, null, 2), 'utf-8');
+  const entry = buildCharacterEntry(char);
+  index.push(entry);
+  const details = buildSkillAndAbilityDetails(char);
+  Object.assign(globalSkills, details.skills);
+  Object.assign(globalAbilities, details.abilities);
 });
 
 fs.writeFileSync(path.join(outDir, 'character_index.json'), JSON.stringify(index, null, 2), 'utf-8');
+fs.writeFileSync(path.join(outDir, 'skills.json'), JSON.stringify(globalSkills, null, 2), 'utf-8');
+fs.writeFileSync(path.join(outDir, 'abilities.json'), JSON.stringify(globalAbilities, null, 2), 'utf-8');
+console.log(`📋 技能一览：${Object.keys(globalSkills).length} 条`);
+console.log(`📋 能力一览：${Object.keys(globalAbilities).length} 条`);
 
-// ========== 10. 构建技能一览 ==========
-const STATE_LABEL = {
-  evolve: ['进化前', '进化後'],
-  range:  ['内圈', '外圈'],
-  change: ['変身後', '变身前'],
-}
-
-function addSkillRow(charId, entry, type, state, skill) {
-  const isHeal = skill.skill_power_type && [5,6,7].includes(skill.skill_power_type)
-  const isDmg  = skill.skill_power_type && [1,2,3,4].includes(skill.skill_power_type)
-  // 替换描述占位符
-  let desc = skill.description || ''
-  if (skill.effects && Array.isArray(skill.effects)) {
-    for (let i = 0; i < skill.effects.length; i++) {
-      const v = skill.effects[i]?.value
-      if (v != null) desc = desc.replace(new RegExp('\\{' + i + '\\}', 'g'), v)
-    }
-  }
-  const stt = skill.skill_target_type
-  skillsTable.push({
-    char_id: charId,
-    base_name_ja: entry.base_character_name_ja,
-    base_name_cn: entry.base_character_name_cn,
-    another_name: entry.another_name || '',
-    type,
-    state,
-    skill_target_type: stt ?? null,
-    target_name_ja: '',
-    target_name_cn: stt != null ? (cnMaps.skill_target_type?.get(stt) || `ID:${stt}`) : '',
-    attack_attributes: skill.attack_attributes || [],
-    dmg_power: isDmg ? (skill.power ?? null) : null,
-    break_power: skill.break_power ?? null,
-    heal_power: isHeal ? (skill.power ?? null) : null,
-    wait: skill.wait ?? null,
-    limit_count: skill.limit_count || null,
-    name: skill.name || '',
-    description: desc,
-  })
-}
-
-// 补全 skill_target_type 的 JP 名称（data/language/ 而非 data/raw/)
-const sttFile = path.join(langDir, 'skill_target_type.json')
-const sttPatch = new Map()
-if (fs.existsSync(sttFile)) {
-  safeReadJSON(sttFile).forEach(t => sttPatch.set(t.id, t.name))
-}
-
-const skillsTable = []
-
-for (const entry of index) {
-  const charFile = path.join(charOutDir, `${entry.id}.json`)
-  if (!fs.existsSync(charFile)) continue
-  const char = safeReadJSON(charFile)
-
-  // 计算本角色的基础/切换状态标签
-  const baseState = char.switch ? STATE_LABEL[char.switch]?.[0] || '—' : '—'
-  const altState = char.switch ? STATE_LABEL[char.switch]?.[1] || null : null
-
-  // 基础技能
-  if (char._skills) {
-    for (const g of char._skills) {
-      if (!g.skills || g.skills.length === 0) continue
-      addSkillRow(entry.id, entry, g.type, baseState, g.skills[g.skills.length - 1])
-    }
-  }
-
-  // 切换后技能
-  if (altState && char.switch_stat?._skills) {
-    for (const g of char.switch_stat._skills) {
-      if (!g.skills || g.skills.length === 0) continue
-      addSkillRow(entry.id, entry, g.type, altState, g.skills[g.skills.length - 1])
-    }
-  }
-
-  // EX技能（取每类最高级）—— 基础状态
-  if (char._exSkills) {
-    const exArr = Array.isArray(char._exSkills) ? char._exSkills : Object.values(char._exSkills)
-    const exMap = new Map()
-    for (const skill of exArr) {
-      const key = skill.name || '_'
-      const cur = exMap.get(key)
-      if (!cur || skill.id > cur.id) exMap.set(key, skill)
-    }
-    for (const skill of exMap.values()) {
-      addSkillRow(entry.id, entry, 'ex', '—', skill)
-    }
-  }
-  // EX技能 —— 切换后状态（仅变身角色有独立的 EX 技能）
-  if (char.switch_stat?._exSkills) {
-    const exArr = Array.isArray(char.switch_stat._exSkills) ? char.switch_stat._exSkills : Object.values(char.switch_stat._exSkills)
-    const exMap = new Map()
-    for (const skill of exArr) {
-      const key = skill.name || '_'
-      const cur = exMap.get(key)
-      if (!cur || skill.id > cur.id) exMap.set(key, skill)
-    }
-    for (const skill of exMap.values()) {
-      addSkillRow(entry.id, entry, 'ex', altState || '—', skill)
-    }
-  }
-}
-
-// 用 language/ 数据补全 target_name_ja
-for (const row of skillsTable) {
-  const stt = row.skill_target_type
-  if (stt != null) {
-    const name = sttPatch.get(stt)
-    if (name) row.target_name_ja = name
-  }
-}
-
-fs.writeFileSync(path.join(outDir, 'skills.json'), JSON.stringify(skillsTable, null, 2), 'utf-8')
-console.log(`📋 技能一览：${skillsTable.length} 条`)
-
-// ========== 11. 活动 ==========
-const fmtDate2 = d => d ? d.substring(0, 10).replace(/-/g, '') : ''
-const eventFile = path.join(rawDir, 'event.json')
+// ========== 活动 ==========
+const fmtDate2 = d => d ? d.substring(0, 10).replace(/-/g, '') : '';
+const eventFile = path.join(rawDir, 'event.json');
 if (fs.existsSync(eventFile)) {
-  const events = safeReadJSON(eventFile)
-  const eventTable = events
-    .filter(e => e.event_type === 1)
-    .sort((a, b) => a.id - b.id)
-    .map(e => ({
-      id: e.id,
-      event_type: e.event_type,
-      start_at: fmtDate2(e.start_at),
-      end_at: fmtDate2(e.end_at),
-      name: e.name,
-      revival_start_at: fmtDate2(e.revival_start_at),
-    }))
-  fs.writeFileSync(path.join(outDir, 'events.json'), JSON.stringify(eventTable, null, 2), 'utf-8')
-  console.log(`📋 活动：${eventTable.length} 条`)
+  const events = safeReadJSON(eventFile);
+  const eventTable = events.filter(e => e.event_type === 1).sort((a,b) => a.id - b.id).map(e => ({
+    id: e.id, event_type: e.event_type, start_at: fmtDate2(e.start_at), end_at: fmtDate2(e.end_at),
+    name: e.name, revival_start_at: fmtDate2(e.revival_start_at),
+  }));
+  fs.writeFileSync(path.join(outDir, 'events.json'), JSON.stringify(eventTable, null, 2), 'utf-8');
+  console.log(`📋 活动：${eventTable.length} 条`);
 }
 
-// ========== 12. 竞技场周期 ==========
-const contestFile = path.join(rawDir, 'damage_contest_rotation.json')
-const episodeFile = path.join(rawDir, 'episode.json')
+// ========== 竞技场周期 ==========
+const contestFile = path.join(rawDir, 'damage_contest_rotation.json');
+const episodeFile = path.join(rawDir, 'episode.json');
 if (fs.existsSync(contestFile) && fs.existsSync(episodeFile)) {
-  const contests = safeReadJSON(contestFile)
-  const episodes = safeReadJSON(episodeFile)
-  const epMap = new Map(episodes.map(e => [e.id, e.name]))
-  const contestTable = contests
-    .sort((a, b) => a.id - b.id)
-    .map(c => ({
-      id: c.id,
-      start_at: fmtDate2(c.start_at),
-      episode_name: epMap.get(c.episode_id) || '',
-    }))
-  fs.writeFileSync(path.join(outDir, 'contest_rotations.json'), JSON.stringify(contestTable, null, 2), 'utf-8')
-  console.log(`📋 竞技场周期：${contestTable.length} 条`)
+  const contests = safeReadJSON(contestFile);
+  const episodes = safeReadJSON(episodeFile);
+  const epMap = new Map(episodes.map(e => [e.id, e.name]));
+  const contestTable = contests.sort((a,b) => a.id - b.id).map(c => ({
+    id: c.id, start_at: fmtDate2(c.start_at), episode_name: epMap.get(c.episode_id) || '',
+  }));
+  fs.writeFileSync(path.join(outDir, 'contest_rotations.json'), JSON.stringify(contestTable, null, 2), 'utf-8');
+  console.log(`📋 竞技场周期：${contestTable.length} 条`);
 }
 
-// 生成元数据（构建时间）
+// ========== 元数据 ==========
 const meta = { build_time: new Date().toISOString() };
 fs.writeFileSync(path.join(outDir, 'meta.json'), JSON.stringify(meta, null, 2), 'utf-8');
 console.log(`🕒 构建时间已写入 meta.json`);
-
-console.log(`✅ 已生成角色文件，索引包含 ${index.length} 个角色`);
+console.log(`✅ 已生成角色索引，包含 ${index.length} 个角色`);

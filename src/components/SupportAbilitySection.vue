@@ -1,7 +1,6 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from '../composables/useI18n'
-import { replaceEffects } from '../utils/effects.js'
 import StarsDisplay from './StarsDisplay.vue'
 
 const props = defineProps({
@@ -17,7 +16,7 @@ const rarityMap = [1, 2, 3, 4, 5, 6, 7, 8]
 
 function formatDescription(ability) {
   if (!ability) return ''
-  return replaceEffects(ability.description, ability.effects)
+  return ability.description || ''
 }
 
 const entries = computed(() => {

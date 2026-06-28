@@ -8,7 +8,7 @@ import { useCharacterData } from './composables/useCharacterData'
 import { useBuildInfo } from './composables/useBuildInfo'
 
 const { setLang } = useI18n()
-const { loadIndex, loadProgress, indexLoadError, indexLoaded } = useCharacterData()
+const { loadProgress, indexLoadError, indexLoaded } = useCharacterData()
 const { loadBuildTime } = useBuildInfo()
 
 // KeepAlive 缓存 GuideView + CollectionView，避免导航时全量重建 DOM
@@ -16,7 +16,7 @@ const keepAliveViews = ['GuideView', 'CollectionView']
 
 onMounted(async () => {
   setLang('cn')
-  await Promise.all([loadIndex(), loadBuildTime()])
+  await loadBuildTime()
 })
 </script>
 

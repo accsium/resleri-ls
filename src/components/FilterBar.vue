@@ -130,7 +130,7 @@ function toggleTraitRight(id) {
 }
 
 // ── 标签/词条下拉数据 ──
-const { characterIndex } = useCharacterData()
+const { characterIndex, originalTitleMap, characterTagMap } = useCharacterData()
 
 const battleTraitsJa = ref([])
 const battleTraitsCn = ref([])
@@ -144,11 +144,12 @@ const allCharTags = computed(() => panelLang.value === 'cn' ? charTagsCn.value :
 const allTitles = computed(() => {
   const seen = new Set()
   const list = []
-  const field = panelLang.value === 'cn' ? 'original_title_name_cn' : 'original_title_name_ja'
   for (const c of characterIndex.value) {
     const id = c.original_title_id
-    const name = c[field]
-    if (!id || !name || seen.has(id)) continue
+    if (!id || seen.has(id)) continue
+    const ot = originalTitleMap.value[id]
+    const name = ot ? (panelLang.value === 'cn' ? (ot.name_cn || ot.name_ja) : ot.name_ja) : ''
+    if (!name) continue
     seen.add(id)
     list.push({ id, name })
   }
@@ -182,8 +183,9 @@ async function loadTraitData() {
     battleTraitsCn.value = groupTraits(bt, t => t.name_cn || t.name)
     equipTraitsJa.value = groupTraits(et, t => t.name)
     equipTraitsCn.value = groupTraits(et, t => t.name_cn || t.name)
-    const tg = await fetch('data/character_tag.json').then(r => r.json())
-    tg.sort((a, b) => a.priority - b.priority).forEach(t => {
+    // 标签从 characterTagMap 获取（已由 useCharacterData 加载）
+    const tagEntries = Object.values(characterTagMap.value)
+    tagEntries.sort((a, b) => (a.priority || 0) - (b.priority || 0)).forEach(t => {
       charTagsJa.value.push({ id: t.id, name: t.name })
       charTagsCn.value.push({ id: t.id, name: t.name_cn || t.name })
     })

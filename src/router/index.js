@@ -44,7 +44,6 @@ const routes = [
     path: '/skills',
     name: 'skills',
     component: () => import('../views/SkillListView.vue'),
-    beforeEnter: () => { _prefetch('skills', 'data/skills.json') },
   },
   {
     path: '/leader-skills',

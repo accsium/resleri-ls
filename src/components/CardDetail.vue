@@ -1,6 +1,7 @@
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, onMounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
+import { useCharacterData } from '../composables/useCharacterData'
 import SkillGroup from './SkillGroup.vue'
 import AbilityCard from './AbilityCard.vue'
 import SupportAbilitySection from './SupportAbilitySection.vue'
@@ -12,70 +13,103 @@ const props = defineProps({
   characterId: Number,
 })
 
-const { t } = useI18n()
+const detailReady = ref(false)
 
-const toggleActive = computed(() => props.cardState.toggleActive)
-const activeChar = computed(() => {
-  const useSwitch = props.characterData.switch === 'change'
-    ? !toggleActive.value
-    : toggleActive.value
-  if (useSwitch && props.characterData.switch_stat) {
-    return { ...props.characterData, ...props.characterData.switch_stat }
-  }
-  return props.characterData
+onMounted(() => {
+  Promise.all([loadSkills(), loadAbilities()]).finally(() => {
+    detailReady.value = true
+  })
 })
 
-const skills = computed(() => activeChar.value._skills || [])
+const { t } = useI18n()
+const { skillsMap, abilitiesMap, loadSkills, loadAbilities } = useCharacterData()
+
+const toggleActive = computed(() => props.cardState.toggleActive)
+
+// 根据切换类型获取技能 ID 数组（pre 或 post）
+function pickSkillIds(char, type, useAlt) {
+  const group = char.skills?.[type]
+  if (!group) return []
+  if (useAlt && char.switch === 'evolve') return group.post || []
+  return group.pre || []
+}
+
+const activeChar = computed(() => {
+  const base = props.characterData
+  const useSwitch = base.switch === 'change'
+    ? !toggleActive.value
+    : toggleActive.value
+
+  if (!useSwitch || !base.switch_stat) return base
+
+  if (base.switch === 'change') {
+    const st = base.switch_stat
+    return {
+      ...base,
+      skills: st.skills || base.skills,
+      abilities: st.abilities || base.abilities,
+      leader_skill: st.leader_skill || base.leader_skill,
+    }
+  }
+  // evolve
+  return base
+})
+
+const isAlt = computed(() => {
+  const base = props.characterData
+  const useSwitch = base.switch === 'change'
+    ? !toggleActive.value
+    : toggleActive.value
+  return useSwitch && !!base.switch_stat
+})
 
 const allSkillTypes = computed(() => {
   const types = []
   const char = activeChar.value
+  const alt = isAlt.value
 
   if (char.leader_skill) {
     types.push({ type: 'leader', name: t('leaderSkillSection'), levels: [char.leader_skill] })
   }
 
-  const activeLevels = []
-  skills.value.forEach(group => {
-    if (group.type.startsWith('active')) {
-      if (group.skills?.length > 0) activeLevels.push(...group.skills)
-    }
-  })
-  if (activeLevels.length > 0) {
-    types.push({ type: 'active', name: t('skillType').active, levels: activeLevels })
-  }
-
+  const normalTypes = ['normal1', 'normal2', 'burst']
   const typeText = t('skillType')
-  skills.value.forEach(group => {
-    if (group.type === 'normal1' || group.type === 'normal2' || group.type === 'burst') {
-      if (group.skills && group.skills.length > 0) {
-        types.push({ type: group.type, name: typeText[group.type] || group.type, levels: group.skills })
-      }
+  normalTypes.forEach(type => {
+    const ids = pickSkillIds(char, type, alt)
+    const skills = ids.map(id => skillsMap.value[id]).filter(Boolean)
+    if (skills.length > 0) {
+      types.push({ type, name: typeText[type] || type, levels: skills })
     }
   })
 
-  const exSkills = char._exSkills || []
+  const exIds = char.skills?.ex || []
+  const exSkills = exIds.map(id => skillsMap.value[id]).filter(Boolean)
   if (exSkills.length > 0) {
-    types.push({ type: 'extra', name: t('skillType').extra, levels: exSkills })
+    types.push({ type: 'extra', name: typeText.extra || 'EX', levels: exSkills })
   }
 
   return types
 })
 
-const abilityMap = computed(() => activeChar.value._skillDetails || {})
+const abi = computed(() => {
+  const char = activeChar.value
+  const alt = isAlt.value && char.switch === 'evolve'
+  if (alt && char.switch_stat?.abilities) return char.switch_stat.abilities
+  return char.abilities || {}
+})
 
-const abilityIds = computed(() => activeChar.value.ability_ids || [])
+const abilities = computed(() =>
+  (abi.value.character || []).map(id => abilitiesMap.value[id]).filter(Boolean)
+)
 
-const abilities = computed(() => abilityIds.value.map(id => abilityMap.value[id]).filter(Boolean))
-
-const supportIds = computed(() => activeChar.value.support_ability_ids || [])
+const supportIds = computed(() => abi.value.support || [])
 
 const boardAbilities = computed(() => {
   const result = []
-  ;['board_ability1_ids', 'board_ability2_ids', 'board_ability3_ids'].forEach(key => {
-    const ids = activeChar.value[key]
+  ;['board1', 'board2', 'board3'].forEach(key => {
+    const ids = abi.value[key]
     if (ids && ids.length > 0) {
-      result.push({ key, levels: ids.map(id => abilityMap.value[id]).filter(Boolean) })
+      result.push({ key, levels: ids.map(id => abilitiesMap.value[id]).filter(Boolean) })
     }
   })
   return result
@@ -83,10 +117,13 @@ const boardAbilities = computed(() => {
 
 const boardActiveIndex = ref({})
 
-// 光玉板能力默认选中最高级；boardAbilities 变化（切换形态）时重置
 watch(boardAbilities, (baList) => {
-  const next = {}
-  baList.forEach(ba => { next[ba.key] = ba.levels.length - 1 })
+  const next = { ...boardActiveIndex.value }
+  baList.forEach(ba => {
+    if (next[ba.key] == null || next[ba.key] >= ba.levels.length) {
+      next[ba.key] = ba.levels.length - 1
+    }
+  })
   boardActiveIndex.value = next
 }, { immediate: true })
 
@@ -99,7 +136,9 @@ const abilitiesCollapsed = ref(false)
 </script>
 
 <template>
-  <template v-if="allSkillTypes.length > 0">
+  <div v-if="!detailReady" class="loading">加载中...</div>
+  <template v-else>
+    <template v-if="allSkillTypes.length > 0">
     <div class="section-title section-collapsible" @click="skillsCollapsed = !skillsCollapsed">
       {{ t('skillSection') }}
       <span class="collapse-arrow">{{ skillsCollapsed ? '▶' : '▼' }}</span>
@@ -120,7 +159,7 @@ const abilitiesCollapsed = ref(false)
   <div v-show="!abilitiesCollapsed">
     <template v-if="abilities.length > 0">
       <div class="subsection-title">角色能力</div>
-      <div v-for="a in abilities" :key="a.id">
+      <div v-for="a in abilities" :key="a.id || a.name">
         <div class="banner-title">{{ a.name || `ID:${a.id}` }}</div>
         <div class="content-block">
           <AbilityCard :ability="a" />
@@ -149,7 +188,7 @@ const abilitiesCollapsed = ref(false)
     <SupportAbilitySection
       v-if="supportIds.length > 0"
       :support-ids="supportIds"
-      :ability-map="abilityMap"
+      :ability-map="abilitiesMap"
       :max-rarity="activeChar.max_rarity || 8"
       :initial-rarity="activeChar.initial_rarity || 1"
     />
@@ -157,4 +196,5 @@ const abilitiesCollapsed = ref(false)
   </div>
 
   <SynthesisModule :character-data="characterData" />
+  </template>
 </template>

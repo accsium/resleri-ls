@@ -7,7 +7,7 @@ import { cmpVal } from '../utils/sort'
 
 const sortCategory = ref('character')
 const sortField = ref('start_at')
-const sortPriority = ref([]) // ordered list of { field, type } for multi-field sort
+const sortPriority = ref([])
 const currentSortOrder = ref('desc')
 const searchText = ref('')
 const currentPage = ref(1)
@@ -33,12 +33,6 @@ const activeFilters = reactive({
   atelier_fes: [],
 })
 
-/**
- * 纯函数：判断角色是否通过所有筛选条件
- * @param {Object} char 角色对象
- * @param {Object} f 筛选条件对象（activeFilters 的值）
- * @returns {boolean}
- */
 export function filterCharacter(char, f) {
   if (f.attack_attributes.length && !f.attack_attributes.some(a => (char.attack_attributes || []).includes(a)))
     return false
@@ -83,19 +77,41 @@ export function filterCharacter(char, f) {
   }
   if (f.atelier_fes.length) {
     const pd = char.permanent_date || ''
-    // ATELIER FES I 包含基础 ATELIER FES 角色（pd='ATELIER FES'），ATELIER FES II 不包含
     if (f.atelier_fes.includes('ATELIER FES I') && pd === 'ATELIER FES') return true
     if (!f.atelier_fes.includes(pd)) return false
   }
   return true
 }
 
+function getCharWT(char, useAlt, skillsMap) {
+  const sk = char.skills || {}
+  const sw = char.switch
+  if (useAlt && sw === 'evolve') {
+    const ids = sk.normal2?.post || []
+    if (ids.length > 0) {
+      const skill = skillsMap.value[ids[ids.length - 1]]
+      if (skill) return skill.wt
+    }
+  } else if (useAlt && sw === 'change' && char.switch_stat?.skills) {
+    const ids = char.switch_stat.skills.normal2?.pre || []
+    if (ids.length > 0) {
+      const skill = skillsMap.value[ids[ids.length - 1]]
+      if (skill) return skill.wt
+    }
+  }
+  const ids = sk.normal2?.pre || []
+  if (ids.length > 0) {
+    const skill = skillsMap.value[ids[ids.length - 1]]
+    if (skill) return skill.wt
+  }
+  return null
+}
+
 export function useFilters() {
   const { currentLang, SORT_CATEGORIES } = useI18n()
-  const { characterIndex } = useCharacterData()
+  const { characterIndex, baseCharacterMap, skillsMap } = useCharacterData()
   const { getCardState } = useCardState()
 
-  // 初始化优先级列表
   if (sortPriority.value.length === 0) {
     const cat = SORT_CATEGORIES.find(c => c.key === sortCategory.value)
     if (cat && cat.fields) {
@@ -103,15 +119,14 @@ export function useFilters() {
     }
   }
 
-  function toggleFilter(key, value) {
-    activeFilters[key] = value
-  }
+  function toggleFilter(key, value) { activeFilters[key] = value }
 
   function getSortValue(c, cat, field) {
     if (cat === 'character') {
       if (field === 'base_character_name') {
-        const v = currentLang.value === 'cn' ? c.base_character_name_cn : c.base_character_name_ja
-        return v || ''
+        const bc = baseCharacterMap.value[c.base_character_id]
+        if (!bc) return ''
+        return currentLang.value === 'cn' ? (bc.name_cn || bc.name_ja) : bc.name_ja
       }
       return c[field]
     }
@@ -119,7 +134,7 @@ export function useFilters() {
     if (cat === 'stats') {
       if (field === 'initial_wt') {
         const cardState = getCardState(c.id)
-        return cardState.toggleActive ? c.alt_initial_wt : c.base_initial_wt
+        return getCharWT(c, cardState.toggleActive, skillsMap)
       }
       return c.initial_status?.[field]
     }
@@ -138,23 +153,24 @@ export function useFilters() {
     return 0
   }
 
-  function applyFilter(char) {
-    return filterCharacter(char, activeFilters)
-  }
+  function applyFilter(char) { return filterCharacter(char, activeFilters) }
 
   const filteredCharacters = computed(() => {
     let list = characterIndex.value.filter(applyFilter)
     list.sort(compareCharacters)
     if (searchText.value) {
       const q = searchText.value.toLowerCase()
-      list = list.filter(c =>
-        (c.base_character_name_ja || '').toLowerCase().includes(q) ||
-        (c.base_character_name_cn || '').toLowerCase().includes(q) ||
-        String(c.id).toLowerCase().includes(q) ||
-        (c.another_name || '').toLowerCase().includes(q) ||
-        (c.fullname || '').toLowerCase().includes(q) ||
-        (c.overlay_name || '').toLowerCase().includes(q)
-      )
+      list = list.filter(c => {
+        const bc = baseCharacterMap.value[c.base_character_id]
+        const nameJa = bc?.name_ja || ''
+        const nameCn = bc?.name_cn || bc?.name_ja || ''
+        return nameJa.toLowerCase().includes(q) ||
+          nameCn.toLowerCase().includes(q) ||
+          String(c.id).toLowerCase().includes(q) ||
+          (c.another_name || '').toLowerCase().includes(q) ||
+          (c.fullname || '').toLowerCase().includes(q) ||
+          (c.overlay_name || '').toLowerCase().includes(q)
+      })
     }
     return list
   })
@@ -166,41 +182,20 @@ export function useFilters() {
     return filteredCharacters.value.slice(start, start + pageSize.value)
   })
 
-  // 筛选/搜索/页大小变化时回到第一页
-  // 直接 watch reactive 对象（Vue 3 默认深度监听），避免每次创建浅拷贝
-  watch([activeFilters, searchText, pageSize], () => {
-    currentPage.value = 1
-  })
+  watch([activeFilters, searchText, pageSize], () => { currentPage.value = 1 })
 
   function buildPriority(cat, field) {
     const category = SORT_CATEGORIES.find(c => c.key === cat)
-    if (!category || !category.fields) {
-      sortPriority.value = [{ cat, field }]
-      return
-    }
+    if (!category || !category.fields) { sortPriority.value = [{ cat, field }]; return }
     const list = category.fields.map(f => ({ cat, field: f.field }))
-    // 将选中字段移到最前
     const idx = list.findIndex(f => f.field === field)
-    if (idx > 0) {
-      const [item] = list.splice(idx, 1)
-      list.unshift(item)
-    }
+    if (idx > 0) { const [item] = list.splice(idx, 1); list.unshift(item) }
     sortPriority.value = list
   }
 
-  function setSortCategory(key) {
-    sortCategory.value = key
-    buildPriority(key, sortField.value)
-  }
-
-  function setSortField(field) {
-    sortField.value = field
-    buildPriority(sortCategory.value, field)
-  }
-
-  function toggleOrder() {
-    currentSortOrder.value = currentSortOrder.value === 'desc' ? 'asc' : 'desc'
-  }
+  function setSortCategory(key) { sortCategory.value = key; buildPriority(key, sortField.value) }
+  function setSortField(field) { sortField.value = field; buildPriority(sortCategory.value, field) }
+  function toggleOrder() { currentSortOrder.value = currentSortOrder.value === 'desc' ? 'asc' : 'desc' }
 
   function resetFilters() {
     Object.assign(activeFilters, {
@@ -211,18 +206,9 @@ export function useFilters() {
       original_title: '', permanent_status: [], atelier_fes: [],
     })
     searchText.value = ''
-    setSortCategory('character')
-    setSortField('start_at')
+    setSortCategory('character'); setSortField('start_at')
     currentSortOrder.value = 'desc'
   }
 
-  return {
-    sortCategory, sortField, currentSortOrder,
-    activeFilters, searchText,
-    filteredCharacters, pagedCharacters,
-    currentPage, pageSize, totalPages,
-    setSortCategory, setSortField,
-    toggleOrder, toggleFilter,
-    resetFilters,
-  }
+  return { sortCategory, sortField, currentSortOrder, activeFilters, searchText, filteredCharacters, pagedCharacters, currentPage, pageSize, totalPages, setSortCategory, setSortField, toggleOrder, toggleFilter, resetFilters }
 }

@@ -6,12 +6,13 @@ import PaginationBar from '../components/PaginationBar.vue'
 import CharacterGrid from '../components/CharacterGrid.vue'
 import { useFilters } from '../composables/useFilters'
 import { useCharacterData } from '../composables/useCharacterData'
+import { useTraitData } from '../composables/useTraitData'
 
 defineOptions({ name: 'GuideView' })
 
 const headRef = ref(null)
 const { resetFilters, pagedCharacters } = useFilters()
-const { indexLoaded } = useCharacterData()
+const { indexLoaded, loadIndex } = useCharacterData()
 
 const isEmpty = computed(() => pagedCharacters.value.length === 0)
 
@@ -36,8 +37,10 @@ function teardownObserver() {
   }
 }
 
-onMounted(() => {
-  // 首次挂载时重置筛选 + 建立 observer
+onMounted(async () => {
+  await loadIndex()
+  const { load: loadTraits } = useTraitData()
+  loadTraits()
   resetFilters()
   setupObserver()
 })

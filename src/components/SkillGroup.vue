@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { useI18n } from '../composables/useI18n'
-import { replaceEffects } from '../utils/effects.js'
 import IconDisplay from './IconDisplay.vue'
 
 const props = defineProps({
@@ -14,8 +13,11 @@ const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_M
 
 const activeIndex = ref(props.skillType.levels.length - 1)
 
-watch(() => props.skillType, () => {
-  activeIndex.value = props.skillType.levels.length - 1
+// 形态切换时仅在越界时重置等级选择
+watch(() => props.skillType, (newVal) => {
+  if (activeIndex.value >= newVal.levels.length) {
+    activeIndex.value = newVal.levels.length - 1
+  }
 })
 
 const currentSkill = computed(() => props.skillType.levels[activeIndex.value] || {})
@@ -32,14 +34,14 @@ const skillStats = computed(() => {
     return attrMap.value[a] || a
   })
   const attr = attributeNames.join('/')
-  const desc = replaceEffects(skill.description, skill.effects)
-  const wt = 200 + (skill.wait ?? 0)
+  const desc = skill.description || ''
+  const wt = skill.wt ?? 0
   return { target, attr, desc, wt }
 })
 
 const leaderSkillDesc = computed(() => {
   const skill = currentSkill.value
-  return replaceEffects(skill.description, skill.effects)
+  return skill.description || ''
 })
 </script>
 
@@ -70,7 +72,6 @@ const leaderSkillDesc = computed(() => {
         <div class="skill-stats">
           <span class="skill-stat">{{ t('target') }}: {{ skillStats.target }}</span>
           <span v-if="skillStats.attr" class="skill-stat">{{ t('attribute') }}: {{ skillStats.attr }}</span>
-          <!-- power=0 在游戏中不存在，|| 将 0 视为无值显示「—」是有意设计 -->
           <span class="skill-stat">{{ t('dmgPower') }}: {{ [1,2,3,4].includes(currentSkill.skill_power_type) && currentSkill.power ? currentSkill.power : '—' }}{{ [1,2,3,4].includes(currentSkill.skill_power_type) && currentSkill.power ? '%' : '' }}</span>
           <span class="skill-stat">{{ t('breakPower') }}: {{ currentSkill.break_power || '—' }}{{ currentSkill.break_power ? '%' : '' }}</span>
           <span class="skill-stat">{{ t('healPower') }}: {{ [5,6,7].includes(currentSkill.skill_power_type) && currentSkill.power ? currentSkill.power : '—' }}{{ [5,6,7].includes(currentSkill.skill_power_type) && currentSkill.power ? '%' : '' }}</span>

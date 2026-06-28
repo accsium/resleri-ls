@@ -6,7 +6,7 @@ import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
 let uid = 0
-const { getTraitColorHex, getField } = useI18n()
+const { getTraitColorHex, currentLang } = useI18n()
 const { trackImage, imageDone, untrackImage } = useCharacterData()
 
 const props = defineProps({
@@ -33,11 +33,15 @@ const starDisplayCount = computed(() => {
 const charImage = computed(() => `image/character/${props.indexEntry.id}.png`)
 const showImage = ref(false)
 const wasLoaded = ref(false)
-const imageSize = props.indexEntry.image_size ?? 60000
+const imageSize = 100000
 
-const baseName = computed(() =>
-  getField(props.indexEntry, 'base_character_name') || ''
-)
+const { baseCharacterMap } = useCharacterData()
+
+const baseName = computed(() => {
+  const bc = baseCharacterMap.value[props.indexEntry.base_character_id]
+  if (!bc) return ''
+  return currentLang.value === 'cn' ? (bc.name_cn || bc.name_ja) : bc.name_ja
+})
 const aliasName = computed(() =>
   props.indexEntry.another_name || ''
 )

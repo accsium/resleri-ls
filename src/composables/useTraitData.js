@@ -1,19 +1,14 @@
 import { ref } from 'vue'
 import { getNavigationSignal } from '../router'
 
-// 模块级缓存：同源数据只请求一次
+// 模块级缓存：所有消费者共享同一份数据
+const battleTraits = ref([])
+const equipTraits = ref([])
+const loaded = ref(false)
+const error = ref(null)
 let cachePromise = null
 
-/**
- * 共享词条数据（battle_tool_trait + equipment_tool_trait）
- * FilterBar 和 SynthesisModule 共用，避免重复 fetch
- */
 export function useTraitData() {
-  const battleTraits = ref([])
-  const equipTraits = ref([])
-  const loaded = ref(false)
-  const error = ref(null)
-
   async function load() {
     if (loaded.value) return
     if (cachePromise) {

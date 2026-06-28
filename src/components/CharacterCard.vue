@@ -2,6 +2,7 @@
 import { ref, computed, nextTick, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
+import { useTraitData } from '../composables/useTraitData'
 import { useCardState } from '../composables/useCardState'
 import { fmtDate } from '../utils/date.js'
 import AvatarDisplay from './AvatarDisplay.vue'
@@ -18,21 +19,32 @@ const props = defineProps({
 
 const kid = ++cardUid + '-' + props.indexEntry.id
 
-const { t, getField, currentLang, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
-const { loadCharacter, loadedCharacters } = useCharacterData()
+const { t, currentLang, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { getCharacterById, baseCharacterMap, traitColorMap, originalTitleMap, characterTagMap, skillsMap } = useCharacterData()
+const { battleTraits, equipTraits } = useTraitData()
 const { getCardState, setCardState } = useCardState()
 
 const expanded = ref(false)
 const detailLoading = ref(false)
 const detailError = ref('')
 
-const baseName = computed(() => getField(props.indexEntry, 'base_character_name') || (props.indexEntry.name_cn || props.indexEntry.name_ja))
+const baseName = computed(() => {
+  const bc = baseCharacterMap.value[props.indexEntry.base_character_id]
+  if (!bc) return ''
+  return currentLang.value === 'cn' ? (bc.name_cn || bc.name_ja) : bc.name_ja
+})
 const alias = computed(() => props.indexEntry.another_name || '')
 const roleName = computed(() => {
   const map = currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP
   return map[props.indexEntry.role] || ''
 })
-const tags = computed(() => getField(props.indexEntry, 'tag_names') || [])
+const tags = computed(() => {
+  return (props.indexEntry.tag_ids || []).map(id => {
+    const tag = characterTagMap.value[id]
+    if (!tag) return ''
+    return currentLang.value === 'cn' ? (tag.name_cn || tag.name) : tag.name
+  }).filter(Boolean)
+})
 
 const releaseDate = computed(() => fmtDate(props.indexEntry.start_at))
 
@@ -56,11 +68,38 @@ const attrsText = computed(() => {
   const names = (props.indexEntry.attack_attributes || []).map(id => attrMap[id] || id)
   return names.join(' / ') + ' | ' + roleName.value
 })
+
+function getCharWT(useAlt) {
+  const entry = props.indexEntry
+  const sk = entry.skills || {}
+  const sw = entry.switch
+  if (useAlt && sw === 'evolve') {
+    const ids = sk.normal2?.post || []
+    if (ids.length > 0) {
+      const skill = skillsMap.value[ids[ids.length - 1]]
+      if (skill) return skill.wt
+    }
+  } else if (useAlt && sw === 'change' && entry.switch_stat?.skills) {
+    const ids = entry.switch_stat.skills.normal2?.pre || []
+    if (ids.length > 0) {
+      const skill = skillsMap.value[ids[ids.length - 1]]
+      if (skill) return skill.wt
+    }
+  }
+  const ids = sk.normal2?.pre || []
+  if (ids.length > 0) {
+    const skill = skillsMap.value[ids[ids.length - 1]]
+    if (skill) return skill.wt
+  }
+  return null
+}
+
 const initialWT = computed(() => {
   const cardState = getCardState(props.indexEntry.id)
   const alt = cardState.toggleActive
   const useAlt = hasTransform.value ? !alt : alt
-  return useAlt ? props.indexEntry.alt_initial_wt ?? '—' : props.indexEntry.base_initial_wt ?? '—'
+  const wt = getCharWT(useAlt)
+  return wt ?? '—'
 })
 const status = computed(() => props.indexEntry.initial_status || {})
 
@@ -71,15 +110,27 @@ const statCards = computed(() => statOrder.map(key => {
   return { label, value }
 }))
 
-const originalTitle = computed(() => getField(props.indexEntry, 'original_title_name'))
-const traits = computed(() => [
-  ...(getField(props.indexEntry, 'battle_tool_trait_names') || []),
-  ...(getField(props.indexEntry, 'equipment_tool_trait_names') || [])
-])
+const originalTitle = computed(() => {
+  const ot = originalTitleMap.value[props.indexEntry.original_title_id]
+  if (!ot) return ''
+  return currentLang.value === 'cn' ? (ot.name_cn || ot.name_ja) : ot.name_ja
+})
+
+const traits = computed(() => {
+  const btNames = (props.indexEntry.battle_tool_trait_ids || []).map(id => {
+    const t = battleTraits.value.find(t2 => t2.id === id)
+    return t ? (currentLang.value === 'cn' ? (t.name_cn || t.name) : t.name) : ''
+  }).filter(Boolean)
+  const etNames = (props.indexEntry.equipment_tool_trait_ids || []).map(id => {
+    const t = equipTraits.value.find(t2 => t2.id === id)
+    return t ? (currentLang.value === 'cn' ? (t.name_cn || t.name) : t.name) : ''
+  }).filter(Boolean)
+  return [...btNames, ...etNames]
+})
 
 const cardState = computed(() => getCardState(props.indexEntry.id))
 
-const char = computed(() => loadedCharacters.value[props.indexEntry.id])
+const char = computed(() => getCharacterById(props.indexEntry.id))
 const hasEvo = computed(() => props.indexEntry.has_evo)
 const hasRange = computed(() => props.indexEntry.has_range)
 const hasTransform = computed(() => props.indexEntry.has_transform)
@@ -101,7 +152,6 @@ const toggleLabel = computed(() => {
   return ''
 })
 
-
 function onToggle(val) {
   setCardState(props.indexEntry.id, { toggleActive: val })
 }
@@ -120,48 +170,29 @@ async function toggleExpand() {
     return
   }
   expanded.value = true
-  detailLoading.value = true
+  detailLoading.value = false
   detailError.value = ''
-  const loadingId = props.indexEntry.id
-  try {
-    await loadCharacter(props.indexEntry.id)
-    // 防止竞态：用户可能在 await 期间收起卡片或切换到其他卡片
-    if (!expanded.value || props.indexEntry.id !== loadingId) return
-    detailLoading.value = false
-    await nextTick()
-    // ResizeObserver 跟踪 header 高度
-    const card = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
-    const header = card?.querySelector('.card-header')
-    if (card && header && !headerObservers.has(props.indexEntry.id)) {
-      const update = () => card.style.setProperty('--card-head-h', (header.offsetHeight - 1) + 'px')
-      update()
-      const observer = new ResizeObserver(update)
-      observer.observe(header)
-      headerObservers.set(props.indexEntry.id, observer)
-    }
-  } catch (e) {
-    if (e.name === 'AbortError') return
-    if (!expanded.value || props.indexEntry.id !== loadingId) return
-    detailLoading.value = false
-    detailError.value = e.message || String(e)
+  await nextTick()
+  const card = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
+  const header = card?.querySelector('.card-header')
+  if (card && header && !headerObservers.has(props.indexEntry.id)) {
+    const update = () => card.style.setProperty('--card-head-h', (header.offsetHeight - 1) + 'px')
+    update()
+    const observer = new ResizeObserver(update)
+    observer.observe(header)
+    headerObservers.set(props.indexEntry.id, observer)
   }
 }
 
-// 组件销毁时断开该卡片关联的 ResizeObserver
 onUnmounted(() => {
   const observer = headerObservers.get(props.indexEntry.id)
-  if (observer) {
-    observer.disconnect()
-    headerObservers.delete(props.indexEntry.id)
-  }
+  if (observer) { observer.disconnect(); headerObservers.delete(props.indexEntry.id) }
 })
-
 </script>
 
 <template>
   <div class="card" :data-id="indexEntry.id">
     <div class="card-header">
-      <!-- 第一行：名字 + 切换 -->
       <div class="card-top">
         <span class="card-top-left">
           <span class="card-attrs">{{ attrsText }}</span>
@@ -175,9 +206,7 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- 第二行+：网格布局，桌面和移动共用元素，CSS Grid 重排 -->
       <div class="card-body">
-        <!-- ====== 桌面：三列 flex ====== -->
         <div class="card-body-col-left desk-only">
           <div class="cb-avatar">
             <AvatarDisplay :index-entry="indexEntry" :size="84" :kid="kid" />
@@ -226,7 +255,6 @@ onUnmounted(() => {
           </button>
         </div>
 
-        <!-- ====== 移动：独立行布局 ====== -->
         <div class="mob-only row-info-avatar">
           <div class="cb-info-mob">
             <span class="cb-attrs">{{ attrsText }}</span>

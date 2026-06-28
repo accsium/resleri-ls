@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useI18n } from '../composables/useI18n'
 import { useSortTable } from '../composables/useSortTable'
@@ -8,8 +8,8 @@ import IconDisplay from '../components/IconDisplay.vue'
 import StarsDisplay from '../components/StarsDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 
-const { characterIndex, indexLoaded } = useCharacterData()
-const { currentLang, getField, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { characterIndex, indexLoaded, baseCharacterMap, loadIndex } = useCharacterData()
+const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 
 const columns = [
   { key: 'id', label: 'ID', width: 72 },
@@ -31,7 +31,7 @@ const charIndexMap = computed(() => {
 })
 
 const chars = computed(() =>
-  characterIndex.value.filter(c => c.support_ability_description != null)
+  characterIndex.value.filter(c => c.support_ability?.description != null)
 )
 
 const { sortCol, sortDir, onSort, sortItems } = useSortTable({
@@ -40,31 +40,35 @@ const { sortCol, sortDir, onSort, sortItems } = useSortTable({
   avatarAlias: 'uid',
 })
 
+function baseName(row, lang) {
+  const bc = baseCharacterMap.value[row.base_character_id]
+  if (!bc) return ''
+  return lang === 'cn' ? (bc.name_cn || bc.name_ja) : bc.name_ja
+}
+
 function getSortVal(row, field) {
   switch (field) {
     case 'uid':
     case 'avatar': return row.uid || ''
     case 'id': return row.id
-    case 'name': return getField(row, 'base_character_name')
+    case 'name': return baseName(row, currentLang.value)
     case 'attr': return row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999
     case 'role': return row.role || 999
     case 'maxRarity': return row.max_rarity || 0
-    case 'saAttr': return row.support_ability_attr != null ? ATTR_IDS.indexOf(row.support_ability_attr) : 999
-    case 'saRole': return row.support_ability_role || 999
-    case 'saTag': return getField(row, 'support_ability_tag') || '￿'
-    case 'saDesc': return row.support_ability_description || ''
+    case 'saAttr': return row.support_ability?.attr != null ? ATTR_IDS.indexOf(row.support_ability.attr) : 999
+    case 'saRole': return row.support_ability?.role || 999
+    case 'saTag': return row.support_ability?.tag || '￿'
+    case 'saDesc': return row.support_ability?.description || ''
     default: return ''
   }
 }
 
 const sortedChars = computed(() => sortItems(chars.value, getSortVal))
 
-function attrName(id) {
-  return attrMap.value[id] || ''
-}
-function roleName(id) {
-  return roleMap.value[id] || ''
-}
+function attrName(id) { return attrMap.value[id] || '' }
+function roleName(id) { return roleMap.value[id] || '' }
+
+onMounted(() => { loadIndex() })
 </script>
 
 <template>
@@ -86,7 +90,7 @@ function roleName(id) {
       </div>
     </template>
     <template #cell-name="{ row }">
-      {{ currentLang === 'cn' ? row.base_character_name_cn : row.base_character_name_ja }}<template v-if="row.another_name"> <span style="font-size:11px;color:var(--text-muted)">{{ row.another_name }}</span></template>
+      {{ baseName(row, currentLang) }}<template v-if="row.another_name"> <span style="font-size:11px;color:var(--text-muted)">{{ row.another_name }}</span></template>
     </template>
     <template #cell-attr="{ row }">
       <IconDisplay v-if="(row.attack_attributes || [])[0]" type="attribute" :id="(row.attack_attributes || [])[0]" :size="24" />
@@ -98,17 +102,19 @@ function roleName(id) {
       <StarsDisplay :mode="1" :rarity="row.max_rarity" :max-rarity="8" :scale="0.25" />
     </template>
     <template #cell-saAttr="{ row }">
-      <IconDisplay v-if="row.support_ability_attr" type="attribute" :id="row.support_ability_attr" :size="24" />
+      <IconDisplay v-if="row.support_ability?.attr" type="attribute" :id="row.support_ability.attr" :size="24" />
     </template>
     <template #cell-saRole="{ row }">
-      <IconDisplay v-if="row.support_ability_role" type="role" :id="row.support_ability_role" :size="24" />
+      <IconDisplay v-if="row.support_ability?.role" type="role" :id="row.support_ability.role" :size="24" />
     </template>
     <template #cell-saTag="{ row }">
-      <template v-if="getField(row, 'support_ability_tag')">
-        <span v-for="(t, i) in getField(row, 'support_ability_tag').split('、')" :key="`${row.id}-tag-${i}`" class="tag">{{ t }}</span>
+      <template v-if="row.support_ability?.tag">
+        <span v-for="(t, i) in row.support_ability.tag.split('、')" :key="`${row.id}-tag-${i}`" class="tag">{{ t }}</span>
       </template>
     </template>
-    <template #cell-saDesc="{ row }">{{ row.support_ability_description }}</template>
+    <template #cell-saDesc="{ row }">
+      <span v-html="row.support_ability?.description"></span>
+    </template>
   </SortableTable>
 </template>
 

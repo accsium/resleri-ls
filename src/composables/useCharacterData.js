@@ -2,9 +2,17 @@ import { ref, shallowRef, triggerRef, computed } from 'vue'
 import { getNavigationSignal } from '../router'
 
 const characterIndex = ref([])
-const loadedCharacters = shallowRef({})
 const indexLoadError = ref(null)
 const indexLoaded = ref(false)
+
+// 实体 Map — 按需加载，初始为空
+const skillsMap = shallowRef({})
+const abilitiesMap = shallowRef({})
+const traitColorMap = shallowRef({})
+const baseCharacterMap = shallowRef({})
+const originalTitleMap = shallowRef({})
+const characterTagMap = shallowRef({})
+const buildTime = ref('')
 
 const dataBytesLoaded = ref(0)
 const dataBytesTotal = ref(1)
@@ -17,7 +25,6 @@ const loadProgress = computed(() => {
   return Math.min(100, Math.round(((dataBytesLoaded.value + imgBytesLoaded.value) / total) * 100))
 })
 
-// 辅助：从 ReadableStream 读取全部 chunk 并合并为 Uint8Array
 async function _readAllChunks(reader, onChunk) {
   const chunks = []
   while (true) {
@@ -29,81 +36,114 @@ async function _readAllChunks(reader, onChunk) {
   const totalLen = chunks.reduce((sum, c) => sum + c.length, 0)
   const merged = new Uint8Array(totalLen)
   let offset = 0
-  for (const c of chunks) {
-    merged.set(c, offset)
-    offset += c.length
-  }
+  for (const c of chunks) { merged.set(c, offset); offset += c.length }
   return merged
 }
 
-// 模块级立即发起索引抓取，不等 onMounted
+async function _fetchJSON(url) {
+  const resp = await fetch(url, { signal: getNavigationSignal(), cache: 'no-cache' })
+  const total = parseInt(resp.headers.get('Content-Length') || '0')
+  if (total) dataBytesTotal.value += total
+  if (!resp.body) return resp.json()
+  const reader = resp.body.getReader()
+  let loaded = 0
+  const merged = await _readAllChunks(reader, (chunkLen) => { loaded += chunkLen; dataBytesLoaded.value += chunkLen })
+  if (total === 0 || total < loaded) { dataBytesTotal.value += loaded; dataBytesLoaded.value += loaded }
+  const text = new TextDecoder().decode(merged)
+  return JSON.parse(text)
+}
+
+// ── 按需加载实体 ──
+const _entityCache = {}
+
+async function _loadEntity(file) {
+  if (_entityCache[file]) return _entityCache[file]
+  _entityCache[file] = _fetchJSON(`data/${file}`).catch(e => {
+    delete _entityCache[file]
+    throw e
+  })
+  return _entityCache[file]
+}
+
+// 模块级：加载 character_index + 小实体文件
 async function _doLoadIndex() {
   try {
-    const resp = await fetch('data/character_index.json', { signal: getNavigationSignal(), cache: 'no-cache' })
-    const total = parseInt(resp.headers.get('Content-Length') || '0')
-    dataBytesTotal.value = total
-    const reader = resp.body.getReader()
-    let loaded = 0
-    const merged = await _readAllChunks(reader, (chunkLen) => {
-      loaded += chunkLen
-      dataBytesLoaded.value = loaded
-    })
-    if (dataBytesTotal.value === 0 || dataBytesTotal.value < loaded) {
-      dataBytesTotal.value = loaded
-      dataBytesLoaded.value = loaded
-    }
-    const text = new TextDecoder().decode(merged)
-    characterIndex.value = JSON.parse(text)
+    const [idx, baseChar, traitColor, originalTitle, tagData] = await Promise.all([
+      _fetchJSON('data/character_index.json'),
+      _fetchJSON('data/base_character.json'),
+      _fetchJSON('data/trait_color.json'),
+      _fetchJSON('data/original_title.json'),
+      _fetchJSON('data/character_tag.json'),
+    ])
+    characterIndex.value = idx
+    baseCharacterMap.value = baseChar
+    traitColorMap.value = traitColor
+    originalTitleMap.value = originalTitle
+    const tagMap = {}
+    for (const t of tagData) tagMap[t.id] = t
+    characterTagMap.value = tagMap
     indexLoadError.value = null
     indexLoaded.value = true
   } catch (e) {
-    if (e.name === 'AbortError') {
-      _indexPromise = null
-      return
-    }
+    if (e.name === 'AbortError') { _loadPromise = null; return }
     indexLoadError.value = e.message || String(e)
     characterIndex.value = []
   }
 }
 
-let _indexPromise = _doLoadIndex()
+let _loadPromise = null
 
 export function useCharacterData() {
   async function loadIndex() {
-    if (!_indexPromise) _indexPromise = _doLoadIndex()
-    await _indexPromise
+    if (!_loadPromise) _loadPromise = _doLoadIndex()
+    await _loadPromise
   }
 
-  async function loadCharacter(id) {
-    if (loadedCharacters.value[id]) return loadedCharacters.value[id]
-    const resp = await fetch(`data/character/${id}.json`, { signal: getNavigationSignal() })
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
-
-    if (!resp.body) return resp.json()
-    const reader = resp.body.getReader()
-    const merged = await _readAllChunks(reader)
-
-    const text = new TextDecoder().decode(merged)
-    const data = JSON.parse(text)
-    loadedCharacters.value[id] = data
-    triggerRef(loadedCharacters)
-    return data
+  function getCharacterById(id) {
+    return characterIndex.value.find(c => c.id === id) || null
   }
 
-  function trackImage(size) {
-    imgBytesTotal.value += size
+  // 按需加载技能表
+  async function loadSkills() {
+    if (Object.keys(skillsMap.value).length === 0) {
+      const data = await _loadEntity('skills.json')
+      skillsMap.value = data
+    }
+    return skillsMap.value
   }
 
-  function imageDone(size) {
-    imgBytesLoaded.value += size
+  async function loadAbilities() {
+    if (Object.keys(abilitiesMap.value).length === 0) {
+      const data = await _loadEntity('abilities.json')
+      abilitiesMap.value = data
+    }
+    return abilitiesMap.value
   }
 
+  async function loadEntityMap(file, ref) {
+    if (Object.keys(ref.value).length === 0) {
+      const data = await _loadEntity(file)
+      ref.value = data
+    }
+    return ref.value
+  }
+
+  function trackImage(size) { imgBytesTotal.value += size }
+  function imageDone(size) { imgBytesLoaded.value += size }
   function untrackImage(size, loaded) {
     imgBytesTotal.value = Math.max(0, imgBytesTotal.value - size)
-    if (loaded) {
-      imgBytesLoaded.value = Math.max(0, imgBytesLoaded.value - size)
-    }
+    if (loaded) imgBytesLoaded.value = Math.max(0, imgBytesLoaded.value - size)
   }
 
-  return { characterIndex, loadedCharacters, indexLoadError, indexLoaded, loadIndex, loadCharacter, loadProgress, trackImage, imageDone, untrackImage }
+  // 同步访问器（调用前需确保已加载）
+  function getSkillById(id) { return skillsMap.value[id] || null }
+  function getAbilityById(id) { return abilitiesMap.value[id] || null }
+
+  return {
+    characterIndex, indexLoadError, indexLoaded, loadIndex,
+    skillsMap, abilitiesMap, traitColorMap, baseCharacterMap, originalTitleMap, characterTagMap, buildTime,
+    getCharacterById, getSkillById, getAbilityById,
+    loadSkills, loadAbilities, loadEntityMap,
+    loadProgress, trackImage, imageDone, untrackImage,
+  }
 }
