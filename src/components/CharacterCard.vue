@@ -87,11 +87,16 @@ function getCharWT(useAlt) {
 }
 
 const initialWT = computed(() => {
+  const entry = props.indexEntry
+  const speed = entry.initial_status?.speed
+  if (!speed || speed <= 0) return '—'
   const cardState = getCardState(props.indexEntry.id)
   const alt = cardState.toggleActive
   const useAlt = hasTransform.value ? !alt : alt
-  const wt = getCharWT(useAlt)
-  return wt ?? '—'
+  const ids = pickSkillIds(entry, 'normal2', useAlt)
+  const wt = ids.length > 0 ? skillsMap.value[ids[ids.length - 1]]?.wt : null
+  if (wt == null) return '—'
+  return Math.floor(57600 / speed) + (wt - 200)
 })
 const status = computed(() => props.indexEntry.initial_status || {})
 

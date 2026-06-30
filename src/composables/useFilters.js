@@ -72,24 +72,28 @@ export function filterCharacter(char, f) {
   if (f.original_title) {
     if (char.original_title_id !== f.original_title) return false
   }
-  if (f.permanent_status.length) {
-    if (!f.permanent_status.includes(char.permanent_status || '')) return false
-  }
-  if (f.atelier_fes.length) {
-    const pd = char.permanent_date || ''
-    if (f.atelier_fes.includes('ATELIER FES I') && pd === 'ATELIER FES') return true
-    if (!f.atelier_fes.includes(pd)) return false
+  if (f.permanent_status.length || f.atelier_fes.length) {
+    let matched = false
+    if (f.permanent_status.length && f.permanent_status.includes(char.permanent_status || '')) {
+      matched = true
+    }
+    if (f.atelier_fes.length) {
+      const pd = char.permanent_date || ''
+      if (f.atelier_fes.includes('ATELIER FES I') && pd === 'ATELIER FES') matched = true
+      else if (f.atelier_fes.includes(pd)) matched = true
+    }
+    if (!matched) return false
   }
   return true
 }
 
 function getCharWT(char, useAlt, skillsMap) {
+  const speed = char.initial_status?.speed
+  if (!speed || speed <= 0) return null
   const ids = pickSkillIds(char, 'normal2', useAlt)
-  if (ids.length > 0) {
-    const skill = skillsMap.value[ids[ids.length - 1]]
-    if (skill) return skill.wt
-  }
-  return null
+  const wt = ids.length > 0 ? skillsMap.value[ids[ids.length - 1]]?.wt : null
+  if (wt == null) return null
+  return Math.floor(57600 / speed) + (wt - 200)
 }
 
 function pickSkillIds(char, type, useAlt) {
