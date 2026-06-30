@@ -69,24 +69,16 @@ const attrsText = computed(() => {
   return names.join(' / ') + ' | ' + roleName.value
 })
 
+function pickSkillIds(char, type, useAlt) {
+  if (useAlt && char.switch_stat?.skills?.hasOwnProperty(type)) {
+    return char.switch_stat.skills[type]
+  }
+  return char.skills?.[type] || []
+}
+
 function getCharWT(useAlt) {
   const entry = props.indexEntry
-  const sk = entry.skills || {}
-  const sw = entry.switch
-  if (useAlt && sw === 'evolve') {
-    const ids = sk.normal2?.post || []
-    if (ids.length > 0) {
-      const skill = skillsMap.value[ids[ids.length - 1]]
-      if (skill) return skill.wt
-    }
-  } else if (useAlt && sw === 'change' && entry.switch_stat?.skills) {
-    const ids = entry.switch_stat.skills.normal2?.pre || []
-    if (ids.length > 0) {
-      const skill = skillsMap.value[ids[ids.length - 1]]
-      if (skill) return skill.wt
-    }
-  }
-  const ids = sk.normal2?.pre || []
+  const ids = pickSkillIds(entry, 'normal2', useAlt)
   if (ids.length > 0) {
     const skill = skillsMap.value[ids[ids.length - 1]]
     if (skill) return skill.wt

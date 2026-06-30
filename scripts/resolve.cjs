@@ -217,21 +217,26 @@ function buildSkillAndAbilityDetails(character) {
 }
 
 // ========== 9. 构建技能 ID 分组（替代旧 _skills 数组）==========
+function toIdArray(val) {
+  if (val == null) return [];
+  if (Array.isArray(val)) return [...new Set(val)].sort((a, b) => a - b);
+  return [val];
+}
+
 const SKILL_TYPE_MAP = {
   normal1: { idsField: 'normal1_skill_ids', evolvedField: 'evolved_normal1_skill_ids' },
   normal2: { idsField: 'normal2_skill_ids', evolvedField: 'evolved_normal2_skill_ids' },
   burst:   { idsField: 'burst_skill_ids',      evolvedField: 'evolved_burst_skill_ids' },
+  active1: { idsField: 'active1_skill_id',     evolvedField: null },
+  active2: { idsField: 'active2_skill_id',     evolvedField: null },
+  active3: { idsField: 'active3_skill_id',     evolvedField: null },
 };
 
 function buildSkillIdGroups(character) {
   const groups = {};
   for (const [type, fields] of Object.entries(SKILL_TYPE_MAP)) {
-    const pre = [...new Set(character[fields.idsField] || [])].sort((a,b) => a-b);
-    const post = [...new Set(character[fields.evolvedField] || [])].sort((a,b) => a-b);
-    if (pre.length === 0 && post.length === 0) continue;
-    groups[type] = {};
-    if (pre.length > 0) groups[type].pre = pre;
-    if (post.length > 0) groups[type].post = post;
+    const ids = toIdArray(character[fields.idsField]);
+    if (ids.length > 0) groups[type] = ids;
   }
   return groups;
 }
@@ -434,11 +439,22 @@ function buildCharacterEntry(character) {
       entry.switch_stat = switchStat;
     } else if (sw === 'evolve') {
       const switchStat = {};
+      // 进化后能力（现有逻辑保持不变）
       const evoAbiIds = char.all_skill_evolved_ability_ids || [];
       if (evoAbiIds.length > 0) {
         switchStat.abilities = { ...entry.abilities };
         entry.abilities = { ...entry.abilities };
         entry.abilities.character = (entry.abilities.character || []).filter(id => !evoAbiIds.includes(id));
+      }
+      // 进化后技能（新增）
+      const evoSkills = {};
+      for (const [type, fields] of Object.entries(SKILL_TYPE_MAP)) {
+        if (!fields.evolvedField) continue;
+        const evoIds = toIdArray(character[fields.evolvedField]);
+        if (evoIds.length > 0) evoSkills[type] = evoIds;
+      }
+      if (Object.keys(evoSkills).length > 0) {
+        switchStat.skills = evoSkills;
       }
       entry.switch_stat = switchStat;
     }

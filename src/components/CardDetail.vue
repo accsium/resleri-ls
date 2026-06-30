@@ -6,6 +6,7 @@ import SkillGroup from './SkillGroup.vue'
 import AbilityCard from './AbilityCard.vue'
 import SupportAbilitySection from './SupportAbilitySection.vue'
 import SynthesisModule from './SynthesisModule.vue'
+import IconDisplay from './IconDisplay.vue'
 
 const props = defineProps({
   characterData: Object,
@@ -21,17 +22,18 @@ onMounted(() => {
   })
 })
 
-const { t } = useI18n()
+const { t, getField, currentLang, ATTR_MAP, ATTR_MAP_CN } = useI18n()
+const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
+const typeText = t('skillType')
 const { skillsMap, abilitiesMap, loadSkills, loadAbilities } = useCharacterData()
 
 const toggleActive = computed(() => props.cardState.toggleActive)
 
-// 根据切换类型获取技能 ID 数组（pre 或 post）
 function pickSkillIds(char, type, useAlt) {
-  const group = char.skills?.[type]
-  if (!group) return []
-  if (useAlt && char.switch === 'evolve') return group.post || []
-  return group.pre || []
+  if (useAlt && char.switch_stat?.skills?.hasOwnProperty(type)) {
+    return char.switch_stat.skills[type]
+  }
+  return char.skills?.[type] || []
 }
 
 const activeChar = computed(() => {
@@ -89,6 +91,16 @@ const allSkillTypes = computed(() => {
   }
 
   return types
+})
+
+const activeSkills = computed(() => {
+  const char = activeChar.value
+  const alt = isAlt.value
+  const ids = []
+  for (const type of ['active1', 'active2', 'active3']) {
+    ids.push(...pickSkillIds(char, type, alt))
+  }
+  return ids.map(id => skillsMap.value[id]).filter(Boolean)
 })
 
 const abi = computed(() => {
@@ -149,6 +161,29 @@ const abilitiesCollapsed = ref(false)
         :key="skillType.type"
         :skill-type="skillType"
       />
+      <template v-if="activeSkills.length > 0">
+        <div class="subsection-title">{{ typeText.active }}</div>
+        <div v-for="skill in activeSkills" :key="skill.id" class="skill-group" data-group="active">
+          <div class="banner-title">
+            <span style="display:inline-flex;align-items:center;gap:3px;height:1em;overflow:visible;">
+              <IconDisplay v-for="aid in (skill.attack_attributes || [])" :key="aid" type="attribute" :id="aid" :size="24" />
+              <span>{{ skill.name || '??' }} <small v-if="skill.id">(ID:{{ skill.id }})</small></span>
+            </span>
+          </div>
+          <div class="content-block">
+            <div class="skill-desc" v-html="skill.description || ''"></div>
+            <div class="skill-stats">
+              <span class="skill-stat">{{ t('target') }}: {{ getField(skill, 'target_name') || skill.skill_target_type || '?' }}</span>
+              <span v-if="skill.attack_attributes?.length" class="skill-stat">{{ t('attribute') }}: {{ skill.attack_attributes.map(a => attrMap[a] || a).join('/') }}</span>
+              <span class="skill-stat">{{ t('dmgPower') }}: {{ [1,2,3,4].includes(skill.skill_power_type) && skill.power ? skill.power : '—' }}{{ [1,2,3,4].includes(skill.skill_power_type) && skill.power ? '%' : '' }}</span>
+              <span class="skill-stat">{{ t('breakPower') }}: {{ skill.break_power || '—' }}{{ skill.break_power ? '%' : '' }}</span>
+              <span class="skill-stat">{{ t('healPower') }}: {{ [5,6,7].includes(skill.skill_power_type) && skill.power ? skill.power : '—' }}{{ [5,6,7].includes(skill.skill_power_type) && skill.power ? '%' : '' }}</span>
+              <span class="skill-stat">{{ t('wt') }}: {{ skill.wt ?? 0 }}</span>
+              <span class="skill-stat">{{ t('limit') }}: {{ skill.limit_count ?? '—' }}</span>
+            </div>
+          </div>
+        </div>
+      </template>
     </div>
   </template>
 

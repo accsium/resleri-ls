@@ -39,8 +39,8 @@ const STATE_LABEL = {
   change: ['変身後', '变身前'],
 }
 
-const TYPE_LABEL = { normal1:'一技能', normal2:'二技能', burst:'爆发技能', ex:'EX技能' }
-const TYPE_KEYS = ['normal1','normal2','burst','ex']
+const TYPE_LABEL = { normal1:'一技能', normal2:'二技能', burst:'爆发技能', active:'发动技能', ex:'EX技能' }
+const TYPE_KEYS = ['normal1','normal2','burst','active','ex']
 const STATE_KEYS = ['进化前','进化後','内圈','外圈','变身前','変身後','—']
 const WT_OPTS = [0,75,100,175,200,275,300]
 const TARGET_KEYS = ['友方','敌方','单体','全体','其他']
@@ -72,6 +72,8 @@ function targetCat(name) {
 // 从 character_index + skillsMap 构建平铺技能行
 function buildSkillRows() {
   const rows = []
+  const ALL_TYPES = ['normal1', 'normal2', 'burst', 'active1', 'active2', 'active3']
+
   for (const char of characterIndex.value) {
     const sk = char.skills || {}
     const sw = char.switch
@@ -79,11 +81,12 @@ function buildSkillRows() {
     const altState = sw ? (STATE_LABEL[sw]?.[1] || null) : null
 
     // 基础形态技能
-    for (const type of ['normal1', 'normal2', 'burst']) {
-      const ids = sk[type]?.pre || []
+    for (const type of ALL_TYPES) {
+      const ids = sk[type] || []
       if (ids.length > 0) {
         const skill = skillsMap.value[ids[ids.length - 1]]
-        if (skill) rows.push(buildRow(char, type, baseState, skill))
+        const displayType = type.startsWith('active') ? 'active' : type
+        if (skill) rows.push(buildRow(char, displayType, baseState, skill))
       }
     }
     // EX 技能
@@ -96,24 +99,18 @@ function buildSkillRows() {
 
     // 切换形态技能
     if (altState) {
-      if (sw === 'evolve') {
-        for (const type of ['normal1', 'normal2', 'burst']) {
-          const ids = sk[type]?.post || []
+      const altSk = char.switch_stat?.skills
+      if (altSk) {
+        for (const type of ALL_TYPES) {
+          const ids = altSk[type] || []
           if (ids.length > 0) {
             const skill = skillsMap.value[ids[ids.length - 1]]
-            if (skill) rows.push(buildRow(char, type, altState, skill))
+            const displayType = type.startsWith('active') ? 'active' : type
+            if (skill) rows.push(buildRow(char, displayType, altState, skill))
           }
         }
-      } else if (sw === 'change' && char.switch_stat?.skills) {
-        const stSk = char.switch_stat.skills
-        for (const type of ['normal1', 'normal2', 'burst']) {
-          const ids = stSk[type]?.pre || []
-          if (ids.length > 0) {
-            const skill = skillsMap.value[ids[ids.length - 1]]
-            if (skill) rows.push(buildRow(char, type, altState, skill))
-          }
-        }
-        const stExIds = stSk.ex || []
+        // 切换形态 EX
+        const stExIds = altSk.ex || []
         if (stExIds.length > 0) {
           const skill = skillsMap.value[stExIds[stExIds.length - 1]]
           if (skill) rows.push(buildRow(char, 'ex', altState, skill))

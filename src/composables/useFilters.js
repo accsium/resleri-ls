@@ -84,27 +84,19 @@ export function filterCharacter(char, f) {
 }
 
 function getCharWT(char, useAlt, skillsMap) {
-  const sk = char.skills || {}
-  const sw = char.switch
-  if (useAlt && sw === 'evolve') {
-    const ids = sk.normal2?.post || []
-    if (ids.length > 0) {
-      const skill = skillsMap.value[ids[ids.length - 1]]
-      if (skill) return skill.wt
-    }
-  } else if (useAlt && sw === 'change' && char.switch_stat?.skills) {
-    const ids = char.switch_stat.skills.normal2?.pre || []
-    if (ids.length > 0) {
-      const skill = skillsMap.value[ids[ids.length - 1]]
-      if (skill) return skill.wt
-    }
-  }
-  const ids = sk.normal2?.pre || []
+  const ids = pickSkillIds(char, 'normal2', useAlt)
   if (ids.length > 0) {
     const skill = skillsMap.value[ids[ids.length - 1]]
     if (skill) return skill.wt
   }
   return null
+}
+
+function pickSkillIds(char, type, useAlt) {
+  if (useAlt && char.switch_stat?.skills?.hasOwnProperty(type)) {
+    return char.switch_stat.skills[type]
+  }
+  return char.skills?.[type] || []
 }
 
 export function useFilters() {
