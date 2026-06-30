@@ -8,7 +8,7 @@ import { useFilters } from '../composables/useFilters'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useTraitData } from '../composables/useTraitData'
 
-defineOptions({ name: 'GuideView' })
+defineOptions({ name: 'DexView' })
 
 const headRef = ref(null)
 const { resetFilters, pagedCharacters } = useFilters()
@@ -63,8 +63,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="guide-layout">
-    <div ref="headRef" class="guide-sticky-head">
+  <div class="dex-layout">
+    <div ref="headRef" class="dex-sticky-head">
       <FilterBar />
       <SortSearchBar />
       <PaginationBar />

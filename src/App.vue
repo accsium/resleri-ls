@@ -11,8 +11,8 @@ const { setLang } = useI18n()
 const { loadProgress, indexLoaded } = useCharacterData()
 const { loadBuildTime } = useBuildInfo()
 
-// KeepAlive 缓存 GuideView + CollectionView，避免导航时全量重建 DOM
-const keepAliveViews = ['GuideView', 'CollectionView']
+// KeepAlive 缓存 DexView + CollectionView，避免导航时全量重建 DOM
+const keepAliveViews = ['DexView', 'CollectionView']
 
 onMounted(async () => {
   setLang('cn')

@@ -46,8 +46,9 @@ npm run preview          # 预览构建结果
 
 ```
 npm run data-conversion
+  ├── rm -rf data/output/ data/selection/            （清理上次产物）
   ├── npm run selection     → scripts/select.cjs     （文件筛选 → data/selection/）
-  ├── npm run prepare-data  → scripts/translate.cjs  （翻译处理，读取 data/language/）
+  ├── npm run prepare-data  → scripts/translate.cjs  （翻译处理，读取 data/selection/ 和 data/language/）
   └── npm run data          → scripts/resolve.cjs    （关系解析 + 输出 → data/output/）
 ```
 
@@ -72,6 +73,17 @@ npm run data-conversion
 
 辅助脚本：`resolveConfig.cjs`（配置解析）、`safeReadJSON.cjs`（安全 JSON 读取）。
 
+## 数据更新
+
+1. 使用解包工具获取最新 masterdata 及角色头像（参考 [NGA 教程](https://bbs.nga.cn/read.php?tid=39869227)）
+2. 将 masterdata 的 `jp/` 文件夹内容复制到 `data/raw/jp/`，覆盖已有文件
+3. 角色头像（`*_FACE_M.png`）改名为角色 ID（如 `10101.png`），放入 `image/character/`
+4. 检查 `config/` 下配置文件是否需要更新（新增角色类型、变身角色等）
+5. 运行 `npm run data-conversion && npm run build`
+6. 确认 `data/output/` 变更已提交，推送到 main 分支
+
+> 推送后 GitHub Actions 自动构建并部署 `dist/` 到 GitHub Pages。
+
 ## 构建流程
 
 ```bash
@@ -85,17 +97,6 @@ npm run build
 ```
 
 `public/` 为构建临时目录，由 `.gitignore` 排除，每次构建开始时清理。
-
-## 数据更新
-
-1. 使用解包工具获取最新 masterdata 及角色头像（参考 [NGA 教程](https://bbs.nga.cn/read.php?tid=39869227)）
-2. 将 masterdata 的 `jp/` 文件夹内容复制到 `data/raw/jp/`，覆盖已有文件
-3. 角色头像（`*_FACE_M.png`）改名为角色 ID（如 `10101.png`），放入 `image/character/`
-4. 检查 `config/` 下配置文件是否需要更新（新增角色类型、变身角色等）
-5. 运行 `npm run data-conversion && npm run build`
-6. 确认 `data/output/` 变更已提交，推送到 main 分支
-
-> 推送后 GitHub Actions 自动构建并部署 `dist/` 到 GitHub Pages。
 
 ## 配置文件
 
@@ -131,9 +132,10 @@ resleri-ls/
 │   ├── components/        # 通用组件
 │   ├── composables/       # 状态共享
 │   ├── utils/             # 工具函数（date、sort）
+│   ├── styles/            # 全局样式
 │   └── router/            # 路由定义
 ├── public/                # 构建临时目录（不提交）
-├── dist/                  # 构建输出（不提交，CI 部署）
+├── dist/                  # 构建输出（仅构建产物，本地 build 后生成，不提交，CI 部署）
 └── .github/workflows/     # CI 配置（push main 自动部署）
 ```
 

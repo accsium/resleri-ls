@@ -32,8 +32,8 @@ export const preFetch = new Proxy({}, {
 const routes = [
   {
     path: '/dex',
-    name: 'guide',
-    component: () => import('../views/GuideView.vue'),
+    name: 'dex',
+    component: () => import('../views/DexView.vue'),
   },
   {
     path: '/',
