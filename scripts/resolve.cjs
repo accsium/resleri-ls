@@ -684,9 +684,4 @@ if (fs.existsSync(contestFile) && fs.existsSync(episodeFile)) {
   fs.writeFileSync(path.join(outDir, 'contest_rotations.json'), JSON.stringify(contestTable, null, 2), 'utf-8');
   console.log(`📋 竞技场周期：${contestTable.length} 条`);
 }
-
-// ========== 元数据 ==========
-const meta = { build_time: new Date().toISOString() };
-fs.writeFileSync(path.join(outDir, 'meta.json'), JSON.stringify(meta, null, 2), 'utf-8');
-console.log(`🕒 构建时间已写入 meta.json`);
 console.log(`✅ 已生成角色索引，包含 ${index.length} 个角色`);

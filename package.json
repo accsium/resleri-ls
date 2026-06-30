@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf public/ && npm run copy-public && vite build",
+    "build": "rm -rf public/ && npm run copy-public && node -e \"require('fs').writeFileSync('public/data/meta.json',JSON.stringify({build_time:new Date().toISOString()}))\" && vite build",
     "preview": "vite preview",
     "data": "node scripts/resolve.cjs",
     "prepare-data": "node scripts/translate.cjs",

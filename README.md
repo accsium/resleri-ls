@@ -69,7 +69,6 @@ npm run data-conversion
 | `equipment_tool_trait.json` | 装备词条 |
 | `events.json` | 活动列表 |
 | `contest_rotations.json` | 竞技场周期 |
-| `meta.json` | 构建时间 |
 
 辅助脚本：`resolveConfig.cjs`（配置解析）、`safeReadJSON.cjs`（安全 JSON 读取）。
 
