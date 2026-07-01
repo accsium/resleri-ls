@@ -16,8 +16,7 @@ const columns = [
 
 const rows = ref([])
 const loading = ref(true)
-const error = ref('')
-const isEmpty = computed(() => !loading.value && !error.value && rows.value.length === 0)
+const isEmpty = computed(() => !loading.value && rows.value.length === 0)
 const { sortCol, sortDir, onSort, sortItems } = useSortTable({
   defaultCol: 'start_at',
   defaultDir: 'desc',
@@ -32,27 +31,19 @@ function getSortVal(row, field) {
 const sorted = computed(() => sortItems(rows.value, getSortVal))
 
 onMounted(async () => {
-  try {
-    let data = await preFetch.contestRotations
-    if (!data) {
-      const resp = await fetch('data/contest_rotations.json')
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
-      data = await resp.json()
-    }
-    rows.value = data
-  } catch (e) {
-    if (e.name === 'AbortError') return
-    error.value = e.message || String(e)
-  } finally {
-    loading.value = false
+  let data = await preFetch.contestRotations
+  if (!data) {
+    const resp = await fetch('data/contest_rotations.json')
+    data = await resp.json()
   }
+  rows.value = data
+  loading.value = false
 })
 </script>
 
 <template>
   <div class="contest-wrap">
     <div v-if="loading" class="loading">{{ t('loading') }}</div>
-    <div v-else-if="error" class="loading">{{ error }}</div>
     <div v-else-if="isEmpty" class="loading">{{ t('none') }}</div>
   <SortableTable v-else
     :columns="columns"

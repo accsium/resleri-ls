@@ -5,7 +5,6 @@ import { getNavigationSignal } from '../router'
 const battleTraits = ref([])
 const equipTraits = ref([])
 const loaded = ref(false)
-const error = ref(null)
 let cachePromise = null
 
 export function useTraitData() {
@@ -27,15 +26,12 @@ export function useTraitData() {
       const [bt, et] = await cachePromise
       battleTraits.value = bt
       equipTraits.value = et
-      error.value = null
       loaded.value = true
     } catch (e) {
       if (e.name === 'AbortError') { cachePromise = null; return }
-      error.value = e
       cachePromise = null
-      console.error('加载词条数据失败', e)
     }
   }
 
-  return { battleTraits, equipTraits, loaded, error, load }
+  return { battleTraits, equipTraits, loaded, load }
 }

@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { resetProgress, startObserving } from '../composables/useProgress'
 
 // ── 导航作用域 ──
 // 每次路由切换 abort 所有旧请求，新请求绑定新 scope。
@@ -79,39 +80,24 @@ const routes = [
   },
 ]
 
-// 记录每个路由的滚动位置，返回时还原
-const scrollPositions = {}
-
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    // 浏览器前进后退
-    if (savedPosition) return savedPosition
-    // 自定义路由滚动位置恢复：同步返回保存位置，Vue Router 在组件渲染后立即执行
-    const saved = scrollPositions[to.name]
-    if (saved != null) {
-      delete scrollPositions[to.name]
-      const el = document.querySelector('.app-content')
-      return { top: saved, el: el || undefined, behavior: 'instant' }
-    }
-    // 新导航同步置顶
-    return { top: 0 }
-  },
+})
+
+router.afterEach(() => {
+  const app = document.querySelector('.app-content')
+  if (app) app.scrollTop = 0
 })
 
 router.beforeEach((to, from) => {
   // 切换路由时 abort 所有旧请求，创建新 scope
   if (_navigationScope) _navigationScope.abort()
   _navigationScope = new AbortController()
-
-  if (from.name) {
-    scrollPositions[from.name] = window.scrollY || document.querySelector('.app-content')?.scrollTop || 0
-  }
+  resetProgress()
+  const app = document.querySelector('.app-content')
+  if (app) startObserving(app)
 })
 
-router.afterEach(() => {
-  // 滚动恢复已由 scrollBehavior 同步处理，此处不再异步恢复
-})
 
 export default router

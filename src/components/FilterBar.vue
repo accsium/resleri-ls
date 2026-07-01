@@ -194,7 +194,6 @@ async function loadTraitData() {
     traitsLoaded.value = true
   } catch (e) {
     if (e.name === 'AbortError') return
-    console.error('加载词条数据失败', e)
   }
 }
 

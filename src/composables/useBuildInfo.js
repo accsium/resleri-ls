@@ -19,15 +19,9 @@ function formatTime(isoStr) {
 const updateTimeText = ref('最后更新：加载中...')
 
 export function useBuildInfo() {
-  async function loadBuildTime() {
-    try {
-      const resp = await fetch('data/meta.json')
-      const meta = await resp.json()
-      const text = formatTime(meta.build_time)
-      if (text) updateTimeText.value = text
-    } catch {
-      updateTimeText.value = '最后更新：未知'
-    }
+  function loadBuildTime() {
+    const text = formatTime(__BUILD_TIME__)
+    if (text) updateTimeText.value = text
   }
 
   return { updateTimeText, loadBuildTime }

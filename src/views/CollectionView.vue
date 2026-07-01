@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, watch, onMounted, onUnmounted, onActivated } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
@@ -167,9 +167,6 @@ onMounted(async () => {
   await loadIndex()
   const { load: loadTraits } = useTraitData()
   loadTraits()
-  resetFilters()
-})
-onActivated(() => {
   resetFilters()
 })
 onUnmounted(() => {

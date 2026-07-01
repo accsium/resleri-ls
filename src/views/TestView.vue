@@ -6,18 +6,12 @@ import { preFetch } from '../router'
 const todoHtml = ref('')
 
 onMounted(async () => {
-  try {
-    let md = await preFetch.todo
-    if (!md) {
-      const res = await fetch('config/todo.md')
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      md = await res.text()
-    }
-    todoHtml.value = marked.parse(md.replace(/<[^>]*>/g, ''))
-  } catch (e) {
-    if (e.name === 'AbortError') return
-    todoHtml.value = '加载失败'
+  let md = await preFetch.todo
+  if (!md) {
+    const res = await fetch('config/todo.md')
+    md = await res.text()
   }
+  todoHtml.value = marked.parse(md)
 })
 </script>
 

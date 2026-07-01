@@ -40,7 +40,7 @@ const etNames = computed(() => etIds.value.map(id => {
   return currentLang.value === 'cn' ? (t.name_cn || t.name) : t.name
 }).filter(Boolean))
 
-const { battleTraits, equipTraits, error: traitError, load: loadTraits } = useTraitData()
+const { battleTraits, equipTraits, load: loadTraits } = useTraitData()
 
 const traitEffects = computed(() => {
   const map = {}
@@ -91,11 +91,7 @@ function splitEffect(effect) {
 </script>
 
 <template>
-  <div v-if="traitError" class="syn-error">
-    调和数据加载失败
-    <button class="syn-retry-btn" @click="loadTraits().catch(() => {})">重试</button>
-  </div>
-  <template v-else-if="allTraits.length > 0">
+  <template v-if="allTraits.length > 0">
     <div class="section-title section-collapsible" @click="collapsed = !collapsed">
       调和
       <span class="synthesis-color-row">

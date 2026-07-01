@@ -23,8 +23,7 @@ const groups = [
 
 const allRows = ref([])
 const loading = ref(true)
-const error = ref('')
-const isEmpty = computed(() => !loading.value && !error.value && allRows.value.length === 0)
+const isEmpty = computed(() => !loading.value && allRows.value.length === 0)
 
 const getGroupRows = (g) => allRows.value.filter(r => r.id >= g.min && r.id <= g.max)
 
@@ -70,27 +69,19 @@ function onSort(gi, col) {
 }
 
 onMounted(async () => {
-  try {
-    let data = await preFetch.events
-    if (!data) {
-      const resp = await fetch('data/events.json')
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
-      data = await resp.json()
-    }
-    allRows.value = data
-  } catch (e) {
-    if (e.name === 'AbortError') return
-    error.value = e.message || String(e)
-  } finally {
-    loading.value = false
+  let data = await preFetch.events
+  if (!data) {
+    const resp = await fetch('data/events.json')
+    data = await resp.json()
   }
+  allRows.value = data
+  loading.value = false
 })
 </script>
 
 <template>
   <div class="event-wrap">
     <div v-if="loading" class="loading">{{ t('loading') }}</div>
-    <div v-else-if="error" class="loading">{{ error }}</div>
     <div v-else-if="isEmpty" class="loading">{{ t('none') }}</div>
     <template v-else>
     <div v-for="(g, gi) in groups" :key="g.label">

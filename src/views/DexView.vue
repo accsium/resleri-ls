@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted, onActivated, onDeactivated } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import FilterBar from '../components/FilterBar.vue'
 import SortSearchBar from '../components/SortSearchBar.vue'
 import PaginationBar from '../components/PaginationBar.vue'
@@ -43,17 +43,6 @@ onMounted(async () => {
   loadTraits()
   resetFilters()
   setupObserver()
-})
-
-onActivated(() => {
-  // KeepAlive 重新激活：重置筛选 + 重建 observer（DOM 已重新插入文档）
-  resetFilters()
-  setupObserver()
-})
-
-onDeactivated(() => {
-  // KeepAlive 停用时断开 observer（DOM 已移出文档）
-  teardownObserver()
 })
 
 onUnmounted(() => {

@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onMounted, onUnmounted, onDeactivated, onActivated } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
@@ -7,7 +7,6 @@ import IconDisplay from './IconDisplay.vue'
 
 let uid = 0
 const { getTraitColorHex, currentLang } = useI18n()
-const { trackImage, imageDone, untrackImage } = useCharacterData()
 
 const props = defineProps({
   indexEntry: Object,
@@ -32,8 +31,6 @@ const starDisplayCount = computed(() => {
 
 const charImage = computed(() => `image/character/${props.indexEntry.id}.png`)
 const showImage = ref(false)
-const wasLoaded = ref(false)
-const imageSize = 100000
 
 const { baseCharacterMap } = useCharacterData()
 
@@ -66,7 +63,6 @@ const textScale = computed(() => {
 
 const containerRef = ref(null)
 let cancelled = false
-let tracked = false
 let observer = null
 let activeImg = null
 
@@ -78,17 +74,14 @@ function setupObserver() {
       observer.disconnect()
       // 已加载过的图片不再重复下载
       if (showImage.value) return
-      tracked = true
-      trackImage(imageSize)
       activeImg = new Image()
       activeImg.onload = () => {
         if (cancelled) return
-        showImage.value = true; wasLoaded.value = true; imageDone(imageSize)
+        showImage.value = true
         activeImg = null
       }
       activeImg.onerror = () => {
         if (cancelled) return
-        imageDone(imageSize)
         activeImg = null
       }
       activeImg.src = charImage.value
@@ -98,7 +91,6 @@ function setupObserver() {
 }
 
 onMounted(setupObserver)
-onActivated(setupObserver)
 
 function cleanup() {
   cancelled = true
@@ -108,12 +100,9 @@ function cleanup() {
     activeImg.src = ''
     activeImg = null
   }
-  if (tracked) untrackImage(imageSize, wasLoaded.value)
-  tracked = false
 }
 
 onUnmounted(cleanup)
-onDeactivated(cleanup)
 </script>
 
 <template>

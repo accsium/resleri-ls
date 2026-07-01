@@ -5,15 +5,12 @@ import NavBar from './components/NavBar.vue'
 import AnnouncementBar from './components/AnnouncementBar.vue'
 import { useI18n } from './composables/useI18n'
 import { useCharacterData } from './composables/useCharacterData'
+import { loadProgress } from './composables/useProgress'
 import { useBuildInfo } from './composables/useBuildInfo'
 
 const { setLang } = useI18n()
-const { loadProgress, indexLoaded } = useCharacterData()
+const { indexLoaded } = useCharacterData()
 const { loadBuildTime } = useBuildInfo()
-
-// KeepAlive 缓存 DexView + CollectionView，避免导航时全量重建 DOM
-const keepAliveViews = ['DexView', 'CollectionView']
-
 onMounted(async () => {
   setLang('cn')
   await loadBuildTime()
@@ -62,11 +59,7 @@ onMounted(async () => {
     </div>
     <AnnouncementBar />
     <div class="app-content">
-      <router-view v-slot="{ Component }">
-        <KeepAlive :include="keepAliveViews">
-          <component :is="Component" />
-        </KeepAlive>
-      </router-view>
+      <router-view />
     </div>
   </div>
 </template>

@@ -23,14 +23,9 @@ let abortController = null
 onMounted(async () => {
   abortController = new AbortController()
   const { signal } = abortController
-  try {
-    const res = await fetch('config/announcements.json', { signal })
-    if (!res.ok) throw new Error(`HTTP ${res.status}`)
-    if (signal.aborted) return
-    announcements.value = await res.json()
-  } catch (e) {
-    if (e.name === 'AbortError') return
-  }
+  const res = await fetch('config/announcements.json', { signal })
+  if (!res.ok || signal.aborted) return
+  announcements.value = await res.json()
 })
 
 onUnmounted(() => {
