@@ -10746,6 +10746,134 @@
     "wait": 0
   },
   {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "味方全員のHPを5%回復<br>回復後、味方全員に「ターン開始時HP{0}%回復」2つをそれぞれ2回行動開始するまで付与",
+    "effects": [
+      {
+        "id": 6001293,
+        "value": 500
+      },
+      {
+        "id": 6001293,
+        "value": 500
+      }
+    ],
+    "id": 32192,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "シェルバニブレッド",
+    "not_state_change_count_decrease": false,
+    "power": 5,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 2,
+    "skill_power_type": 7,
+    "skill_target_type": 4,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "",
+    "timeline_hash": "6717488835262454878",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "味方全員のHPを3%回復<br>回復後、味方全員に「ターン開始時HP{0}%回復」2つをそれぞれ2回行動開始するまで付与",
+    "effects": [
+      {
+        "id": 6001293,
+        "value": 300
+      },
+      {
+        "id": 6001293,
+        "value": 300
+      }
+    ],
+    "id": 32193,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "シェルバニブレッド",
+    "not_state_change_count_decrease": false,
+    "power": 3,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 2,
+    "skill_power_type": 7,
+    "skill_target_type": 4,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "",
+    "timeline_hash": "6717488835262454878",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に「スキル2から受けるダメージ+{0}％」を2回攻撃を受けるまで付与(重複不可)",
+    "effects": [
+      {
+        "id": 6001294,
+        "value": 7000
+      }
+    ],
+    "id": 32194,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "古の獣の護符",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 4,
+    "skill_power_type": 1,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "",
+    "timeline_hash": "6717488835262454878",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に「スキル2から受けるダメージ+{0}％」を2回攻撃を受けるまで付与(重複不可)",
+    "effects": [
+      {
+        "id": 6001295,
+        "value": 5000
+      }
+    ],
+    "id": 32195,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "古の獣の護符",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 4,
+    "skill_power_type": 1,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "",
+    "timeline_hash": "6717488835262454878",
+    "wait": 0
+  },
+  {
     "attack_attribute_category": 1,
     "attack_attributes": [2],
     "break_power": 0,
@@ -22443,6 +22571,1481 @@
     "still_path_hash": 0,
     "summary": "敵全体に「スキル2から受けるダメージ+{0}%」を1回攻撃を受けるまで付与",
     "timeline_hash": "9150516775715518815",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51001,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 150,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51002,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 165,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51003,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 180,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51004,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 195,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51005,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 210,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51006,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 285,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51007,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 300,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51008,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 315,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51009,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 330,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51010,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 360,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51011,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 435,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51012,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 450,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51013,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 465,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51014,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 480,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51015,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 495,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51016,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 570,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51017,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 585,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51018,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 600,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51019,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 615,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51020,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 645,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51021,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 720,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51022,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 735,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51023,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 750,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51024,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 765,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "effects": [],
+    "id": 51025,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 780,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 500
+      },
+      {
+        "id": 3000372,
+        "value": 2000
+      }
+    ],
+    "id": 51026,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 855,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 720
+      },
+      {
+        "id": 3000372,
+        "value": 2420
+      }
+    ],
+    "id": 51027,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 870,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 940
+      },
+      {
+        "id": 3000372,
+        "value": 2835
+      }
+    ],
+    "id": 51028,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 885,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 1165
+      },
+      {
+        "id": 3000372,
+        "value": 3255
+      }
+    ],
+    "id": 51029,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 900,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 1605
+      },
+      {
+        "id": 3000372,
+        "value": 4095
+      }
+    ],
+    "id": 51030,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 930,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 2710
+      },
+      {
+        "id": 3000372,
+        "value": 6185
+      }
+    ],
+    "id": 51031,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1005,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 2930
+      },
+      {
+        "id": 3000372,
+        "value": 6605
+      }
+    ],
+    "id": 51032,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1020,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 3150
+      },
+      {
+        "id": 3000372,
+        "value": 7025
+      }
+    ],
+    "id": 51033,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1035,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 3370
+      },
+      {
+        "id": 3000372,
+        "value": 7440
+      }
+    ],
+    "id": 51034,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1050,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 3595
+      },
+      {
+        "id": 3000372,
+        "value": 7860
+      }
+    ],
+    "id": 51035,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1065,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 4700
+      },
+      {
+        "id": 3000372,
+        "value": 9955
+      }
+    ],
+    "id": 51036,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1140,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 4920
+      },
+      {
+        "id": 3000372,
+        "value": 10370
+      }
+    ],
+    "id": 51037,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1155,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 5140
+      },
+      {
+        "id": 3000372,
+        "value": 10790
+      }
+    ],
+    "id": 51038,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1170,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 5360
+      },
+      {
+        "id": 3000372,
+        "value": 11210
+      }
+    ],
+    "id": 51039,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1185,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 5800
+      },
+      {
+        "id": 3000372,
+        "value": 12045
+      }
+    ],
+    "id": 51040,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1215,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 6905
+      },
+      {
+        "id": 3000372,
+        "value": 14140
+      }
+    ],
+    "id": 51041,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1290,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 7130
+      },
+      {
+        "id": 3000372,
+        "value": 14560
+      }
+    ],
+    "id": 51042,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1305,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 7350
+      },
+      {
+        "id": 3000372,
+        "value": 14975
+      }
+    ],
+    "id": 51043,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1320,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 7570
+      },
+      {
+        "id": 3000372,
+        "value": 15395
+      }
+    ],
+    "id": 51044,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1335,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 7790
+      },
+      {
+        "id": 3000372,
+        "value": 15815
+      }
+    ],
+    "id": 51045,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1350,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 8895
+      },
+      {
+        "id": 3000372,
+        "value": 17905
+      }
+    ],
+    "id": 51046,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1425,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 9115
+      },
+      {
+        "id": 3000372,
+        "value": 18325
+      }
+    ],
+    "id": 51047,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1440,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 9335
+      },
+      {
+        "id": 3000372,
+        "value": 18745
+      }
+    ],
+    "id": 51048,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1455,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 9560
+      },
+      {
+        "id": 3000372,
+        "value": 19165
+      }
+    ],
+    "id": 51049,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1470,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "effects": [
+      {
+        "id": 3000044,
+        "value": 10000
+      },
+      {
+        "id": 3000372,
+        "value": 20000
+      }
+    ],
+    "id": 51050,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスウニ",
+    "not_state_change_count_decrease": true,
+    "power": 1500,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": 0,
+    "summary": "敵全体に突属性ダメージ<br>この攻撃のクリティカル確率+{0}％とクリティカルダメージ+{1}％<br>※対象の状態変化の回数を消費しない",
+    "timeline_hash": "6053564652560987667",
     "wait": 0
   },
   {
@@ -62408,6 +64011,176 @@
     "still_path_hash": "6523615492000077891",
     "summary": "攻撃後、味方全員のクリティカルダメージと魔攻アップ",
     "timeline_hash": "8671105284979675607",
+    "wait": -100
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 6,
+    "break_power_type": 2,
+    "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を付与(全て上限40%)",
+    "effects": [
+      {
+        "id": 91002290,
+        "value": 2000
+      },
+      {
+        "id": 91002291,
+        "value": 2000
+      }
+    ],
+    "id": 11003828,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "フラッシュブロー",
+    "not_state_change_count_decrease": false,
+    "power": 99,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "攻撃後、自身の魔攻とスキルダメージアップ",
+    "timeline_hash": "1137744712725983523",
+    "wait": -100
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 6,
+    "break_power_type": 2,
+    "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を付与(全て上限40%)",
+    "effects": [
+      {
+        "id": 91002290,
+        "value": 2000
+      },
+      {
+        "id": 91002291,
+        "value": 2000
+      }
+    ],
+    "id": 11003829,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "フラッシュブロー",
+    "not_state_change_count_decrease": false,
+    "power": 105,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "攻撃後、自身の魔攻とスキルダメージアップ",
+    "timeline_hash": "1137744712725983523",
+    "wait": -100
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 6,
+    "break_power_type": 2,
+    "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を付与(全て上限40%)",
+    "effects": [
+      {
+        "id": 91002290,
+        "value": 2000
+      },
+      {
+        "id": 91002291,
+        "value": 2000
+      }
+    ],
+    "id": 11003830,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "フラッシュブロー",
+    "not_state_change_count_decrease": false,
+    "power": 111,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "攻撃後、自身の魔攻とスキルダメージアップ",
+    "timeline_hash": "1137744712725983523",
+    "wait": -100
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 6,
+    "break_power_type": 2,
+    "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を付与(全て上限40%)",
+    "effects": [
+      {
+        "id": 91002290,
+        "value": 2000
+      },
+      {
+        "id": 91002291,
+        "value": 2000
+      }
+    ],
+    "id": 11003831,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "フラッシュブロー",
+    "not_state_change_count_decrease": false,
+    "power": 117,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "攻撃後、自身の魔攻とスキルダメージアップ",
+    "timeline_hash": "1137744712725983523",
+    "wait": -100
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 7,
+    "break_power_type": 2,
+    "description": "攻撃後、自身に「魔攻+{0}%」と「スキルダメージ+{1}%」を付与(全て上限40%)",
+    "effects": [
+      {
+        "id": 91002290,
+        "value": 2000
+      },
+      {
+        "id": 91002291,
+        "value": 2000
+      }
+    ],
+    "id": 11003832,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "フラッシュブロー",
+    "not_state_change_count_decrease": false,
+    "power": 123,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "攻撃後、自身の魔攻とスキルダメージアップ",
+    "timeline_hash": "1137744712725983523",
     "wait": -100
   },
   {
@@ -108168,6 +109941,256 @@
     "still_path_hash": "1466764023324062541",
     "summary": "対象にマイナス効果無効と状態異常無効を付与<br>対象のクリティカルダメージと魔攻アップ<br>得意属性が風属性の味方全員のクリティカル確率アップ",
     "timeline_hash": "2334282011680630341",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 27,
+    "break_power_type": 2,
+    "description": "自身のHPに応じ、クリティカルダメージ+100～150%(HP20～100%で多いほど増加)<br>攻撃後、自身に「魔攻+{0}%」と「クリティカルダメージ+{1}%」を2回行動終了するまで付与<br>自身に「リヒトルーメン」が付与されていない時、「リヒトルーメン(Lv1)」を付与<br>既に付与されている時、「リヒトルーメン」のLv+1(上限Lv10)",
+    "effects": [
+      {
+        "id": 91001376,
+        "value": 6000
+      },
+      {
+        "id": 91001528,
+        "value": 6000
+      },
+      {
+        "id": 91002293,
+        "value": 0
+      },
+      {
+        "id": 91002296,
+        "value": 5000
+      },
+      {
+        "id": 91002292,
+        "value": 10000
+      },
+      {
+        "id": 6001303,
+        "value": 0
+      }
+    ],
+    "id": 12003833,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "レイジングスマイト",
+    "not_state_change_count_decrease": false,
+    "power": 335,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "自身のHPが多いほどクリティカルダメージアップ<br>攻撃後、自身の魔攻とクリティカルダメージアップ<br>自身に「リヒトルーメン」を付与またはLvアップ",
+    "timeline_hash": "6339636188452439729",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 28,
+    "break_power_type": 2,
+    "description": "自身のHPに応じ、クリティカルダメージ+100～150%(HP20～100%で多いほど増加)<br>攻撃後、自身に「魔攻+{0}%」と「クリティカルダメージ+{1}%」を2回行動終了するまで付与<br>自身に「リヒトルーメン」が付与されていない時、「リヒトルーメン(Lv1)」を付与<br>既に付与されている時、「リヒトルーメン」のLv+1(上限Lv10)",
+    "effects": [
+      {
+        "id": 91001376,
+        "value": 6000
+      },
+      {
+        "id": 91001528,
+        "value": 6000
+      },
+      {
+        "id": 91002293,
+        "value": 0
+      },
+      {
+        "id": 91002296,
+        "value": 5000
+      },
+      {
+        "id": 91002292,
+        "value": 10000
+      },
+      {
+        "id": 6001303,
+        "value": 0
+      }
+    ],
+    "id": 12003834,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "レイジングスマイト",
+    "not_state_change_count_decrease": false,
+    "power": 355,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "自身のHPが多いほどクリティカルダメージアップ<br>攻撃後、自身の魔攻とクリティカルダメージアップ<br>自身に「リヒトルーメン」を付与またはLvアップ",
+    "timeline_hash": "6339636188452439729",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 30,
+    "break_power_type": 2,
+    "description": "自身のHPに応じ、クリティカルダメージ+100～150%(HP20～100%で多いほど増加)<br>攻撃後、自身に「魔攻+{0}%」と「クリティカルダメージ+{1}%」を2回行動終了するまで付与<br>自身に「リヒトルーメン」が付与されていない時、「リヒトルーメン(Lv1)」を付与<br>既に付与されている時、「リヒトルーメン」のLv+1(上限Lv10)",
+    "effects": [
+      {
+        "id": 91001376,
+        "value": 6000
+      },
+      {
+        "id": 91001528,
+        "value": 6000
+      },
+      {
+        "id": 91002293,
+        "value": 0
+      },
+      {
+        "id": 91002296,
+        "value": 5000
+      },
+      {
+        "id": 91002292,
+        "value": 10000
+      },
+      {
+        "id": 6001303,
+        "value": 0
+      }
+    ],
+    "id": 12003835,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "レイジングスマイト",
+    "not_state_change_count_decrease": false,
+    "power": 376,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "自身のHPが多いほどクリティカルダメージアップ<br>攻撃後、自身の魔攻とクリティカルダメージアップ<br>自身に「リヒトルーメン」を付与またはLvアップ",
+    "timeline_hash": "6339636188452439729",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 31,
+    "break_power_type": 2,
+    "description": "自身のHPに応じ、クリティカルダメージ+100～150%(HP20～100%で多いほど増加)<br>攻撃後、自身に「魔攻+{0}%」と「クリティカルダメージ+{1}%」を2回行動終了するまで付与<br>自身に「リヒトルーメン」が付与されていない時、「リヒトルーメン(Lv1)」を付与<br>既に付与されている時、「リヒトルーメン」のLv+1(上限Lv10)",
+    "effects": [
+      {
+        "id": 91001376,
+        "value": 6000
+      },
+      {
+        "id": 91001528,
+        "value": 6000
+      },
+      {
+        "id": 91002293,
+        "value": 0
+      },
+      {
+        "id": 91002296,
+        "value": 5000
+      },
+      {
+        "id": 91002292,
+        "value": 10000
+      },
+      {
+        "id": 6001303,
+        "value": 0
+      }
+    ],
+    "id": 12003836,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "レイジングスマイト",
+    "not_state_change_count_decrease": false,
+    "power": 397,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "自身のHPが多いほどクリティカルダメージアップ<br>攻撃後、自身の魔攻とクリティカルダメージアップ<br>自身に「リヒトルーメン」を付与またはLvアップ",
+    "timeline_hash": "6339636188452439729",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 33,
+    "break_power_type": 2,
+    "description": "自身のHPに応じ、クリティカルダメージ+100～150%(HP20～100%で多いほど増加)<br>攻撃後、自身に「魔攻+{0}%」と「クリティカルダメージ+{1}%」を2回行動終了するまで付与<br>自身に「リヒトルーメン」が付与されていない時、「リヒトルーメン(Lv1)」を付与<br>既に付与されている時、「リヒトルーメン」のLv+1(上限Lv10)",
+    "effects": [
+      {
+        "id": 91001376,
+        "value": 6000
+      },
+      {
+        "id": 91001528,
+        "value": 6000
+      },
+      {
+        "id": 91002293,
+        "value": 0
+      },
+      {
+        "id": 91002296,
+        "value": 5000
+      },
+      {
+        "id": 91002292,
+        "value": 10000
+      },
+      {
+        "id": 6001303,
+        "value": 0
+      }
+    ],
+    "id": 12003837,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "レイジングスマイト",
+    "not_state_change_count_decrease": false,
+    "power": 418,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "自身のHPが多いほどクリティカルダメージアップ<br>攻撃後、自身の魔攻とクリティカルダメージアップ<br>自身に「リヒトルーメン」を付与またはLvアップ",
+    "timeline_hash": "6339636188452439729",
     "wait": 0
   },
   {
@@ -154033,6 +156056,256 @@
     "wait": 0
   },
   {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 75,
+    "break_power_type": 2,
+    "description": "自身のHPに応じ、クリティカルダメージ+100～150%(HP20～100%で多いほど増加)<br>攻撃後、自身に「魔攻+{0}%」と「貫通力+{1}」を2回行動終了するまで付与<br>自身に「リヒトルーメン」が付与されていない時、「リヒトルーメン(Lv2)」を付与<br>既に付与されている時、「リヒトルーメン」のLv+2(上限Lv10)",
+    "effects": [
+      {
+        "id": 91001376,
+        "value": 12000
+      },
+      {
+        "id": 91002188,
+        "value": 20000
+      },
+      {
+        "id": 91002294,
+        "value": 0
+      },
+      {
+        "id": 91002296,
+        "value": 5000
+      },
+      {
+        "id": 91002292,
+        "value": 10000
+      },
+      {
+        "id": 6001303,
+        "value": 0
+      }
+    ],
+    "id": 14003838,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "アインツェルカンプ",
+    "not_state_change_count_decrease": false,
+    "power": 576,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "614406750878112506",
+    "summary": "自身のHPが多いほどクリティカルダメージアップ<br>攻撃後、自身の魔攻と貫通力アップ<br>自身に「リヒトルーメン」を付与またはLvアップ",
+    "timeline_hash": "3350271725969103222",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 79,
+    "break_power_type": 2,
+    "description": "自身のHPに応じ、クリティカルダメージ+100～150%(HP20～100%で多いほど増加)<br>攻撃後、自身に「魔攻+{0}%」と「貫通力+{1}」を2回行動終了するまで付与<br>自身に「リヒトルーメン」が付与されていない時、「リヒトルーメン(Lv2)」を付与<br>既に付与されている時、「リヒトルーメン」のLv+2(上限Lv10)",
+    "effects": [
+      {
+        "id": 91001376,
+        "value": 12000
+      },
+      {
+        "id": 91002188,
+        "value": 20000
+      },
+      {
+        "id": 91002294,
+        "value": 0
+      },
+      {
+        "id": 91002296,
+        "value": 5000
+      },
+      {
+        "id": 91002292,
+        "value": 10000
+      },
+      {
+        "id": 6001303,
+        "value": 0
+      }
+    ],
+    "id": 14003839,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "アインツェルカンプ",
+    "not_state_change_count_decrease": false,
+    "power": 612,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "614406750878112506",
+    "summary": "自身のHPが多いほどクリティカルダメージアップ<br>攻撃後、自身の魔攻と貫通力アップ<br>自身に「リヒトルーメン」を付与またはLvアップ",
+    "timeline_hash": "3350271725969103222",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 84,
+    "break_power_type": 2,
+    "description": "自身のHPに応じ、クリティカルダメージ+100～150%(HP20～100%で多いほど増加)<br>攻撃後、自身に「魔攻+{0}%」と「貫通力+{1}」を2回行動終了するまで付与<br>自身に「リヒトルーメン」が付与されていない時、「リヒトルーメン(Lv2)」を付与<br>既に付与されている時、「リヒトルーメン」のLv+2(上限Lv10)",
+    "effects": [
+      {
+        "id": 91001376,
+        "value": 12000
+      },
+      {
+        "id": 91002188,
+        "value": 20000
+      },
+      {
+        "id": 91002294,
+        "value": 0
+      },
+      {
+        "id": 91002296,
+        "value": 5000
+      },
+      {
+        "id": 91002292,
+        "value": 10000
+      },
+      {
+        "id": 6001303,
+        "value": 0
+      }
+    ],
+    "id": 14003840,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "アインツェルカンプ",
+    "not_state_change_count_decrease": false,
+    "power": 648,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "614406750878112506",
+    "summary": "自身のHPが多いほどクリティカルダメージアップ<br>攻撃後、自身の魔攻と貫通力アップ<br>自身に「リヒトルーメン」を付与またはLvアップ",
+    "timeline_hash": "3350271725969103222",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 88,
+    "break_power_type": 2,
+    "description": "自身のHPに応じ、クリティカルダメージ+100～150%(HP20～100%で多いほど増加)<br>攻撃後、自身に「魔攻+{0}%」と「貫通力+{1}」を2回行動終了するまで付与<br>自身に「リヒトルーメン」が付与されていない時、「リヒトルーメン(Lv2)」を付与<br>既に付与されている時、「リヒトルーメン」のLv+2(上限Lv10)",
+    "effects": [
+      {
+        "id": 91001376,
+        "value": 12000
+      },
+      {
+        "id": 91002188,
+        "value": 20000
+      },
+      {
+        "id": 91002294,
+        "value": 0
+      },
+      {
+        "id": 91002296,
+        "value": 5000
+      },
+      {
+        "id": 91002292,
+        "value": 10000
+      },
+      {
+        "id": 6001303,
+        "value": 0
+      }
+    ],
+    "id": 14003841,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "アインツェルカンプ",
+    "not_state_change_count_decrease": false,
+    "power": 684,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "614406750878112506",
+    "summary": "自身のHPが多いほどクリティカルダメージアップ<br>攻撃後、自身の魔攻と貫通力アップ<br>自身に「リヒトルーメン」を付与またはLvアップ",
+    "timeline_hash": "3350271725969103222",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 93,
+    "break_power_type": 2,
+    "description": "自身のHPに応じ、クリティカルダメージ+100～150%(HP20～100%で多いほど増加)<br>攻撃後、自身に「魔攻+{0}%」と「貫通力+{1}」を2回行動終了するまで付与<br>自身に「リヒトルーメン」が付与されていない時、「リヒトルーメン(Lv2)」を付与<br>既に付与されている時、「リヒトルーメン」のLv+2(上限Lv10)",
+    "effects": [
+      {
+        "id": 91001376,
+        "value": 12000
+      },
+      {
+        "id": 91002188,
+        "value": 20000
+      },
+      {
+        "id": 91002294,
+        "value": 0
+      },
+      {
+        "id": 91002296,
+        "value": 5000
+      },
+      {
+        "id": 91002292,
+        "value": 10000
+      },
+      {
+        "id": 6001303,
+        "value": 0
+      }
+    ],
+    "id": 14003842,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "アインツェルカンプ",
+    "not_state_change_count_decrease": false,
+    "power": 720,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "614406750878112506",
+    "summary": "自身のHPが多いほどクリティカルダメージアップ<br>攻撃後、自身の魔攻と貫通力アップ<br>自身に「リヒトルーメン」を付与またはLvアップ",
+    "timeline_hash": "3350271725969103222",
+    "wait": 0
+  },
+  {
     "attack_attribute_category": null,
     "attack_attributes": [8],
     "break_power": 0,
@@ -154106,6 +156379,52 @@
     "still_path_hash": "7357618363648308635",
     "summary": "味方全員のバーストスキルダメージと受けるバーストゲージ増加量をアップするフィールド効果を発動",
     "timeline_hash": "8578950544327828985",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [8],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "自身のバーストゲージを{0}%増加(発動上限2回)<br>自身に「ターン開始時、HP回復+{1}%」を2回行動開始するまで付与し、<br>自身に以下の追加効果を1回行動終了するまで付与<br>追加効果：「自身のクリティカル確率が100%を超えている場合、攻撃時、100%を超えたクリティカル確率の上昇量をスキル威力に変換(変換上限{2}%)」<br>「リヒトルーメン」が付与されていない時、「リヒトルーメン(Lv5)」を付与<br>既に付与されている時、「リヒトルーメン」のLv+5(上限Lv10)",
+    "effects": [
+      {
+        "id": 91002194,
+        "value": 6000
+      },
+      {
+        "id": 91001357,
+        "value": 2000
+      },
+      {
+        "id": 91002297,
+        "value": 20000
+      },
+      {
+        "id": 91002295,
+        "value": 0
+      },
+      {
+        "id": 6001303,
+        "value": 0
+      }
+    ],
+    "id": 14003845,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": 2,
+    "max_lamp": 0,
+    "name": "バーストリチャージ",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 3,
+    "skill_power_type": 1,
+    "skill_target_type": 1,
+    "state_change_visual_type": null,
+    "still_path_hash": "1106189885168903428",
+    "summary": "自身のバーストゲージを増加<br>自身に再生を付与<br>自身に追加効果を付与<br>自身に「リヒトルーメン」を付与またはLvアップ",
+    "timeline_hash": "3085736464151047800",
     "wait": 0
   },
   {
@@ -364531,6 +366850,332 @@
   },
   {
     "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、敵全体に与える強化効果DOWN(50%/3回)、自身に被ブレイクダメージDOWN(60%/2回)を付与",
+    "effects": [
+      {
+        "id": 76250001,
+        "value": 5000
+      },
+      {
+        "id": 780102005,
+        "value": 6000
+      }
+    ],
+    "id": 22001990,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "メトゥス・アク・モリ",
+    "not_state_change_count_decrease": false,
+    "power": 300,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "2243658109903156414",
+    "wait": -13
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [1],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 22001991,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "アキエス",
+    "not_state_change_count_decrease": false,
+    "power": 1700,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "6690737802752336836",
+    "wait": -13
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [1],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、敵対象の物防UPと魔防UPを解除",
+    "effects": [
+      {
+        "id": 71280001,
+        "value": 10000
+      }
+    ],
+    "id": 22001992,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "アケル・ルプトゥラ",
+    "not_state_change_count_decrease": false,
+    "power": 1500,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "9107143906355892833",
+    "wait": -13
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [1],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、自身のHPを20％回復しマイナス効果無効(2回)を付与",
+    "effects": [
+      {
+        "id": 71205006,
+        "value": 2000
+      },
+      {
+        "id": 91001309,
+        "value": 0
+      }
+    ],
+    "id": 22001993,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "カエデス・フロル",
+    "not_state_change_count_decrease": false,
+    "power": 184,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "354302068575671376",
+    "wait": -13
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [1],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、敵全体に以下効果を付与。\nアタッカーの場合与ダメージDOWN({0}%/3回)、ブレイカーに与ブレイクダメージDOWN({1}%/3回)、ディフェンダーに受けるダメージUP({2}%/3回)、サポーターに与えるHP回復量DOWN({3}%/3回)を付与",
+    "effects": [
+      {
+        "id": 71280003,
+        "value": 4000
+      },
+      {
+        "id": 71280004,
+        "value": 4000
+      },
+      {
+        "id": 71280005,
+        "value": 2000
+      },
+      {
+        "id": 71280006,
+        "value": 4000
+      }
+    ],
+    "id": 22001994,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "クリーメン・ポエナ",
+    "not_state_change_count_decrease": false,
+    "power": 184,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "6272734188502773862",
+    "wait": -13
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体の強化効果を解除し、強化効果無効(1回)を付与",
+    "effects": [
+      {
+        "id": 71146002,
+        "value": 10000
+      },
+      {
+        "id": 780108003,
+        "value": 0
+      }
+    ],
+    "id": 22001995,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "シレンティウム",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 4,
+    "skill_power_type": 1,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "2761813153229825523",
+    "wait": -40
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象のターンを{0}つ遅らせ、スタン(付与率100％/1回)を付与",
+    "effects": [
+      {
+        "id": 71066008,
+        "value": 400
+      },
+      {
+        "id": 71204001,
+        "value": 0
+      }
+    ],
+    "id": 22001996,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ラビドゥス・ペルクティオ",
+    "not_state_change_count_decrease": false,
+    "power": 1700,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "5972404525419010793",
+    "wait": -13
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 22001997,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ウルヌス",
+    "not_state_change_count_decrease": false,
+    "power": 1700,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3282746143032184959",
+    "wait": -13
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象のターンを{0}つ遅らせ、被ダメージUP({1}%/1回)を付与",
+    "effects": [
+      {
+        "id": 71066008,
+        "value": 100
+      },
+      {
+        "id": 780048001,
+        "value": 2000
+      }
+    ],
+    "id": 22001998,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ウォリト・ケレリタス",
+    "not_state_change_count_decrease": false,
+    "power": 210,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "8484312717094594541",
+    "wait": -13
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、自身に与ダメージUP({0}%/2回)を付与し、対象の強化効果を{1}つ解除",
+    "effects": [
+      {
+        "id": 71038010,
+        "value": 2000
+      },
+      {
+        "id": 71151002,
+        "value": 500
+      }
+    ],
+    "id": 22001999,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "アジリス・ルプトゥラ",
+    "not_state_change_count_decrease": false,
+    "power": 210,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "1096623820042133982",
+    "wait": -13
+  },
+  {
+    "attack_attribute_category": 1,
     "attack_attributes": [3],
     "break_power": 0,
     "break_power_type": 1,
@@ -365243,6 +367888,329 @@
     "still_path_hash": "6523615492000077891",
     "summary": "",
     "timeline_hash": "1868610851740377584",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵単体に強化効果無効(1回)を付与",
+    "effects": [
+      {
+        "id": 780107001,
+        "value": 0
+      }
+    ],
+    "id": 22002029,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "抜け駆け禁止",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 4,
+    "skill_power_type": 1,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3374524840354421028",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵単体にブレイクダメージDOWN({0}%/2回)、与ダメージDOWN({1}%/2回)、被ダメージUP({2}%/2回)を付与",
+    "effects": [
+      {
+        "id": 780107002,
+        "value": 2000
+      },
+      {
+        "id": 780107003,
+        "value": 2000
+      },
+      {
+        "id": 780107004,
+        "value": 2000
+      }
+    ],
+    "id": 22002030,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "シャドウカース",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 4,
+    "skill_power_type": 1,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3374524840354421028",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [1],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、マイナス効果を1つ以上持つ対象のターンを{0}つ遅らせる、2つ以上の場合はさらに{1}つ遅らせる",
+    "effects": [
+      {
+        "id": 780107005,
+        "value": 100
+      },
+      {
+        "id": 780107006,
+        "value": 100
+      }
+    ],
+    "id": 22002031,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "スラッシュリング",
+    "not_state_change_count_decrease": false,
+    "power": 440,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "2667191325987555970",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [5],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象に魔攻DOWN({0}%/2回)、物攻DOWN({1}%/2回)、素早さDOWN({2}%/2回)を付与",
+    "effects": [
+      {
+        "id": 780107007,
+        "value": 3000
+      },
+      {
+        "id": 780107008,
+        "value": 3000
+      },
+      {
+        "id": 780107009,
+        "value": 1000
+      }
+    ],
+    "id": 22002032,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "コールヘルファイア",
+    "not_state_change_count_decrease": false,
+    "power": 184,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "5448640794254065809",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [5],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象のターンを{0}つ遅らせる",
+    "effects": [
+      {
+        "id": 780107010,
+        "value": 200
+      }
+    ],
+    "id": 22002033,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "シャドウファイア",
+    "not_state_change_count_decrease": false,
+    "power": 440,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "1763991271198893223",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [5],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、自身に与ダメージUP({0}%/3回)、被ダメージDOWN({1}%/3回)を付与",
+    "effects": [
+      {
+        "id": 780107011,
+        "value": 3000
+      },
+      {
+        "id": 780107012,
+        "value": 3000
+      }
+    ],
+    "id": 22002034,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ファイアバースト",
+    "not_state_change_count_decrease": false,
+    "power": 210,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "9021617351028309266",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [5],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 22002036,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "エクスプロージョン",
+    "not_state_change_count_decrease": false,
+    "power": 184,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "6616214036497793566",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [5],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、味方全体に被ブレイクダメージDOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 780121001,
+        "value": 2500
+      }
+    ],
+    "id": 22002037,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "マジックファイアギフト",
+    "not_state_change_count_decrease": false,
+    "power": 440,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "5766577345847939516",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に物攻DOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 780121003,
+        "value": 3500
+      }
+    ],
+    "id": 22002038,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "マジカルスモーク",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 4,
+    "skill_power_type": 1,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3066766010364434315",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "味方単体に被ダメージDOWN({0}%/2回)、被ブレイクダメージDOWN({1}%/2回)を付与",
+    "effects": [
+      {
+        "id": 780121004,
+        "value": 5000
+      },
+      {
+        "id": 780121005,
+        "value": 5000
+      }
+    ],
+    "id": 22002039,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "祝福",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 3,
+    "skill_power_type": 1,
+    "skill_target_type": 2,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "8748477743882564541",
     "wait": 0
   },
   {
@@ -374270,6 +377238,1517 @@
     "still_path_hash": "6523615492000077891",
     "summary": "",
     "timeline_hash": "2834550149531782323",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [7],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象に物防DOWN({0}%/2回)、魔防DOWN({1}%/2回)を付与",
+    "effects": [
+      {
+        "id": 76232001,
+        "value": 3000
+      },
+      {
+        "id": 76232002,
+        "value": 3000
+      }
+    ],
+    "id": 26002173,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "リリースボルテージ",
+    "not_state_change_count_decrease": false,
+    "power": 252,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "2262486399475793486",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002174,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスロール",
+    "not_state_change_count_decrease": false,
+    "power": 500,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "4457616745813266413",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、自身に被ダメージDOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 71152010,
+        "value": 2000
+      }
+    ],
+    "id": 26002175,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ダブルビンタ",
+    "not_state_change_count_decrease": false,
+    "power": 440,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7942981435618241499",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象に与ダメージDOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 780006012,
+        "value": 2000
+      }
+    ],
+    "id": 26002176,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "パワーテール",
+    "not_state_change_count_decrease": false,
+    "power": 184,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3894451251780983881",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象にアイテムゲージ回復速度DOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 76232004,
+        "value": 1500
+      }
+    ],
+    "id": 26002177,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ボディプレス",
+    "not_state_change_count_decrease": false,
+    "power": 184,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7344350231422531711",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "自身に与ダメージUP({0}%/2回)と素早さDOWN({1}%/1回)を付与",
+    "effects": [
+      {
+        "id": 76201001,
+        "value": 1500
+      },
+      {
+        "id": 76232012,
+        "value": 1000
+      }
+    ],
+    "id": 26002178,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ギガトンボイス",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 3,
+    "skill_power_type": 1,
+    "skill_target_type": 1,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "5513098896566147704",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [7],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象に物防DOWN({0}%/2回)、魔防DOWN({1}%/2回)を付与",
+    "effects": [
+      {
+        "id": 76232001,
+        "value": 3000
+      },
+      {
+        "id": 76232002,
+        "value": 3000
+      }
+    ],
+    "id": 26002182,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "リリースボルテージ",
+    "not_state_change_count_decrease": false,
+    "power": 252,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "2262486399475793486",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002183,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスロール",
+    "not_state_change_count_decrease": false,
+    "power": 1100,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "4457616745813266413",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、自身に被ダメージDOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 71152010,
+        "value": 3000
+      }
+    ],
+    "id": 26002184,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ダブルビンタ",
+    "not_state_change_count_decrease": false,
+    "power": 1000,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7942981435618241499",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象に与ダメージDOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 780006012,
+        "value": 3000
+      }
+    ],
+    "id": 26002185,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "パワーテール",
+    "not_state_change_count_decrease": false,
+    "power": 184,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3894451251780983881",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象にアイテムゲージ回復速度DOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 76232004,
+        "value": 3000
+      }
+    ],
+    "id": 26002186,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ボディプレス",
+    "not_state_change_count_decrease": false,
+    "power": 184,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7344350231422531711",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "自身に与ダメージUP({0}%/2回)と素早さDOWN({1}%/1回)を付与",
+    "effects": [
+      {
+        "id": 76201001,
+        "value": 1500
+      },
+      {
+        "id": 76232012,
+        "value": 1000
+      }
+    ],
+    "id": 26002187,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ギガトンボイス",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 3,
+    "skill_power_type": 1,
+    "skill_target_type": 1,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "5513098896566147704",
+    "wait": -20
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [1],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002188,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ロックカッター",
+    "not_state_change_count_decrease": false,
+    "power": 900,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3945291578441343723",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [7],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002189,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "乱れ撃ち",
+    "not_state_change_count_decrease": false,
+    "power": 900,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "5160748199764440960",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "味方全体のHPを30％回復",
+    "effects": [],
+    "id": 26002190,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ヒールパウダー",
+    "not_state_change_count_decrease": false,
+    "power": 30,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 2,
+    "skill_power_type": 7,
+    "skill_target_type": 4,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "4593700964341423390",
+    "wait": -20
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [7],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002191,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "雷纏切り",
+    "not_state_change_count_decrease": false,
+    "power": 214,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7289072224388138717",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [1],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002192,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "回し切り",
+    "not_state_change_count_decrease": false,
+    "power": 214,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3753581685934116536",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "対象に与ダメージUP({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 780019003,
+        "value": 2000
+      }
+    ],
+    "id": 26002193,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "エナジーパウダー",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 3,
+    "skill_power_type": 1,
+    "skill_target_type": 2,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7793369103061023020",
+    "wait": -20
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "対象に被ダメージUP({0}%/3回)を付与",
+    "effects": [
+      {
+        "id": 780018001,
+        "value": 2000
+      }
+    ],
+    "id": 26002194,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "カースパウダー",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 4,
+    "skill_power_type": 1,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "2282854877929734380",
+    "wait": -20
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [7],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002195,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "乱れ撃ち",
+    "not_state_change_count_decrease": false,
+    "power": 900,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "47010552358418103",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002196,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "たこ殴り",
+    "not_state_change_count_decrease": false,
+    "power": 900,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7489741266092534414",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に挑発(3回)を付与し、自身に被ダメージDOWN({1}%/3回)を付与",
+    "effects": [
+      {
+        "id": 780109001,
+        "value": 0
+      },
+      {
+        "id": 780109002,
+        "value": 4000
+      }
+    ],
+    "id": 26002197,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "アテンション",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 4,
+    "skill_power_type": 1,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7167802246843667996",
+    "wait": -20
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "自身に被ダメージDOWN({0}%/2回)を付与し、HPを{1}%回復",
+    "effects": [
+      {
+        "id": 780109003,
+        "value": 3000
+      },
+      {
+        "id": 780109004,
+        "value": 1500
+      }
+    ],
+    "id": 26002198,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ヒールロア",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 3,
+    "skill_power_type": 1,
+    "skill_target_type": 1,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "5759867346579338774",
+    "wait": -20
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、自身に被ダメージDOWN({0}%/1回)、与ダメージUP({1}%/2回)を付与",
+    "effects": [
+      {
+        "id": 780109005,
+        "value": 3000
+      },
+      {
+        "id": 780109006,
+        "value": 2000
+      }
+    ],
+    "id": 26002199,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ポークバイト",
+    "not_state_change_count_decrease": false,
+    "power": 800,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3503421670622327338",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002200,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "スピンニードル",
+    "not_state_change_count_decrease": false,
+    "power": 214,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "4272186949343256976",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [6],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002201,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "アイスバイト",
+    "not_state_change_count_decrease": false,
+    "power": 900,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7543065643951474106",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [6],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、自身に与ダメージUP({0}％/3回)、被ブレイクダメージDOWN({1}％/1回)、被ダメージDOWN({2}％/1回)を付与",
+    "effects": [
+      {
+        "id": 780109007,
+        "value": 2000
+      },
+      {
+        "id": 780109008,
+        "value": 6000
+      },
+      {
+        "id": 780109005,
+        "value": 6000
+      }
+    ],
+    "id": 26002202,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "氷山甲",
+    "not_state_change_count_decrease": false,
+    "power": 210,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7608136830232061314",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [7],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象に物防DOWN({0}%/2回)、魔防DOWN({1}%/2回)を付与",
+    "effects": [
+      {
+        "id": 76232001,
+        "value": 3000
+      },
+      {
+        "id": 76232002,
+        "value": 3000
+      }
+    ],
+    "id": 26002203,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "リリースボルテージ",
+    "not_state_change_count_decrease": false,
+    "power": 252,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "2262486399475793486",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002204,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "デスロール",
+    "not_state_change_count_decrease": false,
+    "power": 1100,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "4457616745813266413",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、自身に被ダメージDOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 71152010,
+        "value": 4000
+      }
+    ],
+    "id": 26002205,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ダブルビンタ",
+    "not_state_change_count_decrease": false,
+    "power": 1000,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7942981435618241499",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象に与ダメージDOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 780006012,
+        "value": 4000
+      }
+    ],
+    "id": 26002206,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "パワーテール",
+    "not_state_change_count_decrease": false,
+    "power": 184,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3894451251780983881",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象にアイテムゲージ回復速度DOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 76232004,
+        "value": 5000
+      }
+    ],
+    "id": 26002207,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ボディプレス",
+    "not_state_change_count_decrease": false,
+    "power": 184,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7344350231422531711",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "自身に与ダメージUP({0}%/2回)と素早さDOWN({1}%/1回)を付与",
+    "effects": [
+      {
+        "id": 76201001,
+        "value": 2000
+      },
+      {
+        "id": 76232012,
+        "value": 1000
+      }
+    ],
+    "id": 26002208,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ギガトンボイス",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 3,
+    "skill_power_type": 1,
+    "skill_target_type": 1,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "5513098896566147704",
+    "wait": -40
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [6],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、味方全体に与ダメージUP({0}%/3回)、被ダメージDOWN({1}%/3回)を付与",
+    "effects": [
+      {
+        "id": 86119001,
+        "value": 3000
+      },
+      {
+        "id": 86119002,
+        "value": 3000
+      }
+    ],
+    "id": 26002209,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ステージオンアイス",
+    "not_state_change_count_decrease": false,
+    "power": 210,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "9037395100185454102",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "味方全体に被ダメージDOWN({0}%/3回)を付与",
+    "effects": [
+      {
+        "id": 780119003,
+        "value": 3500
+      }
+    ],
+    "id": 26002210,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "守護の舞",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 3,
+    "skill_power_type": 1,
+    "skill_target_type": 4,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3354275373057344032",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵全体に与ダメージDOWN({0}%/3回)、与ブレイクダメージDOWN({1}%/3回)を付与",
+    "effects": [
+      {
+        "id": 780119004,
+        "value": 5000
+      },
+      {
+        "id": 780119005,
+        "value": 5000
+      }
+    ],
+    "id": 26002211,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "危険な雪粉",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 4,
+    "skill_power_type": 1,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "2691951608473833862",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "味方対象のHPを25%回復し、BGを{0}%回復",
+    "effects": [
+      {
+        "id": 780119006,
+        "value": 4000
+      }
+    ],
+    "id": 26002212,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "応援",
+    "not_state_change_count_decrease": false,
+    "power": 25,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 2,
+    "skill_power_type": 7,
+    "skill_target_type": 2,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "8555778132674327988",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、自身のHPとBGを{0}％回復",
+    "effects": [
+      {
+        "id": 780122001,
+        "value": 3000
+      },
+      {
+        "id": 780122002,
+        "value": 3000
+      }
+    ],
+    "id": 26002213,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "はつらつぐるぐるパンチ",
+    "not_state_change_count_decrease": false,
+    "power": 1000,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "3176422505269305268",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [2],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象に与ダメージDOWN({0}%/4回)を付与",
+    "effects": [
+      {
+        "id": 780122003,
+        "value": 4500
+      }
+    ],
+    "id": 26002214,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ぐるぐるパンチ",
+    "not_state_change_count_decrease": false,
+    "power": 800,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "9219829583592192898",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象に与ブレイクダメージDOWN({0}%/4回)を付与",
+    "effects": [
+      {
+        "id": 780122004,
+        "value": 4500
+      }
+    ],
+    "id": 26002215,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ダークストーム",
+    "not_state_change_count_decrease": false,
+    "power": 184,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "8368838471255926824",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "自身のHPを30％回復し、状態異常を解除",
+    "effects": [
+      {
+        "id": 780122005,
+        "value": 10000
+      }
+    ],
+    "id": 26002216,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "ヒールパウダー",
+    "not_state_change_count_decrease": false,
+    "power": 30,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 2,
+    "skill_power_type": 7,
+    "skill_target_type": 1,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "4593700964341423390",
+    "wait": -40
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "自身にかばう(3回)を付与",
+    "effects": [
+      {
+        "id": 780122006,
+        "value": 0
+      }
+    ],
+    "id": 26002217,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "スタンバイ",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 3,
+    "skill_power_type": 1,
+    "skill_target_type": 1,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7793369103061023020",
+    "wait": -40
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "味方全体に被ダメージDOWN({0}%/2回)を付与",
+    "effects": [
+      {
+        "id": 780122007,
+        "value": 3000
+      }
+    ],
+    "id": 26002218,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "エナジーパウダー",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 3,
+    "skill_power_type": 1,
+    "skill_target_type": 4,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7793369103061023020",
+    "wait": -40
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、自身に被ダメージDOWN({0}%/1～5回)を付与",
+    "effects": [
+      {
+        "id": 780090001,
+        "value": 3000
+      },
+      {
+        "id": 780090002,
+        "value": 3000
+      },
+      {
+        "id": 780090003,
+        "value": 3000
+      },
+      {
+        "id": 780090004,
+        "value": 3000
+      },
+      {
+        "id": 780090005,
+        "value": 3000
+      }
+    ],
+    "id": 26002219,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "鎧替え",
+    "not_state_change_count_decrease": false,
+    "power": 1000,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "6807143427295925546",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、自身に被ダメージDOWN({0}%/1回)を付与",
+    "effects": [
+      {
+        "id": 780090006,
+        "value": 5000
+      }
+    ],
+    "id": 26002220,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "鉱石代謝",
+    "not_state_change_count_decrease": false,
+    "power": 800,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "6807143427295925546",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [8],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃時、自身のHPが50％以下の場合、与ダメージ{0}％UP",
+    "effects": [
+      {
+        "id": 780090007,
+        "value": 2000
+      }
+    ],
+    "id": 26002221,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "奮起の竜巻",
+    "not_state_change_count_decrease": false,
+    "power": 800,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "977375375008968988",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": 1,
+    "attack_attributes": [3],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "効果なし",
+    "effects": [],
+    "id": 26002222,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "乱れ撃ち",
+    "not_state_change_count_decrease": false,
+    "power": 214,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "5497159233596122330",
+    "wait": 0
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "敵単体に与ブレイクダメージDOWN({0}%/3回)を付与",
+    "effects": [
+      {
+        "id": 780090009,
+        "value": 4000
+      }
+    ],
+    "id": 26002223,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "カースパウダー",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 4,
+    "skill_power_type": 1,
+    "skill_target_type": 3,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "2282854877929734380",
+    "wait": -40
+  },
+  {
+    "attack_attribute_category": null,
+    "attack_attributes": [],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "自身にかばう(3回)を付与",
+    "effects": [
+      {
+        "id": 780090010,
+        "value": 0
+      }
+    ],
+    "id": 26002224,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "スタンバイ",
+    "not_state_change_count_decrease": false,
+    "power": 0,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 3,
+    "skill_power_type": 1,
+    "skill_target_type": 1,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "7793369103061023020",
+    "wait": -40
+  },
+  {
+    "attack_attribute_category": 2,
+    "attack_attributes": [7],
+    "break_power": 0,
+    "break_power_type": 1,
+    "description": "攻撃後、対象に物防DOWN({0}%/2回)、魔防DOWN({1}%/2回)を付与",
+    "effects": [
+      {
+        "id": 76232001,
+        "value": 3000
+      },
+      {
+        "id": 76232002,
+        "value": 3000
+      }
+    ],
+    "id": 26002225,
+    "is_restrict_after_skill_timing_effects": false,
+    "limit_count": null,
+    "max_lamp": 0,
+    "name": "リリースボルテージ",
+    "not_state_change_count_decrease": false,
+    "power": 300,
+    "require_command_value": false,
+    "skill_destination": null,
+    "skill_effect_type": 1,
+    "skill_power_type": 2,
+    "skill_target_type": 5,
+    "state_change_visual_type": null,
+    "still_path_hash": "6523615492000077891",
+    "summary": "",
+    "timeline_hash": "2262486399475793486",
     "wait": 0
   },
   {
