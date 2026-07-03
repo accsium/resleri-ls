@@ -25,6 +25,8 @@ export function trackData(cached) {
 let _observer = null
 
 function _trackImg(img) {
+  if (img.dataset.progressTracked) return
+  img.dataset.progressTracked = '1'
   _total.value++
   if (img.complete) { _loaded.value++; return }
   img.addEventListener('load', () => _loaded.value++, { once: true })
@@ -46,4 +48,8 @@ export function startObserving(container) {
     }
   })
   _observer.observe(container, { childList: true, subtree: true })
+}
+
+export function scanImages(container) {
+  container.querySelectorAll('img').forEach(_trackImg)
 }

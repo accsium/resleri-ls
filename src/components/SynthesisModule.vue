@@ -123,28 +123,4 @@ function splitEffect(effect) {
 </template>
 
 <style scoped>
-.syn-error {
-  padding: 12px 16px;
-  margin: 8px 0;
-  background: var(--bg-stat);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  font-size: 12px;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.syn-retry-btn {
-  font-size: 12px;
-  padding: 2px 8px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-card);
-  color: var(--text-primary);
-  cursor: pointer;
-}
-.syn-retry-btn:hover {
-  border-color: var(--accent);
-}
 </style>

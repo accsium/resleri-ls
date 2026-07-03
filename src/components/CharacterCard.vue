@@ -197,7 +197,7 @@ onUnmounted(() => {
             {{ baseName }}<span v-if="alias" class="alias">{{ alias }}</span>
           </span>
         </span>
-        <div class="switch-buttons">
+        <div v-if="toggleEnabled" class="switch-buttons">
           <span v-if="toggleLabel" class="toggle-label">{{ toggleLabel }}</span>
           <ToggleSwitch :model-value="cardState.toggleActive" :disabled="!toggleEnabled" @update:model-value="onToggle" :title="toggleLabel" :type="hasEvo ? 'evo' : hasRange ? 'range' : 'transform'" />
         </div>

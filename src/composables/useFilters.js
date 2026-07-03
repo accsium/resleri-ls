@@ -59,16 +59,10 @@ export function filterCharacter(char, f) {
     if (!f.equipment_tool_traits.filter(t => t != null && t !== '').every(t => charTraits.includes(t)))
       return false
   }
-  if (f.has_evo === 1 && !char.has_evo) return false
-  if (f.has_evo === 2 && char.has_evo) return false
-  if (f.has_range === 1 && !char.has_range) return false
-  if (f.has_range === 2 && char.has_range) return false
-  if (f.has_transform === 1 && !char.has_transform) return false
-  if (f.has_transform === 2 && char.has_transform) return false
-  if (f.has_active === 1 && !char.has_active) return false
-  if (f.has_active === 2 && char.has_active) return false
-  if (f.has_ex === 1 && !char.has_ex) return false
-  if (f.has_ex === 2 && char.has_ex) return false
+  const posKeys = ['has_evo','has_range','has_transform','has_active','has_ex'].filter(k => f[k] === 1)
+  if (posKeys.length && !posKeys.some(k => char[k])) return false
+  const negKeys = ['has_evo','has_range','has_transform','has_active','has_ex'].filter(k => f[k] === 2)
+  if (negKeys.length && negKeys.some(k => char[k])) return false
   if (f.original_title) {
     if (char.original_title_id !== f.original_title) return false
   }

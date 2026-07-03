@@ -1,5 +1,6 @@
+import { nextTick } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
-import { resetProgress, startObserving } from '../composables/useProgress'
+import { resetProgress, startObserving, scanImages } from '../composables/useProgress'
 
 // ── 导航作用域 ──
 // 每次路由切换 abort 所有旧请求，新请求绑定新 scope。
@@ -97,6 +98,9 @@ router.beforeEach((to, from) => {
   resetProgress()
   const app = document.querySelector('.app-content')
   if (app) startObserving(app)
+  nextTick(() => {
+    if (app) scanImages(app)
+  })
 })
 
 

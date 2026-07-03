@@ -313,7 +313,7 @@ function _parseSelectId(val) {
         <span class="sf-label">特殊机制</span>
         <div class="sf-field-items">
         <button
-          v-for="(label, key) in { has_evo: '进化', has_range: '范围变化', has_transform: '变身', has_active: '发动技能', has_ex: 'EX技能' }"
+          v-for="(label, key) in { has_evo: '进化', has_range: '范围变化', has_transform: '变身', has_active: '主动技能', has_ex: 'EX技能' }"
           :key="key"
           class="sf-tri-btn"
           :class="{ active: activeFilters[key] === 1, exclude: activeFilters[key] === 2 }"

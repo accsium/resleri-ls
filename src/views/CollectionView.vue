@@ -112,14 +112,21 @@ function onPointerOver(id) {
   processedIds.add(id)
 }
 
+let _rafId = null
+
 function onPointerMove(e) {
   if (!dragging.value) return
-  const el = document.elementFromPoint(e.clientX, e.clientY)
-  const item = el?.closest('.collection-avatar-item')
-  if (item?.dataset.id) onPointerOver(Number(item.dataset.id))
+  if (_rafId) return
+  _rafId = requestAnimationFrame(() => {
+    _rafId = null
+    const el = document.elementFromPoint(e.clientX, e.clientY)
+    const item = el?.closest('.collection-avatar-item')
+    if (item?.dataset.id) onPointerOver(Number(item.dataset.id))
+  })
 }
 
 function onPointerUp() {
+  if (_rafId) { cancelAnimationFrame(_rafId); _rafId = null }
   dragging.value = false
   dragAction.value = null
   processedIds = new Set()
