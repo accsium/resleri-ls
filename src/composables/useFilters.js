@@ -5,7 +5,6 @@ import { useCardState } from './useCardState'
 import { useLocalStorage } from './useLocalStorage'
 import { cmpVal } from '../utils/sort'
 
-const sortCategory = ref('character')
 const sortField = ref('start_at')
 const sortPriority = ref([])
 const currentSortOrder = ref('desc')
@@ -31,6 +30,9 @@ const activeFilters = reactive({
   original_title: '',
   permanent_status: [],
   atelier_fes: [],
+  series: '',
+  voice_actor: '',
+  base_character: '',
 })
 
 export function filterCharacter(char, f) {
@@ -66,6 +68,15 @@ export function filterCharacter(char, f) {
   if (f.original_title) {
     if (char.original_title_id !== f.original_title) return false
   }
+  if (f.series) {
+    if (char.series_id !== f.series) return false
+  }
+  if (f.voice_actor) {
+    if (char.voice_actor_id !== f.voice_actor) return false
+  }
+  if (f.base_character) {
+    if (char.base_character_id !== f.base_character) return false
+  }
   if (f.permanent_status.length || f.atelier_fes.length) {
     let matched = false
     if (f.permanent_status.length && f.permanent_status.includes(char.permanent_status || '')) {
@@ -97,45 +108,32 @@ function pickSkillIds(char, type, useAlt) {
 }
 
 export function useFilters() {
-  const { currentLang, SORT_CATEGORIES } = useI18n()
+  const { currentLang, SORT_FIELDS } = useI18n()
   const { characterIndex, baseCharacterMap, skillsMap } = useCharacterData()
   const { getCardState } = useCardState()
 
   if (sortPriority.value.length === 0) {
-    const cat = SORT_CATEGORIES.find(c => c.key === sortCategory.value)
-    if (cat && cat.fields) {
-      sortPriority.value = cat.fields.map(f => ({ cat: sortCategory.value, field: f.field }))
-    }
+    sortPriority.value = SORT_FIELDS.map(f => ({ field: f.field }))
   }
 
   function toggleFilter(key, value) { activeFilters[key] = value }
 
-  function getSortValue(c, cat, field) {
-    if (cat === 'character') {
-      if (field === 'base_character_name') {
-        const bc = baseCharacterMap.value[c.base_character_id]
-        if (!bc) return ''
-        return currentLang.value === 'cn' ? (bc.name_cn || bc.name_ja) : bc.name_ja
-      }
-      return c[field]
+  function getSortValue(c, field) {
+    if (field === 'initial_wt') {
+      const cardState = getCardState(c.id)
+      return getCharWT(c, cardState.toggleActive, skillsMap)
     }
-
-    if (cat === 'stats') {
-      if (field === 'initial_wt') {
-        const cardState = getCardState(c.id)
-        return getCharWT(c, cardState.toggleActive, skillsMap)
-      }
-      return c.initial_status?.[field]
+    if (field === 'tag_count') {
+      return (c.tag_ids || []).length
     }
-
-    return null
+    return c.initial_status?.[field] ?? c[field]
   }
 
   function compareCharacters(a, b) {
     const order = currentSortOrder.value === 'desc' ? -1 : 1
     for (const item of sortPriority.value) {
-      const va = getSortValue(a, item.cat, item.field)
-      const vb = getSortValue(b, item.cat, item.field)
+      const va = getSortValue(a, item.field)
+      const vb = getSortValue(b, item.field)
       const r = cmpVal(va, vb, order)
       if (r !== 0) return r
     }
@@ -173,17 +171,17 @@ export function useFilters() {
 
   watch([activeFilters, searchText, pageSize], () => { currentPage.value = 1 })
 
-  function buildPriority(cat, field) {
-    const category = SORT_CATEGORIES.find(c => c.key === cat)
-    if (!category || !category.fields) { sortPriority.value = [{ cat, field }]; return }
-    const list = category.fields.map(f => ({ cat, field: f.field }))
-    const idx = list.findIndex(f => f.field === field)
-    if (idx > 0) { const [item] = list.splice(idx, 1); list.unshift(item) }
-    sortPriority.value = list
+  function setSortField(field) {
+    sortField.value = field
+    const all = SORT_FIELDS.map(f => ({ field: f.field }))
+    const idx = all.findIndex(f => f.field === field)
+    if (idx > 0) {
+      const [item] = all.splice(idx, 1)
+      all.unshift(item)
+    }
+    sortPriority.value = all
   }
 
-  function setSortCategory(key) { sortCategory.value = key; buildPriority(key, sortField.value) }
-  function setSortField(field) { sortField.value = field; buildPriority(sortCategory.value, field) }
   function toggleOrder() { currentSortOrder.value = currentSortOrder.value === 'desc' ? 'asc' : 'desc' }
 
   function resetFilters() {
@@ -193,11 +191,12 @@ export function useFilters() {
       battle_tool_traits: [], equipment_tool_traits: [],
       has_evo: 0, has_range: 0, has_transform: 0, has_active: 0, has_ex: 0,
       original_title: '', permanent_status: [], atelier_fes: [],
+      series: '', voice_actor: '', base_character: '',
     })
     searchText.value = ''
-    setSortCategory('character'); setSortField('start_at')
+    setSortField('start_at')
     currentSortOrder.value = 'desc'
   }
 
-  return { sortCategory, sortField, currentSortOrder, activeFilters, searchText, filteredCharacters, pagedCharacters, currentPage, pageSize, totalPages, setSortCategory, setSortField, toggleOrder, toggleFilter, resetFilters }
+  return { sortField, currentSortOrder, activeFilters, searchText, filteredCharacters, pagedCharacters, currentPage, pageSize, totalPages, setSortField, toggleOrder, toggleFilter, resetFilters }
 }

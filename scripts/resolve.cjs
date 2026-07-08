@@ -389,6 +389,8 @@ function buildCharacterEntry(character) {
     tag_ids: char.tag_ids || [],
     base_character_id: char.base_character_id || null,
     original_title_id: char.original_title_id || null,
+    series_id: char.series_id || null,
+    voice_actor_id: char.voice_actor_id || null,
     battle_tool_trait_ids: char.battle_tool_trait_ids || [],
     equipment_tool_trait_ids: char.equipment_tool_trait_ids || [],
 
@@ -583,6 +585,19 @@ function writeEntityFile(name) {
 writeEntityFile('trait_color');
 writeEntityFile('base_character');
 writeEntityFile('original_title');
+writeEntityFile('series');
+
+// voice_actor — 无需翻译，直接从 selection 生成，不输出 name_cn
+const vaFile = path.join(rawDir, 'voice_actor.json');
+if (fs.existsSync(vaFile)) {
+  const vaData = safeReadJSON(vaFile);
+  const vaOutput = {};
+  for (const v of vaData) {
+    vaOutput[v.id] = { name: v.name };
+  }
+  fs.writeFileSync(path.join(outDir, 'voice_actor.json'), JSON.stringify(vaOutput, null, 2), 'utf-8');
+  console.log(`  ✓ voice_actor.json (${Object.keys(vaOutput).length} 条)`);
+}
 
 // trait 数据（保持现有格式）
 function buildTraitOutput(name, buildValues) {

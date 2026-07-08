@@ -12,6 +12,8 @@ const traitColorMap = shallowRef({})
 const baseCharacterMap = shallowRef({})
 const originalTitleMap = shallowRef({})
 const characterTagMap = shallowRef({})
+const seriesMap = shallowRef({})
+const voiceActorMap = shallowRef({})
 const buildTime = ref('')
 
 async function _fetchJSON(url) {
@@ -33,12 +35,14 @@ async function _loadEntity(file) {
 // 模块级：加载 character_index + 小实体文件
 async function _doLoadIndex() {
   try {
-    const [idx, baseChar, traitColor, originalTitle, tagData] = await Promise.all([
+    const [idx, baseChar, traitColor, originalTitle, tagData, seriesData, voiceActorData] = await Promise.all([
       _fetchJSON('data/character_index.json'),
       _fetchJSON('data/base_character.json'),
       _fetchJSON('data/trait_color.json'),
       _fetchJSON('data/original_title.json'),
       _fetchJSON('data/character_tag.json'),
+      _fetchJSON('data/series.json'),
+      _fetchJSON('data/voice_actor.json'),
     ])
     characterIndex.value = idx
     baseCharacterMap.value = baseChar
@@ -47,6 +51,8 @@ async function _doLoadIndex() {
     const tagMap = {}
     for (const t of tagData) tagMap[t.id] = t
     characterTagMap.value = tagMap
+    seriesMap.value = seriesData
+    voiceActorMap.value = voiceActorData
     indexLoaded.value = true
   } catch (e) {
     _loadPromise = null
@@ -103,6 +109,7 @@ export function useCharacterData() {
   return {
     characterIndex, indexLoaded, loadIndex,
     skillsMap, abilitiesMap, traitColorMap, baseCharacterMap, originalTitleMap, characterTagMap, buildTime,
+    seriesMap, voiceActorMap,
     getCharacterById, getSkillById, getAbilityById,
     loadSkills, loadAbilities, loadEntityMap,
   }

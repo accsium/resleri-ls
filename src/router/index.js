@@ -36,6 +36,7 @@ const routes = [
     path: '/dex',
     name: 'dex',
     component: () => import('../views/DexView.vue'),
+    meta: { navKey: 'navGuide' },
   },
   {
     path: '/',
@@ -45,45 +46,53 @@ const routes = [
     path: '/collection/:code?',
     name: 'collection',
     component: () => import('../views/CollectionView.vue'),
+    meta: { navKey: 'navCollection' },
   },
   {
     path: '/skills',
     name: 'skills',
     component: () => import('../views/SkillListView.vue'),
+    meta: { navKey: 'navSkills' },
   },
   {
     path: '/leader-skills',
     name: 'leader-skills',
     component: () => import('../views/LeaderSkillView.vue'),
+    meta: { navKey: 'navLeaderSkills' },
   },
   {
     path: '/support-abilities',
     name: 'support-abilities',
     component: () => import('../views/SupportAbilityView.vue'),
+    meta: { navKey: 'navSupportAbility' },
   },
   {
     path: '/events',
     name: 'events',
     component: () => import('../views/EventView.vue'),
     beforeEnter: () => { _prefetch('events', 'data/events.json') },
+    meta: { navKey: 'navEvents' },
   },
   {
     path: '/contest-rotations',
     name: 'contest-rotations',
     component: () => import('../views/ContestRotationView.vue'),
     beforeEnter: () => { _prefetch('contestRotations', 'data/contest_rotations.json') },
+    meta: { navKey: 'navContest' },
   },
   {
     path: '/gachas',
     name: 'gachas',
     component: () => import('../views/GachaView.vue'),
     beforeEnter: () => { _prefetch('gachas', 'data/gachas.json') },
+    meta: { navKey: 'navGachas' },
   },
   {
     path: '/test',
     name: 'test',
     component: () => import('../views/TestView.vue'),
     beforeEnter: () => { _prefetch('todo', 'config/todo.md', 'text') },
+    meta: { navKey: 'navTest' },
   },
 ]
 

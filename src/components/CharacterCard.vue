@@ -20,7 +20,7 @@ const props = defineProps({
 const kid = ++cardUid + '-' + props.indexEntry.id
 
 const { t, currentLang, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
-const { getCharacterById, baseCharacterMap, traitColorMap, originalTitleMap, characterTagMap, skillsMap } = useCharacterData()
+const { getCharacterById, baseCharacterMap, traitColorMap, originalTitleMap, characterTagMap, skillsMap, seriesMap, voiceActorMap } = useCharacterData()
 const { battleTraits, equipTraits } = useTraitData()
 const { getCardState, setCardState } = useCardState()
 
@@ -113,6 +113,16 @@ const statCards = computed(() => statOrder.map(key => {
   const value = key === 'initialWT' ? initialWT.value : (status.value[key] ?? '?')
   return { label, value }
 }))
+
+const seriesName = computed(() => {
+  const s = seriesMap.value[props.indexEntry.series_id]
+  if (!s) return ''
+  return currentLang.value === 'cn' ? (s.name_cn || s.name_ja) : s.name_ja
+})
+const voiceActorName = computed(() => {
+  const va = voiceActorMap.value[props.indexEntry.voice_actor_id]
+  return va ? va.name : ''
+})
 
 const originalTitle = computed(() => {
   const ot = originalTitleMap.value[props.indexEntry.original_title_id]
@@ -234,6 +244,8 @@ onUnmounted(() => {
                 <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
                 <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
                 <div v-if="originalTitle" class="cb-overlay-name">作品出处: {{ originalTitle }}</div>
+                <div v-if="seriesName" class="cb-overlay-name">系列: {{ seriesName }}</div>
+                <div v-if="voiceActorName" class="cb-overlay-name">声优: {{ voiceActorName }}</div>
               </div>
             </div>
           </div>
@@ -308,6 +320,8 @@ onUnmounted(() => {
           <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
           <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
           <div v-if="originalTitle" class="cb-overlay-name">作品出处: {{ originalTitle }}</div>
+          <div v-if="seriesName" class="cb-overlay-name">系列: {{ seriesName }}</div>
+          <div v-if="voiceActorName" class="cb-overlay-name">声优: {{ voiceActorName }}</div>
         </div>
         <CardDetail :character-data="char" :card-state="cardState" :character-id="indexEntry.id" />
       </template>

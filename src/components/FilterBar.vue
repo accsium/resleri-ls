@@ -9,9 +9,7 @@ import IconDisplay from './IconDisplay.vue'
 
 const { currentLang, getTraitColorHex, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
 const {
-  sortCategory, sortField, currentSortOrder,
-  activeFilters, searchText,
-  setSortCategory, setSortField,
+  activeFilters,
   toggleFilter, resetFilters,
 } = useFilters()
 
@@ -130,7 +128,7 @@ function toggleTraitRight(id) {
 }
 
 // ── 标签/词条下拉数据 ──
-const { characterIndex, originalTitleMap, characterTagMap } = useCharacterData()
+const { characterIndex, originalTitleMap, characterTagMap, seriesMap, voiceActorMap, baseCharacterMap } = useCharacterData()
 
 const battleTraitsJa = ref([])
 const battleTraitsCn = ref([])
@@ -149,6 +147,53 @@ const allTitles = computed(() => {
     if (!id || seen.has(id)) continue
     const ot = originalTitleMap.value[id]
     const name = ot ? (panelLang.value === 'cn' ? (ot.name_cn || ot.name_ja) : ot.name_ja) : ''
+    if (!name) continue
+    seen.add(id)
+    list.push({ id, name })
+  }
+  list.sort((a, b) => a.id - b.id)
+  return list
+})
+
+const allSeries = computed(() => {
+  const seen = new Set()
+  const list = []
+  for (const c of characterIndex.value) {
+    const id = c.series_id
+    if (!id || seen.has(id)) continue
+    const s = seriesMap.value[id]
+    const name = s ? (panelLang.value === 'cn' ? (s.name_cn || s.name_ja) : s.name_ja) : ''
+    if (!name) continue
+    seen.add(id)
+    list.push({ id, name })
+  }
+  list.sort((a, b) => a.id - b.id)
+  return list
+})
+const allVoiceActors = computed(() => {
+  const seen = new Set()
+  const list = []
+  for (const c of characterIndex.value) {
+    const id = c.voice_actor_id
+    if (!id || seen.has(id)) continue
+    const va = voiceActorMap.value[id]
+    const name = va ? va.name : ''
+    if (!name) continue
+    seen.add(id)
+    list.push({ id, name })
+  }
+  list.sort((a, b) => a.id - b.id)
+  return list
+})
+
+const allBaseCharacters = computed(() => {
+  const seen = new Set()
+  const list = []
+  for (const c of characterIndex.value) {
+    const id = c.base_character_id
+    if (!id || seen.has(id)) continue
+    const bc = baseCharacterMap.value[id]
+    const name = bc ? (panelLang.value === 'cn' ? (bc.name_cn || bc.name_ja) : bc.name_ja) : ''
     if (!name) continue
     seen.add(id)
     list.push({ id, name })
@@ -396,7 +441,34 @@ function _parseSelectId(val) {
       </div>
     </div>
 
-    <!-- 行6：作品出处 -->
+    <!-- 行6：角色名 + 声优 + 系列 -->
+    <div class="sf-row" v-show="!collapsed">
+      <div class="sf-field">
+        <span class="sf-label">角色名</span>
+        <select class="sf-select" :value="activeFilters.base_character" @change="(e) => toggleFilter('base_character', _parseSelectId(e.target.value))">
+          <option value="">全部</option>
+          <option v-for="bc in allBaseCharacters" :key="bc.id" :value="bc.id">{{ bc.name }}</option>
+        </select>
+      </div>
+      <div class="sf-divider"></div>
+      <div class="sf-field">
+        <span class="sf-label">声优</span>
+        <select class="sf-select" :value="activeFilters.voice_actor" @change="(e) => toggleFilter('voice_actor', _parseSelectId(e.target.value))">
+          <option value="">全部</option>
+          <option v-for="va in allVoiceActors" :key="va.id" :value="va.id">{{ va.name }}</option>
+        </select>
+      </div>
+      <div class="sf-divider"></div>
+      <div class="sf-field">
+        <span class="sf-label">系列</span>
+        <select class="sf-select" :value="activeFilters.series" @change="(e) => toggleFilter('series', _parseSelectId(e.target.value))">
+          <option value="">全部</option>
+          <option v-for="s in allSeries" :key="s.id" :value="s.id">{{ s.name }}</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 行7：作品出处 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
         <span class="sf-label">作品出处</span>

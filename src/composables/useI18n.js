@@ -94,35 +94,17 @@ const ROLE_MAP    = { 1: '攻', 2: '破', 3: '防', 4: '輔' }
 const ROLE_MAP_CN = { 1: '攻', 2: '破', 3: '防', 4: '辅' }
 const TRAIT_COLOR_HEX = { 1: '#3498DB', 2: '#9B59B6', 3: '#F1C40F', 4: '#E74C3C', 5: '#2ECC71' }
 
-const SORT_CATEGORIES = [
-  {
-    key: 'character',
-    label_ja: 'キャラ情報',
-    label_cn: '角色信息',
-    fields: [
-      { field: 'start_at',        label_ja: '実装日',     label_cn: '加入时间' },
-      { field: 'initial_rarity',  label_ja: '初期レア',   label_cn: '初始稀有度' },
-      { field: 'id',              label_ja: 'ID',          label_cn: 'ID' },
-      { field: 'base_character_name', label_ja: '名前',   label_cn: '名字' },
-      { field: 'fullname',        label_ja: 'フルネーム', label_cn: '全名' },
-      { field: 'overlay_name',    label_ja: '作品',       label_cn: '作品出处' },
-      { field: 'tag_count',       label_ja: 'タグ数',     label_cn: '标签数' },
-    ]
-  },
-  {
-    key: 'stats',
-    label_ja: '基礎ステータス',
-    label_cn: '基础数值',
-    fields: [
-      { field: 'initial_wt',      label_ja: '初期WT',     label_cn: '初始WT' },
-      { field: 'hp',              label_ja: 'HP',          label_cn: 'HP' },
-      { field: 'speed',           label_ja: '速度',       label_cn: '速度' },
-      { field: 'attack',          label_ja: '物攻',       label_cn: '物攻' },
-      { field: 'defense',         label_ja: '物防',       label_cn: '物防' },
-      { field: 'magic',           label_ja: '魔攻',       label_cn: '魔攻' },
-      { field: 'mental',          label_ja: '魔防',       label_cn: '魔防' },
-    ]
-  },
+const SORT_FIELDS = [
+  { field: 'start_at',    label_ja: '実装日',   label_cn: '加入时间' },
+  { field: 'id',          label_ja: 'ID',        label_cn: 'ID' },
+  { field: 'tag_count',   label_ja: 'タグ数',   label_cn: '标签数' },
+  { field: 'hp',          label_ja: 'HP',        label_cn: 'HP' },
+  { field: 'speed',       label_ja: '速度',     label_cn: '速度' },
+  { field: 'attack',      label_ja: '物攻',     label_cn: '物攻' },
+  { field: 'defense',     label_ja: '物防',     label_cn: '物防' },
+  { field: 'magic',       label_ja: '魔攻',     label_cn: '魔攻' },
+  { field: 'mental',      label_ja: '魔防',     label_cn: '魔防' },
+  { field: 'initial_wt',  label_ja: '初期WT',   label_cn: '初始WT' },
 ]
 
 const currentLang = ref('cn')
@@ -147,5 +129,5 @@ export function useI18n() {
     return TRAIT_COLOR_HEX[id] || '#CCCCCC'
   }
 
-  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_CATEGORIES, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN }
+  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_FIELDS, TRAIT_COLOR_HEX, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN }
 }
