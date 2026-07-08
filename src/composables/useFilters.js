@@ -72,9 +72,8 @@ export function filterCharacter(char, f) {
       matched = true
     }
     if (f.atelier_fes.length) {
-      const pd = char.permanent_date || ''
-      if (f.atelier_fes.includes('ATELIER FES I') && pd === 'ATELIER FES') matched = true
-      else if (f.atelier_fes.includes(pd)) matched = true
+      const ps = char.permanent_status || ''
+      if (ps.startsWith('fes_') && f.atelier_fes.includes(ps)) matched = true
     }
     if (!matched) return false
   }

@@ -314,30 +314,21 @@ function buildCharacterEntry(character) {
   const fesName = getFesName(char.start_at);
   let permanent_status = null;
   let permanent_date = null;
-  if (char.initial_rarity > 2) {
-    if (permExcludeIds.has(char.id)) {
-      permanent_status = '非恒常角色';
-      permanent_date = '—';
-    } else if (fesName === 'ATELIER FES') {
-      permanent_status = '已恒常化';
-      permanent_date = 'ATELIER FES';
-    } else {
-      const gachaEnd = gachaEndMap.get(char.id);
-      if (gachaEnd) {
-        if (fesName) {
-          permanent_status = '已恒常化';
-          permanent_date = fesName;
-        } else {
-          const permDate = new Date(gachaEnd);
-          permDate.setDate(permDate.getDate() + 56);
-          const permStr = permDate.getFullYear().toString() +
-            String(permDate.getMonth() + 1).padStart(2, '0') +
-            String(permDate.getDate()).padStart(2, '0');
-          permanent_date = permStr;
-          permanent_status = (updateTime && updateTime >= permStr) ? '已恒常化' : '未恒常化';
-        }
-      }
-    }
+  if (permExcludeIds.has(char.id)) {
+    permanent_status = 'limited';
+  } else if (fesName === 'ATELIER FES') {
+    permanent_status = 'fes_0';
+  } else if (fesName === 'ATELIER FES I') {
+    permanent_status = 'fes_1';
+  } else if (fesName === 'ATELIER FES II') {
+    permanent_status = 'fes_2';
+  } else if (char.start_at) {
+    const permDate = new Date(char.start_at);
+    permDate.setDate(permDate.getDate() + 56);
+    permanent_date = permDate.getFullYear().toString() +
+      String(permDate.getMonth() + 1).padStart(2, '0') +
+      String(permDate.getDate()).padStart(2, '0');
+    permanent_status = (gachaLatestStart && permanent_date <= gachaLatestStart) ? 'permanent' : 'not_permanent';
   }
 
   // UID
@@ -413,7 +404,7 @@ function buildCharacterEntry(character) {
     has_ex: (char.extra_skill_ids || []).length > 0,
     gacha_end_at: (fesName === 'ATELIER FES') ? null : ((gachaEndMap.get(char.id) || '').replace(/-/g, '') || null),
     permanent_status,
-    permanent_date,
+    ...(permanent_date != null ? { permanent_date } : {}),
 
     leader_skill: leaderSkill,
     support_ability: supportAbility,
@@ -513,6 +504,18 @@ if (fs.existsSync(gachaFile)) {
   console.log(`🎫 已加载卡池数据：${gachaEndMap.size} 个角色有卡池结束时间`);
 }
 
+// 全局最晚卡池 start_at（恒常化判定基准）
+let gachaLatestStart = null;
+if (fs.existsSync(gachaFile)) {
+  const gachaData2 = safeReadJSON(gachaFile);
+  for (const g of gachaData2) {
+    if (!g.start_at) continue;
+    const dateStr = g.start_at.substring(0, 10).replace(/-/g, '');
+    if (!gachaLatestStart || dateStr > gachaLatestStart) gachaLatestStart = dateStr;
+  }
+  console.log(`🎫 全局最晚卡池 start_at：${gachaLatestStart}`);
+}
+
 const permExcludeFile = path.join(__dirname, '..', 'config', 'permanent_exclude.json');
 const permExcludeIds = new Set();
 if (fs.existsSync(permExcludeFile)) {
@@ -527,15 +530,10 @@ if (fs.existsSync(fesFile)) { fesConfig = safeReadJSON(fesFile); console.log(`�
 
 function getFesName(startAt) {
   if (!startAt) return null;
-  const d = startAt.substring(0, 10).replace(/-/g, '/');
+  const d = startAt.substring(0, 10).replace(/-/g, '');
   for (const f of fesConfig) { if (d >= f.start_date && d <= f.end_date) return f.name; }
   return null;
 }
-
-const now = new Date();
-const updateTime = now.getFullYear().toString() +
-  String(now.getMonth() + 1).padStart(2, '0') +
-  String(now.getDate()).padStart(2, '0');
 
 // 清空输出
 if (fs.existsSync(outDir)) fs.rmSync(outDir, { recursive: true, force: true });
@@ -683,5 +681,26 @@ if (fs.existsSync(contestFile) && fs.existsSync(episodeFile)) {
   }));
   fs.writeFileSync(path.join(outDir, 'contest_rotations.json'), JSON.stringify(contestTable, null, 2), 'utf-8');
   console.log(`📋 竞技场周期：${contestTable.length} 条`);
+}
+
+// ========== 卡池 ==========
+const gachaOutputFile = path.join(rawDir, 'gacha.json');
+if (fs.existsSync(gachaOutputFile)) {
+  const gachaRaw = safeReadJSON(gachaOutputFile);
+  const gachaTable = gachaRaw.sort((a,b) => a.id - b.id).map(g => {
+    const charIds = [];
+    for (const piece of (g.additional_pieces || [])) {
+      if (piece.character_ids) charIds.push(...piece.character_ids);
+    }
+    return {
+      id: g.id,
+      name: g.name,
+      start_at: fmtDate2(g.start_at),
+      end_at: fmtDate2(g.end_at),
+      character_ids: [...new Set(charIds)],
+    };
+  });
+  fs.writeFileSync(path.join(outDir, 'gachas.json'), JSON.stringify(gachaTable, null, 2), 'utf-8');
+  console.log(`📋 卡池：${gachaTable.length} 条`);
 }
 console.log(`✅ 已生成角色索引，包含 ${index.length} 个角色`);

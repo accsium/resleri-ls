@@ -62,6 +62,7 @@ onMounted(() => { loadIndex() })
   <SortableTable v-else
     :columns="columns"
     :rows="sortedChars"
+    :frozen="2"
     :sort-col="sortCol"
     :sort-dir="sortDir"
     @sort="onSort"

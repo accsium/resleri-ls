@@ -15,6 +15,7 @@
 | 支援能力 | `/support-abilities` | 支援能力可排序表格 |
 | 活动 | `/events` | 按年份分组的历史活动可排序表格 |
 | 竞技场 | `/contest-rotations` | 当期及历史竞技场周期可排序表格 |
+| 卡池一览 | `/gachas` | 卡池列表可排序表格，关联角色头像 |
 | 试验 | `/test` | 开发 TODO 清单（`config/todo.md`） |
 
 ## 技术栈

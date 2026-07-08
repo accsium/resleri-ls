@@ -78,7 +78,6 @@ onMounted(() => { loadIndex() })
     :rows="sortedChars"
     rowKey="id"
     :frozen="2"
-    :autoHeight="true"
     :sortCol="sortCol"
     :sortDir="sortDir"
     @sort="onSort"

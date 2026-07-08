@@ -49,20 +49,26 @@ const tags = computed(() => {
 const releaseDate = computed(() => fmtDate(props.indexEntry.start_at))
 
 const permanentLabel = computed(() => {
-  if (!props.indexEntry.permanent_status) return ''
-  if (props.indexEntry.permanent_status === '未恒常化') return t('permanentTime')
-  return t('permanentDate')
+  const s = props.indexEntry.permanent_status
+  if (s === 'limited') return t('permanentStatus')
+  if (s && s.startsWith('fes_')) return t('permanentStatus')
+  if (s === 'permanent') return t('permanentTime')
+  if (s === 'not_permanent') return t('permanentTime')
+  return ''
 })
 const permanentText = computed(() => {
   const s = props.indexEntry.permanent_status
-  const d = props.indexEntry.permanent_date
-  if (!s) return ''
-  if (s === '未恒常化') return d ? fmtDate(d) : '—'
-  if (s === '非恒常角色') return '非恒常角色'
-  if (s === '已恒常化') return d === 'ATELIER FES' ? '初始' : (d && d.startsWith('ATELIER FES')) ? d : '已恒常化'
-  if (d) return d
-  return s
+  if (s === 'limited') return '非恒常角色'
+  if (s === 'fes_0') return '初始'
+  if (s === 'fes_1') return 'ATELIER FES I'
+  if (s === 'fes_2') return 'ATELIER FES II'
+  if (s === 'permanent' || s === 'not_permanent') {
+    const d = props.indexEntry.permanent_date
+    return d ? fmtDate(d) : ''
+  }
+  return ''
 })
+const isNotPermanent = computed(() => props.indexEntry.permanent_status === 'not_permanent')
 const attrsText = computed(() => {
   const attrMap = currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP
   const names = (props.indexEntry.attack_attributes || []).map(id => attrMap[id] || id)
@@ -221,7 +227,7 @@ onUnmounted(() => {
                 <div class="char-id">ID:{{ indexEntry.id }}</div>
                 <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
                 <div v-if="indexEntry.gacha_end_at" class="release-date">{{ t('gachaEnd') }}: {{ fmtDate(indexEntry.gacha_end_at) }}</div>
-                <div v-if="permanentLabel" class="release-date">{{ permanentLabel }}: {{ permanentText }}</div>
+                <div v-if="permanentText" class="release-date"><template v-if="permanentLabel">{{ permanentLabel }}: </template><span :class="{ 'perm-not': isNotPermanent }">{{ permanentText }}</span></div>
               </div>
               <div class="cb-info-right">
                 <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
@@ -258,7 +264,7 @@ onUnmounted(() => {
             <div class="char-id">ID:{{ indexEntry.id }}</div>
             <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
             <div v-if="indexEntry.gacha_end_at" class="release-date">{{ t('gachaEnd') }}: {{ fmtDate(indexEntry.gacha_end_at) }}</div>
-            <div v-if="permanentLabel" class="release-date">{{ permanentLabel }}: {{ permanentText }}</div>
+            <div v-if="permanentText" class="release-date"><template v-if="permanentLabel">{{ permanentLabel }}: </template><span :class="{ 'perm-not': isNotPermanent }">{{ permanentText }}</span></div>
           </div>
           <div class="cb-avatar-mob">
             <AvatarDisplay :index-entry="indexEntry" :size="84" :kid="kid" />

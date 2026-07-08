@@ -74,6 +74,12 @@ const routes = [
     beforeEnter: () => { _prefetch('contestRotations', 'data/contest_rotations.json') },
   },
   {
+    path: '/gachas',
+    name: 'gachas',
+    component: () => import('../views/GachaView.vue'),
+    beforeEnter: () => { _prefetch('gachas', 'data/gachas.json') },
+  },
+  {
     path: '/test',
     name: 'test',
     component: () => import('../views/TestView.vue'),

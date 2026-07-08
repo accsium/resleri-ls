@@ -330,8 +330,8 @@ function _parseSelectId(val) {
       <div class="sf-field">
         <span class="sf-label">恒常化状态</span>
         <div class="sf-field-items">
-          <label v-for="s in ['已恒常化','未恒常化','非恒常角色']" :key="s" class="sf-check">
-            <input type="checkbox" :checked="permStatus.includes(s)" @change="togglePermStatus(s)">{{ s }}
+          <label v-for="s in ['permanent','not_permanent','limited']" :key="s" class="sf-check">
+            <input type="checkbox" :checked="permStatus.includes(s)" @change="togglePermStatus(s)">{{ { permanent: '已恒常化', not_permanent: '未恒常化', limited: '非恒常角色' }[s] }}
           </label>
         </div>
       </div>
@@ -339,8 +339,8 @@ function _parseSelectId(val) {
       <div class="sf-field">
         <span class="sf-label">ATELIER FES</span>
         <div class="sf-field-items">
-          <label v-for="s in ['ATELIER FES','ATELIER FES I','ATELIER FES II']" :key="s" class="sf-check">
-            <input type="checkbox" :checked="atelierFes.includes(s)" @change="toggleAtelierFes(s)">{{ s === 'ATELIER FES' ? '初始' : s === 'ATELIER FES I' ? 'I' : 'II' }}
+          <label v-for="s in ['fes_0','fes_1','fes_2']" :key="s" class="sf-check">
+            <input type="checkbox" :checked="atelierFes.includes(s)" @change="toggleAtelierFes(s)">{{ { fes_0: '初始', fes_1: 'I', fes_2: 'II' }[s] }}
           </label>
         </div>
       </div>
