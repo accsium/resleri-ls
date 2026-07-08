@@ -119,7 +119,7 @@ onMounted(async () => {
 .gacha-cat-btn:hover { border-color: var(--accent); }
 .gacha-cat-btn.active {
   background: var(--accent);
-  color: #fff;
+  color: var(--sf-active-text);
   border-color: var(--accent);
 }
 </style>

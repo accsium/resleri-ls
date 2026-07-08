@@ -175,6 +175,8 @@ async function toggleExpand() {
     const header = document.querySelector(`.card[data-id="${props.indexEntry.id}"] .card-header`)
     const top = header?.getBoundingClientRect().top
     expanded.value = false
+    const observer = headerObservers.get(props.indexEntry.id)
+    if (observer) { observer.disconnect(); headerObservers.delete(props.indexEntry.id) }
     if (header && top != null) {
       await nextTick()
       const app = document.querySelector('.app-content')

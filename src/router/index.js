@@ -14,15 +14,17 @@ export function getNavigationSignal() {
 }
 
 // ── 数据预取 ──
-// 缓存 fetch Promise（resolve 后为已解析 JSON）。beforeEnter 触发 fetch 与懒加载 chunk 并行，
-// 视图 onMounted 时 await preFetch[key] 已就绪或自行 fetch。
-function _prefetch(key, url, parser = 'json') {
+// 缓存已解析的 JSON 数据。beforeEnter 触发 fetch 与懒加载 chunk 并行，
+// 视图 onMounted 时 preFetch[key] 已就绪或自行 fetch。
+async function _prefetch(key, url, parser = 'json') {
+  if (_dataCache[key]) return _dataCache[key]
   const signal = getNavigationSignal()
-  if (!_dataCache[key]) {
-    _dataCache[key] = fetch(url, { signal }).then(r => {
-      if (!r.ok) throw new Error(`HTTP ${r.status}`)
-      return parser === 'text' ? r.text() : r.json()
-    }).catch(() => { delete _dataCache[key] })
+  try {
+    const r = await fetch(url, { signal })
+    if (!r.ok) throw new Error(`HTTP ${r.status}`)
+    _dataCache[key] = parser === 'text' ? await r.text() : await r.json()
+  } catch {
+    // 失败不缓存，下次访问重试
   }
   return _dataCache[key]
 }

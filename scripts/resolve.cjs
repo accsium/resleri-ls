@@ -248,20 +248,6 @@ function hasEvolvedSkills(char) {
     char[`evolved_${p}_skill_ids`] && char[`evolved_${p}_skill_ids`].length > 0)
 }
 
-function computeWT(character, useEvolved) {
-  const speed = character.initial_status?.speed;
-  if (speed == null || speed <= 0) return null;
-  let wait = 0;
-  const field = useEvolved ? 'evolved_normal2_skill_ids' : 'normal2_skill_ids';
-  const ids = character[field] || [];
-  if (ids && ids.length > 0) {
-    const maxId = Math.max(...ids);
-    const skill = tables.skill?.get(maxId);
-    if (skill && typeof skill.wait === 'number') wait = skill.wait;
-  }
-  return Math.floor(57600 / speed + wait);
-}
-
 function diffObjects(base, alt) {
   const skip = new Set(['switch', 'switch_stat', '_transform']);
   const diff = {};
