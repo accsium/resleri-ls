@@ -2,7 +2,6 @@
 import { computed, onMounted } from 'vue'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useI18n } from '../composables/useI18n'
-import { useSortTable } from '../composables/useSortTable'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 
@@ -15,44 +14,22 @@ const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_M
 const columns = [
   { key: 'id', label: 'ID', width: 72 },
   { key: 'avatar', label: '角色头像', width: 88 },
-  { key: 'name', label: '角色名', minWidth: 240 },
-  { key: 'attr', label: '属性', width: 56, align: 'center' },
-  { key: 'role', label: '职业', width: 56, align: 'center' },
-  { key: 'skillName', label: '队长技能', minWidth: 200 },
-  { key: 'skillDesc', label: '效果', minWidth: 300 },
+  { key: 'name', label: '角色名', minWidth: 240, sortVal: (row) => baseName(row) },
+  { key: 'attr', label: '属性', width: 56, align: 'center', sortVal: (row) => row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999 },
+  { key: 'role', label: '职业', width: 56, align: 'center', sortVal: (row) => row.role || 999 },
+  { key: 'skillName', label: '队长技能', minWidth: 200, sortVal: (row) => row.leader_skill?.name || '' },
+  { key: 'skillDesc', label: '效果', minWidth: 300, sortVal: (row) => row.leader_skill?.description || '' },
 ]
 
 const leaderChars = computed(() =>
   characterIndex.value.filter(c => c.leader_skill?.description != null)
 )
 
-const { sortCol, sortDir, onSort, sortItems } = useSortTable({
-  defaultCol: 'uid',
-  defaultDir: 'desc',
-  avatarAlias: 'uid',
-})
-
-function getSortVal(row, field) {
-  switch (field) {
-    case 'uid':
-    case 'avatar': return row.uid || ''
-    case 'id': return row.id
-    case 'name': return baseName(row)
-    case 'attr': return row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999
-    case 'role': return row.role || 999
-    case 'skillName': return row.leader_skill?.name || ''
-    case 'skillDesc': return row.leader_skill?.description || ''
-    default: return ''
-  }
-}
-
 function baseName(row) {
   const bc = baseCharacterMap.value[row.base_character_id]
   if (!bc) return ''
   return currentLang.value === 'cn' ? (bc.name_cn || bc.name_ja) : bc.name_ja
 }
-
-const sortedChars = computed(() => sortItems(leaderChars.value, getSortVal))
 
 onMounted(() => { loadIndex() })
 </script>
@@ -61,11 +38,11 @@ onMounted(() => { loadIndex() })
   <div v-if="!indexLoaded" class="loading">加载角色数据中...</div>
   <SortableTable v-else
     :columns="columns"
-    :rows="sortedChars"
+    :rows="leaderChars"
     :frozen="2"
-    :sort-col="sortCol"
-    :sort-dir="sortDir"
-    @sort="onSort"
+    defaultSortCol="uid"
+    defaultSortDir="desc"
+    avatarAlias="uid"
   >
     <template #cell-avatar="{ row }">
       <AvatarDisplay :index-entry="row" :size="60" feature="full" />

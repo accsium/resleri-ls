@@ -69,6 +69,7 @@ const permanentText = computed(() => {
   return ''
 })
 const isNotPermanent = computed(() => props.indexEntry.permanent_status === 'not_permanent')
+const isLimited = computed(() => props.indexEntry.permanent_status === 'limited')
 const attrsText = computed(() => {
   const attrMap = currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP
   const names = (props.indexEntry.attack_attributes || []).map(id => attrMap[id] || id)
@@ -227,7 +228,7 @@ onUnmounted(() => {
                 <div class="char-id">ID:{{ indexEntry.id }}</div>
                 <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
                 <div v-if="indexEntry.gacha_end_at" class="release-date">{{ t('gachaEnd') }}: {{ fmtDate(indexEntry.gacha_end_at) }}</div>
-                <div v-if="permanentText" class="release-date"><template v-if="permanentLabel">{{ permanentLabel }}: </template><span :class="{ 'perm-not': isNotPermanent }">{{ permanentText }}</span></div>
+                <div v-if="permanentText" class="release-date"><template v-if="permanentLabel">{{ permanentLabel }}: </template><span :class="{ 'perm-not': isNotPermanent, 'perm-limited': isLimited }">{{ permanentText }}</span></div>
               </div>
               <div class="cb-info-right">
                 <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
@@ -264,7 +265,7 @@ onUnmounted(() => {
             <div class="char-id">ID:{{ indexEntry.id }}</div>
             <div class="release-date">{{ t('joinDate') }}: {{ releaseDate }}</div>
             <div v-if="indexEntry.gacha_end_at" class="release-date">{{ t('gachaEnd') }}: {{ fmtDate(indexEntry.gacha_end_at) }}</div>
-            <div v-if="permanentText" class="release-date"><template v-if="permanentLabel">{{ permanentLabel }}: </template><span :class="{ 'perm-not': isNotPermanent }">{{ permanentText }}</span></div>
+            <div v-if="permanentText" class="release-date"><template v-if="permanentLabel">{{ permanentLabel }}: </template><span :class="{ 'perm-not': isNotPermanent, 'perm-limited': isLimited }">{{ permanentText }}</span></div>
           </div>
           <div class="cb-avatar-mob">
             <AvatarDisplay :index-entry="indexEntry" :size="84" :kid="kid" />

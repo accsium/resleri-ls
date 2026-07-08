@@ -1,25 +1,52 @@
 <script setup>
 import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { useSortTable } from '../composables/useSortTable'
 
 const props = defineProps({
   columns: { type: Array, required: true },
   rows: { type: Array, required: true },
   rowKey: { type: String, default: 'id' },
   frozen: { type: Number, default: 0 },
-  sortCol: { type: String, default: '' },
-  sortDir: { type: String, default: 'desc' },
   autoHeight: { type: Boolean, default: false },
+  defaultSortCol: { type: String, default: '' },
+  defaultSortDir: { type: String, default: 'desc' },
+  avatarAlias: { type: String, default: '' },
+  // 外部排序控制（可选，SkillListView 等预排序场景使用）
+  sortCol: { type: String, default: '' },
+  sortDir: { type: String, default: '' },
 })
 
 const emit = defineEmits(['sort'])
 
+const effectiveDefaultCol = props.defaultSortCol || (props.columns[0]?.key ?? 'id')
+
+const { sortCol: internalCol, sortDir: internalDir, onSort: internalSort, sortItems } = useSortTable({
+  defaultCol: effectiveDefaultCol,
+  defaultDir: props.defaultSortDir || 'desc',
+  avatarAlias: props.avatarAlias || null,
+})
+
+const externalMode = computed(() => !!props.sortCol)
+
+const displaySortCol = computed(() => externalMode.value ? props.sortCol : internalCol.value)
+const displaySortDir = computed(() => externalMode.value ? props.sortDir : internalDir.value)
+
+const sortedRows = computed(() => {
+  if (externalMode.value) return props.rows
+  return sortItems(props.rows, props.columns)
+})
+
 function onSort(key) {
-  emit('sort', key)
+  if (externalMode.value) {
+    emit('sort', key)
+  } else {
+    internalSort(key)
+  }
 }
 
 function sortArrow(key) {
-  if (props.sortCol !== key) return ''
-  return props.sortDir === 'desc' ? ' ▼' : ' ▲'
+  if (displaySortCol.value !== key) return ''
+  return displaySortDir.value === 'desc' ? ' ▼' : ' ▲'
 }
 
 // 冻结列 left 偏移累积 + 总宽度
@@ -106,7 +133,7 @@ function cellStyle(col) {
         </tr>
       </thead>
       <tbody>
-        <tr v-for="row in rows" :key="row[rowKey]">
+        <tr v-for="row in sortedRows" :key="row[rowKey]">
           <td
             v-for="(col, i) in columns"
             :key="col.key"

@@ -46,7 +46,7 @@
   --owned-outline:   #b8382e;
   --scrollbar-track: #c8c8c8;
   --scrollbar-thumb: #fff;
-  --hl-skill: #00B4C9;
+  --hl-accent: #00B4C9;
   --hl-paren: #f0335b;
   --sf-toggle-arrow-color: rgba(255,255,255,0.8);
   --scrollbar-thumb-shadow: 0 1px 3px rgba(0,0,0,0.2);
@@ -415,6 +415,7 @@ input[type="text"] {
   font-size: 10px; color: var(--text-muted); margin-bottom: 1px;
 }
 .perm-not { color: var(--hl-paren); }
+.perm-limited { color: var(--hl-accent); }
 .max-rarity-label { font-size: 10px; color: var(--text-muted); margin-right: 4px; flex-shrink: 0; white-space: nowrap; align-self: center; }
 
 .tag, .trait-tag {
@@ -753,8 +754,8 @@ input:checked + .slider::before { transform: translateX(16px); }
 }
 
 /* ── 描述文本重点色 ── */
-.hl-skill { color: var(--hl-skill); }
-.hl-quote { color: var(--hl-skill); }
+.hl-skill { color: var(--hl-accent); }
+.hl-quote { color: var(--hl-accent); }
 .hl-paren { color: var(--hl-paren); }
 
 /* ========== 别名文本 ========== */

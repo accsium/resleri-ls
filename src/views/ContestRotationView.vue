@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
-import { useSortTable } from '../composables/useSortTable'
 import { useI18n } from '../composables/useI18n'
 import { fmtDate } from '../utils/date.js'
 import { preFetch } from '../router'
@@ -17,18 +16,6 @@ const columns = [
 const rows = ref([])
 const loading = ref(true)
 const isEmpty = computed(() => !loading.value && rows.value.length === 0)
-const { sortCol, sortDir, onSort, sortItems } = useSortTable({
-  defaultCol: 'start_at',
-  defaultDir: 'desc',
-})
-
-function getSortVal(row, field) {
-  if (field === 'id') return row.id
-  if (field === 'start_at') return row.start_at
-  return row.episode_name || ''
-}
-
-const sorted = computed(() => sortItems(rows.value, getSortVal))
 
 onMounted(async () => {
   let data = await preFetch.contestRotations
@@ -47,12 +34,11 @@ onMounted(async () => {
     <div v-else-if="isEmpty" class="loading">{{ t('none') }}</div>
   <SortableTable v-else
     :columns="columns"
-    :rows="sorted"
+    :rows="rows"
     rowKey="id"
     :frozen="0"
-    :sortCol="sortCol"
-    :sortDir="sortDir"
-    @sort="onSort"
+    defaultSortCol="start_at"
+    defaultSortDir="desc"
   >
     <template #cell-id="{ row }">{{ row.id }}</template>
     <template #cell-start_at="{ row }">{{ fmtDate(row.start_at) }}</template>

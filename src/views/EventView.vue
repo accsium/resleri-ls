@@ -1,7 +1,6 @@
 <script setup>
-import { ref, reactive, computed, watch, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
-import { useSortTable } from '../composables/useSortTable'
 import { useI18n } from '../composables/useI18n'
 import { fmtDate } from '../utils/date.js'
 import { preFetch } from '../router'
@@ -27,46 +26,7 @@ const isEmpty = computed(() => !loading.value && allRows.value.length === 0)
 
 const getGroupRows = (g) => allRows.value.filter(r => r.id >= g.min && r.id <= g.max)
 
-// Per-group sort state
-const sorts = ref(groups.map(() => ({ col: 'id', dir: 'desc' })))
 const { t } = useI18n()
-const { cmpVal } = useSortTable({})
-
-function getSortVal(row, col) {
-  if (col === 'id') return row.id
-  if (col === 'start_at') return row.start_at
-  if (col === 'end_at') return row.end_at
-  if (col === 'name') return row.name || ''
-  if (col === 'revival_start_at') return row.revival_start_at
-  return row.id
-}
-
-const sortedCache = reactive({})
-
-function sorted(g, gi) {
-  const s = sorts.value[gi]
-  const key = `${g.label}-${gi}-${s.col}-${s.dir}`
-  if (key in sortedCache) return sortedCache[key]
-  const list = [...getGroupRows(g)]
-  const dir = s.dir === 'desc' ? -1 : 1
-  list.sort((a, b) => {
-    const r = cmpVal(getSortVal(a, s.col), getSortVal(b, s.col), dir)
-    if (r !== 0) return r
-    return (a.id - b.id) * dir
-  })
-  sortedCache[key] = list
-  return list
-}
-
-watch(sorts, () => Object.keys(sortedCache).forEach(k => delete sortedCache[k]), { deep: true })
-
-function onSort(gi, col) {
-  sorts.value = sorts.value.map((s, i) => {
-    if (i !== gi) return s
-    if (s.col === col) return { col: s.col, dir: s.dir === 'desc' ? 'asc' : 'desc' }
-    return { col, dir: 'asc' }
-  })
-}
 
 onMounted(async () => {
   let data = await preFetch.events
@@ -88,12 +48,11 @@ onMounted(async () => {
       <h3 class="group-title">{{ g.label }}</h3>
       <SortableTable
         :columns="columns"
-        :rows="sorted(g, gi)"
+        :rows="getGroupRows(g)"
         rowKey="id"
         :frozen="0"
-        :sortCol="sorts[gi].col"
-        :sortDir="sorts[gi].dir"
-        @sort="(col) => onSort(gi, col)"
+        defaultSortCol="id"
+        defaultSortDir="desc"
       >
         <template #cell-id="{ row }">{{ row.id }}</template>
         <template #cell-start_at="{ row }">{{ fmtDate(row.start_at) }}</template>

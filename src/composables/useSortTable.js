@@ -2,6 +2,32 @@ import { ref, computed } from 'vue'
 import { cmpVal } from '../utils/sort'
 
 /**
+ * 纯函数：多级排序（不依赖闭包状态，供需要独立排序状态的调用方使用）
+ * @param {Array}  items        待排序数组
+ * @param {Array}  columns      列定义，每项 { key, sortVal? }，sortVal(row) 未提供则默认 row[key] ?? ''
+ * @param {Array}  sortPriority 排序列优先级
+ * @param {Object} sortDirs     每列排序方向 {'asc'|'desc'}
+ * @returns {Array} 新数组
+ */
+export function sortItems(items, columns, sortPriority, sortDirs) {
+  const colMap = {}
+  for (const col of columns) colMap[col.key] = col
+
+  const list = [...items]
+  list.sort((a, b) => {
+    for (const field of sortPriority) {
+      const dir = (sortDirs[field] || 'desc') === 'desc' ? -1 : 1
+      const col = colMap[field]
+      const getVal = col?.sortVal || (row => row[field] ?? '')
+      const r = cmpVal(getVal(a), getVal(b), dir)
+      if (r !== 0) return r
+    }
+    return 0
+  })
+  return list
+}
+
+/**
  * 通用表格排序 composable
  *
  * @param {Object}   options
@@ -40,16 +66,21 @@ export function useSortTable({ defaultCol = 'id', defaultDir = 'asc', avatarAlia
 
   /**
    * 对数组应用多级排序（返回新数组，不修改原数组）
-   * @param {Array}  items     待排序数组
-   * @param {Function} getSortVal (item, field) => value
+   * @param {Array}  items   待排序数组
+   * @param {Array}  columns 列定义，每项 { key, sortVal? }，sortVal(row) 未提供则默认 row[key] ?? ''
    * @returns {Array}
    */
-  function sortItems(items, getSortVal) {
+  function sortItems(items, columns) {
+    const colMap = {}
+    for (const col of columns) colMap[col.key] = col
+
     const list = [...items]
     list.sort((a, b) => {
       for (const field of sortPriority.value) {
         const dir = (sortDirs.value[field] || 'desc') === 'desc' ? -1 : 1
-        const r = cmpVal(getSortVal(a, field), getSortVal(b, field), dir)
+        const col = colMap[field]
+        const getVal = col?.sortVal || (row => row[field] ?? '')
+        const r = cmpVal(getVal(a), getVal(b), dir)
         if (r !== 0) return r
       }
       return 0

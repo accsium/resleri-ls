@@ -322,13 +322,16 @@ function buildCharacterEntry(character) {
     permanent_status = 'fes_1';
   } else if (fesName === 'ATELIER FES II') {
     permanent_status = 'fes_2';
-  } else if (char.start_at) {
-    const permDate = new Date(char.start_at);
-    permDate.setDate(permDate.getDate() + 56);
-    permanent_date = permDate.getFullYear().toString() +
-      String(permDate.getMonth() + 1).padStart(2, '0') +
-      String(permDate.getDate()).padStart(2, '0');
-    permanent_status = (gachaLatestStart && permanent_date <= gachaLatestStart) ? 'permanent' : 'not_permanent';
+  } else {
+    const gachaEnd = gachaEndMap.get(char.id);
+    if (gachaEnd) {
+      const permDate = new Date(gachaEnd);
+      permDate.setDate(permDate.getDate() + 56);
+      permanent_date = permDate.getFullYear().toString() +
+        String(permDate.getMonth() + 1).padStart(2, '0') +
+        String(permDate.getDate()).padStart(2, '0');
+      permanent_status = (gachaLatestStart && permanent_date < gachaLatestStart) ? 'permanent' : 'not_permanent';
+    }
   }
 
   // UID
@@ -504,16 +507,42 @@ if (fs.existsSync(gachaFile)) {
   console.log(`🎫 已加载卡池数据：${gachaEndMap.size} 个角色有卡池结束时间`);
 }
 
-// 全局最晚卡池 start_at（恒常化判定基准）
+// 预处理卡池数据：分类 + 恒常化判定基准
+function getGachaCategory(g) {
+  if (g.gacha_category === 3) return '衣装調合';
+  if (g.gacha_category === 2) return null;
+  const name = g.name || '';
+  if (name.includes('有償限定')) return '有償限定';
+  if (name.includes('LEGEND FES')) return 'LEGEND FES';
+  return '其他';
+}
 let gachaLatestStart = null;
+const gachaEntries = [];
 if (fs.existsSync(gachaFile)) {
-  const gachaData2 = safeReadJSON(gachaFile);
-  for (const g of gachaData2) {
-    if (!g.start_at) continue;
-    const dateStr = g.start_at.substring(0, 10).replace(/-/g, '');
-    if (!gachaLatestStart || dateStr > gachaLatestStart) gachaLatestStart = dateStr;
+  const gachaRaw = safeReadJSON(gachaFile);
+  for (const g of gachaRaw) {
+    const category = getGachaCategory(g);
+    if (category == null) continue;
+    const charIds = [];
+    for (const piece of (g.additional_pieces || [])) {
+      if (piece.character_ids) charIds.push(...piece.character_ids);
+    }
+    gachaEntries.push({
+      id: g.id,
+      name: g.name,
+      start_at: g.start_at,
+      end_at: g.end_at,
+      category,
+      gacha_type: g.gacha_type,
+      picked_up_memoria_ids: g.picked_up_memoria_ids || [],
+      character_ids: [...new Set(charIds)],
+    });
+    if (category === 'LEGEND FES' && g.start_at) {
+      const dateStr = g.start_at.substring(0, 10).replace(/-/g, '');
+      if (!gachaLatestStart || dateStr > gachaLatestStart) gachaLatestStart = dateStr;
+    }
   }
-  console.log(`🎫 全局最晚卡池 start_at：${gachaLatestStart}`);
+  console.log(`🎫 LEGEND FES 最晚卡池 start_at：${gachaLatestStart}`);
 }
 
 const permExcludeFile = path.join(__dirname, '..', 'config', 'permanent_exclude.json');
@@ -683,24 +712,16 @@ if (fs.existsSync(contestFile) && fs.existsSync(episodeFile)) {
   console.log(`📋 竞技场周期：${contestTable.length} 条`);
 }
 
-// ========== 卡池 ==========
-const gachaOutputFile = path.join(rawDir, 'gacha.json');
-if (fs.existsSync(gachaOutputFile)) {
-  const gachaRaw = safeReadJSON(gachaOutputFile);
-  const gachaTable = gachaRaw.sort((a,b) => a.id - b.id).map(g => {
-    const charIds = [];
-    for (const piece of (g.additional_pieces || [])) {
-      if (piece.character_ids) charIds.push(...piece.character_ids);
-    }
-    return {
-      id: g.id,
-      name: g.name,
-      start_at: fmtDate2(g.start_at),
-      end_at: fmtDate2(g.end_at),
-      character_ids: [...new Set(charIds)],
-    };
-  });
-  fs.writeFileSync(path.join(outDir, 'gachas.json'), JSON.stringify(gachaTable, null, 2), 'utf-8');
-  console.log(`📋 卡池：${gachaTable.length} 条`);
-}
+// ========== 卡池输出 ==========
+const gachaTable = gachaEntries
+  .sort((a, b) => a.id - b.id)
+  .map(g => ({
+    id: g.id, name: g.name,
+    start_at: fmtDate2(g.start_at), end_at: fmtDate2(g.end_at),
+    category: g.category, gacha_type: g.gacha_type,
+    picked_up_memoria_ids: g.picked_up_memoria_ids,
+    character_ids: g.character_ids,
+  }));
+fs.writeFileSync(path.join(outDir, 'gachas.json'), JSON.stringify(gachaTable, null, 2), 'utf-8');
+console.log(`📋 卡池：${gachaTable.length} 条`);
 console.log(`✅ 已生成角色索引，包含 ${index.length} 个角色`);

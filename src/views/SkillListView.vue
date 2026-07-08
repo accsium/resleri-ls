@@ -17,20 +17,26 @@ const charIndexMap = computed(() => {
 })
 
 const columns = [
-  { key: 'id', label: 'ID', width: 72 },
+  { key: 'id', label: 'ID', width: 72, sortVal: (row) => row.char_id },
   { key: 'avatar', label: '头像', width: 88 },
-  { key: 'name', label: '角色名', minWidth: 240 },
-  { key: 'type', label: '种类', minWidth: 84, align: 'center' },
-  { key: 'state', label: '状态', minWidth: 72, align: 'center' },
-  { key: 'target', label: '对象', minWidth: 84, align: 'center' },
-  { key: 'attr', label: '属性', width: 56, align: 'center' },
-  { key: 'dmg', label: '伤害', width: 64, align: 'center' },
-  { key: 'brk', label: '破防', width: 64, align: 'center' },
-  { key: 'heal', label: '治疗', width: 64, align: 'center' },
-  { key: 'wait', label: 'WT', width: 56, align: 'center' },
-  { key: 'limit', label: '限制', width: 56, align: 'center' },
-  { key: 'skillName', label: '技能名', minWidth: 240 },
-  { key: 'skillDesc', label: '描述', minWidth: 1200 },
+  { key: 'name', label: '角色名', minWidth: 240, sortVal: (row) => getField(row, 'base_name') },
+  { key: 'type', label: '种类', minWidth: 84, align: 'center', sortVal: (row) => row.type },
+  { key: 'state', label: '状态', minWidth: 72, align: 'center', sortVal: (row) => row.state },
+  { key: 'target', label: '对象', minWidth: 84, align: 'center', sortVal: (row) => getField(row, 'target_name') },
+  { key: 'attr', label: '属性', width: 56, align: 'center', sortVal: (row) => { const idx = ATTR_IDS.indexOf(row.attack_attributes?.[0]); return idx === -1 ? 999 : idx } },
+  { key: 'dmg', label: '伤害', width: 64, align: 'center', sortVal: (row) => row.dmg_power ?? -1 },
+  { key: 'brk', label: '破防', width: 64, align: 'center', sortVal: (row) => row.break_power ?? -1 },
+  { key: 'heal', label: '治疗', width: 64, align: 'center', sortVal: (row) => row.heal_power ?? -1 },
+  { key: 'wait', label: 'WT', width: 56, align: 'center', sortVal: (row) => row.wt ?? 9999 },
+  { key: 'limit', label: '限制', width: 56, align: 'center', sortVal: (row) => row.limit_count ?? 0 },
+  { key: 'skillName', label: '技能名', minWidth: 240, sortVal: (row) => row.name || '' },
+  { key: 'skillDesc', label: '描述', minWidth: 1200, sortVal: (row) => row.description || '' },
+]
+
+// 排序用列定义 — 在 display columns 基础上补充 uid（avatarAlias 映射的虚拟键）
+const _sortCols = [
+  ...columns,
+  { key: 'uid', sortVal: (row) => (charIndexMap.value[row.char_id] || {}).uid || '' },
 ]
 
 const STATE_LABEL = {
@@ -158,27 +164,6 @@ onMounted(async () => {
 
 const skills = computed(() => (indexLoaded.value && skillsReady.value) ? buildSkillRows() : [])
 
-function getSkillSortVal(row, field) {
-  switch (field) {
-    case 'uid':
-    case 'avatar': return (charIndexMap.value[row.char_id] || {}).uid || ''
-    case 'id': return row.char_id
-    case 'name': return getField(row, 'base_name')
-    case 'type': return row.type
-    case 'state': return row.state
-    case 'target': return getField(row, 'target_name')
-    case 'attr': { const idx = ATTR_IDS.indexOf(row.attack_attributes?.[0]); return idx === -1 ? 999 : idx }
-    case 'dmg': return row.dmg_power ?? -1
-    case 'brk': return row.break_power ?? -1
-    case 'heal': return row.heal_power ?? -1
-    case 'wait': return row.wt ?? 9999
-    case 'limit': return row.limit_count ?? 0
-    case 'skillName': return row.name || ''
-    case 'skillDesc': return row.description || ''
-    default: return ''
-  }
-}
-
 const { sortCol, sortDir, onSort: onTableSort, sortItems } = useSortTable({
   defaultCol: 'id', defaultDir: 'asc', avatarAlias: 'uid',
 })
@@ -201,7 +186,7 @@ const filteredSkills = computed(() => {
       (r.description || '').toLowerCase().includes(q)
     )
   }
-  list = sortItems(list, getSkillSortVal)
+  list = sortItems(list, _sortCols)
   return list
 })
 
