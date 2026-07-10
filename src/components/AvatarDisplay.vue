@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { computed, ref } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
@@ -30,7 +30,7 @@ const starDisplayCount = computed(() => {
 })
 
 const charImage = computed(() => `image/character/${props.indexEntry.id}.png`)
-const showImage = ref(false)
+const imageLoaded = ref(false)
 
 const { baseCharacterMap } = useCharacterData()
 
@@ -61,36 +61,10 @@ const textScale = computed(() => {
   return Math.min(1, 320 / (BASE_FONT * maxW))
 })
 
-const containerRef = ref(null)
-let cancelled = false
-let observer = null
-
-function setupObserver() {
-  cancelled = false
-  observer?.disconnect()
-  observer = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) {
-      observer.disconnect()
-      // 已加载过的图片不再重复下载
-      if (showImage.value) return
-      showImage.value = true
-    }
-  }, { rootMargin: '200px' })
-  if (containerRef.value) observer.observe(containerRef.value)
-}
-
-onMounted(setupObserver)
-
-function cleanup() {
-  cancelled = true
-  observer?.disconnect()
-}
-
-onUnmounted(cleanup)
 </script>
 
 <template>
-  <div ref="containerRef" class="avatar-component" :style="{ width: size + 'px', height: size + 'px' }">
+  <div class="avatar-component" :style="{ width: size + 'px', height: size + 'px' }">
     <div :style="{ position: 'absolute', top: 0, left: 0, width: canvasSize + 'px', height: canvasSize + 'px', transform: 'scale(' + (size / canvasSize) + ')', transformOrigin: '0 0' }">
       <svg
         :width="canvasSize" :height="canvasSize"
@@ -103,22 +77,22 @@ onUnmounted(cleanup)
         <polygon points="160,25 25,160 160,295" :fill="traitHex"/>
         <polygon points="160,25 295,160 160,295" :fill="supportHex"/>
         <image
-          v-if="!showImage"
+          v-if="!imageLoaded"
           :href="'image/misc/00000.png'"
           x="32" y="39" width="256" height="256"
           mask="url(#mask-g)"
           preserveAspectRatio="xMidYMax meet"
         />
         <image
-          v-if="showImage"
           :href="charImage"
           x="32" y="39" width="256" height="256"
           mask="url(#mask-g)"
           preserveAspectRatio="xMidYMax meet"
-          @error="showImage = false"
+          :style="{ visibility: imageLoaded ? 'visible' : 'hidden' }"
+          @load="imageLoaded = true"
         />
         <text
-          v-if="!showImage"
+          v-if="!imageLoaded"
           class="fallback-text"
           :transform="'translate(160,160) scale(' + textScale + ')'"
           x="0" y="0"
