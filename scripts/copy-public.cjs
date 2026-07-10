@@ -12,9 +12,7 @@ const configSrc = path.join(root, 'config');
 const configDest = path.join(publicDir, 'config');
 fs.mkdirSync(configDest, { recursive: true });
 const WHITELIST = new Set([
-  'announcements.json', 'atelier_fes.json', 'ex_skill_rules.json',
-  'exclude.json', 'permanent_exclude.json', 'pipeline.json',
-  'todo.md', 'transform.json',
+  'announcements.json', 'todo.md',
 ]);
 const configFiles = fs.readdirSync(configSrc).filter(f => WHITELIST.has(f));
 for (const f of configFiles) {
