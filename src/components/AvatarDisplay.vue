@@ -64,7 +64,6 @@ const textScale = computed(() => {
 const containerRef = ref(null)
 let cancelled = false
 let observer = null
-let activeImg = null
 
 function setupObserver() {
   cancelled = false
@@ -74,17 +73,7 @@ function setupObserver() {
       observer.disconnect()
       // 已加载过的图片不再重复下载
       if (showImage.value) return
-      activeImg = new Image()
-      activeImg.onload = () => {
-        if (cancelled) return
-        showImage.value = true
-        activeImg = null
-      }
-      activeImg.onerror = () => {
-        if (cancelled) return
-        activeImg = null
-      }
-      activeImg.src = charImage.value
+      showImage.value = true
     }
   }, { rootMargin: '200px' })
   if (containerRef.value) observer.observe(containerRef.value)
@@ -95,11 +84,6 @@ onMounted(setupObserver)
 function cleanup() {
   cancelled = true
   observer?.disconnect()
-  // 中止正在进行的图片下载，释放带宽
-  if (activeImg) {
-    activeImg.src = ''
-    activeImg = null
-  }
 }
 
 onUnmounted(cleanup)
@@ -119,10 +103,19 @@ onUnmounted(cleanup)
         <polygon points="160,25 25,160 160,295" :fill="traitHex"/>
         <polygon points="160,25 295,160 160,295" :fill="supportHex"/>
         <image
-          :href="showImage ? charImage : 'image/misc/00000.png'"
+          v-if="!showImage"
+          :href="'image/misc/00000.png'"
           x="32" y="39" width="256" height="256"
           mask="url(#mask-g)"
           preserveAspectRatio="xMidYMax meet"
+        />
+        <image
+          v-if="showImage"
+          :href="charImage"
+          x="32" y="39" width="256" height="256"
+          mask="url(#mask-g)"
+          preserveAspectRatio="xMidYMax meet"
+          @error="showImage = false"
         />
         <text
           v-if="!showImage"

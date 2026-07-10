@@ -38,6 +38,7 @@ const routes = [
     path: '/dex',
     name: 'dex',
     component: () => import('../views/DexView.vue'),
+    beforeEnter: () => { _prefetch('characterIndex', 'data/character_index.json') },
     meta: { navKey: 'navGuide' },
   },
   {
@@ -48,12 +49,14 @@ const routes = [
     path: '/collection/:code?',
     name: 'collection',
     component: () => import('../views/CollectionView.vue'),
+    beforeEnter: () => { _prefetch('characterIndex', 'data/character_index.json') },
     meta: { navKey: 'navCollection' },
   },
   {
     path: '/skills',
     name: 'skills',
     component: () => import('../views/SkillListView.vue'),
+    beforeEnter: () => { _prefetch('skills', 'data/skills.json') },
     meta: { navKey: 'navSkills' },
   },
   {

@@ -6,13 +6,12 @@ import PaginationBar from '../components/PaginationBar.vue'
 import CharacterGrid from '../components/CharacterGrid.vue'
 import { useFilters } from '../composables/useFilters'
 import { useCharacterData } from '../composables/useCharacterData'
-import { useTraitData } from '../composables/useTraitData'
 
 defineOptions({ name: 'DexView' })
 
 const headRef = ref(null)
 const { resetFilters, pagedCharacters } = useFilters()
-const { indexLoaded, loadIndex } = useCharacterData()
+const { indexLoaded, loadIndex, loadSkills, loadTraits } = useCharacterData()
 
 const isEmpty = computed(() => pagedCharacters.value.length === 0)
 
@@ -39,8 +38,8 @@ function teardownObserver() {
 
 onMounted(async () => {
   await loadIndex()
-  const { load: loadTraits } = useTraitData()
   loadTraits()
+  loadSkills()
   resetFilters()
   setupObserver()
 })

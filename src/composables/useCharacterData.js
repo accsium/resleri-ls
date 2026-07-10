@@ -8,6 +8,8 @@ const indexLoaded = ref(false)
 // 实体 Map — 按需加载，初始为空
 const skillsMap = shallowRef({})
 const abilitiesMap = shallowRef({})
+const battleTraits = ref([])
+const equipTraits = ref([])
 const traitColorMap = shallowRef({})
 const baseCharacterMap = shallowRef({})
 const originalTitleMap = shallowRef({})
@@ -93,6 +95,19 @@ export function useCharacterData() {
     return abilitiesMap.value
   }
 
+  async function loadTraits() {
+    const done = trackData(battleTraits.value.length > 0)
+    if (battleTraits.value.length === 0) {
+      const [bt, et] = await Promise.all([
+        _loadEntity('battle_tool_trait.json'),
+        _loadEntity('equipment_tool_trait.json'),
+      ])
+      battleTraits.value = bt
+      equipTraits.value = et
+    }
+    done()
+  }
+
   async function loadEntityMap(file, ref) {
     const done = trackData(Object.keys(ref.value).length > 0)
     if (Object.keys(ref.value).length === 0) {
@@ -108,10 +123,10 @@ export function useCharacterData() {
 
   return {
     characterIndex, indexLoaded, loadIndex,
-    skillsMap, abilitiesMap, traitColorMap, baseCharacterMap, originalTitleMap, characterTagMap, buildTime,
+    skillsMap, abilitiesMap, battleTraits, equipTraits, traitColorMap, baseCharacterMap, originalTitleMap, characterTagMap, buildTime,
     seriesMap, voiceActorMap,
     getCharacterById, getSkillById, getAbilityById,
-    loadSkills, loadAbilities, loadEntityMap,
+    loadSkills, loadAbilities, loadTraits, loadEntityMap,
   }
 }
 

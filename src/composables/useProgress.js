@@ -36,14 +36,14 @@ function _trackImg(img) {
 export function startObserving(container) {
   if (_observer) _observer.disconnect()
   // 扫描已有 img
-  container.querySelectorAll('img').forEach(_trackImg)
+  container.querySelectorAll('img, image').forEach(_trackImg)
   // 监听新增
   _observer = new MutationObserver((mutations) => {
     for (const m of mutations) {
       for (const node of m.addedNodes) {
         if (node.nodeType !== 1) continue
-        if (node.tagName === 'IMG') _trackImg(node)
-        if (node.querySelectorAll) node.querySelectorAll('img').forEach(_trackImg)
+        if (node.tagName === 'IMG' || node.tagName === 'image') _trackImg(node)
+        if (node.querySelectorAll) node.querySelectorAll('img, image').forEach(_trackImg)
       }
     }
   })
@@ -51,5 +51,5 @@ export function startObserving(container) {
 }
 
 export function scanImages(container) {
-  container.querySelectorAll('img').forEach(_trackImg)
+  container.querySelectorAll('img, image').forEach(_trackImg)
 }

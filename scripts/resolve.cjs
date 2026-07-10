@@ -300,7 +300,7 @@ function buildCharacterEntry(character) {
   const fesName = getFesName(char.start_at);
   let permanent_status = null;
   let permanent_date = null;
-  if (permExcludeIds.has(char.id)) {
+  if (permExcludeIds.has(char.id) || (char.tag_ids || []).includes(38)) {
     permanent_status = 'limited';
   } else if (fesName === 'ATELIER FES') {
     permanent_status = 'fes_0';

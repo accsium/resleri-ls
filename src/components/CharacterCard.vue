@@ -2,7 +2,6 @@
 import { ref, computed, nextTick, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
-import { useTraitData } from '../composables/useTraitData'
 import { useCardState } from '../composables/useCardState'
 import { fmtDate } from '../utils/date.js'
 import AvatarDisplay from './AvatarDisplay.vue'
@@ -20,8 +19,7 @@ const props = defineProps({
 const kid = ++cardUid + '-' + props.indexEntry.id
 
 const { t, currentLang, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
-const { getCharacterById, baseCharacterMap, traitColorMap, originalTitleMap, characterTagMap, skillsMap, seriesMap, voiceActorMap } = useCharacterData()
-const { battleTraits, equipTraits } = useTraitData()
+const { getCharacterById, baseCharacterMap, traitColorMap, originalTitleMap, characterTagMap, skillsMap, seriesMap, voiceActorMap, battleTraits, equipTraits } = useCharacterData()
 const { getCardState, setCardState } = useCardState()
 
 const expanded = ref(false)
