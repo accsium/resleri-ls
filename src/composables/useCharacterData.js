@@ -37,7 +37,7 @@ async function _loadEntity(file) {
 // 模块级：加载 character_index + 小实体文件
 async function _doLoadIndex() {
   try {
-    const [idx, baseChar, traitColor, originalTitle, tagData, seriesData, voiceActorData] = await Promise.all([
+    const [idx, baseChar, traitColor, originalTitle, tagData, seriesData, voiceActorData, bt, et] = await Promise.all([
       _fetchJSON('data/character_index.json'),
       _fetchJSON('data/base_character.json'),
       _fetchJSON('data/trait_color.json'),
@@ -45,6 +45,8 @@ async function _doLoadIndex() {
       _fetchJSON('data/character_tag.json'),
       _fetchJSON('data/series.json'),
       _fetchJSON('data/voice_actor.json'),
+      _fetchJSON('data/battle_tool_trait.json'),
+      _fetchJSON('data/equipment_tool_trait.json'),
     ])
     characterIndex.value = idx
     baseCharacterMap.value = baseChar
@@ -55,6 +57,8 @@ async function _doLoadIndex() {
     characterTagMap.value = tagMap
     seriesMap.value = seriesData
     voiceActorMap.value = voiceActorData
+    battleTraits.value = bt
+    equipTraits.value = et
     indexLoaded.value = true
   } catch (e) {
     _loadPromise = null

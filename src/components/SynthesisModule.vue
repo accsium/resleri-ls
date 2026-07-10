@@ -2,14 +2,13 @@
 import { computed, ref, onMounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
-import { useTraitData } from '../composables/useTraitData'
 
 const props = defineProps({
   characterData: Object,
 })
 
 const { getTraitColorHex, currentLang } = useI18n()
-const { traitColorMap } = useCharacterData()
+const { traitColorMap, battleTraits, equipTraits, loadTraits } = useCharacterData()
 
 const collapsed = ref(false)
 
@@ -39,8 +38,6 @@ const etNames = computed(() => etIds.value.map(id => {
   if (!t) return ''
   return currentLang.value === 'cn' ? (t.name_cn || t.name) : t.name
 }).filter(Boolean))
-
-const { battleTraits, equipTraits, load: loadTraits } = useTraitData()
 
 const traitEffects = computed(() => {
   const map = {}

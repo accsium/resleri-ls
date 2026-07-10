@@ -3,7 +3,6 @@ import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
-import { useTraitData } from '../composables/useTraitData'
 import { useCollection } from '../composables/useCollection'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import CollectionMatrix from '../components/CollectionMatrix.vue'
@@ -14,7 +13,7 @@ import { useLocalStorage } from '../composables/useLocalStorage'
 defineOptions({ name: 'CollectionView' })
 
 const { t } = useI18n()
-const { characterIndex, indexLoaded, loadIndex } = useCharacterData()
+const { characterIndex, indexLoaded, loadIndex, loadTraits } = useCharacterData()
 const { ownedIds, ownedCount, shareCode, isOwned, toggleOwned, batchToggle, saveToStorage, loadFromCode } = useCollection()
 const { activeFilters, resetFilters } = useFilters()
 const route = useRoute()
@@ -172,7 +171,6 @@ const isLoaded = computed(() => indexLoaded.value)
 const layoutRef = ref(null)
 onMounted(async () => {
   await loadIndex()
-  const { load: loadTraits } = useTraitData()
   loadTraits()
   resetFilters()
 })

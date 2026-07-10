@@ -3,7 +3,6 @@ import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { useI18n } from '../composables/useI18n'
 import { useFilters } from '../composables/useFilters'
 import { useCharacterData } from '../composables/useCharacterData'
-import { useTraitData } from '../composables/useTraitData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
@@ -13,7 +12,7 @@ const {
   toggleFilter, resetFilters,
 } = useFilters()
 
-const { battleTraits: traitBT, equipTraits: traitET, load: loadSharedTraits } = useTraitData()
+const { battleTraits, equipTraits, loadTraits } = useCharacterData()
 
 function clearAll() {
   resetFilters()
@@ -222,8 +221,8 @@ const traitsLoaded = ref(false)
 async function loadTraitData() {
   if (traitsLoaded.value) return
   try {
-    await loadSharedTraits()
-    const [bt, et] = [traitBT.value, traitET.value]
+    await loadTraits()
+    const [bt, et] = [battleTraits.value, equipTraits.value]
     battleTraitsJa.value = groupTraits(bt, t => t.name)
     battleTraitsCn.value = groupTraits(bt, t => t.name_cn || t.name)
     equipTraitsJa.value = groupTraits(et, t => t.name)
