@@ -13,7 +13,7 @@ const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_M
 
 const columns = [
   { key: 'id', label: 'ID', width: 72 },
-  { key: 'avatar', label: '角色头像', width: 88 },
+  { key: 'avatar', label: '头像', width: 60 },
   { key: 'name', label: '角色名', minWidth: 240, sortVal: (row) => baseName(row) },
   { key: 'attr', label: '属性', width: 56, align: 'center', sortVal: (row) => row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999 },
   { key: 'role', label: '职业', width: 56, align: 'center', sortVal: (row) => row.role || 999 },
@@ -45,7 +45,7 @@ onMounted(() => { loadIndex() })
     avatarAlias="uid"
   >
     <template #cell-avatar="{ row }">
-      <AvatarDisplay :index-entry="row" :size="60" feature="full" />
+      <AvatarDisplay :index-entry="row" :size="48" feature="full" />
     </template>
     <template #cell-name="{ row }">
       {{ baseName(row) }}<template v-if="row.another_name"> <span class="alias-text">{{ row.another_name }}</span></template>

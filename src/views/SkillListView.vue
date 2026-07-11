@@ -250,7 +250,7 @@ function onSort(col) { onTableSort(col) }
     <template #cell-id="{ row }">{{ row.char_id }}</template>
     <template #cell-avatar="{ row }">
       <div class="ls-avatar-cell">
-        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :size="72" />
+        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :size="80" />
       </div>
     </template>
     <template #cell-name="{ row }">

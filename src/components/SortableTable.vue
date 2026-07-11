@@ -200,7 +200,6 @@ function cellStyle(col) {
   background: var(--st-header-bg);
   color: var(--st-header-text);
   font-weight: 600;
-  padding: 10px 12px;
   text-align: left;
   cursor: pointer;
   white-space: nowrap;
@@ -210,11 +209,10 @@ function cellStyle(col) {
 .st-table td {
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 8px 12px;
+  padding: 0px 12px;
   vertical-align: middle;
+  height: 24px;
 }
-.st-table th { height: 40px; }
-.st-table td { height: 88px; overflow: hidden; }
 .st-table th:last-child,
 .st-table td:last-child {
   border-right: none;

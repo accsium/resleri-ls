@@ -14,10 +14,10 @@ const columns = [
   { key: 'id', label: 'ID', width: 72 },
   { key: 'start_at', label: '开始日期', width: 140 },
   { key: 'end_at', label: '结束日期', width: 140 },
-  { key: 'name', label: '卡池名', minWidth: 300 },
-  { key: 'gacha_type', label: 'gacha_type', width: 80 },
+  { key: 'name', label: '卡池名', minWidth: 200 },
+  { key: 'characters', label: '角色', minWidth: 100 },  
   { key: 'picked_up_memoria_ids', label: 'picked_up_memoria_ids', minWidth: 100 },
-  { key: 'characters', label: '角色', minWidth: 100 },
+
 ]
 
 const CATEGORIES = ['LEGEND FES', '有償限定', '衣装調合', '其他']
@@ -88,7 +88,7 @@ onMounted(async () => {
               <AvatarDisplay
                 v-if="charMap[cid]"
                 :indexEntry="charMap[cid]"
-                :size="36"
+                :size="48"
               />
             </template>
           </span>

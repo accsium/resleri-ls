@@ -12,7 +12,7 @@ const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = 
 
 const columns = [
   { key: 'id', label: 'ID', width: 72 },
-  { key: 'avatar', label: '头像', width: 52 },
+  { key: 'avatar', label: '头像', width: 60 },
   { key: 'name', label: '角色名', minWidth: 200, sortVal: (row) => baseName(row, currentLang.value) },
   { key: 'attr', label: '属性', width: 56, align: 'center', sortVal: (row) => row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999 },
   { key: 'role', label: '职业', width: 56, align: 'center', sortVal: (row) => row.role || 999 },
@@ -59,7 +59,7 @@ onMounted(() => { loadIndex() })
     <template #cell-id="{ row }">{{ row.id }}</template>
     <template #cell-avatar="{ row }">
       <div style="text-align:center;line-height:0">
-        <AvatarDisplay v-if="charIndexMap[row.id]" :indexEntry="charIndexMap[row.id]" :size="36" />
+        <AvatarDisplay v-if="charIndexMap[row.id]" :indexEntry="charIndexMap[row.id]" :size="48" />
       </div>
     </template>
     <template #cell-name="{ row }">
