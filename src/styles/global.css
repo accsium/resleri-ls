@@ -426,7 +426,7 @@ input[type="text"] {
 .cb-tags-label { font-size: 10px; color: var(--text-muted); white-space: nowrap; }
 .cb-tags-items { display: flex; flex-wrap: wrap; gap: 4px; }
 
-.char-id, .release-date, .cb-fullname, .cb-overlay-name {
+.char-id, .release-date, .cb-fullname, .cb-overlay-name, .cb-attrs {
   font-size: 10px; color: var(--text-muted); margin-bottom: 1px;
 }
 .perm-not { color: var(--hl-paren); }
@@ -734,7 +734,7 @@ input:checked + .slider::before { transform: translateX(16px); }
 
   .card-body { flex-direction: column; gap: 6px; }
 
-  .cb-attrs  { display: block; font-size: 10px; color: var(--text-muted); margin-bottom: 4px; }
+  .cb-attrs  { display: block; }
   .cb-stats  { display: none; }
 
   .mobile-stats { display: block; }
