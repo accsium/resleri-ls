@@ -308,7 +308,7 @@ function _parseSelectId(val) {
           :class="{ active: selectedRoles.includes(id) }"
           @click="toggleRole(id)"
         >
-          <IconDisplay type="role" :id="id" :size="24" :alt="roleMap[id]" />
+          <IconDisplay type="role" :id="id" :size="0" :alt="roleMap[id]" />
         </button>
       </div>
       <div class="sf-divider"></div>
@@ -319,7 +319,7 @@ function _parseSelectId(val) {
           :class="{ active: selectedAttrs.includes(id) }"
           @click="toggleAttr(id)"
         >
-          <IconDisplay type="attribute" :id="id" :size="24" :alt="attrMap[id]" />
+          <IconDisplay type="attribute" :id="id" :size="0" :alt="attrMap[id]" />
         </button>
       </div>
       <div class="sf-spacer"></div>

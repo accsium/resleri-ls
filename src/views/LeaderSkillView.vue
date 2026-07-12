@@ -45,7 +45,7 @@ onMounted(() => { loadIndex() })
     avatarAlias="uid"
   >
     <template #cell-avatar="{ row }">
-      <AvatarDisplay :index-entry="row" :size="48" feature="full" />
+      <AvatarDisplay :index-entry="row" :size="3" feature="full" />
     </template>
     <template #cell-name="{ row }">
       {{ baseName(row) }}<template v-if="row.another_name"> <span class="alias-text">{{ row.another_name }}</span></template>

@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { useI18n } from '../composables/useI18n'
+import { useI18n, SIZE_SCALE } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
@@ -10,7 +10,7 @@ const { getTraitColorHex, currentLang } = useI18n()
 
 const props = defineProps({
   indexEntry: Object,
-  size: { type: Number, default: 100 },
+  size: { type: Number, default: 8 },
   kid: { type: String, default: '' },
 })
 
@@ -61,11 +61,13 @@ const textScale = computed(() => {
   return Math.min(1, 320 / (BASE_FONT * maxW))
 })
 
+const sizePx = computed(() => SIZE_SCALE[props.size])
+
 </script>
 
 <template>
-  <div class="avatar-component" :style="{ width: size + 'px', height: size + 'px' }">
-    <div :style="{ position: 'absolute', top: 0, left: 0, width: canvasSize + 'px', height: canvasSize + 'px', transform: 'scale(' + (size / canvasSize) + ')', transformOrigin: '0 0' }">
+  <div class="avatar-component" :style="{ width: sizePx + 'px', height: sizePx + 'px' }">
+    <div :style="{ position: 'absolute', top: 0, left: 0, width: canvasSize + 'px', height: canvasSize + 'px', transform: 'scale(' + (sizePx / canvasSize) + ')', transformOrigin: '0 0' }">
       <svg
         :width="canvasSize" :height="canvasSize"
         viewBox="0 0 320 320"
@@ -106,10 +108,10 @@ const textScale = computed(() => {
         </text>
       </svg>
       <div v-if="roleId" class="overlay-icon overlay-icon-left">
-        <IconDisplay type="role" :id="roleId" :size="100" />
+        <IconDisplay type="role" :id="roleId" :size="8" />
       </div>
       <div v-if="attributeId" class="overlay-icon overlay-icon-right">
-        <IconDisplay type="attribute" :id="attributeId" :size="100" />
+        <IconDisplay type="attribute" :id="attributeId" :size="8" />
       </div>
       <div v-if="starDisplayCount > 0"
         :style="{

@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
-import { useI18n } from '../composables/useI18n'
+import { useI18n, SIZE_SCALE } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useCollection } from '../composables/useCollection'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
@@ -20,23 +20,22 @@ const route = useRoute()
 
 // ── 视图模式 ──
 // ── UI 状态持久化 ──
+const SEQ_LEVELS = [3, 5, 7, 8, 9, 10, 11, 12]
+const MAT_LEVELS = [0, 1, 2, 3, 4, 5, 6, 7]
+
 const viewMode = useLocalStorage('resleri-ui-viewMode', 'sequential')
-const seqSize = useLocalStorage('resleri-ui-seqSize', 96)
-const matSize = useLocalStorage('resleri-ui-matSize', 48)
+const seqSize = useLocalStorage('resleri-ui-seqLevel', 8)
+const matSize = useLocalStorage('resleri-ui-matLevel', 3)
 const colorMode = useLocalStorage('resleri-ui-colorMode', false)
 const sizeSteps = computed(() => {
-  const min = viewMode.value === 'sequential' ? 48 : 24
-  const max = viewMode.value === 'sequential' ? 160 : 80
-  const step = viewMode.value === 'sequential' ? 16 : 8
+  const levels = viewMode.value === 'sequential' ? SEQ_LEVELS : MAT_LEVELS
   const cur = viewMode.value === 'sequential' ? seqSize.value : matSize.value
-  const steps = []
-  for (let s = min; s <= max; s += step) steps.push({ val: s, active: s === cur, below: s < cur })
-  return steps
+  return levels.map(val => ({ val, active: val === cur, below: val < cur }))
 })
 const seqGridStyle = computed(() => ({
-  gridTemplateColumns: `repeat(auto-fill, ${seqSize.value}px)`,
-  gridAutoRows: `${seqSize.value}px`,
-  '--item-w': `${seqSize.value}px`,
+  gridTemplateColumns: `repeat(auto-fill, ${SIZE_SCALE[seqSize.value]}px)`,
+  gridAutoRows: `${SIZE_SCALE[seqSize.value]}px`,
+  '--item-w': `${SIZE_SCALE[seqSize.value]}px`,
 }))
 
 // ── 从 URL 分享码初始化 ──

@@ -211,7 +211,7 @@ function onSort(col) { onTableSort(col) }
     <button v-for="id in ATTR_IDS" :key="'a'+id"
       class="sf-icon-btn" :class="{ active: activeFilters.attr.includes(id) }"
       @click="toggleFilter('attr', id)"
-    ><IconDisplay type="attribute" :id="id" :size="24" /></button>
+    ><IconDisplay type="attribute" :id="id" :size="0" /></button>
     <span class="skf-sep"></span>
     <span class="skf-label">种类</span>
     <label v-for="t in TYPE_KEYS" :key="'t'+t" class="skf-check">
@@ -250,7 +250,7 @@ function onSort(col) { onTableSort(col) }
     <template #cell-id="{ row }">{{ row.char_id }}</template>
     <template #cell-avatar="{ row }">
       <div class="ls-avatar-cell">
-        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :size="80" />
+        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :size="7" />
       </div>
     </template>
     <template #cell-name="{ row }">

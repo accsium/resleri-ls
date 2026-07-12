@@ -1,16 +1,16 @@
 <script setup>
 import { computed } from 'vue'
-import { useI18n } from '../composables/useI18n'
+import { useI18n, SIZE_SCALE } from '../composables/useI18n'
 import AvatarDisplay from './AvatarDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
 const props = defineProps({
   characters: { type: Array, required: true },
   ownedSet: { type: Object, required: true },
-  size: { type: Number, default: 56 },
+  size: { type: Number, default: 4 },
 })
 
-const sizePx = computed(() => props.size + 'px')
+const sizePx = computed(() => SIZE_SCALE[props.size] + 'px')
 
 const emit = defineEmits(['pointerdown', 'pointermove', 'pointerup'])
 
@@ -57,7 +57,7 @@ function getCell(rid, aid) {
       <tr>
         <th class="matrix-corner"></th>
         <th v-for="rid in ROLE_IDS" :key="'rh'+rid" class="matrix-role-hd">
-          <IconDisplay type="role" :id="rid" :size="18" />
+          <IconDisplay type="role" :id="rid" :size="0" />
           <span>{{ roleMap[rid] }}</span>
         </th>
       </tr>
@@ -65,7 +65,7 @@ function getCell(rid, aid) {
     <tbody>
       <tr v-for="aid in ATTR_IDS" :key="'ar'+aid">
         <td class="matrix-attr-label">
-          <IconDisplay type="attribute" :id="aid" :size="18" />
+          <IconDisplay type="attribute" :id="aid" :size="0" />
           <span>{{ attrMap[aid] }}</span>
         </td>
         <td v-for="rid in ROLE_IDS" :key="'c'+rid+'-'+aid" class="matrix-cell">

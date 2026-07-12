@@ -88,7 +88,7 @@ onMounted(async () => {
               <AvatarDisplay
                 v-if="charMap[cid]"
                 :indexEntry="charMap[cid]"
-                :size="48"
+                :size="3"
               />
             </template>
           </span>

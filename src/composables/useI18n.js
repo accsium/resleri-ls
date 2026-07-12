@@ -94,6 +94,8 @@ const ROLE_MAP    = { 1: '攻', 2: '破', 3: '防', 4: '輔' }
 const ROLE_MAP_CN = { 1: '攻', 2: '破', 3: '防', 4: '辅' }
 const TRAIT_COLOR_HEX = { 1: '#3498DB', 2: '#9B59B6', 3: '#F1C40F', 4: '#E74C3C', 5: '#2ECC71' }
 
+export const SIZE_SCALE = [24, 32, 40, 48, 56, 64, 72, 80, 96, 112, 128, 144, 160, 320]
+
 const SORT_FIELDS = [
   { field: 'start_at',    label_ja: '実装日',   label_cn: '加入时间' },
   { field: 'id',          label_ja: 'ID',        label_cn: 'ID' },
