@@ -7,8 +7,17 @@ const pipelineConfig = safeReadJSON(
   path.join(__dirname, '..', 'config', 'pipeline.json')
 );
 const rawDir = path.join(__dirname, '..', pipelineConfig.dataRawDir);
-const langDir = path.join(__dirname, '..', 'data', 'language');
+const langDir = path.join(__dirname, '..', 'data', 'translation');
 const outDir = path.join(__dirname, '..', 'data', 'output');
+
+// 加载 path_hash_to_name 映射表
+const hashPath = path.join(rawDir, 'path_hash_to_name.json');
+let hashToName = new Map();
+if (fs.existsSync(hashPath)) {
+  const hashData = safeReadJSON(hashPath);
+  hashToName = new Map(Object.entries(hashData));
+  console.log(`📋 已加载 path_hash_to_name：${hashToName.size} 条`);
+}
 
 // ========== 1. 加载实体表 ==========
 const tables = {};
@@ -263,6 +272,14 @@ function diffObjects(base, alt) {
 
 function buildCharacterEntry(character) {
   const char = JSON.parse(JSON.stringify(character));
+
+  // image_M：从 still_sets[0] 取 large_still_path_hash 并查表
+  let image_M = null;
+  if (char.still_sets && char.still_sets.length > 0) {
+    const hash = char.still_sets[0].large_still_path_hash;
+    image_M = hashToName.get(String(hash)) || null;
+  }
+
   const cnFallback = (id, mapName) =>
     cnMaps[mapName]?.get(id) || jpMaps[mapName]?.get(id) || `ID:${id}`;
 
@@ -408,6 +425,7 @@ function buildCharacterEntry(character) {
       board3: char.board_ability3_ids || [],
       support: char.support_ability_ids || [],
     },
+    image_M,
   };
 
   if (normalEx.length > 0) entry.skills.ex = normalEx;
@@ -437,6 +455,11 @@ function buildCharacterEntry(character) {
       }
       if (Object.keys(evoSkills).length > 0) {
         switchStat.skills = evoSkills;
+      }
+      // 进化形态 image_M
+      const evoStillSet = (character.still_sets || []).find(s => s.rarity === character.max_rarity);
+      if (evoStillSet?.large_still_path_hash) {
+        switchStat.image_M = hashToName.get(String(evoStillSet.large_still_path_hash)) || null;
       }
       entry.switch_stat = switchStat;
     }

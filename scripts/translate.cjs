@@ -8,7 +8,7 @@ const pipelineConfig = safeReadJSON(
 
 const rootDir = path.join(__dirname, '..');
 const rawDir = path.join(rootDir, pipelineConfig.dataRawDir);
-const langDir = path.join(rootDir, 'data', 'language');
+const langDir = path.join(rootDir, 'data', 'translation');
 const untransDir = path.join(langDir, 'untranslated');
 
 // 加载 effect / ability 用于生成 trait 效果描述

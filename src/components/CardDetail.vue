@@ -58,6 +58,7 @@ const activeChar = computed(() => {
       skills: st.skills || base.skills,
       abilities: st.abilities || base.abilities,
       leader_skill: st.leader_skill || base.leader_skill,
+      image_M: st.image_M ?? base.image_M,
     }
   }
   // evolve

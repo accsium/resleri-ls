@@ -7,7 +7,7 @@ const pipelineConfig = safeReadJSON(
 );
 
 const srcDir = path.join(__dirname, '..', 'data', 'raw', 'jp');
-const destDir = path.join(__dirname, '..', 'data', 'selection');
+const destDir = path.join(__dirname, '..', pipelineConfig.dataRawDir);
 
 if (!fs.existsSync(srcDir)) {
   console.error(`❌ data/raw/jp/ 目录不存在`);
@@ -41,6 +41,13 @@ for (const [name, config] of Object.entries(pipelineConfig.translationFiles)) {
   } else {
     console.warn(`  ⚠ ${config.file} 不存在`);
   }
+}
+
+// 复制 path_hash_to_name.json 到 raw_select 目录
+const hashFile = path.join(__dirname, '..', 'data', 'raw', 'path_hash_to_name.json');
+if (fs.existsSync(hashFile)) {
+  fs.copyFileSync(hashFile, path.join(destDir, 'path_hash_to_name.json'));
+  console.log('  ✓ path_hash_to_name.json');
 }
 
 console.log('✅ 完成');

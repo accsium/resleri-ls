@@ -12,6 +12,7 @@ const props = defineProps({
   indexEntry: Object,
   size: { type: Number, default: 8 },
   kid: { type: String, default: '' },
+  imageM: { type: String, default: null },
 })
 
 const canvasSize = 320
@@ -29,7 +30,11 @@ const starDisplayCount = computed(() => {
   return Math.floor(level) + (hasHalf ? 1 : 0)
 })
 
-const charImage = computed(() => `image/character/${props.indexEntry.id}.png`)
+const charImage = computed(() => {
+  const img = props.imageM || props.indexEntry.image_M
+  if (!img) return null
+  return `image/character/${img}.webp`
+})
 const imageLoaded = ref(false)
 
 const { baseCharacterMap } = useCharacterData()
@@ -86,6 +91,7 @@ const sizePx = computed(() => SIZE_SCALE[props.size])
           preserveAspectRatio="xMidYMax meet"
         />
         <image
+          v-if="charImage"
           :href="charImage"
           x="32" y="39" width="256" height="256"
           mask="url(#mask-g)"

@@ -47,14 +47,14 @@ npm run preview          # 预览构建结果
 
 ```
 npm run data-conversion
-  ├── rm -rf data/output/ data/selection/            （清理上次产物）
-  ├── npm run selection     → scripts/select.cjs     （文件筛选 → data/selection/）
-  ├── npm run prepare-data  → scripts/translate.cjs  （翻译处理，读取 data/selection/ 和 data/language/）
+  ├── rm -rf data/output/ data/raw_select/            （清理上次产物）
+  ├── npm run selection     → scripts/select.cjs     （文件筛选 → data/raw_select/）
+  ├── npm run prepare-data  → scripts/translate.cjs  （翻译处理，读取 data/raw_select/ 和 data/translation/）
   └── npm run data          → scripts/resolve.cjs    （关系解析 + 输出 → data/output/）
 ```
 
-- `data/selection/` — 中间产物，不提交（`.gitignore` 排除）
-- `data/language/` — 翻译文件（JSON），含 `untranslated/` 子目录存放新增未翻译词条
+- `data/raw_select/` — 中间产物，不提交（`.gitignore` 排除）
+- `data/translation/` — 翻译文件（JSON），含 `untranslated/` 子目录存放新增未翻译词条
 - `data/output/` — 最终数据，提交到仓库：
 
 | 文件 | 说明 |
@@ -120,8 +120,8 @@ resleri-ls/
 ├── config/                # 配置文件（手动维护）
 ├── data/
 │   ├── raw/jp/            # 原始 masterdata（已提交）
-│   ├── language/          # 翻译文件 + untranslated/
-│   ├── selection/         # 中间产物（不提交）
+│   ├── translation/          # 翻译文件 + untranslated/
+│   ├── raw_select/         # 中间产物（不提交）
 │   └── output/            # 处理后数据（已提交）
 ├── image/
 │   ├── character/         # 角色头像（以角色 ID 命名的 PNG）
