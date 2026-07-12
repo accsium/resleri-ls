@@ -48,7 +48,7 @@ const STATE_LABEL = {
 const TYPE_LABEL = { normal1:'一技能', normal2:'二技能', burst:'爆发技能', active:'主动技能', ex:'EX技能' }
 const TYPE_KEYS = ['normal1','normal2','burst','active','ex']
 const STATE_KEYS = ['进化前','进化後','内圈','外圈','变身前','変身後','—']
-const WT_OPTS = [0,75,100,175,200,275,300]
+const WT_OPTS = [0,75,100,150,175,200,225,275,300]
 const TARGET_KEYS = ['友方','敌方','单体','全体','其他']
 const searchText = ref('')
 
