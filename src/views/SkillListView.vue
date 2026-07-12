@@ -207,33 +207,46 @@ function onSort(col) { onTableSort(col) }
   <div v-if="!indexLoaded" class="loading">{{ t('loading') }}</div>
   <template v-else>
   <div class="skf-bar">
-    <span class="skf-label">属性</span>
-    <button v-for="id in ATTR_IDS" :key="'a'+id"
-      class="sf-icon-btn" :class="{ active: activeFilters.attr.includes(id) }"
-      @click="toggleFilter('attr', id)"
-    ><IconDisplay type="attribute" :id="id" :size="0" /></button>
-    <span class="skf-sep"></span>
-    <span class="skf-label">种类</span>
-    <label v-for="t in TYPE_KEYS" :key="'t'+t" class="skf-check">
-      <input type="checkbox" :checked="activeFilters.type.includes(t)" @change="toggleFilter('type',t)">{{ TYPE_LABEL[t] }}
-    </label>
-    <span class="skf-sep"></span>
-    <span class="skf-label">状态</span>
-    <label v-for="s in STATE_KEYS" :key="'s'+s" class="skf-check">
-      <input type="checkbox" :checked="activeFilters.state.includes(s)" @change="toggleFilter('state',s)">{{ s === '—' ? '其他' : s }}
-    </label>
-    <span class="skf-sep"></span>
-    <span class="skf-label">对象</span>
-    <label v-for="t in TARGET_KEYS" :key="'tg'+t" class="skf-check">
-      <input type="checkbox" :checked="activeFilters.target.includes(t)" @change="toggleFilter('target',t)">{{ t }}
-    </label>
-    <span class="skf-sep"></span>
-    <span class="skf-label">WT</span>
-    <label v-for="w in WT_OPTS" :key="'w'+w" class="skf-check">
-      <input type="checkbox" :checked="activeFilters.wt.includes(w)" @change="toggleFilter('wt',w)">{{ w }}
-    </label>
-    <span class="skf-sep"></span>
-    <input type="text" v-model="searchText" placeholder="搜索技能名或描述..." class="skf-search">
+    <div class="skf-row">
+      <div class="skf-group">
+        <span class="skf-label">属性</span>
+        <button v-for="id in ATTR_IDS" :key="'a'+id"
+          class="sf-icon-btn" :class="{ active: activeFilters.attr.includes(id) }"
+          @click="toggleFilter('attr', id)"
+        ><IconDisplay type="attribute" :id="id" :size="0" /></button>
+      </div>
+      <span class="skf-sep"></span>
+      <div class="skf-group">
+        <span class="skf-label">种类</span>
+        <label v-for="t in TYPE_KEYS" :key="'t'+t" class="skf-check">
+          <input type="checkbox" :checked="activeFilters.type.includes(t)" @change="toggleFilter('type',t)">{{ TYPE_LABEL[t] }}
+        </label>
+      </div>
+    </div>
+    <div class="skf-row">
+      <div class="skf-group">
+        <span class="skf-label">状态</span>
+        <label v-for="s in STATE_KEYS" :key="'s'+s" class="skf-check">
+          <input type="checkbox" :checked="activeFilters.state.includes(s)" @change="toggleFilter('state',s)">{{ s === '—' ? '其他' : s }}
+        </label>
+      </div>
+      <span class="skf-sep"></span>
+      <div class="skf-group">
+        <span class="skf-label">对象</span>
+        <label v-for="t in TARGET_KEYS" :key="'tg'+t" class="skf-check">
+          <input type="checkbox" :checked="activeFilters.target.includes(t)" @change="toggleFilter('target',t)">{{ t }}
+        </label>
+      </div>
+    </div>
+    <div class="skf-row">
+      <div class="skf-group">
+        <span class="skf-label">WT</span>
+        <label v-for="w in WT_OPTS" :key="'w'+w" class="skf-check">
+          <input type="checkbox" :checked="activeFilters.wt.includes(w)" @change="toggleFilter('wt',w)">{{ w }}
+        </label>
+      </div>
+      <input type="text" v-model="searchText" placeholder="搜索技能名或描述..." class="skf-search">
+    </div>
   </div>
   <PaginationBar
     :currentPage="slPage" :pageSize="slPageSize"
@@ -284,12 +297,19 @@ function onSort(col) { onTableSort(col) }
 
 <style scoped>
 .skf-bar {
-  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  display: grid; gap: 4px;
   padding: 8px 16px;
   background: var(--bg-banner); border-radius: var(--radius-lg);
   margin: 8px auto 0; width: 90%; max-width: 840px;
 }
-.skf-label { font-size: 12px; color: var(--text-muted); white-space: nowrap; }
+.skf-row {
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+}
+.skf-group {
+  display: flex; flex-wrap: nowrap; align-items: center; gap: 4px;
+}
+.skf-label { font-size: 12px; color: var(--text-muted); white-space: nowrap; display: inline-block; width: 32px; }
+.skf-label::after { content: '：'; }
 .skf-sep { width: 1px; height: 20px; background: var(--overlay-white-15); margin: 0 4px; }
 .skf-check { display: flex; align-items: center; gap: 2px; cursor: pointer; font-size: 12px; color: var(--text-muted); }
 .skf-check input { accent-color: var(--accent); }
@@ -297,6 +317,7 @@ function onSort(col) { onTableSort(col) }
   width: 180px; font-size: 12px; padding: var(--inp-padding);
   background: var(--overlay-white-08); color: var(--text-light);
   border: 1px solid var(--overlay-white-15); border-radius: var(--radius);
+  margin-left: auto;
 }
 .skf-search::placeholder { color: var(--text-muted); }
 .skf-search:focus { border-color: var(--accent); }

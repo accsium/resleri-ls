@@ -295,6 +295,7 @@ input[type="text"] {
 .tag-field { --tag-col: 140px; height: auto; flex: 1 1 auto; min-width: var(--tag-col); }
 .tag-field .sf-field-items { display: grid; grid-template-columns: repeat(auto-fill, var(--tag-col)); grid-auto-rows: 32px; gap: 0 4px; }
 .sf-label { font-size: 12px; color: var(--text-muted); flex-shrink: 0; white-space: nowrap; }
+.sf-label::after { content: '：'; }
 .sf-spacer { flex: 1; }
 .sf-right-group { display: flex; align-items: center; gap: 8px; flex-shrink: 0; margin-left: auto; }
 .sf-icons { gap: 1px; }

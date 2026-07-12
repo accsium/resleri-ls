@@ -302,6 +302,7 @@ function _parseSelectId(val) {
       </div>
       <div class="sf-divider"></div>
       <div class="sf-group sf-icons">
+        <span class="sf-label">职业</span>
         <button
           v-for="id in ROLE_IDS" :key="'r'+id"
           class="sf-icon-btn"
@@ -313,6 +314,7 @@ function _parseSelectId(val) {
       </div>
       <div class="sf-divider"></div>
       <div class="sf-group sf-icons">
+        <span class="sf-label">属性</span>
         <button
           v-for="id in ATTR_IDS" :key="'a'+id"
           class="sf-icon-btn"

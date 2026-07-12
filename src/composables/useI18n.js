@@ -99,6 +99,7 @@ export const SIZE_SCALE = [24, 32, 40, 48, 56, 64, 72, 80, 96, 112, 128, 144, 16
 const SORT_FIELDS = [
   { field: 'start_at',    label_ja: '実装日',   label_cn: '加入时间' },
   { field: 'id',          label_ja: 'ID',        label_cn: 'ID' },
+  { field: 'initial_rarity', label_ja: '初期レア', label_cn: '初始星级' },
   { field: 'tag_count',   label_ja: 'タグ数',   label_cn: '标签数' },
   { field: 'hp',          label_ja: 'HP',        label_cn: 'HP' },
   { field: 'speed',       label_ja: '速度',     label_cn: '速度' },
