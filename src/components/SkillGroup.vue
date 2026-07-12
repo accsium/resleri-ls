@@ -1,15 +1,23 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { useI18n } from '../composables/useI18n'
+import { useCharacterData } from '../composables/useCharacterData'
 import IconDisplay from './IconDisplay.vue'
 
 const props = defineProps({
   skillType: Object,
 })
 
-const { t, getField, ATTR_MAP, ATTR_MAP_CN, currentLang } = useI18n()
+const { t, getField, currentLang } = useI18n()
+const { attrMap: attrData } = useCharacterData()
 
-const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
+const attrMap = computed(() => {
+  const m = {}
+  for (const [id, entry] of Object.entries(attrData.value)) {
+    m[id] = getField(entry, 'name')
+  }
+  return m
+})
 
 const activeIndex = ref(props.skillType.levels.length - 1)
 

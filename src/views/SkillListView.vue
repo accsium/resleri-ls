@@ -9,47 +9,61 @@ import SortableTable from '../components/SortableTable.vue'
 import PaginationBar from '../components/PaginationBar.vue'
 
 const { characterIndex, indexLoaded, skillsMap, baseCharacterMap, loadIndex, loadSkills } = useCharacterData()
-const { t, currentLang, getField, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS } = useI18n()
+const { t, currentLang, getField, ATTR_IDS } = useI18n()
 
-const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
+const { attrMap: attrData } = useCharacterData()
+const attrMap = computed(() => {
+  const m = {}
+  for (const [id, entry] of Object.entries(attrData.value)) {
+    m[id] = getField(entry, 'name')
+  }
+  return m
+})
 const charIndexMap = computed(() => {
   const m = {}; for (const c of characterIndex.value) m[c.id] = c; return m
 })
 
-const columns = [
-  { key: 'id', label: 'ID', width: 72, sortVal: (row) => row.char_id },
-  { key: 'avatar', label: '头像', width: 88 },
-  { key: 'name', label: '角色名', minWidth: 240, sortVal: (row) => getField(row, 'base_name') },
-  { key: 'type', label: '种类', minWidth: 84, align: 'center', sortVal: (row) => row.type },
-  { key: 'state', label: '状态', minWidth: 72, align: 'center', sortVal: (row) => row.state },
-  { key: 'target', label: '对象', minWidth: 84, align: 'center', sortVal: (row) => getField(row, 'target_name') },
-  { key: 'attr', label: '属性', width: 56, align: 'center', sortVal: (row) => { const idx = ATTR_IDS.indexOf(row.attack_attributes?.[0]); return idx === -1 ? 999 : idx } },
-  { key: 'dmg', label: '伤害', width: 64, align: 'center', sortVal: (row) => row.dmg_power ?? -1 },
-  { key: 'brk', label: '破防', width: 64, align: 'center', sortVal: (row) => row.break_power ?? -1 },
-  { key: 'heal', label: '治疗', width: 64, align: 'center', sortVal: (row) => row.heal_power ?? -1 },
-  { key: 'wait', label: 'WT', width: 56, align: 'center', sortVal: (row) => row.wt ?? 9999 },
-  { key: 'limit', label: '限制', width: 56, align: 'center', sortVal: (row) => row.limit_count ?? 0 },
-  { key: 'skillName', label: '技能名', minWidth: 240, sortVal: (row) => row.name || '' },
-  { key: 'skillDesc', label: '描述', minWidth: 1200, sortVal: (row) => row.description || '' },
-]
+const columns = computed(() => [
+  { key: 'id', label: t('id'), width: 72, sortVal: (row) => row.char_id },
+  { key: 'avatar', label: t('avatar'), width: 88 },
+  { key: 'name', label: t('characterName'), minWidth: 240, sortVal: (row) => getField(row, 'base_name') },
+  { key: 'type', label: t('skillTypeLabel'), minWidth: 84, align: 'center', sortVal: (row) => row.type },
+  { key: 'state', label: t('skillStateLabel'), minWidth: 72, align: 'center', sortVal: (row) => row.state },
+  { key: 'target', label: t('target'), minWidth: 84, align: 'center', sortVal: (row) => getField(row, 'target_name') },
+  { key: 'attr', label: t('attribute'), width: 56, align: 'center', sortVal: (row) => { const idx = ATTR_IDS.indexOf(row.attack_attributes?.[0]); return idx === -1 ? 999 : idx } },
+  { key: 'dmg', label: t('damage'), width: 64, align: 'center', sortVal: (row) => row.dmg_power ?? -1 },
+  { key: 'brk', label: t('breakDef'), width: 64, align: 'center', sortVal: (row) => row.break_power ?? -1 },
+  { key: 'heal', label: t('heal'), width: 64, align: 'center', sortVal: (row) => row.heal_power ?? -1 },
+  { key: 'wait', label: t('wt'), width: 56, align: 'center', sortVal: (row) => row.wt ?? 9999 },
+  { key: 'limit', label: t('limit'), width: 56, align: 'center', sortVal: (row) => row.limit_count ?? 0 },
+  { key: 'skillName', label: t('skillName'), minWidth: 240, sortVal: (row) => row.name || '' },
+  { key: 'skillDesc', label: t('description'), minWidth: 1200, sortVal: (row) => row.description || '' },
+])
 
 // 排序用列定义 — 在 display columns 基础上补充 uid（avatarAlias 映射的虚拟键）
-const _sortCols = [
-  ...columns,
+const _sortCols = computed(() => [
+  ...columns.value,
   { key: 'uid', sortVal: (row) => (charIndexMap.value[row.char_id] || {}).uid || '' },
-]
+])
 
-const STATE_LABEL = {
-  evolve: ['进化前', '进化後'],
-  range:  ['内圈', '外圈'],
-  change: ['変身後', '变身前'],
-}
+const stateLabels = computed(() => ({
+  evolve: [t('state_evolve_base'), t('state_evolve_alt')],
+  range:  [t('state_range_base'), t('state_range_alt')],
+  change: [t('state_change_base'), t('state_change_alt')],
+}))
 
-const TYPE_LABEL = { normal1:'一技能', normal2:'二技能', burst:'爆发技能', active:'主动技能', ex:'EX技能' }
 const TYPE_KEYS = ['normal1','normal2','burst','active','ex']
-const STATE_KEYS = ['进化前','进化後','内圈','外圈','变身前','変身後','—']
+const stateKeys = computed(() => [
+  t('state_evolve_base'), t('state_evolve_alt'),
+  t('state_range_base'), t('state_range_alt'),
+  t('state_change_base'), t('state_change_alt'),
+  '—',
+])
 const WT_OPTS = [0,75,100,150,175,200,225,275,300]
-const TARGET_KEYS = ['友方','敌方','单体','全体','其他']
+const targetKeys = computed(() => {
+  const tf = t('targetFilter')
+  return [tf.ally, tf.enemy, tf.single, tf.all, tf.other]
+})
 const searchText = ref('')
 
 const activeFilters = reactive({
@@ -67,11 +81,12 @@ function formatPower(v) { return v != null ? v + '%' : '—' }
 
 function targetCat(name) {
   const cats = []
-  if (name.includes('敌方')) cats.push('敌方')
-  else if (name.includes('友方')) cats.push('友方')
-  if (name.includes('单体')) cats.push('单体')
-  else if (name.includes('全体')) cats.push('全体')
-  if (cats.length === 0) cats.push('其他')
+  const tf = t('targetFilter')
+  if (name.includes(tf.enemy)) cats.push(tf.enemy)
+  else if (name.includes(tf.ally)) cats.push(tf.ally)
+  if (name.includes(tf.single)) cats.push(tf.single)
+  else if (name.includes(tf.all)) cats.push(tf.all)
+  if (cats.length === 0) cats.push(tf.other)
   return cats
 }
 
@@ -79,12 +94,13 @@ function targetCat(name) {
 function buildSkillRows() {
   const rows = []
   const ALL_TYPES = ['normal1', 'normal2', 'burst', 'active1', 'active2', 'active3']
+  const sl = stateLabels.value
 
   for (const char of characterIndex.value) {
     const sk = char.skills || {}
     const sw = char.switch
-    const baseState = sw ? (STATE_LABEL[sw]?.[0] || '—') : '—'
-    const altState = sw ? (STATE_LABEL[sw]?.[1] || null) : null
+    const baseState = sw ? (sl[sw]?.[0] || '—') : '—'
+    const altState = sw ? (sl[sw]?.[1] || null) : null
 
     // 基础形态技能
     for (const type of ALL_TYPES) {
@@ -186,7 +202,7 @@ const filteredSkills = computed(() => {
       (r.description || '').toLowerCase().includes(q)
     )
   }
-  list = sortItems(list, _sortCols)
+  list = sortItems(list, _sortCols.value)
   return list
 })
 
@@ -209,7 +225,7 @@ function onSort(col) { onTableSort(col) }
   <div class="skf-bar">
     <div class="skf-row">
       <div class="skf-group">
-        <span class="skf-label">属性</span>
+        <span class="skf-label">{{ t('attribute') }}</span>
         <button v-for="id in ATTR_IDS" :key="'a'+id"
           class="sf-icon-btn" :class="{ active: activeFilters.attr.includes(id) }"
           @click="toggleFilter('attr', id)"
@@ -217,35 +233,35 @@ function onSort(col) { onTableSort(col) }
       </div>
       <span class="skf-sep"></span>
       <div class="skf-group">
-        <span class="skf-label">种类</span>
+        <span class="skf-label">{{ t('skillTypeLabel') }}</span>
         <label v-for="t in TYPE_KEYS" :key="'t'+t" class="skf-check">
-          <input type="checkbox" :checked="activeFilters.type.includes(t)" @change="toggleFilter('type',t)">{{ TYPE_LABEL[t] }}
+          <input type="checkbox" :checked="activeFilters.type.includes(t)" @change="toggleFilter('type',t)">{{ t('skillType')[t] }}
         </label>
       </div>
     </div>
     <div class="skf-row">
       <div class="skf-group">
-        <span class="skf-label">状态</span>
-        <label v-for="s in STATE_KEYS" :key="'s'+s" class="skf-check">
-          <input type="checkbox" :checked="activeFilters.state.includes(s)" @change="toggleFilter('state',s)">{{ s === '—' ? '其他' : s }}
+        <span class="skf-label">{{ t('skillStateLabel') }}</span>
+        <label v-for="s in stateKeys" :key="'s'+s" class="skf-check">
+          <input type="checkbox" :checked="activeFilters.state.includes(s)" @change="toggleFilter('state',s)">{{ s === '—' ? t('targetFilter').other : s }}
         </label>
       </div>
       <span class="skf-sep"></span>
       <div class="skf-group">
-        <span class="skf-label">对象</span>
-        <label v-for="t in TARGET_KEYS" :key="'tg'+t" class="skf-check">
+        <span class="skf-label">{{ t('target') }}</span>
+        <label v-for="t in targetKeys" :key="'tg'+t" class="skf-check">
           <input type="checkbox" :checked="activeFilters.target.includes(t)" @change="toggleFilter('target',t)">{{ t }}
         </label>
       </div>
     </div>
     <div class="skf-row">
       <div class="skf-group">
-        <span class="skf-label">WT</span>
+        <span class="skf-label">{{ t('wt') }}</span>
         <label v-for="w in WT_OPTS" :key="'w'+w" class="skf-check">
           <input type="checkbox" :checked="activeFilters.wt.includes(w)" @change="toggleFilter('wt',w)">{{ w }}
         </label>
       </div>
-      <input type="text" v-model="searchText" placeholder="搜索技能名或描述..." class="skf-search">
+      <input type="text" v-model="searchText" :placeholder="t('skillSearchPlaceholder')" class="skf-search">
     </div>
   </div>
   <PaginationBar
@@ -269,7 +285,7 @@ function onSort(col) { onTableSort(col) }
     <template #cell-name="{ row }">
       {{ currentLang === 'cn' ? row.base_name_cn : row.base_name_ja }}<template v-if="row.another_name"> <span class="alias-text">{{ row.another_name }}</span></template>
     </template>
-    <template #cell-type="{ row }">{{ TYPE_LABEL[row.type] || row.type }}</template>
+    <template #cell-type="{ row }">{{ t('skillType')[row.type] || row.type }}</template>
     <template #cell-state="{ row }">{{ row.state }}</template>
     <template #cell-target="{ row }">
       {{ currentLang === 'cn' ? row.target_name_cn : row.target_name_ja }}

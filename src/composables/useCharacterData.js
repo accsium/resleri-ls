@@ -17,6 +17,8 @@ const characterTagMap = shallowRef({})
 const seriesMap = shallowRef({})
 const voiceActorMap = shallowRef({})
 const buildTime = ref('')
+const attrMap = shallowRef({})
+const roleMap = shallowRef({})
 
 async function _fetchJSON(url) {
   const resp = await fetch(url, { signal: getNavigationSignal() })
@@ -37,7 +39,7 @@ async function _loadEntity(file) {
 // 模块级：加载 character_index + 小实体文件
 async function _doLoadIndex() {
   try {
-    const [idx, baseChar, traitColor, originalTitle, tagData, seriesData, voiceActorData, bt, et] = await Promise.all([
+    const [idx, baseChar, traitColor, originalTitle, tagData, seriesData, voiceActorData, bt, et, attrData, roleData] = await Promise.all([
       _fetchJSON('data/character_index.json'),
       _fetchJSON('data/base_character.json'),
       _fetchJSON('data/trait_color.json'),
@@ -47,6 +49,8 @@ async function _doLoadIndex() {
       _fetchJSON('data/voice_actor.json'),
       _fetchJSON('data/battle_tool_trait.json'),
       _fetchJSON('data/equipment_tool_trait.json'),
+      _fetchJSON('data/attack_attribute.json'),
+      _fetchJSON('data/role.json'),
     ])
     characterIndex.value = idx
     baseCharacterMap.value = baseChar
@@ -59,6 +63,8 @@ async function _doLoadIndex() {
     voiceActorMap.value = voiceActorData
     battleTraits.value = bt
     equipTraits.value = et
+    attrMap.value = attrData
+    roleMap.value = roleData
     indexLoaded.value = true
   } catch (e) {
     _loadPromise = null
@@ -128,7 +134,7 @@ export function useCharacterData() {
   return {
     characterIndex, indexLoaded, loadIndex,
     skillsMap, abilitiesMap, battleTraits, equipTraits, traitColorMap, baseCharacterMap, originalTitleMap, characterTagMap, buildTime,
-    seriesMap, voiceActorMap,
+    seriesMap, voiceActorMap, attrMap, roleMap,
     getCharacterById, getSkillById, getAbilityById,
     loadSkills, loadAbilities, loadTraits, loadEntityMap,
   }

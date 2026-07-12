@@ -7,11 +7,11 @@ import { preFetch } from '../router'
 
 const { t } = useI18n()
 
-const columns = [
-  { key: 'id', label: 'ID', width: 72 },
-  { key: 'start_at', label: '开始日期', width: 140 },
-  { key: 'episode_name', label: '名称', minWidth: 300 },
-]
+const columns = computed(() => [
+  { key: 'id', label: t('id'), width: 72 },
+  { key: 'start_at', label: t('startDate'), width: 140 },
+  { key: 'episode_name', label: t('episodeName'), minWidth: 300 },
+])
 
 const rows = ref([])
 const loading = ref(true)

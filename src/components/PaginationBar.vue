@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useFilters } from '../composables/useFilters'
+import { useI18n } from '../composables/useI18n'
 
 const props = defineProps({
   currentPage: { type: Number, default: null },
@@ -13,6 +14,7 @@ const props = defineProps({
 const emit = defineEmits(['update:currentPage', 'update:pageSize'])
 
 const globalFilters = useFilters()
+const { t } = useI18n()
 
 // props 优先，fallback 到全局 useFilters
 const cp = computed({
@@ -82,17 +84,17 @@ const pageNumbers = computed(() => {
       <button class="pg-btn" :disabled="cp === tp" @click="goTo(cp + 1)">&#8250;</button>
       <button class="pg-btn" :disabled="cp === tp" @click="goTo(tp)">&#187;</button>
       <span class="pg-info">
-        共 {{ tp }} 页<template v-if="ti != null">（{{ ti }} 条）</template>
+        {{ t('pageTotal').replace('{tp}', tp) }}<template v-if="ti != null">{{ t('pageItemCount').replace('{ti}', ti) }}</template>
       </span>
       <span class="pg-jump">
-        跳到 <input type="text" name="jump_page" v-model="jumpPage" class="pg-jump-inp" @keyup.enter="jump" placeholder="页"> 页
+        {{ t('jumpTo') }} <input type="text" name="jump_page" v-model="jumpPage" class="pg-jump-inp" @keyup.enter="jump" :placeholder="t('pageUnit')"> {{ t('pageUnit') }}
       </span>
       <span class="pg-size">
-        每页
+        {{ t('perPage') }}
         <select name="page_size" v-model="ps" class="pg-size-sel">
           <option v-for="s in sizes" :key="s" :value="s">{{ s }}</option>
         </select>
-        条
+        {{ t('itemUnit') }}
       </span>
     </div>
   </div>

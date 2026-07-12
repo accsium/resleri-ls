@@ -6,13 +6,13 @@ import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
-const { currentLang, getTraitColorHex, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { t, currentLang, getTraitColorHex, getField, ATTR_IDS } = useI18n()
 const {
   activeFilters,
   toggleFilter, resetFilters,
 } = useFilters()
 
-const { battleTraits, equipTraits, loadTraits } = useCharacterData()
+const { battleTraits, equipTraits, loadTraits, attrMap: attrData, roleMap: roleData } = useCharacterData()
 
 function clearAll() {
   resetFilters()
@@ -47,7 +47,13 @@ onMounted(() => {
 })
 
 // ── 属性 ──
-const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
+const attrMap = computed(() => {
+  const m = {}
+  for (const [id, entry] of Object.entries(attrData.value)) {
+    m[id] = getField(entry, 'name')
+  }
+  return m
+})
 const selectedAttrs = computed({
   get: () => activeFilters.attack_attributes || [],
   set: (v) => toggleFilter('attack_attributes', v),
@@ -68,7 +74,13 @@ function toggleAttr(id) {
 
 // ── 职业 ──
 const ROLE_IDS = [1, 2, 3, 4]
-const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP)
+const roleMap = computed(() => {
+  const m = {}
+  for (const [id, entry] of Object.entries(roleData.value)) {
+    m[id] = getField(entry, 'name')
+  }
+  return m
+})
 const selectedRoles = computed({
   get: () => activeFilters.role || [],
   set: (v) => toggleFilter('role', v),
@@ -284,6 +296,20 @@ function toggleAtelierFes(s) {
 function _parseSelectId(val) {
   return val !== '' ? Number(val) : ''
 }
+
+const mechanismLabels = computed(() => ({
+  has_evo: t('specialEvo'),
+  has_range: t('specialRange'),
+  has_transform: t('specialTransform'),
+  has_active: t('skillType').active,
+  has_ex: t('skillType').ex,
+}))
+
+const permStatusLabels = computed(() => ({
+  permanent: t('permanentTrue'),
+  not_permanent: t('permanentFalse'),
+  limited: t('permanentLimited'),
+}))
 </script>
 
 <template>
@@ -292,7 +318,7 @@ function _parseSelectId(val) {
     <!-- 行1：初始星级 + 职业/属性图标 -->
     <div class="sf-row">
       <div class="sf-field">
-        <span class="sf-label">初始星级</span>
+        <span class="sf-label">{{ t('initialRarity') }}</span>
         <div class="sf-field-items">
         <label v-for="r in RARITIES" :key="'rar'+r" class="sf-check">
           <input type="checkbox" :name="'rarity-'+r" :checked="selectedRarities.includes(r)" @change="toggleRarity(r)">
@@ -302,7 +328,7 @@ function _parseSelectId(val) {
       </div>
       <div class="sf-divider"></div>
       <div class="sf-group sf-icons">
-        <span class="sf-label">职业</span>
+        <span class="sf-label">{{ t('role') }}</span>
         <button
           v-for="id in ROLE_IDS" :key="'r'+id"
           class="sf-icon-btn"
@@ -314,7 +340,7 @@ function _parseSelectId(val) {
       </div>
       <div class="sf-divider"></div>
       <div class="sf-group sf-icons">
-        <span class="sf-label">属性</span>
+        <span class="sf-label">{{ t('attribute') }}</span>
         <button
           v-for="id in ATTR_IDS" :key="'a'+id"
           class="sf-icon-btn"
@@ -326,13 +352,13 @@ function _parseSelectId(val) {
       </div>
       <div class="sf-spacer"></div>
       <div class="sf-right-group">
-        <button class="sf-collapse-btn" @click="clearAll">清除筛选</button>
+        <button class="sf-collapse-btn" @click="clearAll">{{ t('clearFilter') }}</button>
       </div>
     </div>
     <!-- 行2：调和颜色 + 特殊机制 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-group sf-icons">
-        <span class="sf-label">调和颜色</span>
+        <span class="sf-label">{{ t('traitColor') }}</span>
         <button
           v-for="id in TRAIT_IDS" :key="'tl'+id"
           class="sf-trait-btn"
@@ -356,10 +382,10 @@ function _parseSelectId(val) {
       </div>
       <div class="sf-divider"></div>
       <div class="sf-field">
-        <span class="sf-label">特殊机制</span>
+        <span class="sf-label">{{ t('specialMechanism') }}</span>
         <div class="sf-field-items">
         <button
-          v-for="(label, key) in { has_evo: '进化', has_range: '范围变化', has_transform: '变身', has_active: '主动技能', has_ex: 'EX技能' }"
+          v-for="(label, key) in mechanismLabels"
           :key="key"
           class="sf-tri-btn"
           :class="{ active: activeFilters[key] === 1, exclude: activeFilters[key] === 2 }"
@@ -374,10 +400,10 @@ function _parseSelectId(val) {
     <!-- 行5：恒常化状态 + ATELIER FES -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
-        <span class="sf-label">恒常化状态</span>
+        <span class="sf-label">{{ t('permanentStatus') }}</span>
         <div class="sf-field-items">
           <label v-for="s in ['permanent','not_permanent','limited']" :key="s" class="sf-check">
-            <input type="checkbox" :checked="permStatus.includes(s)" @change="togglePermStatus(s)">{{ { permanent: '已恒常化', not_permanent: '未恒常化', limited: '非恒常角色' }[s] }}
+            <input type="checkbox" :checked="permStatus.includes(s)" @change="togglePermStatus(s)">{{ permStatusLabels[s] }}
           </label>
         </div>
       </div>
@@ -394,7 +420,7 @@ function _parseSelectId(val) {
     <!-- 行3：道具词条 + 装备词条 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
-        <span class="sf-label">道具词条</span>
+        <span class="sf-label">{{ t('itemTrait') }}</span>
         <div class="sf-field-items">
         <select :name="'battle_trait-'+n" v-for="n in 2" :key="'bt'+n" class="sf-select"
           :value="selectedBattleTraits[n-1] || ''"
@@ -410,7 +436,7 @@ function _parseSelectId(val) {
       </div>
       <div class="sf-divider"></div>
       <div class="sf-field">
-        <span class="sf-label">装备词条</span>
+        <span class="sf-label">{{ t('equipmentTrait') }}</span>
         <div class="sf-field-items">
         <select name="equip_trait" class="sf-select"
           :value="selectedEquipTraits[0] || ''"
@@ -429,7 +455,7 @@ function _parseSelectId(val) {
     <!-- 行4：标签 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field tag-field">
-        <span class="sf-label">标签</span>
+        <span class="sf-label">{{ t('tags') }}</span>
         <div class="sf-field-items">
         <select :name="'char_tag-'+n" v-for="n in 5" :key="'ct'+n" class="sf-select"
           :value="selectedTags[n-1] || ''"
@@ -445,25 +471,25 @@ function _parseSelectId(val) {
     <!-- 行6：角色名 + 声优 + 系列 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
-        <span class="sf-label">角色名</span>
+        <span class="sf-label">{{ t('characterName') }}</span>
         <select class="sf-select" :value="activeFilters.base_character" @change="(e) => toggleFilter('base_character', _parseSelectId(e.target.value))">
-          <option value="">全部</option>
+          <option value="">{{ t('allOption') }}</option>
           <option v-for="bc in allBaseCharacters" :key="bc.id" :value="bc.id">{{ bc.name }}</option>
         </select>
       </div>
       <div class="sf-divider"></div>
       <div class="sf-field">
-        <span class="sf-label">声优</span>
+        <span class="sf-label">{{ t('voiceActorLabel') }}</span>
         <select class="sf-select" :value="activeFilters.voice_actor" @change="(e) => toggleFilter('voice_actor', _parseSelectId(e.target.value))">
-          <option value="">全部</option>
+          <option value="">{{ t('allOption') }}</option>
           <option v-for="va in allVoiceActors" :key="va.id" :value="va.id">{{ va.name }}</option>
         </select>
       </div>
       <div class="sf-divider"></div>
       <div class="sf-field">
-        <span class="sf-label">系列</span>
+        <span class="sf-label">{{ t('seriesLabel') }}</span>
         <select class="sf-select" :value="activeFilters.series" @change="(e) => toggleFilter('series', _parseSelectId(e.target.value))">
-          <option value="">全部</option>
+          <option value="">{{ t('allOption') }}</option>
           <option v-for="s in allSeries" :key="s.id" :value="s.id">{{ s.name }}</option>
         </select>
       </div>
@@ -472,20 +498,20 @@ function _parseSelectId(val) {
     <!-- 行7：作品出处 -->
     <div class="sf-row" v-show="!collapsed">
       <div class="sf-field">
-        <span class="sf-label">作品出处</span>
+        <span class="sf-label">{{ t('originalTitleLabel') }}</span>
         <div class="sf-field-items">
           <select class="sf-select" :value="activeFilters.original_title" @change="(e) => toggleFilter('original_title', _parseSelectId(e.target.value))">
-            <option value="">全部</option>
+            <option value="">{{ t('allOption') }}</option>
             <option v-for="t in allTitles" :key="t.id" :value="t.id">{{ t.name }}</option>
           </select>
         </div>
       </div>
       <div class="sf-right-group">
         <div class="sf-group">
-          <span class="sf-label">词条语言</span>
+          <span class="sf-label">{{ t('traitLang') }}</span>
           <select name="panel_lang" class="sf-select" v-model="panelLang">
-            <option value="ja">日本語</option>
-            <option value="cn">中文</option>
+            <option value="ja">{{ t('langJA') }}</option>
+            <option value="cn">{{ t('langCN') }}</option>
           </select>
         </div>
       </div>

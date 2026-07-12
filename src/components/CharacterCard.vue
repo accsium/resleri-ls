@@ -18,8 +18,8 @@ const props = defineProps({
 
 const kid = ++cardUid + '-' + props.indexEntry.id
 
-const { t, currentLang, ATTR_MAP, ATTR_MAP_CN, ROLE_MAP, ROLE_MAP_CN } = useI18n()
-const { getCharacterById, baseCharacterMap, traitColorMap, originalTitleMap, characterTagMap, skillsMap, seriesMap, voiceActorMap, battleTraits, equipTraits } = useCharacterData()
+const { t, currentLang, getField } = useI18n()
+const { getCharacterById, baseCharacterMap, traitColorMap, originalTitleMap, characterTagMap, skillsMap, seriesMap, voiceActorMap, battleTraits, equipTraits, attrMap: attrData, roleMap: roleData } = useCharacterData()
 const { getCardState, setCardState } = useCardState()
 
 const expanded = ref(false)
@@ -33,8 +33,8 @@ const baseName = computed(() => {
 })
 const alias = computed(() => props.indexEntry.another_name || '')
 const roleName = computed(() => {
-  const map = currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP
-  return map[props.indexEntry.role] || ''
+  const entry = roleData.value[props.indexEntry.role]
+  return entry ? getField(entry, 'name') : ''
 })
 const tags = computed(() => {
   return (props.indexEntry.tag_ids || []).map(id => {
@@ -56,8 +56,8 @@ const permanentLabel = computed(() => {
 })
 const permanentText = computed(() => {
   const s = props.indexEntry.permanent_status
-  if (s === 'limited') return '非恒常角色'
-  if (s === 'fes_0') return '初始'
+  if (s === 'limited') return t('permanentLimited')
+  if (s === 'fes_0') return t('fesInitial')
   if (s === 'fes_1') return 'ATELIER FES I'
   if (s === 'fes_2') return 'ATELIER FES II'
   if (s === 'permanent' || s === 'not_permanent') {
@@ -69,8 +69,10 @@ const permanentText = computed(() => {
 const isNotPermanent = computed(() => props.indexEntry.permanent_status === 'not_permanent')
 const isLimited = computed(() => props.indexEntry.permanent_status === 'limited')
 const attrsText = computed(() => {
-  const attrMap = currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP
-  const names = (props.indexEntry.attack_attributes || []).map(id => attrMap[id] || id)
+  const names = (props.indexEntry.attack_attributes || []).map(id => {
+    const entry = attrData.value[id]
+    return entry ? getField(entry, 'name') : id
+  })
   return names.join(' / ') + ' | ' + roleName.value
 })
 
@@ -158,9 +160,9 @@ if (!('_init' in state)) {
 }
 
 const toggleLabel = computed(() => {
-  if (hasEvo.value) return currentLang.value === 'cn' ? '进化' : '進化'
-  if (hasRange.value) return currentLang.value === 'cn' ? '范围' : '範囲'
-  if (hasTransform.value) return currentLang.value === 'cn' ? '变身' : '変身'
+  if (hasEvo.value) return t('toggleEvo')
+  if (hasRange.value) return t('toggleRange')
+  if (hasTransform.value) return t('toggleTransform')
   return ''
 })
 
@@ -241,11 +243,11 @@ onUnmounted(() => {
                 <div v-if="permanentText" class="release-date"><template v-if="permanentLabel">{{ permanentLabel }}: </template><span :class="{ 'perm-not': isNotPermanent, 'perm-limited': isLimited }">{{ permanentText }}</span></div>
               </div>
               <div class="cb-info-right">
-                <div v-if="indexEntry.fullname" class="cb-fullname">全名: {{ indexEntry.fullname }}</div>
+                <div v-if="indexEntry.fullname" class="cb-fullname">{{ t('fullnameLabel') }}: {{ indexEntry.fullname }}</div>
                 <div v-if="indexEntry.overlay_name" class="cb-overlay-name">fullname: {{ indexEntry.overlay_name }}</div>
-                <div v-if="originalTitle" class="cb-overlay-name">作品出处: {{ originalTitle }}</div>
-                <div v-if="seriesName" class="cb-overlay-name">系列: {{ seriesName }}</div>
-                <div v-if="voiceActorName" class="cb-overlay-name">声优: {{ voiceActorName }}</div>
+                <div v-if="originalTitle" class="cb-overlay-name">{{ t('originalTitleLabel') }}: {{ originalTitle }}</div>
+                <div v-if="seriesName" class="cb-overlay-name">{{ t('seriesLabel') }}: {{ seriesName }}</div>
+                <div v-if="voiceActorName" class="cb-overlay-name">{{ t('voiceActorLabel') }}: {{ voiceActorName }}</div>
               </div>
             </div>
           </div>
@@ -267,7 +269,7 @@ onUnmounted(() => {
 
         <div class="card-body-col-right desk-only">
           <button class="cb-expand-desk" @click="toggleExpand">
-            {{ expanded ? '收起 ▲' : '展开 ▼' }}
+            {{ expanded ? t('collapseDetail') : t('expandDetail') }}
           </button>
         </div>
 
@@ -294,12 +296,12 @@ onUnmounted(() => {
               <StarsDisplay :mode="1" :rarity="indexEntry.max_rarity" :max-rarity="indexEntry.max_rarity" :scale="0.35" />
             </div>
             <div class="cb-tags">
-              <span class="cb-tags-label">标签：</span>
+              <span class="cb-tags-label">{{ t('tags') }}：</span>
               <span class="cb-tags-items"><span v-for="tag in tags" :key="tag" class="tag">{{ tag }}</span></span>
             </div>
           </div>
           <button class="cb-expand-mob" @click="toggleExpand">
-            {{ expanded ? '收起 ▲' : '展开 ▼' }}
+            {{ expanded ? t('collapseDetail') : t('expandDetail') }}
           </button>
         </div>
       </div>
@@ -310,7 +312,7 @@ onUnmounted(() => {
       <div v-else-if="detailError" class="no-data">{{ t('loadFailed') }}: {{ detailError }}</div>
       <template v-else-if="char">
         <div class="mobile-stats">
-          <div class="section-title">基础信息</div>
+          <div class="section-title">{{ t('basicInfo') }}</div>
           <div class="stats-row">
             <div v-for="stat in statCards" :key="stat.label" class="stat-card">
               <div class="stat-label">{{ stat.label }}</div>

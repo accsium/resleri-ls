@@ -572,6 +572,8 @@ writeEntityFile('trait_color');
 writeEntityFile('base_character');
 writeEntityFile('original_title');
 writeEntityFile('series');
+writeEntityFile('attack_attribute');
+writeEntityFile('role');
 
 // voice_actor — 无需翻译，直接从 selection 生成，不输出 name_cn
 const vaFile = path.join(rawDir, 'voice_actor.json');

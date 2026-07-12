@@ -5,21 +5,32 @@ import { useI18n } from '../composables/useI18n'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 
-const { characterIndex, indexLoaded, baseCharacterMap, loadIndex } = useCharacterData()
-const { t, currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { characterIndex, indexLoaded, baseCharacterMap, loadIndex, attrMap: attrData, roleMap: roleData } = useCharacterData()
+const { t, currentLang, getField, ATTR_IDS } = useI18n()
+const attrMap = computed(() => {
+  const m = {}
+  for (const [id, entry] of Object.entries(attrData.value)) {
+    m[id] = getField(entry, 'name')
+  }
+  return m
+})
+const roleMap = computed(() => {
+  const m = {}
+  for (const [id, entry] of Object.entries(roleData.value)) {
+    m[id] = getField(entry, 'name')
+  }
+  return m
+})
 
-const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
-const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP)
-
-const columns = [
-  { key: 'id', label: 'ID', width: 72 },
-  { key: 'avatar', label: '头像', width: 60 },
-  { key: 'name', label: '角色名', minWidth: 240, sortVal: (row) => baseName(row) },
-  { key: 'attr', label: '属性', width: 56, align: 'center', sortVal: (row) => row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999 },
-  { key: 'role', label: '职业', width: 56, align: 'center', sortVal: (row) => row.role || 999 },
-  { key: 'skillName', label: '队长技能', minWidth: 200, sortVal: (row) => row.leader_skill?.name || '' },
-  { key: 'skillDesc', label: '效果', minWidth: 300, sortVal: (row) => row.leader_skill?.description || '' },
-]
+const columns = computed(() => [
+  { key: 'id', label: t('id'), width: 72 },
+  { key: 'avatar', label: t('avatar'), width: 60 },
+  { key: 'name', label: t('characterName'), minWidth: 240, sortVal: (row) => baseName(row) },
+  { key: 'attr', label: t('attribute'), width: 56, align: 'center', sortVal: (row) => row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999 },
+  { key: 'role', label: t('role'), width: 56, align: 'center', sortVal: (row) => row.role || 999 },
+  { key: 'skillName', label: t('leaderSkillSection'), minWidth: 200, sortVal: (row) => row.leader_skill?.name || '' },
+  { key: 'skillDesc', label: t('effectLabel'), minWidth: 300, sortVal: (row) => row.leader_skill?.description || '' },
+])
 
 const leaderChars = computed(() =>
   characterIndex.value.filter(c => c.leader_skill?.description != null)
@@ -35,7 +46,7 @@ onMounted(() => { loadIndex() })
 </script>
 
 <template>
-  <div v-if="!indexLoaded" class="loading">加载角色数据中...</div>
+  <div v-if="!indexLoaded" class="loading">{{ t('loading') }}</div>
   <SortableTable v-else
     :columns="columns"
     :rows="leaderChars"

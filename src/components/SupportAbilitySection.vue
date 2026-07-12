@@ -39,7 +39,7 @@ const entries = computed(() => {
     <div class="support-desc-col" :class="{ 'support-unreachable': entry.unreachable }">
       <span v-if="entry.ability" class="skill-desc" v-html="formatDescription(entry.ability)"></span>
       <span v-else class="no-data">{{ t('none') }}</span>
-      <span v-if="entry.unreachable" class="support-note">（该角色目前无法到达此星级。）</span>
+      <span v-if="entry.unreachable" class="support-note">{{ t('unreachableNote') }}</span>
     </div>
   </div>
 </template>

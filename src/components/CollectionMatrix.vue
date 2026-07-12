@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n, SIZE_SCALE } from '../composables/useI18n'
+import { useCharacterData } from '../composables/useCharacterData'
 import AvatarDisplay from './AvatarDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
@@ -20,10 +21,23 @@ function onPointerMove(e) {
   if (item?.dataset.id) emit('pointermove', Number(item.dataset.id))
 }
 
-const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { currentLang, getField, ATTR_IDS } = useI18n()
+const { attrMap: attrData, roleMap: roleData } = useCharacterData()
 
-const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
-const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP)
+const attrMap = computed(() => {
+  const m = {}
+  for (const [id, entry] of Object.entries(attrData.value)) {
+    m[id] = getField(entry, 'name')
+  }
+  return m
+})
+const roleMap = computed(() => {
+  const m = {}
+  for (const [id, entry] of Object.entries(roleData.value)) {
+    m[id] = getField(entry, 'name')
+  }
+  return m
+})
 
 const ROLE_IDS = [1, 2, 3, 4]
 

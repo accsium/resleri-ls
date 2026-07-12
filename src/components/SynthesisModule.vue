@@ -7,7 +7,7 @@ const props = defineProps({
   characterData: Object,
 })
 
-const { getTraitColorHex, currentLang } = useI18n()
+const { t, getTraitColorHex, currentLang } = useI18n()
 const { traitColorMap, battleTraits, equipTraits, loadTraits } = useCharacterData()
 
 const collapsed = ref(false)
@@ -90,7 +90,7 @@ function splitEffect(effect) {
 <template>
   <template v-if="allTraits.length > 0">
     <div class="section-title section-collapsible" @click="collapsed = !collapsed">
-      调和
+      {{ t('synthesis') }}
       <span class="synthesis-color-row">
         <span :style="{ color: traitHex }">{{ traitColorName }}</span>
         <svg width="20" height="20" viewBox="0 0 30 30">

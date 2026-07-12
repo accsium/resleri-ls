@@ -5,13 +5,13 @@ import { useI18n } from '../composables/useI18n'
 import { fmtDate } from '../utils/date.js'
 import { preFetch } from '../router'
 
-const columns = [
-  { key: 'id', label: 'ID', width: 72 },
-  { key: 'start_at', label: '开始日期', width: 140 },
-  { key: 'end_at', label: '结束日期', width: 140 },
-  { key: 'name', label: '名称', minWidth: 480 },
-  { key: 'revival_start_at', label: '复刻日期', width: 140 },
-]
+const columns = computed(() => [
+  { key: 'id', label: t('id'), width: 72 },
+  { key: 'start_at', label: t('startDate'), width: 140 },
+  { key: 'end_at', label: t('endDate'), width: 140 },
+  { key: 'name', label: t('eventName'), minWidth: 480 },
+  { key: 'revival_start_at', label: t('revivalDate'), width: 140 },
+])
 
 const groups = [
   { label: '2026', min: 135, max: Infinity },

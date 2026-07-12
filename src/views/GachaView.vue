@@ -10,15 +10,14 @@ import { preFetch } from '../router'
 const { t } = useI18n()
 const { characterIndex, loadIndex } = useCharacterData()
 
-const columns = [
-  { key: 'id', label: 'ID', width: 72 },
-  { key: 'start_at', label: '开始日期', width: 140 },
-  { key: 'end_at', label: '结束日期', width: 140 },
-  { key: 'name', label: '卡池名', minWidth: 200 },
-  { key: 'characters', label: '角色', minWidth: 100 },  
+const columns = computed(() => [
+  { key: 'id', label: t('id'), width: 72 },
+  { key: 'start_at', label: t('startDate'), width: 140 },
+  { key: 'end_at', label: t('endDate'), width: 140 },
+  { key: 'name', label: t('gachaName'), minWidth: 200 },
+  { key: 'characters', label: t('characters'), minWidth: 100 },
   { key: 'picked_up_memoria_ids', label: 'picked_up_memoria_ids', minWidth: 100 },
-
-]
+])
 
 const CATEGORIES = ['LEGEND FES', '有償限定', '衣装調合', '其他']
 const activeCategory = ref(CATEGORIES[0])
@@ -68,7 +67,7 @@ onMounted(async () => {
           class="gacha-cat-btn"
           :class="{ active: activeCategory === cat }"
           @click="activeCategory = cat"
-        >{{ cat }}</button>
+        >{{ cat === '其他' ? t('targetFilter').other : cat }}</button>
       </div>
       <SortableTable
         :columns="columns"

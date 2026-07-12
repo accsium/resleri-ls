@@ -7,24 +7,36 @@ import IconDisplay from '../components/IconDisplay.vue'
 import StarsDisplay from '../components/StarsDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 
-const { characterIndex, indexLoaded, baseCharacterMap, loadIndex } = useCharacterData()
-const { currentLang, ATTR_MAP, ATTR_MAP_CN, ATTR_IDS, ROLE_MAP, ROLE_MAP_CN } = useI18n()
+const { characterIndex, indexLoaded, baseCharacterMap, loadIndex, attrMap: attrData, roleMap: roleData } = useCharacterData()
+const { t, currentLang, getField, ATTR_IDS } = useI18n()
 
-const columns = [
-  { key: 'id', label: 'ID', width: 72 },
-  { key: 'avatar', label: '头像', width: 60 },
-  { key: 'name', label: '角色名', minWidth: 200, sortVal: (row) => baseName(row, currentLang.value) },
-  { key: 'attr', label: '属性', width: 56, align: 'center', sortVal: (row) => row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999 },
-  { key: 'role', label: '职业', width: 56, align: 'center', sortVal: (row) => row.role || 999 },
-  { key: 'maxRarity', label: '最大星级', width: 80, align: 'center', sortVal: (row) => row.max_rarity || 0 },
-  { key: 'saAttr', label: '目标属性', width: 56, align: 'center', sortVal: (row) => row.support_ability?.attr != null ? ATTR_IDS.indexOf(row.support_ability.attr) : 999 },
-  { key: 'saRole', label: '目标职业', width: 56, align: 'center', sortVal: (row) => row.support_ability?.role || 999 },
-  { key: 'saTag', label: '目标标签', minWidth: 100, sortVal: (row) => row.support_ability?.tag || '￿' },
-  { key: 'saDesc', label: '支援能力描述', minWidth: 400, sortVal: (row) => row.support_ability?.description || '' },
-]
+const columns = computed(() => [
+  { key: 'id', label: t('id'), width: 72 },
+  { key: 'avatar', label: t('avatar'), width: 60 },
+  { key: 'name', label: t('characterName'), minWidth: 200, sortVal: (row) => baseName(row, currentLang.value) },
+  { key: 'attr', label: t('attribute'), width: 56, align: 'center', sortVal: (row) => row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999 },
+  { key: 'role', label: t('role'), width: 56, align: 'center', sortVal: (row) => row.role || 999 },
+  { key: 'maxRarity', label: t('maxRarity'), width: 80, align: 'center', sortVal: (row) => row.max_rarity || 0 },
+  { key: 'saAttr', label: t('targetAttr'), width: 56, align: 'center', sortVal: (row) => row.support_ability?.attr != null ? ATTR_IDS.indexOf(row.support_ability.attr) : 999 },
+  { key: 'saRole', label: t('targetRole'), width: 56, align: 'center', sortVal: (row) => row.support_ability?.role || 999 },
+  { key: 'saTag', label: t('targetTag'), minWidth: 100, sortVal: (row) => row.support_ability?.tag || '￿' },
+  { key: 'saDesc', label: t('supportAbilityDesc'), minWidth: 400, sortVal: (row) => row.support_ability?.description || '' },
+])
 
-const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
-const roleMap = computed(() => currentLang.value === 'cn' ? ROLE_MAP_CN : ROLE_MAP)
+const attrMap = computed(() => {
+  const m = {}
+  for (const [id, entry] of Object.entries(attrData.value)) {
+    m[id] = getField(entry, 'name')
+  }
+  return m
+})
+const roleMap = computed(() => {
+  const m = {}
+  for (const [id, entry] of Object.entries(roleData.value)) {
+    m[id] = getField(entry, 'name')
+  }
+  return m
+})
 const charIndexMap = computed(() => {
   const m = {}; for (const c of characterIndex.value) m[c.id] = c; return m
 })
@@ -46,7 +58,7 @@ onMounted(() => { loadIndex() })
 </script>
 
 <template>
-  <div v-if="!indexLoaded" class="loading">加载角色数据中...</div>
+  <div v-if="!indexLoaded" class="loading">{{ t('loading') }}</div>
   <SortableTable v-else
     :columns="columns"
     :rows="chars"

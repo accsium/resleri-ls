@@ -145,7 +145,7 @@ function invertSelect() {
 function onSave() {
   const ok = saveToStorage()
   if (!ok) {
-    alert('保存失败，请检查浏览器存储空间或隐私设置。')
+    alert(t('saveFailed'))
     return
   }
   savedFlash.value = true
@@ -191,7 +191,7 @@ onUnmounted(() => {
           {{ savedFlash ? t('collectionSaved') : t('collectionSave') }}
         </button>
         <input type="text" v-model="shareInput" class="collection-share-input" :placeholder="shareCode">
-        <button class="collection-ctrl-btn" @click="onLoadCode">读取</button>
+        <button class="collection-ctrl-btn" @click="onLoadCode">{{ t('loadCode') }}</button>
         <button class="collection-ctrl-btn" @click="onCopyLink">
           {{ copiedFlash ? t('collectionCopied') : t('collectionCopyLink') }}
         </button>
@@ -211,20 +211,20 @@ onUnmounted(() => {
             :class="{ active: viewMode === 'matrix' }"
             @click="viewMode = 'matrix'"
           >{{ t('collectionMatrix') }}</button>
-          <label class="collection-check"><input type="checkbox" v-model="showOwned">已拥有</label>
-          <label class="collection-check"><input type="checkbox" v-model="showUnowned">未拥有</label>
-          <button class="collection-color-btn" @click="colorMode = !colorMode">{{ colorMode ? '彩色' : '黑白' }}</button>
-          <button class="collection-color-btn" @click="selectAll">全选</button>
-          <button class="collection-color-btn" @click="invertSelect">反选</button>
+          <label class="collection-check"><input type="checkbox" v-model="showOwned">{{ t('owned') }}</label>
+          <label class="collection-check"><input type="checkbox" v-model="showUnowned">{{ t('unowned') }}</label>
+          <button class="collection-color-btn" @click="colorMode = !colorMode">{{ colorMode ? t('colorLabel') : t('bwLabel') }}</button>
+          <button class="collection-color-btn" @click="selectAll">{{ t('selectAll') }}</button>
+          <button class="collection-color-btn" @click="invertSelect">{{ t('invertSelect') }}</button>
         </span>
         <span class="collection-size-group" v-if="viewMode === 'sequential'">
-          <span class="collection-size-label">头像尺寸</span>
+          <span class="collection-size-label">{{ t('avatarSize') }}</span>
           <span class="size-steps">
             <span v-for="(s, si) in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="seqSize = s.val"></span>
           </span>
         </span>
         <span class="collection-size-group" v-else>
-          <span class="collection-size-label">头像尺寸</span>
+          <span class="collection-size-label">{{ t('avatarSize') }}</span>
           <span class="size-steps">
             <span v-for="(s, si) in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="matSize = s.val"></span>
           </span>

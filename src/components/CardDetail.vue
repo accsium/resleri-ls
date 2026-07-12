@@ -22,8 +22,15 @@ onMounted(() => {
   })
 })
 
-const { t, getField, currentLang, ATTR_MAP, ATTR_MAP_CN } = useI18n()
-const attrMap = computed(() => currentLang.value === 'cn' ? ATTR_MAP_CN : ATTR_MAP)
+const { t, getField, currentLang } = useI18n()
+const { attrMap: attrData } = useCharacterData()
+const attrMap = computed(() => {
+  const m = {}
+  for (const [id, entry] of Object.entries(attrData.value)) {
+    m[id] = getField(entry, 'name')
+  }
+  return m
+})
 const typeText = t('skillType')
 const { skillsMap, abilitiesMap, loadSkills, loadAbilities } = useCharacterData()
 
@@ -87,7 +94,7 @@ const allSkillTypes = computed(() => {
   const exIds = char.skills?.ex || []
   const exSkills = exIds.map(id => skillsMap.value[id]).filter(Boolean)
   if (exSkills.length > 0) {
-    types.push({ type: 'extra', name: typeText.extra || 'EX', levels: exSkills })
+    types.push({ type: 'ex', name: typeText.ex || 'EX', levels: exSkills })
   }
 
   return types
@@ -148,7 +155,7 @@ const abilitiesCollapsed = ref(false)
 </script>
 
 <template>
-  <div v-if="!detailReady" class="loading">加载中...</div>
+  <div v-if="!detailReady" class="loading">{{ t('loading') }}</div>
   <template v-else>
     <template v-if="allSkillTypes.length > 0">
     <div class="section-title section-collapsible" @click="skillsCollapsed = !skillsCollapsed">
@@ -193,7 +200,7 @@ const abilitiesCollapsed = ref(false)
   </div>
   <div v-show="!abilitiesCollapsed">
     <template v-if="abilities.length > 0">
-      <div class="subsection-title">角色能力</div>
+      <div class="subsection-title">{{ t('characterAbility') }}</div>
       <div v-for="a in abilities" :key="a.id || a.name">
         <div class="banner-title">{{ a.name || `ID:${a.id}` }}</div>
         <div class="content-block">
@@ -203,9 +210,9 @@ const abilitiesCollapsed = ref(false)
     </template>
     <template v-for="ba in boardAbilities" :key="ba.key">
       <template v-if="boardActiveLevel(ba)">
-        <div class="subsection-title">光玉板能力</div>
+        <div class="subsection-title">{{ t('boardAbility') }}</div>
         <div class="banner-title">
-          <span>{{ boardActiveLevel(ba).name || '光玉板能力' }}</span>
+          <span>{{ boardActiveLevel(ba).name || t('boardAbility') }}</span>
           <div v-if="ba.levels.length > 1" class="level-tabs">
             <button
               v-for="(lv, li) in ba.levels" :key="lv.id || li"

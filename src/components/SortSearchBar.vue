@@ -17,19 +17,19 @@ const {
     <!-- 排序 + 搜索 -->
     <div class="sf-row">
       <div class="sort-control">
-        <label class="sf-label" for="sort-field">排序</label>
+        <label class="sf-label" for="sort-field">{{ t('sortLabel') }}</label>
         <select id="sort-field" name="sort_field" :value="sortField" @change="(e) => setSortField(e.target.value)">
           <option v-for="f in SORT_FIELDS" :key="f.field" :value="f.field">
             {{ currentLang === 'cn' ? f.label_cn : f.label_ja }}
           </option>
         </select>
         <button class="sf-order-btn" @click="toggleOrder()">
-          {{ currentSortOrder === 'desc' ? '↓ 降序' : '↑ 升序' }}
+          {{ currentSortOrder === 'desc' ? t('descOrder') : t('ascOrder') }}
         </button>
       </div>
       <div class="sf-spacer"></div>
       <div class="sf-group">
-        <label class="sf-label" for="search-input">搜索</label>
+        <label class="sf-label" for="search-input">{{ t('searchLabel') }}</label>
         <input id="search-input" type="text" name="search" v-model="searchText" :placeholder="t('searchPlaceholder')">
       </div>
     </div>
