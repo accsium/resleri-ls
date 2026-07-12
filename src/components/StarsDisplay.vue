@@ -15,16 +15,16 @@ const starList = computed(() => {
   const level = starLevel[props.rarity]
   const fullStars = Math.floor(level)
   const hasHalf = level !== fullStars
-  const starType = level === 6 ? 'star_3' : 'star_1'
+  const starType = level === 6 ? '999_icon_star_chara_2_pink' : '999_icon_star_chara_2'
 
   const stars = []
   for (let i = 0; i < fullStars; i++) stars.push(starType)
-  if (hasHalf) stars.push('star_2')
+  if (hasHalf) stars.push('999_icon_star_chara_2_harf')
 
   if (props.mode === 2) {
     const totalSlots = Math.floor(starLevel[props.maxRarity])
     const emptyStars = totalSlots - fullStars - (hasHalf ? 1 : 0)
-    for (let i = 0; i < emptyStars; i++) stars.push('star_0')
+    for (let i = 0; i < emptyStars; i++) stars.push('999_icon_star_chara_2_1')
   }
 
   return stars
@@ -51,7 +51,7 @@ const rowStyle = computed(() => ({
       <StarIcon
         v-for="(type, i) in starList"
         :key="type + '-' + i"
-        :src="'image/misc/' + type + '.png'"
+        :src="'image/misc/' + type + '.webp'"
       />
     </div>
   </div>

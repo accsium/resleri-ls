@@ -85,7 +85,7 @@ const sizePx = computed(() => SIZE_SCALE[props.size])
         <polygon points="160,25 295,160 160,295" :fill="supportHex"/>
         <image
           v-if="!imageLoaded"
-          :href="'image/misc/00000.png'"
+          :href="'image/misc/item_experience_FACE_M.webp'"
           x="32" y="39" width="256" height="256"
           mask="url(#mask-g)"
           preserveAspectRatio="xMidYMax meet"
@@ -113,10 +113,10 @@ const sizePx = computed(() => SIZE_SCALE[props.size])
           <tspan v-if="aliasName" x="0" dy="1.2em">{{ aliasName }}</tspan>
         </text>
       </svg>
-      <div v-if="roleId" class="overlay-icon overlay-icon-left">
-        <IconDisplay type="role" :id="roleId" :size="8" />
+      <div v-if="roleId" class="overlay-icon overlay-icon-left" style="top: 0; left: 0">
+        <IconDisplay type="role" :id="roleId" :size="9" />
       </div>
-      <div v-if="attributeId" class="overlay-icon overlay-icon-right">
+      <div v-if="attributeId" class="overlay-icon overlay-icon-right" style="top: 8px; right: 8px">
         <IconDisplay type="attribute" :id="attributeId" :size="8" />
       </div>
       <div v-if="starDisplayCount > 0"
