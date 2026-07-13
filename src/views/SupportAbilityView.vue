@@ -71,7 +71,7 @@ onMounted(() => { loadIndex() })
     <template #cell-id="{ row }">{{ row.id }}</template>
     <template #cell-avatar="{ row }">
       <div style="text-align:center;line-height:0">
-        <AvatarDisplay v-if="charIndexMap[row.id]" :indexEntry="charIndexMap[row.id]" :scale="0" :size="3" />
+        <AvatarDisplay v-if="charIndexMap[row.id]" :indexEntry="charIndexMap[row.id]" :scale="1" :size="0" />
       </div>
     </template>
     <template #cell-name="{ row }">

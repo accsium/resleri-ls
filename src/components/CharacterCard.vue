@@ -236,7 +236,7 @@ onUnmounted(() => {
       <div class="card-body">
         <div class="card-body-col-left desk-only">
           <div class="cb-avatar">
-            <AvatarDisplay :index-entry="indexEntry" :scale="0" :size="7" :kid="kid" :image-m="effectiveImageM" />
+            <AvatarDisplay :index-entry="indexEntry" :scale="2" :size="0" :kid="kid" :image-m="effectiveImageM" />
           </div>
           <div class="cb-traits">
             <span v-for="trait in traits" :key="trait" class="trait-tag">{{ trait }}</span>
@@ -293,7 +293,7 @@ onUnmounted(() => {
             <div v-if="permanentText" class="release-date"><template v-if="permanentLabel">{{ permanentLabel }}: </template><span :class="{ 'perm-not': isNotPermanent, 'perm-limited': isLimited }">{{ permanentText }}</span></div>
           </div>
           <div class="cb-avatar-mob">
-            <AvatarDisplay :index-entry="indexEntry" :scale="0" :size="7" :kid="kid" :image-m="effectiveImageM" />
+            <AvatarDisplay :index-entry="indexEntry" :scale="2" :size="0" :kid="kid" :image-m="effectiveImageM" />
           </div>
           <div class="cb-traits-mob">
             <span v-for="trait in traits" :key="trait" class="trait-tag">{{ trait }}</span>

@@ -257,7 +257,7 @@ onMounted(async () => {
     <template #cell-id="{ row }">{{ row.char_id }}</template>
     <template #cell-avatar="{ row }">
       <div class="ls-avatar-cell">
-        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :scale="0" :size="7" :imageM="row.image_m" />
+        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :scale="2" :size="0" :imageM="row.image_m" />
       </div>
     </template>
     <template #cell-name="{ row }">
