@@ -57,16 +57,16 @@ onMounted(() => { loadIndex() })
     avatarAlias="uid"
   >
     <template #cell-avatar="{ row }">
-      <AvatarDisplay :index-entry="row" :size="3" feature="full" />
+      <AvatarDisplay :index-entry="row" :scale="0" :size="3" feature="full" />
     </template>
     <template #cell-name="{ row }">
       {{ baseName(row) }}<template v-if="row.another_name"> <span class="alias-text">{{ row.another_name }}</span></template>
     </template>
     <template #cell-attr="{ row }">
-      <IconDisplay v-if="row.attack_attributes?.[0]" type="attribute" :id="row.attack_attributes[0]" :size="0" />
+      <IconDisplay v-if="row.attack_attributes?.[0]" type="attribute" :id="row.attack_attributes[0]" :scale="0" :size="0" />
     </template>
     <template #cell-role="{ row }">
-      <IconDisplay v-if="row.role" type="role" :id="row.role" :size="1" />
+      <IconDisplay v-if="row.role" type="role" :id="row.role" :scale="0" :size="1" />
     </template>
     <template #cell-skillName="{ row }">
       {{ row.leader_skill?.name }}

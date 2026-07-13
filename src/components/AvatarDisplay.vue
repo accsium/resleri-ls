@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { useI18n, SIZE_SCALE } from '../composables/useI18n'
+import { useI18n, getSizePx } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
@@ -11,6 +11,7 @@ const { getTraitColorHex, currentLang } = useI18n()
 const props = defineProps({
   indexEntry: Object,
   size: { type: Number, default: 8 },
+  scale: { type: Number, required: true },
   kid: { type: String, default: '' },
   imageM: { type: String, default: null },
 })
@@ -66,7 +67,7 @@ const textScale = computed(() => {
   return Math.min(1, 320 / (BASE_FONT * maxW))
 })
 
-const sizePx = computed(() => SIZE_SCALE[props.size])
+const sizePx = computed(() => getSizePx(props.scale, props.size))
 
 </script>
 
@@ -114,10 +115,10 @@ const sizePx = computed(() => SIZE_SCALE[props.size])
         </text>
       </svg>
       <div v-if="roleId" class="overlay-icon overlay-icon-left" style="top: 0; left: 0">
-        <IconDisplay type="role" :id="roleId" :size="9" />
+        <IconDisplay type="role" :id="roleId" :scale="1" :size="4" />
       </div>
       <div v-if="attributeId" class="overlay-icon overlay-icon-right" style="top: 8px; right: 8px">
-        <IconDisplay type="attribute" :id="attributeId" :size="8" />
+        <IconDisplay type="attribute" :id="attributeId" :scale="1" :size="3" />
       </div>
       <div v-if="starDisplayCount > 0"
         :style="{

@@ -207,7 +207,7 @@ onMounted(async () => {
         <button v-for="id in ATTR_IDS" :key="'a'+id"
           class="sf-icon-btn" :class="{ active: activeFilters.attr.includes(id) }"
           @click="toggleFilter('attr', id)"
-        ><IconDisplay type="attribute" :id="id" :size="0" /></button>
+        ><IconDisplay type="attribute" :id="id" :scale="0" :size="0" /></button>
       </div>
       <span class="skf-sep"></span>
       <div class="skf-group">
@@ -257,7 +257,7 @@ onMounted(async () => {
     <template #cell-id="{ row }">{{ row.char_id }}</template>
     <template #cell-avatar="{ row }">
       <div class="ls-avatar-cell">
-        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :size="7" :imageM="row.image_m" />
+        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :scale="0" :size="7" :imageM="row.image_m" />
       </div>
     </template>
     <template #cell-name="{ row }">
@@ -269,7 +269,7 @@ onMounted(async () => {
       {{ currentLang === 'cn' ? row.target_name_cn : row.target_name_ja }}
     </template>
     <template #cell-attr="{ row }">
-      <IconDisplay v-if="(row.attack_attributes || [])[0]" type="attribute" :id="(row.attack_attributes || [])[0]" :size="0" />
+      <IconDisplay v-if="(row.attack_attributes || [])[0]" type="attribute" :id="(row.attack_attributes || [])[0]" :scale="0" :size="0" />
     </template>
     <template #cell-dmg="{ row }">{{ formatPower(row.dmg_power) }}</template>
     <template #cell-brk="{ row }">{{ formatPower(row.break_power) }}</template>

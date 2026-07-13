@@ -335,7 +335,7 @@ const permStatusLabels = computed(() => ({
           :class="{ active: selectedRoles.includes(id) }"
           @click="toggleRole(id)"
         >
-          <IconDisplay type="role" :id="id" :size="0" :alt="roleMap[id]" />
+          <IconDisplay type="role" :id="id" :scale="0" :size="0" :alt="roleMap[id]" />
         </button>
       </div>
       <div class="sf-divider"></div>
@@ -347,7 +347,7 @@ const permStatusLabels = computed(() => ({
           :class="{ active: selectedAttrs.includes(id) }"
           @click="toggleAttr(id)"
         >
-          <IconDisplay type="attribute" :id="id" :size="0" :alt="attrMap[id]" />
+          <IconDisplay type="attribute" :id="id" :scale="0" :size="0" :alt="attrMap[id]" />
         </button>
       </div>
       <div class="sf-spacer"></div>
