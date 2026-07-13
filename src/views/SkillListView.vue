@@ -2,16 +2,14 @@
 import { ref, reactive, computed, watch, onMounted } from 'vue'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useI18n } from '../composables/useI18n'
-import { useSortTable } from '../composables/useSortTable'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import IconDisplay from '../components/IconDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 import PaginationBar from '../components/PaginationBar.vue'
 
-const { characterIndex, indexLoaded, skillsMap, baseCharacterMap, loadIndex, loadSkills } = useCharacterData()
+const { characterIndex, indexLoaded, skillsMap, baseCharacterMap, attrMap: attrData, loadIndex, loadSkills } = useCharacterData()
 const { t, currentLang, getField, ATTR_IDS } = useI18n()
 
-const { attrMap: attrData } = useCharacterData()
 const attrMap = computed(() => {
   const m = {}
   for (const [id, entry] of Object.entries(attrData.value)) {
@@ -23,9 +21,11 @@ const charIndexMap = computed(() => {
   const m = {}; for (const c of characterIndex.value) m[c.id] = c; return m
 })
 
+const ready = computed(() => indexLoaded.value && Object.keys(skillsMap.value).length > 0)
+
 const columns = computed(() => [
   { key: 'id', label: t('id'), width: 72, sortVal: (row) => row.char_id },
-  { key: 'avatar', label: t('avatar'), width: 88 },
+  { key: 'avatar', label: t('avatar'), width: 88, sortVal: (row) => row.uid },
   { key: 'name', label: t('characterName'), minWidth: 240, sortVal: (row) => getField(row, 'base_name') },
   { key: 'type', label: t('skillTypeLabel'), minWidth: 84, align: 'center', sortVal: (row) => row.type },
   { key: 'state', label: t('skillStateLabel'), minWidth: 72, align: 'center', sortVal: (row) => row.state },
@@ -38,12 +38,6 @@ const columns = computed(() => [
   { key: 'limit', label: t('limit'), width: 56, align: 'center', sortVal: (row) => row.limit_count ?? 0 },
   { key: 'skillName', label: t('skillName'), minWidth: 240, sortVal: (row) => row.name || '' },
   { key: 'skillDesc', label: t('description'), minWidth: 1200, sortVal: (row) => row.description || '' },
-])
-
-// 排序用列定义 — 在 display columns 基础上补充 uid（avatarAlias 映射的虚拟键）
-const _sortCols = computed(() => [
-  ...columns.value,
-  { key: 'uid', sortVal: (row) => (charIndexMap.value[row.char_id] || {}).uid || '' },
 ])
 
 const stateLabels = computed(() => ({
@@ -90,10 +84,27 @@ function targetCat(name) {
   return cats
 }
 
-// 从 character_index + skillsMap 构建平铺技能行
+function collectSkills(skObj, char, state, imageM) {
+  const ALL_TYPES = ['normal1', 'normal2', 'burst', 'active1', 'active2', 'active3']
+  const rows = []
+  for (const type of ALL_TYPES) {
+    const ids = skObj[type] || []
+    if (ids.length > 0) {
+      const skill = skillsMap.value[ids[ids.length - 1]]
+      const displayType = type.startsWith('active') ? 'active' : type
+      if (skill) rows.push(buildRow(char, displayType, state, skill, imageM))
+    }
+  }
+  const exIds = skObj.ex || []
+  if (exIds.length > 0) {
+    const skill = skillsMap.value[exIds[exIds.length - 1]]
+    if (skill) rows.push(buildRow(char, 'ex', state, skill, imageM))
+  }
+  return rows
+}
+
 function buildSkillRows() {
   const rows = []
-  const ALL_TYPES = ['normal1', 'normal2', 'burst', 'active1', 'active2', 'active3']
   const sl = stateLabels.value
 
   for (const char of characterIndex.value) {
@@ -102,55 +113,28 @@ function buildSkillRows() {
     const baseState = sw ? (sl[sw]?.[0] || '—') : '—'
     const altState = sw ? (sl[sw]?.[1] || null) : null
 
-    // 基础形态技能
-    for (const type of ALL_TYPES) {
-      const ids = sk[type] || []
-      if (ids.length > 0) {
-        const skill = skillsMap.value[ids[ids.length - 1]]
-        const displayType = type.startsWith('active') ? 'active' : type
-        if (skill) rows.push(buildRow(char, displayType, baseState, skill))
-      }
-    }
-    // EX 技能
-    const exIds = sk.ex || []
-    if (exIds.length > 0) {
-      const lastId = exIds[exIds.length - 1]
-      const skill = skillsMap.value[lastId]
-      if (skill) rows.push(buildRow(char, 'ex', '—', skill))
-    }
+    rows.push(...collectSkills(sk, char, baseState))
 
-    // 切换形态技能
     if (altState) {
       const altSk = char.switch_stat?.skills
       if (altSk) {
-        for (const type of ALL_TYPES) {
-          const ids = altSk[type] || []
-          if (ids.length > 0) {
-            const skill = skillsMap.value[ids[ids.length - 1]]
-            const displayType = type.startsWith('active') ? 'active' : type
-            if (skill) rows.push(buildRow(char, displayType, altState, skill))
-          }
-        }
-        // 切换形态 EX
-        const stExIds = altSk.ex || []
-        if (stExIds.length > 0) {
-          const skill = skillsMap.value[stExIds[stExIds.length - 1]]
-          if (skill) rows.push(buildRow(char, 'ex', altState, skill))
-        }
+        const altImageM = char.switch_stat.image_M || null
+        rows.push(...collectSkills(altSk, char, altState, altImageM))
       }
     }
   }
-  rows.forEach((r, i) => r._idx = i)
   return rows
 }
 
-function buildRow(char, type, state, skill) {
+function buildRow(char, type, state, skill, imageM) {
   const isHeal = skill.skill_power_type && [5,6,7].includes(skill.skill_power_type)
   const isDmg  = skill.skill_power_type && [1,2,3,4].includes(skill.skill_power_type)
   const bc = baseCharacterMap.value[char.base_character_id]
   return {
-    _idx: 0,
+    _key: `${char.id}-${type}-${state}`,
+    uid: char.uid || '',
     char_id: char.id,
+    image_m: imageM || null,
     base_name_ja: bc?.name_ja || '',
     base_name_cn: (bc?.name_cn || bc?.name_ja) || '',
     another_name: char.another_name || '',
@@ -170,19 +154,7 @@ function buildRow(char, type, state, skill) {
   }
 }
 
-const skillsReady = ref(false)
-
-onMounted(async () => {
-  await loadIndex()
-  await loadSkills()
-  skillsReady.value = true
-})
-
-const skills = computed(() => (indexLoaded.value && skillsReady.value) ? buildSkillRows() : [])
-
-const { sortCol, sortDir, onSort: onTableSort, sortItems } = useSortTable({
-  defaultCol: 'id', defaultDir: 'asc', avatarAlias: 'uid',
-})
+const skills = computed(() => ready.value ? buildSkillRows() : [])
 
 const filteredSkills = computed(() => {
   let list = skills.value
@@ -202,7 +174,6 @@ const filteredSkills = computed(() => {
       (r.description || '').toLowerCase().includes(q)
     )
   }
-  list = sortItems(list, _sortCols.value)
   return list
 })
 
@@ -214,13 +185,16 @@ const pagedSkills = computed(() => {
   return filteredSkills.value.slice(start, start + slPageSize.value)
 })
 
-watch([() => filteredSkills.value.length, searchText], () => { slPage.value = 1 })
+watch(() => filteredSkills.value.length, () => { slPage.value = 1 })
 
-function onSort(col) { onTableSort(col) }
+onMounted(async () => {
+  await loadIndex()
+  await loadSkills()
+})
 </script>
 
 <template>
-  <div v-if="!indexLoaded" class="loading">{{ t('loading') }}</div>
+  <div v-if="!ready" class="loading">{{ t('loading') }}</div>
   <template v-else>
   <div class="skf-bar">
     <div class="skf-row">
@@ -234,8 +208,8 @@ function onSort(col) { onTableSort(col) }
       <span class="skf-sep"></span>
       <div class="skf-group">
         <span class="skf-label">{{ t('skillTypeLabel') }}</span>
-        <label v-for="t in TYPE_KEYS" :key="'t'+t" class="skf-check">
-          <input type="checkbox" :checked="activeFilters.type.includes(t)" @change="toggleFilter('type',t)">{{ t('skillType')[t] }}
+        <label v-for="sk in TYPE_KEYS" :key="'t'+sk" class="skf-check">
+          <input type="checkbox" :checked="activeFilters.type.includes(sk)" @change="toggleFilter('type',sk)">{{ t('skillType')[sk] }}
         </label>
       </div>
     </div>
@@ -249,8 +223,8 @@ function onSort(col) { onTableSort(col) }
       <span class="skf-sep"></span>
       <div class="skf-group">
         <span class="skf-label">{{ t('target') }}</span>
-        <label v-for="t in targetKeys" :key="'tg'+t" class="skf-check">
-          <input type="checkbox" :checked="activeFilters.target.includes(t)" @change="toggleFilter('target',t)">{{ t }}
+        <label v-for="tg in targetKeys" :key="'tg'+tg" class="skf-check">
+          <input type="checkbox" :checked="activeFilters.target.includes(tg)" @change="toggleFilter('target',tg)">{{ tg }}
         </label>
       </div>
     </div>
@@ -272,14 +246,14 @@ function onSort(col) { onTableSort(col) }
     @update:pageSize="slPageSize = $event"
   />
   <SortableTable
-    :columns="columns" :rows="pagedSkills" rowKey="_idx"
+    :columns="columns" :rows="pagedSkills" rowKey="_key"
     :frozen="2" :autoHeight="true"
-    :sortCol="sortCol" :sortDir="sortDir" @sort="onSort"
+    defaultSortCol="id" defaultSortDir="asc"
   >
     <template #cell-id="{ row }">{{ row.char_id }}</template>
     <template #cell-avatar="{ row }">
       <div class="ls-avatar-cell">
-        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :size="7" />
+        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :size="7" :imageM="row.image_m" />
       </div>
     </template>
     <template #cell-name="{ row }">
