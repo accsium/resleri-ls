@@ -86,7 +86,7 @@ const sizePx = computed(() => SIZE_SCALE[props.size])
         <image
           v-if="!imageLoaded"
           :href="'image/misc/item_experience_FACE_M.webp'"
-          x="32" y="39" width="256" height="256"
+          x="0" y="0" width="320" height="320"
           mask="url(#mask-g)"
           preserveAspectRatio="xMidYMax meet"
         />
