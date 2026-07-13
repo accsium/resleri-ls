@@ -21,9 +21,20 @@ const route = useRoute()
 // ── 视图模式 ──
 // ── UI 状态持久化 ──
 const viewMode = useLocalStorage('resleri-ui-viewMode', 'sequential')
-const seqSize = useLocalStorage('resleri-ui-seqSize', 3)  // size=3 scale=1 → 96px
-const matSize = useLocalStorage('resleri-ui-matSize', 3)  // size=3 scale=0 → 48px
+const _seqPx = useLocalStorage('resleri-ui-seqPx', 96)
+const _matPx = useLocalStorage('resleri-ui-matPx', 48)
 const colorMode = useLocalStorage('resleri-ui-colorMode', false)
+
+/** px → size，始终写回规范化 px */
+const _restoreSize = (pxRef, scale) => {
+  const raw = (pxRef.value >> (scale + 3)) - 3
+  const s = raw >= 0 && raw <= 7 ? raw : 3
+  pxRef.value = getSizePx(scale, s)
+  return s
+}
+const seqSize = computed({ get: () => _restoreSize(_seqPx, 1), set: s => _seqPx.value = getSizePx(1, s) })
+const matSize = computed({ get: () => _restoreSize(_matPx, 0), set: s => _matPx.value = getSizePx(0, s) })
+
 const sizeSteps = computed(() => {
   const cur = viewMode.value === 'sequential' ? seqSize.value : matSize.value
   return Array.from({ length: 8 }, (_, i) => ({ val: i, active: i === cur, below: i < cur }))
@@ -215,13 +226,13 @@ onUnmounted(() => {
         <span class="collection-size-group" v-if="viewMode === 'sequential'">
           <span class="collection-size-label">{{ t('avatarSize') }}</span>
           <span class="size-steps">
-            <span v-for="(s, si) in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="seqSize = s.val"></span>
+            <span v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="seqSize = s.val"></span>
           </span>
         </span>
         <span class="collection-size-group" v-else>
           <span class="collection-size-label">{{ t('avatarSize') }}</span>
           <span class="size-steps">
-            <span v-for="(s, si) in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="matSize = s.val"></span>
+            <span v-for="s in sizeSteps" :key="s.val" class="size-step" :class="{ active: s.active, below: s.below }" @click="matSize = s.val"></span>
           </span>
         </span>
       </div>

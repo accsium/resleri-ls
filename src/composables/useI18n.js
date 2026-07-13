@@ -184,8 +184,8 @@ const UI_TEXT = {
 const ATTR_IDS    = [5, 6, 7, 8, 1, 2, 3]  // 魔法优先，物理在后
 const TRAIT_COLOR_HEX = { 1: '#3498DB', 2: '#9B59B6', 3: '#F1C40F', 4: '#E74C3C', 5: '#2ECC71' }
 
-/** (24 + size × 8) × 2^scale — size 0-7, scale 为自然数 */
-export const getSizePx = (scale, size) => (24 + size * 8) << scale
+/** (size + 3) << (scale + 3) — size 0-7, scale 为自然数 */
+export const getSizePx = (scale, size) => (size + 3) << (scale + 3)
 
 const SORT_FIELDS = [
   { field: 'start_at',    label_ja: '実装日',   label_cn: '加入时间' },
