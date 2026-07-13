@@ -25,10 +25,10 @@ const roleMap = computed(() => {
 
 const columns = computed(() => [
   { key: 'id', label: t('id'), width: 72 },
-  { key: 'avatar', label: t('avatar'), width: 60 },
+  { key: 'avatar', label: t('avatar'), width: 66 },
   { key: 'name', label: t('characterName'), minWidth: 240, sortVal: (row) => baseName(row) },
-  { key: 'attr', label: t('attribute'), width: 56, align: 'center', sortVal: (row) => row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999 },
-  { key: 'role', label: t('role'), width: 56, align: 'center', sortVal: (row) => row.role || 999 },
+  { key: 'attr', label: t('attribute'), width: 66, align: 'center', sortVal: (row) => row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999 },
+  { key: 'role', label: t('role'), width: 66, align: 'center', sortVal: (row) => row.role || 999 },
   { key: 'skillName', label: t('leaderSkillSection'), minWidth: 200, sortVal: (row) => row.leader_skill?.name || '' },
   { key: 'skillDesc', label: t('effectLabel'), minWidth: 300, sortVal: (row) => row.leader_skill?.description || '' },
 ])

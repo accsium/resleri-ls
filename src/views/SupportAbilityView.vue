@@ -12,13 +12,13 @@ const { t, currentLang, getField, ATTR_IDS } = useI18n()
 
 const columns = computed(() => [
   { key: 'id', label: t('id'), width: 72 },
-  { key: 'avatar', label: t('avatar'), width: 60 },
+  { key: 'avatar', label: t('avatar'), width: 66 },
   { key: 'name', label: t('characterName'), minWidth: 200, sortVal: (row) => baseName(row, currentLang.value) },
-  { key: 'attr', label: t('attribute'), width: 56, align: 'center', sortVal: (row) => row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999 },
-  { key: 'role', label: t('role'), width: 56, align: 'center', sortVal: (row) => row.role || 999 },
+  { key: 'attr', label: t('attribute'), width: 66, align: 'center', sortVal: (row) => row.attack_attributes?.[0] ? ATTR_IDS.indexOf(row.attack_attributes[0]) : 999 },
+  { key: 'role', label: t('role'), width: 66, align: 'center', sortVal: (row) => row.role || 999 },
   { key: 'maxRarity', label: t('maxRarity'), width: 80, align: 'center', sortVal: (row) => row.max_rarity || 0 },
-  { key: 'saAttr', label: t('targetAttr'), width: 56, align: 'center', sortVal: (row) => row.support_ability?.attr != null ? ATTR_IDS.indexOf(row.support_ability.attr) : 999 },
-  { key: 'saRole', label: t('targetRole'), width: 56, align: 'center', sortVal: (row) => row.support_ability?.role || 999 },
+  { key: 'saAttr', label: t('targetAttr'), width: 66, align: 'center', sortVal: (row) => row.support_ability?.attr != null ? ATTR_IDS.indexOf(row.support_ability.attr) : 999 },
+  { key: 'saRole', label: t('targetRole'), width: 66, align: 'center', sortVal: (row) => row.support_ability?.role || 999 },
   { key: 'saTag', label: t('targetTag'), minWidth: 100, sortVal: (row) => row.support_ability?.tag || '￿' },
   { key: 'saDesc', label: t('supportAbilityDesc'), minWidth: 400, sortVal: (row) => row.support_ability?.description || '' },
 ])
