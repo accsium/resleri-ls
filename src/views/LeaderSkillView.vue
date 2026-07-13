@@ -3,6 +3,7 @@ import { computed, onMounted } from 'vue'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useI18n } from '../composables/useI18n'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
+import IconDisplay from '../components/IconDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
 
 const { characterIndex, indexLoaded, baseCharacterMap, loadIndex, attrMap: attrData, roleMap: roleData } = useCharacterData()
@@ -62,10 +63,10 @@ onMounted(() => { loadIndex() })
       {{ baseName(row) }}<template v-if="row.another_name"> <span class="alias-text">{{ row.another_name }}</span></template>
     </template>
     <template #cell-attr="{ row }">
-      <span v-if="row.attack_attributes?.[0]">{{ attrMap[row.attack_attributes[0]] || row.attack_attributes[0] }}</span>
+      <IconDisplay v-if="row.attack_attributes?.[0]" type="attribute" :id="row.attack_attributes[0]" :size="0" />
     </template>
     <template #cell-role="{ row }">
-      {{ roleMap[row.role] || row.role }}
+      <IconDisplay v-if="row.role" type="role" :id="row.role" :size="1" />
     </template>
     <template #cell-skillName="{ row }">
       {{ row.leader_skill?.name }}

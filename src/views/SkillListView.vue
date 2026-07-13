@@ -2,6 +2,7 @@
 import { ref, reactive, computed, watch, onMounted } from 'vue'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useI18n } from '../composables/useI18n'
+import { useSortTable } from '../composables/useSortTable'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import IconDisplay from '../components/IconDisplay.vue'
 import SortableTable from '../components/SortableTable.vue'
@@ -154,6 +155,8 @@ function buildRow(char, type, state, skill, imageM) {
   }
 }
 
+const { sortCol, sortDir, onSort, sortItems: sortFn } = useSortTable({ defaultCol: 'uid', defaultDir: 'desc', avatarAlias: 'uid' })
+
 const skills = computed(() => ready.value ? buildSkillRows() : [])
 
 const filteredSkills = computed(() => {
@@ -174,6 +177,7 @@ const filteredSkills = computed(() => {
       (r.description || '').toLowerCase().includes(q)
     )
   }
+  list = sortFn(list, columns.value)
   return list
 })
 
@@ -248,7 +252,7 @@ onMounted(async () => {
   <SortableTable
     :columns="columns" :rows="pagedSkills" rowKey="_key"
     :frozen="2" :autoHeight="true"
-    defaultSortCol="id" defaultSortDir="asc"
+    :sortCol="sortCol" :sortDir="sortDir" avatarAlias="uid" @sort="onSort"
   >
     <template #cell-id="{ row }">{{ row.char_id }}</template>
     <template #cell-avatar="{ row }">
@@ -265,7 +269,7 @@ onMounted(async () => {
       {{ currentLang === 'cn' ? row.target_name_cn : row.target_name_ja }}
     </template>
     <template #cell-attr="{ row }">
-      {{ (row.attack_attributes || []).map(a => attrMap[a] || a).join(' ') }}
+      <IconDisplay v-if="(row.attack_attributes || [])[0]" type="attribute" :id="(row.attack_attributes || [])[0]" :size="0" />
     </template>
     <template #cell-dmg="{ row }">{{ formatPower(row.dmg_power) }}</template>
     <template #cell-brk="{ row }">{{ formatPower(row.break_power) }}</template>

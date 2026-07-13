@@ -81,7 +81,7 @@ onMounted(() => { loadIndex() })
       <IconDisplay v-if="(row.attack_attributes || [])[0]" type="attribute" :id="(row.attack_attributes || [])[0]" :size="0" />
     </template>
     <template #cell-role="{ row }">
-      <IconDisplay v-if="row.role" type="role" :id="row.role" :size="0" />
+      <IconDisplay v-if="row.role" type="role" :id="row.role" :size="1" />
     </template>
     <template #cell-maxRarity="{ row }">
       <StarsDisplay :mode="1" :rarity="row.max_rarity" :max-rarity="8" :scale="0.25" />
@@ -90,7 +90,7 @@ onMounted(() => { loadIndex() })
       <IconDisplay v-if="row.support_ability?.attr" type="attribute" :id="row.support_ability.attr" :size="0" />
     </template>
     <template #cell-saRole="{ row }">
-      <IconDisplay v-if="row.support_ability?.role" type="role" :id="row.support_ability.role" :size="0" />
+      <IconDisplay v-if="row.support_ability?.role" type="role" :id="row.support_ability.role" :size="1" />
     </template>
     <template #cell-saTag="{ row }">
       <template v-if="row.support_ability?.tag">

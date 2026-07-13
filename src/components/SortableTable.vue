@@ -45,8 +45,9 @@ function onSort(key) {
 }
 
 function sortArrow(key) {
-  if (displaySortCol.value !== key) return ''
-  return displaySortDir.value === 'desc' ? ' ▼' : ' ▲'
+  if (displaySortCol.value === key) return displaySortDir.value === 'desc' ? ' ▼' : ' ▲'
+  if (props.avatarAlias && key === 'avatar' && displaySortCol.value === props.avatarAlias) return displaySortDir.value === 'desc' ? ' ▼' : ' ▲'
+  return ''
 }
 
 // 冻结列 left 偏移累积 + 总宽度
