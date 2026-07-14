@@ -18,7 +18,8 @@ for (const entry of index) {
   if (entry.switch_stat?.image_M) imageSet.add(entry.switch_stat.image_M);
 }
 
-const srcDir = path.join(rootDir, '..', 'resleriana-db', 'resources', 'Japan', 'StandaloneWindows64', 'Texture2D');
+const imgConfig = safeReadJSON(path.join(rootDir, 'config', 'image-source.json'));
+const srcDir = path.resolve(rootDir, imgConfig.srcDir);
 const destDir = path.join(rootDir, 'image', 'character');
 
 if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
@@ -42,3 +43,24 @@ for (const img of imageSet) {
 }
 
 console.log(`✅ 完成：复制 ${copied} 张，跳过 ${skipped} 张（已存在）`);
+
+// 复制卡池缩略图
+const gachaFile = path.join(rootDir, 'data', 'output', 'gachas.json');
+if (fs.existsSync(gachaFile)) {
+  const gachaData = safeReadJSON(gachaFile);
+  const gachaSet = new Set();
+  for (const g of gachaData) {
+    if (g.gacha_image) gachaSet.add(g.gacha_image);
+  }
+  const gachaDest = path.join(rootDir, 'image', 'gacha');
+  if (!fs.existsSync(gachaDest)) fs.mkdirSync(gachaDest, { recursive: true });
+  let bc = 0, bs = 0;
+  for (const img of gachaSet) {
+    const src = path.join(srcDir, img + '.webp');
+    const dest = path.join(gachaDest, img + '.webp');
+    if (fs.existsSync(dest)) { bs++; continue; }
+    if (fs.existsSync(src)) { fs.copyFileSync(src, dest); bc++; console.log(`  ✓ ${img}.webp`); }
+    else { console.warn(`  ⚠ ${img}.webp 源文件不存在`); }
+  }
+  console.log(`🖼 卡池缩略图：复制 ${bc} 张，跳过 ${bs} 张`);
+}

@@ -14,7 +14,7 @@ const columns = computed(() => [
   { key: 'id', label: t('id'), width: 72 },
   { key: 'start_at', label: t('startDate'), width: 140 },
   { key: 'end_at', label: t('endDate'), width: 140 },
-  { key: 'name', label: t('gachaName'), minWidth: 200 },
+  { key: 'gacha_image', label: t('gacha'), width: 254 },
   { key: 'characters', label: t('characters'), minWidth: 100 },
   { key: 'picked_up_memoria_ids', label: 'picked_up_memoria_ids', minWidth: 100 },
 ])
@@ -80,7 +80,10 @@ onMounted(async () => {
         <template #cell-id="{ row }">{{ row.id }}</template>
         <template #cell-start_at="{ row }">{{ fmtDate(row.start_at) }}</template>
         <template #cell-end_at="{ row }">{{ fmtDate(row.end_at) }}</template>
-        <template #cell-name="{ row }">{{ row.name }}</template>
+        <template #cell-gacha_image="{ row }">
+          <img v-if="row.gacha_image" :src="'image/gacha/' + row.gacha_image + '.webp'" style="height: 80px;">
+          <span v-else>{{ row.name }}</span>
+        </template>
         <template #cell-characters="{ row }">
           <span class="gacha-chars">
             <template v-for="cid in row.character_ids" :key="cid">

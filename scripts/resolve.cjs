@@ -4,7 +4,7 @@ const config = require('./resolveConfig.cjs');
 const { safeReadJSON } = require('./safeReadJSON.cjs');
 
 const pipelineConfig = safeReadJSON(
-  path.join(__dirname, '..', 'config', 'pipeline.json')
+  path.join(__dirname, 'pipeline.json')
 );
 const rawDir = path.join(__dirname, '..', pipelineConfig.dataRawDir);
 const langDir = path.join(__dirname, '..', 'data', 'translation');
@@ -538,13 +538,14 @@ if (fs.existsSync(gachaFile)) {
     for (const piece of (g.additional_pieces || [])) {
       if (piece.character_ids) charIds.push(...piece.character_ids);
     }
+    const hash = g.small_banner_path_hash;
     gachaEntries.push({
       id: g.id,
       name: g.name,
       start_at: g.start_at,
       end_at: g.end_at,
       category,
-      gacha_type: g.gacha_type,
+      gacha_image: hash ? hashToName.get(String(hash)) || null : null,
       picked_up_memoria_ids: g.picked_up_memoria_ids || [],
       character_ids: [...new Set(charIds)],
     });
@@ -744,7 +745,8 @@ const gachaTable = gachaEntries
   .map(g => ({
     id: g.id, name: g.name,
     start_at: fmtDate2(g.start_at), end_at: fmtDate2(g.end_at),
-    category: g.category, gacha_type: g.gacha_type,
+    category: g.category,
+    gacha_image: g.gacha_image,
     picked_up_memoria_ids: g.picked_up_memoria_ids,
     character_ids: g.character_ids,
   }));

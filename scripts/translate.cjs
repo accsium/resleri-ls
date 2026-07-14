@@ -3,7 +3,7 @@ const path = require('path');
 const { safeReadJSON } = require('./safeReadJSON.cjs');
 
 const pipelineConfig = safeReadJSON(
-  path.join(__dirname, '..', 'config', 'pipeline.json')
+  path.join(__dirname, 'pipeline.json')
 );
 
 const rootDir = path.join(__dirname, '..');
