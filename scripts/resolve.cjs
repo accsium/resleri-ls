@@ -317,7 +317,9 @@ function buildCharacterEntry(character) {
   const fesName = getFesName(char.start_at);
   let permanent_status = null;
   let permanent_date = null;
-  if (permExcludeIds.has(char.id) || (char.tag_ids || []).includes(38)) {
+  if (char.initial_rarity < 3) {
+    // 1-2 星角色不参与恒常化/fes 判定
+  } else if (permExcludeIds.has(char.id) || (char.tag_ids || []).includes(38)) {
     permanent_status = 'limited';
   } else if (fesName === 'ATELIER FES') {
     permanent_status = 'fes_0';
