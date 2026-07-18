@@ -4,19 +4,23 @@ import SortableTable from '../components/SortableTable.vue'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import { useI18n } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
+import { useMemoriaData } from '../composables/useMemoriaData'
+import MemoriaDisplay from '../components/MemoriaDisplay.vue'
+import GachaBanner from '../components/GachaBanner.vue'
 import { fmtDate } from '../utils/date.js'
 import { preFetch } from '../router'
 
 const { t } = useI18n()
 const { characterIndex, loadIndex } = useCharacterData()
+const { memoriaList, loadMemoria } = useMemoriaData()
 
 const columns = computed(() => [
   { key: 'id', label: t('id'), width: 72 },
   { key: 'start_at', label: t('startDate'), width: 140 },
   { key: 'end_at', label: t('endDate'), width: 140 },
   { key: 'gacha_image', label: t('gacha'), width: 254 },
-  { key: 'characters', label: t('characters'), minWidth: 100 },
-  { key: 'picked_up_memoria_ids', label: 'picked_up_memoria_ids', minWidth: 100 },
+  { key: 'characters', label: t('characters'), width: 280 },
+  { key: 'picked_up_memoria_ids', label: t('memoria'), width: 280 },
 ])
 
 const CATEGORIES = ['LEGEND FES', '有償限定', '衣装調合', '其他']
@@ -43,8 +47,15 @@ const charMap = computed(() => {
   return map
 })
 
+const memoriaMap = computed(() => {
+  const map = {}
+  for (const m of memoriaList.value) map[m.id] = m
+  return map
+})
+
 onMounted(async () => {
   await loadIndex()
+  await loadMemoria()
   let data = await preFetch.gachas
   if (!data) {
     const resp = await fetch('data/gachas.json')
@@ -81,16 +92,26 @@ onMounted(async () => {
         <template #cell-start_at="{ row }">{{ fmtDate(row.start_at) }}</template>
         <template #cell-end_at="{ row }">{{ fmtDate(row.end_at) }}</template>
         <template #cell-gacha_image="{ row }">
-          <img v-if="row.gacha_image" :src="'image/gacha/' + row.gacha_image + '.webp'" style="height: 80px;">
-          <span v-else>{{ row.name }}</span>
+          <GachaBanner :gacha="row" />
         </template>
         <template #cell-characters="{ row }">
-          <span class="gacha-chars">
+          <span class="pickup-icons">
             <template v-for="cid in row.character_ids" :key="cid">
               <AvatarDisplay
                 v-if="charMap[cid]"
                 :indexEntry="charMap[cid]"
-                :scale="1" :size="0"
+                :scale="1" :size="1"
+              />
+            </template>
+          </span>
+        </template>
+        <template #cell-picked_up_memoria_ids="{ row }">
+          <span class="pickup-icons">
+            <template v-for="mid in row.picked_up_memoria_ids" :key="mid">
+              <MemoriaDisplay
+                v-if="memoriaMap[mid]"
+                :entry="memoriaMap[mid]"
+                :scale="1" :size="1"
               />
             </template>
           </span>
@@ -101,7 +122,9 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.gacha-chars { display: inline-flex; gap: 4px; }
+.pickup-icons { display: grid; grid-template-columns: repeat(4, 64px); vertical-align: top; }
+.gacha-wrap :deep(.st-table) { width: auto; min-width: 0; }
+.gacha-wrap :deep(.st-wrap) { width: max-content; }
 .gacha-wrap :deep(.st-table td) { height: auto; }
 .gacha-cats {
   display: flex; gap: 8px;

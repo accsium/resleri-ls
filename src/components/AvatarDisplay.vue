@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue'
 import { useI18n, getSizePx } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
+import { useImagePlaceholder, PLACEHOLDER_ATTRS } from '../composables/useImagePlaceholder'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
@@ -36,7 +37,7 @@ const charImage = computed(() => {
   if (!img) return null
   return `image/character/${img}.webp`
 })
-const imageLoaded = ref(false)
+const { imageLoaded, PLACEHOLDER } = useImagePlaceholder(charImage)
 
 const { baseCharacterMap } = useCharacterData()
 
@@ -86,8 +87,8 @@ const sizePx = computed(() => getSizePx(props.scale, props.size))
         <polygon points="160,25 295,160 160,295" :fill="supportHex"/>
         <image
           v-if="!imageLoaded"
-          :href="'image/misc/item_experience_FACE_M.webp'"
-          x="0" y="0" width="320" height="320"
+          :href="PLACEHOLDER"
+          v-bind="PLACEHOLDER_ATTRS"
           mask="url(#mask-g)"
           preserveAspectRatio="xMidYMax meet"
         />
@@ -98,7 +99,6 @@ const sizePx = computed(() => getSizePx(props.scale, props.size))
           mask="url(#mask-g)"
           preserveAspectRatio="xMidYMax meet"
           :style="{ visibility: imageLoaded ? 'visible' : 'hidden' }"
-          @load="imageLoaded = true"
         />
         <text
           v-if="!imageLoaded"

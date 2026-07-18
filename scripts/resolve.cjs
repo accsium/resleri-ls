@@ -706,6 +706,33 @@ visibleCharacters.forEach(char => {
   Object.assign(globalAbilities, details.abilities);
 });
 
+// ========== memoria ==========
+const memoriaFile = path.join(rawDir, 'memoria.json');
+if (fs.existsSync(memoriaFile)) {
+  const memoriaRaw = safeReadJSON(memoriaFile);
+  const memoriaOutput = [];
+  for (const m of memoriaRaw) {
+    const image_square = m.large_still_path_hash != null
+      ? (hashToName.get(String(m.large_still_path_hash)) || null)
+      : null;
+    const image_M = m.small_still_path_hash != null
+      ? (hashToName.get(String(m.small_still_path_hash)) || null)
+      : null;
+    const entry = {
+      id: m.id,
+      name: m.name,
+      image_square,
+      image_M,
+      ability_ids: m.ability_ids || [],
+    };
+    memoriaOutput.push(entry);
+    const { abilities } = buildSkillAndAbilityDetails(m);
+    Object.assign(globalAbilities, abilities);
+  }
+  fs.writeFileSync(path.join(outDir, 'memoria.json'), JSON.stringify(memoriaOutput, null, 2), 'utf-8');
+  console.log(`📋 memoria：${memoriaOutput.length} 条`);
+}
+
 fs.writeFileSync(path.join(outDir, 'character_index.json'), JSON.stringify(index, null, 2), 'utf-8');
 fs.writeFileSync(path.join(outDir, 'skills.json'), JSON.stringify(globalSkills, null, 2), 'utf-8');
 fs.writeFileSync(path.join(outDir, 'abilities.json'), JSON.stringify(globalAbilities, null, 2), 'utf-8');

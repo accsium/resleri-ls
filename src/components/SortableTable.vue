@@ -112,6 +112,7 @@ function cellStyle(col) {
   const s = {}
   if (col.width) s.width = col.width + 'px'
   if (col.minWidth) s.minWidth = col.minWidth + 'px'
+  if (col.maxWidth) s.maxWidth = col.maxWidth + 'px'
   if (col.align) s.textAlign = col.align
   return s
 }

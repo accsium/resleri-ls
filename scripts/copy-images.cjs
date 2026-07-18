@@ -64,3 +64,25 @@ if (fs.existsSync(gachaFile)) {
   }
   console.log(`🖼 卡池缩略图：复制 ${bc} 张，跳过 ${bs} 张`);
 }
+
+// 复制 memoria 立绘
+const memoriaFile = path.join(rootDir, 'data', 'output', 'memoria.json');
+if (fs.existsSync(memoriaFile)) {
+  const memoriaData = safeReadJSON(memoriaFile);
+  const memoriaSet = new Set();
+  for (const m of memoriaData) {
+    if (m.image_square) memoriaSet.add(m.image_square);
+    if (m.image_M) memoriaSet.add(m.image_M);
+  }
+  const memoriaDest = path.join(rootDir, 'image', 'memoria');
+  if (!fs.existsSync(memoriaDest)) fs.mkdirSync(memoriaDest, { recursive: true });
+  let mc = 0, ms = 0;
+  for (const img of memoriaSet) {
+    const src = path.join(srcDir, img + '.webp');
+    const dest = path.join(memoriaDest, img + '.webp');
+    if (fs.existsSync(dest)) { ms++; continue; }
+    if (fs.existsSync(src)) { fs.copyFileSync(src, dest); mc++; console.log(`  ✓ ${img}.webp`); }
+    else { console.warn(`  ⚠ ${img}.webp 源文件不存在`); }
+  }
+  console.log(`🖼 memoria 立绘：复制 ${mc} 张，跳过 ${ms} 张`);
+}
