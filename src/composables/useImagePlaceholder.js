@@ -1,5 +1,4 @@
 import { ref, watch } from 'vue'
-import { miscReady } from './useMiscPreload.js'
 
 const PLACEHOLDER = 'image/misc/favicon.webp'
 
@@ -11,27 +10,14 @@ export function useImagePlaceholder(hrefRef) {
       imageLoaded.value = false
       return
     }
-    const _load = () => {
-      const img = new Image()
-      img.src = href
-      if (img.complete) {
-        imageLoaded.value = true
-      } else {
-        imageLoaded.value = false
-        img.onload = () => {
-          imageLoaded.value = true
-        }
-      }
-    }
-    if (href === PLACEHOLDER) {
-      _load()
+    const img = new Image()
+    img.src = href
+    if (img.complete) {
+      imageLoaded.value = true
     } else {
-      if (miscReady.value) { _load() }
-      else {
-        imageLoaded.value = false
-        const stop = watch(miscReady, (v) => {
-          if (v) { stop(); _load() }
-        })
+      imageLoaded.value = false
+      img.onload = () => {
+        imageLoaded.value = true
       }
     }
   }, { immediate: true })
