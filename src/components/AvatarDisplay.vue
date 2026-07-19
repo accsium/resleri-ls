@@ -1,13 +1,15 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n, getSizePx } from '../composables/useI18n'
+import { useCharacterData } from '../composables/useCharacterData'
 import { useImagePlaceholder } from '../composables/useImagePlaceholder'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
-import maskSvg from '../../image/misc/mask-g.svg'
+import maskSvg from '../../image/misc/mask-g.svg?url'
 
 let uid = 0
-const { getTraitColorHex } = useI18n()
+const { getTraitColorHex, currentLang } = useI18n()
+const { baseCharacterMap } = useCharacterData()
 
 const props = defineProps({
   indexEntry: Object,
@@ -43,6 +45,27 @@ const sizePx = computed(() => getSizePx(props.scale, props.size))
 
 const maskUrl = `url(${maskSvg})`
 
+const baseName = computed(() => {
+  const bc = baseCharacterMap.value[props.indexEntry.base_character_id]
+  if (!bc) return ''
+  return currentLang.value === 'cn' ? (bc.name_cn || bc.name_ja) : bc.name_ja
+})
+const aliasName = computed(() => props.indexEntry.another_name || '')
+
+const BASE_FONT = 32
+function _weightedLen(str) {
+  let w = 0
+  for (const ch of str) { w += /[一-鿿　-〿＀-￯]/.test(ch) ? 1 : 0.55 }
+  return Math.max(w, 1)
+}
+const textScale = computed(() => {
+  const nw = _weightedLen(baseName.value)
+  const aw = aliasName.value ? _weightedLen(aliasName.value) : 0
+  const maxW = Math.max(nw, aw)
+  if (maxW === 0) return 1
+  return Math.min(1, 320 / (BASE_FONT * maxW))
+})
+
 </script>
 
 <template>
@@ -63,13 +86,20 @@ const maskUrl = `url(${maskSvg})`
         v-if="!imageLoaded"
         :src="PLACEHOLDER"
         class="avatar-img"
+        :style="{ WebkitMaskImage: maskUrl, maskImage: maskUrl }"
       />
       <img
         v-if="charImage"
         :src="charImage"
         class="avatar-img"
         :class="{ 'img-hidden': !imageLoaded }"
+        :style="{ WebkitMaskImage: maskUrl, maskImage: maskUrl }"
       />
+      <span
+        v-if="!imageLoaded"
+        class="fallback-text"
+        :style="{ transform: 'translate(-50%,-50%) scale(' + textScale + ')' }"
+      >{{ baseName }}<br v-if="aliasName">{{ aliasName }}</span>
       <div v-if="roleId" class="overlay-icon overlay-icon-left" style="top: 0; left: 0">
         <IconDisplay type="role" :id="roleId" :scale="1" :size="4" />
       </div>
@@ -97,7 +127,17 @@ const maskUrl = `url(${maskSvg})`
   width: 256px;
   height: 256px;
   object-fit: cover;
-  mask-image: v-bind(maskUrl);
+}
+.fallback-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+  text-shadow: 0 0 6px rgba(0,0,0,0.8);
+  pointer-events: none;
 }
 .img-hidden { visibility: hidden; }
 </style>
