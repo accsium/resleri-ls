@@ -25,10 +25,10 @@ const miscDir = path.join(root, 'image', 'misc');
 if (fs.existsSync(miscDir)) {
   const indexHtml = path.join(root, 'index.html');
   const miscFiles = fs.readdirSync(miscDir)
-    .filter(f => f.endsWith('.webp') && f !== 'favicon.webp')
+    .filter(f => f.endsWith('.webp'))
     .sort();
   const preloadTags = miscFiles.map(f => {
-    const fp = f === 'item_experience_FACE_M.webp' ? ' fetchpriority="high"' : '';
+    const fp = f === 'favicon.webp' ? ' fetchpriority="high"' : '';
     return `  <link rel="preload" as="image" href="image/misc/${f}"${fp}>`;
   }).join('\n');
   let html = fs.readFileSync(indexHtml, 'utf-8');

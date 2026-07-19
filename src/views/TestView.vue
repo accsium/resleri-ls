@@ -46,6 +46,13 @@ const placeholderChar = {
   max_rarity: 5,
 }
 
+const placeholderMemoria = {
+  id: 99999,
+  image_square: 'nonexistent_memoria',
+  image_M: 'nonexistent_memoria',
+  name: '虚构回忆',
+}
+
 const scopedMemoria = computed(() =>
   scopeGroups.value.map(group => ({
     id: group.id,
@@ -64,7 +71,11 @@ const scopedMemoria = computed(() =>
 
   <div class="placeholder-test">
     <h2 class="scope-title">占位图 + 文字回退测试</h2>
-    <AvatarDisplay :index-entry="placeholderChar" :scale="1" :size="0" />
+    <div class="placeholder-row">
+      <AvatarDisplay :index-entry="placeholderChar" :scale="1" :size="0" />
+      <MemoriaDisplay :entry="placeholderMemoria" :scale="1" :size="0" />
+      <MemoriaDisplay_M :entry="placeholderMemoria" :scale="2" :size="0" />
+    </div>
   </div>
 
   <div class="scope-section">
@@ -134,6 +145,22 @@ const scopedMemoria = computed(() =>
   margin: 0 0 12px;
   font-size: 14px;
   color: var(--text-primary);
+}
+.placeholder-test {
+  margin: 16px;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.placeholder-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.placeholder-row :deep(.avatar-component) {
+  margin: 0;
 }
 .scope-memoria-list {
   display: flex;

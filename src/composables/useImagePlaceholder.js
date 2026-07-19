@@ -1,7 +1,7 @@
 import { ref, watch } from 'vue'
 import { miscReady } from './useMiscPreload.js'
 
-const PLACEHOLDER = 'image/misc/item_experience_FACE_M.webp'
+const PLACEHOLDER = 'image/misc/favicon.webp'
 
 export function useImagePlaceholder(hrefRef) {
   const imageLoaded = ref(false)

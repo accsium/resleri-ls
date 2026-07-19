@@ -64,16 +64,16 @@ const sizePx = computed(() => getSizePx(props.scale, props.size))
           overflow: 'hidden',
         }"
       >
+        <div class="memoria-m-bg" />
         <img
           v-if="!imageLoaded"
           :src="PLACEHOLDER"
-          width="320" height="512"
-          style="display: block;"
+          class="memoria-m-img"
         />
         <img
           :src="href"
-          width="320" height="512"
-          :style="{ display: 'block', visibility: imageLoaded ? 'visible' : 'hidden' }"
+          class="memoria-m-img"
+          :class="{ 'img-hidden': !imageLoaded }"
         />
         <span
           v-if="!imageLoaded"
@@ -86,10 +86,27 @@ const sizePx = computed(() => getSizePx(props.scale, props.size))
 </template>
 
 <style scoped>
+.memoria-m-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 320px; height: 512px;
+  background: var(--bg-banner);
+  opacity: 0.5;
+}
+.memoria-m-img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 320px;
+  height: 512px;
+  object-fit: contain;
+}
+.img-hidden { visibility: hidden; }
 .fallback-text {
   position: absolute;
   left: 50%;
   top: 50%;
+  z-index: 2;
   color: var(--text-light);
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
   font-size: 32px;

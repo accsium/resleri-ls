@@ -84,7 +84,7 @@ const textScale = computed(() => {
       <img
         v-if="!imageLoaded"
         :src="PLACEHOLDER"
-        class="avatar-img"
+        class="placeholder-img"
       />
       <span v-if="!imageLoaded" class="fallback-text">
         <span>{{ baseName }}</span>
@@ -123,6 +123,14 @@ const textScale = computed(() => {
   left: 32px;
   width: 256px;
   height: 256px;
+  object-fit: cover;
+}
+.placeholder-img {
+  position: absolute;
+  top: 42px;
+  left: 42px;
+  width: 236px;
+  height: 236px;
   object-fit: cover;
 }
 .fallback-text {
