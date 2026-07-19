@@ -4,6 +4,7 @@ import { useI18n, getSizePx } from '../composables/useI18n'
 import { useImagePlaceholder } from '../composables/useImagePlaceholder'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
+import maskSvg from '../../image/misc/mask-g.svg'
 
 let uid = 0
 const { getTraitColorHex } = useI18n()
@@ -39,6 +40,8 @@ const charImage = computed(() => {
 const { imageLoaded, PLACEHOLDER } = useImagePlaceholder(charImage)
 
 const sizePx = computed(() => getSizePx(props.scale, props.size))
+
+const maskUrl = `url(${maskSvg})`
 
 </script>
 
@@ -94,7 +97,7 @@ const sizePx = computed(() => getSizePx(props.scale, props.size))
   width: 256px;
   height: 256px;
   object-fit: cover;
-  mask-image: url(image/misc/mask-g.svg);
+  mask-image: v-bind(maskUrl);
 }
 .img-hidden { visibility: hidden; }
 </style>
