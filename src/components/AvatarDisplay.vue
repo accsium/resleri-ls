@@ -5,7 +5,6 @@ import { useCharacterData } from '../composables/useCharacterData'
 import { useImagePlaceholder } from '../composables/useImagePlaceholder'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
-import maskSvg from '../../image/misc/mask-g.svg?url'
 
 let uid = 0
 const { getTraitColorHex, currentLang } = useI18n()
@@ -43,7 +42,7 @@ const { imageLoaded, PLACEHOLDER } = useImagePlaceholder(charImage)
 
 const sizePx = computed(() => getSizePx(props.scale, props.size))
 
-const maskUrl = `url(${maskSvg})`
+const maskUrl = 'url(image/misc/mask-g.svg)'
 
 const baseName = computed(() => {
   const bc = baseCharacterMap.value[props.indexEntry.base_character_id]
@@ -86,8 +85,11 @@ const textScale = computed(() => {
         v-if="!imageLoaded"
         :src="PLACEHOLDER"
         class="avatar-img"
-        :style="{ WebkitMaskImage: maskUrl, maskImage: maskUrl }"
       />
+      <span v-if="!imageLoaded" class="fallback-text">
+        <span>{{ baseName }}</span>
+        <span v-if="aliasName">{{ aliasName }}</span>
+      </span>
       <img
         v-if="charImage"
         :src="charImage"
@@ -95,11 +97,6 @@ const textScale = computed(() => {
         :class="{ 'img-hidden': !imageLoaded }"
         :style="{ WebkitMaskImage: maskUrl, maskImage: maskUrl }"
       />
-      <span
-        v-if="!imageLoaded"
-        class="fallback-text"
-        :style="{ transform: 'translate(-50%,-50%) scale(' + textScale + ')' }"
-      >{{ baseName }}<br v-if="aliasName">{{ aliasName }}</span>
       <div v-if="roleId" class="overlay-icon overlay-icon-left" style="top: 0; left: 0">
         <IconDisplay type="role" :id="roleId" :scale="1" :size="4" />
       </div>
@@ -130,14 +127,22 @@ const textScale = computed(() => {
 }
 .fallback-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: var(--text-light);
   font-weight: 600;
   font-size: 32px;
-  text-align: center;
+  line-height: 1.2;
   text-shadow: 0 0 6px rgba(0,0,0,0.8);
-  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
 .img-hidden { visibility: hidden; }
 </style>

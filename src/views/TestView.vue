@@ -2,6 +2,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { marked } from 'marked'
 import { preFetch } from '../router'
+import AvatarDisplay from '../components/AvatarDisplay.vue'
 import MemoriaDisplay from '../components/MemoriaDisplay.vue'
 import MemoriaDisplay_M from '../components/MemoriaDisplay_M.vue'
 import { useMemoriaData } from '../composables/useMemoriaData'
@@ -32,6 +33,19 @@ const memoriaMap = computed(() => {
   return map
 })
 
+const placeholderChar = {
+  id: 99999,
+  image_M: 'nonexistent_char',
+  base_character_id: 101,
+  another_name: '【Lovely Bomber MAXIMUM】',
+  trait_color_id: 1,
+  support_color_id: 2,
+  attack_attributes: [1],
+  role: 1,
+  initial_rarity: 5,
+  max_rarity: 5,
+}
+
 const scopedMemoria = computed(() =>
   scopeGroups.value.map(group => ({
     id: group.id,
@@ -46,6 +60,11 @@ const scopedMemoria = computed(() =>
   <div class="todo-container">
     <div v-if="todoHtml" class="todo-content" v-html="todoHtml"></div>
     <div v-else class="todo-content">加载中...</div>
+  </div>
+
+  <div class="placeholder-test">
+    <h2 class="scope-title">占位图 + 文字回退测试</h2>
+    <AvatarDisplay :index-entry="placeholderChar" :scale="1" :size="0" />
   </div>
 
   <div class="scope-section">
