@@ -1,13 +1,12 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import { useI18n, getSizePx } from '../composables/useI18n'
-import { useCharacterData } from '../composables/useCharacterData'
-import { useImagePlaceholder, PLACEHOLDER_ATTRS } from '../composables/useImagePlaceholder'
+import { useImagePlaceholder } from '../composables/useImagePlaceholder'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
 let uid = 0
-const { getTraitColorHex, currentLang } = useI18n()
+const { getTraitColorHex } = useI18n()
 
 const props = defineProps({
   indexEntry: Object,
@@ -39,35 +38,6 @@ const charImage = computed(() => {
 })
 const { imageLoaded, PLACEHOLDER } = useImagePlaceholder(charImage)
 
-const { baseCharacterMap } = useCharacterData()
-
-const baseName = computed(() => {
-  const bc = baseCharacterMap.value[props.indexEntry.base_character_id]
-  if (!bc) return ''
-  return currentLang.value === 'cn' ? (bc.name_cn || bc.name_ja) : bc.name_ja
-})
-const aliasName = computed(() =>
-  props.indexEntry.another_name || ''
-)
-
-const BASE_FONT = 32
-
-function _weightedLen(str) {
-  let w = 0
-  for (const ch of str) {
-    w += /[一-鿿　-〿＀-￯]/.test(ch) ? 1 : 0.55
-  }
-  return Math.max(w, 1)
-}
-
-const textScale = computed(() => {
-  const nw = _weightedLen(baseName.value)
-  const aw = aliasName.value ? _weightedLen(aliasName.value) : 0
-  const maxW = Math.max(nw, aw)
-  if (maxW === 0) return 1
-  return Math.min(1, 320 / (BASE_FONT * maxW))
-})
-
 const sizePx = computed(() => getSizePx(props.scale, props.size))
 
 </script>
@@ -85,35 +55,18 @@ const sizePx = computed(() => getSizePx(props.scale, props.size))
         <polygon points="160,10 310,160 160,310" :fill="supportHex" opacity="0.7" filter="url(#glow-g)" style="overflow:visible;"/>
         <polygon points="160,25 25,160 160,295" :fill="traitHex"/>
         <polygon points="160,25 295,160 160,295" :fill="supportHex"/>
-        <image
-          v-if="!imageLoaded"
-          :href="PLACEHOLDER"
-          v-bind="PLACEHOLDER_ATTRS"
-          mask="url(#mask-g)"
-          preserveAspectRatio="xMidYMax meet"
-        />
-        <image
-          v-if="charImage"
-          :href="charImage"
-          x="32" y="39" width="256" height="256"
-          mask="url(#mask-g)"
-          preserveAspectRatio="xMidYMax meet"
-          :style="{ visibility: imageLoaded ? 'visible' : 'hidden' }"
-        />
-        <text
-          v-if="!imageLoaded"
-          class="fallback-text"
-          :transform="'translate(160,160) scale(' + textScale + ')'"
-          x="0" y="0"
-          text-anchor="middle"
-          dominant-baseline="central"
-          font-weight="600"
-          :font-size="BASE_FONT"
-        >
-          <tspan x="0">{{ baseName }}</tspan>
-          <tspan v-if="aliasName" x="0" dy="1.2em">{{ aliasName }}</tspan>
-        </text>
       </svg>
+      <img
+        v-if="!imageLoaded"
+        :src="PLACEHOLDER"
+        class="avatar-img"
+      />
+      <img
+        v-if="charImage"
+        :src="charImage"
+        class="avatar-img"
+        :class="{ 'img-hidden': !imageLoaded }"
+      />
       <div v-if="roleId" class="overlay-icon overlay-icon-left" style="top: 0; left: 0">
         <IconDisplay type="role" :id="roleId" :scale="1" :size="4" />
       </div>
@@ -134,10 +87,14 @@ const sizePx = computed(() => getSizePx(props.scale, props.size))
 </template>
 
 <style scoped>
-.fallback-text {
-  fill: var(--text-light);
-  text-shadow: 0 0 6px rgba(0,0,0,0.8);
-  user-select: none;
-  -webkit-user-select: none;
+.avatar-img {
+  position: absolute;
+  top: 39px;
+  left: 32px;
+  width: 256px;
+  height: 256px;
+  object-fit: cover;
+  mask-image: url(image/misc/mask-g.svg);
 }
+.img-hidden { visibility: hidden; }
 </style>

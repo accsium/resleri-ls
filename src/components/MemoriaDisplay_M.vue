@@ -9,13 +9,13 @@ const props = defineProps({
   size: { type: Number, default: 0 },
 })
 
-const canvasSize = 320
+const canvasW = 320
+const canvasH = 512
 
 const href = computed(() =>
-  `image/memoria/${props.entry.image_square}.webp`
+  `image/memoria/${props.entry.image_M}.webp`
 )
 const { imageLoaded, PLACEHOLDER } = useImagePlaceholder(href)
-
 const BASE_FONT = 32
 
 function _weightedLen(str) {
@@ -34,28 +34,51 @@ const textScale = computed(() => {
 })
 
 const sizePx = computed(() => getSizePx(props.scale, props.size))
-
 </script>
 
 <template>
-  <div class="memoria-component" :style="{ width: sizePx + 'px', height: sizePx + 'px', position: 'relative' }">
-    <div :style="{ position: 'absolute', top: 0, left: 0, width: canvasSize + 'px', height: canvasSize + 'px', transform: 'scale(' + (sizePx / canvasSize) + ')', transformOrigin: '0 0' }">
-      <div class="memoria-canvas">
-        <div class="memoria-bg" />
+  <div
+    class="memoria-m-component"
+    :style="{
+      width: sizePx + 'px',
+      height: (sizePx * canvasH / canvasW) + 'px',
+      position: 'relative',
+    }"
+  >
+    <div
+      :style="{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: canvasW + 'px',
+        height: canvasH + 'px',
+        transform: 'scale(' + (sizePx / canvasW) + ')',
+        transformOrigin: '0 0',
+      }"
+    >
+      <div
+        :style="{
+          width: canvasW + 'px',
+          height: canvasH + 'px',
+          position: 'relative',
+          overflow: 'hidden',
+        }"
+      >
         <img
           v-if="!imageLoaded"
           :src="PLACEHOLDER"
-          class="memoria-img"
+          width="320" height="512"
+          style="display: block;"
         />
         <img
           :src="href"
-          class="memoria-img"
-          :class="{ 'img-hidden': !imageLoaded }"
+          width="320" height="512"
+          :style="{ display: 'block', visibility: imageLoaded ? 'visible' : 'hidden' }"
         />
         <span
           v-if="!imageLoaded"
           class="fallback-text"
-          :style="{ transform: 'translate(-50%, -50%) scale(' + textScale + ')' }"
+          :style="{ transform: 'translate(-50%,-50%) scale(' + textScale + ')' }"
         >{{ entry.name }}</span>
       </div>
     </div>
@@ -63,46 +86,15 @@ const sizePx = computed(() => getSizePx(props.scale, props.size))
 </template>
 
 <style scoped>
-.memoria-canvas {
-  position: relative;
-  width: 320px;
-  height: 320px;
-}
-
-.memoria-bg {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  background: var(--bg-banner);
-  opacity: 0.5;
-}
-
-.memoria-img {
-  position: absolute;
-  top: 32px;
-  left: 32px;
-  width: 256px;
-  height: 256px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.img-hidden {
-  visibility: hidden;
-}
-
 .fallback-text {
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   color: var(--text-light);
-  font-weight: 600;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
   font-size: 32px;
-  text-shadow: 0 0 6px rgba(0,0,0,0.8);
+  font-weight: 600;
+  text-align: center;
   white-space: nowrap;
-  pointer-events: none;
 }
 </style>

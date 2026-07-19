@@ -394,4 +394,8 @@ onUnmounted(() => {
 .collection-layout :deep(.sort-filter-bar) {
   border-radius: var(--radius-lg);
 }
+.collection-layout :deep(.avatar-component, .memoria-component, .memoria-m-component) {
+  user-select: none;
+  -webkit-user-select: none;
+}
 </style>

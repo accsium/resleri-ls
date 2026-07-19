@@ -1,11 +1,15 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { marked } from 'marked'
 import { preFetch } from '../router'
-import AvatarDisplay from '../components/AvatarDisplay.vue'
 import MemoriaDisplay from '../components/MemoriaDisplay.vue'
+import MemoriaDisplay_M from '../components/MemoriaDisplay_M.vue'
+import { useMemoriaData } from '../composables/useMemoriaData'
+
+const { memoriaList, loadMemoria } = useMemoriaData()
 
 const todoHtml = ref('')
+const scopeGroups = ref([])
 
 onMounted(async () => {
   let md = await preFetch.todo
@@ -14,26 +18,28 @@ onMounted(async () => {
     md = await res.text()
   }
   todoHtml.value = marked.parse(md)
+
+  const scopeRes = await fetch('data/raw/jp/memoria_scope.json')
+  scopeGroups.value = await scopeRes.json()
+  await loadMemoria()
 })
 
-const fictionalChar = {
-  id: 99999,
-  image_M: 'nonexistent_char',
-  base_character_id: 101,
-  another_name: '【虚构角色】',
-  trait_color_id: 1,
-  support_color_id: 2,
-  attack_attributes: [1],
-  role: 1,
-  initial_rarity: 3,
-  max_rarity: 5,
-}
+const memoriaMap = computed(() => {
+  const map = {}
+  for (const m of memoriaList.value) {
+    map[m.id] = m
+  }
+  return map
+})
 
-const fictionalMemoria = {
-  id: 99999,
-  image_square: 'nonexistent_memoria',
-  name: '虚构回忆',
-}
+const scopedMemoria = computed(() =>
+  scopeGroups.value.map(group => ({
+    id: group.id,
+    memoria: group.memoria_ids
+      .map(id => memoriaMap.value[id])
+      .filter(Boolean)
+  }))
+)
 </script>
 
 <template>
@@ -42,16 +48,17 @@ const fictionalMemoria = {
     <div v-else class="todo-content">加载中...</div>
   </div>
 
-  <div class="fallback-test">
-    <h2>Fallback 占位图测试</h2>
-    <div class="fallback-row">
-      <div class="fallback-item">
-        <h3>虚构角色（不存在 image_M）</h3>
-        <AvatarDisplay :index-entry="fictionalChar" :scale="1" :size="0" />
-      </div>
-      <div class="fallback-item">
-        <h3>虚构回忆（不存在 image_square）</h3>
-        <MemoriaDisplay :entry="fictionalMemoria" :scale="1" :size="0" />
+  <div class="scope-section">
+    <div v-for="scope in scopedMemoria" :key="scope.id" class="scope-group">
+      <h2 class="scope-title">Scope {{ scope.id }}</h2>
+      <div class="scope-memoria-list">
+        <MemoriaDisplay_M
+          v-for="m in scope.memoria"
+          :key="m.id"
+          :entry="m"
+          :scale="2"
+          :size="0"
+        />
       </div>
     </div>
   </div>
@@ -94,31 +101,24 @@ const fictionalMemoria = {
   overflow-x: auto;
 }
 
-.fallback-test {
+.scope-section {
   margin: 16px;
-  padding: 20px;
+}
+.scope-group {
+  margin-bottom: 20px;
+  padding: 16px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
 }
-.fallback-test h2 {
-  margin: 0 0 16px;
-  font-size: 16px;
-  color: var(--text-primary);
-}
-.fallback-test h3 {
+.scope-title {
   margin: 0 0 12px;
   font-size: 14px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
-.fallback-row {
+.scope-memoria-list {
   display: flex;
-  gap: 32px;
   flex-wrap: wrap;
-}
-.fallback-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 8px;
 }
 </style>
