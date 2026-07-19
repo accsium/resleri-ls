@@ -7,12 +7,14 @@ import { useI18n } from './composables/useI18n'
 import { useCharacterData } from './composables/useCharacterData'
 import { loadProgress } from './composables/useProgress'
 import { useBuildInfo } from './composables/useBuildInfo'
+import { preloadMiscImages } from './composables/useMiscPreload.js'
 
 const { setLang } = useI18n()
 const { indexLoaded } = useCharacterData()
 const { loadBuildTime } = useBuildInfo()
 onMounted(async () => {
   setLang('cn')
+  preloadMiscImages()
   await loadBuildTime()
 })
 </script>
