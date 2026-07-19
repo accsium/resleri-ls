@@ -127,10 +127,10 @@ const textScale = computed(() => {
 }
 .placeholder-img {
   position: absolute;
-  top: 42px;
-  left: 42px;
-  width: 236px;
-  height: 236px;
+  top: 60px;
+  left: 60px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
 }
 .fallback-text {
