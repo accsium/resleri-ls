@@ -21,7 +21,7 @@ function onPointerMove(e) {
   if (item?.dataset.id) emit('pointermove', Number(item.dataset.id))
 }
 
-const { currentLang, getField, ATTR_IDS } = useI18n()
+const { currentLang, getField, ATTR_IDS, ROLE_IDS } = useI18n()
 const { attrMap: attrData, roleMap: roleData } = useCharacterData()
 
 const attrMap = computed(() => {
@@ -38,8 +38,6 @@ const roleMap = computed(() => {
   }
   return m
 })
-
-const ROLE_IDS = [1, 2, 3, 4]
 
 // 按 (role, attr) 预分组
 const cellMap = computed(() => {

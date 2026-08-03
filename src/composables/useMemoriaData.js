@@ -1,19 +1,14 @@
 import { ref } from 'vue'
 import { trackData } from './useProgress'
+import { fetchJSON } from '../utils/fetch'
 
 const memoriaList = ref([])
-
-async function _fetchJSON(url) {
-  const resp = await fetch(url)
-  if (!resp.ok) throw new Error('HTTP ' + resp.status)
-  return resp.json()
-}
 
 let _loadPromise = null
 
 async function _doLoadMemoria() {
   try {
-    const data = await _fetchJSON('data/memoria.json')
+    const data = await fetchJSON('data/memoria.json')
     memoriaList.value = data
   } catch (e) {
     _loadPromise = null

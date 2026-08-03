@@ -108,8 +108,5 @@ onMounted(() => { loadIndex() })
   white-space: nowrap;
   height: auto;
 }
-.tag {
-  background: var(--bg-trait);
-  color: var(--text-primary);
-}
+
 </style>

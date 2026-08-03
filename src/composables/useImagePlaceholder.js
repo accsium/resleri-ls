@@ -10,6 +10,7 @@ export function useImagePlaceholder(hrefRef) {
       imageLoaded.value = false
       return
     }
+    let cancelled = false
     const img = new Image()
     img.src = href
     if (img.complete) {
@@ -17,9 +18,10 @@ export function useImagePlaceholder(hrefRef) {
     } else {
       imageLoaded.value = false
       img.onload = () => {
-        imageLoaded.value = true
+        if (!cancelled) imageLoaded.value = true
       }
     }
+    return () => { cancelled = true }
   }, { immediate: true })
 
   return { imageLoaded, PLACEHOLDER }

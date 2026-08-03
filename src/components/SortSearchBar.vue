@@ -23,7 +23,7 @@ const {
             {{ currentLang === 'cn' ? f.label_cn : f.label_ja }}
           </option>
         </select>
-        <button class="sf-order-btn" @click="toggleOrder()">
+        <button class="sf-ghost-btn sf-order-btn" @click="toggleOrder()">
           {{ currentSortOrder === 'desc' ? t('descOrder') : t('ascOrder') }}
         </button>
       </div>

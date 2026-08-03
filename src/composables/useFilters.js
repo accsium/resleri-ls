@@ -4,6 +4,7 @@ import { useCharacterData } from './useCharacterData'
 import { useCardState } from './useCardState'
 import { useLocalStorage } from './useLocalStorage'
 import { cmpVal } from '../utils/sort'
+import { pickSkillIds, calcInitialWT } from '../utils/skill'
 
 const sortField = ref('start_at')
 const sortPriority = ref([])
@@ -91,22 +92,6 @@ export function filterCharacter(char, f) {
   return true
 }
 
-function getCharWT(char, useAlt, skillsMap) {
-  const speed = char.initial_status?.speed
-  if (!speed || speed <= 0) return null
-  const ids = pickSkillIds(char, 'normal2', useAlt)
-  const wt = ids.length > 0 ? skillsMap.value[ids[ids.length - 1]]?.wt : null
-  if (wt == null) return null
-  return Math.floor(57600 / speed) + (wt - 200)
-}
-
-function pickSkillIds(char, type, useAlt) {
-  if (useAlt && char.switch_stat?.skills?.hasOwnProperty(type)) {
-    return char.switch_stat.skills[type]
-  }
-  return char.skills?.[type] || []
-}
-
 export function useFilters() {
   const { currentLang, SORT_FIELDS } = useI18n()
   const { characterIndex, baseCharacterMap, skillsMap } = useCharacterData()
@@ -121,7 +106,7 @@ export function useFilters() {
   function getSortValue(c, field) {
     if (field === 'initial_wt') {
       const cardState = getCardState(c.id)
-      return getCharWT(c, cardState.toggleActive, skillsMap)
+      return calcInitialWT(c, cardState.toggleActive, skillsMap)
     }
     if (field === 'tag_count') {
       return (c.tag_ids || []).length

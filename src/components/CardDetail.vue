@@ -7,6 +7,7 @@ import AbilityCard from './AbilityCard.vue'
 import SupportAbilitySection from './SupportAbilitySection.vue'
 import SynthesisModule from './SynthesisModule.vue'
 import IconDisplay from './IconDisplay.vue'
+import { pickSkillIds } from '../utils/skill'
 
 const props = defineProps({
   characterData: Object,
@@ -31,17 +32,10 @@ const attrMap = computed(() => {
   }
   return m
 })
-const typeText = t('skillType')
+const typeText = computed(() => t('skillType'))
 const { skillsMap, abilitiesMap, loadSkills, loadAbilities } = useCharacterData()
 
 const toggleActive = computed(() => props.cardState.toggleActive)
-
-function pickSkillIds(char, type, useAlt) {
-  if (useAlt && char.switch_stat?.skills?.hasOwnProperty(type)) {
-    return char.switch_stat.skills[type]
-  }
-  return char.skills?.[type] || []
-}
 
 const activeChar = computed(() => {
   const base = props.characterData

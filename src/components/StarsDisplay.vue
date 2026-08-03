@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import StarIcon from './StarIcon.vue'
+import { STAR_LEVEL_MAP } from '../utils/stars'
 
 const props = defineProps({
   mode: { type: Number, required: true },
@@ -9,10 +10,8 @@ const props = defineProps({
   scale: { type: Number, default: 1 },
 })
 
-const starLevel = { 1:1, 2:2, 3:3, 4:3.5, 5:4, 6:4.5, 7:5, 8:6 }
-
 const starList = computed(() => {
-  const level = starLevel[props.rarity]
+  const level = STAR_LEVEL_MAP[props.rarity]
   const fullStars = Math.floor(level)
   const hasHalf = level !== fullStars
   const starType = level === 6 ? '999_icon_star_chara_2_pink' : '999_icon_star_chara_2'
@@ -22,7 +21,7 @@ const starList = computed(() => {
   if (hasHalf) stars.push('999_icon_star_chara_2_harf')
 
   if (props.mode === 2) {
-    const totalSlots = Math.floor(starLevel[props.maxRarity])
+    const totalSlots = Math.floor(STAR_LEVEL_MAP[props.maxRarity])
     const emptyStars = totalSlots - fullStars - (hasHalf ? 1 : 0)
     for (let i = 0; i < emptyStars; i++) stars.push('999_icon_star_chara_2_1')
   }

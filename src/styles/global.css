@@ -23,6 +23,7 @@
   --overlay-black-06:   rgba(0,0,0,0.06);
   --overlay-black-50:   rgba(0,0,0,0.5);
   --shadow:             0 2px 8px rgba(0,0,0,0.18);
+  --shadow-text:        0 0 6px rgba(0,0,0,0.8);
   --radius:         4px;
   --radius-lg:      8px;
   --max-width:      900px;
@@ -260,14 +261,16 @@ input[type="text"] {
 .sort-filter-bar input[type="text"] {
   width: 200px; font-size: 12px; padding: var(--inp-padding);
   background: rgba(255,255,255,0.08); color: var(--text-light);
-  border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius);
+  border: 1px solid var(--overlay-white-15); border-radius: var(--radius);
   outline: none;
 }
 .sort-filter-bar input[type="text"]::placeholder { color: var(--text-muted); }
 .sort-filter-bar input[type="text"]:focus { border-color: var(--accent); }
-.sf-collapse-btn {
-  border-color: rgba(255,255,255,0.15);
+.sf-ghost-btn {
+  border-color: var(--overlay-white-15);
   background: transparent; color: var(--sf-btn-muted);
+}
+.sf-collapse-btn {
   white-space: nowrap; flex-shrink: 0;
 }
 .sf-toggle-bar {
@@ -323,8 +326,6 @@ input[type="text"] {
 .sf-trait-btn.active:hover { opacity: 1; }
 .sf-check { display: flex; align-items: center; gap: 2px; cursor: pointer; }
 .sf-tri-btn {
-  border-color: rgba(255,255,255,0.15);
-  background: transparent; color: var(--sf-btn-muted);
   transition: 0.15s;
 }
 .sf-tri-btn.active { border-color: var(--accent-green); background: var(--accent); color: var(--sf-active-text); }
@@ -333,8 +334,6 @@ input[type="text"] {
 .sort-control-head { display: flex; align-items: center; gap: 8px; }
 .sort-control-tail { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .sf-order-btn {
-  border-color: rgba(255,255,255,0.15);
-  background: transparent; color: var(--sf-btn-muted);
   white-space: nowrap;
 }
 

@@ -180,6 +180,8 @@ const UI_TEXT = {
 }
 
 const ATTR_IDS    = [5, 6, 7, 8, 1, 2, 3]  // 魔法优先，物理在后
+const ROLE_IDS    = [1, 2, 3, 4]
+// 5 种调和色人工映射（trait_color.json 输出仅名称无颜色值，CSS 变量无法做 id→hex 动态查询），非遗漏
 const TRAIT_COLOR_HEX = { 1: '#3498DB', 2: '#9B59B6', 3: '#F1C40F', 4: '#E74C3C', 5: '#2ECC71' }
 
 /** (size + 3) << (scale + 3) — size 0-7, scale 为自然数 */
@@ -224,5 +226,5 @@ export function useI18n() {
     return TRAIT_COLOR_HEX[id] || '#CCCCCC'
   }
 
-  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_FIELDS, ATTR_IDS }
+  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_FIELDS, ATTR_IDS, ROLE_IDS }
 }

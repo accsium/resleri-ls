@@ -1,5 +1,6 @@
 import { ref, shallowRef } from 'vue'
 import { trackData } from './useProgress'
+import { fetchJSON } from '../utils/fetch'
 
 const characterIndex = ref([])
 const indexLoaded = ref(false)
@@ -18,18 +19,12 @@ const voiceActorMap = shallowRef({})
 const attrMap = shallowRef({})
 const roleMap = shallowRef({})
 
-async function _fetchJSON(url) {
-  const resp = await fetch(url)
-  if (!resp.ok) throw new Error('HTTP ' + resp.status)
-  return resp.json()
-}
-
 // ── 按需加载实体 ──
 const _entityCache = {}
 
 async function _loadEntity(file) {
   if (_entityCache[file]) return _entityCache[file]
-  const data = await _fetchJSON(`data/${file}`)
+  const data = await fetchJSON(`data/${file}`)
   _entityCache[file] = data
   return data
 }
@@ -38,17 +33,17 @@ async function _loadEntity(file) {
 async function _doLoadIndex() {
   try {
     const [idx, baseChar, traitColor, originalTitle, tagData, seriesData, voiceActorData, bt, et, attrData, roleData] = await Promise.all([
-      _fetchJSON('data/character_index.json'),
-      _fetchJSON('data/base_character.json'),
-      _fetchJSON('data/trait_color.json'),
-      _fetchJSON('data/original_title.json'),
-      _fetchJSON('data/character_tag.json'),
-      _fetchJSON('data/series.json'),
-      _fetchJSON('data/voice_actor.json'),
-      _fetchJSON('data/battle_tool_trait.json'),
-      _fetchJSON('data/equipment_tool_trait.json'),
-      _fetchJSON('data/attack_attribute.json'),
-      _fetchJSON('data/role.json'),
+      fetchJSON('data/character_index.json'),
+      fetchJSON('data/base_character.json'),
+      fetchJSON('data/trait_color.json'),
+      fetchJSON('data/original_title.json'),
+      fetchJSON('data/character_tag.json'),
+      fetchJSON('data/series.json'),
+      fetchJSON('data/voice_actor.json'),
+      fetchJSON('data/battle_tool_trait.json'),
+      fetchJSON('data/equipment_tool_trait.json'),
+      fetchJSON('data/attack_attribute.json'),
+      fetchJSON('data/role.json'),
     ])
     characterIndex.value = idx
     baseCharacterMap.value = baseChar

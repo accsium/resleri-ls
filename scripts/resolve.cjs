@@ -289,7 +289,7 @@ function buildCharacterEntry(character) {
   char._base_character_name_cn = cnFallback(char.base_character_id, 'base_character');
 
   // 构建技能/能力详情
-  const { skills: skillDetails, abilities: abilityDetails } = buildSkillAndAbilityDetails(character);
+  const { abilities: abilityDetails } = buildSkillAndAbilityDetails(character);
 
   // 技能 ID 分组
   const skillGroups = buildSkillIdGroups(character);

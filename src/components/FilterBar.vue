@@ -6,7 +6,7 @@ import { useCharacterData } from '../composables/useCharacterData'
 import StarsDisplay from './StarsDisplay.vue'
 import IconDisplay from './IconDisplay.vue'
 
-const { t, currentLang, getTraitColorHex, getField, ATTR_IDS } = useI18n()
+const { t, currentLang, getTraitColorHex, getField, ATTR_IDS, ROLE_IDS } = useI18n()
 const {
   activeFilters,
   toggleFilter, resetFilters,
@@ -73,7 +73,6 @@ function toggleAttr(id) {
 }
 
 // ── 职业 ──
-const ROLE_IDS = [1, 2, 3, 4]
 const roleMap = computed(() => {
   const m = {}
   for (const [id, entry] of Object.entries(roleData.value)) {
@@ -352,7 +351,7 @@ const permStatusLabels = computed(() => ({
       </div>
       <div class="sf-spacer"></div>
       <div class="sf-right-group">
-        <button class="sf-collapse-btn" @click="clearAll">{{ t('clearFilter') }}</button>
+        <button class="sf-ghost-btn sf-collapse-btn" @click="clearAll">{{ t('clearFilter') }}</button>
       </div>
     </div>
     <!-- 行2：调和颜色 + 特殊机制 -->
@@ -387,7 +386,7 @@ const permStatusLabels = computed(() => ({
         <button
           v-for="(label, key) in mechanismLabels"
           :key="key"
-          class="sf-tri-btn"
+          class="sf-ghost-btn sf-tri-btn"
           :class="{ active: activeFilters[key] === 1, exclude: activeFilters[key] === 2 }"
           @click="cycleTriState(key)"
         >

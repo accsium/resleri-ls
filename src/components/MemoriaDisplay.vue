@@ -101,7 +101,7 @@ const sizePx = computed(() => getSizePx(props.scale, props.size))
   color: var(--text-light);
   font-weight: 600;
   font-size: 32px;
-  text-shadow: 0 0 6px rgba(0,0,0,0.8);
+  text-shadow: var(--shadow-text);
   white-space: nowrap;
   pointer-events: none;
 }

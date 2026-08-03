@@ -8,15 +8,14 @@ import AvatarDisplay from './AvatarDisplay.vue'
 import ToggleSwitch from './ToggleSwitch.vue'
 import CardDetail from './CardDetail.vue'
 import StarsDisplay from './StarsDisplay.vue'
+import { pickSkillIds, calcInitialWT } from '../utils/skill'
 
-let cardUid = 0
+
 const headerObservers = new Map()
 
 const props = defineProps({
   indexEntry: Object,
 })
-
-const kid = ++cardUid + '-' + props.indexEntry.id
 
 const { t, currentLang, getField } = useI18n()
 const { getCharacterById, baseCharacterMap, traitColorMap, originalTitleMap, characterTagMap, skillsMap, seriesMap, voiceActorMap, battleTraits, equipTraits, attrMap: attrData, roleMap: roleData } = useCharacterData()
@@ -74,23 +73,6 @@ const attrsText = computed(() => {
   return names.join(' / ') + ' | ' + roleName.value
 })
 
-function pickSkillIds(char, type, useAlt) {
-  if (useAlt && char.switch_stat?.skills?.hasOwnProperty(type)) {
-    return char.switch_stat.skills[type]
-  }
-  return char.skills?.[type] || []
-}
-
-function getCharWT(useAlt) {
-  const entry = props.indexEntry
-  const ids = pickSkillIds(entry, 'normal2', useAlt)
-  if (ids.length > 0) {
-    const skill = skillsMap.value[ids[ids.length - 1]]
-    if (skill) return skill.wt
-  }
-  return null
-}
-
 const initialWT = computed(() => {
   const entry = props.indexEntry
   const speed = entry.initial_status?.speed
@@ -98,10 +80,9 @@ const initialWT = computed(() => {
   const cardState = getCardState(props.indexEntry.id)
   const alt = cardState.toggleActive
   const useAlt = hasTransform.value ? !alt : alt
-  const ids = pickSkillIds(entry, 'normal2', useAlt)
-  const wt = ids.length > 0 ? skillsMap.value[ids[ids.length - 1]]?.wt : null
+  const wt = calcInitialWT(entry, useAlt, skillsMap)
   if (wt == null) return '—'
-  return Math.floor(57600 / speed) + (wt - 200)
+  return wt
 })
 const status = computed(() => props.indexEntry.initial_status || {})
 
@@ -232,7 +213,7 @@ onUnmounted(() => {
       <div class="card-body">
         <div class="card-body-col-left desk-only">
           <div class="cb-avatar">
-            <AvatarDisplay :index-entry="indexEntry" :scale="2" :size="0" :kid="kid" :image-m="effectiveImageM" />
+            <AvatarDisplay :index-entry="indexEntry" :scale="2" :size="0" :image-m="effectiveImageM" />
           </div>
           <div class="cb-traits">
             <span v-for="trait in traits" :key="trait" class="trait-tag">{{ trait }}</span>
@@ -263,7 +244,7 @@ onUnmounted(() => {
             <StarsDisplay :mode="1" :rarity="indexEntry.max_rarity" :max-rarity="indexEntry.max_rarity" :scale="0.35" />
           </div>
           <div class="cb-tags">
-            <span class="cb-tags-label">标签：</span>
+            <span class="cb-tags-label">{{ t('tags') }}：</span>
             <span class="cb-tags-items"><span v-for="tag in tags" :key="tag" class="tag">{{ tag }}</span></span>
           </div>
           <div class="cb-stats">
@@ -289,7 +270,7 @@ onUnmounted(() => {
             <div v-if="permanentText" class="release-date"><template v-if="permanentLabel">{{ permanentLabel }}: </template><span :class="{ 'perm-not': isNotPermanent, 'perm-limited': isLimited }">{{ permanentText }}</span></div>
           </div>
           <div class="cb-avatar-mob">
-            <AvatarDisplay :index-entry="indexEntry" :scale="2" :size="0" :kid="kid" :image-m="effectiveImageM" />
+            <AvatarDisplay :index-entry="indexEntry" :scale="2" :size="0" :image-m="effectiveImageM" />
           </div>
           <div class="cb-traits-mob">
             <span v-for="trait in traits" :key="trait" class="trait-tag">{{ trait }}</span>

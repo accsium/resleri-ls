@@ -108,7 +108,7 @@ const sizePx = computed(() => getSizePx(props.scale, props.size))
   top: 50%;
   z-index: 2;
   color: var(--text-light);
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+  text-shadow: var(--shadow-text);
   font-size: 32px;
   font-weight: 600;
   text-align: center;

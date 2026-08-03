@@ -4,9 +4,9 @@ import { useI18n, getSizePx } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useImagePlaceholder } from '../composables/useImagePlaceholder'
 import StarsDisplay from './StarsDisplay.vue'
+import { STAR_LEVEL_MAP } from '../utils/stars'
 import IconDisplay from './IconDisplay.vue'
 
-let uid = 0
 const { getTraitColorHex, currentLang } = useI18n()
 const { baseCharacterMap } = useCharacterData()
 
@@ -14,21 +14,18 @@ const props = defineProps({
   indexEntry: Object,
   size: { type: Number, default: 8 },
   scale: { type: Number, required: true },
-  kid: { type: String, default: '' },
   imageM: { type: String, default: null },
 })
 
 const canvasSize = 320
-const kid = props.kid || (++uid + '-' + props.indexEntry.id)
 
 const traitHex = computed(() => getTraitColorHex(props.indexEntry.trait_color_id))
 const supportHex = computed(() => getTraitColorHex(props.indexEntry.support_color_id))
 const attributeId = computed(() => (props.indexEntry.attack_attributes || [])[0])
 const roleId = computed(() => props.indexEntry.role)
 
-const starLevel = { 1:1, 2:2, 3:3, 4:3.5, 5:4, 6:4.5, 7:5, 8:6 }
 const starDisplayCount = computed(() => {
-  const level = starLevel[props.indexEntry.initial_rarity] || 0
+  const level = STAR_LEVEL_MAP[props.indexEntry.initial_rarity] || 0
   const hasHalf = level !== Math.floor(level)
   return Math.floor(level) + (hasHalf ? 1 : 0)
 })
@@ -148,7 +145,7 @@ const textScale = computed(() => {
   font-weight: 600;
   font-size: 32px;
   line-height: 1.2;
-  text-shadow: 0 0 6px rgba(0,0,0,0.8);
+  text-shadow: var(--shadow-text);
   user-select: none;
   -webkit-user-select: none;
 }
