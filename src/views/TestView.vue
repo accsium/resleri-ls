@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { marked } from 'marked'
-import { preFetch } from '../router'
 import AvatarDisplay from '../components/AvatarDisplay.vue'
 import MemoriaDisplay from '../components/MemoriaDisplay.vue'
 import MemoriaDisplay_M from '../components/MemoriaDisplay_M.vue'
@@ -13,11 +12,8 @@ const todoHtml = ref('')
 const scopeGroups = ref([])
 
 onMounted(async () => {
-  let md = await preFetch.todo
-  if (!md) {
-    const res = await fetch('config/todo.md')
-    md = await res.text()
-  }
+  const res = await fetch('config/todo.md')
+  const md = await res.text()
   todoHtml.value = marked.parse(md)
 
   scopeGroups.value = [

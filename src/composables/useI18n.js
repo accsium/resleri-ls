@@ -16,7 +16,6 @@ const UI_TEXT = {
     role: 'ロール',
     none: 'なし',
     loading: '読み込み中...',
-    loadFailed: '読み込み失敗',
     maxRarityLabel: '最大レアリティ：',
     target: '対象', dmgPower: 'ダメージ倍率', breakPower: 'ブレイク倍率', healPower: '回復倍率', wt: 'WT', limit: '制限',
     level: 'Lv. ',
@@ -42,14 +41,14 @@ const UI_TEXT = {
     collectionOwnedCount: '所持 {n} / {total}',
     collectionNoMatch: '条件に一致するキャラクターがいません',
     confirmRefresh: 'キャッシュをクリアしてデータを再読み込みしますか？',
-    applyFilter: '適用', clearFilter: 'クリア',
+    clearFilter: 'クリア',
     // 表格列标签
     id: 'ID', avatar: 'アバター', characterName: 'キャラ名',
     skillTypeLabel: '種類', skillStateLabel: '状態',
     damage: 'ダメージ', breakDef: 'ブレイク', heal: '回復',
     skillName: 'スキル名', description: '説明',
     startDate: '開始日', endDate: '終了日', eventName: 'イベント名', revivalDate: '復刻日',
-    gachaName: 'ガチャ名', gacha: 'ガチャ', characters: 'キャラクター', memoria: 'メモリア',
+    gacha: 'ガチャ', characters: 'キャラクター', memoria: 'メモリア',
     maxRarity: '最大レア', targetAttr: '対象属性', targetRole: '対象ロール', targetTag: '対象タグ',
     supportAbilityDesc: '支援能力説明',
     effectLabel: '効果',
@@ -105,7 +104,6 @@ const UI_TEXT = {
     role: '职业',
     none: '无',
     loading: '加载中...',
-    loadFailed: '加载失败',
     maxRarityLabel: '最大星级：',
     target: '对象', dmgPower: '伤害倍率', breakPower: '破防倍率', healPower: '治疗倍率', wt: 'WT', limit: '限制',
     level: 'Lv. ',
@@ -131,14 +129,14 @@ const UI_TEXT = {
     collectionOwnedCount: '已拥有 {n} / {total}',
     collectionNoMatch: '没有符合条件的角色',
     confirmRefresh: '确定要清除缓存并刷新数据？',
-    applyFilter: '应用筛选', clearFilter: '清除',
+    clearFilter: '清除',
     // 表格列标签
     id: 'ID', avatar: '头像', characterName: '角色名',
     skillTypeLabel: '种类', skillStateLabel: '状态',
     damage: '伤害', breakDef: '破防', heal: '治疗',
     skillName: '技能名', description: '描述',
     startDate: '开始日期', endDate: '结束日期', eventName: '名称', revivalDate: '复刻日期',
-    gachaName: '卡池名', gacha: '卡池', characters: '角色', memoria: '回忆',
+    gacha: '卡池', characters: '角色', memoria: '回忆',
     maxRarity: '最大星级', targetAttr: '目标属性', targetRole: '目标职业', targetTag: '目标标签',
     supportAbilityDesc: '支援能力描述',
     effectLabel: '效果',
@@ -201,7 +199,9 @@ const SORT_FIELDS = [
   { field: 'initial_wt',  label_ja: '初期WT',   label_cn: '初始WT' },
 ]
 
-const currentLang = ref('cn')
+let savedLang = 'cn'
+try { savedLang = localStorage.getItem('resleri-lang') || 'cn' } catch {}
+const currentLang = ref(savedLang)
 
 export function useI18n() {
   function t(key) {
@@ -217,11 +217,12 @@ export function useI18n() {
 
   function setLang(lang) {
     currentLang.value = lang
+    try { localStorage.setItem('resleri-lang', lang) } catch {}
   }
 
   function getTraitColorHex(id) {
     return TRAIT_COLOR_HEX[id] || '#CCCCCC'
   }
 
-  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_FIELDS, TRAIT_COLOR_HEX, ATTR_IDS }
+  return { currentLang, t, getField, setLang, getTraitColorHex, SORT_FIELDS, ATTR_IDS }
 }

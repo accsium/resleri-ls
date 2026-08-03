@@ -3,7 +3,6 @@ import { ref, computed, onMounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useI18n } from '../composables/useI18n'
 import { fmtDate } from '../utils/date.js'
-import { preFetch } from '../router'
 
 const columns = computed(() => [
   { key: 'id', label: t('id'), width: 72 },
@@ -29,12 +28,8 @@ const getGroupRows = (g) => allRows.value.filter(r => r.id >= g.min && r.id <= g
 const { t } = useI18n()
 
 onMounted(async () => {
-  let data = await preFetch.events
-  if (!data) {
-    const resp = await fetch('data/events.json')
-    data = await resp.json()
-  }
-  allRows.value = data
+  const resp = await fetch('data/events.json')
+  allRows.value = await resp.json()
   loading.value = false
 })
 </script>

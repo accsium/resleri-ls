@@ -1,5 +1,4 @@
-import { ref, shallowRef, triggerRef } from 'vue'
-import { getNavigationSignal } from '../router'
+import { ref, shallowRef } from 'vue'
 import { trackData } from './useProgress'
 
 const characterIndex = ref([])
@@ -16,12 +15,11 @@ const originalTitleMap = shallowRef({})
 const characterTagMap = shallowRef({})
 const seriesMap = shallowRef({})
 const voiceActorMap = shallowRef({})
-const buildTime = ref('')
 const attrMap = shallowRef({})
 const roleMap = shallowRef({})
 
 async function _fetchJSON(url) {
-  const resp = await fetch(url, { signal: getNavigationSignal() })
+  const resp = await fetch(url)
   if (!resp.ok) throw new Error('HTTP ' + resp.status)
   return resp.json()
 }
@@ -118,25 +116,12 @@ export function useCharacterData() {
     done()
   }
 
-  async function loadEntityMap(file, ref) {
-    const done = trackData(Object.keys(ref.value).length > 0)
-    if (Object.keys(ref.value).length === 0) {
-      ref.value = await _loadEntity(file)
-    }
-    done()
-    return ref.value
-  }
-
-  // 同步访问器（调用前需确保已加载）
-  function getSkillById(id) { return skillsMap.value[id] || null }
-  function getAbilityById(id) { return abilitiesMap.value[id] || null }
-
   return {
     characterIndex, indexLoaded, loadIndex,
-    skillsMap, abilitiesMap, battleTraits, equipTraits, traitColorMap, baseCharacterMap, originalTitleMap, characterTagMap, buildTime,
+    skillsMap, abilitiesMap, battleTraits, equipTraits, traitColorMap, baseCharacterMap, originalTitleMap, characterTagMap,
     seriesMap, voiceActorMap, attrMap, roleMap,
-    getCharacterById, getSkillById, getAbilityById,
-    loadSkills, loadAbilities, loadTraits, loadEntityMap,
+    getCharacterById,
+    loadSkills, loadAbilities, loadTraits,
   }
 }
 

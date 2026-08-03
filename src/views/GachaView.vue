@@ -8,7 +8,6 @@ import { useMemoriaData } from '../composables/useMemoriaData'
 import MemoriaDisplay from '../components/MemoriaDisplay.vue'
 import GachaBanner from '../components/GachaBanner.vue'
 import { fmtDate } from '../utils/date.js'
-import { preFetch } from '../router'
 
 const { t } = useI18n()
 const { characterIndex, loadIndex } = useCharacterData()
@@ -56,12 +55,8 @@ const memoriaMap = computed(() => {
 onMounted(async () => {
   await loadIndex()
   await loadMemoria()
-  let data = await preFetch.gachas
-  if (!data) {
-    const resp = await fetch('data/gachas.json')
-    data = await resp.json()
-  }
-  allRows.value = data
+  const resp = await fetch('data/gachas.json')
+  allRows.value = await resp.json()
   loading.value = false
 })
 </script>

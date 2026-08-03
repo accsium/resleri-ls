@@ -1,16 +1,18 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { useRoute } from 'vue-router'
 
-const route = useRoute()
 const announcements = ref([])
 const dismissed = ref([])
 
+const scope = computed(() => {
+  const file = location.pathname.split('/').pop() || ''
+  return '/' + file.replace(/\.html$/, '')
+})
+
 const visible = computed(() => {
-  const path = route.path
   return announcements.value.filter(a => {
     if (dismissed.value.includes(a.id)) return false
-    return a.scope === 'global' || a.scope === path
+    return a.scope === 'global' || a.scope === scope.value
   })
 })
 

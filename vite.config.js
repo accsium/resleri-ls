@@ -8,9 +8,21 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      input: {
+        index: 'index.html',
+        dex: 'dex.html',
+        collection: 'collection.html',
+        skills: 'skills.html',
+        'leader-skills': 'leader-skills.html',
+        'support-abilities': 'support-abilities.html',
+        events: 'events.html',
+        'contest-rotations': 'contest-rotations.html',
+        gachas: 'gachas.html',
+        test: 'test.html',
+      },
       output: {
         manualChunks: {
-          vendor: ['vue', 'vue-router'],
+          vendor: ['vue'],
           marked: ['marked'],
         },
       },

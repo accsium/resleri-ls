@@ -198,5 +198,5 @@ export function useFilters() {
     currentSortOrder.value = 'desc'
   }
 
-  return { sortField, currentSortOrder, activeFilters, searchText, filteredCharacters, pagedCharacters, currentPage, pageSize, totalPages, setSortField, toggleOrder, toggleFilter, resetFilters }
+  return { sortField, currentSortOrder, activeFilters, searchText, pagedCharacters, currentPage, pageSize, totalPages, setSortField, toggleOrder, toggleFilter, resetFilters }
 }

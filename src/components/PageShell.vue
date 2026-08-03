@@ -1,24 +1,27 @@
 <script setup>
-import { onMounted } from 'vue'
-import AppHeader from './components/AppHeader.vue'
-import NavBar from './components/NavBar.vue'
-import AnnouncementBar from './components/AnnouncementBar.vue'
-import { useI18n } from './composables/useI18n'
-import { useCharacterData } from './composables/useCharacterData'
-import { loadProgress } from './composables/useProgress'
-import { useBuildInfo } from './composables/useBuildInfo'
+import { onMounted, nextTick } from 'vue'
+import AppHeader from './AppHeader.vue'
+import NavBar from './NavBar.vue'
+import AnnouncementBar from './AnnouncementBar.vue'
+import { loadProgress, resetProgress, startObserving, scanImages } from '../composables/useProgress'
+import { useBuildInfo } from '../composables/useBuildInfo'
 
-const { setLang } = useI18n()
-const { indexLoaded } = useCharacterData()
+defineProps({ navKey: { type: String, default: '' } })
+
 const { loadBuildTime } = useBuildInfo()
-onMounted(async () => {
-  setLang('cn')
-  await loadBuildTime()
+// setup 阶段先于任何子组件 setup/mounted —— 视图的 trackData 必然在其后注册
+resetProgress()
+
+onMounted(() => {
+  loadBuildTime()
+  const app = document.querySelector('.app-content')
+  if (app) startObserving(app)
+  nextTick(() => { if (app) scanImages(app) })
 })
 </script>
 
 <template>
-  <!-- 全局 SVG defs：CharacterCard 和 AvatarDisplay 共享，避免每张卡片重复定义 -->
+  <!-- 全局 SVG defs：CharacterCard 和 AvatarDisplay 共享，避免每张卡片重复定义（与 App.vue 逐字一致） -->
   <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0"><defs>
     <filter id="glow-g" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="25" result="blur"/>
@@ -51,7 +54,7 @@ onMounted(async () => {
   </defs></svg>
   <div class="app-shell">
     <div class="app-top">
-      <AppHeader />
+      <AppHeader :nav-key="navKey" />
       <div class="load-bar">
         <div class="load-bar-fill" :class="{ complete: loadProgress >= 100 }" :style="{ width: loadProgress + '%' }"></div>
       </div>
@@ -59,8 +62,7 @@ onMounted(async () => {
     </div>
     <AnnouncementBar />
     <div class="app-content">
-      <router-view />
+      <slot />
     </div>
   </div>
 </template>
-

@@ -2,20 +2,21 @@
 import { useI18n } from '../composables/useI18n'
 
 const { t } = useI18n()
+const current = location.pathname.split('/').pop() || ''
 </script>
 
 <template>
   <div class="nav-bar">
     <nav class="nav-links">
-      <router-link to="/dex" class="nav-link">{{ t('navGuide') }}</router-link>
-      <router-link to="/collection" class="nav-link">{{ t('navCollection') }}</router-link>
-      <router-link to="/skills" class="nav-link">{{ t('navSkills') }}</router-link>
-      <router-link to="/leader-skills" class="nav-link">{{ t('navLeaderSkills') }}</router-link>
-      <router-link to="/support-abilities" class="nav-link">{{ t('navSupportAbility') }}</router-link>
-      <router-link to="/events" class="nav-link">{{ t('navEvents') }}</router-link>
-      <router-link to="/contest-rotations" class="nav-link">{{ t('navContest') }}</router-link>
-      <router-link to="/gachas" class="nav-link">{{ t('navGachas') }}</router-link>
-      <router-link to="/test" class="nav-link">{{ t('navTest') }}</router-link>
+      <a href="./dex.html" class="nav-link" :class="{ 'router-link-active': current === 'dex.html' }">{{ t('navGuide') }}</a>
+      <a href="./collection.html" class="nav-link" :class="{ 'router-link-active': current === 'collection.html' }">{{ t('navCollection') }}</a>
+      <a href="./skills.html" class="nav-link" :class="{ 'router-link-active': current === 'skills.html' }">{{ t('navSkills') }}</a>
+      <a href="./leader-skills.html" class="nav-link" :class="{ 'router-link-active': current === 'leader-skills.html' }">{{ t('navLeaderSkills') }}</a>
+      <a href="./support-abilities.html" class="nav-link" :class="{ 'router-link-active': current === 'support-abilities.html' }">{{ t('navSupportAbility') }}</a>
+      <a href="./events.html" class="nav-link" :class="{ 'router-link-active': current === 'events.html' }">{{ t('navEvents') }}</a>
+      <a href="./contest-rotations.html" class="nav-link" :class="{ 'router-link-active': current === 'contest-rotations.html' }">{{ t('navContest') }}</a>
+      <a href="./gachas.html" class="nav-link" :class="{ 'router-link-active': current === 'gachas.html' }">{{ t('navGachas') }}</a>
+      <a href="./test.html" class="nav-link" :class="{ 'router-link-active': current === 'test.html' }">{{ t('navTest') }}</a>
     </nav>
   </div>
 </template>

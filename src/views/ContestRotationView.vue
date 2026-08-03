@@ -3,7 +3,6 @@ import { ref, computed, onMounted } from 'vue'
 import SortableTable from '../components/SortableTable.vue'
 import { useI18n } from '../composables/useI18n'
 import { fmtDate } from '../utils/date.js'
-import { preFetch } from '../router'
 
 const { t } = useI18n()
 
@@ -18,12 +17,8 @@ const loading = ref(true)
 const isEmpty = computed(() => !loading.value && rows.value.length === 0)
 
 onMounted(async () => {
-  let data = await preFetch.contestRotations
-  if (!data) {
-    const resp = await fetch('data/contest_rotations.json')
-    data = await resp.json()
-  }
-  rows.value = data
+  const resp = await fetch('data/contest_rotations.json')
+  rows.value = await resp.json()
   loading.value = false
 })
 </script>

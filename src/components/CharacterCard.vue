@@ -23,8 +23,6 @@ const { getCharacterById, baseCharacterMap, traitColorMap, originalTitleMap, cha
 const { getCardState, setCardState } = useCardState()
 
 const expanded = ref(false)
-const detailLoading = ref(false)
-const detailError = ref('')
 
 const baseName = computed(() => {
   const bc = baseCharacterMap.value[props.indexEntry.base_character_id]
@@ -197,8 +195,6 @@ async function toggleExpand() {
     return
   }
   expanded.value = true
-  detailLoading.value = false
-  detailError.value = ''
   await nextTick()
   const card = document.querySelector(`.card[data-id="${props.indexEntry.id}"]`)
   const header = card?.querySelector('.card-header')
@@ -319,9 +315,7 @@ onUnmounted(() => {
     </div>
 
     <div class="card-detail" :class="{ open: expanded }">
-      <div v-if="detailLoading" class="loading">{{ t('loading') }}</div>
-      <div v-else-if="detailError" class="no-data">{{ t('loadFailed') }}: {{ detailError }}</div>
-      <template v-else-if="char">
+      <template v-if="char">
         <div class="mobile-stats">
           <div class="section-title">{{ t('basicInfo') }}</div>
           <div class="stats-row">

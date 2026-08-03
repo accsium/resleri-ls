@@ -20,10 +20,10 @@ for (const f of configFiles) {
   console.log(`  ✓ config/${f} → public/config/`);
 }
 
-// 2. 扫描 image/misc/*.webp 生成 preload 标签注入 index.html
+// 2. 扫描 image/misc/*.webp 生成 preload 标签注入 9 个页面 html
+const PAGE_HTML_FILES = ['dex.html', 'collection.html', 'skills.html', 'leader-skills.html', 'support-abilities.html', 'events.html', 'contest-rotations.html', 'gachas.html', 'test.html'];
 const miscDir = path.join(root, 'image', 'misc');
 if (fs.existsSync(miscDir)) {
-  const indexHtml = path.join(root, 'index.html');
   const miscFiles = fs.readdirSync(miscDir)
     .filter(f => f.endsWith('.webp'))
     .sort();
@@ -31,10 +31,22 @@ if (fs.existsSync(miscDir)) {
     const fp = f === 'favicon.webp' ? ' fetchpriority="high"' : '';
     return `  <link rel="preload" as="image" href="image/misc/${f}"${fp}>`;
   }).join('\n');
-  let html = fs.readFileSync(indexHtml, 'utf-8');
-  html = html.replace(/<!-- misc-preload-start -->[\s\S]*<!-- misc-preload-end -->/, `<!-- misc-preload-start -->\n${preloadTags}\n  <!-- misc-preload-end -->`);
-  fs.writeFileSync(indexHtml, html, 'utf-8');
-  console.log(`  ✓ ${miscFiles.length} misc preload 标签注入 index.html`);
+  for (const page of PAGE_HTML_FILES) {
+    const pageHtml = path.join(root, page);
+    if (!fs.existsSync(pageHtml)) {
+      console.log(`  - ${page} 不存在，跳过`);
+      continue;
+    }
+    let html = fs.readFileSync(pageHtml, 'utf-8');
+    const before = html;
+    html = html.replace(/<!-- misc-preload-start -->[\s\S]*<!-- misc-preload-end -->/, `<!-- misc-preload-start -->\n${preloadTags}\n  <!-- misc-preload-end -->`);
+    if (html === before) {
+      console.log(`  - ${page} 无 misc-preload marker，跳过`);
+      continue;
+    }
+    fs.writeFileSync(pageHtml, html, 'utf-8');
+    console.log(`  ✓ ${miscFiles.length} misc preload 标签注入 ${page}`);
+  }
 }
 
 // 3. 复制 image/ → public/image/

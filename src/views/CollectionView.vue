@@ -1,6 +1,5 @@
 <script setup>
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
-import { useRoute } from 'vue-router'
 import { useI18n, getSizePx } from '../composables/useI18n'
 import { useCharacterData } from '../composables/useCharacterData'
 import { useCollection } from '../composables/useCollection'
@@ -16,7 +15,6 @@ const { t } = useI18n()
 const { characterIndex, indexLoaded, loadIndex, loadTraits } = useCharacterData()
 const { ownedIds, ownedCount, shareCode, isOwned, toggleOwned, batchToggle, saveToStorage, loadFromCode } = useCollection()
 const { activeFilters, resetFilters } = useFilters()
-const route = useRoute()
 
 // ── 视图模式 ──
 // ── UI 状态持久化 ──
@@ -45,7 +43,7 @@ const seqGridStyle = computed(() => ({
 }))
 
 // ── 从 URL 分享码初始化 ──
-const codeFromUrl = computed(() => route.params.code || null)
+const codeFromUrl = computed(() => new URLSearchParams(location.search).get('code') || null)
 
 watch([() => characterIndex.value.length, codeFromUrl], ([len, code]) => {
   if (len === 0) return
@@ -160,7 +158,7 @@ function onSave() {
 }
 
 async function onCopyLink() {
-  const url = `${window.location.origin}${window.location.pathname}#/collection/${shareCode.value}`
+  const url = `${window.location.origin}${window.location.pathname}?code=${encodeURIComponent(shareCode.value)}`
   try {
     await navigator.clipboard.writeText(url)
     copiedFlash.value = true

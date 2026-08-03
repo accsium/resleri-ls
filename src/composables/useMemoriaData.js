@@ -1,11 +1,10 @@
 import { ref } from 'vue'
-import { getNavigationSignal } from '../router'
 import { trackData } from './useProgress'
 
 const memoriaList = ref([])
 
 async function _fetchJSON(url) {
-  const resp = await fetch(url, { signal: getNavigationSignal() })
+  const resp = await fetch(url)
   if (!resp.ok) throw new Error('HTTP ' + resp.status)
   return resp.json()
 }
