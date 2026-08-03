@@ -7,8 +7,8 @@ const props = defineProps({
 })
 
 const STYLE_MAP = {
-  '999_icon_star_chara_2_1':    { left: 0,  top: -1 },
-  '999_icon_star_chara_2_harf': { left: -5, top: 1 },
+  '999_icon_star_chara_2_1':    { left: 0,  top: -2 },
+  '999_icon_star_chara_2_harf': { left: -4, top: 0 },
 }
 
 const offset = computed(() => {
