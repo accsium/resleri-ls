@@ -273,11 +273,11 @@ function diffObjects(base, alt) {
 function buildCharacterEntry(character) {
   const char = JSON.parse(JSON.stringify(character));
 
-  // image_M：从 still_sets[0] 取 large_still_path_hash 并查表
-  let image_M = null;
+  // image_S：从 still_sets[0] 取 still_path_hash 并查表
+  let image_S = null;
   if (char.still_sets && char.still_sets.length > 0) {
-    const hash = char.still_sets[0].large_still_path_hash;
-    image_M = hashToName.get(String(hash)) || null;
+    const hash = char.still_sets[0].still_path_hash;
+    image_S = hashToName.get(String(hash)) || null;
   }
 
   const cnFallback = (id, mapName) =>
@@ -427,7 +427,7 @@ function buildCharacterEntry(character) {
       board3: char.board_ability3_ids || [],
       support: char.support_ability_ids || [],
     },
-    image_M,
+    image_S,
   };
 
   if (normalEx.length > 0) entry.skills.ex = normalEx;
@@ -458,10 +458,10 @@ function buildCharacterEntry(character) {
       if (Object.keys(evoSkills).length > 0) {
         switchStat.skills = evoSkills;
       }
-      // 进化形态 image_M
+      // 进化形态 image_S
       const evoStillSet = (character.still_sets || []).find(s => s.rarity === character.max_rarity);
-      if (evoStillSet?.large_still_path_hash) {
-        switchStat.image_M = hashToName.get(String(evoStillSet.large_still_path_hash)) || null;
+      if (evoStillSet?.still_path_hash) {
+        switchStat.image_S = hashToName.get(String(evoStillSet.still_path_hash)) || null;
       }
       entry.switch_stat = switchStat;
     }

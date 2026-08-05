@@ -85,7 +85,7 @@ function targetCat(name) {
   return cats
 }
 
-function collectSkills(skObj, char, state, imageM) {
+function collectSkills(skObj, char, state, imageS) {
   const ALL_TYPES = ['normal1', 'normal2', 'burst', 'active1', 'active2', 'active3']
   const rows = []
   for (const type of ALL_TYPES) {
@@ -93,13 +93,13 @@ function collectSkills(skObj, char, state, imageM) {
     if (ids.length > 0) {
       const skill = skillsMap.value[ids[ids.length - 1]]
       const displayType = type.startsWith('active') ? 'active' : type
-      if (skill) rows.push(buildRow(char, displayType, state, skill, imageM))
+      if (skill) rows.push(buildRow(char, displayType, state, skill, imageS))
     }
   }
   const exIds = skObj.ex || []
   if (exIds.length > 0) {
     const skill = skillsMap.value[exIds[exIds.length - 1]]
-    if (skill) rows.push(buildRow(char, 'ex', state, skill, imageM))
+    if (skill) rows.push(buildRow(char, 'ex', state, skill, imageS))
   }
   return rows
 }
@@ -119,15 +119,15 @@ function buildSkillRows() {
     if (altState) {
       const altSk = char.switch_stat?.skills
       if (altSk) {
-        const altImageM = char.switch_stat.image_M || null
-        rows.push(...collectSkills(altSk, char, altState, altImageM))
+        const altImageS = char.switch_stat.image_S || null
+        rows.push(...collectSkills(altSk, char, altState, altImageS))
       }
     }
   }
   return rows
 }
 
-function buildRow(char, type, state, skill, imageM) {
+function buildRow(char, type, state, skill, imageS) {
   const isHeal = skill.skill_power_type && [5,6,7].includes(skill.skill_power_type)
   const isDmg  = skill.skill_power_type && [1,2,3,4].includes(skill.skill_power_type)
   const bc = baseCharacterMap.value[char.base_character_id]
@@ -135,7 +135,7 @@ function buildRow(char, type, state, skill, imageM) {
     _key: `${char.id}-${type}-${state}`,
     uid: char.uid || '',
     char_id: char.id,
-    image_m: imageM || null,
+    image_s: imageS || null,
     base_name_ja: bc?.name_ja || '',
     base_name_cn: (bc?.name_cn || bc?.name_ja) || '',
     another_name: char.another_name || '',
@@ -257,7 +257,7 @@ onMounted(async () => {
     <template #cell-id="{ row }">{{ row.char_id }}</template>
     <template #cell-avatar="{ row }">
       <div class="ls-avatar-cell">
-        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :scale="2" :size="0" :imageM="row.image_m" />
+        <AvatarDisplay v-if="charIndexMap[row.char_id]" :indexEntry="charIndexMap[row.char_id]" :scale="2" :size="0" :image-s="row.image_s" />
       </div>
     </template>
     <template #cell-name="{ row }">

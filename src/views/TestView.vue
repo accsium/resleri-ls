@@ -41,7 +41,7 @@ const memoriaMap = computed(() => {
 
 const placeholderChar = {
   id: 99999,
-  image_M: 'nonexistent_char',
+  image_S: 'nonexistent_char',
   base_character_id: 101,
   another_name: '【Lovely Bomber MAXIMUM】',
   trait_color_id: 1,

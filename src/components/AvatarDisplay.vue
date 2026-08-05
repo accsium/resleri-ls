@@ -14,10 +14,10 @@ const props = defineProps({
   indexEntry: Object,
   size: { type: Number, default: 8 },
   scale: { type: Number, required: true },
-  imageM: { type: String, default: null },
+  imageS: { type: String, default: null },
 })
 
-const canvasSize = 320
+const canvasSize = 160
 
 const traitHex = computed(() => getTraitColorHex(props.indexEntry.trait_color_id))
 const supportHex = computed(() => getTraitColorHex(props.indexEntry.support_color_id))
@@ -31,7 +31,7 @@ const starDisplayCount = computed(() => {
 })
 
 const charImage = computed(() => {
-  const img = props.imageM || props.indexEntry.image_M
+  const img = props.imageS || props.indexEntry.image_S
   if (!img) return null
   return `image/character/${img}.webp`
 })
@@ -48,20 +48,6 @@ const baseName = computed(() => {
 })
 const aliasName = computed(() => props.indexEntry.another_name || '')
 
-const BASE_FONT = 32
-function _weightedLen(str) {
-  let w = 0
-  for (const ch of str) { w += /[一-鿿　-〿＀-￯]/.test(ch) ? 1 : 0.55 }
-  return Math.max(w, 1)
-}
-const textScale = computed(() => {
-  const nw = _weightedLen(baseName.value)
-  const aw = aliasName.value ? _weightedLen(aliasName.value) : 0
-  const maxW = Math.max(nw, aw)
-  if (maxW === 0) return 1
-  return Math.min(1, 320 / (BASE_FONT * maxW))
-})
-
 </script>
 
 <template>
@@ -69,14 +55,14 @@ const textScale = computed(() => {
     <div :style="{ position: 'absolute', top: 0, left: 0, width: canvasSize + 'px', height: canvasSize + 'px', transform: 'scale(' + (sizePx / canvasSize) + ')', transformOrigin: '0 0' }">
       <svg
         :width="canvasSize" :height="canvasSize"
-        viewBox="0 0 320 320"
+        viewBox="0 0 160 160"
         xmlns="http://www.w3.org/2000/svg"
         style="overflow: visible;"
       >
-        <polygon points="160,10 10,160 160,310" :fill="traitHex" opacity="0.7" filter="url(#glow-g)" style="overflow:visible;"/>
-        <polygon points="160,10 310,160 160,310" :fill="supportHex" opacity="0.7" filter="url(#glow-g)" style="overflow:visible;"/>
-        <polygon points="160,25 25,160 160,295" :fill="traitHex"/>
-        <polygon points="160,25 295,160 160,295" :fill="supportHex"/>
+        <polygon points="80,4 4,80 80,156" :fill="traitHex" opacity="0.7" filter="url(#glow-g)" style="overflow:visible;"/>
+        <polygon points="80,4 156,80 80,156" :fill="supportHex" opacity="0.7" filter="url(#glow-g)" style="overflow:visible;"/>
+        <polygon points="80,12 12,80 80,148" :fill="traitHex"/>
+        <polygon points="80,12 148,80 80,148" :fill="supportHex"/>
       </svg>
       <img
         v-if="!imageLoaded"
@@ -95,19 +81,19 @@ const textScale = computed(() => {
         :style="{ WebkitMaskImage: maskUrl, maskImage: maskUrl }"
       />
       <div v-if="roleId" class="overlay-icon overlay-icon-left" style="top: 0; left: 0">
-        <IconDisplay type="role" :id="roleId" :scale="1" :size="4" />
+        <IconDisplay type="role" :id="roleId" :scale="0" :size="4" />
       </div>
-      <div v-if="attributeId" class="overlay-icon overlay-icon-right" style="top: 8px; right: 8px">
-        <IconDisplay type="attribute" :id="attributeId" :scale="1" :size="3" />
+      <div v-if="attributeId" class="overlay-icon overlay-icon-right" style="top: 4px; right: 4px">
+        <IconDisplay type="attribute" :id="attributeId" :scale="0" :size="3" />
       </div>
       <div v-if="starDisplayCount > 0"
         :style="{
           position: 'absolute',
-          left: ((canvasSize - starDisplayCount * 45 * 1.25) / 2) + 'px',
-          top: (canvasSize - 45 * 1.25 - 10) + 'px',
+          left: ((canvasSize - starDisplayCount * 45 * 0.6) / 2) + 'px',
+          top: (canvasSize - 45 * 0.6 - 5) + 'px',
         }"
       >
-        <StarsDisplay :mode="1" :rarity="indexEntry.initial_rarity" :max-rarity="indexEntry.max_rarity" :scale="1.25" />
+        <StarsDisplay :mode="1" :rarity="indexEntry.initial_rarity" :max-rarity="indexEntry.max_rarity" :scale="0.6" />
       </div>
     </div>
   </div>
@@ -116,26 +102,26 @@ const textScale = computed(() => {
 <style scoped>
 .avatar-img {
   position: absolute;
-  top: 39px;
-  left: 32px;
-  width: 256px;
-  height: 256px;
+  top: 20px;
+  left: 16px;
+  width: 128px;
+  height: 128px;
   object-fit: cover;
 }
 .placeholder-img {
   position: absolute;
-  top: 60px;
-  left: 60px;
-  width: 200px;
-  height: 200px;
+  top: 30px;
+  left: 30px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
 }
 .fallback-text {
   position: absolute;
   top: 0;
   left: 0;
-  width: 320px;
-  height: 320px;
+  width: 160px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,7 +129,7 @@ const textScale = computed(() => {
   text-align: center;
   color: var(--text-light);
   font-weight: 600;
-  font-size: 32px;
+  font-size: 16px;
   line-height: 1.2;
   text-shadow: var(--shadow-text);
   user-select: none;

@@ -1,37 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
   <defs>
-    <radialGradient id="g1" cx="43" cy="20" r="20" gradientUnits="userSpaceOnUse">
+    <radialGradient id="g1" cx="22" cy="10" r="10" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="black" stop-opacity="1"/>
       <stop offset="50%" stop-color="black" stop-opacity="1"/>
       <stop offset="100%" stop-color="black" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="g2" cx="213" cy="20" r="20" gradientUnits="userSpaceOnUse">
+    <radialGradient id="g2" cx="106" cy="10" r="10" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="black" stop-opacity="1"/>
       <stop offset="50%" stop-color="black" stop-opacity="1"/>
       <stop offset="100%" stop-color="black" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse">
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="5" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="black" stop-opacity="0"/>
       <stop offset="100%" stop-color="black" stop-opacity="1"/>
     </linearGradient>
-    <linearGradient id="g4" x1="23" y1="0" x2="33" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="g4" x1="12" y1="0" x2="17" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="black" stop-opacity="0"/>
       <stop offset="100%" stop-color="black" stop-opacity="1"/>
     </linearGradient>
-    <linearGradient id="g5" x1="223" y1="0" x2="233" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="g5" x1="111" y1="0" x2="116" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="black" stop-opacity="1"/>
       <stop offset="100%" stop-color="black" stop-opacity="0"/>
     </linearGradient>
     <clipPath id="bottom">
-      <polygon points="0,0 0,128 128,256 256,128 256,0"/>
+      <polygon points="0,0 0,64 64,128 128,64 128,0"/>
     </clipPath>
   </defs>
   <g clip-path="url(#bottom)">
-    <rect x="23" y="0" width="20" height="20" fill="url(#g1)"/>
-    <rect x="213" y="0" width="20" height="20" fill="url(#g2)"/>
-    <rect x="43" y="0" width="170" height="256" fill="url(#g3)"/>
-    <rect x="23" y="20" width="20" height="236" fill="url(#g4)"/>
-    <rect x="213" y="20" width="20" height="236" fill="url(#g5)"/>
-	<rect x="33" y="10" rx="10" width="190" height="246"/>
+    <rect x="12" y="0" width="10" height="10" fill="url(#g1)"/>
+    <rect x="106" y="0" width="10" height="10" fill="url(#g2)"/>
+    <rect x="22" y="0" width="84" height="128" fill="url(#g3)"/>
+    <rect x="12" y="10" width="10" height="118" fill="url(#g4)"/>
+    <rect x="106" y="10" width="10" height="118" fill="url(#g5)"/>
+	<rect x="17" y="5" rx="5" width="94" height="123"/>
   </g>
 </svg>
