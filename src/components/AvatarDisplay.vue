@@ -110,10 +110,10 @@ const aliasName = computed(() => props.indexEntry.another_name || '')
 }
 .placeholder-img {
   position: absolute;
-  top: 30px;
-  left: 30px;
-  width: 100px;
-  height: 100px;
+  top: 32px;
+  left: 32px;
+  width: 96px;
+  height: 96px;
   object-fit: cover;
 }
 .fallback-text {
