@@ -58,7 +58,7 @@ const leaderSkillDesc = computed(() => {
     <div class="subsection-title">{{ skillType.name }}</div>
     <div class="banner-title">
       <span style="display:inline-flex;align-items:center;gap:3px;height:1em;overflow:visible;">
-        <IconDisplay v-for="aid in skillAttrs" :key="aid" type="attribute" :id="aid" :scale="0" :size="0" />
+        <IconDisplay v-for="aid in skillAttrs" :key="aid" type="attribute" :id="aid" :scale="1" :size="0" />
         <span>{{ skillName }} <small v-if="skillId">(ID:{{ skillId }})</small></span>
       </span>
       <div v-if="hasLevels" class="level-tabs">

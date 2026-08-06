@@ -168,7 +168,7 @@ const abilitiesCollapsed = ref(false)
         <div v-for="skill in activeSkills" :key="skill.id" class="skill-group" data-group="active">
           <div class="banner-title">
             <span style="display:inline-flex;align-items:center;gap:3px;height:1em;overflow:visible;">
-              <IconDisplay v-for="aid in (skill.attack_attributes || [])" :key="aid" type="attribute" :id="aid" :scale="0" :size="0" />
+              <IconDisplay v-for="aid in (skill.attack_attributes || [])" :key="aid" type="attribute" :id="aid" :scale="1" :size="0" />
               <span>{{ skill.name || '??' }} <small v-if="skill.id">(ID:{{ skill.id }})</small></span>
             </span>
           </div>

@@ -213,7 +213,7 @@ onUnmounted(() => {
       <div class="card-body">
         <div class="card-body-col-left desk-only">
           <div class="cb-avatar">
-            <AvatarDisplay :index-entry="indexEntry" :scale="2" :size="0" :image-s="effectiveImageS" />
+            <AvatarDisplay :index-entry="indexEntry" :scale="3" :size="0" :image-s="effectiveImageS" />
           </div>
           <div class="cb-traits">
             <span v-for="trait in traits" :key="trait" class="trait-tag">{{ trait }}</span>
@@ -241,7 +241,7 @@ onUnmounted(() => {
           </div>
           <div class="cb-rarity">
             <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
-            <StarsDisplay :mode="1" :rarity="indexEntry.max_rarity" :max-rarity="indexEntry.max_rarity" :scale="0.35" />
+            <StarsDisplay :rarity="indexEntry.max_rarity" :size="1" />
           </div>
           <div class="cb-tags">
             <span class="cb-tags-label">{{ t('tags') }}：</span>
@@ -270,7 +270,7 @@ onUnmounted(() => {
             <div v-if="permanentText" class="release-date"><template v-if="permanentLabel">{{ permanentLabel }}: </template><span :class="{ 'perm-not': isNotPermanent, 'perm-limited': isLimited }">{{ permanentText }}</span></div>
           </div>
           <div class="cb-avatar-mob">
-            <AvatarDisplay :index-entry="indexEntry" :scale="2" :size="0" :image-s="effectiveImageS" />
+            <AvatarDisplay :index-entry="indexEntry" :scale="3" :size="0" :image-s="effectiveImageS" />
           </div>
           <div class="cb-traits-mob">
             <span v-for="trait in traits" :key="trait" class="trait-tag">{{ trait }}</span>
@@ -281,7 +281,7 @@ onUnmounted(() => {
           <div class="mob-rarity-tags">
             <div class="cb-rarity">
               <span class="max-rarity-label">{{ t('maxRarityLabel') }}</span>
-              <StarsDisplay :mode="1" :rarity="indexEntry.max_rarity" :max-rarity="indexEntry.max_rarity" :scale="0.35" />
+              <StarsDisplay :rarity="indexEntry.max_rarity" :size="1" />
             </div>
             <div class="cb-tags">
               <span class="cb-tags-label">{{ t('tags') }}：</span>

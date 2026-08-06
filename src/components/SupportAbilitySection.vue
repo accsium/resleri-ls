@@ -34,7 +34,7 @@ const entries = computed(() => {
   <div class="subsection-title">{{ t('supportAbilityTitle') }}</div>
   <div v-for="entry in entries" :key="entry.idx" class="support-row">
     <div class="support-rarity-col" :class="{ 'support-unreachable': entry.unreachable }">
-      <StarsDisplay :mode="2" :rarity="entry.rarity" :max-rarity="maxRarity" :scale="0.3" />
+      <StarsDisplay :rarity="entry.rarity" :max-rarity="maxRarity" :size="0" />
     </div>
     <div class="support-desc-col" :class="{ 'support-unreachable': entry.unreachable }">
       <span v-if="entry.ability" class="skill-desc" v-html="formatDescription(entry.ability)"></span>

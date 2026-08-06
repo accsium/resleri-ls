@@ -185,7 +185,7 @@ const ROLE_IDS    = [1, 2, 3, 4]
 const TRAIT_COLOR_HEX = { 1: '#3498DB', 2: '#9B59B6', 3: '#F1C40F', 4: '#E74C3C', 5: '#2ECC71' }
 
 /** (size + 3) << (scale + 3) — size 0-7, scale 为自然数 */
-export const getSizePx = (scale, size) => (size + 3) << (scale + 3)
+export const getSizePx = (scale, size) => (size + 3) << (scale + 2)
 
 const SORT_FIELDS = [
   { field: 'start_at',    label_ja: '実装日',   label_cn: '加入时间' },

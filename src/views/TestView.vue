@@ -78,9 +78,9 @@ const scopedMemoria = computed(() =>
   <div class="placeholder-test">
     <h2 class="scope-title">占位图 + 文字回退测试</h2>
     <div class="placeholder-row">
-      <AvatarDisplay :index-entry="placeholderChar" :scale="1" :size="0" />
-      <MemoriaDisplay :entry="placeholderMemoria" :scale="1" :size="0" />
-      <MemoriaDisplay_M :entry="placeholderMemoria" :scale="2" :size="0" />
+      <AvatarDisplay :index-entry="placeholderChar" :scale="2" :size="0" />
+      <MemoriaDisplay :entry="placeholderMemoria" :scale="2" :size="0" />
+      <MemoriaDisplay_M :entry="placeholderMemoria" :scale="3" :size="0" />
     </div>
   </div>
 
@@ -92,7 +92,7 @@ const scopedMemoria = computed(() =>
           v-for="m in scope.memoria"
           :key="m.id"
           :entry="m"
-          :scale="2"
+          :scale="3"
           :size="0"
         />
       </div>

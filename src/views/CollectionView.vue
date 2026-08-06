@@ -25,21 +25,21 @@ const colorMode = useLocalStorage('resleri-ui-colorMode', false)
 
 /** px → size，始终写回规范化 px */
 const _restoreSize = (pxRef, scale) => {
-  const raw = (pxRef.value >> (scale + 3)) - 3
+  const raw = (pxRef.value >> (scale + 2)) - 3
   const s = raw >= 0 && raw <= 7 ? raw : 3
   pxRef.value = getSizePx(scale, s)
   return s
 }
-const seqSize = computed({ get: () => _restoreSize(_seqPx, 1), set: s => _seqPx.value = getSizePx(1, s) })
-const matSize = computed({ get: () => _restoreSize(_matPx, 0), set: s => _matPx.value = getSizePx(0, s) })
+const seqSize = computed({ get: () => _restoreSize(_seqPx, 2), set: s => _seqPx.value = getSizePx(2, s) })
+const matSize = computed({ get: () => _restoreSize(_matPx, 1), set: s => _matPx.value = getSizePx(1, s) })
 
 const sizeSteps = computed(() => {
   const cur = viewMode.value === 'sequential' ? seqSize.value : matSize.value
   return Array.from({ length: 8 }, (_, i) => ({ val: i, active: i === cur, below: i < cur }))
 })
 const seqGridStyle = computed(() => ({
-  gridTemplateColumns: `repeat(auto-fill, ${getSizePx(1, seqSize.value)}px)`,
-  gridAutoRows: `${getSizePx(1, seqSize.value)}px`,
+  gridTemplateColumns: `repeat(auto-fill, ${getSizePx(2, seqSize.value)}px)`,
+  gridAutoRows: `${getSizePx(2, seqSize.value)}px`,
 }))
 
 // ── 从 URL 分享码初始化 ──
@@ -245,7 +245,7 @@ onUnmounted(() => {
           :data-id="entry.id"
           @pointerdown="onPointerDown(entry.id)"
         >
-          <AvatarDisplay :index-entry="entry" :scale="1" :size="seqSize" />
+          <AvatarDisplay :index-entry="entry" :scale="2" :size="seqSize" />
         </div>
         <div v-if="noMatch" class="collection-empty">{{ t('collectionNoMatch') }}</div>
       </div>

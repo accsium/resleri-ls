@@ -18,6 +18,7 @@ const props = defineProps({
 })
 
 const canvasSize = 160
+const STAR_SIZE = 5  // StarsDisplay size 参数档位 = getSizePx(0, 5) = 32px
 
 const traitHex = computed(() => getTraitColorHex(props.indexEntry.trait_color_id))
 const supportHex = computed(() => getTraitColorHex(props.indexEntry.support_color_id))
@@ -81,19 +82,19 @@ const aliasName = computed(() => props.indexEntry.another_name || '')
         :style="{ WebkitMaskImage: maskUrl, maskImage: maskUrl }"
       />
       <div v-if="roleId" class="overlay-icon overlay-icon-left" style="top: 0; left: 0">
-        <IconDisplay type="role" :id="roleId" :scale="0" :size="4" />
+        <IconDisplay type="role" :id="roleId" :scale="1" :size="4" />
       </div>
       <div v-if="attributeId" class="overlay-icon overlay-icon-right" style="top: 4px; right: 4px">
-        <IconDisplay type="attribute" :id="attributeId" :scale="0" :size="3" />
+        <IconDisplay type="attribute" :id="attributeId" :scale="1" :size="3" />
       </div>
       <div v-if="starDisplayCount > 0"
         :style="{
           position: 'absolute',
-          left: ((canvasSize - starDisplayCount * 45 * 0.6) / 2) + 'px',
-          top: (canvasSize - 45 * 0.6 - 5) + 'px',
+          left: ((canvasSize - starDisplayCount * getSizePx(0, STAR_SIZE)) / 2) + 'px',
+          top: (canvasSize - getSizePx(0, STAR_SIZE) - 5) + 'px',
         }"
       >
-        <StarsDisplay :mode="1" :rarity="indexEntry.initial_rarity" :max-rarity="indexEntry.max_rarity" :scale="0.6" />
+        <StarsDisplay :rarity="indexEntry.initial_rarity" :size="STAR_SIZE" />
       </div>
     </div>
   </div>

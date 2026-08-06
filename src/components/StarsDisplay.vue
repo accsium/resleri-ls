@@ -1,13 +1,12 @@
 <script setup>
 import { computed } from 'vue'
-import StarIcon from './StarIcon.vue'
+import { getSizePx } from '../composables/useI18n'
 import { STAR_LEVEL_MAP } from '../utils/stars'
 
 const props = defineProps({
-  mode: { type: Number, required: true },
   rarity: { type: Number, required: true },
-  maxRarity: { type: Number, required: true },
-  scale: { type: Number, default: 1 },
+  maxRarity: { type: Number },
+  size: { type: Number, required: true },
 })
 
 const starList = computed(() => {
@@ -20,7 +19,7 @@ const starList = computed(() => {
   for (let i = 0; i < fullStars; i++) stars.push(starType)
   if (hasHalf) stars.push('999_icon_star_chara_2_harf')
 
-  if (props.mode === 2) {
+  if (props.maxRarity != null) {
     const totalSlots = Math.floor(STAR_LEVEL_MAP[props.maxRarity])
     const emptyStars = totalSlots - fullStars - (hasHalf ? 1 : 0)
     for (let i = 0; i < emptyStars; i++) stars.push('999_icon_star_chara_2_1')
@@ -29,29 +28,26 @@ const starList = computed(() => {
   return stars
 })
 
+const sizePx = computed(() => getSizePx(0, props.size))
+
 const wrapStyle = computed(() => ({
-  width: `${starList.value.length * 45 * props.scale}px`,
-  height: `${45 * props.scale}px`,
-  overflow: 'visible',
+  width: `${starList.value.length * sizePx.value}px`,
+  height: `${sizePx.value}px`,
 }))
 
 const rowStyle = computed(() => ({
   display: 'flex',
-  gap: '0',
-  transform: `scale(${props.scale})`,
+  transform: `scale(${sizePx.value / 45})`,
   transformOrigin: 'top left',
-  overflow: 'visible',
 }))
 </script>
 
 <template>
   <div :style="wrapStyle">
     <div :style="rowStyle">
-      <StarIcon
-        v-for="(type, i) in starList"
-        :key="type + '-' + i"
-        :src="'image/misc/' + type + '.webp'"
-      />
+      <div v-for="(type, i) in starList" :key="type + '-' + i" class="star-icon">
+        <img :src="'image/misc/' + type + '.webp'">
+      </div>
     </div>
   </div>
 </template>

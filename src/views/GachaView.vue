@@ -95,7 +95,7 @@ onMounted(async () => {
               <AvatarDisplay
                 v-if="charMap[cid]"
                 :indexEntry="charMap[cid]"
-                :scale="1" :size="1"
+                :scale="2" :size="1"
               />
             </template>
           </span>
@@ -106,7 +106,7 @@ onMounted(async () => {
               <MemoriaDisplay
                 v-if="memoriaMap[mid]"
                 :entry="memoriaMap[mid]"
-                :scale="1" :size="1"
+                :scale="2" :size="1"
               />
             </template>
           </span>

@@ -321,7 +321,7 @@ const permStatusLabels = computed(() => ({
         <div class="sf-field-items">
         <label v-for="r in RARITIES" :key="'rar'+r" class="sf-check">
           <input type="checkbox" :name="'rarity-'+r" :checked="selectedRarities.includes(r)" @change="toggleRarity(r)">
-          <StarsDisplay :mode="1" :rarity="r" :max-rarity="8" :scale="0.25" />
+          <StarsDisplay :rarity="r" :size="0" />
         </label>
         </div>
       </div>
@@ -334,7 +334,7 @@ const permStatusLabels = computed(() => ({
           :class="{ active: selectedRoles.includes(id) }"
           @click="toggleRole(id)"
         >
-          <IconDisplay type="role" :id="id" :scale="0" :size="0" :alt="roleMap[id]" />
+          <IconDisplay type="role" :id="id" :scale="1" :size="0" :alt="roleMap[id]" />
         </button>
       </div>
       <div class="sf-divider"></div>
@@ -346,7 +346,7 @@ const permStatusLabels = computed(() => ({
           :class="{ active: selectedAttrs.includes(id) }"
           @click="toggleAttr(id)"
         >
-          <IconDisplay type="attribute" :id="id" :scale="0" :size="0" :alt="attrMap[id]" />
+          <IconDisplay type="attribute" :id="id" :scale="1" :size="0" :alt="attrMap[id]" />
         </button>
       </div>
       <div class="sf-spacer"></div>
