@@ -81,8 +81,8 @@ const aliasName = computed(() => props.indexEntry.another_name || '')
         :class="{ 'img-hidden': !imageLoaded }"
         :style="{ WebkitMaskImage: maskUrl, maskImage: maskUrl }"
       />
-      <div v-if="roleId" class="overlay-icon overlay-icon-left" style="top: 0; left: 0">
-        <IconDisplay type="role" :id="roleId" :scale="1" :size="4" />
+      <div v-if="roleId" class="overlay-icon overlay-icon-left" style="top: -8px; left: -8px">
+        <IconDisplay type="role" :id="roleId" :scale="1" :size="6" />
       </div>
       <div v-if="attributeId" class="overlay-icon overlay-icon-right" style="top: 4px; right: 4px">
         <IconDisplay type="attribute" :id="attributeId" :scale="1" :size="3" />
