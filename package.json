@@ -3,13 +3,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf public/ && npm run copy-public && vite build",
+    "build": "rm -rf public/ && npm run copy-public && vite build && npm run inject-preload",
     "preview": "vite preview",
     "data": "node scripts/resolve.cjs",
     "prepare-data": "node scripts/translate.cjs",
     "selection": "node scripts/select.cjs",
     "data-conversion": "rm -rf data/output/ data/raw_select/ && npm run selection && npm run prepare-data && npm run data",
-    "copy-public": "node scripts/copy-public.cjs"
+    "copy-public": "node scripts/copy-public.cjs",
+    "inject-preload": "node scripts/inject-preload.cjs"
   },
   "dependencies": {
     "marked": "^18.0.4",
