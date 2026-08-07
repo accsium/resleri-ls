@@ -52827,6 +52827,44 @@
     "break_gauge_coefficient": 0.75,
     "break_gauge_numbers": [],
     "break_gauges": [],
+    "burst_skill_id": 32001829,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 60002020,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
+    "id": 60002045,
+    "is_boss": false,
+    "name": "緑ぷに",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
+    },
+    "status": {
+      "attack": 41,
+      "break_gauge": 45,
+      "defense": 49,
+      "hp": 1234,
+      "speed": 358
+    },
+    "status_growth": {
+      "attack": 728,
+      "break_gauge": 800,
+      "defense": 880,
+      "hp": 21952,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80002,
+    "break_gauge_coefficient": 0.75,
+    "break_gauge_numbers": [],
+    "break_gauges": [],
     "burst_skill_id": 32004398,
     "enemy_ai_burst_id": null,
     "enemy_ai_id": 60002055,
@@ -54429,6 +54467,44 @@
     "extra_skill_ids": [],
     "hp_loop_count": null,
     "hp_loop_type": 1,
+    "id": 60004024,
+    "is_boss": false,
+    "name": "オオイタチ",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
+    },
+    "status": {
+      "attack": 48,
+      "break_gauge": 45,
+      "defense": 49,
+      "hp": 1234,
+      "speed": 358
+    },
+    "status_growth": {
+      "attack": 862,
+      "break_gauge": 800,
+      "defense": 880,
+      "hp": 21952,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80004,
+    "break_gauge_coefficient": 0.75,
+    "break_gauge_numbers": [],
+    "break_gauges": [],
+    "burst_skill_id": 22001645,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 10004012,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
     "id": 60004034,
     "is_boss": false,
     "name": "オオイタチ",
@@ -55929,6 +56005,44 @@
       "defense": 55,
       "hp": 1372,
       "speed": 302
+    },
+    "status_growth": {
+      "attack": 533,
+      "break_gauge": 1066,
+      "defense": 977,
+      "hp": 24391,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80005,
+    "break_gauge_coefficient": 0.9,
+    "break_gauge_numbers": [],
+    "break_gauges": [],
+    "burst_skill_id": 32001872,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 60005013,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
+    "id": 60005060,
+    "is_boss": false,
+    "name": "ブルーフィン",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
+    },
+    "status": {
+      "attack": 30,
+      "break_gauge": 60,
+      "defense": 55,
+      "hp": 1372,
+      "speed": 370
     },
     "status_growth": {
       "attack": 533,
@@ -66811,6 +66925,44 @@
       "defense": 66,
       "hp": 1372,
       "speed": 393
+    },
+    "status_growth": {
+      "attack": 711,
+      "break_gauge": 1066,
+      "defense": 1173,
+      "hp": 24391,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80016,
+    "break_gauge_coefficient": 0.9,
+    "break_gauge_numbers": [],
+    "break_gauges": [],
+    "burst_skill_id": 32002178,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 60016010,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
+    "id": 60016015,
+    "is_boss": false,
+    "name": "ゼファーピクシー",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
+    },
+    "status": {
+      "attack": 40,
+      "break_gauge": 60,
+      "defense": 66,
+      "hp": 1372,
+      "speed": 358
     },
     "status_growth": {
       "attack": 711,
@@ -78841,6 +78993,57 @@
     "base_enemy_id": 80040,
     "break_gauge_coefficient": 0.9,
     "break_gauge_numbers": [],
+    "break_gauges": [
+      {
+        "coefficient": 0.8,
+        "wait": 40
+      },
+      {
+        "coefficient": 1,
+        "wait": 30
+      },
+      {
+        "coefficient": 1.2,
+        "wait": 40
+      }
+    ],
+    "burst_skill_id": 32005665,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 60040011,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
+    "id": 60040011,
+    "is_boss": false,
+    "name": "ワイルドクレスト",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
+    },
+    "status": {
+      "attack": 50,
+      "break_gauge": 60,
+      "defense": 57,
+      "hp": 1372,
+      "speed": 370
+    },
+    "status_growth": {
+      "attack": 888,
+      "break_gauge": 1066,
+      "defense": 1013,
+      "hp": 24391,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80040,
+    "break_gauge_coefficient": 0.9,
+    "break_gauge_numbers": [],
     "break_gauges": [],
     "burst_skill_id": 32004340,
     "enemy_ai_burst_id": null,
@@ -86720,6 +86923,44 @@
     "extra_skill_ids": [],
     "hp_loop_count": null,
     "hp_loop_type": 1,
+    "id": 60081045,
+    "is_boss": false,
+    "name": "プリズムシェルS",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
+    },
+    "status": {
+      "attack": 41,
+      "break_gauge": 45,
+      "defense": 49,
+      "hp": 1234,
+      "speed": 358
+    },
+    "status_growth": {
+      "attack": 728,
+      "break_gauge": 800,
+      "defense": 880,
+      "hp": 21952,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80081,
+    "break_gauge_coefficient": 0.75,
+    "break_gauge_numbers": [],
+    "break_gauges": [],
+    "burst_skill_id": 22001659,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 10081010,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
     "id": 60081204,
     "is_boss": false,
     "name": "プリズムシェルS",
@@ -88727,6 +88968,57 @@
       "lightning": 0,
       "piercing": 0,
       "slashing": 0,
+      "wind": 0
+    },
+    "status": {
+      "attack": 45,
+      "break_gauge": 60,
+      "defense": 57,
+      "hp": 1495,
+      "speed": 370
+    },
+    "status_growth": {
+      "attack": 800,
+      "break_gauge": 1066,
+      "defense": 1013,
+      "hp": 26577,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80089,
+    "break_gauge_coefficient": 0.9,
+    "break_gauge_numbers": [],
+    "break_gauges": [
+      {
+        "coefficient": 0.8,
+        "wait": 35
+      },
+      {
+        "coefficient": 1,
+        "wait": 30
+      },
+      {
+        "coefficient": 1.2,
+        "wait": 35
+      }
+    ],
+    "burst_skill_id": 32005680,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 60089011,
+    "extra_skill_ids": [32005731, 32005681],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
+    "id": 60089011,
+    "is_boss": false,
+    "name": "スケアファントム",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
       "wind": 0
     },
     "status": {
@@ -98900,6 +99192,57 @@
     "base_enemy_id": 80109,
     "break_gauge_coefficient": 0.9,
     "break_gauge_numbers": [],
+    "break_gauges": [
+      {
+        "coefficient": 0.8,
+        "wait": 35
+      },
+      {
+        "coefficient": 1,
+        "wait": 30
+      },
+      {
+        "coefficient": 1.2,
+        "wait": 35
+      }
+    ],
+    "burst_skill_id": 32005690,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 60109032,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
+    "id": 60109032,
+    "is_boss": false,
+    "name": "黒兜",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
+    },
+    "status": {
+      "attack": 37,
+      "break_gauge": 60,
+      "defense": 79,
+      "hp": 1248,
+      "speed": 370
+    },
+    "status_growth": {
+      "attack": 657,
+      "break_gauge": 1066,
+      "defense": 1404,
+      "hp": 22186,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80109,
+    "break_gauge_coefficient": 0.9,
+    "break_gauge_numbers": [],
     "break_gauges": [],
     "burst_skill_id": 22001714,
     "enemy_ai_burst_id": null,
@@ -105910,6 +106253,57 @@
     "base_enemy_id": 80122,
     "break_gauge_coefficient": 0.9,
     "break_gauge_numbers": [],
+    "break_gauges": [
+      {
+        "coefficient": 0.8,
+        "wait": 40
+      },
+      {
+        "coefficient": 1,
+        "wait": 30
+      },
+      {
+        "coefficient": 1.2,
+        "wait": 40
+      }
+    ],
+    "burst_skill_id": 32005669,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 60122036,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
+    "id": 60122036,
+    "is_boss": false,
+    "name": "ロックパペット",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
+    },
+    "status": {
+      "attack": 42,
+      "break_gauge": 60,
+      "defense": 46,
+      "hp": 1372,
+      "speed": 370
+    },
+    "status_growth": {
+      "attack": 746,
+      "break_gauge": 1066,
+      "defense": 817,
+      "hp": 24391,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80122,
+    "break_gauge_coefficient": 0.9,
+    "break_gauge_numbers": [],
     "break_gauges": [],
     "burst_skill_id": 32005173,
     "enemy_ai_burst_id": null,
@@ -107220,6 +107614,44 @@
       "piercing": 0,
       "slashing": 0,
       "wind": -25
+    },
+    "status": {
+      "attack": 40,
+      "break_gauge": 60,
+      "defense": 46,
+      "hp": 1372,
+      "speed": 370
+    },
+    "status_growth": {
+      "attack": 711,
+      "break_gauge": 1066,
+      "defense": 817,
+      "hp": 24391,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80123,
+    "break_gauge_coefficient": 0.9,
+    "break_gauge_numbers": [],
+    "break_gauges": [],
+    "burst_skill_id": 32001797,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 60123033,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
+    "id": 60123033,
+    "is_boss": false,
+    "name": "ウォルフ",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
     },
     "status": {
       "attack": 40,
@@ -120253,6 +120685,44 @@
     "hp_loop_count": null,
     "hp_loop_type": 1,
     "id": 60171013,
+    "is_boss": false,
+    "name": "真夏の青ぷに",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
+    },
+    "status": {
+      "attack": 41,
+      "break_gauge": 45,
+      "defense": 49,
+      "hp": 1234,
+      "speed": 358
+    },
+    "status_growth": {
+      "attack": 728,
+      "break_gauge": 800,
+      "defense": 880,
+      "hp": 21952,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80171,
+    "break_gauge_coefficient": 0.75,
+    "break_gauge_numbers": [],
+    "break_gauges": [],
+    "burst_skill_id": 22001639,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 60171002,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
+    "id": 60171014,
     "is_boss": false,
     "name": "真夏の青ぷに",
     "resistance": {
@@ -137388,6 +137858,108 @@
       "defense": 55,
       "hp": 5488,
       "speed": 420
+    },
+    "status_growth": {
+      "attack": 1226,
+      "break_gauge": 1066,
+      "defense": 977,
+      "hp": 97564,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80250,
+    "break_gauge_coefficient": 2.2,
+    "break_gauge_numbers": [],
+    "break_gauges": [
+      {
+        "coefficient": 0.8,
+        "wait": 45
+      },
+      {
+        "coefficient": 1,
+        "wait": 30
+      },
+      {
+        "coefficient": 1.2,
+        "wait": 45
+      }
+    ],
+    "burst_skill_id": 32005658,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 60250007,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
+    "id": 60250007,
+    "is_boss": true,
+    "name": "ジェットシャーク",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
+    },
+    "status": {
+      "attack": 69,
+      "break_gauge": 60,
+      "defense": 55,
+      "hp": 5488,
+      "speed": 382
+    },
+    "status_growth": {
+      "attack": 1226,
+      "break_gauge": 1066,
+      "defense": 977,
+      "hp": 97564,
+      "speed": 0
+    }
+  },
+  {
+    "base_enemy_id": 80250,
+    "break_gauge_coefficient": 2.2,
+    "break_gauge_numbers": [],
+    "break_gauges": [
+      {
+        "coefficient": 0.8,
+        "wait": 35
+      },
+      {
+        "coefficient": 1,
+        "wait": 20
+      },
+      {
+        "coefficient": 1.2,
+        "wait": 35
+      }
+    ],
+    "burst_skill_id": 32005674,
+    "enemy_ai_burst_id": null,
+    "enemy_ai_id": 60250008,
+    "extra_skill_ids": [],
+    "hp_loop_count": null,
+    "hp_loop_type": 1,
+    "id": 60250008,
+    "is_boss": true,
+    "name": "ジェットシャーク",
+    "resistance": {
+      "fire": -25,
+      "ice": 0,
+      "impact": 0,
+      "lightning": 0,
+      "piercing": 0,
+      "slashing": -35,
+      "wind": 0
+    },
+    "status": {
+      "attack": 69,
+      "break_gauge": 60,
+      "defense": 55,
+      "hp": 5488,
+      "speed": 382
     },
     "status_growth": {
       "attack": 1226,
