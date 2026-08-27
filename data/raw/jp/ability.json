@@ -95863,6 +95863,102 @@
   },
   {
     "ability_category_type": null,
+    "description": "1回目のブレイク復帰時、自身に攻撃UP({0}%/永続)を付与\nブレイク時、自身に防御DOWN({1}%/永続)を付与\nブレイク復帰時、自身の防御DOWNを解除\nウェーブ開始時、相手からの効果無効を付与\nブレイクすると効果無効を解除、ブレイク復帰すると効果無効を再度付与",
+    "effects": [
+      {
+        "ability_timing_value": null,
+        "id": 81282001,
+        "limit_count": 1,
+        "value": 1500
+      },
+      {
+        "ability_timing_value": null,
+        "id": 81282002,
+        "limit_count": null,
+        "value": 9900
+      },
+      {
+        "ability_timing_value": null,
+        "id": 81282006,
+        "limit_count": null,
+        "value": 10000
+      },
+      {
+        "ability_timing_value": null,
+        "id": 81282005,
+        "limit_count": null,
+        "value": 0
+      },
+      {
+        "ability_timing_value": null,
+        "id": 81282007,
+        "limit_count": null,
+        "value": 0
+      },
+      {
+        "ability_timing_value": null,
+        "id": 81282008,
+        "limit_count": null,
+        "value": 10000
+      }
+    ],
+    "id": 26282001,
+    "name": ""
+  },
+  {
+    "ability_category_type": null,
+    "description": "ウェーブ開始時、セリフを表示\n1回目の小ブレイクまたはブレイク時、セリフを表示",
+    "effects": [
+      {
+        "ability_timing_value": null,
+        "id": 81282003,
+        "limit_count": 1,
+        "value": 0
+      },
+      {
+        "ability_timing_value": null,
+        "id": 81282009,
+        "limit_count": 1,
+        "value": 0
+      }
+    ],
+    "id": 26282002,
+    "name": ""
+  },
+  {
+    "ability_category_type": null,
+    "description": "1回目のブレイク復帰時、自身に攻撃UP({0}%/永続)を付与\nブレイク時、自身に防御DOWN({1}%/永続)を付与\nブレイク復帰時、自身の防御DOWNを解除\nウェーブ開始時、相手からの効果無効を付与",
+    "effects": [
+      {
+        "ability_timing_value": null,
+        "id": 81282001,
+        "limit_count": 1,
+        "value": 3000
+      },
+      {
+        "ability_timing_value": null,
+        "id": 81282002,
+        "limit_count": null,
+        "value": 9500
+      },
+      {
+        "ability_timing_value": null,
+        "id": 81282006,
+        "limit_count": null,
+        "value": 10000
+      },
+      {
+        "ability_timing_value": null,
+        "id": 81282005,
+        "limit_count": null,
+        "value": 0
+      }
+    ],
+    "id": 26282003,
+    "name": ""
+  },
+  {
+    "ability_category_type": null,
     "description": "得意属性が雷属性のキャラの与えるHP回復量{0}%アップ",
     "effects": [
       {
